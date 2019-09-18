@@ -626,3 +626,88 @@ template {
     outline: none; }
   .button-star:active, .button-star--active {
     color: #2c8ecc; }
+
+.page-footer {
+  padding-top: 40px;
+  background-color: #f9f9fa;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e3e8ee), to(#e3e8ee));
+  background-image: linear-gradient(#e3e8ee, #e3e8ee);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 2px; }
+
+.page-footer__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 20px; }
+  @media (max-width: 1050px) {
+    .page-footer__top {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; } }
+  @media (max-width: 767px) {
+    .page-footer__top {
+      padding-bottom: 26px; } }
+  @media (max-width: 400px) {
+    .page-footer__top {
+      padding-bottom: 8px; } }
+
+.page-footer__list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.page-footer__item {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px; }
+  @media (max-width: 400px) {
+    .page-footer__item {
+      margin-bottom: 32px; } }
+  .page-footer__item span {
+    margin-bottom: 6px;
+    color: #354052; }
+    @media (max-width: 767px) {
+      .page-footer__item span {
+        margin-bottom: 5px; } }
+  .page-footer__item a {
+    color: #2c8ecc;
+    text-decoration: none;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+    .page-footer__item a:hover, .page-footer__item a:focus {
+      color: #116ca6; }
+
+.page-footer__bottom {
+  padding: 10px 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e3e8ee), to(#e3e8ee));
+  background-image: linear-gradient(#e3e8ee, #e3e8ee);
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: 100% 1px; }
+  .page-footer__bottom span {
+    color: #a6abb3;
+    font-size: 15px;
+    line-height: 27px; }
