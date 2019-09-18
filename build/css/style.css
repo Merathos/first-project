@@ -611,3 +611,18 @@ template {
     margin-left: 15px; }
   .paginator__item--disabled {
     color: #a6abb3; }
+
+.button-star {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  padding: 5px;
+  color: #e3e8ee;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
+  .button-star:hover, .button-star:focus {
+    color: #116ca6;
+    outline: none; }
+  .button-star:active, .button-star--active {
+    color: #2c8ecc; }
