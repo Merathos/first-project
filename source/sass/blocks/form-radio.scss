@@ -1,0 +1,55 @@
+.form-radio {
+  position: relative;
+  margin-bottom: 17px;
+}
+
+.form-radio label {
+  @include main-text;
+  display: flex;
+  align-items: flex-start;
+  color: $dark-text;
+  cursor: pointer;
+  transition: all 0.4s ease;
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    background-color: $white;
+    border-radius: 50%;
+    border: 1px solid rgba(161, 167, 174, 0.5);
+    transition: all 0.4s ease;
+  }
+}
+
+.form-radio input[type="radio"]:not(:checked) ~ label {
+  &:hover {
+    &::before {
+      border: 1px solid $light-blue-accent;
+    }
+  }
+}
+
+
+.form-radio input[type="radio"]:checked ~ label {
+  &::before {
+    border: 6px solid $blue-default;
+  }
+}
+
+.form-radio input[type="radio"]:disabled ~ label {
+  color: $grey-default;
+  cursor: text;
+
+  &::before {
+    background-color: #f9f9fa;
+  }
+
+  &:hover {
+    &::before {
+      border: 1px solid rgba(161, 167, 174, 0.5);
+    }
+  }
+}

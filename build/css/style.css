@@ -393,3 +393,221 @@ template {
   @media (max-width: 320px) {
     .container {
       padding: 0 16px; } }
+
+.button {
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-top: 17px;
+  padding-bottom: 15px;
+  padding-left: 56px;
+  padding-right: 56px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
+  .button span {
+    padding-right: 6px; }
+  .button--blue {
+    color: #ffffff;
+    background-color: #2c8ecc; }
+    .button--blue:hover, .button--blue:focus {
+      background-color: #116ca6; }
+    .button--blue:disabled {
+      background-color: #e3e8ee; }
+  .button--light-blue {
+    color: #2c8ecc;
+    background-color: #eaf4fa; }
+    .button--light-blue:hover, .button--light-blue:focus {
+      color: #116ca6; }
+  .button--white {
+    color: #2c8ecc;
+    background-color: #ffffff;
+    border: 1px solid #e3e8ee; }
+    .button--white:hover, .button--white:focus {
+      color: #116ca6;
+      border-color: #9bd2f4; }
+    .button--white:disabled {
+      color: #e3e8ee; }
+  .button--grey {
+    color: #707b8c;
+    background-color: #ffffff;
+    border: 1px solid #e3e8ee; }
+    .button--grey:hover, .button--grey:focus {
+      color: #116ca6;
+      border-color: #9bd2f4; }
+    .button--grey:disabled {
+      color: #e3e8ee; }
+
+.link-arrow {
+  display: block;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #2c8ecc;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
+  .link-arrow span {
+    padding-right: 6px; }
+  .link-arrow:hover, .link-arrow:focus {
+    color: #116ca6; }
+  .link-arrow--small {
+    font-size: 13px; }
+  .link-arrow--grey {
+    color: #a6abb3; }
+
+.form-checkbox {
+  position: relative;
+  margin-bottom: 17px; }
+
+.form-checkbox label {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: #354052;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
+  .form-checkbox label::before {
+    content: "";
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid rgba(161, 167, 174, 0.5);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+  .form-checkbox label::after {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 10px;
+    background-image: url("../img/checkbox.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+
+.form-checkbox input[type="checkbox"]:not(:checked) ~ label:hover::before {
+  border: 1px solid #9bd2f4; }
+
+.form-checkbox input[type="checkbox"]:checked ~ label::before {
+  background-color: #2c8ecc; }
+
+.form-checkbox input[type="checkbox"]:checked ~ label::after {
+  display: block; }
+
+.form-checkbox input[type="checkbox"]:disabled ~ label {
+  cursor: text; }
+  .form-checkbox input[type="checkbox"]:disabled ~ label::before {
+    background-color: #f9f9fa; }
+  .form-checkbox input[type="checkbox"]:disabled ~ label::after {
+    display: block;
+    background-image: url("../img/checkbox-disabled.svg"); }
+  .form-checkbox input[type="checkbox"]:disabled ~ label:hover::before {
+    border: 1px solid rgba(161, 167, 174, 0.5); }
+
+.form-radio {
+  position: relative;
+  margin-bottom: 17px; }
+
+.form-radio label {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: #354052;
+  cursor: pointer;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
+  .form-radio label::before {
+    content: "";
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 1px solid rgba(161, 167, 174, 0.5);
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+
+.form-radio input[type="radio"]:not(:checked) ~ label:hover::before {
+  border: 1px solid #9bd2f4; }
+
+.form-radio input[type="radio"]:checked ~ label::before {
+  border: 6px solid #2c8ecc; }
+
+.form-radio input[type="radio"]:disabled ~ label {
+  color: #a6abb3;
+  cursor: text; }
+  .form-radio input[type="radio"]:disabled ~ label::before {
+    background-color: #f9f9fa; }
+  .form-radio input[type="radio"]:disabled ~ label:hover::before {
+    border: 1px solid rgba(161, 167, 174, 0.5); }
+
+.paginator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 15px;
+  line-height: 27px;
+  color: #354052; }
+
+.paginator__item {
+  width: 50px;
+  height: 50px;
+  padding: 10px 5px;
+  margin-right: 8px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #e3e8ee;
+  border-radius: 5px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
+  .paginator__item[href]:hover, .paginator__item[href]:focus, .paginator__item[href]:active {
+    color: #116ca6;
+    border: 1px solid #9bd2f4; }
+  .paginator__item--current {
+    color: #ffffff;
+    background-color: #2c8ecc; }
+  .paginator__item--prev {
+    margin-right: 23px; }
+  .paginator__item--next {
+    margin-left: 15px; }
+  .paginator__item--disabled {
+    color: #a6abb3; }
