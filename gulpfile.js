@@ -50,11 +50,8 @@ gulp.task('js', () => gulp.src(['source/js/*.js', '!source/js/plugins/*.js'])
 
 gulp.task('jsPlugins', () => gulp.src(['source/js/plugins/*.js'])
   .pipe(plumber())
-  .pipe(concat('script.js'))
+  .pipe(concat('libs.js'))
   .pipe(gulp.dest('build/js/'))
-  .pipe(uglify())
-  .pipe(rename({suffix: '.min'}))
-  .pipe(gulp.dest('build/js/plugins/'))
 );
 
 gulp.task('images', () => gulp.src('source/img/**/*.{gif,png,jpg,svg}')
