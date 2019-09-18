@@ -1,0 +1,82 @@
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  padding-top: 17px;
+  padding-bottom: 15px;
+  padding-left: 56px;
+  padding-right: 56px;
+
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  transition: all 0.4s ease;
+
+  & span {
+    padding-right: 6px;
+  }
+
+  &--blue {
+    color: $white;
+    background-color: $blue-default;
+
+    &:hover,
+    &:focus {
+      background-color: $blue-accent;
+    }
+
+    &:disabled {
+      background-color: $light-grey;
+    }
+  }
+
+  &--light-blue {
+    color: $blue-default;
+    background-color: $light-blue;
+
+    &:hover,
+    &:focus {
+      color: $blue-accent;
+    }
+  }
+
+  &--white {
+    color: $blue-default;
+    background-color: $white;
+    border: 1px solid $light-grey;
+
+    &:hover,
+    &:focus {
+      color: $blue-accent;
+      border-color: $light-blue-accent;
+    }
+
+    &:disabled {
+      color: $light-grey;
+    }
+  }
+
+  &--grey {
+    color: $grey;
+    background-color: $white;
+    border: 1px solid $light-grey;
+
+    &:hover,
+    &:focus {
+      color: $blue-accent;
+      border-color: $light-blue-accent;
+    }
+
+    &:disabled {
+      color: $light-grey;
+    }
+  }
+}

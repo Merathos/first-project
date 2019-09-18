@@ -9,3 +9,63 @@
   padding: 0;
   list-style: none;
 }
+
+@mixin font {
+  font-family: "Rubik", "Arial", sans-serif;
+}
+
+@mixin font-h1 {
+  @include font;
+  font-size: 40px;
+  line-height: 47px;
+  font-weight: 400;
+  color: $dark-main;
+}
+
+@mixin font-h2 {
+  @include font;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 400;
+  color: $dark-main;
+}
+
+@mixin font-h3 {
+  @include font;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400;
+  color: $dark-main;
+}
+
+@mixin font-h4 {
+  @include font;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+  color: $dark-main;
+}
+
+@mixin font-h5 {
+  @include font;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: $dark-main;
+}
+
+@mixin main-text {
+  @include font;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $dark-main;
+}
+
+@mixin caption-text {
+  @include font;
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 400;
+  color: $dark-main;
+}

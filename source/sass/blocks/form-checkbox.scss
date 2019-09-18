@@ -1,0 +1,77 @@
+.form-checkbox {
+  position: relative;
+  margin-bottom: 17px;
+}
+
+.form-checkbox label {
+  @include main-text;
+  display: flex;
+  align-items: flex-start;
+  color: $dark-text;
+  cursor: pointer;
+  transition: all 0.4s ease;
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    background-color: $white;
+    border-radius: 5px;
+    border: 1px solid rgba(161, 167, 174, 0.5);
+    transition: all 0.4s ease;
+  }
+
+  &::after {
+    display: none;
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 12px;
+    height: 10px;
+    background-image: url("../img/checkbox.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 0.4s ease;
+  }
+}
+
+.form-checkbox input[type="checkbox"]:not(:checked) ~ label {
+  &:hover {
+    &::before {
+      border: 1px solid $light-blue-accent;
+    }
+  }
+}
+
+
+.form-checkbox input[type="checkbox"]:checked ~ label {
+  &::before {
+    background-color: $blue-default;
+  }
+
+  &::after {
+    display: block;
+  }
+}
+
+.form-checkbox input[type="checkbox"]:disabled ~ label {
+  cursor: text;
+
+  &::before {
+    background-color: #f9f9fa;
+  }
+
+  &::after {
+    display: block;
+    background-image: url("../img/checkbox-disabled.svg");
+  }
+
+  &:hover {
+    &::before {
+      border: 1px solid rgba(161, 167, 174, 0.5);
+    }
+  }
+}

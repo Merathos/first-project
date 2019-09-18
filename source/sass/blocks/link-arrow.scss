@@ -1,0 +1,28 @@
+.link-arrow {
+  display: block;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $blue-default;
+
+  transition: all 0.4s ease;
+
+  & span {
+    padding-right: 6px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $blue-accent;
+  }
+
+  &--small {
+    font-size: 13px;
+  }
+
+  &--grey {
+    color: $grey-default;
+  }
+}
