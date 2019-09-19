@@ -20,6 +20,14 @@
   font-family: "Rubik";
   font-style: normal;
   font-display: swap;
+  font-weight: 400;
+  src: url("../fonts/Rubik-Regular-cyrillic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-display: swap;
   font-weight: 500;
   src: url("../fonts/Rubik-Medium.woff2") format("woff2"),
     url("../fonts/Rubik-Medium.woff") format("woff");
