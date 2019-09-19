@@ -69,3 +69,23 @@
   font-weight: 400;
   color: $dark-main;
 }
+
+
+@mixin tablet {
+  @media (max-width: $desktop-width - 1) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $tablet-width - 1) {
+    @content;
+  }
+}
+
+
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
