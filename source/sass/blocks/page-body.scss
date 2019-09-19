@@ -1,0 +1,6 @@
+.page-body {
+  &--no-scroll {
+    position: fixed;
+    overflow: hidden;
+  }
+}
