@@ -7,8 +7,8 @@
   padding-right: 56px;
 
   font-weight: 500;
-  font-size: 15px;
-  line-height: 20px;
+  font-size: rem(15px);
+  line-height: rem(20px);
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -19,6 +19,12 @@
   cursor: pointer;
 
   transition: all 0.4s ease;
+
+  @media (max-width: 400px) {
+    width: 100%;
+    padding-left: 26px;
+    padding-right: 26px;
+  }
 
   & span {
     padding-right: 6px;

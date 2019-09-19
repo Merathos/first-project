@@ -1,3 +1,4 @@
+@import "functions";
 @import "variables";
 @import "mixins";
 @import "fonts";
@@ -5,6 +6,8 @@
 
 /* Плагины */
 @import "plugins/normalize";
+@import "plugins/jquery.formstyler";
+@import "plugins/perfect-scrollbar";
 
 /* Блоки */
 @import "blocks/page-body";
@@ -14,6 +17,7 @@
 @import "blocks/link-arrow";
 @import "blocks/form-checkbox";
 @import "blocks/form-radio";
+@import "blocks/form-select";
 @import "blocks/form";
 @import "blocks/paginator";
 @import "blocks/button-star";
