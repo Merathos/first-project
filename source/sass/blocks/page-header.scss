@@ -1,0 +1,181 @@
+.page-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  color: $dark-text;
+}
+
+.page-header__bar {
+  position: relative;
+  z-index: 1;
+  padding: 12px 0;
+  background-color: $white;
+  box-shadow: 0 4px 10px rgba(46, 67, 102, 0.1);
+}
+
+.page-header__container {
+  display: flex;
+  align-items: center;
+}
+
+.page-header__roi-link {
+  display: block;
+  user-select: none;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.page-header__roi-logo {
+  display: block;
+  width: 180px;
+  height: 56px;
+}
+
+.page-header__cite-name {
+  position: relative;
+  display: block;
+  width: 138px;
+  margin-left: 49px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  text-decoration: none;
+  user-select: none;
+  color: inherit;
+  transition: color $style-change-duration;
+
+  &:hover {
+    color: $blue-accent;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    width: 1px;
+    height: 48px;
+    background-color: #dedede;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+}
+
+.page-header__visually-impaired {
+  display: flex;
+  align-items: center;
+  max-width: 240px;
+  margin-left: auto;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: none;
+  user-select: none;
+  color: inherit;
+  transition: color $style-change-duration;
+
+  &--main {
+    display: none;
+  }
+
+  &:hover {
+    color: $blue-accent;
+  }
+}
+
+.page-header__visually-impaired svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  fill: #c4c4c4;
+}
+
+.page-header__main {
+  padding: 23px 0;
+  background-color: #f9f9fa;
+}
+
+.page-header__location-switcher {
+  margin-right: auto;
+}
+
+
+@include tablet {
+  .page-header__container {
+    &--main {
+      display: block;
+      padding: 0;
+    }
+  }
+
+  .page-header__roi-link {
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
+
+  .page-header__roi-logo {
+    width: 174px;
+    height: 55px;
+  }
+
+  .page-header__cite-name {
+    width: 130px;
+    font-size: 15px;
+    line-height: 18px;
+
+    &:hover {
+      color: inherit;
+    }
+
+    &:active {
+      color: $blue-accent;
+    }
+  }
+
+  .page-header__main {
+    padding: 0;
+    background-color: $white;
+  }
+}
+
+
+@include mobile {
+  .page-header__roi-logo {
+    width: 124px;
+    height: 40px;
+  }
+
+  .page-header__cite-name {
+    width: 90px;
+    margin-left: 25px;
+    font-size: 10px;
+    line-height: 12px;
+
+    &::after {
+      content: "";
+      left: -13px;
+      height: 32px;
+    }
+  }
+
+  .page-header__visually-impaired {
+    &--bar {
+      display: none;
+    }
+
+    &--main {
+      display: flex;
+      max-width: none;
+      padding: 23px 16px 27px;
+      margin-left: 0;
+    }
+  }
+}

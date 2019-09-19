@@ -1,0 +1,86 @@
+.location-switcher form {
+  display: flex;
+  align-items: flex-start;
+}
+
+.location-switcher__btn {
+  max-width: 340px;
+  margin-bottom: 0;
+
+  &:first-child {
+    position: relative;
+    margin-right: 72px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -41px;
+      width: 1px;
+      height: 48px;
+      background-color: #dedede;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+  }
+}
+
+.location-switcher__btn label {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.location-switcher__address {
+  display: block;
+  padding-left: 28px;
+  margin-top: 4px;
+  font-size: 13px;
+  line-height: 15px;
+  color: rgba($grey, 0.75);
+}
+
+.location-switcher__show-btn {
+  // WARNING: временно
+  display: none;
+  padding: 10px 20px;
+  margin-left: 20px;
+}
+
+
+@include tablet {
+  .location-switcher {
+    padding: 24px 24px;
+    background-color: #f9f9fa;
+  }
+
+  .location-switcher form {
+    display: block;
+  }
+
+  .location-switcher__btn {
+    max-width: none;
+    margin-bottom: 0;
+
+    &:first-child {
+      margin-right: 0;
+      margin-bottom: 48px;
+
+      &::after {
+        top: auto;
+        right: 0;
+        bottom: -24px;
+        left: 0;
+        width: auto;
+        height: 1px;
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+
+@include mobile {
+  .location-switcher {
+    padding: 24px 16px;
+  }
+}
