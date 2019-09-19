@@ -1,5 +1,21 @@
 .user-menu {
   position: relative;
+  z-index: 10;
+}
+
+.user-menu__overlay {
+  display: none;
+
+  &--shown {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    cursor: pointer;
+  }
 }
 
 .user-menu__dropdown-toggle {
@@ -25,12 +41,14 @@
   height: 16px;
   margin-right: 10px;
   fill: $blue-default;
+  pointer-events: none;
 }
 
 .user-menu__user-name {
   margin-right: 10px;
   font-size: 16px;
   line-height: 20px;
+  pointer-events: none;
 }
 
 .user-menu__dropdown-icon {
@@ -39,6 +57,7 @@
   width: 13px;
   height: 13px;
   fill: $grey-default;
+  pointer-events: none;
   transition: transform 0.5s;
 }
 
@@ -52,14 +71,20 @@
   position: absolute;
   top: 100%;
   right: 0;
-  // WARNING: временно
-  // display: none;
   box-sizing: border-box;
   width: 300px;
   padding-left: 32px;
   background-color: $white;
   border-radius: 4px;
   box-shadow: 0 2px 10px rgba(46, 67, 102, 0.1);
+}
+
+.user-menu--js .user-menu__list {
+  display: none;
+}
+
+.user-menu--open .user-menu__list {
+  display: block;
 }
 
 .user-menu__item {
@@ -87,6 +112,10 @@
 @include tablet {
   .user-menu {
     padding: 24px 24px 0;
+  }
+
+  .user-menu__overlay {
+    display: none;
   }
 
   .user-menu__dropdown-toggle {
@@ -119,6 +148,13 @@
     padding-left: 30px;
     border-radius: 0;
     box-shadow: none;
+  }
+
+  .user-menu--js .user-menu__list {
+    display: block;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s;
   }
 
   .user-menu__item {
