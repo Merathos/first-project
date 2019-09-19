@@ -1,6 +1,8 @@
 .page-404 {
-  padding-top: 136px;
-  padding-bottom: 120px;
+  // padding-top: 136px;
+  // padding-bottom: 120px;
+  padding-top: 14.52vh;
+  padding-bottom: 12.81vh;
 
   @media (max-width: $tablet-width - 1) {
     padding-top: 88px;
@@ -54,6 +56,9 @@
 }
 
 .page-404__button {
+  padding-left: 60px;
+  padding-right: 60px;
+
   @media (max-width: 400px) {
     width: 100%;
     padding-left: 30px;

@@ -1,8 +1,8 @@
 .link-arrow {
   display: block;
   font-weight: 500;
-  font-size: 15px;
-  line-height: 20px;
+  font-size: rem(15px);
+  line-height: rem(20px);
   text-transform: uppercase;
   text-decoration: none;
   color: $blue-default;
@@ -19,7 +19,7 @@
   }
 
   &--small {
-    font-size: 13px;
+    font-size: rem(13px);
   }
 
   &--grey {
