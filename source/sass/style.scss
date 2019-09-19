@@ -10,7 +10,9 @@
 @import "plugins/perfect-scrollbar";
 
 /* Блоки */
+@import "blocks/page-body";
 @import "blocks/container";
+@import "blocks/logo-link";
 @import "blocks/button";
 @import "blocks/link-arrow";
 @import "blocks/form-checkbox";
@@ -21,3 +23,10 @@
 @import "blocks/button-star";
 @import "blocks/page-404";
 @import "blocks/page-footer";
+
+// header
+@import "blocks/page-header";
+@import "blocks/menu-btn";
+@import "blocks/main-menu";
+@import "blocks/location-switcher";
+@import "blocks/user-menu";
