@@ -10,7 +10,7 @@
   }
 
 
-  var menuBtn = menu.querySelector('.user-menu__dropdown-toggle');
+  var menuBtn = menu.querySelector('.user-menu__dropdown-btn');
   var overlay = menu.querySelector('.user-menu__overlay');
   var list = menu.querySelector('.user-menu__list');
 

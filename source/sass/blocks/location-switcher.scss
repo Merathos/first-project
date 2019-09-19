@@ -4,7 +4,7 @@
 }
 
 .location-switcher__btn {
-  max-width: 340px;
+  max-width: 342px;
   margin-bottom: 0;
 
   &:first-child {
@@ -15,7 +15,7 @@
       content: "";
       position: absolute;
       top: 50%;
-      right: -41px;
+      right: -42px;
       width: 1px;
       height: 48px;
       background-color: #dedede;
@@ -26,31 +26,34 @@
 }
 
 .location-switcher__btn label {
-  font-size: 16px;
-  line-height: 19px;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .location-switcher__address {
   display: block;
   padding-left: 28px;
-  margin-top: 4px;
+  margin-top: 3px;
+  // WARNING: сделать в относительных единицах
   font-size: 13px;
   line-height: 15px;
   color: rgba($grey, 0.75);
 }
 
 .location-switcher__show-btn {
-  // WARNING: временно
-  display: none;
   padding: 10px 20px;
   margin-left: 20px;
+}
+
+.location-switcher--js .location-switcher__show-btn {
+  display: none;
 }
 
 
 @include tablet {
   .location-switcher {
-    padding: 24px 24px;
-    background-color: #f9f9fa;
+    padding: 0 24px;
+    background-color: $color-bg;
   }
 
   .location-switcher form {
@@ -59,16 +62,16 @@
 
   .location-switcher__btn {
     max-width: none;
+    padding: 25px 0 23px;
     margin-bottom: 0;
 
     &:first-child {
       margin-right: 0;
-      margin-bottom: 48px;
 
       &::after {
         top: auto;
         right: 0;
-        bottom: -24px;
+        bottom: 0;
         left: 0;
         width: auto;
         height: 1px;
@@ -76,11 +79,20 @@
       }
     }
   }
+
+  .location-switcher__show-btn {
+    margin-left: 28px;
+    margin-bottom: 20px;
+  }
 }
 
 
 @include mobile {
   .location-switcher {
-    padding: 24px 16px;
+    padding: 0 16px;
+  }
+
+  .location-switcher__btn {
+    padding: 24px 0 27px;
   }
 }

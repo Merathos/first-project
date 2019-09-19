@@ -71,6 +71,12 @@
 }
 
 
+@mixin desktop-only {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
 @mixin tablet {
   @media (max-width: $desktop-width - 1) {
     @content;

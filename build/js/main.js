@@ -25,6 +25,21 @@
 
 
 (function () {
+  var switcher = document.querySelector('.location-switcher');
+
+
+  if (!switcher) {
+    return;
+  }
+
+
+  switcher.classList.add('location-switcher--js');
+})();
+
+'use strict';
+
+
+(function () {
   var header = document.querySelector('.page-header');
 
 
@@ -35,17 +50,22 @@
 
   var topBar = header.querySelector('.page-header__bar');
 
-  var menu = header.querySelector('.page-header__main');
+  var menu = header.querySelector('.main-menu');
   var menuBtn = header.querySelector('.menu-btn');
 
   var scrollPosition = 0;
+
+
+  var adjustMenuHeight = function () {
+    menu.style.height = header.classList.contains('page-header--open-menu') && document.documentElement.clientWidth < window.const.resolution.DESKTOP ? window.innerHeight - topBar.offsetHeight + 'px' : '';
+  };
 
 
   var onMenuBtnClick = function () {
     header.classList.toggle('page-header--open-menu');
     menuBtn.classList.toggle('menu-btn--close');
 
-    menu.style.height = header.classList.contains('page-header--open-menu') ? window.innerHeight - topBar.offsetHeight + 'px' : '';
+    adjustMenuHeight();
 
     if (header.classList.contains('page-header--open-menu')) {
       scrollPosition = window.pageYOffset;
@@ -56,10 +76,22 @@
     }
   };
 
+  var onWindowResize = function () {
+    adjustMenuHeight();
 
-  menu.classList.add('page-header__main--js');
+    if (header.classList.contains('page-header--open-menu') && document.documentElement.clientWidth >= window.const.resolution.DESKTOP) {
+      header.classList.remove('page-header--open-menu');
+      menuBtn.classList.remove('menu-btn--close');
+      document.body.classList.remove('page-body--no-scroll');
+    }
+  };
+
+
+  menu.classList.add('main-menu--js');
+
 
   menuBtn.addEventListener('click', onMenuBtnClick);
+  window.addEventListener('resize', onWindowResize);
 })();
 
 'use strict';
@@ -100,7 +132,7 @@
   }
 
 
-  var menuBtn = menu.querySelector('.user-menu__dropdown-toggle');
+  var menuBtn = menu.querySelector('.user-menu__dropdown-btn');
   var overlay = menu.querySelector('.user-menu__overlay');
   var list = menu.querySelector('.user-menu__list');
 
