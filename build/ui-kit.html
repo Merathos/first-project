@@ -88,6 +88,31 @@
         <input class="visually-hidden" type="radio" name="radio" id="radio-3" value="radio-3" disabled="">
         <label for="radio-3">Я радиобаттон</label>
       </div>
+      <div class="form-select">
+        <select class="form-select__group" name="projects-select" id="projects-select">
+          <option class="form-select__option" value="Библиотеки">Библиотеки</option>
+          <option class="form-select__option" value="Благоустройство">Благоустройство</option>
+          <option class="form-select__option" value="Бытовое обслуживание">Бытовое обслуживание</option>
+          <option class="form-select__option" value="Водоснабжение">Водоснабжение</option>
+          <option class="form-select__option" value="Детские площадки">Детские площадки</option>
+          <option class="form-select__option" value="Дороги">Дороги</option>
+          <option class="form-select__option" value="Доходогенерирующие проекты">Доходогенерирующие проекты</option>
+          <option class="form-select__option" value="ЖКХ">ЖКХ</option>
+          <option class="form-select__option" value="Массовое мероприятие">Массовое мероприятие</option>
+          <option class="form-select__option" value="Места захоронения">Места захоронения</option>
+          <option class="form-select__option" value="Места массового пользования">Места массового пользования</option>
+          <option class="form-select__option" value="Муниципальные образовательные организации">Муниципальные образовательные организации</option>
+          <option class="form-select__option" value="Народное творчество">Народное творчество</option>
+          <option class="form-select__option" value="Объекты культурного наследия">Объекты культурного наследия</option>
+          <option class="form-select__option" value="Объекты культуры">Объекты культуры</option>
+          <option class="form-select__option" value="Пожарная безопасность">Пожарная безопасность</option>
+          <option class="form-select__option" value="Сбор бытовых отходов">Сбор бытовых отходов</option>
+          <option class="form-select__option" value="Связь">Связь</option>
+          <option class="form-select__option" value="Спорт">Спорт</option>
+          <option class="form-select__option" value="Туризм">Туризм</option>
+          <option class="form-select__option" value="Фельдшерско-акушерские пункты">Фельдшерско-акушерские пункты</option>
+        </select>
+      </div>
     </form>
     <h2>Пагинация</h2>
     <div class="paginator">
@@ -99,18 +124,57 @@
       <a class="paginator__item paginator__item--current">1</a>
       <a class="paginator__item" href="#2">2</a>
       <a class="paginator__item" href="#3">3</a>
-      <a class="paginator__item" href="#">&hellip;</a>
-      <a class="paginator__item" href="#9">9</a>
-      <a class="paginator__item" href="#10">10</a>
-      <a class="paginator__item" href="#11">11</a>
+      <a class="paginator__item paginator__item--hidden" href="#">&hellip;</a>
+      <a class="paginator__item paginator__item--hidden" href="#9">9</a>
+      <a class="paginator__item paginator__item--hidden" href="#10">10</a>
+      <a class="paginator__item paginator__item--hidden" href="#11">11</a>
       <a class="paginator__item paginator__item--next" href="#next" aria-label="следующий">
         <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
           <use xlink:href="img/sprite.svg#icon-paginator-next"></use>
         </svg>
       </a>
+    </div>
   </div>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="page-footer__top">
+        <ul class="page-footer__list">
+          <li class="page-footer__item">
+            <span>Сайт Президента Российской Федерации</span>
+            <a href="http://kremlin.ru/" target="_blank">kremlin.ru</a>
+          </li>
+          <li class="page-footer__item">
+            <span>Сайт Правительства Российской Федерации</span>
+            <a href="http://government.ru/" target="_blank">government.ru</a>
+          </li>
+          <li class="page-footer__item">
+            <span>Государственная дума Российской Федерации</span>
+            <a href="http://duma.gov.ru/" target="_blank">duma.gov.ru</a>
+          </li>
+        </ul>
+        <ul class="page-footer__list">
+          <li class="page-footer__item">
+            <span>Портал государственных услуг</span>
+            <a href="http://gosuslugi.ru/" target="_blank">gosuslugi.ru</a>
+          </li>
+          <li class="page-footer__item">
+            <span>Единый портал раскрытия информации о подготовке проектов нормативных актов</span>
+            <a href="http://regulation.gov.ru/" target="_blank">regulation.gov.ru</a>
+          </li>
+          <li class="page-footer__item">
+            <span>Официальный интернет-портал правовой информации</span>
+            <a href="http://pravo.gov.ru/" target="_blank">pravo.gov.ru</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__bottom">
+        <span>© 2019</span>
+      </div>
+    </div>
+  </footer>
 
 <script src="js/libs.js"></script>
 <script src="js/script.min.js"></script>
-</div></body>
+</body>
 </html>
