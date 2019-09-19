@@ -1,0 +1,17 @@
+.title {
+  margin: 0;
+  padding: 0;
+
+  font-weight: 400;
+  font-family: Rubik, Arial, sans-serif;
+  color: $dark-text;
+
+  &--lvl1 {
+    @include font-h1();
+  }
+
+  &--lvl2 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
