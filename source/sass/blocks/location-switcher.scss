@@ -4,18 +4,18 @@
 }
 
 .location-switcher__btn {
-  max-width: 342px;
+  max-width: 350px;
   margin-bottom: 0;
 
   &:first-child {
     position: relative;
-    margin-right: 72px;
+    margin-right: 74px;
 
     &::after {
       content: "";
       position: absolute;
       top: 50%;
-      right: -42px;
+      right: -43px;
       width: 1px;
       height: 48px;
       background-color: #dedede;
@@ -28,19 +28,23 @@
 .location-switcher__btn label {
   font-size: inherit;
   line-height: inherit;
+
+  &::before {
+    margin-right: 12px;
+  }
 }
 
 .location-switcher__address {
   display: block;
-  padding-left: 28px;
+  padding-left: 32px;
   margin-top: 3px;
-  // WARNING: сделать в относительных единицах
-  font-size: 13px;
-  line-height: 15px;
+  font-size: rem(13px);
+  line-height: rem(15px);
   color: rgba($grey, 0.75);
 }
 
 .location-switcher__show-btn {
+  max-width: 200px;
   padding: 10px 20px;
   margin-left: 20px;
 }

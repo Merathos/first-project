@@ -1,13 +1,15 @@
 .page-header {
-  position: sticky;
-  z-index: 100;
-  top: 0;
   width: 100%;
-  // WARNING: сделать в относительных единицах
-  font-size: 16px;
-  line-height: 19px;
+  font-size: rem(16px);
+  line-height: rem(19px);
   color: $dark-text;
   background-color: $white;
+
+  &--js {
+    position: sticky;
+    z-index: 100;
+    top: 0;
+  }
 }
 
 .page-header__container {
@@ -138,9 +140,8 @@
   .page-header__site-name {
     width: 130px;
     margin-right: 24px;
-    // WARNING: сделать в относительных единицах
-    font-size: 15px;
-    line-height: 17px;
+    font-size: rem(15px);
+    line-height: rem(17px);
   }
 
   .page-header__location-switcher,
@@ -173,9 +174,8 @@
     width: 90px;
     margin-left: 25px;
     margin-right: auto;
-    // WARNING: сделать в относительных единицах
-    font-size: 10px;
-    line-height: 12px;
+    font-size: rem(10px);
+    line-height: rem(12px);
 
     &::after {
       content: "";

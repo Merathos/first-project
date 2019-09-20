@@ -20,6 +20,7 @@
 
 
   adjustHeaderAppearance();
+  header.classList.add('page-header--js');
 
   document.addEventListener('scroll', adjustHeaderAppearance);
 })();
