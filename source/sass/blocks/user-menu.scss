@@ -27,9 +27,18 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  outline: none;
   transition: color $style-change-duration;
 
-  &:hover {
+  &:focus {
+    color: $blue-accent;
+  }
+
+  &:focus:not(.focus-visible) {
+    color: inherit;
+  }
+
+  &:hover:not(.focus-visible) {
     color: $blue-accent;
   }
 }
@@ -112,11 +121,11 @@
     padding: 0;
     margin-bottom: 10px;
 
-    &:hover {
+    &:hover:not(.focus-visible) {
       color: inherit;
     }
 
-    &:active {
+    &:active:not(.focus-visible) {
       color: $blue-accent;
     }
   }

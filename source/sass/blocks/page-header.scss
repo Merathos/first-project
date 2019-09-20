@@ -21,9 +21,18 @@
   text-decoration: none;
   user-select: none;
   color: inherit;
+  outline: none;
   transition: color $style-change-duration;
 
-  &[href]:hover {
+  &:focus {
+    color: $blue-accent;
+  }
+
+  &:focus:not(.focus-visible) {
+    color: inherit;
+  }
+
+  &[href]:hover:not(.focus-visible) {
     color: $blue-accent;
   }
 }
@@ -123,11 +132,11 @@
   }
 
   .page-header__link {
-    &[href]:hover {
+    &[href]:hover:not(.focus-visible) {
       color: inherit;
     }
 
-    &[href]:active {
+    &[href]:active:not(.focus-visible) {
       color: $blue-accent;
     }
   }
