@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preload" href="fonts/Rubik-Light.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Rubik-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Rubik-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Rubik-Bold.woff2" as="font" crossorigin="anonymous">
+  <link href="css/style.min.css" rel="stylesheet">
+  <title>Общественное голосование</title>
+</head>
+
+<body>
+  <main class="projects  page-content  page-content--with-back-btn">
+    <div class="container">
+      <a class="page-content__back-btn" href="#">
+        <svg width="8" height="14">
+          <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
+        </svg>
+        Назад
+      </a>
+
+      <div class="projects__filter  filter">
+        <form action="index.html" method="post">
+          <div class="filter__header">
+            <h1 class="filter__header-item">Проекты на голосовании</h1>
+            <span class="filter__header-item  filter__header-item--last">в&nbsp;категории</span>
+
+            <div class="filter__category-select  form-select">
+              <select class="form-select__group" name="projects-select" id="projects-select">
+                <option class="form-select__option" value="Библиотеки">Библиотеки</option>
+                <option class="form-select__option" value="Благоустройство">Благоустройство</option>
+                <option class="form-select__option" value="Бытовое обслуживание">Бытовое обслуживание</option>
+                <option class="form-select__option" value="Водоснабжение">Водоснабжение</option>
+                <option class="form-select__option" value="Детские площадки">Детские площадки</option>
+                <option class="form-select__option" value="Дороги">Дороги</option>
+                <option class="form-select__option" value="Доходогенерирующие проекты">Доходогенерирующие проекты</option>
+                <option class="form-select__option" value="ЖКХ">ЖКХ</option>
+                <option class="form-select__option" value="Массовое мероприятие">Массовое мероприятие</option>
+                <option class="form-select__option" value="Места захоронения">Места захоронения</option>
+                <option class="form-select__option" value="Места массового пользования">Места массового пользования</option>
+                <option class="form-select__option" value="Муниципальные образовательные организации">Муниципальные образовательные организации</option>
+                <option class="form-select__option" value="Народное творчество">Народное творчество</option>
+                <option class="form-select__option" value="Объекты культурного наследия">Объекты культурного наследия</option>
+                <option class="form-select__option" value="Объекты культуры">Объекты культуры</option>
+                <option class="form-select__option" value="Пожарная безопасность">Пожарная безопасность</option>
+                <option class="form-select__option" value="Сбор бытовых отходов">Сбор бытовых отходов</option>
+                <option class="form-select__option" value="Связь">Связь</option>
+                <option class="form-select__option" value="Спорт">Спорт</option>
+                <option class="form-select__option" value="Туризм">Туризм</option>
+                <option class="form-select__option" value="Фельдшерско-акушерские пункты">Фельдшерско-акушерские пункты</option>
+              </select>
+            </div>
+          </div>
+
+          <button class="filter__open-btn  button  button--light-blue" type="button">Фильтры</button>
+
+          <div class="filter__body">
+            <div class="projects__counter  counter">
+              <div class="counter__container">
+                <p class="counter__caption">Вы&nbsp;можете проголосовать:</p>
+
+                <p class="counter__item">
+                  <span class="counter__item-caption">Региональные</span>
+                  <span class="counter__item-avaliable">1</span>
+                  из
+                  <span class="counter__item-total">2</span>
+                </p>
+
+                <p class="counter__item">
+                  <span class="counter__item-caption">Местные</span>
+                  <span class="counter__item-avaliable">3</span>
+                  из
+                  <span class="counter__item-total">4</span>
+                </p>
+              </div>
+            </div>
+
+            <div class="projects__filter-main  filter__main">
+              <div class="filter__main-container">
+                <div class="filter__item  form-radio">
+                  <input class="visually-hidden" type="radio" name="filter-location" id="filter-location-regional" value="filter-location-regional" checked>
+                  <label for="filter-location-regional">Региональные</label>
+                </div>
+
+                <div class="filter__item  form-radio">
+                  <input class="visually-hidden" type="radio" name="filter-location" id="filter-location-local" value="filter-location-local">
+                  <label for="filter-location-local">Местные</label>
+                </div>
+
+                <!-- <div class="form-select">
+                  <select class="form-select__group" name="projects-select" id="projects-select">
+                    <option class="form-select__option" value="За">За</option>
+                    <option class="form-select__option" value="Против">Против</option>
+                    <option class="form-select__option" value="Не голосовал">Не голосовал</option>
+                  </select>
+                </div> -->
+
+                <div class="filter__item  filter__item--separated  form-checkbox">
+                  <input class="visually-hidden" type="checkbox" name="favorite-only" id="favorite-only" value="checkbox">
+                  <label for="favorite-only">Только избранные</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <button class="filter__show-btn  button  button--blue" type="submit">Показать</button>
+        </form>
+      </div>
+
+      <div class="projects__list">
+        <article class="project-item">
+          <a class="project-item__link" href="#">
+            <h2 class="project-item__title">Обязать контролеров проверять как пассажиров так и перевозчиков</h2>
+
+            <div class="project-item__bottom">
+              <p class="project-item__expire">
+                Голосование до:
+                <time class="project-item__expire-date" datetime="2019-08-16">16.08.19 </time>
+              </p>
+
+              <button type="button" class="button-star">
+                <span class="visually-hidden">Добавить в избранное</span>
+                <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+              </button>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-item  project-item--voted">
+          <a class="project-item__link" href="#">
+            <h2 class="project-item__title">Онлайн-голосование граждан за принятие законов Российской Федерации</h2>
+
+            <div class="project-item__bottom">
+              <p class="project-item__expire">
+                Голосование до:
+                <time class="project-item__expire-date" datetime="2019-08-16">16.08.19 </time>
+              </p>
+
+              <button type="button" class="button-star">
+                <span class="visually-hidden">Добавить в избранное</span>
+                <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+              </button>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-item  project-item--against">
+          <a class="project-item__link" href="#">
+            <h2 class="project-item__title">Инициатива "За строительство подземного метро в районе Северный (г. Москва) и социальной инфраструктуры</h2>
+
+            <div class="project-item__bottom">
+              <p class="project-item__expire">
+                Голосование до:
+                <time class="project-item__expire-date" datetime="2019-08-16">16.08.19 </time>
+              </p>
+
+              <button type="button" class="button-star">
+                <span class="visually-hidden">Добавить в избранное</span>
+                <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+              </button>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-item  project-item--disabled">
+          <a class="project-item__link" href="#">
+            <h2 class="project-item__title">Возрождение вечерних школ</h2>
+
+            <div class="project-item__bottom">
+              <p class="project-item__expire">
+                Голосование до:
+                <time class="project-item__expire-date" datetime="2019-08-16">16.08.19 </time>
+              </p>
+
+              <button type="button" class="button-star">
+                <span class="visually-hidden">Добавить в избранное</span>
+                <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+              </button>
+            </div>
+          </a>
+        </article>
+
+        <article class="project-item  project-item--win">
+          <a class="project-item__link" href="#">
+            <h2 class="project-item__title">Художественное ПТУ на базе янтарного комбината в Калининградской области</h2>
+
+            <div class="project-item__bottom">
+              <p class="project-item__expire">
+                Голосование до:
+                <time class="project-item__expire-date" datetime="2019-08-16">16.08.19 </time>
+              </p>
+
+              <button type="button" class="button-star">
+                <span class="visually-hidden">Добавить в избранное</span>
+                <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+              </button>
+            </div>
+          </a>
+        </article>
+      </div>
+      <button class="projects__show-more-btn  button  button--light-blue" type="button">Показать ещё</button>
+
+      <div class="projects__paginator  paginator">
+        <a class="paginator__item paginator__item--prev paginator__item--disabled" aria-label="предыдущий">
+            <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#icon-paginator-prev"></use>
+          </svg>
+        </a>
+        <a class="paginator__item paginator__item--current">1</a>
+        <a class="paginator__item" href="#2">2</a>
+        <a class="paginator__item" href="#3">3</a>
+        <a class="paginator__item paginator__item--hidden" href="#">&hellip;</a>
+        <a class="paginator__item paginator__item--hidden" href="#9">9</a>
+        <a class="paginator__item paginator__item--hidden" href="#10">10</a>
+        <a class="paginator__item paginator__item--hidden" href="#11">11</a>
+        <a class="paginator__item paginator__item--next" href="#next" aria-label="следующий">
+          <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#icon-paginator-next"></use>
+          </svg>
+        </a>
+      </div>
+
+      <div class="projects__archive">
+        <p class="projects__archive-text">Также вы&nbsp;можете ознакомиться со&nbsp;всеми записями, перейдя в&nbsp;архив</p>
+
+        <a class="projects__archive-link  link-arrow" href="#">
+          <span>Архив новостей</span>
+          <svg width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#icon-arrow"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </main>
+<script src="js/libs.js"></script>
+<script src="js/main.min.js"></script>
+</body>
+</html>
