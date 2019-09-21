@@ -1,0 +1,29 @@
+.main-menu {
+  padding: 25px 0;
+  background-color: $color-bg;
+}
+
+
+@include tablet {
+  .main-menu {
+    padding: 0;
+    background-color: transparent;
+    overflow-y: hidden;
+
+    &--js {
+      display: none;
+    }
+  }
+
+  .page-header--open-menu .main-menu {
+    display: block;
+  }
+
+  .main-menu__container {
+    height: 100%;
+    overflow-y: scroll;
+
+    // iOS fix
+    -webkit-overflow-scrolling: touch;
+  }
+}
