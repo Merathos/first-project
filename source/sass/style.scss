@@ -6,8 +6,7 @@
 
 /* Плагины */
 @import "plugins/normalize";
-@import "plugins/jquery.formstyler";
-@import "plugins/perfect-scrollbar";
+// @import "plugins/select";
 
 /* Блоки */
 @import "blocks/container";
@@ -21,3 +20,6 @@
 @import "blocks/button-star";
 @import "blocks/page-404";
 @import "blocks/page-footer";
+@import "blocks/arrow-backward";
+@import "blocks/page-title";
+@import "blocks/composite-poll";

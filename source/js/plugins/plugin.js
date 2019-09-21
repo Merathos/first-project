@@ -6,7 +6,8 @@ function tamingselect()
 	var ts_selectclass='select'; 	// class to identify selects
 	var ts_listclass='select-list';		// class to identify ULs
 	var ts_boxclass='select-dropcontainer'; 		// parent element
-	var ts_triggeron='select-activetrigger'; 		// class for the active trigger link
+  var ts_triggeron='select-activetrigger'; 		// class for the active trigger
+
 	var ts_triggeroff='select-trigger';			// class for the inactive trigger link
 	var ts_dropdownclosed='select-dropdownhidden'; // closed dropdown
 	var ts_dropdownopen='select-dropdownvisible';	// open dropdown
