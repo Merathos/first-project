@@ -1,0 +1,26 @@
+.logo-link {
+  display: inline-block;
+  user-select: none;
+  outline: none;
+
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:focus:not(.focus-visible) {
+    opacity: 1;
+  }
+
+  &:active:not(.focus-visible) {
+    opacity: 0.6;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .logo-link {
+    &:hover:not(.focus-visible) {
+      opacity: 0.6;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+@mixin line {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: currentColor;
+  border-radius: $border-radius;
+}
+
+
+.menu-btn {
+  display: none;
+}
+
+
+@include tablet {
+  .menu-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 28px;
+    height: 21px;
+    padding: 0;
+    user-select: none;
+    color: $blue-default;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: color $style-change-duration;
+
+    &:focus {
+      color: $blue-accent;
+    }
+
+    &:focus:not(.focus-visible) {
+      color: $blue-default;
+    }
+
+    &:active:not(.focus-visible) {
+      color: $blue-accent;
+    }
+
+    &::before,
+    &::after {
+      @include line;
+
+      content: "";
+      position: absolute;
+      right: 0;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+
+    &--close {
+      &::before,
+      &::after {
+        top: 50%;
+        bottom: auto;
+      }
+
+      &::before {
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      &::after {
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+  }
+
+  .menu-btn__icon {
+    @include line;
+  }
+
+  .menu-btn--close .menu-btn__icon {
+    display: none;
+  }
+}

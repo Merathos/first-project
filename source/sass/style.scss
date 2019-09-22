@@ -8,7 +8,9 @@
 @import "plugins/normalize";
 
 /* Блоки */
+@import "blocks/page-body";
 @import "blocks/container";
+@import "blocks/logo-link";
 @import "blocks/button";
 @import "blocks/link-arrow";
 @import "blocks/form-checkbox";
@@ -23,3 +25,10 @@
 @import "blocks/arrow-backward";
 @import "blocks/page-title";
 @import "blocks/composite-poll";
+
+// header
+@import "blocks/page-header";
+@import "blocks/menu-btn";
+@import "blocks/main-menu";
+@import "blocks/location-switcher";
+@import "blocks/user-menu";

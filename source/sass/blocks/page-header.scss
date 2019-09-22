@@ -1,0 +1,209 @@
+.page-header {
+  width: 100%;
+  font-size: rem(16px);
+  line-height: rem(19px);
+  color: $dark-text;
+  background-color: $white;
+
+  &--js {
+    position: sticky;
+    z-index: 100;
+    top: 0;
+  }
+}
+
+.page-header__container {
+  display: flex;
+  align-items: center;
+}
+
+.page-header__link {
+  text-decoration: none;
+  user-select: none;
+  color: inherit;
+  outline: none;
+  transition: color $style-change-duration;
+
+  &:focus {
+    color: $blue-accent;
+  }
+
+  &:focus:not(.focus-visible) {
+    color: inherit;
+  }
+
+  &[href]:hover:not(.focus-visible) {
+    color: $blue-accent;
+  }
+}
+
+.page-header__bar {
+  position: relative;
+  z-index: 1;
+  padding: 12px 0 13px;
+  box-shadow: 0 4px 10px rgba(46, 67, 102, 0.1);
+}
+
+.page-header__roi-logo {
+  display: block;
+  width: 180px;
+  height: 56px;
+}
+
+.page-header__site-name {
+  position: relative;
+  display: block;
+  width: 138px;
+  margin-left: 49px;
+  margin-right: auto;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    width: 1px;
+    height: 48px;
+    background-color: #dedede;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+}
+
+.page-header__version-btn {
+  display: flex;
+  align-items: center;
+  max-width: 240px;
+
+  &--menu {
+    display: none;
+  }
+}
+
+.page-header__version-btn svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin-right: 11px;
+  fill: #c4c4c4;
+}
+
+.page-header__location-switcher {
+  margin-right: auto;
+}
+
+
+@include desktop-only {
+  .page-header--above-content {
+    .page-header__bar,
+    .page-header__location-address {
+      display: none;
+    }
+
+    .page-header__version-btn--menu {
+      display: flex;
+      margin-right: 38px;
+    }
+  }
+}
+
+
+@include tablet {
+  .page-header {
+    &--open-menu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .page-header__container {
+    padding: 0 24px;
+
+    &--menu {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0;
+    }
+  }
+
+  .page-header__link {
+    &[href]:hover:not(.focus-visible) {
+      color: inherit;
+    }
+
+    &[href]:active:not(.focus-visible) {
+      color: $blue-accent;
+    }
+  }
+
+  .page-header__roi-logo {
+    width: 174px;
+    height: 55px;
+  }
+
+  .page-header__site-name {
+    width: 130px;
+    margin-right: 24px;
+    font-size: rem(15px);
+    line-height: rem(17px);
+  }
+
+  .page-header__location-switcher,
+  .page-header__user-menu,
+  .page-header__version-btn {
+    width: 100%;
+  }
+
+  .page-header__version-btn {
+    margin-right: auto;
+  }
+}
+
+
+@include mobile {
+  .page-header__container {
+    padding: 0 16px;
+
+    &--menu {
+      padding: 0;
+    }
+  }
+
+  .page-header__roi-logo {
+    width: 124px;
+    height: 40px;
+  }
+
+  .page-header__site-name {
+    width: 90px;
+    margin-left: 25px;
+    margin-right: auto;
+    font-size: rem(10px);
+    line-height: rem(12px);
+
+    &::after {
+      content: "";
+      left: -13px;
+      height: 32px;
+    }
+  }
+
+  .page-header__version-btn {
+    &--bar {
+      display: none;
+    }
+
+    &--menu {
+      order: -1;
+      display: flex;
+      max-width: none;
+      padding: 27px 16px 24px;
+      margin-left: 0;
+    }
+  }
+}

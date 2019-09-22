@@ -39,9 +39,9 @@ gulp.task('style', () => gulp.src('source/sass/style.scss')
   .pipe(server.stream())
 );
 
-gulp.task('js', () => gulp.src(['source/js/*.js', '!source/js/plugins/*.js'])
+gulp.task('js', () => gulp.src(['source/js/**/*.js', '!source/js/plugins/*.js'])
   .pipe(plumber())
-  .pipe(concat('script.js'))
+  .pipe(concat('main.js'))
   .pipe(gulp.dest('build/js/'))
   .pipe(uglify())
   .pipe(rename({suffix: '.min'}))
