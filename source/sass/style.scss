@@ -6,7 +6,6 @@
 
 /* Плагины */
 @import "plugins/normalize";
-// @import "plugins/select";
 
 /* Блоки */
 @import "blocks/container";
@@ -15,6 +14,7 @@
 @import "blocks/form-checkbox";
 @import "blocks/form-radio";
 @import "blocks/form-select";
+@import "blocks/form-range";
 @import "blocks/form";
 @import "blocks/paginator";
 @import "blocks/button-star";

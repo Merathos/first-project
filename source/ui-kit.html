@@ -1,26 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="format-detection" content="telephone=no">
-
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-  <link rel="manifest" href="favicon/site.webmanifest">
-  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-
-  <link rel="preload" href="fonts/Rubik-Light.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/Rubik-Regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/Rubik-Medium.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/Rubik-Bold.woff2" as="font" crossorigin="anonymous">
-  <link href="css/style.min.css" rel="stylesheet">
-  <title>Общественное голосование</title>
-</head>
+<include src="source/components/head.html"></include>
 
 <body>
   <div class="container">
@@ -89,29 +67,60 @@
         <label for="radio-3">Я радиобаттон</label>
       </div>
       <div class="form-select">
-        <select class="form-select__group select" name="projects-select" id="projects-select">
-          <option class="form-select__option" value="Библиотеки">Библиотеки</option>
-          <option class="form-select__option" value="Благоустройство">Благоустройство</option>
-          <option class="form-select__option" value="Бытовое обслуживание">Бытовое обслуживание</option>
-          <option class="form-select__option" value="Водоснабжение">Водоснабжение</option>
-          <option class="form-select__option" value="Детские площадки">Детские площадки</option>
-          <option class="form-select__option" value="Дороги">Дороги</option>
-          <option class="form-select__option" value="Доходогенерирующие проекты">Доходогенерирующие проекты</option>
-          <option class="form-select__option" value="ЖКХ">ЖКХ</option>
-          <option class="form-select__option" value="Массовое мероприятие">Массовое мероприятие</option>
-          <option class="form-select__option" value="Места захоронения">Места захоронения</option>
-          <option class="form-select__option" value="Места массового пользования">Места массового пользования</option>
-          <option class="form-select__option" value="Муниципальные образовательные организации">Муниципальные образовательные организации</option>
-          <option class="form-select__option" value="Народное творчество">Народное творчество</option>
-          <option class="form-select__option" value="Объекты культурного наследия">Объекты культурного наследия</option>
-          <option class="form-select__option" value="Объекты культуры">Объекты культуры</option>
-          <option class="form-select__option" value="Пожарная безопасность">Пожарная безопасность</option>
-          <option class="form-select__option" value="Сбор бытовых отходов">Сбор бытовых отходов</option>
-          <option class="form-select__option" value="Связь">Связь</option>
-          <option class="form-select__option" value="Спорт">Спорт</option>
-          <option class="form-select__option" value="Туризм">Туризм</option>
-          <option class="form-select__option" value="Фельдшерско-акушерские пункты">Фельдшерско-акушерские пункты</option>
-        </select>
+        <noscript>
+          <select name="projects-select" id="projects-select">
+            <option value="Библиотеки">Библиотеки</option>
+            <option value="Благоустройство">Благоустройство</option>
+            <option value="Бытовое обслуживание">Бытовое обслуживание</option>
+            <option value="Водоснабжение">Водоснабжение</option>
+            <option value="Детские площадки">Детские площадки</option>
+            <option value="Дороги">Дороги</option>
+            <option value="Доходогенерирующие проекты">Доходогенерирующие проекты</option>
+            <option value="ЖКХ">ЖКХ</option>
+            <option value="Массовое мероприятие">Массовое мероприятие</option>
+            <option value="Места захоронения">Места захоронения</option>
+            <option value="Места массового пользования">Места массового пользования</option>
+            <option value="Муниципальные образовательные организации">Муниципальные образовательные организации</option>
+            <option value="Народное творчество">Народное творчество</option>
+            <option value="Объекты культурного наследия">Объекты культурного наследия</option>
+            <option value="Объекты культуры">Объекты культуры</option>
+            <option value="Пожарная безопасность">Пожарная безопасность</option>
+            <option value="Сбор бытовых отходов">Сбор бытовых отходов</option>
+            <option value="Связь">Связь</option>
+            <option value="Спорт">Спорт</option>
+            <option value="Туризм">Туризм</option>
+            <option value="Фельдшерско-акушерские пункты">Фельдшерско-акушерские пункты</option>
+          </select>
+        </noscript>
+        <a href="#" class="form-select__title">
+          Библиотеки
+        </a>
+        <div class="form-select__group">
+          <div class="form-select__scrollbar-content">
+          <p class="form-select__option form-select__option--active" data-value="Библиотеки">Библиотеки</p>
+          <p class="form-select__option" data-value="Благоустройство">Благоустройство</p>
+          <p class="form-select__option" data-value="Бытовое обслуживание">Бытовое обслуживание</p>
+          <p class="form-select__option" data-value="Водоснабжение">Водоснабжение</p>
+          <p class="form-select__option" data-value="Детские площадки">Детские площадки</p>
+          <p class="form-select__option" data-value="Дороги">Дороги</p>
+          <p class="form-select__option" data-value="Доходогенерирующие проекты">Доходогенерирующие проекты</p>
+          <p class="form-select__option" data-value="ЖКХ">ЖКХ</p>
+          <p class="form-select__option" data-value="Массовое мероприятие">Массовое мероприятие</p>
+          <p class="form-select__option" data-value="Места захоронения">Места захоронения</p>
+          <p class="form-select__option" data-value="Места массового пользования">Места массового пользования</p>
+          <p class="form-select__option" data-value="Муниципальные образовательные организации">Муниципальные образовательные организации</p>
+          <p class="form-select__option" data-value="Народное творчество">Народное творчество</p>
+          <p class="form-select__option" data-value="Объекты культурного наследия">Объекты культурного наследия</p>
+          <p class="form-select__option" data-value="Объекты культуры">Объекты культуры</p>
+          <p class="form-select__option" data-value="Пожарная безопасность">Пожарная безопасность</p>
+          <p class="form-select__option" data-value="Сбор бытовых отходов">Сбор бытовых отходов</p>
+          <p class="form-select__option" data-value="Связь">Связь</p>
+          <p class="form-select__option" data-value="Спорт">Спорт</p>
+          <p class="form-select__option" data-value="Туризм">Туризм</p>
+          <p class="form-select__option" data-value="Фельдшерско-акушерские пункты" >Фельдшерско-акушерские пункты</p>
+          <input type="hidden" name="project_select-active" id="project_select-active" value="Библиотеки"/>
+        </div>
+      </div>
       </div>
     </form>
     <h2>Пагинация</h2>
@@ -136,45 +145,4 @@
     </div>
   </div>
 
-  <footer class="page-footer">
-    <div class="container">
-      <div class="page-footer__top">
-        <ul class="page-footer__list">
-          <li class="page-footer__item">
-            <span>Сайт Президента Российской Федерации</span>
-            <a href="http://kremlin.ru/" target="_blank">kremlin.ru</a>
-          </li>
-          <li class="page-footer__item">
-            <span>Сайт Правительства Российской Федерации</span>
-            <a href="http://government.ru/" target="_blank">government.ru</a>
-          </li>
-          <li class="page-footer__item">
-            <span>Государственная дума Российской Федерации</span>
-            <a href="http://duma.gov.ru/" target="_blank">duma.gov.ru</a>
-          </li>
-        </ul>
-        <ul class="page-footer__list">
-          <li class="page-footer__item">
-            <span>Портал государственных услуг</span>
-            <a href="http://gosuslugi.ru/" target="_blank">gosuslugi.ru</a>
-          </li>
-          <li class="page-footer__item">
-            <span>Единый портал раскрытия информации о подготовке проектов нормативных актов</span>
-            <a href="http://regulation.gov.ru/" target="_blank">regulation.gov.ru</a>
-          </li>
-          <li class="page-footer__item">
-            <span>Официальный интернет-портал правовой информации</span>
-            <a href="http://pravo.gov.ru/" target="_blank">pravo.gov.ru</a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__bottom">
-        <span>© 2019</span>
-      </div>
-    </div>
-  </footer>
-
-<script src="js/libs.js"></script>
-<script src="js/script.min.js"></script>
-</body>
-</html>
+  <include src="source/components/footer.html"></include>

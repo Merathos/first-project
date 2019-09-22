@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <title>Общественное голосование</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
@@ -19,8 +20,8 @@
   <link rel="preload" href="fonts/Rubik-Medium.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Rubik-Bold.woff2" as="font" crossorigin="anonymous">
   <link href="css/style.min.css" rel="stylesheet">
-  <title>Общественное голосование</title>
 </head>
+</html>
 
 <body>
   <header></header>
@@ -35,11 +36,11 @@
     </div>
     <section class="composite-poll">
       <div class="container">
-        <h1 class="page-title">Опрос о состоянии инвестиционного и&nbsp;предпринимательского климата в Тульской области для&nbsp;представителей средних предприятий</h1>
+        <h1 class="composite-poll__title page-title">Опрос о состоянии инвестиционного и&nbsp;предпринимательского климата в Тульской области для&nbsp;представителей средних предприятий</h1>
         <p class="composite-poll__date">
           Дата окончания опроса: <b>25.11.2019</b>
         </p>
-        <p class="composite-poll__description">Здесь будет описание опроса (информация из стандартного поля). Рыбным текстом называется текст для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст известен как текст-заполнитель.</p>
+        <p class="composite-poll__description">Здесь будет описание опроса (информация из стандартного поля). Рыбным текстом называется текст для временного наполнения макета в&nbsp;публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст известен как текст-заполнитель.</p>
         <form action="#" class="form">
           <div class="form__section">
             <p class="form__question">Удовлетворены ли Вы качеством предоставления государственных и муниципальных услуг в настоящее время?</p>
@@ -70,7 +71,7 @@
             </div>
           </div>
           <div class="form__section">
-            <p class="form__question">О каких способах взаимодействия с органами власти Вам известно?</p>
+            <p class="form__question">О каких способах взаимодействия с&nbsp;органами власти Вам известно?</p>
             <p class="form__description">Выберите один или несколько вариантов ответа</p>
             <div class="form-checkbox">
               <input class="visually-hidden" type="checkbox" name="interaction-1" id="interaction-1" value="Личный прием должностного лица">
@@ -103,7 +104,21 @@
           </div>
           <div class="form__section">
             <p class="form__question">Оцените качество получения государственных и муниципальных услуг</p>
-            <input type="range" name="range" value="">
+            <div class="form__range-wrapper form-range">
+              <div class="form-range__value">
+                <span>1</span>
+                <span>5</span>
+                <span>10</span>
+              </div>
+              <div class="form-range__track">
+                <div class="form-range__fill"></div>
+                <button type="button" class="form-range__button"></button>
+              </div>
+              <div class="form-range__description">
+                <span>очень плохо</span>
+                <span>очень хорошо</span>
+              </div>
+            </div>
           </div>
           <div class="form__section">
             <p class="form__question">Обращались ли в течение последнего года в орган государственной власти для получения государственных (муниципальных) услуг?</p>
@@ -117,7 +132,7 @@
               <label for="appeal-no">Нет</label>
             </div>
           </div>
-          <div class="form__section">
+          <div class="form__section form__section--padding-min">
             <p class="form__question">Сколько составило время ожидания?</p>
             <p class="form__description">Выберите один вариант ответа</p>
             <div class="form-radio">
@@ -138,7 +153,7 @@
             </div>
           </div>
           <div class="form__section">
-            <p class="form__question">Знаете ли Вы о программах, реализуемых органами государственной и муниципальной власти, направленных на формирование кадрового резерва?</p>
+            <p class="form__question">Знаете ли Вы о программах, реализуемых органами государственной и муниципальной власти, направленных на формирование кадрового&nbsp;резерва?</p>
             <p class="form__description">Выберите один вариант ответа</p>
             <div class="form-radio">
               <input class="visually-hidden" type="radio" name="reserve" id="reserve-yes" value="Да, знаю точно" checked="">
@@ -153,7 +168,7 @@
               <label for="reserve-no">Нет</label>
             </div>
           </div>
-          <div class="form__section">
+          <div class="form__section form__section--padding-min">
             <p class="form__question">О каких способах взаимодействия с органами власти Вам известно?</p>
             <p class="form__description">Выберите один или несколько вариантов ответа</p>
             <div class="form-checkbox">
@@ -161,7 +176,11 @@
               <label for="social-1">Служащий</label>
             </div>
             <div class="form-checkbox">
-              <input class="visually-hidden" type="checkbox" name="social-2" id="social-2" value="Рабочий" checked="">
+              <input class="visually-hidden" type="checkbox" name="social-1-2" id="social-1-2" value="Государственный, муниципальный служащий" checked="">
+              <label for="social-1-2">Государственный, муниципальный служащий</label>
+            </div>
+            <div class="form-checkbox">
+              <input class="visually-hidden" type="checkbox" name="social-2" id="social-2" value="Рабочий">
               <label for="social-2">Рабочий</label>
             </div>
             <div class="form-checkbox">
@@ -189,9 +208,9 @@
               <label for="social-8">Другое</label>
             </div>
           </div>
-          <div class="form__button-wrapper">
-            <button type="submit" class="button button--blue">ОТПРАВИТЬ</button>
-            <a href="#" class="button button--light-blue">
+          <div class="form__button-wrapper form__button-wrapper--composite-poll">
+            <button type="submit" class="button button--blue form__submit form__submit--composite-poll">ОТПРАВИТЬ</button>
+            <a href="#" class="button button--light-blue form__btn form__btn--composite-poll">
               вернуться ко всем опросам
             </a>
           </div>
@@ -239,7 +258,9 @@
     </div>
   </footer>
 
-  <script src="js/libs.js"></script>
-  <script src="js/script.min.js"></script>
+<script src="js/libs.js"></script>
+<script src="js/script.min.js"></script>
+
+
+
 </body>
-</html>
