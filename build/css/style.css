@@ -3042,7 +3042,7 @@ template {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
-  padding: 24px 24px 11px;
+  padding: 23px 24px 12px;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -3068,9 +3068,8 @@ template {
             box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15); }
 
 .project-item__title {
-  min-height: 66px;
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 23px;
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.375rem; }
