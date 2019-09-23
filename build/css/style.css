@@ -841,8 +841,8 @@ template {
 .form__submit--composite-poll {
   margin-right: 16px;
   width: 230px;
-  font-size: 14px;
-  line-height: 19px; }
+  font-size: 0.875rem;
+  line-height: 1.1875rem; }
   @media (max-width: 767px) {
     .form__submit--composite-poll {
       margin-right: 12px; } }
@@ -856,8 +856,8 @@ template {
   width: 332px;
   padding-left: 30px;
   padding-right: 30px;
-  font-size: 14px;
-  line-height: 19px; }
+  font-size: 0.875rem;
+  line-height: 1.1875rem; }
   @media (max-width: 400px) {
     .form__btn--composite-poll {
       width: 100%; } }
@@ -932,15 +932,15 @@ template {
     color: #2c8ecc; }
 
 .page-404 {
-  padding-top: 14.52vh;
-  padding-bottom: 12.81vh; }
+  padding-top: 16vh;
+  padding-bottom: 14vh; }
   @media (max-width: 767px) {
     .page-404 {
       padding-top: 88px;
       padding-bottom: 88px; } }
   @media (max-width: 400px) {
     .page-404 {
-      padding-top: 69px;
+      padding-top: 76px;
       padding-bottom: 64px; } }
 
 .page-404__content {
@@ -1184,7 +1184,7 @@ template {
   font-weight: 400;
   color: #333333;
   color: #354052;
-  line-height: 27px;
+  line-height: 1.6875rem;
   background-color: #f9f9fa;
   border-radius: 5px; }
   @media (max-width: 400px) {
@@ -1211,6 +1211,7 @@ template {
   font-weight: 400;
   color: #333333;
   color: #a6abb3; }
+
 .page-header {
   width: 100%;
   font-size: 1rem;
