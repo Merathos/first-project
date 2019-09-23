@@ -61,6 +61,10 @@
   margin-top: 20px;
 }
 
+.filter--js .filter__show-btn {
+  display: none;
+}
+
 
 @include tablet {
   .filter__main {
@@ -90,6 +94,14 @@
     width: 100%;
     max-width: 360px;
     margin: 0 auto 24px;
+  }
+
+  .filter--js .filter__body {
+    display: none;
+  }
+
+  .filter--open .filter__body {
+    display: block;
   }
 
   .filter__item {

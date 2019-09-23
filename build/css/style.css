@@ -1058,6 +1058,9 @@ template {
   padding: 10px 20px;
   margin-top: 20px; }
 
+.filter--js .filter__show-btn {
+  display: none; }
+
 @media (max-width: 1199px) {
   .filter__main {
     padding: 25px 24px; } }
@@ -1077,6 +1080,10 @@ template {
     width: 100%;
     max-width: 360px;
     margin: 0 auto 24px; }
+  .filter--js .filter__body {
+    display: none; }
+  .filter--open .filter__body {
+    display: block; }
   .filter__item--separated {
     margin-left: 32px; } }
 
