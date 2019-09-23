@@ -27,7 +27,7 @@
   color: inherit;
   border: 1px solid $light-grey;
   border-radius: 5px;
-  transition: all 0.4s ease;
+  transition: color 0.4s ease, border 0.4s ease;
 
   &:last-child {
     margin-right: 0;

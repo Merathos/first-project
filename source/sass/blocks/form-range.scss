@@ -1,0 +1,131 @@
+.form-range {
+  width: 308px;
+
+  @media (max-width: $mobile-max-width) {
+    width: 100%;
+  }
+
+  // & .noUi-horizontal {
+  //   height: 6px;
+  //   cursor: pointer;
+  // }
+
+  // & .noUi-target {
+  //   border: none;
+  // }
+
+  // & .noUi-connects {
+  //   background-image: linear-gradient(to right, $light-grey 0%, $light-grey 98%, $grey-default 98%, $grey-default 100%);
+  //   background-position: left bottom;
+  //   background-repeat: repeat-x;
+  //   background-size: 31px 100%;
+  // }
+
+  // & .noUi-connect {
+  //   background-color: $blue-default;
+  // }
+
+  // & .noUi-horizontal .noUi-handle {
+  //   top: -9px;
+  //   width: 24px;
+  //   height: 24px;
+  //   border-radius: 100%;
+  //   background-color: $white;
+  //   border: 8px solid $blue-default;
+  //   box-shadow: none;
+
+  //   cursor: pointer;
+  //   transition: border-color 0.4s ease;
+
+  //   &::before,
+  //   &::after {
+  //     display: none;
+  //   }
+
+  //   &:hover {
+  //     border-color: $blue-accent;
+  //   }
+
+  //   &:focus {
+  //     outline: none;
+  //   }
+  // }
+}
+
+.form-range__value {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+  @include font-h5;
+  color: $dark-text;
+
+  & span:nth-child(2) {
+    margin-left: 10px;
+  }
+}
+
+.form-range__track {
+  position: relative;
+  width: 308px;
+  height: 6px;
+
+  background-image: linear-gradient(to right, $light-grey 0%, $light-grey 98%, $grey-default 98%, $grey-default 100%);
+  background-position: left bottom;
+  background-repeat: repeat-x;
+  background-size: 31px 100%;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  @media (max-width: $mobile-max-width) {
+    width: 100%;
+    background-size: 29px 100%;
+  }
+}
+
+.form-range__fill {
+  width: 50%;
+  height: 6px;
+
+  background-image: linear-gradient(to right, $blue-default 0%, $blue-default 98%, $white 98%, $white 100%);
+  background-position: left bottom;
+  background-repeat: repeat-x;
+  background-size: 31px 100%;
+
+  border-radius: 5px;
+}
+
+.form-range__button {
+  position: absolute;
+  top: -9px;
+  left: 47%;
+
+  @include btn-reset;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: $white;
+  border: 8px solid $blue-default;
+  cursor: pointer;
+
+  transition: border-color 0.4s ease;
+
+  &:hover {
+    border-color: $blue-accent;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.form-range__description {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+
+  @include caption-text;
+  color: $grey-default;
+}
