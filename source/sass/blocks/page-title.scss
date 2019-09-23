@@ -1,0 +1,15 @@
+.page-title {
+  max-width: 1040px;
+  margin: 0;
+
+  @include font-h1;
+  color: $dark-text;
+
+  @media (max-width: $tablet-width - 1) {
+    @include font-h2;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    @include font-h3;
+  }
+}

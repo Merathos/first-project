@@ -1,29 +1,7 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="format-detection" content="telephone=no">
+<include src="source/components/head.html"></include>
 
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-  <link rel="manifest" href="favicon/site.webmanifest">
-  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-
-  <link rel="preload" href="fonts/Rubik-Light.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/Rubik-Regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/Rubik-Medium.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/Rubik-Bold.woff2" as="font" crossorigin="anonymous">
-  <link href="css/style.min.css" rel="stylesheet">
-  <title>Общественное голосование</title>
-</head>
-
-<body>
-  <header></header>
+<body class="page-body">
+  <include src="source/components/header.html"></include>
   <main>
     <section class="page-404">
       <div class="container">
@@ -37,45 +15,4 @@
     </section>
   </main>
 
-  <footer class="page-footer">
-    <div class="container">
-      <div class="page-footer__top">
-        <ul class="page-footer__list">
-          <li class="page-footer__item">
-            <span>Сайт Президента Российской Федерации</span>
-            <a href="http://kremlin.ru/" target="_blank">kremlin.ru</a>
-          </li>
-          <li class="page-footer__item">
-            <span>Сайт Правительства Российской Федерации</span>
-            <a href="http://government.ru/" target="_blank">government.ru</a>
-          </li>
-          <li class="page-footer__item">
-            <span>Государственная дума Российской Федерации</span>
-            <a href="http://duma.gov.ru/" target="_blank">duma.gov.ru</a>
-          </li>
-        </ul>
-        <ul class="page-footer__list">
-          <li class="page-footer__item">
-            <span>Портал государственных услуг</span>
-            <a href="http://gosuslugi.ru/" target="_blank">gosuslugi.ru</a>
-          </li>
-          <li class="page-footer__item">
-            <span>Единый портал раскрытия информации о подготовке проектов нормативных актов</span>
-            <a href="http://regulation.gov.ru/" target="_blank">regulation.gov.ru</a>
-          </li>
-          <li class="page-footer__item">
-            <span>Официальный интернет-портал правовой информации</span>
-            <a href="http://pravo.gov.ru/" target="_blank">pravo.gov.ru</a>
-          </li>
-        </ul>
-      </div>
-      <div class="page-footer__bottom">
-        <span>© 2019</span>
-      </div>
-    </div>
-  </footer>
-
-  <script src="js/libs.js"></script>
-  <script src="js/script.min.js"></script>
-</body>
-</html>
+  <include src="source/components/footer.html"></include>
