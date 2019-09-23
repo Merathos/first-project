@@ -2,6 +2,10 @@
   padding: 24px 32px;
   border: 1px solid $light-grey;
   border-radius: $border-radius;
+
+  &--hidden {
+    display: none;
+  }
 }
 
 .counter__container {
