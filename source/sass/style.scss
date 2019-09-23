@@ -6,8 +6,6 @@
 
 /* Плагины */
 @import "plugins/normalize";
-@import "plugins/jquery.formstyler";
-@import "plugins/perfect-scrollbar";
 
 /* Блоки */
 @import "blocks/page-body";
@@ -19,13 +17,22 @@
 @import "blocks/form-checkbox";
 @import "blocks/form-radio";
 @import "blocks/form-select";
+@import "blocks/form-range";
 @import "blocks/form";
 @import "blocks/filter";
 @import "blocks/counter";
 @import "blocks/paginator";
 @import "blocks/button-star";
+@import "blocks/news-notice";
+@import "blocks/social";
+@import "blocks/poll";
+@import "blocks/project";
+@import "blocks/discussion";
 @import "blocks/page-404";
 @import "blocks/page-footer";
+@import "blocks/arrow-backward";
+@import "blocks/page-title";
+@import "blocks/composite-poll";
 
 // header
 @import "blocks/page-header";

@@ -1,0 +1,54 @@
+.composite-poll__title {
+  margin-bottom: 38px;
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 32px;
+  }
+}
+
+.composite-poll__date {
+  margin: 0;
+  margin-bottom: 32px;
+
+  @include font-h5;
+  color: $grey-default;
+
+  & b {
+    color: $dark-text;
+    font-weight: 400;
+  }
+}
+
+.composite-poll__description {
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 32px;
+
+  @include main-text;
+  color: $dark-text;
+  line-height: rem(27px);
+
+  background-color: $color-bg;
+  border-radius: 5px;
+
+  @media (max-width: $mobile-max-width) {
+    padding: 24px;
+    margin-bottom: 10px;
+  }
+}
+
+.form__question {
+  margin: 0;
+  margin-bottom: 12px;
+
+  @include font-h5;
+  color: $dark-text;
+}
+
+.form__description {
+  margin: 0;
+  margin-bottom: 24px;
+
+  @include main-text;
+  color: $grey-default;
+}

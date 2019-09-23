@@ -1,115 +1,109 @@
 .form-select {
-  & .jq-selectbox {
-    vertical-align: middle;
-    cursor: pointer;
-    box-sizing: border-box;
-  }
+  position: relative;
+  z-index: 1;
+  display: inline;
+}
 
-  & .jq-selectbox__select {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+.form-select__title {
+  position: relative;
 
-    @media (max-width: $tablet-width - 1) {
-      max-width: 288px;
-    }
-  }
+  @include font-h2;
+  color: $blue-default;
+  text-decoration: none;
 
-  & .jq-selectbox__select-text {
-    @include font-h2;
-    color: $blue-default;
+  background-image: linear-gradient(to right, $light-blue-accent 0%, $light-blue-accent 50%, transparent 50%, transparent 75%);
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  background-size: 8px 2px;
 
-    background-image: linear-gradient(to right, $light-blue-accent 0%, $light-blue-accent 50%, transparent 50%, transparent 75%);
-    background-position: center bottom;
-    background-repeat: repeat-x;
-    background-size: 8px 2px;
+  transition: all 0.4s ease;
 
-    transition: all 0.4s ease;
-
-    &:hover,
-    &:focus {
-      color: $blue-accent;
-    }
-  }
-
-  & .jq-selectbox__trigger {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -30px;
     width: 20px;
-    height: 100%;
-    border-left: 0;
-    margin-left: 9px;
-  }
-
-  & .jq-selectbox__trigger-arrow {
-    width: 20px;
-    height: 12px;
+    height: 36px;
     background-image: url("../img/select-arrow.svg");
     background-repeat: no-repeat;
-    background-size: auto;
-    transition: all 0.5s;
-
-    &--rotate {
-      transform: rotate(180deg);
-    }
-  }
-
-  & .jq-selectbox__dropdown {
-    color: $dark-text;
-    right: 0;
-
-    min-width: 343px;
-    min-height: 336px;
-
-    @media (max-width: $tablet-width - 1) {
-      right: auto;
-      left: 0;
-    }
-
-    @media (max-width: 400px) {
-      min-width: 100%;
-      right: auto;
-      left: 0;
-    }
-  }
-
-  & .jq-selectbox__dropdown ul {
-    width: 343px;
-    min-height: 336px;
-    position: relative;
-    padding-left: 0;
-    padding-top: 8px;
-    margin-top: 14px;
-    margin-bottom: 0;
-    overflow: hidden;
-    background-color: $color-bg;
-    box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
-    border-radius: 5px;
-
-    @media (max-width: 400px) {
-      width: 100%;
-    }
-  }
-
-  & .jq-selectbox li {
-    padding: 8px 24px;
-    white-space: normal;
+    background-position: center;
     transition: all 0.4s ease;
-
-    &.selected,
-    &.sel {
-      color: $blue-accent;
-    }
-
-    &:hover {
-      color: $blue-default;
-      background-color: #f5f6f7;
-    }
   }
 
-  & .ps__thumb-y {
-    right: 8px;
+  &:hover {
+    color: $blue-accent;
+  }
+
+  &--open::after {
+    transform: rotate(180deg);
+  }
+}
+
+.form-select__option {
+  margin: 0;
+  padding: 8px 24px;
+
+  @include main-text;
+  color: $dark-text;
+
+  cursor: pointer;
+
+  &:hover {
+    color: $blue-accent;
+    background-color: #f5f6f7;
+  }
+
+  &--active {
+    color: $blue-default;
+  }
+}
+
+.form-select__group {
+  position: absolute;
+  top: 32px;
+  right: -30px;
+
+  display: none;
+  width: 343px;
+  height: 336px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  background-color: $color-bg;
+  box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
+  border-radius: 5px;
+
+  @media (max-width: $tablet-width - 1) {
+    right: auto;
+    left: 0;
+    width: 288px;
+  }
+
+  &--active {
+    display: block;
+  }
+}
+
+.form-select__scrollbar-content {
+  width: 343px;
+  height: 320px;
+
+  overflow-y: scroll;
+
+  @media (max-width: $tablet-width - 1) {
+    width: 288px;
+  }
+
+  & .scrollbar-track {
+    background-color: transparent;
+    margin-right: 8px;
+  }
+
+  & .scrollbar-thumb {
+    width: 6px;
+    min-height: 242px;
+    background-color: $light-grey;
+    border-radius: 5px;
   }
 }
