@@ -48,3 +48,10 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+.main-page {
+  width: 100%;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
