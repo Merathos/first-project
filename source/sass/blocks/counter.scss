@@ -1,0 +1,82 @@
+.counter {
+  padding: 24px 32px;
+  border: 1px solid $light-grey;
+  border-radius: $border-radius;
+}
+
+.counter__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  margin-top: -23px;
+  margin-left: -46px;
+}
+
+.counter__caption {
+  margin: 0;
+  margin-top: 23px;
+  margin-left: 46px;
+  font-weight: 500;
+  font-size: rem(16px);
+  line-height: rem(22px);
+}
+
+.counter__item {
+  margin: 0;
+  margin-top: 23px;
+  margin-left: 46px;
+  font-size: rem(13px);
+  line-height: rem(17px);
+  color: $grey-default;
+}
+
+.counter__item-caption {
+  margin-right: 12px;
+  font-size: rem(15px);
+  line-height: rem(20px);
+  color: $dark-text;
+}
+
+.counter__item-avaliable {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 8px;
+  font-size: rem(16px);
+  line-height: rem(22px);
+  color: $blue-default;
+  background-color: $light-blue;
+  border-radius: 50%;
+}
+
+
+@include tablet {
+  .counter {
+    padding: 23px 24px;
+  }
+
+  .counter__container {
+    margin-top: -21px;
+    margin-left: -42px;
+  }
+
+  .counter__caption {
+    margin-top: 21px;
+    margin-left: 42px;
+  }
+
+  .counter__item {
+    margin-top: 21px;
+    margin-left: 42px;
+  }
+}
+
+
+@include mobile {
+  .counter__caption {
+    width: 100%;
+  }
+}
