@@ -1,0 +1,125 @@
+.projects__filter {
+  margin-bottom: 32px;
+}
+
+.projects__vote-end {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.projects__counter {
+  border-bottom: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.projects__filter-main {
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.projects__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  margin-bottom: 24px;
+
+  .project-item {
+    width: auto;
+  }
+}
+
+.projects__show-more-btn {
+  display: block;
+  width: 360px;
+  margin: 0 auto 40px;
+}
+
+.projects__paginator {
+  margin-bottom: 80px;
+}
+
+.projects__archive {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 22px;
+  background-color: $color-bg;
+  border-radius: $border-radius;
+}
+
+.projects__archive-text {
+  margin: 0;
+  margin-right: 22px;
+  font-size: rem(16px);
+  line-height: rem(22px);
+  color: $grey;
+}
+
+
+@include tablet {
+  .projects__list {
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 48px;
+  }
+
+  .projects__paginator {
+    margin-bottom: 64px;
+  }
+
+  .projects__archive {
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+  }
+
+  .projects__archive-text {
+    max-width: 66%;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+}
+
+
+@include mobile {
+  .projects__filter {
+    margin-bottom: 24px;
+  }
+
+  .projects__vote-end {
+    margin-bottom: 24px;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+  }
+
+  .counter--hidden + .projects__filter-main {
+    border-top: 1px solid $light-grey;
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+  }
+
+  .projects__list {
+    display: block;
+    margin-bottom: 40px;
+
+    .project-item {
+      margin-bottom: 16px;
+    }
+  }
+
+  .projects__show-more-btn {
+    width: 100%;
+    max-width: 360px;
+    margin-bottom: 32px;
+  }
+
+  .projects__paginator {
+    margin-bottom: 57px;
+  }
+
+  .projects__archive-text {
+    max-width: none;
+  }
+}
