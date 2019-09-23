@@ -19,7 +19,7 @@
   color: $dark-main;
 
   &--last {
-    margin-right: 26px;
+    margin-right: 21px;
   }
 }
 
@@ -52,6 +52,27 @@
   }
 }
 
+.filter__vote-select {
+  margin-left: 90px;
+
+  .form-select__title {
+    font-size: rem(15px);
+    line-height: rem(20px);
+
+    &::after {
+      width: 13px;
+      height: 8px;
+      background-size: cover;
+    }
+  }
+
+  .form-select__group,
+  .form-select__scrollbar-content {
+    width: 146px;
+    height: auto;
+  }
+}
+
 .filter__show-btn {
   max-width: 200px;
   padding: 10px 20px;
@@ -66,6 +87,10 @@
 @include tablet {
   .filter__main {
     padding: 25px 24px;
+  }
+
+  .filter__vote-select {
+    margin-left: 32px;
   }
 }
 

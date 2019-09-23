@@ -1,33 +1,28 @@
 .form-select {
   position: relative;
-  z-index: 1;
-  display: inline;
+  display: inline-block;
 }
 
 .form-select__title {
-  position: relative;
+  display: inline-flex;
+  align-items: center;
 
   @include font-h2;
   color: $blue-default;
   text-decoration: none;
 
-  background-image: linear-gradient(to right, $light-blue-accent 0%, $light-blue-accent 50%, transparent 50%, transparent 75%);
-  background-position: center bottom;
-  background-repeat: repeat-x;
-  background-size: 8px 2px;
-
   transition: all 0.4s ease;
 
   &::after {
     content: "";
-    position: absolute;
-    top: 0;
-    right: -30px;
+    display: block;
     width: 20px;
     height: 36px;
+    margin-left: 8px;
     background-image: url("../img/select-arrow.svg");
     background-repeat: no-repeat;
     background-position: center;
+    pointer-events: none;
     transition: all 0.4s ease;
   }
 
@@ -38,6 +33,14 @@
   &--open::after {
     transform: rotate(180deg);
   }
+}
+
+.form-select__title-text {
+  background-image: linear-gradient(to right, $light-blue-accent 0%, $light-blue-accent 50%, transparent 50%, transparent 75%);
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  background-size: 8px 2px;
+  pointer-events: none;
 }
 
 .form-select__option {
@@ -61,8 +64,9 @@
 
 .form-select__group {
   position: absolute;
-  top: 32px;
-  right: -30px;
+  z-index: 10;
+  top: calc(100% + 8px);
+  right: 0;
 
   display: none;
   width: 343px;

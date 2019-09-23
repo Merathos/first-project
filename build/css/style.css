@@ -695,11 +695,15 @@ template {
 
 .form-select {
   position: relative;
-  z-index: 1;
-  display: inline; }
+  display: inline-block; }
 
 .form-select__title {
-  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-family: "Rubik", "Arial", sans-serif;
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -707,23 +711,18 @@ template {
   color: #333333;
   color: #2c8ecc;
   text-decoration: none;
-  background-image: -webkit-gradient(linear, left top, right top, from(#9bd2f4), color-stop(50%, #9bd2f4), color-stop(50%, transparent), color-stop(75%, transparent));
-  background-image: linear-gradient(to right, #9bd2f4 0%, #9bd2f4 50%, transparent 50%, transparent 75%);
-  background-position: center bottom;
-  background-repeat: repeat-x;
-  background-size: 8px 2px;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease; }
   .form-select__title::after {
     content: "";
-    position: absolute;
-    top: 0;
-    right: -30px;
+    display: block;
     width: 20px;
     height: 36px;
+    margin-left: 8px;
     background-image: url("../img/select-arrow.svg");
     background-repeat: no-repeat;
     background-position: center;
+    pointer-events: none;
     -webkit-transition: all 0.4s ease;
     transition: all 0.4s ease; }
   .form-select__title:hover {
@@ -731,6 +730,14 @@ template {
   .form-select__title--open::after {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg); }
+
+.form-select__title-text {
+  background-image: -webkit-gradient(linear, left top, right top, from(#9bd2f4), color-stop(50%, #9bd2f4), color-stop(50%, transparent), color-stop(75%, transparent));
+  background-image: linear-gradient(to right, #9bd2f4 0%, #9bd2f4 50%, transparent 50%, transparent 75%);
+  background-position: center bottom;
+  background-repeat: repeat-x;
+  background-size: 8px 2px;
+  pointer-events: none; }
 
 .form-select__option {
   margin: 0;
@@ -750,8 +757,9 @@ template {
 
 .form-select__group {
   position: absolute;
-  top: 32px;
-  right: -30px;
+  z-index: 10;
+  top: calc(100% + 8px);
+  right: 0;
   display: none;
   width: 343px;
   height: 336px;
@@ -953,7 +961,7 @@ template {
   line-height: 2.9375rem;
   color: #333333; }
   .filter__header-item--last {
-    margin-right: 26px; }
+    margin-right: 21px; }
 
 .filter__category-select {
   margin-bottom: 2px; }
@@ -983,6 +991,20 @@ template {
   .filter__item--separated {
     margin-left: auto; }
 
+.filter__vote-select {
+  margin-left: 90px; }
+  .filter__vote-select .form-select__title {
+    font-size: 0.9375rem;
+    line-height: 1.25rem; }
+    .filter__vote-select .form-select__title::after {
+      width: 13px;
+      height: 8px;
+      background-size: cover; }
+  .filter__vote-select .form-select__group,
+  .filter__vote-select .form-select__scrollbar-content {
+    width: 146px;
+    height: auto; }
+
 .filter__show-btn {
   max-width: 200px;
   padding: 10px 20px;
@@ -993,7 +1015,9 @@ template {
 
 @media (max-width: 1199px) {
   .filter__main {
-    padding: 25px 24px; } }
+    padding: 25px 24px; }
+  .filter__vote-select {
+    margin-left: 32px; } }
 
 @media (max-width: 767px) {
   .filter__category-select {
