@@ -55,10 +55,6 @@
 
 
 @include tablet {
-  .projects .container {
-    padding: 0 24px;
-  }
-
   .projects__list {
     grid-template-columns: 1fr 1fr;
     margin-bottom: 48px;
@@ -83,10 +79,6 @@
 
 
 @include mobile {
-  .projects .container {
-    padding: 0 16px;
-  }
-
   .projects__filter {
     margin-bottom: 24px;
   }
