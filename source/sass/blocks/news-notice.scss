@@ -1,14 +1,14 @@
 .news-notice {
   box-sizing: border-box;
-  padding: 72px 9% 0;
+  padding: 72px 40px 0;
 
   text-align: center;
 
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $desktop-width - 81) {
     padding: 62px 24px 0;
   }
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     padding: 46px 16px 0;
   }
 }
@@ -19,32 +19,32 @@
   justify-content: space-between;
   padding-bottom: 48px;
 
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $desktop-width - 81) {
     flex-direction: column;
   }
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     padding-bottom: 30px;
   }
 }
 
 .news-notice__news,
 .news-notice__notice {
-  width: 47.2%;
+  width: calc(50% - 32px);
 
   text-align: left;
 
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $desktop-width - 81) {
     width: 100%;
   }
 }
 
 .news-notice__news {
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $desktop-width - 81) {
     padding-bottom: 64px;
   }
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     padding-bottom: 48px;
   }
 }
@@ -60,12 +60,10 @@
 
   @include font-h2();
 
-  @media (max-width: $mobile-width) {
-    @include font-h2();
-  }
-
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     padding-left: 46px;
+
+    @include font-h2();
   }
 }
 
@@ -81,7 +79,7 @@
   background-repeat: no-repeat;
   background-size: contain;
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     top: 2px;
 
     width: 32px;
@@ -104,7 +102,7 @@
 
   list-style: none;
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     padding-top: 0;
   }
 }
@@ -114,7 +112,7 @@
 
   border-bottom: 1px solid $light-grey;
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     padding-top: 24px;
   }
 }
@@ -167,7 +165,7 @@
   font-size: rem(16px);
   line-height: 1.35;
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     padding-bottom: 27px;
   }
 }

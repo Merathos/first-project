@@ -1,14 +1,14 @@
 .discussion {
   box-sizing: border-box;
-  padding: 88px 9% 120px;
+  padding: 88px 40px 120px;
 
   text-align: center;
 
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $desktop-width - 81) {
     padding: 79px 24px 104px;
   }
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     padding: 64px 16px 65px;
   }
 }
@@ -30,7 +30,7 @@
 
   @include font-h1();
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     padding-left: 46px;
 
     @include font-h2();
@@ -49,7 +49,7 @@
     background-repeat: no-repeat;
     background-size: contain;
 
-    @media (max-width: $mobile-width) {
+    @media (max-width: $tablet-width - 1) {
       top: 5px;
 
       width: 30px;
@@ -59,7 +59,7 @@
 }
 
 .discussion__archive-link {
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     display: none;
   }
 }
@@ -72,7 +72,7 @@
 
   list-style: none;
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     padding-top: 8px;
     padding-bottom: 33px;
   }
@@ -84,7 +84,7 @@
 
   border-bottom: 1px solid $light-grey;
 
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $desktop-width - 81) {
     padding-bottom: 31px;
   }
 
@@ -120,11 +120,7 @@
 
   margin: 0;
   padding: 0;
-  // padding: 24px 16px 16px 24px;
-  padding-top: 1px;
-  padding-right: 18px;
-  padding-bottom: 2px;
-  padding-left: 24px;
+  padding: 1px 18px 2px 24px;
 
   font-size: rem(14px);
   line-height: 1.3;
@@ -200,7 +196,7 @@
   align-items: center;
   padding-top: 13px;
 
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $desktop-width - 81) {
     padding-right: 60px;
   }
 }
@@ -224,17 +220,6 @@
   }
 }
 
-// .discussion__icon-star {
-//   display: none;
-
-//   cursor: pointer;
-
-//   @media (max-width: $tablet-width - 1) {
-//     position: absolute;
-//     bottom: 5px;
-//     right: 0;
-//   }
-// }
 .discussion__button-star {
   position: absolute;
   right: 0;
@@ -243,7 +228,7 @@
   display: none;
   padding: 0;
 
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $desktop-width - 81) {
     bottom: 0;
   }
 }
@@ -253,7 +238,7 @@
 }
 
 .discussion__hide {
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     display: none;
   }
 }
@@ -261,7 +246,7 @@
 .discussion__archive-mobile {
   display: none;
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     display: block;
     margin-top: 24px;
   }
