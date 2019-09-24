@@ -1,6 +1,5 @@
 .project-item {
   position: relative;
-  box-sizing: border-box;
   width: 360px;
   background-color: $color-bg;
   border: 1px solid transparent;
@@ -88,8 +87,10 @@
 .project-item__link {
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   height: 100%;
-  padding: 23px 24px 12px;
+  min-height: 159px;
+  padding: 23px 24px 15px;
   user-select: none;
   text-decoration: none;
   color: $dark-text;
@@ -120,25 +121,48 @@
   line-height: rem(22px);
 }
 
-.project-item__bottom {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: auto;
-  padding-top: 11px;
-  border-top: 1px solid $light-grey;
-}
-
 .project-item__expire {
-  max-width: 80%;
+  padding-top: 14px;
   margin: 0;
+  margin-top: auto;
   font-size: rem(13px);
   line-height: rem(17px);
   color: $grey-default;
+  border-top: 1px solid $light-grey;
 }
 
 .project-item .button-star {
-  padding: 0;
+  position: absolute;
+  right: 18px;
+  bottom: 6px;
+  opacity: 0;
+  transition: opacity $style-change-duration;
+
+  &--active {
+    opacity: 1;
+  }
+
+  &:focus {
+    opacity: 1;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.project-item__link:focus + .button-star {
+  opacity: 1;
+}
+
+.project-item__link:hover + .button-star {
+  opacity: 1;
+}
+
+.project-item--disabled .button-star,
+.project-item--disabled .project-item__link:focus + .button-star,
+.project-item--disabled .project-item__link:hover + .button-star {
+  opacity: 0;
 }
 
 
