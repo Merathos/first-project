@@ -1,18 +1,26 @@
-<include src="source/components/head.html"></include>
+<!DOCTYPE html>
+<html lang="ru">
+  <include src="source/components/head.html"></include>
 
-<body class="page-body">
-  <include src="source/components/header.html"></include>
-  <main>
-    <section class="page-404">
-      <div class="container">
-        <div class="page-404__content">
-          <h1 class="visually-hidden">404</h1>
-          <img src="img/404.svg" width="400" height="165" alt="404">
-          <p>Страница не найдена </p>
-          <a href="main.html" class="button button--blue page-404__button">ВЕРНУТЬСЯ НА ГЛАВНУЮ</a>
+  <body class="page-body">
+    <include src="source/components/header.html"></include>
+
+    <main>
+      <section class="page-404">
+        <div class="container">
+          <div class="page-404__content">
+            <h1 class="visually-hidden">404</h1>
+            <img src="img/404.svg" width="400" height="165" alt="404">
+            <p>Страница не найдена </p>
+            <a href="main.html" class="button button--blue page-404__button">ВЕРНУТЬСЯ НА ГЛАВНУЮ</a>
+          </div>
         </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
 
-  <include src="source/components/footer.html"></include>
+    <include src="source/components/footer.html"></include>
+
+    <script src="js/libs.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
