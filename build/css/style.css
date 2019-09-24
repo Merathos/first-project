@@ -3272,7 +3272,7 @@ template {
   .projects__list .project-item {
     width: auto; }
 
-.projects__show-more-btn {
+.projects__list-btn {
   display: block;
   width: 360px;
   margin: 0 auto 40px; }
@@ -3337,7 +3337,7 @@ template {
     margin-bottom: 40px; }
     .projects__list .project-item {
       margin-bottom: 16px; }
-  .projects__show-more-btn {
+  .projects__list-btn {
     width: 100%;
     max-width: 360px;
     margin-bottom: 32px; }
