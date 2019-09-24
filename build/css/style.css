@@ -1355,6 +1355,23 @@ template {
   @media (max-width: 767px) {
     .news-notice__text {
       padding-bottom: 27px; } }
+  .news-notice__text--link {
+    display: block;
+    text-align: left; }
+
+.news-notice__button--news {
+  width: 360px;
+  margin-top: 24px;
+  margin-bottom: 40px; }
+  @media (max-width: 400px) {
+    .news-notice__button--news {
+      width: 100%;
+      margin-bottom: 32px; } }
+
+.news-notice--news {
+  padding: 0; }
+  .news-notice--news .news-notice__list {
+    padding-top: 6px; }
 
 .social {
   display: -webkit-box;
@@ -2401,6 +2418,153 @@ template {
       line-height: 1.75rem;
       font-weight: 400;
       color: #333333; } }
+  @media (max-width: 767px) {
+    .page-title--news {
+      font-family: "Rubik", "Arial", sans-serif;
+      font-size: 2.5rem;
+      line-height: 2.9375rem;
+      font-weight: 400;
+      color: #333333; } }
+  @media (max-width: 400px) {
+    .page-title--news {
+      font-family: "Rubik", "Arial", sans-serif;
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+      font-weight: 400;
+      color: #333333; } }
+
+.page-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 395px;
+  padding: 24px 16px;
+  margin-left: 20px;
+  background-color: #f9f9fa;
+  border-radius: 5px; }
+  @media (max-width: 767px) {
+    .page-nav {
+      width: 369px;
+      padding: 16px 16px; } }
+  @media (max-width: 700px) {
+    .page-nav {
+      margin-left: 0;
+      margin-top: 24px; } }
+  @media (max-width: 400px) {
+    .page-nav {
+      width: 100%;
+      padding: 16px 8px; } }
+
+.page-nav__item {
+  margin: 0 24px; }
+  @media (max-width: 767px) {
+    .page-nav__item {
+      margin: 0 16px; } }
+  @media (max-width: 400px) {
+    .page-nav__item {
+      margin: 0 8px; } }
+
+.page-nav__link {
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  color: #333333;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #a6abb3;
+  -webkit-transition: color 0.4s ease;
+  transition: color 0.4s ease; }
+  .page-nav__link:hover, .page-nav__link:focus {
+    color: #2c8ecc; }
+  .page-nav__link--active {
+    color: #2c8ecc;
+    background-image: -webkit-gradient(linear, left top, right top, from(#9bd2f4), color-stop(50%, #9bd2f4), color-stop(50%, transparent), color-stop(75%, transparent));
+    background-image: linear-gradient(to right, #9bd2f4 0%, #9bd2f4 50%, transparent 50%, transparent 75%);
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    background-size: 8px 2px; }
+
+.page-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 100px; }
+  @media (max-width: 700px) {
+    .page-top {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      margin-top: 68px; } }
+
+.archive-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 23px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  background-color: #f9f9fa;
+  border-radius: 5px; }
+  @media (max-width: 767px) {
+    .archive-link {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      margin-top: 64px;
+      margin-bottom: 88px; } }
+  @media (max-width: 400px) {
+    .archive-link {
+      margin-top: 57px;
+      margin-bottom: 64px; } }
+
+.archive-link__description {
+  margin: 0;
+  margin-right: 24px;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  color: #333333;
+  color: #707b8c; }
+  @media (max-width: 767px) {
+    .archive-link__description {
+      max-width: 442px;
+      margin-right: 0;
+      margin-bottom: 24px;
+      text-align: center; } }
+
+@media (max-width: 400px) {
+  .archive-link__btn {
+    text-align: center; } }
 
 .poll-process p {
   position: relative;

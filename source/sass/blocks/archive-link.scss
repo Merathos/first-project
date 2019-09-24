@@ -1,0 +1,42 @@
+.archive-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 23px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  background-color: $color-bg;
+  border-radius: 5px;
+
+  @media (max-width: $tablet-width - 1) {
+    flex-direction: column;
+    margin-top: 64px;
+    margin-bottom: 88px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-top: 57px;
+    margin-bottom: 64px;
+   }
+}
+
+.archive-link__description {
+  margin: 0;
+  margin-right: 24px;
+
+  @include font-h5;
+  color: $grey;
+
+  @media (max-width: $tablet-width - 1) {
+    max-width: 442px;
+    margin-right: 0;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+}
+
+.archive-link__btn {
+  @media (max-width: $mobile-max-width) {
+    text-align: center;
+  }
+}
