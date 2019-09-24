@@ -1,0 +1,24 @@
+.poll-process {
+  & p {
+    position: relative;
+
+    @include font-h5;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 24px 32px;
+    color: $white;
+    background-color: $orange;
+    border-radius: 5px;
+
+    &::before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      margin-right: 12px;
+      background-image: url("../img/icon-time-white.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}

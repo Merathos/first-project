@@ -83,3 +83,20 @@
     }
   }
 }
+
+
+.form__question {
+  margin: 0;
+  margin-bottom: 12px;
+
+  @include font-h5;
+  color: $dark-text;
+}
+
+.form__description {
+  margin: 0;
+  margin-bottom: 24px;
+
+  @include main-text;
+  color: $grey-default;
+}

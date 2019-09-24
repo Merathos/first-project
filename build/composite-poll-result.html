@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Общественное голосование</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preload" href="fonts/Rubik-Light.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Rubik-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Rubik-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Rubik-Bold.woff2" as="font" crossorigin="anonymous">
+  <link href="css/style.min.css" rel="stylesheet">
+</head>
+</html>
+
+<body class="page-body">
+  <header class="page-header">
+  <div class="page-header__bar">
+    <div class="page-header__container  container">
+      <a class="logo-link" href="#">
+        <img class="page-header__roi-logo" width="180" height="56" src="img/roi-logo.svg" alt="Российская общественная инициатива">
+      </a>
+
+      <a class="page-header__link  page-header__site-name" href="#">Общественное голосование</a>
+
+      <a class="page-header__link  page-header__version-btn  page-header__version-btn--bar" href="#">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#icon-glasses"></use>
+        </svg>
+        Версия для слабовидящих
+      </a>
+
+      <button class="page-header__menu-btn  menu-btn" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+        <span class="menu-btn__icon"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="page-header__main-menu  main-menu">
+    <div class="page-header__container  page-header__container--menu  main-menu__container  container">
+      <div class="page-header__location-switcher  location-switcher">
+        <p class="visually-hidden">Выберите регион голосования:</p>
+
+        <form action="#" method="post">
+          <div class="location-switcher__btn  form-radio">
+            <input id="location-residence" class="visually-hidden" type="radio" name="location" value="residence" checked="">
+            <label for="location-residence">Адрес проживания</label>
+            <span class="page-header__location-address  location-switcher__address">Городской округ рабочий поселок Новогуровский</span>
+          </div>
+
+          <div class="location-switcher__btn  form-radio">
+            <input id="location-registration" class="visually-hidden" type="radio" name="location" value="registration">
+            <label for="location-registration">Адрес регистрации</label>
+            <span class="page-header__location-address  location-switcher__address">Краснобродский городской округ</span>
+          </div>
+
+          <button class="location-switcher__show-btn  button  button--blue" type="submit">Показать</button>
+        </form>
+      </div>
+
+      <a class="page-header__link  page-header__version-btn  page-header__version-btn--menu" href="#">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#icon-glasses"></use>
+        </svg>
+        Версия для слабовидящих
+      </a>
+
+      <div class="page-header__user-menu  user-menu">
+        <div class="user-menu__overlay"></div>
+
+        <button class="user-menu__dropdown-btn" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+
+          <svg class="user-menu__user-icon" width="16" height="16">
+            <use xlink:href="img/sprite.svg#icon-user"></use>
+          </svg>
+
+          <span class="user-menu__user-name">Анастасия</span>
+
+          <svg class="user-menu__dropdown-icon" width="13" height="13">
+            <use xlink:href="img/sprite.svg#icon-dropdown-arrow"></use>
+          </svg>
+        </button>
+
+        <ul class="user-menu__list">
+          <li class="user-menu__item">
+            <a class="page-header__link  user-menu__link" href="#">Избранное</a>
+          </li>
+
+          <li class="user-menu__item">
+            <a class="page-header__link  user-menu__link" href="#">Моя активность</a>
+          </li>
+
+          <li class="user-menu__item">
+            <a class="page-header__link  user-menu__link" href="#">Выход</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  <main class="page-composite-poll">
+    <div class="container">
+      <a href="main.html" class="arrow-backward">
+        <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite.svg#icon-arrow-big"></use>
+        </svg>
+        <span>Назад</span>
+      </a>
+    </div>
+    <section class="composite-poll">
+      <div class="container">
+        <h1 class="composite-poll__title page-title">Результаты опроса о состоянии инвестиционного и&nbsp;предпринимательского климата в Тульской области для представителей средних предприятий</h1>
+        <p class="composite-poll__date">
+          Дата окончания опроса: <b>25.11.2019</b>
+        </p>
+        <p class="composite-poll__description">Здесь будет описание опроса (информация из стандартного поля). Рыбным текстом называется текст для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст известен как текст-заполнитель.</p>
+        <section class="poll-result">
+          <h2 class="visually-hidden">Результаты опроса</h2>
+          <div class="poll-result__section">
+            <p class="poll-result__question">Удовлетворены ли Вы качеством предоставления государственных и муниципальных услуг в настоящее время?</p>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Да, удовлетворен</span>
+                <span><b>140</b> (30%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 30%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Нет, не удовлетворен</span>
+                <span><b>250</b> (70%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 70%;"></div>
+            </div>
+          </div>
+          <div class="poll-result__section">
+            <p class="poll-result__question">Знаете ли Вы о возможности получения государственных и муниципальных услуг по принципу "одного окна" в вашей области?</p>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Да, знаю точно</span>
+                <span><b>320</b> (20%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 20%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Да, примерно знаю</span>
+                <span><b>443</b> (60%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 60%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Нет</span>
+                <span><b>124</b> (20%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 20%;"></div>
+            </div>
+          </div>
+          <div class="poll-result__section">
+            <p class="poll-result__question">О каких способах взаимодействия с органами власти Вам известно?</p>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Личный прием должностного лица</span>
+                <span><b>332</b> (30%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 30%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Телефон доверия Губернатора</span>
+                <span><b>155</b> (10%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 10%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Электронное письмо посредством e-mail</span>
+                <span><b>240</b> (20%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 20%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Официальное письмо</span>
+                <span><b>0</b> (0%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 0%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Обращение на портале</span>
+                <span><b>789</b> (70%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 70%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Ничего этого не знаю</span>
+                <span><b>0</b> (0%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 0%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Другое</span>
+                <span><b>140</b> (10%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 10%;"></div>
+            </div>
+          </div>
+          <div class="poll-result__section">
+            <p class="poll-result__question">Используете ли Вы механизм получения государственных и муниципальных услуг в электронной форме?</p>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Да, использую</span>
+                <span><b>189</b> (20%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 20%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Нет, не использую</span>
+                <span><b>318</b> (80%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="poll-result__section">
+            <p class="poll-result__question">Оцените качество получения государственных и муниципальных услуг</p>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>1 <span class="poll-result__caption">очень плохо</span></span>
+                <span><b>125</b> (0%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 0%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>2</span>
+                <span><b>125</b> (0%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 0%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>3</span>
+                <span><b>180</b> (50%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 50%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>4</span>
+                <span><b>90</b> (10%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 10%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>5</span>
+                <span><b>125</b> (10%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 10%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>6</span>
+                <span><b>125</b> (30%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 30%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>7</span>
+                <span><b>180</b> (100%)</span>
+              </p>
+              <div class="poll-result__fill poll-result__fill--100" style="width: 100%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>8</span>
+                <span><b>90</b> (10%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 10%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>9</span>
+                <span><b>180</b> (50%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 50%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>10 <span class="poll-result__caption">очень хорошо</span></span>
+                <span><b>90</b> (10%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 10%;"></div>
+            </div>
+          </div>
+          <div class="poll-result__section">
+            <p class="poll-result__question">Обращались ли в течение последнего года в орган государственной власти для получения государственных (муниципальных) услуг?</p>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Да</span>
+                <span><b>232</b> (40%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 40%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Нет</span>
+                <span><b>298</b> (60%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 60%;"></div>
+            </div>
+          </div>
+          <div class="poll-result__section">
+            <p class="poll-result__question">Сколько составило время ожидания?</p>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Менее 15 минут</span>
+                <span><b>125</b> (10%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 10%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>От 15 минут до 30 минут</span>
+                <span><b>125</b> (30%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 30%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>От 30 минут до часа</span>
+                <span><b>180</b> (50%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 50%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Более 1 часа</span>
+                <span><b>90</b> (10%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 10%;"></div>
+            </div>
+          </div>
+          <div class="poll-result__section">
+            <p class="poll-result__question">Знаете ли Вы о программах, реализуемых органами государственной и муниципальной власти, направленных на формирование кадрового резерва?</p>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Да, знаю точно</span>
+                <span><b>140</b> (10%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 10%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Да, примерно знаю</span>
+                <span><b>320</b> (60%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 60%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Нет</span>
+                <span><b>250</b> (30%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 30%;"></div>
+            </div>
+          </div>
+          <div class="poll-result__section">
+            <p class="poll-result__question">Каков род Ваших занятий в настоящее время?</p>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Служащий</span>
+                <span><b>240</b> (10%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 10%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Государственный, муниципальный служащий</span>
+                <span><b>378</b> (30%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 30%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Рабочий</span>
+                <span><b>450</b> (50%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 50%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Пенсионер</span>
+                <span><b>140</b> (10%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 10%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Студент (вуза, техникума, колледжа)</span>
+                <span><b>0</b> (0%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 0%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Безработный, временно не работающий</span>
+                <span><b>0</b> (0%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 0%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Предприниматель	</span>
+                <span><b>0</b> (0%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 0%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Военнослужащий, работник правоохранительных органов</span>
+                <span><b>0</b> (0%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 0%;"></div>
+            </div>
+            <div class="poll-result__item">
+              <p class="poll-result__description">
+                <span>Другое</span>
+                <span><b>0</b> (0%)</span>
+              </p>
+              <div class="poll-result__fill" style="width: 0%;"></div>
+            </div>
+          </div>
+        </section>
+        <div class="composite-poll__button-wrapper">
+          <a href="#" class="button button--light-blue composite-poll__button">
+            вернуться ко всем опросам
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="page-footer__top">
+        <ul class="page-footer__list">
+          <li class="page-footer__item">
+            <span>Сайт Президента Российской Федерации</span>
+            <a href="http://kremlin.ru/" target="_blank">kremlin.ru</a>
+          </li>
+          <li class="page-footer__item">
+            <span>Сайт Правительства Российской Федерации</span>
+            <a href="http://government.ru/" target="_blank">government.ru</a>
+          </li>
+          <li class="page-footer__item">
+            <span>Государственная дума Российской Федерации</span>
+            <a href="http://duma.gov.ru/" target="_blank">duma.gov.ru</a>
+          </li>
+        </ul>
+        <ul class="page-footer__list">
+          <li class="page-footer__item">
+            <span>Портал государственных услуг</span>
+            <a href="http://gosuslugi.ru/" target="_blank">gosuslugi.ru</a>
+          </li>
+          <li class="page-footer__item">
+            <span>Единый портал раскрытия информации о подготовке проектов нормативных актов</span>
+            <a href="http://regulation.gov.ru/" target="_blank">regulation.gov.ru</a>
+          </li>
+          <li class="page-footer__item">
+            <span>Официальный интернет-портал правовой информации</span>
+            <a href="http://pravo.gov.ru/" target="_blank">pravo.gov.ru</a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__bottom">
+        <span>© 2019</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/libs.js"></script>
+  <script src="js/main.min.js"></script>
+
+
+
+</body>
