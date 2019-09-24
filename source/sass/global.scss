@@ -51,7 +51,8 @@ img {
 
 .main-page {
   width: 100%;
-  max-width: $max-width;
+  max-width: $desktop-width;
+  min-width: $mobile-width;
   margin: 0 auto;
 }
 

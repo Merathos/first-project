@@ -1,14 +1,14 @@
 .poll {
   box-sizing: border-box;
-  padding: 96px 9% 0;
+  padding: 96px 40px 0;
 
   text-align: center;
 
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $desktop-width - 81) {
     padding: 87px 24px 0;
   }
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     padding: 64px 16px 0;
   }
 }
@@ -30,7 +30,7 @@
 
   @include font-h1();
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     padding-left: 46px;
 
     @include font-h2();
@@ -49,7 +49,7 @@
     background-repeat: no-repeat;
     background-size: contain;
 
-    @media (max-width: $mobile-width) {
+    @media (max-width: $tablet-width - 1) {
       top: 2px;
 
       width: 30px;
@@ -59,7 +59,7 @@
 }
 
 .poll__archive-link {
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     display: none;
   }
 }
@@ -74,12 +74,12 @@
   list-style: none;
   text-align: left;
 
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $desktop-width - 81) {
     flex-wrap: wrap;
     padding-bottom: 21px;
   }
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     padding-top: 24px;
     padding-bottom: 14px;
   }
@@ -100,11 +100,11 @@
 
   transition: box-shadow $style-change-duration linear;
 
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $desktop-width - 81) {
     width: calc(50% - 10px);
   }
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     width: 100%;
   }
 
@@ -203,7 +203,7 @@
 }
 
 .poll__hide {
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     display: none;
   }
 }
@@ -211,7 +211,7 @@
 .poll__archive-mobile {
   display: none;
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     display: block;
     margin-top: 24px;
   }

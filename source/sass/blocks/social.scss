@@ -2,14 +2,14 @@
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  padding: 96px 9% 0;
+  padding: 96px 40px 0;
 
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $desktop-width - 81) {
     flex-direction: column;
     padding: 87px 24px 0;
   }
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     padding: 64px 16px 0;
   }
 }
@@ -17,14 +17,14 @@
 .social__item {
   position: relative;
 
-  width: 49.1%;
+  width: calc(50% - 10px);
   padding: 40px 48px;
   overflow: hidden;
 
   background-color: $color-bg;
   border-radius: $border-radius;
 
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $desktop-width - 81) {
     width: 100%;
 
     &--news {
@@ -32,7 +32,7 @@
     }
   }
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     padding: 40px 24px;
 
     &--news {
@@ -47,7 +47,7 @@
     background-repeat: no-repeat;
     opacity: 0.3;
 
-    @media (max-width: $tablet-width - 1) {
+    @media (max-width: $desktop-width - 81) {
       opacity: 1;
     }
   }
@@ -62,17 +62,17 @@
     background-image: url("../img/icon-news.svg");
     background-size: 170px 170px;
 
-    @media (max-width: $mobile-width) {
+    @media (max-width: $desktop-width - 81) {
       right: -8px;
       bottom: -18px;
 
-      width: 95px;
-      height: 95px;
+      width: 120px;
+      height: 120px;
 
-      background-size: 95px 95px;
+      background-size: 120px 120px;
     }
 
-    @media (max-width: $mobile-width) {
+    @media (max-width: $tablet-width - 1) {
       right: -8px;
       bottom: -22px;
 
@@ -93,7 +93,7 @@
     background-image: url("../img/icq-bg.svg");
     background-size: 135px 135px;
 
-    @media (max-width: $mobile-width) {
+    @media (max-width: $desktop-width - 81) {
       right: -8px;
       bottom: -18px;
 
@@ -103,7 +103,7 @@
       background-size: 121px 121px;
     }
 
-    @media (max-width: $mobile-width) {
+    @media (max-width: $tablet-width - 1) {
       right: 0;
       bottom: -14px;
 
@@ -138,14 +138,14 @@
   line-height: 1.35;
   color: $grey;
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width - 1) {
     padding-top: 24px;
   }
 }
 
 .social__item--icq {
   .social__text {
-    @media (max-width: $mobile-width) {
+    @media (max-width: $tablet-width - 1) {
       padding: 16px 0 41px;
     }
   }

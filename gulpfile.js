@@ -60,12 +60,12 @@ gulp.task('images', () => gulp.src('source/img/**/*.{gif,png,jpg,svg}')
     imagemin.jpegtran({progressive: true}),
     imagemin.svgo()
   ]))
-  .pipe(gulp.dest('source/img/'))
+  .pipe(gulp.dest('build/img/'))
 );
 
 gulp.task('webp', () => gulp.src('source/img/**/*.{png,jpg}')
   .pipe(webp({quality: 70}))
-  .pipe(gulp.dest('source/img/webp'))
+  .pipe(gulp.dest('build/img/webp'))
 );
 
 gulp.task('sprite', () => gulp.src('source/img/sprite/*.svg')
@@ -107,4 +107,4 @@ gulp.task('serve', () => {
   gulp.watch('source/js/**/*.js', gulp.series('jsPlugins', 'js')).on('change', server.reload);
 });
 
-gulp.task('build', gulp.series('clean', 'sprite', 'copy', 'style', 'html', 'js', 'jsPlugins'));
+gulp.task('build', gulp.series('clean', 'images', 'webp', 'sprite', 'copy', 'style', 'html', 'js', 'jsPlugins'));

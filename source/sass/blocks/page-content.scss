@@ -1,0 +1,90 @@
+.page-content {
+  padding-top: 103px;
+  padding-bottom: 80px;
+
+  &--with-back-btn {
+    padding-top: 40px;
+  }
+}
+
+.page-content__back-btn {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 40px;
+  font-size: rem(18px);
+  line-height: rem(23px);
+  text-decoration: none;
+  user-select: none;
+  color: $grey;
+  outline: none;
+  transition: color $style-change-duration;
+
+  &:focus {
+    color: $blue-accent;
+  }
+
+  &:focus:not(.focus-visible) {
+    color: $grey;
+  }
+
+  &:hover:not(.focus-visible) {
+    color: $blue-accent;
+  }
+
+  svg {
+    display: block;
+    width: 8px;
+    height: 14px;
+    padding-bottom: 3px;
+    margin-right: 12px;
+    fill: currentColor;
+    pointer-events: none;
+    transition: fill $style-change-duration;
+  }
+}
+
+
+@include tablet {
+  .page-content {
+    padding-top: 95px;
+    padding-bottom: 88px;
+
+    &--with-back-btn {
+      padding-top: 40px;
+    }
+  }
+
+  .page-content__back-btn {
+    margin-bottom: 31px;
+
+    &:hover:not(.focus-visible) {
+      color: $grey;
+    }
+
+    &:active:not(.focus-visible) {
+      color: $blue-accent;
+    }
+  }
+}
+
+
+@include mobile {
+  .page-content {
+    padding-top: 68px;
+    padding-bottom: 64px;
+
+    &--with-back-btn {
+      padding-top: 24px;
+    }
+  }
+
+  .page-content__back-btn {
+    margin-bottom: 24px;
+    font-size: rem(15px);
+    line-height: rem(20px);
+
+    svg {
+      padding-bottom: 0;
+    }
+  }
+}

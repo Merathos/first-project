@@ -9,6 +9,7 @@
 
 /* Блоки */
 @import "blocks/page-body";
+@import "blocks/page-content";
 @import "blocks/container";
 @import "blocks/logo-link";
 @import "blocks/button";
@@ -18,6 +19,8 @@
 @import "blocks/form-select";
 @import "blocks/form-range";
 @import "blocks/form";
+@import "blocks/filter";
+@import "blocks/counter";
 @import "blocks/paginator";
 @import "blocks/button-star";
 @import "blocks/news-notice";
@@ -39,3 +42,8 @@
 @import "blocks/main-menu";
 @import "blocks/location-switcher";
 @import "blocks/user-menu";
+
+// projects
+@import "blocks/vote-end";
+@import "blocks/project-item";
+@import "blocks/projects";
