@@ -696,15 +696,13 @@ template {
 
 .form-select {
   position: relative;
+  display: inline; }
+
+.form-select__title-wrapper {
   display: inline-block; }
 
 .form-select__title {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: relative;
   font-family: "Rubik", "Arial", sans-serif;
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -716,10 +714,10 @@ template {
   transition: all 0.4s ease; }
   .form-select__title::after {
     content: "";
-    display: block;
+    display: inline-block;
+    vertical-align: middle;
     width: 20px;
     height: 36px;
-    margin-left: 8px;
     background-image: url("../img/select-arrow.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -982,7 +980,7 @@ template {
   line-height: 2.9375rem;
   color: #333333; }
   .filter__header-item--last {
-    margin-right: 21px; }
+    margin-right: 20px; }
 
 .filter__category-select {
   margin-bottom: 2px; }
