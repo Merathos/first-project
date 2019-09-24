@@ -584,6 +584,13 @@ template {
 
 .form-checkbox {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 17px; }
 
 .form-checkbox label {
@@ -598,6 +605,8 @@ template {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   color: #354052;
   cursor: pointer;
   -webkit-transition: all 0.4s ease;
@@ -649,7 +658,14 @@ template {
 
 .form-radio {
   position: relative;
-  margin-bottom: 17px; }
+  margin-bottom: 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 .form-radio label {
   font-family: "Rubik", "Arial", sans-serif;
@@ -663,6 +679,8 @@ template {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
   color: #354052;
   cursor: pointer;
   -webkit-transition: all 0.4s ease;
@@ -2586,6 +2604,8 @@ template {
   border-radius: 5px; }
   .poll-process p::before {
     content: "";
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
     width: 24px;
     height: 24px;
     margin-right: 12px;
@@ -2637,6 +2657,9 @@ template {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0;
   padding: 10px 0;
   padding-bottom: 9px;
@@ -2652,6 +2675,10 @@ template {
   .poll-result__description b {
     font-weight: 700;
     line-height: 1.25rem; }
+  .poll-result__description span:last-child {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    padding-left: 20px; }
 
 .poll-result__caption {
   color: #a6abb3; }
