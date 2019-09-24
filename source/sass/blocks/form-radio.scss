@@ -1,12 +1,15 @@
 .form-radio {
   position: relative;
   margin-bottom: 17px;
+  display: flex;
+  flex-direction: column;
 }
 
 .form-radio label {
   @include main-text;
   display: flex;
   align-items: flex-start;
+  align-self: flex-start;
   color: $dark-text;
   cursor: pointer;
   transition: all 0.4s ease;

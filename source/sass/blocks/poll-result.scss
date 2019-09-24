@@ -41,6 +41,7 @@
 .poll-result__description {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 0;
   padding: 10px 0;
   padding-bottom: 9px;
@@ -54,6 +55,11 @@
   & b {
     font-weight: 700;
     line-height: rem(20px);
+  }
+
+  & span:last-child {
+    flex-shrink: 0;
+    padding-left: 20px;
   }
 }
 
