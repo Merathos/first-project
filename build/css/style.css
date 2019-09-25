@@ -1549,6 +1549,24 @@ template {
               justify-content: flex-start;
       margin-top: 68px; } }
 
+.page-top__form-wrapper {
+  padding: 25px 40px;
+  background-color: #f9f9fa;
+  border-radius: 5px; }
+  @media (max-width: 767px) {
+    .page-top__form-wrapper {
+      padding: 16px 40px; } }
+  @media (max-width: 700px) {
+    .page-top__form-wrapper {
+      margin-top: 24px; } }
+  @media (max-width: 400px) {
+    .page-top__form-wrapper {
+      width: 100%;
+      padding-left: 63px; } }
+
+.page-top__checkbox {
+  margin-bottom: 0; }
+
 .archive-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2588,6 +2606,27 @@ template {
     .discussion__archive-mobile {
       display: block;
       margin-top: 24px; } }
+
+.discussion--page {
+  padding: 0; }
+  .discussion--page .discussion__list {
+    padding-top: 5px;
+    padding-bottom: 0; }
+    @media (max-width: 400px) {
+      .discussion--page .discussion__list {
+        margin-top: 10px; } }
+  .discussion--page .discussion__button {
+    width: 360px;
+    margin-top: 24px;
+    margin-bottom: 40px; }
+    @media (max-width: 767px) {
+      .discussion--page .discussion__button {
+        margin-top: 48px; } }
+    @media (max-width: 400px) {
+      .discussion--page .discussion__button {
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 32px; } }
 
 .cookie {
   position: fixed;

@@ -11,3 +11,26 @@
     margin-top: 68px;
   }
 }
+
+.page-top__form-wrapper {
+  padding: 25px 40px;
+  background-color: $color-bg;
+  border-radius: 5px;
+
+  @media (max-width: $tablet-width - 1) {
+    padding: 16px 40px;
+  }
+
+  @media (max-width: 700px) {
+    margin-top: 24px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 100%;
+    padding-left: 63px;
+  }
+}
+
+.page-top__checkbox {
+  margin-bottom: 0;
+}
