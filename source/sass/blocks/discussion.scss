@@ -234,7 +234,11 @@
 }
 
 .discussion__button {
-  padding: 16px 24px 15px;
+  // padding: 16px 24px 15px;
+
+  .discussion__hide {
+    padding: 0;
+  }
 }
 
 .discussion__hide {
