@@ -9,7 +9,7 @@
 
   Array.prototype.forEach.call(selectItems, function (selectItem) {
     var dropdown = selectItem.querySelector('.form-select__group');
-    var trigger =selectItem.querySelector('.form-select__title');
+    var trigger = selectItem.querySelector('.form-select__title');
     var options = selectItem.querySelectorAll('.form-select__option');
 
     if (!dropdown && !trigger && !options.length) {
@@ -21,10 +21,9 @@
       var nodes = element.parentNode.childNodes;
       for (var i = 0; i < nodes.length; i++) {
         if (nodes[i] instanceof HTMLParagraphElement) {
-          if (value == nodes[i].getAttribute('data-value')) {
+          if (value === nodes[i].getAttribute('data-value')) {
             nodes[i].classList.add('form-select__option--active');
-          }
-          else {
+          } else {
             nodes[i].classList.remove('form-select__option--active');
           }
         }
