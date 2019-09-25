@@ -58,7 +58,7 @@
 
   color: $dark-text;
 
-  @include font-h2();
+  @include font-h1();
 
   @media (max-width: $tablet-width - 1) {
     padding-left: 46px;

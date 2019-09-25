@@ -1,7 +1,8 @@
 .project {
-  text-align: center;
   box-sizing: border-box;
   padding: 96px 40px 0;
+
+  text-align: center;
 
   @media (max-width: $desktop-width - 81) {
     padding: 88px 24px 0;
@@ -30,6 +31,7 @@
   padding: 0;
   padding-left: 52px;
 
+  text-align: left;
   color: $dark-text;
 
   @include font-h1();
@@ -81,8 +83,8 @@
   font-weight: 500;
   font-size: rem(16px);
   line-height: 1.35;
-  color: $white;
   text-align: left;
+  color: $white;
 
   background-color: $orange;
   border-radius: $border-radius;
@@ -178,6 +180,7 @@
   padding: 0;
 
   list-style: none;
+  text-align: left;
 }
 
 .project__item {
@@ -368,6 +371,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
   width: 40px;
   height: 40px;
 
@@ -381,8 +385,8 @@
 
 .project__button {
   display: none;
-  margin-top: 24px;
   width: 100%;
+  margin-top: 24px;
 
   &.js_hide {
     display: none;
