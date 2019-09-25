@@ -26,57 +26,57 @@
   <body class="page-body">
     <header class="page-header">
   <div class="page-header__bar">
-    <div class="page-header__container  container">
+    <div class="page-header__container container">
       <a class="logo-link" href="#">
         <img class="page-header__roi-logo" width="180" height="56" src="img/roi-logo.svg" alt="Российская общественная инициатива">
       </a>
 
-      <a class="page-header__link  page-header__site-name" href="#">Общественное голосование</a>
+      <a class="page-header__link page-header__site-name" href="#">Общественное голосование</a>
 
-      <a class="page-header__link  page-header__version-btn  page-header__version-btn--bar" href="#">
+      <a class="page-header__link page-header__version-btn page-header__version-btn--bar" href="#">
         <svg width="18" height="18">
           <use xlink:href="img/sprite.svg#icon-glasses"></use>
         </svg>
         Версия для слабовидящих
       </a>
 
-      <button class="page-header__menu-btn  menu-btn" type="button">
+      <button class="page-header__menu-btn menu-btn" type="button">
         <span class="visually-hidden">Открыть меню</span>
         <span class="menu-btn__icon"></span>
       </button>
     </div>
   </div>
 
-  <div class="page-header__main-menu  main-menu">
-    <div class="page-header__container  page-header__container--menu  main-menu__container  container">
-      <div class="page-header__location-switcher  location-switcher">
+  <div class="page-header__main-menu main-menu">
+    <div class="page-header__container page-header__container--menu main-menu__container container">
+      <div class="page-header__location-switcher location-switcher">
         <p class="visually-hidden">Выберите регион голосования:</p>
 
         <form action="#" method="post">
-          <div class="location-switcher__btn  form-radio">
+          <div class="location-switcher__btn form-radio">
             <input id="location-residence" class="visually-hidden" type="radio" name="location" value="residence" checked="">
             <label for="location-residence">Адрес проживания</label>
-            <span class="page-header__location-address  location-switcher__address">Городской округ рабочий поселок Новогуровский</span>
+            <span class="page-header__location-address location-switcher__address">Городской округ рабочий поселок Новогуровский</span>
           </div>
 
-          <div class="location-switcher__btn  form-radio">
+          <div class="location-switcher__btn form-radio">
             <input id="location-registration" class="visually-hidden" type="radio" name="location" value="registration">
             <label for="location-registration">Адрес регистрации</label>
-            <span class="page-header__location-address  location-switcher__address">Краснобродский городской округ</span>
+            <span class="page-header__location-address location-switcher__address">Краснобродский городской округ</span>
           </div>
 
-          <button class="location-switcher__show-btn  button  button--blue" type="submit">Показать</button>
+          <button class="location-switcher__show-btn button button--blue" type="submit">Показать</button>
         </form>
       </div>
 
-      <a class="page-header__link  page-header__version-btn  page-header__version-btn--menu" href="#">
+      <a class="page-header__link page-header__version-btn page-header__version-btn--menu" href="#">
         <svg width="18" height="18">
           <use xlink:href="img/sprite.svg#icon-glasses"></use>
         </svg>
         Версия для слабовидящих
       </a>
 
-      <div class="page-header__user-menu  user-menu">
+      <div class="page-header__user-menu user-menu">
         <div class="user-menu__overlay"></div>
 
         <button class="user-menu__dropdown-btn" type="button">
@@ -95,15 +95,15 @@
 
         <ul class="user-menu__list">
           <li class="user-menu__item">
-            <a class="page-header__link  user-menu__link" href="#">Избранное</a>
+            <a class="page-header__link user-menu__link" href="#">Избранное</a>
           </li>
 
           <li class="user-menu__item">
-            <a class="page-header__link  user-menu__link" href="#">Моя активность</a>
+            <a class="page-header__link user-menu__link" href="#">Моя активность</a>
           </li>
 
           <li class="user-menu__item">
-            <a class="page-header__link  user-menu__link" href="#">Выход</a>
+            <a class="page-header__link user-menu__link" href="#">Выход</a>
           </li>
         </ul>
       </div>
@@ -114,27 +114,33 @@
 
     <main class="main-page">
       <h1 class="visually-hidden">Главная страница</h1>
-      <section class="news-notice">
+      <div class="news-notice">
         <div class="news-notice__wrap">
           <div class="news-notice__news">
             <h2 class="news-notice__title news-notice__title--news">Новости</h2>
             <ul class="news-notice__list">
               <li class="news-notice__item">
-                <p class="news-notice__date">02.04.2019</p>
+                <time class="news-notice__date" datetime="2019-04-02">02.04.2019</time>
                 <p class="news-notice__text">
-                  Заседание межведомственной комиссии по реализации отдельных указов Президента РФ и мониторингу достижения указанных в...
+                  <a class="news-notice__link" href="#">
+                    Заседание межведомственной комиссии по реализации отдельных указов Президента РФ и мониторингу достижения указанных в...
+                  </a>
                 </p>
               </li>
               <li class="news-notice__item">
-                <p class="news-notice__date">03.04.2019</p>
+                <time class="news-notice__date" datetime="2019-04-03">03.04.2019</time>
                 <p class="news-notice__text">
-                  Тульская область признана лучшей по взаимодействию с жителями в социальных сетях
+                  <a class="news-notice__link" href="#">
+                    Тульская область признана лучшей по взаимодействию с жителями в социальных сетях
+                  </a>
                 </p>
               </li>
               <li class="news-notice__item">
-                <p class="news-notice__date">04.04.2019</p>
+                <time class="news-notice__date" datetime="2019-04-04">04.04.2019</time>
                 <p class="news-notice__text">
-                  Владимир Груздев: Деньги Народного бюджета будут выделяться на самые неотложные нужды
+                  <a class="news-notice__link" href="#">
+                    Владимир Груздев: Деньги Народного бюджета будут выделяться на самые неотложные нужды
+                  </a>
                 </p>
               </li>
             </ul>
@@ -143,21 +149,27 @@
             <h2 class="news-notice__title news-notice__title--notice">Уведомления</h2>
             <ul class="news-notice__list">
               <li class="news-notice__item">
-                <p class="news-notice__date news-notice__date--notice">02.04.2019</p>
+                <time class="news-notice__date news-notice__date--notice" datetime="2019-04-02">02.04.2019</time>
                 <p class="news-notice__text">
-                  Проект "Организация экспортной отрасли освоения природного натурального газа", за который вы голосовали ранее завершен
+                  <a class="news-notice__link" href="#">
+                    Проект "Организация экспортной отрасли освоения природного натурального газа", за который вы голосовали ранее завершен
+                  </a>
                 </p>
               </li>
               <li class="news-notice__item">
-                <p class="news-notice__date news-notice__date--notice">03.04.2019</p>
+                <time class="news-notice__date news-notice__date--notice" datetime="2019-04-03">03.04.2019</time>
                 <p class="news-notice__text">
-                  Подведены итоги опроса "Как вы относитесь к курению на балконе?"
+                  <a class="news-notice__link" href="#">
+                    Подведены итоги опроса "Как вы относитесь к курению на балконе?"
+                  </a>
                 </p>
               </li>
               <li class="news-notice__item">
-                <p class="news-notice__date news-notice__date--notice">04.04.2019</p>
+                <time class="news-notice__date news-notice__date--notice" datetime="2019-04-04">04.04.2019</time>
                 <p class="news-notice__text">
-                  Подведены итоги опроса "Услугами каких ветеринарных клиник Вы предпочитаете пользоваться?"
+                  <a class="news-notice__link" href="#">
+                    Подведены итоги опроса "Услугами каких ветеринарных клиник Вы предпочитаете пользоваться?"
+                  </a>
                 </p>
               </li>
             </ul>
@@ -165,19 +177,19 @@
         </div>
         <a href="#" class="news-notice__button button button--light-blue">
           <span>ПОСМОТРЕТЬ ВСЕ</span>
+          <span class="visually-hidden">Новости и уведомления</span>
           <svg width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/sprite.svg#icon-arrow"></use>
           </svg>
         </a>
-      </section>
+      </div>
 
       <section class="social">
         <h2 class="visually-hidden">Социальные сети</h2>
         <div class="social__item social__item--news">
           <h3 class="social__title">Новостная рассылка</h3>
           <div class="social__text">
-            <p class="social__text-inner">Вы можете подписаться на самые важные</p>
-            <p class="social__text-inner">и актуальные обновления проектов и событий</p>
+            <p class="social__text-inner">Вы можете подписаться на самые важные<br>и актуальные обновления проектов и событий</p>
           </div>
           <a class="social__link social__link--tick link-arrow" href="#">
             <span>Подписаться</span>
@@ -186,8 +198,7 @@
         <div class="social__item social__item--icq">
           <h3 class="social__title">ICQ канал</h3>
           <div class="social__text">
-            <p class="social__text-inner">Также уведомления</p>
-            <p class="social__text-inner">вы сможете получить в ICQ</p>
+            <p class="social__text-inner">Также уведомления<br>вы сможете получить в ICQ</p>
           </div>
           <a class="social__link link-arrow" href="#">
             <span>Перейти</span>
@@ -310,181 +321,244 @@
             Голосование завершено, победители указаны в соответствующих категориях
           </p>
           <div class="project__info-doc">
-            <p class="project__doc-name">Протокол</p>
+            <a class="project__doc-name" href="#" download="">Протокол</a>
             <p class="project__doc-size">3,2 МБ</p>
           </div>
         </div>
         <ul class="project__list js_short_list">
           <li class="project__item project__item--library">
             <a href="#" class="project__link">
-              <p class="project__name">
-                Библиотеки
-              </p>
-              <div class="project__count">15</div>
+              <span class="project__icon">
+                <svg width="28" height="23" viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-category-1"></use>
+                </svg>
+              </span>
+              <span class="project__name">Библиотеки</span>
+              <span class="project__count">15</span>
             </a>
           </li>
           <li class="project__item project__item--education">
             <a href="#" class="project__link">
-              <p class="project__name">
-                Муниципальные образовательные организации
-              </p>
-              <div class="project__count">999</div>
+              <span class="project__icon">
+                <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-category-12"></use>
+                </svg>
+              </span>
+              <span class="project__name">Муниципальные образовательные организации</span>
+              <span class="project__count">999</span>
             </a>
           </li>
           <li class="project__item project__item--park">
             <a href="#" class="project__link">
-              <p class="project__name">
-                Благоустройство
-              </p>
-              <div class="project__count">100</div>
+              <span class="project__icon">
+                <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-category-2"></use>
+                </svg>
+              </span>
+              <span class="project__name">Благоустройство</span>
+              <span class="project__count">100</span>
             </a>
           </li>
           <li class="project__item project__item--art">
             <a href="#" class="project__link">
-              <p class="project__name">
-                Народное творчество
-              </p>
-              <div class="project__count">1</div>
+              <span class="project__icon">
+                <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-category-13"></use>
+                </svg>
+              </span>
+              <span class="project__name">Народное творчество</span>
+              <span class="project__count">1</span>
             </a>
           </li>
           <li class="project__item project__item--home">
             <a href="#" class="project__link">
-              <p class="project__name">
-                Бытовое обслуживание
-              </p>
-              <div class="project__count">22</div>
+              <span class="project__icon">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-category-3"></use>
+                </svg>
+              </span>
+              <span class="project__name">Бытовое обслуживание</span>
+              <span class="project__count">22</span>
             </a>
           </li>
           <li class="project__item project__item--archeology">
             <a href="#" class="project__link">
-              <p class="project__name">
-                Объекты культурного наследия
-              </p>
-              <div class="project__count">15</div>
+              <span class="project__icon">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-category-14"></use>
+                </svg>
+              </span>
+              <span class="project__name">Объекты культурного наследия</span>
+              <span class="project__count">15</span>
             </a>
           </li>
           <li class="project__item project__item--water">
             <a href="#" class="project__link">
-              <p class="project__name">
-                Водоснабжение
-              </p>
-              <div class="project__count">457</div>
+              <span class="project__icon">
+                <svg width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-category-4"></use>
+                </svg>
+              </span>
+              <span class="project__name">Водоснабжение</span>
+              <span class="project__count">457</span>
             </a>
           </li>
           <li class="project__item project__item--culture">
             <a href="#" class="project__link">
-              <p class="project__name">
-                Объекты культуры
-              </p>
-              <div class="project__count">15</div>
+              <span class="project__icon">
+                <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-category-15"></use>
+                </svg>
+              </span>
+              <span class="project__name">Объекты культуры</span>
+              <span class="project__count">15</span>
             </a>
           </li>
           <li class="project__item project__item--child">
             <a href="#" class="project__link">
-              <p class="project__name">
-                Детские площадки
-              </p>
-              <div class="project__count">13</div>
+              <span class="project__icon">
+                <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-category-5"></use>
+                </svg>
+              </span>
+              <span class="project__name">Детские площадки</span>
+              <span class="project__count">13</span>
             </a>
           </li>
           <li class="project__item project__item--fire">
             <a href="#" class="project__link">
-              <p class="project__name">
-                Пожарная безопасность
-              </p>
-              <div class="project__count">2</div>
+              <span class="project__icon">
+                <svg width="22" height="26" viewBox="0 0 22 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-category-16"></use>
+                </svg>
+              </span>
+              <span class="project__name">Пожарная безопасность</span>
+              <span class="project__count">2</span>
             </a>
           </li>
           <li class="project__item project__item--road">
             <a href="#" class="project__link">
-              <p class="project__name">
-                Дороги
-              </p>
-              <div class="project__count">15</div>
+              <span class="project__icon">
+                <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-category-6"></use>
+                </svg>
+              </span>
+              <span class="project__name">Дороги</span>
+              <span class="project__count">15</span>
             </a>
           </li>
           <li class="project__item project__item--waste">
             <a href="#" class="project__link">
-              <p class="project__name">
-                Сбор бытовых отходов
-              </p>
-              <div class="project__count">19</div>
+              <span class="project__icon">
+                <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-category-17"></use>
+                </svg>
+              </span>
+              <span class="project__name">Сбор бытовых отходов</span>
+              <span class="project__count">19</span>
             </a>
           </li>
           <li class="project__item project__item--money">
             <a href="#" class="project__link">
-              <p class="project__name">
-                Доходогенерирующие проекты
-              </p>
-              <div class="project__count">28</div>
+              <span class="project__icon">
+                <svg width="26" height="22" viewBox="0 0 26 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-category-7"></use>
+                </svg>
+              </span>
+              <span class="project__name">Доходогенерирующие проекты</span>
+              <span class="project__count">28</span>
             </a>
           </li>
           <li class="project__item project__item--connection">
             <a href="#" class="project__link">
-              <p class="project__name">
-                Связь
-              </p>
-              <div class="project__count">5</div>
+              <span class="project__icon">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-category-18"></use>
+                </svg>
+              </span>
+              <span class="project__name">Связь</span>
+              <span class="project__count">5</span>
             </a>
           </li>
           <li class="project__item project__item--service">
             <a href="#" class="project__link">
-              <p class="project__name">
-                ЖКХ
-              </p>
-              <div class="project__count">674</div>
+              <span class="project__icon">
+                <svg width="22" height="28" viewBox="0 0 22 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-category-8"></use>
+                </svg>
+              </span>
+              <span class="project__name">ЖКХ</span>
+              <span class="project__count">674</span>
             </a>
           </li>
           <li class="project__item project__item--sport">
             <a href="#" class="project__link">
-              <p class="project__name">
-                Спорт
-              </p>
-              <div class="project__count">15</div>
+              <span class="project__icon">
+                <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-category-19"></use>
+                </svg>
+              </span>
+              <span class="project__name">Спорт</span>
+              <span class="project__count">15</span>
             </a>
           </li>
           <li class="project__item project__item--event">
             <a href="#" class="project__link">
-              <p class="project__name">
-                Массовое мероприятие
-              </p>
-              <div class="project__count">324</div>
+              <span class="project__icon">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-category-9"></use>
+                </svg>
+              </span>
+              <span class="project__name">Массовое мероприятие</span>
+              <span class="project__count">324</span>
             </a>
           </li>
           <li class="project__item project__item--tourism">
             <a href="#" class="project__link">
-              <p class="project__name">
-                Туризм
-              </p>
-              <div class="project__count">875</div>
+              <span class="project__icon">
+                <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-category-20"></use>
+                </svg>
+              </span>
+              <span class="project__name">Туризм</span>
+              <span class="project__count">875</span>
             </a>
           </li>
           <li class="project__item project__item--grave">
             <a href="#" class="project__link">
-              <p class="project__name">
-                Места захоронения
-              </p>
-              <div class="project__count">101</div>
+              <span class="project__icon">
+                <svg width="22" height="28" viewBox="0 0 22 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-category-10"></use>
+                </svg>
+              </span>
+              <span class="project__name">Места захоронения</span>
+              <span class="project__count">101</span>
             </a>
           </li>
           <li class="project__item project__item--birth">
             <a href="#" class="project__link">
-              <p class="project__name">
-                Фельдшерско-акушерские пункты
-              </p>
-              <div class="project__count">22</div>
+              <span class="project__icon">
+                <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-category-21"></use>
+                </svg>
+              </span>
+              <span class="project__name">Фельдшерско-акушерские пункты</span>
+              <span class="project__count">22</span>
             </a>
           </li>
           <li class="project__item project__item--medicine">
             <a href="#" class="project__link">
-              <p class="project__name">
-                Места массового пользования
-              </p>
-              <div class="project__count">69</div>
+              <span class="project__icon">
+                <svg width="28" height="27" viewBox="0 0 28 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-category-11"></use>
+                </svg>
+              </span>
+              <span class="project__name">Места массового пользования</span>
+              <span class="project__count">69</span>
             </a>
           </li>
         </ul>
-        <button class="project__button button button--light-blue js_show_all">
+        <button class="project__button button button--light-blue js_show_all" type="button">
           <span>ПОКАЗАТЬ ЕЩЁ</span>
         </button>
         <a href="#" class="project__archive-mobile link-arrow link-arrow--grey">
@@ -508,7 +582,7 @@
         <ul class="discussion__list">
           <li class="discussion__item discussion__item--sign">
             <div class="discussion__item-top">
-              <p class="discussion__date">04.04.2019</p>
+              <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
               <div class="discussion__used">
                 <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="img/sprite.svg#icon-lightning"></use>
@@ -530,7 +604,7 @@
           </li>
           <li class="discussion__item discussion__item--used">
             <div class="discussion__item-top">
-              <p class="discussion__date">04.04.2019</p>
+              <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
               <div class="discussion__used">
                 <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="img/sprite.svg#icon-lightning"></use>
@@ -552,7 +626,7 @@
           </li>
           <li class="discussion__item">
             <div class="discussion__item-top">
-              <p class="discussion__date">04.04.2019</p>
+              <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
               <div class="discussion__used">
                 <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="img/sprite.svg#icon-lightning"></use>
@@ -574,7 +648,7 @@
           </li>
           <li class="discussion__item discussion__item--used discussion__item--sign">
             <div class="discussion__item-top">
-              <p class="discussion__date">04.04.2019</p>
+              <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
               <div class="discussion__used">
                 <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="img/sprite.svg#icon-lightning"></use>
@@ -596,7 +670,7 @@
           </li>
           <li class="discussion__item">
             <div class="discussion__item-top">
-              <p class="discussion__date">04.04.2019</p>
+              <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
               <div class="discussion__used">
                 <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <use xlink:href="img/sprite.svg#icon-lightning"></use>
@@ -671,19 +745,20 @@
 </footer>
 
 
-    <section class="cookie js_cookie">
-      <div class="cookie-wrap">
-        <div class="cookie__main">
-          <p class="cookie__title">
-            Информируем Вас о том, что сайт обрабатывает персональные данные и использует файлы "cookies"
-          </p>
-          <p class="cookie__text">
-            Мы обязуемся обеспечить конфиденциальность полученных от Вас персональных данных для целей, указанных в настоящей Политике обработки персональных данных, а также безопасность при их обработке в соответствии с требованиями Законодательства Российской Федерации. Для подтверждения Вашего согласия на обработку данных на указанных выше условиях нажмите "Согласен"
-          </p>
-        </div>
-        <button type="button" class="cookie__button button button--blue js_btn">Согласен</button>
-      </div>
-    </section>
+    <div class="cookie js_cookie">
+  <div class="cookie-wrap">
+    <div class="cookie__main">
+      <p class="cookie__title">
+        Информируем Вас о том, что сайт обрабатывает персональные данные и использует файлы "cookies"
+      </p>
+      <p class="cookie__text">
+        Мы обязуемся обеспечить конфиденциальность полученных от Вас персональных данных для целей, указанных в настоящей Политике обработки персональных данных, а также безопасность при их обработке в соответствии с требованиями Законодательства Российской Федерации. Для подтверждения Вашего согласия на обработку данных на указанных выше условиях нажмите "Согласен"
+      </p>
+    </div>
+    <button type="button" class="cookie__button button button--blue js_btn">Согласен</button>
+  </div>
+</div>
+
 
     <script src="js/libs.js"></script>
     <script src="js/main.min.js"></script>

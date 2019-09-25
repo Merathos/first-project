@@ -171,7 +171,15 @@
 
   &--link {
     display: block;
+
     text-align: left;
+  }
+}
+
+.news-notice__link {
+  text-decoration: none;
+  &:hover {
+    color: $blue-default;
   }
 }
 
