@@ -30,14 +30,14 @@
 .project-meta__group {
   display: flex;
   align-items: center;
-  padding: 24px 23px;
+  padding: 23px;
 }
 
 .project-meta__item {
   margin: 0;
 
   &:not(:last-child) {
-    margin-right: 40px;
+    margin-right: 41px;
   }
 }
 
@@ -56,7 +56,7 @@
 }
 
 .project-meta__fovorite-btn {
-  padding: 0;
+  padding: 8px;
   margin-left: auto;
 
   svg {
@@ -74,6 +74,13 @@
   padding: 0;
   margin: -1px;
   border: 0;
+}
+
+
+@include tablet {
+  .project-meta__fovorite-btn {
+    padding: 0;
+  }
 }
 
 

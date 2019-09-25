@@ -24,6 +24,10 @@
   margin-bottom: 40px;
 }
 
+.project-page__text-btn {
+  display: none;
+}
+
 .project-page__gallery {
   margin-bottom: 48px;
 }
@@ -119,6 +123,7 @@
   }
 
   .project-page__meta,
+  .project-page__text,
   .project-page__files,
   .project-page__project-link,
   .project-page__video-link,
@@ -131,6 +136,12 @@
   .project-page__meta {
     margin-bottom: 16px;
   }
+
+  .project-page__text p:not([class]) {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
 }
 
 
@@ -140,6 +151,7 @@
   }
 
   .project-page__meta,
+  .project-page__text,
   .project-page__files,
   .project-page__project-link,
   .project-page__video-link,
@@ -151,6 +163,61 @@
 
   .project-page__text {
     margin-bottom: 48px;
+
+    p:not([class]) {
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  .project-page__text-container {
+    overflow: hidden;
+    transition: height 0.5s;
+  }
+
+  .project-page__text--collapsed .project-page__text-container {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 54px;
+      background-image: linear-gradient(to top, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    }
+  }
+
+  .project-page__text--js .project-page__text-btn {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-top: 12px;
+    background-color: transparent;
+    border: none;
+    font-size: rem(15px);
+    line-height: rem(20px);
+    cursor: pointer;
+
+    .project-page__text-btn-caption,
+    svg {
+      pointer-events: none;
+    }
+
+    svg {
+      width: 13px;
+      height: 13px;
+      margin-left: 10px;
+      fill: currentColor;
+      transform: rotate(90deg);
+      transition: transform 0.5s;
+    }
+  }
+
+  .project-page__text--collapsed .project-page__text-btn svg {
+    transform: rotate(-90deg);
   }
 
   .project-page__gallery {

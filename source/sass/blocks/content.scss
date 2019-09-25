@@ -1,7 +1,7 @@
 .content {
   color: $dark-main;
 
-  h1 {
+  h1:not([class]) {
     margin: 0;
     margin-bottom: 40px;
     font-weight: 400;
@@ -9,17 +9,12 @@
     line-height: rem(47px);
   }
 
-  h2 {
+  h2:not([class]) {
     margin-top: 40px;
     margin-bottom: 24px;
     font-weight: 400;
     font-size: rem(30px);
     line-height: rem(36px);
-
-    &.big {
-      margin-top: 48px;
-      margin-bottom: 48px;
-    }
   }
 
   p:not([class]) {
@@ -63,8 +58,8 @@
     }
   }
 
-  strong,
-  b {
+  strong:not([class]),
+  b:not([class]) {
     font-weight: 500;
   }
 
@@ -95,8 +90,8 @@
 
 
   @include tablet {
-    h1,
-    h2,
+    h1:not([class]),
+    h2:not([class]),
     p:not([class]),
     img:not([class]),
     ul:not([class]),
@@ -112,15 +107,15 @@
       margin-left: 0;
     }
 
-    h1 {
+    h1:not([class]) {
       margin-bottom: 32px;
     }
   }
 
 
   @include mobile {
-    h1,
-    h2,
+    h1:not([class]),
+    h2:not([class]),
     p:not([class]),
     img:not([class]),
     ul:not([class]),
@@ -136,19 +131,14 @@
       margin-left: 0;
     }
 
-    h1 {
+    h1:not([class]) {
       margin-bottom: 24px;
       font-size: rem(30px);
       line-height: rem(36px);
     }
 
-    h2 {
+    h2:not([class]) {
       margin-top: 48px;
-
-      &.big {
-        margin-top: 40px;
-        margin-bottom: 24px;
-      }
     }
 
     ul:not([class]) {
