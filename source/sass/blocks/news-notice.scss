@@ -173,6 +173,13 @@
     display: block;
 
     text-align: left;
+    text-decoration: none;
+    transition: color 0.4s ease;
+
+    &:hover,
+    &:focus {
+      color: $blue-default;
+    }
   }
 }
 
