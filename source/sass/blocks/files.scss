@@ -1,0 +1,24 @@
+.files {
+  display: grid;
+  grid-template-columns: calc(50% - 6px) calc(50% - 6px);
+  grid-template-rows: auto;
+  grid-gap: 12px;
+  width: 100%;
+
+  .file-item {
+    width: 100%;
+  }
+}
+
+
+@include mobile {
+  .files {
+    display: block;
+
+    .file-item {
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}

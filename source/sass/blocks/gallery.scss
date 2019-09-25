@@ -1,0 +1,50 @@
+.gallery {
+  display: flex;
+  overflow-x: auto;
+}
+
+.gallery__item-link {
+  display: block;
+  margin-right: 16px;
+  user-select: none;
+  outline: none;
+  transition: opacity $style-change-duration;
+
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:focus:not(.focus-visible) {
+    opacity: 1;
+  }
+
+  &:hover:not(.focus-visible) {
+    opacity: 0.6;
+  }
+}
+
+.gallery__item {
+  width: 135px;
+  height: 135px;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery__item-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: $border-radius;
+}
+
+.gallery__item-text {
+  display: none;
+}
+
+
+@include mobile {
+  .gallery__item-link {
+    margin-right: 12px;
+  }
+}

@@ -11,8 +11,10 @@
 @import "blocks/page-body";
 @import "blocks/page-content";
 @import "blocks/container";
+@import "blocks/content";
 @import "blocks/logo-link";
 @import "blocks/button";
+@import "blocks/link";
 @import "blocks/link-arrow";
 @import "blocks/form-checkbox";
 @import "blocks/form-radio";
@@ -35,6 +37,9 @@
 @import "blocks/poll-process";
 @import "blocks/poll-result";
 @import "blocks/composite-poll";
+@import "blocks/files";
+@import "blocks/file-item";
+@import "blocks/gallery";
 
 // header
 @import "blocks/page-header";
@@ -47,3 +52,6 @@
 @import "blocks/vote-end";
 @import "blocks/project-item";
 @import "blocks/projects";
+// project page
+@import "blocks/project-page";
+@import "blocks/project-meta";

@@ -5,9 +5,17 @@
 
   @include tablet {
     padding: 0 24px;
+
+    &--desktop-only {
+      padding: 0;
+    }
   }
 
   @include mobile {
     padding: 0 16px;
+
+    &--desktop-only {
+      padding: 0;
+    }
   }
 }
