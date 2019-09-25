@@ -1037,6 +1037,7 @@ template {
     .filter__vote-select .form-select__title::after {
       width: 13px;
       height: 8px;
+      margin-left: 6px;
       background-size: cover; }
   .filter__vote-select .form-select__group,
   .filter__vote-select .form-select__scrollbar-content {
@@ -2837,7 +2838,7 @@ template {
     z-index: 100;
     top: 0; }
 
-.page-header__container {
+.page-header .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2932,15 +2933,6 @@ template {
     left: 0;
     width: 100%;
     height: 100%; }
-  .page-header__container--menu {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    padding: 0; }
   .page-header__link[href]:hover:not(.focus-visible) {
     color: inherit; }
   .page-header__link[href]:active:not(.focus-visible) {
@@ -2961,8 +2953,6 @@ template {
     margin-right: auto; } }
 
 @media (max-width: 767px) {
-  .page-header__container--menu {
-    padding: 0; }
   .page-header__roi-logo {
     width: 124px;
     height: 40px; }
@@ -3065,10 +3055,22 @@ template {
       display: none; }
   .page-header--open-menu .main-menu {
     display: block; }
-  .main-menu__container {
+  .main-menu .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding: 0;
     height: 100%;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch; } }
+
+@media (max-width: 767px) {
+  .main-menu .container {
+    padding: 0; } }
 
 .location-switcher form {
   display: -webkit-box;
@@ -3097,6 +3099,8 @@ template {
       pointer-events: none; }
 
 .location-switcher__btn label {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   font-size: inherit;
   line-height: inherit; }
   .location-switcher__btn label::before {
@@ -3104,6 +3108,9 @@ template {
 
 .location-switcher__address {
   display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
   padding-left: 32px;
   margin-top: 3px;
   font-size: 0.8125rem;

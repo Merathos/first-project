@@ -26,6 +26,7 @@
 }
 
 .location-switcher__btn label {
+  flex-wrap: wrap;
   font-size: inherit;
   line-height: inherit;
 
@@ -36,6 +37,8 @@
 
 .location-switcher__address {
   display: block;
+  box-sizing: border-box;
+  width: 100%;
   padding-left: 32px;
   margin-top: 3px;
   font-size: rem(13px);

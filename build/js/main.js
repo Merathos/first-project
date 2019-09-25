@@ -95,7 +95,7 @@
           }
         }
       }
-      document.getElementById('project_select-active').value = value;
+      selectItem.querySelector('input[type="hidden"]').value = value;
       selectItem.querySelector('.form-select__title-text').textContent = value;
       if (dropdown.classList.contains('form-select__group--active')) {
         dropdown.classList.remove('form-select__group--active');
@@ -257,7 +257,7 @@
     return;
   }
 
-  var ellipsis = ellipsis({
+  var ellipsis = Ellipsis({
     lines: 3
   });
 

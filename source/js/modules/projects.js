@@ -8,7 +8,7 @@
     return;
   }
 
-  var ellipsis = ellipsis({
+  var ellipsis = Ellipsis({
     lines: 3
   });
 
