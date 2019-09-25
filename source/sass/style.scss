@@ -6,6 +6,7 @@
 
 /* Плагины */
 @import "plugins/normalize";
+@import "plugins/swiper";
 
 /* Блоки */
 @import "blocks/page-body";
@@ -39,7 +40,9 @@
 @import "blocks/composite-poll";
 @import "blocks/files";
 @import "blocks/file-item";
+@import "blocks/popup";
 @import "blocks/gallery";
+@import "blocks/gallery-popup";
 
 // header
 @import "blocks/page-header";

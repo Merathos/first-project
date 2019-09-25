@@ -24,7 +24,7 @@
 <rect x="10.625" y="8.375" width="0.75" height="3.25" transform="rotate(90 10.625 8.375)" stroke="#707B8C" stroke-width="0.75"/>
 </g>
 </symbol><symbol id="icon-cross" viewBox="0 0 18 18">
-<path d="M1 1L17 17M17 1L1 17" stroke="#E55050" stroke-width="2"/>
+<path d="M1 1L17 17M17 1L1 17" stroke-width="2"/>
 </symbol><symbol id="icon-doc-doc" viewBox="0 0 24 24">
 <path d="M3 1H17V4V5H18H21V23H3V1ZM19 2.41421L19.5858 3H19V2.41421Z" fill="white" stroke="#9BD2F4" stroke-width="2"/>
 <mask id="path-2-inside-1" fill="white">
