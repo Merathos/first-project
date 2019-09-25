@@ -1522,7 +1522,7 @@ template {
     background-image: linear-gradient(to right, #9bd2f4 0%, #9bd2f4 50%, transparent 50%, transparent 75%);
     background-position: center bottom;
     background-repeat: repeat-x;
-    background-size: 8px 2px; }
+    background-size: 6px 2px; }
 
 .page-top {
   display: -webkit-box;
@@ -1765,7 +1765,12 @@ template {
       padding-bottom: 27px; } }
   .news-notice__text--link {
     display: block;
-    text-align: left; }
+    text-align: left;
+    text-decoration: none;
+    -webkit-transition: color 0.4s ease;
+    transition: color 0.4s ease; }
+    .news-notice__text--link:hover, .news-notice__text--link:focus {
+      color: #2c8ecc; }
 
 .news-notice__button--news {
   width: 360px;
