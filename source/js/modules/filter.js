@@ -11,17 +11,16 @@
 
 
   var openBtn = filter.querySelector('.filter__open-btn');
-  var body = filter.querySelector('.filter__body');
-
+  // var body = filter.querySelector('.filter__body');
 
   var onOpenBtnClick = function (evt) {
     filter.classList.toggle('filter--open');
 
     evt.currentTarget.textContent =
       filter.classList.contains('filter--open') ?
-      'Скрыть фильтры'
-      :
-      'Фильтры';
+        'Скрыть фильтры'
+        :
+        'Фильтры';
   };
 
 

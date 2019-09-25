@@ -23,14 +23,14 @@
 'use strict';
 
 (function () {
-  var hideClass = 'js_hide'
+  var hideClass = 'js_hide';
   var cookieBlock = document.querySelector('.js_cookie');
   var button = document.querySelector('.js_cookie .js_btn');
 
   if (cookieBlock && button) {
     button.addEventListener('click', function () {
       cookieBlock.classList.add(hideClass);
-    })
+    });
   }
 })();
 
@@ -47,17 +47,16 @@
 
 
   var openBtn = filter.querySelector('.filter__open-btn');
-  var body = filter.querySelector('.filter__body');
-
+  // var body = filter.querySelector('.filter__body');
 
   var onOpenBtnClick = function (evt) {
     filter.classList.toggle('filter--open');
 
     evt.currentTarget.textContent =
       filter.classList.contains('filter--open') ?
-      'Скрыть фильтры'
-      :
-      'Фильтры';
+        'Скрыть фильтры'
+        :
+        'Фильтры';
   };
 
 
@@ -77,7 +76,7 @@
 
   Array.prototype.forEach.call(selectItems, function (selectItem) {
     var dropdown = selectItem.querySelector('.form-select__group');
-    var trigger =selectItem.querySelector('.form-select__title');
+    var trigger = selectItem.querySelector('.form-select__title');
     var options = selectItem.querySelectorAll('.form-select__option');
 
     if (!dropdown && !trigger && !options.length) {
@@ -89,10 +88,9 @@
       var nodes = element.parentNode.childNodes;
       for (var i = 0; i < nodes.length; i++) {
         if (nodes[i] instanceof HTMLParagraphElement) {
-          if (value == nodes[i].getAttribute('data-value')) {
+          if (value === nodes[i].getAttribute('data-value')) {
             nodes[i].classList.add('form-select__option--active');
-          }
-          else {
+          } else {
             nodes[i].classList.remove('form-select__option--active');
           }
         }
@@ -259,7 +257,7 @@
     return;
   }
 
-  var ellipsis = Ellipsis({
+  var ellipsis = ellipsis({
     lines: 3
   });
 
@@ -284,7 +282,7 @@
 'use strict';
 
 (function () {
-  var hideClass = 'js_hide'
+  var hideClass = 'js_hide';
   var list = document.querySelector('.js_short_list');
   var button = document.querySelector('.js_short_list + .js_show_all');
 
@@ -296,14 +294,14 @@
       if (index > 4) {
         item.classList.add(hideClass);
       }
-    })
+    });
 
     button.addEventListener('click', function () {
       items.forEach(function (item) {
         item.classList.remove(hideClass);
         button.classList.add(hideClass);
-      })
-    })
+      });
+    });
   }
 })();
 
