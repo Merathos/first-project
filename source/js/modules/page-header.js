@@ -18,9 +18,21 @@
     }
   };
 
+  var adjustPageContentTopPadding = function () {
+    document.body.style.paddingTop = header.offsetHeight + 'px';
+  };
 
-  adjustHeaderAppearance();
+  var onWindowResize = function () {
+    adjustPageContentTopPadding();
+  };
+
+
   header.classList.add('page-header--js');
 
+  adjustHeaderAppearance();
+  adjustPageContentTopPadding();
+
+
   document.addEventListener('scroll', adjustHeaderAppearance);
+  window.addEventListener('resize', onWindowResize);
 })();
