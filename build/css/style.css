@@ -75,7 +75,9 @@ img {
   max-width: 100%;
   height: auto; }
 
-.visually-hidden {
+.visually-hidden,
+.form-radio input[type="radio"],
+.form-checkbox input[type="checkbox"] {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -1539,8 +1541,13 @@ template {
       margin-top: 24px; } }
   @media (max-width: 400px) {
     .page-top__form-wrapper {
-      width: 100%;
-      padding-left: 63px; } }
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      width: 100%; } }
 
 .page-top__checkbox {
   margin-bottom: 0; }
@@ -1733,6 +1740,8 @@ template {
   padding: 0; }
   .news-notice--news .news-notice__list {
     padding-top: 6px; }
+  .news-notice--news .news-notice__date {
+    display: block; }
 
 .social {
   display: -webkit-box;

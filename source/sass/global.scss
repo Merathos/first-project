@@ -37,7 +37,9 @@ img {
   height: auto;
 }
 
-.visually-hidden {
+.visually-hidden,
+.form-radio input[type="radio"],
+.form-checkbox input[type="checkbox"] {
   position: absolute;
   width: 1px;
   height: 1px;
