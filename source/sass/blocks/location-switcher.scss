@@ -9,13 +9,13 @@
 
   &:first-child {
     position: relative;
-    margin-right: 74px;
+    margin-right: 68px;
 
     &::after {
       content: "";
       position: absolute;
       top: 50%;
-      right: -43px;
+      right: -37px;
       width: 1px;
       height: 48px;
       background-color: #dedede;

@@ -41,7 +41,7 @@
       </a>
 
       <button class="page-header__menu-btn menu-btn" type="button">
-        <span class="visually-hidden">Открыть меню</span>
+        <span class="menu-btn__text visually-hidden">Открыть меню</span>
         <span class="menu-btn__icon"></span>
       </button>
     </div>
@@ -84,7 +84,7 @@
         <div class="user-menu__overlay"></div>
 
         <button class="user-menu__dropdown-btn" type="button">
-          <span class="visually-hidden">Открыть меню</span>
+          <span class="user-menu__dropdown-btn-text visually-hidden">Открыть меню</span>
 
           <svg class="user-menu__user-icon" width="16" height="16">
             <use xlink:href="img/sprite.svg#icon-user"></use>
@@ -116,7 +116,15 @@
 </header>
 
 
-    <main>
+    <main class="page-content">
+      <div class="container">
+        <a class="page-content__back-btn" href="main-page.html">
+          <svg width="8" height="14">
+            <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
+          </svg>
+          Назад
+        </a>
+      </div>
       <div class="container page-top">
         <h1 class="page-title page-title--news">Новости и уведомления</h1>
         <ul class="page-nav">
