@@ -2,6 +2,10 @@
   padding-bottom: 122px;
 }
 
+.project-page__container {
+  position: relative;
+}
+
 .project-page__meta,
 .project-page__content,
 .project-page__survey {
@@ -12,7 +16,24 @@
   margin-bottom: 40px;
 }
 
+.project-page__budget {
+  padding: 24px;
+  font-size: rem(13px);
+  line-height: rem(17px);
+  color: $grey;
+}
+
+.project-page__budget-value {
+  display: block;
+  margin-top: 8px;
+  font-weight: 300;
+  font-size: rem(40px);
+  line-height: rem(47px);
+  color: $dark-text;
+}
+
 .project-page__content {
+  grid-area: content;
   margin-bottom: 48px;
 }
 
@@ -109,6 +130,18 @@
   padding-left: 20px;
   font-size: rem(14px);
   line-height: rem(19px);
+}
+
+
+@include desktop-only {
+  .project-page__vote {
+    &--js {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 360px;
+    }
+  }
 }
 
 

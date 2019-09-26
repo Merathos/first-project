@@ -4564,6 +4564,9 @@ template {
 .project-page {
   padding-bottom: 122px; }
 
+.project-page__container {
+  position: relative; }
+
 .project-page__meta,
 .project-page__content,
 .project-page__survey {
@@ -4572,7 +4575,22 @@ template {
 .project-page__meta {
   margin-bottom: 40px; }
 
+.project-page__budget {
+  padding: 24px;
+  font-size: 0.8125rem;
+  line-height: 1.0625rem;
+  color: #707b8c; }
+
+.project-page__budget-value {
+  display: block;
+  margin-top: 8px;
+  font-weight: 300;
+  font-size: 2.5rem;
+  line-height: 2.9375rem;
+  color: #354052; }
+
 .project-page__content {
+  grid-area: content;
   margin-bottom: 48px; }
 
 .project-page__files {
@@ -4664,6 +4682,13 @@ template {
   padding-left: 20px;
   font-size: 0.875rem;
   line-height: 1.1875rem; }
+
+@media (min-width: 1200px) {
+  .project-page__vote--js {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 360px; } }
 
 @media (max-width: 1199px) {
   .project-page {
@@ -4909,3 +4934,80 @@ template {
     overflow: auto;
     font-size: 1rem;
     line-height: 1.375rem; } }
+
+.project-vote {
+  color: #333333;
+  background-color: #f9f9fa;
+  border-radius: 5px; }
+
+.project-vote__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e3e8ee; }
+
+.project-vote__title {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 12px;
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 1.4375rem; }
+
+.project-vote__date {
+  font-size: 0.8125rem;
+  line-height: 1.0625rem;
+  color: #a6abb3; }
+  .project-vote__date:first-of-type {
+    margin-right: 32px; }
+  .project-vote__date time {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    color: #707b8c; }
+
+.project-vote__expire {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  margin-top: 16px;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  color: #707b8c; }
+  .project-vote__expire svg {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-right: 9px;
+    fill: none; }
+
+.project-vote__results {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 24px;
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 1.125rem;
+  line-height: 1.4375rem; }
+
+.project-vote__results-value--against {
+  margin-left: auto; }
+
+.project-vote form {
+  padding: 24px;
+  border-bottom: 1px solid #e3e8ee; }

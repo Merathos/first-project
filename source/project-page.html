@@ -19,7 +19,7 @@
         <div class="content">
           <h1>Ремонт дороги по улице Петровская, г. Москва</h1>
 
-          <div class="project-page__container">
+          <div class="project-page__container" data-sticky-container>
             <div class="project-page__meta  project-meta">
               <h2 class="visually-hidden">Общая информация о проекте</h2>
 
@@ -51,6 +51,45 @@
                   <span class="project-meta__fovorite-btn-text">В избранное</span>
                 </button>
               </div>
+            </div>
+
+            <div class="project-page__vote  project-vote" data-margin-top="90" data-sticky-for="1199">
+              <div class="project-vote__container">
+                <h2 class="project-vote__title">Голосование</h2>
+
+                <p class="project-vote__date">
+                  Дата начала
+                  <time datetime="2019-08-07">07.08.2019</time>
+                </p>
+
+                <p class="project-vote__date">
+                  Дата завершения
+                  <time datetime="2019-11-25">25.11.2019</time>
+                </p>
+
+                <p class="project-vote__expire">
+                  <svg width="16" height="16">
+                    <use xlink:href="img/sprite.svg#icon-clock"></use>
+                  </svg>
+                  <span class="project-vote__expire-value">28 дней</span>&nbsp;до завершения
+                </p>
+              </div>
+
+              <p class="project-vote__results">
+                <span class="project-vote__results-value project-vote__results-value--approve">1 057</span>&nbsp;<span>за</span>
+                <span class="project-vote__results-value project-vote__results-value--against">47</span>&nbsp;<span>против</span>
+              </p>
+
+              <form action="#" method="post">
+                <!-- <div class="project-page__btn">
+                  <input type="radio" name="vote" value="approve">
+                </div> -->
+              </form>
+
+              <p class="project-page__budget">
+                Бюджет
+                <span class="project-page__budget-value">4 560 000 &#x20bd;</span>
+              </p>
             </div>
 
             <div class="project-page__content">
