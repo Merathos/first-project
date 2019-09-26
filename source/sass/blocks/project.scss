@@ -14,53 +14,18 @@
 }
 
 .project__head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 41px;
-
   @media (max-width: $tablet-width - 1) {
-    padding-bottom: 25px;
+    & > svg {
+      align-self: flex-start;
+      width: 40px;
+      height: 36px;
+    }
   }
 }
 
 .project__title {
-  position: relative;
-
-  margin: 0;
-  padding: 0;
-  padding-left: 52px;
-
-  text-align: left;
-  color: $dark-text;
-
-  @include font-h1();
-
   @media (max-width: $tablet-width - 1) {
-    padding-left: 45px;
-
-    @include font-h2();
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 8px;
-    left: 2px;
-
-    width: 32px;
-    height: 32px;
-
-    background-image: url("../img/icon-projects.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    @media (max-width: $tablet-width - 1) {
-      top: 2px;
-
-      width: 29px;
-      height: 29px;
-    }
+    padding-left: 18px;
   }
 }
 
@@ -77,7 +42,7 @@
 }
 
 .project__info {
-  margin: 0 0 40px;
+  margin: 40px 0;
   padding: 26px 68px;
 
   font-weight: 500;
@@ -90,7 +55,7 @@
   border-radius: $border-radius;
 
   @media (max-width: $tablet-width - 1) {
-    margin-bottom: 26px;
+    margin: 26px 0;
     padding: 24px 24px 24px 60px;
   }
 }
@@ -130,6 +95,15 @@
     &::before {
       background-image: url("../img/icon-tick-white.svg");
       background-size: 24px 24px;
+    }
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .project__info-doc {
+      margin-top: 10px;
     }
   }
 }

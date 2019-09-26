@@ -13,51 +13,6 @@
   }
 }
 
-.discussion__head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.discussion__title {
-  position: relative;
-
-  margin: 0;
-  padding: 0;
-  padding-left: 52px;
-
-  color: $dark-text;
-
-  @include font-h1();
-
-  @media (max-width: $tablet-width - 1) {
-    padding-left: 46px;
-
-    @include font-h2();
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 8px;
-    left: 0;
-
-    width: 32px;
-    height: 32px;
-
-    background-image: url("../img/icon-discussion.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    @media (max-width: $tablet-width - 1) {
-      top: 5px;
-
-      width: 30px;
-      height: 30px;
-    }
-  }
-}
-
 .discussion__archive-link {
   @media (max-width: $tablet-width - 1) {
     display: none;
