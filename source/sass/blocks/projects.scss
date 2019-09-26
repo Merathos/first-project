@@ -1,3 +1,7 @@
+.projects {
+  padding-bottom: 80px;
+}
+
 .projects__filter {
   margin-bottom: 32px;
 }
@@ -60,6 +64,10 @@
 
 
 @include tablet {
+  .projects {
+    padding-bottom: 88px;
+  }
+
   .projects__list {
     grid-template-columns: 1fr 1fr;
     margin-bottom: 48px;
@@ -84,6 +92,10 @@
 
 
 @include mobile {
+  .projects {
+    padding-bottom: 64px;
+  }
+
   .projects__filter {
     margin-bottom: 24px;
   }
