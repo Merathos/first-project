@@ -169,7 +169,11 @@
 .news-notice--news {
   padding: 0;
 
-  .news-notice__list {
+  & .news-notice__list {
     padding-top: 6px;
+  }
+
+  & .news-notice__date {
+    display: block;
   }
 }
