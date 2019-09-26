@@ -1,7 +1,8 @@
 .project {
-  text-align: center;
   box-sizing: border-box;
   padding: 96px 40px 0;
+
+  text-align: center;
 
   @media (max-width: $desktop-width - 81) {
     padding: 88px 24px 0;
@@ -30,6 +31,7 @@
   padding: 0;
   padding-left: 52px;
 
+  text-align: left;
   color: $dark-text;
 
   @include font-h1();
@@ -81,8 +83,8 @@
   font-weight: 500;
   font-size: rem(16px);
   line-height: 1.35;
-  color: $white;
   text-align: left;
+  color: $white;
 
   background-color: $orange;
   border-radius: $border-radius;
@@ -118,7 +120,7 @@
 }
 
 .project__info--finish {
-  display: none;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 
@@ -153,11 +155,13 @@
 }
 
 .project__doc-name {
+  display: block;
   margin: 0;
   padding: 0;
 
   font-size: rem(13px);
   line-height: 1.3;
+  text-decoration: none;
 }
 
 .project__doc-size {
@@ -178,6 +182,7 @@
   padding: 0;
 
   list-style: none;
+  text-align: left;
 }
 
 .project__item {
@@ -200,119 +205,25 @@
     }
   }
 
-  &--library {
-    .project__name::before {
-      background-image: url("../img/icon-category/icon-category-1.svg");
-    }
-  }
-  &--education {
-    .project__name::before {
-      background-image: url("../img/icon-category/icon-category-12.svg");
-    }
-  }
-  &--park {
-    .project__name::before {
-      background-image: url("../img/icon-category/icon-category-2.svg");
-    }
-  }
-  &--art {
-    .project__name::before {
-      background-image: url("../img/icon-category/icon-category-13.svg");
-    }
-  }
-  &--home {
-    .project__name::before {
-      background-image: url("../img/icon-category/icon-category-3.svg");
-    }
-  }
-  &--archeology {
-    .project__name::before {
-      background-image: url("../img/icon-category/icon-category-14.svg");
-    }
-  }
-  &--water {
-    .project__name::before {
-      background-image: url("../img/icon-category/icon-category-4.svg");
-    }
-  }
-  &--culture {
-    .project__name::before {
-      background-image: url("../img/icon-category/icon-category-15.svg");
-    }
-  }
-  &--child {
-    .project__name::before {
-      background-image: url("../img/icon-category/icon-category-5.svg");
-    }
-  }
-  &--fire {
-    .project__name::before {
-      background-image: url("../img/icon-category/icon-category-16.svg");
-    }
-  }
-  &--road {
-    .project__name::before {
-      background-image: url("../img/icon-category/icon-category-6.svg");
-    }
-  }
-  &--waste {
-    .project__name::before {
-      background-image: url("../img/icon-category/icon-category-17.svg");
-    }
-  }
-  &--money {
-    .project__name::before {
-      background-image: url("../img/icon-category/icon-category-7.svg");
-    }
-  }
-  &--connection {
-    .project__name::before {
-      background-image: url("../img/icon-category/icon-category-18.svg");
-    }
-  }
-  &--service {
-    .project__name::before {
-      background-image: url("../img/icon-category/icon-category-8.svg");
-    }
-  }
-  &--sport {
-    .project__name::before {
-      background-image: url("../img/icon-category/icon-category-19.svg");
-    }
-  }
-  &--event {
-    .project__name::before {
-      background-image: url("../img/icon-category/icon-category-9.svg");
-    }
-  }
-  &--tourism {
-    .project__name::before {
-      background-image: url("../img/icon-category/icon-category-20.svg");
-    }
-  }
-  &--grave {
-    .project__name::before {
-      background-image: url("../img/icon-category/icon-category-10.svg");
-    }
-  }
-  &--birth {
-    .project__name::before {
-      background-image: url("../img/icon-category/icon-category-21.svg");
-    }
-  }
-  &--medicine {
-    .project__name::before {
-      background-image: url("../img/icon-category/icon-category-11.svg");
-    }
-  }
-
-
   &:hover {
     box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
 
     .project__name {
       color: $blue-default;
     }
+  }
+}
+
+.project__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+
+  @media (max-width: $tablet-width - 1) {
+    position: absolute;
+    top: 27px;
+    left: 16px;
   }
 }
 
@@ -325,6 +236,8 @@
   text-decoration: none;
 
   @media (max-width: $tablet-width - 1) {
+    position: relative;
+
     padding: 24px 16px 23px 16px;
   }
 }
@@ -332,9 +245,9 @@
 .project__name {
   position: relative;
 
-  margin: 0;
+  margin: 0 auto 0 0;
   padding: 0;
-  padding-left: 48px;
+  padding-left: 17px;
 
   font-size: rem(18px);
   line-height: 1.3;
@@ -366,6 +279,7 @@
 
 .project__count {
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   width: 40px;
@@ -381,8 +295,8 @@
 
 .project__button {
   display: none;
-  margin-top: 24px;
   width: 100%;
+  margin-top: 24px;
 
   &.js_hide {
     display: none;

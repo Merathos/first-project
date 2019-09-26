@@ -1,5 +1,7 @@
 .form-checkbox {
   position: relative;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 17px;
 }
 
@@ -7,6 +9,7 @@
   @include main-text;
   display: flex;
   align-items: flex-start;
+  align-self: flex-start;
   color: $dark-text;
   cursor: pointer;
   transition: all 0.4s ease;

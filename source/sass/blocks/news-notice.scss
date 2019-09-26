@@ -58,7 +58,7 @@
 
   color: $dark-text;
 
-  @include font-h2();
+  @include font-h1();
 
   @media (max-width: $tablet-width - 1) {
     padding-left: 46px;
@@ -167,5 +167,47 @@
 
   @media (max-width: $tablet-width - 1) {
     padding-bottom: 27px;
+  }
+
+  &--link {
+    display: block;
+
+    text-align: left;
+    text-decoration: none;
+    transition: color 0.4s ease;
+
+    &:hover,
+    &:focus {
+      color: $blue-default;
+    }
+  }
+}
+
+.news-notice__link {
+  text-decoration: none;
+
+  &:hover {
+    color: $blue-default;
+  }
+}
+
+.news-notice__button {
+  &--news {
+    width: 360px;
+    margin-top: 24px;
+    margin-bottom: 40px;
+
+    @media (max-width: $mobile-max-width) {
+      width: 100%;
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.news-notice--news {
+  padding: 0;
+
+  .news-notice__list {
+    padding-top: 6px;
   }
 }

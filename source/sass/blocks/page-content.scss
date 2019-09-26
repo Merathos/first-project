@@ -1,10 +1,5 @@
 .page-content {
-  padding-top: 103px;
-  padding-bottom: 80px;
-
-  &--with-back-btn {
-    padding-top: 40px;
-  }
+  padding-top: 40px;
 }
 
 .page-content__back-btn {
@@ -45,15 +40,6 @@
 
 
 @include tablet {
-  .page-content {
-    padding-top: 95px;
-    padding-bottom: 88px;
-
-    &--with-back-btn {
-      padding-top: 40px;
-    }
-  }
-
   .page-content__back-btn {
     margin-bottom: 31px;
 
@@ -70,12 +56,7 @@
 
 @include mobile {
   .page-content {
-    padding-top: 68px;
-    padding-bottom: 64px;
-
-    &--with-back-btn {
-      padding-top: 24px;
-    }
+    padding-top: 24px;
   }
 
   .page-content__back-btn {

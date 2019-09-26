@@ -10,6 +10,7 @@ html {
 }
 
 body {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -51,8 +52,7 @@ img {
 
 .main-page {
   width: 100%;
-  max-width: $desktop-width;
   min-width: $mobile-width;
+  max-width: $desktop-width;
   margin: 0 auto;
 }
-

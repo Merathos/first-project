@@ -22,6 +22,20 @@
 
 'use strict';
 
+(function () {
+  var hideClass = 'js_hide';
+  var cookieBlock = document.querySelector('.js_cookie');
+  var button = document.querySelector('.js_cookie .js_btn');
+
+  if (cookieBlock && button) {
+    button.addEventListener('click', function () {
+      cookieBlock.classList.add(hideClass);
+    });
+  }
+})();
+
+'use strict';
+
 
 (function () {
   var filter = document.querySelector('.filter');
@@ -33,17 +47,16 @@
 
 
   var openBtn = filter.querySelector('.filter__open-btn');
-  var body = filter.querySelector('.filter__body');
-
+  // var body = filter.querySelector('.filter__body');
 
   var onOpenBtnClick = function (evt) {
     filter.classList.toggle('filter--open');
 
     evt.currentTarget.textContent =
       filter.classList.contains('filter--open') ?
-      'Скрыть фильтры'
-      :
-      'Фильтры';
+        'Скрыть фильтры'
+        :
+        'Фильтры';
   };
 
 
@@ -63,7 +76,7 @@
 
   Array.prototype.forEach.call(selectItems, function (selectItem) {
     var dropdown = selectItem.querySelector('.form-select__group');
-    var trigger =selectItem.querySelector('.form-select__title');
+    var trigger = selectItem.querySelector('.form-select__title');
     var options = selectItem.querySelectorAll('.form-select__option');
 
     if (!dropdown && !trigger && !options.length) {
@@ -75,15 +88,14 @@
       var nodes = element.parentNode.childNodes;
       for (var i = 0; i < nodes.length; i++) {
         if (nodes[i] instanceof HTMLParagraphElement) {
-          if (value == nodes[i].getAttribute('data-value')) {
+          if (value === nodes[i].getAttribute('data-value')) {
             nodes[i].classList.add('form-select__option--active');
-          }
-          else {
+          } else {
             nodes[i].classList.remove('form-select__option--active');
           }
         }
       }
-      document.getElementById('project_select-active').value = value;
+      selectItem.querySelector('input[type="hidden"]').value = value;
       selectItem.querySelector('.form-select__title-text').textContent = value;
       if (dropdown.classList.contains('form-select__group--active')) {
         dropdown.classList.remove('form-select__group--active');
@@ -306,9 +318,10 @@
   var topBar = header.querySelector('.page-header__bar');
 
   var menu = header.querySelector('.main-menu');
-  var menuBtn = header.querySelector('.menu-btn');
+  var menuContainer = menu.querySelector('.container');
 
-  var scrollPosition = 0;
+  var menuBtn = header.querySelector('.menu-btn');
+  var menuBtnText = menuBtn.querySelector('.menu-btn__text');
 
 
   var adjustMenuHeight = function () {
@@ -318,16 +331,19 @@
 
   var onMenuBtnClick = function () {
     header.classList.toggle('page-header--open-menu');
-    menuBtn.classList.toggle('menu-btn--close');
 
     adjustMenuHeight();
 
     if (header.classList.contains('page-header--open-menu')) {
-      scrollPosition = window.pageYOffset;
-      document.body.classList.add('page-body--no-scroll');
+      bodyScrollLock.disableBodyScroll(menuContainer);
+
+      menuBtn.classList.add('menu-btn--close');
+      menuBtnText.textContent = 'Закрыть меню';
     } else {
-      document.body.classList.remove('page-body--no-scroll');
-      window.scrollTo(0, scrollPosition);
+      bodyScrollLock.enableBodyScroll(menuContainer);
+
+      menuBtn.classList.remove('menu-btn--close');
+      menuBtnText.textContent = 'Открыть меню';
     }
   };
 
@@ -340,9 +356,6 @@
       document.body.classList.remove('page-body--no-scroll');
     }
   };
-
-
-  menu.classList.add('main-menu--js');
 
 
   menuBtn.addEventListener('click', onMenuBtnClick);
@@ -369,11 +382,23 @@
     }
   };
 
+  var adjustPageContentTopPadding = function () {
+    document.body.style.paddingTop = header.offsetHeight + 'px';
+  };
 
-  adjustHeaderAppearance();
+  var onWindowResize = function () {
+    adjustPageContentTopPadding();
+  };
+
+
   header.classList.add('page-header--js');
 
+  adjustHeaderAppearance();
+  adjustPageContentTopPadding();
+
+
   document.addEventListener('scroll', adjustHeaderAppearance);
+  window.addEventListener('resize', onWindowResize);
 })();
 
 'use strict';
@@ -507,7 +532,7 @@
 'use strict';
 
 (function () {
-  var hideClass = 'js_hide'
+  var hideClass = 'js_hide';
   var list = document.querySelector('.js_short_list');
   var button = document.querySelector('.js_short_list + .js_show_all');
 
@@ -519,14 +544,14 @@
       if (index > 4) {
         item.classList.add(hideClass);
       }
-    })
+    });
 
     button.addEventListener('click', function () {
       items.forEach(function (item) {
         item.classList.remove(hideClass);
         button.classList.add(hideClass);
-      })
-    })
+      });
+    });
   }
 })();
 
@@ -543,6 +568,8 @@
 
 
   var menuBtn = menu.querySelector('.user-menu__dropdown-btn');
+  var menuBtnText = menuBtn.querySelector('.user-menu__dropdown-btn-text');
+
   var overlay = menu.querySelector('.user-menu__overlay');
   var list = menu.querySelector('.user-menu__list');
 
@@ -551,16 +578,25 @@
     menu.classList.toggle('user-menu--open');
     overlay.classList.toggle('user-menu__overlay--shown');
 
-    list.style.height = (list.offsetHeight === 0) ? list.scrollHeight + 'px' : '';
+    list.style.height =
+      (list.offsetHeight === 0) ?
+        list.scrollHeight + 'px'
+        :
+        '';
+
+    menuBtnText.textContent =
+      menu.classList.contains('user-menu--open') ?
+        'Закрыть меню'
+        :
+        'Открыть меню';
   };
 
   var closeDropdown = function () {
     menu.classList.remove('user-menu--open');
     overlay.classList.remove('user-menu__overlay--shown');
+
+    menuBtnText.textContent = 'Открыть меню';
   };
-
-
-  menu.classList.add('user-menu--js');
 
 
   menuBtn.addEventListener('click', onMenuBtnClick);

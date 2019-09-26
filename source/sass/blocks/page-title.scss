@@ -12,4 +12,14 @@
   @media (max-width: $mobile-max-width) {
     @include font-h3;
   }
+
+  &--news {
+    @media (max-width: $tablet-width - 1) {
+      @include font-h1;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      @include font-h2;
+    }
+  }
 }
