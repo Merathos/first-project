@@ -28,8 +28,11 @@
   var button = document.querySelector('.js_cookie .js_btn');
 
   if (cookieBlock && button) {
+    document.body.classList.add('page-body--cookie');
+
     button.addEventListener('click', function () {
       cookieBlock.classList.add(hideClass);
+      document.body.classList.remove('page-body--cookie');
     });
   }
 })();
@@ -95,7 +98,7 @@
           }
         }
       }
-      document.getElementById('project_select-active').value = value;
+      selectItem.querySelector('input[type="hidden"]').value = value;
       selectItem.querySelector('.form-select__title-text').textContent = value;
       if (dropdown.classList.contains('form-select__group--active')) {
         dropdown.classList.remove('form-select__group--active');
@@ -177,9 +180,10 @@
   var topBar = header.querySelector('.page-header__bar');
 
   var menu = header.querySelector('.main-menu');
-  var menuBtn = header.querySelector('.menu-btn');
+  var menuContainer = menu.querySelector('.container');
 
-  var scrollPosition = 0;
+  var menuBtn = header.querySelector('.menu-btn');
+  var menuBtnText = menuBtn.querySelector('.menu-btn__text');
 
 
   var adjustMenuHeight = function () {
@@ -189,16 +193,19 @@
 
   var onMenuBtnClick = function () {
     header.classList.toggle('page-header--open-menu');
-    menuBtn.classList.toggle('menu-btn--close');
 
     adjustMenuHeight();
 
     if (header.classList.contains('page-header--open-menu')) {
-      scrollPosition = window.pageYOffset;
-      document.body.classList.add('page-body--no-scroll');
+      bodyScrollLock.disableBodyScroll(menuContainer);
+
+      menuBtn.classList.add('menu-btn--close');
+      menuBtnText.textContent = 'Закрыть меню';
     } else {
-      document.body.classList.remove('page-body--no-scroll');
-      window.scrollTo(0, scrollPosition);
+      bodyScrollLock.enableBodyScroll(menuContainer);
+
+      menuBtn.classList.remove('menu-btn--close');
+      menuBtnText.textContent = 'Открыть меню';
     }
   };
 
@@ -211,9 +218,6 @@
       document.body.classList.remove('page-body--no-scroll');
     }
   };
-
-
-  menu.classList.add('main-menu--js');
 
 
   menuBtn.addEventListener('click', onMenuBtnClick);
@@ -240,11 +244,26 @@
     }
   };
 
+  var adjustPageContentTopPadding = function () {
+    document.body.style.paddingTop = header.offsetHeight + 'px';
+  };
 
-  adjustHeaderAppearance();
+  var onWindowResize = function () {
+    header.classList.remove('page-header--above-content');
+
+    adjustPageContentTopPadding();
+    adjustHeaderAppearance();
+  };
+
+
   header.classList.add('page-header--js');
 
+  adjustPageContentTopPadding();
+  adjustHeaderAppearance();
+
+
   document.addEventListener('scroll', adjustHeaderAppearance);
+  window.addEventListener('resize', onWindowResize);
 })();
 
 'use strict';
@@ -257,7 +276,7 @@
     return;
   }
 
-  var ellipsis = ellipsis({
+  var ellipsis = Ellipsis({
     lines: 3
   });
 
@@ -309,6 +328,83 @@
 
 
 (function () {
+  var subscribeLink = document.querySelector('.social__link--subscribe, .social__link--unsubscribe');
+
+  if (!subscribeLink) {
+    return;
+  }
+
+
+  var onSubscribeLinkClick = function (evt) {
+    evt.preventDefault();
+
+    if (subscribeLink.classList.contains('social__link--subscribe')) {
+      subscribeLink.textContent = 'Отписаться';
+
+      subscribeLink.classList.remove('social__link--subscribe');
+      subscribeLink.classList.add('social__link--unsubscribe');
+    } else {
+      subscribeLink.textContent = 'Подписаться';
+
+      subscribeLink.classList.add('social__link--subscribe');
+      subscribeLink.classList.remove('social__link--unsubscribe');
+    }
+  };
+
+
+  subscribeLink.addEventListener('click', onSubscribeLinkClick);
+})();
+
+'use strict';
+
+
+(function () {
+  var upBtn = document.querySelector('.page-body__up-btn');
+  var container = document.querySelector('footer .container');
+
+  if (!upBtn) {
+    return;
+  }
+
+
+  var onUpBtnClick = function (evt) {
+    evt.preventDefault();
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+
+  if (container) {
+    var adjustUpBtnPosition = function () {
+      if (container.getBoundingClientRect().right + upBtn.offsetWidth < document.documentElement.clientWidth) {
+        upBtn.style.left = container.getBoundingClientRect().right - parseInt(getComputedStyle(container).paddingRight, 10) + 16 + 'px';
+        upBtn.style.right = '';
+      } else {
+        upBtn.style.left = '';
+        upBtn.style.right = '16px';
+      }
+    };
+
+    var onWindowResize = function () {
+      adjustUpBtnPosition();
+    };
+
+    adjustUpBtnPosition();
+
+    window.addEventListener('resize', onWindowResize);
+  }
+
+
+  upBtn.addEventListener('click', onUpBtnClick);
+})();
+
+'use strict';
+
+
+(function () {
   var menu = document.querySelector('.user-menu');
 
 
@@ -318,6 +414,8 @@
 
 
   var menuBtn = menu.querySelector('.user-menu__dropdown-btn');
+  var menuBtnText = menuBtn.querySelector('.user-menu__dropdown-btn-text');
+
   var overlay = menu.querySelector('.user-menu__overlay');
   var list = menu.querySelector('.user-menu__list');
 
@@ -326,16 +424,25 @@
     menu.classList.toggle('user-menu--open');
     overlay.classList.toggle('user-menu__overlay--shown');
 
-    list.style.height = (list.offsetHeight === 0) ? list.scrollHeight + 'px' : '';
+    list.style.height =
+      (list.offsetHeight === 0) ?
+        list.scrollHeight + 'px'
+        :
+        '';
+
+    menuBtnText.textContent =
+      menu.classList.contains('user-menu--open') ?
+        'Закрыть меню'
+        :
+        'Открыть меню';
   };
 
   var closeDropdown = function () {
     menu.classList.remove('user-menu--open');
     overlay.classList.remove('user-menu__overlay--shown');
+
+    menuBtnText.textContent = 'Открыть меню';
   };
-
-
-  menu.classList.add('user-menu--js');
 
 
   menuBtn.addEventListener('click', onMenuBtnClick);

@@ -13,51 +13,6 @@
   }
 }
 
-.discussion__head {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.discussion__title {
-  position: relative;
-
-  margin: 0;
-  padding: 0;
-  padding-left: 52px;
-
-  color: $dark-text;
-
-  @include font-h1();
-
-  @media (max-width: $tablet-width - 1) {
-    padding-left: 46px;
-
-    @include font-h2();
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 8px;
-    left: 0;
-
-    width: 32px;
-    height: 32px;
-
-    background-image: url("../img/icon-discussion.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-
-    @media (max-width: $tablet-width - 1) {
-      top: 5px;
-
-      width: 30px;
-      height: 30px;
-    }
-  }
-}
-
 .discussion__archive-link {
   @media (max-width: $tablet-width - 1) {
     display: none;
@@ -252,5 +207,34 @@
   @media (max-width: $tablet-width - 1) {
     display: block;
     margin-top: 24px;
+  }
+}
+
+.discussion--page {
+  padding: 0;
+
+  & .discussion__list {
+    padding-top: 5px;
+    padding-bottom: 0;
+
+    @media (max-width: $mobile-max-width) {
+      margin-top: 10px;
+    }
+  }
+
+  & .discussion__button {
+    width: 360px;
+    margin-top: 24px;
+    margin-bottom: 40px;
+
+    @media (max-width: $tablet-width - 1) {
+      margin-top: 48px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      width: 100%;
+      margin-top: 40px;
+      margin-bottom: 32px;
+    }
   }
 }

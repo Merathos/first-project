@@ -41,28 +41,32 @@
       </a>
 
       <button class="page-header__menu-btn menu-btn" type="button">
-        <span class="visually-hidden">Открыть меню</span>
+        <span class="menu-btn__text visually-hidden">Открыть меню</span>
         <span class="menu-btn__icon"></span>
       </button>
     </div>
   </div>
 
   <div class="page-header__main-menu main-menu">
-    <div class="page-header__container page-header__container--menu main-menu__container container">
+    <div class="container">
       <div class="page-header__location-switcher location-switcher">
         <p class="visually-hidden">Выберите регион голосования:</p>
 
         <form action="#" method="post">
           <div class="location-switcher__btn form-radio">
-            <input id="location-residence" class="visually-hidden" type="radio" name="location" value="residence" checked="">
-            <label for="location-residence">Адрес проживания</label>
-            <span class="page-header__location-address location-switcher__address">Городской округ рабочий поселок Новогуровский</span>
+            <input id="location-residence" type="radio" name="location" value="residence" checked="">
+            <label for="location-residence">
+              Адрес проживания
+              <span class="page-header__location-address location-switcher__address">Городской округ рабочий поселок Новогуровский</span>
+            </label>
           </div>
 
           <div class="location-switcher__btn form-radio">
-            <input id="location-registration" class="visually-hidden" type="radio" name="location" value="registration">
-            <label for="location-registration">Адрес регистрации</label>
-            <span class="page-header__location-address location-switcher__address">Краснобродский городской округ</span>
+            <input id="location-registration" type="radio" name="location" value="registration">
+            <label for="location-registration">
+              Адрес регистрации
+              <span class="page-header__location-address location-switcher__address">Краснобродский городской округ</span>
+            </label>
           </div>
 
           <button class="location-switcher__show-btn button button--blue" type="submit">Показать</button>
@@ -76,11 +80,11 @@
         Версия для слабовидящих
       </a>
 
-      <div class="page-header__user-menu user-menu">
+      <nav class="page-header__user-menu user-menu">
         <div class="user-menu__overlay"></div>
 
         <button class="user-menu__dropdown-btn" type="button">
-          <span class="visually-hidden">Открыть меню</span>
+          <span class="user-menu__dropdown-btn-text visually-hidden">Открыть меню</span>
 
           <svg class="user-menu__user-icon" width="16" height="16">
             <use xlink:href="img/sprite.svg#icon-user"></use>
@@ -106,15 +110,15 @@
             <a class="page-header__link user-menu__link" href="#">Выход</a>
           </li>
         </ul>
-      </div>
+      </nav>
     </div>
   </div>
 </header>
 
 
-    <main class="projects page-content page-content--with-back-btn">
+    <main class="projects page-content">
       <div class="container">
-        <a class="page-content__back-btn" href="#">
+        <a class="page-content__back-btn" href="main-page.html">
           <svg width="8" height="14">
             <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
           </svg>
@@ -213,12 +217,12 @@
               <div class="projects__filter-main filter__main">
                 <div class="filter__main-container">
                   <div class="filter__item form-radio">
-                    <input class="visually-hidden" type="radio" name="filter-location" id="filter-location-regional" value="filter-location-regional" checked="">
+                    <input type="radio" name="filter-location" id="filter-location-regional" value="filter-location-regional" checked="">
                     <label for="filter-location-regional">Региональные</label>
                   </div>
 
                   <div class="filter__item form-radio">
-                    <input class="visually-hidden" type="radio" name="filter-location" id="filter-location-local" value="filter-location-local">
+                    <input type="radio" name="filter-location" id="filter-location-local" value="filter-location-local">
                     <label for="filter-location-local">Местные</label>
                   </div>
 
@@ -246,7 +250,7 @@
                   </div>
 
                   <div class="filter__item filter__item--separated form-checkbox">
-                    <input class="visually-hidden" type="checkbox" name="favorite-only" id="favorite-only" value="checkbox">
+                    <input type="checkbox" name="favorite-only" id="favorite-only" value="checkbox">
                     <label for="favorite-only">Только избранные</label>
                   </div>
                 </div>
@@ -601,6 +605,13 @@
     </div>
   </div>
 </footer>
+
+    <button class="page-body__up-btn">
+  <svg width="20" height="12" viewbox="0 0 33 12">
+    <use xlink:href="img/sprite.svg#icon-arrow"></use>
+  </svg>
+  <span class="visually-hidden">Наверх</span>
+</button>
 
 
     <script src="js/libs.js"></script>

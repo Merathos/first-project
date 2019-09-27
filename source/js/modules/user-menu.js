@@ -11,6 +11,8 @@
 
 
   var menuBtn = menu.querySelector('.user-menu__dropdown-btn');
+  var menuBtnText = menuBtn.querySelector('.user-menu__dropdown-btn-text');
+
   var overlay = menu.querySelector('.user-menu__overlay');
   var list = menu.querySelector('.user-menu__list');
 
@@ -19,16 +21,25 @@
     menu.classList.toggle('user-menu--open');
     overlay.classList.toggle('user-menu__overlay--shown');
 
-    list.style.height = (list.offsetHeight === 0) ? list.scrollHeight + 'px' : '';
+    list.style.height =
+      (list.offsetHeight === 0) ?
+        list.scrollHeight + 'px'
+        :
+        '';
+
+    menuBtnText.textContent =
+      menu.classList.contains('user-menu--open') ?
+        'Закрыть меню'
+        :
+        'Открыть меню';
   };
 
   var closeDropdown = function () {
     menu.classList.remove('user-menu--open');
     overlay.classList.remove('user-menu__overlay--shown');
+
+    menuBtnText.textContent = 'Открыть меню';
   };
-
-
-  menu.classList.add('user-menu--js');
 
 
   menuBtn.addEventListener('click', onMenuBtnClick);

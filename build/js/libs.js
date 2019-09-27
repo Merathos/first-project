@@ -1,3 +1,265 @@
+(function (global, factory) {
+  if (typeof define === "function" && define.amd) {
+    define(['exports'], factory);
+  } else if (typeof exports !== "undefined") {
+    factory(exports);
+  } else {
+    var mod = {
+      exports: {}
+    };
+    factory(mod.exports);
+    global.bodyScrollLock = mod.exports;
+  }
+})(this, function (exports) {
+  'use strict';
+
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  function _toConsumableArray(arr) {
+    if (Array.isArray(arr)) {
+      for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {
+        arr2[i] = arr[i];
+      }
+
+      return arr2;
+    } else {
+      return Array.from(arr);
+    }
+  }
+
+  // Older browsers don't support event options, feature detect it.
+
+  // Adopted and modified solution from Bohdan Didukh (2017)
+  // https://stackoverflow.com/questions/41594997/ios-10-safari-prevent-scrolling-behind-a-fixed-overlay-and-maintain-scroll-posi
+
+  var hasPassiveEvents = false;
+  if (typeof window !== 'undefined') {
+    var passiveTestOptions = {
+      get passive() {
+        hasPassiveEvents = true;
+        return undefined;
+      }
+    };
+    window.addEventListener('testPassive', null, passiveTestOptions);
+    window.removeEventListener('testPassive', null, passiveTestOptions);
+  }
+
+  var isIosDevice = typeof window !== 'undefined' && window.navigator && window.navigator.platform && /iP(ad|hone|od)/.test(window.navigator.platform);
+
+
+  var locks = [];
+  var documentListenerAdded = false;
+  var initialClientY = -1;
+  var previousBodyOverflowSetting = void 0;
+  var previousBodyPaddingRight = void 0;
+
+  // returns true if `el` should be allowed to receive touchmove events.
+  var allowTouchMove = function allowTouchMove(el) {
+    return locks.some(function (lock) {
+      if (lock.options.allowTouchMove && lock.options.allowTouchMove(el)) {
+        return true;
+      }
+
+      return false;
+    });
+  };
+
+  var preventDefault = function preventDefault(rawEvent) {
+    var e = rawEvent || window.event;
+
+    // For the case whereby consumers adds a touchmove event listener to document.
+    // Recall that we do document.addEventListener('touchmove', preventDefault, { passive: false })
+    // in disableBodyScroll - so if we provide this opportunity to allowTouchMove, then
+    // the touchmove event on document will break.
+    if (allowTouchMove(e.target)) {
+      return true;
+    }
+
+    // Do not prevent if the event has more than one touch (usually meaning this is a multi touch gesture like pinch to zoom).
+    if (e.touches.length > 1) return true;
+
+    if (e.preventDefault) e.preventDefault();
+
+    return false;
+  };
+
+  var setOverflowHidden = function setOverflowHidden(options) {
+    // Setting overflow on body/documentElement synchronously in Desktop Safari slows down
+    // the responsiveness for some reason. Setting within a setTimeout fixes this.
+    setTimeout(function () {
+      // If previousBodyPaddingRight is already set, don't set it again.
+      if (previousBodyPaddingRight === undefined) {
+        var _reserveScrollBarGap = !!options && options.reserveScrollBarGap === true;
+        var scrollBarGap = window.innerWidth - document.documentElement.clientWidth;
+
+        if (_reserveScrollBarGap && scrollBarGap > 0) {
+          previousBodyPaddingRight = document.body.style.paddingRight;
+          document.body.style.paddingRight = scrollBarGap + 'px';
+        }
+      }
+
+      // If previousBodyOverflowSetting is already set, don't set it again.
+      if (previousBodyOverflowSetting === undefined) {
+        previousBodyOverflowSetting = document.body.style.overflow;
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  };
+
+  var restoreOverflowSetting = function restoreOverflowSetting() {
+    // Setting overflow on body/documentElement synchronously in Desktop Safari slows down
+    // the responsiveness for some reason. Setting within a setTimeout fixes this.
+    setTimeout(function () {
+      if (previousBodyPaddingRight !== undefined) {
+        document.body.style.paddingRight = previousBodyPaddingRight;
+
+        // Restore previousBodyPaddingRight to undefined so setOverflowHidden knows it
+        // can be set again.
+        previousBodyPaddingRight = undefined;
+      }
+
+      if (previousBodyOverflowSetting !== undefined) {
+        document.body.style.overflow = previousBodyOverflowSetting;
+
+        // Restore previousBodyOverflowSetting to undefined
+        // so setOverflowHidden knows it can be set again.
+        previousBodyOverflowSetting = undefined;
+      }
+    });
+  };
+
+  // https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight#Problems_and_solutions
+  var isTargetElementTotallyScrolled = function isTargetElementTotallyScrolled(targetElement) {
+    return targetElement ? targetElement.scrollHeight - targetElement.scrollTop <= targetElement.clientHeight : false;
+  };
+
+  var handleScroll = function handleScroll(event, targetElement) {
+    var clientY = event.targetTouches[0].clientY - initialClientY;
+
+    if (allowTouchMove(event.target)) {
+      return false;
+    }
+
+    if (targetElement && targetElement.scrollTop === 0 && clientY > 0) {
+      // element is at the top of its scroll.
+      return preventDefault(event);
+    }
+
+    if (isTargetElementTotallyScrolled(targetElement) && clientY < 0) {
+      // element is at the top of its scroll.
+      return preventDefault(event);
+    }
+
+    event.stopPropagation();
+    return true;
+  };
+
+  var disableBodyScroll = exports.disableBodyScroll = function disableBodyScroll(targetElement, options) {
+    if (isIosDevice) {
+      // targetElement must be provided, and disableBodyScroll must not have been
+      // called on this targetElement before.
+      if (!targetElement) {
+        // eslint-disable-next-line no-console
+        console.error('disableBodyScroll unsuccessful - targetElement must be provided when calling disableBodyScroll on IOS devices.');
+        return;
+      }
+
+      if (targetElement && !locks.some(function (lock) {
+        return lock.targetElement === targetElement;
+      })) {
+        var lock = {
+          targetElement: targetElement,
+          options: options || {}
+        };
+
+        locks = [].concat(_toConsumableArray(locks), [lock]);
+
+        targetElement.ontouchstart = function (event) {
+          if (event.targetTouches.length === 1) {
+            // detect single touch.
+            initialClientY = event.targetTouches[0].clientY;
+          }
+        };
+        targetElement.ontouchmove = function (event) {
+          if (event.targetTouches.length === 1) {
+            // detect single touch.
+            handleScroll(event, targetElement);
+          }
+        };
+
+        if (!documentListenerAdded) {
+          document.addEventListener('touchmove', preventDefault, hasPassiveEvents ? { passive: false } : undefined);
+          documentListenerAdded = true;
+        }
+      }
+    } else {
+      setOverflowHidden(options);
+      var _lock = {
+        targetElement: targetElement,
+        options: options || {}
+      };
+
+      locks = [].concat(_toConsumableArray(locks), [_lock]);
+    }
+  };
+
+  var clearAllBodyScrollLocks = exports.clearAllBodyScrollLocks = function clearAllBodyScrollLocks() {
+    if (isIosDevice) {
+      // Clear all locks ontouchstart/ontouchmove handlers, and the references.
+      locks.forEach(function (lock) {
+        lock.targetElement.ontouchstart = null;
+        lock.targetElement.ontouchmove = null;
+      });
+
+      if (documentListenerAdded) {
+        document.removeEventListener('touchmove', preventDefault, hasPassiveEvents ? { passive: false } : undefined);
+        documentListenerAdded = false;
+      }
+
+      locks = [];
+
+      // Reset initial clientY.
+      initialClientY = -1;
+    } else {
+      restoreOverflowSetting();
+      locks = [];
+    }
+  };
+
+  var enableBodyScroll = exports.enableBodyScroll = function enableBodyScroll(targetElement) {
+    if (isIosDevice) {
+      if (!targetElement) {
+        // eslint-disable-next-line no-console
+        console.error('enableBodyScroll unsuccessful - targetElement must be provided when calling enableBodyScroll on IOS devices.');
+        return;
+      }
+
+      targetElement.ontouchstart = null;
+      targetElement.ontouchmove = null;
+
+      locks = locks.filter(function (lock) {
+        return lock.targetElement !== targetElement;
+      });
+
+      if (documentListenerAdded && locks.length === 0) {
+        document.removeEventListener('touchmove', preventDefault, hasPassiveEvents ? { passive: false } : undefined);
+
+        documentListenerAdded = false;
+      }
+    } else {
+      locks = locks.filter(function (lock) {
+        return lock.targetElement !== targetElement;
+      });
+      if (!locks.length) {
+        restoreOverflowSetting();
+      }
+    }
+  };
+});
+
+
 (function () {
 
   'use strict';
@@ -670,3 +932,432 @@ var o=function(t,n){return(o=Object.setPrototypeOf||{__proto__:[]}instanceof Arr
  * @see https://github.com/Microsoft/TypeScript/issues/2672
  */
 var mt=function(t){function n(){return null!==t&&t.apply(this,arguments)||this}return function(t,n){function e(){this.constructor=t}o(t,n),t.prototype=null===n?Object.create(n):(e.prototype=n.prototype,new e)}(n,t),n.init=function(t,n){if(!t||1!==t.nodeType)throw new TypeError("expect element to be DOM Element, but got "+t);return yt(),lt.has(t)?lt.get(t):new pt(t,n)},n.initAll=function(t){return Array.from(document.querySelectorAll("[data-scrollbar]"),(function(e){return n.init(e,t)}))},n.has=function(t){return lt.has(t)},n.get=function(t){return lt.get(t)},n.getAll=function(){return Array.from(lt.values())},n.destroy=function(t){var n=lt.get(t);n&&n.destroy()},n.destroyAll=function(){lt.forEach((function(t){t.destroy()}))},n.use=function(){for(var t=[],n=0;n<arguments.length;n++)t[n]=arguments[n];return function(){for(var t=[],n=0;n<arguments.length;n++)t[n]=arguments[n];t.forEach((function(t){var n=t.pluginName;if(!n)throw new TypeError("plugin name is required");nt.order.add(n),nt.constructors[n]=t}))}.apply(void 0,t)},n.attachStyle=function(){return yt()},n.detachStyle=function(){return function(){if(vt&&"undefined"!=typeof window){var t=document.getElementById(dt);t&&t.parentNode&&(t.parentNode.removeChild(t),vt=!1)}}()},n.version="8.4.1",n.ScrollbarPlugin=tt,n}(pt);n.default=mt}]).default}));
+'use strict';
+
+// polyfill
+function polyfill() {
+  // aliases
+  var w = window;
+  var d = document;
+
+  // return if scroll behavior is supported and polyfill is not forced
+  if (
+    'scrollBehavior' in d.documentElement.style &&
+    w.__forceSmoothScrollPolyfill__ !== true
+  ) {
+    return;
+  }
+
+  // globals
+  var Element = w.HTMLElement || w.Element;
+  var SCROLL_TIME = 468;
+
+  // object gathering original scroll methods
+  var original = {
+    scroll: w.scroll || w.scrollTo,
+    scrollBy: w.scrollBy,
+    elementScroll: Element.prototype.scroll || scrollElement,
+    scrollIntoView: Element.prototype.scrollIntoView
+  };
+
+  // define timing method
+  var now =
+    w.performance && w.performance.now
+      ? w.performance.now.bind(w.performance)
+      : Date.now;
+
+  /**
+   * indicates if a the current browser is made by Microsoft
+   * @method isMicrosoftBrowser
+   * @param {String} userAgent
+   * @returns {Boolean}
+   */
+  function isMicrosoftBrowser(userAgent) {
+    var userAgentPatterns = ['MSIE ', 'Trident/', 'Edge/'];
+
+    return new RegExp(userAgentPatterns.join('|')).test(userAgent);
+  }
+
+  /*
+   * IE has rounding bug rounding down clientHeight and clientWidth and
+   * rounding up scrollHeight and scrollWidth causing false positives
+   * on hasScrollableSpace
+   */
+  var ROUNDING_TOLERANCE = isMicrosoftBrowser(w.navigator.userAgent) ? 1 : 0;
+
+  /**
+   * changes scroll position inside an element
+   * @method scrollElement
+   * @param {Number} x
+   * @param {Number} y
+   * @returns {undefined}
+   */
+  function scrollElement(x, y) {
+    this.scrollLeft = x;
+    this.scrollTop = y;
+  }
+
+  /**
+   * returns result of applying ease math function to a number
+   * @method ease
+   * @param {Number} k
+   * @returns {Number}
+   */
+  function ease(k) {
+    return 0.5 * (1 - Math.cos(Math.PI * k));
+  }
+
+  /**
+   * indicates if a smooth behavior should be applied
+   * @method shouldBailOut
+   * @param {Number|Object} firstArg
+   * @returns {Boolean}
+   */
+  function shouldBailOut(firstArg) {
+    if (
+      firstArg === null ||
+      typeof firstArg !== 'object' ||
+      firstArg.behavior === undefined ||
+      firstArg.behavior === 'auto' ||
+      firstArg.behavior === 'instant'
+    ) {
+      // first argument is not an object/null
+      // or behavior is auto, instant or undefined
+      return true;
+    }
+
+    if (typeof firstArg === 'object' && firstArg.behavior === 'smooth') {
+      // first argument is an object and behavior is smooth
+      return false;
+    }
+
+    // throw error when behavior is not supported
+    throw new TypeError(
+      'behavior member of ScrollOptions ' +
+        firstArg.behavior +
+        ' is not a valid value for enumeration ScrollBehavior.'
+    );
+  }
+
+  /**
+   * indicates if an element has scrollable space in the provided axis
+   * @method hasScrollableSpace
+   * @param {Node} el
+   * @param {String} axis
+   * @returns {Boolean}
+   */
+  function hasScrollableSpace(el, axis) {
+    if (axis === 'Y') {
+      return el.clientHeight + ROUNDING_TOLERANCE < el.scrollHeight;
+    }
+
+    if (axis === 'X') {
+      return el.clientWidth + ROUNDING_TOLERANCE < el.scrollWidth;
+    }
+  }
+
+  /**
+   * indicates if an element has a scrollable overflow property in the axis
+   * @method canOverflow
+   * @param {Node} el
+   * @param {String} axis
+   * @returns {Boolean}
+   */
+  function canOverflow(el, axis) {
+    var overflowValue = w.getComputedStyle(el, null)['overflow' + axis];
+
+    return overflowValue === 'auto' || overflowValue === 'scroll';
+  }
+
+  /**
+   * indicates if an element can be scrolled in either axis
+   * @method isScrollable
+   * @param {Node} el
+   * @param {String} axis
+   * @returns {Boolean}
+   */
+  function isScrollable(el) {
+    var isScrollableY = hasScrollableSpace(el, 'Y') && canOverflow(el, 'Y');
+    var isScrollableX = hasScrollableSpace(el, 'X') && canOverflow(el, 'X');
+
+    return isScrollableY || isScrollableX;
+  }
+
+  /**
+   * finds scrollable parent of an element
+   * @method findScrollableParent
+   * @param {Node} el
+   * @returns {Node} el
+   */
+  function findScrollableParent(el) {
+    while (el !== d.body && isScrollable(el) === false) {
+      el = el.parentNode || el.host;
+    }
+
+    return el;
+  }
+
+  /**
+   * self invoked function that, given a context, steps through scrolling
+   * @method step
+   * @param {Object} context
+   * @returns {undefined}
+   */
+  function step(context) {
+    var time = now();
+    var value;
+    var currentX;
+    var currentY;
+    var elapsed = (time - context.startTime) / SCROLL_TIME;
+
+    // avoid elapsed times higher than one
+    elapsed = elapsed > 1 ? 1 : elapsed;
+
+    // apply easing to elapsed time
+    value = ease(elapsed);
+
+    currentX = context.startX + (context.x - context.startX) * value;
+    currentY = context.startY + (context.y - context.startY) * value;
+
+    context.method.call(context.scrollable, currentX, currentY);
+
+    // scroll more if we have not reached our destination
+    if (currentX !== context.x || currentY !== context.y) {
+      w.requestAnimationFrame(step.bind(w, context));
+    }
+  }
+
+  /**
+   * scrolls window or element with a smooth behavior
+   * @method smoothScroll
+   * @param {Object|Node} el
+   * @param {Number} x
+   * @param {Number} y
+   * @returns {undefined}
+   */
+  function smoothScroll(el, x, y) {
+    var scrollable;
+    var startX;
+    var startY;
+    var method;
+    var startTime = now();
+
+    // define scroll context
+    if (el === d.body) {
+      scrollable = w;
+      startX = w.scrollX || w.pageXOffset;
+      startY = w.scrollY || w.pageYOffset;
+      method = original.scroll;
+    } else {
+      scrollable = el;
+      startX = el.scrollLeft;
+      startY = el.scrollTop;
+      method = scrollElement;
+    }
+
+    // scroll looping over a frame
+    step({
+      scrollable: scrollable,
+      method: method,
+      startTime: startTime,
+      startX: startX,
+      startY: startY,
+      x: x,
+      y: y
+    });
+  }
+
+  // ORIGINAL METHODS OVERRIDES
+  // w.scroll and w.scrollTo
+  w.scroll = w.scrollTo = function() {
+    // avoid action when no arguments are passed
+    if (arguments[0] === undefined) {
+      return;
+    }
+
+    // avoid smooth behavior if not required
+    if (shouldBailOut(arguments[0]) === true) {
+      original.scroll.call(
+        w,
+        arguments[0].left !== undefined
+          ? arguments[0].left
+          : typeof arguments[0] !== 'object'
+            ? arguments[0]
+            : w.scrollX || w.pageXOffset,
+        // use top prop, second argument if present or fallback to scrollY
+        arguments[0].top !== undefined
+          ? arguments[0].top
+          : arguments[1] !== undefined
+            ? arguments[1]
+            : w.scrollY || w.pageYOffset
+      );
+
+      return;
+    }
+
+    // LET THE SMOOTHNESS BEGIN!
+    smoothScroll.call(
+      w,
+      d.body,
+      arguments[0].left !== undefined
+        ? ~~arguments[0].left
+        : w.scrollX || w.pageXOffset,
+      arguments[0].top !== undefined
+        ? ~~arguments[0].top
+        : w.scrollY || w.pageYOffset
+    );
+  };
+
+  // w.scrollBy
+  w.scrollBy = function() {
+    // avoid action when no arguments are passed
+    if (arguments[0] === undefined) {
+      return;
+    }
+
+    // avoid smooth behavior if not required
+    if (shouldBailOut(arguments[0])) {
+      original.scrollBy.call(
+        w,
+        arguments[0].left !== undefined
+          ? arguments[0].left
+          : typeof arguments[0] !== 'object' ? arguments[0] : 0,
+        arguments[0].top !== undefined
+          ? arguments[0].top
+          : arguments[1] !== undefined ? arguments[1] : 0
+      );
+
+      return;
+    }
+
+    // LET THE SMOOTHNESS BEGIN!
+    smoothScroll.call(
+      w,
+      d.body,
+      ~~arguments[0].left + (w.scrollX || w.pageXOffset),
+      ~~arguments[0].top + (w.scrollY || w.pageYOffset)
+    );
+  };
+
+  // Element.prototype.scroll and Element.prototype.scrollTo
+  Element.prototype.scroll = Element.prototype.scrollTo = function() {
+    // avoid action when no arguments are passed
+    if (arguments[0] === undefined) {
+      return;
+    }
+
+    // avoid smooth behavior if not required
+    if (shouldBailOut(arguments[0]) === true) {
+      // if one number is passed, throw error to match Firefox implementation
+      if (typeof arguments[0] === 'number' && arguments[1] === undefined) {
+        throw new SyntaxError('Value could not be converted');
+      }
+
+      original.elementScroll.call(
+        this,
+        // use left prop, first number argument or fallback to scrollLeft
+        arguments[0].left !== undefined
+          ? ~~arguments[0].left
+          : typeof arguments[0] !== 'object' ? ~~arguments[0] : this.scrollLeft,
+        // use top prop, second argument or fallback to scrollTop
+        arguments[0].top !== undefined
+          ? ~~arguments[0].top
+          : arguments[1] !== undefined ? ~~arguments[1] : this.scrollTop
+      );
+
+      return;
+    }
+
+    var left = arguments[0].left;
+    var top = arguments[0].top;
+
+    // LET THE SMOOTHNESS BEGIN!
+    smoothScroll.call(
+      this,
+      this,
+      typeof left === 'undefined' ? this.scrollLeft : ~~left,
+      typeof top === 'undefined' ? this.scrollTop : ~~top
+    );
+  };
+
+  // Element.prototype.scrollBy
+  Element.prototype.scrollBy = function() {
+    // avoid action when no arguments are passed
+    if (arguments[0] === undefined) {
+      return;
+    }
+
+    // avoid smooth behavior if not required
+    if (shouldBailOut(arguments[0]) === true) {
+      original.elementScroll.call(
+        this,
+        arguments[0].left !== undefined
+          ? ~~arguments[0].left + this.scrollLeft
+          : ~~arguments[0] + this.scrollLeft,
+        arguments[0].top !== undefined
+          ? ~~arguments[0].top + this.scrollTop
+          : ~~arguments[1] + this.scrollTop
+      );
+
+      return;
+    }
+
+    this.scroll({
+      left: ~~arguments[0].left + this.scrollLeft,
+      top: ~~arguments[0].top + this.scrollTop,
+      behavior: arguments[0].behavior
+    });
+  };
+
+  // Element.prototype.scrollIntoView
+  Element.prototype.scrollIntoView = function() {
+    // avoid smooth behavior if not required
+    if (shouldBailOut(arguments[0]) === true) {
+      original.scrollIntoView.call(
+        this,
+        arguments[0] === undefined ? true : arguments[0]
+      );
+
+      return;
+    }
+
+    // LET THE SMOOTHNESS BEGIN!
+    var scrollableParent = findScrollableParent(this);
+    var parentRects = scrollableParent.getBoundingClientRect();
+    var clientRects = this.getBoundingClientRect();
+
+    if (scrollableParent !== d.body) {
+      // reveal element inside parent
+      smoothScroll.call(
+        this,
+        scrollableParent,
+        scrollableParent.scrollLeft + clientRects.left - parentRects.left,
+        scrollableParent.scrollTop + clientRects.top - parentRects.top
+      );
+
+      // reveal parent in viewport unless is fixed
+      if (w.getComputedStyle(scrollableParent).position !== 'fixed') {
+        w.scrollBy({
+          left: parentRects.left,
+          top: parentRects.top,
+          behavior: 'smooth'
+        });
+      }
+    } else {
+      // reveal element in viewport
+      w.scrollBy({
+        left: clientRects.left,
+        top: clientRects.top,
+        behavior: 'smooth'
+      });
+    }
+  };
+}
+
+if (typeof exports === 'object' && typeof module !== 'undefined') {
+  // commonjs
+  module.exports = { polyfill: polyfill };
+} else {
+  // global
+  polyfill();
+}

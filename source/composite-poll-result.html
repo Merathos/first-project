@@ -5,13 +5,13 @@
   <body class="page-body">
     <include src="source/components/header.html"></include>
 
-    <main class="page-composite-poll">
+    <main class="page-composite-poll page-content">
       <div class="container">
-        <a href="main.html" class="arrow-backward">
-          <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="img/sprite.svg#icon-arrow-big"></use>
+        <a class="page-content__back-btn" href="main-page.html">
+          <svg width="8" height="14">
+            <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
           </svg>
-          <span>Назад</span>
+          Назад
         </a>
       </div>
       <section class="composite-poll">
@@ -355,6 +355,7 @@
     </main>
 
     <include src="source/components/footer.html"></include>
+    <include src="source/components/up-btn.html"></include>
 
     <script src="js/libs.js"></script>
     <script src="js/main.min.js"></script>

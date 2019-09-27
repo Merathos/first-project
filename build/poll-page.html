@@ -41,28 +41,32 @@
       </a>
 
       <button class="page-header__menu-btn menu-btn" type="button">
-        <span class="visually-hidden">Открыть меню</span>
+        <span class="menu-btn__text visually-hidden">Открыть меню</span>
         <span class="menu-btn__icon"></span>
       </button>
     </div>
   </div>
 
   <div class="page-header__main-menu main-menu">
-    <div class="page-header__container page-header__container--menu main-menu__container container">
+    <div class="container">
       <div class="page-header__location-switcher location-switcher">
         <p class="visually-hidden">Выберите регион голосования:</p>
 
         <form action="#" method="post">
           <div class="location-switcher__btn form-radio">
-            <input id="location-residence" class="visually-hidden" type="radio" name="location" value="residence" checked="">
-            <label for="location-residence">Адрес проживания</label>
-            <span class="page-header__location-address location-switcher__address">Городской округ рабочий поселок Новогуровский</span>
+            <input id="location-residence" type="radio" name="location" value="residence" checked="">
+            <label for="location-residence">
+              Адрес проживания
+              <span class="page-header__location-address location-switcher__address">Городской округ рабочий поселок Новогуровский</span>
+            </label>
           </div>
 
           <div class="location-switcher__btn form-radio">
-            <input id="location-registration" class="visually-hidden" type="radio" name="location" value="registration">
-            <label for="location-registration">Адрес регистрации</label>
-            <span class="page-header__location-address location-switcher__address">Краснобродский городской округ</span>
+            <input id="location-registration" type="radio" name="location" value="registration">
+            <label for="location-registration">
+              Адрес регистрации
+              <span class="page-header__location-address location-switcher__address">Краснобродский городской округ</span>
+            </label>
           </div>
 
           <button class="location-switcher__show-btn button button--blue" type="submit">Показать</button>
@@ -76,11 +80,11 @@
         Версия для слабовидящих
       </a>
 
-      <div class="page-header__user-menu user-menu">
+      <nav class="page-header__user-menu user-menu">
         <div class="user-menu__overlay"></div>
 
         <button class="user-menu__dropdown-btn" type="button">
-          <span class="visually-hidden">Открыть меню</span>
+          <span class="user-menu__dropdown-btn-text visually-hidden">Открыть меню</span>
 
           <svg class="user-menu__user-icon" width="16" height="16">
             <use xlink:href="img/sprite.svg#icon-user"></use>
@@ -106,7 +110,7 @@
             <a class="page-header__link user-menu__link" href="#">Выход</a>
           </li>
         </ul>
-      </div>
+      </nav>
     </div>
   </div>
 </header>
@@ -157,7 +161,7 @@
 
 
     <div class="cookie js_cookie">
-  <div class="cookie-wrap">
+  <div class="cookie__wrap container">
     <div class="cookie__main">
       <p class="cookie__title">
         Информируем Вас о том, что сайт обрабатывает персональные данные и использует файлы "cookies"
@@ -166,6 +170,7 @@
         Мы обязуемся обеспечить конфиденциальность полученных от Вас персональных данных для целей, указанных в настоящей Политике обработки персональных данных, а также безопасность при их обработке в соответствии с требованиями Законодательства Российской Федерации. Для подтверждения Вашего согласия на обработку данных на указанных выше условиях нажмите "Согласен"
       </p>
     </div>
+
     <button type="button" class="cookie__button button button--blue js_btn">Согласен</button>
   </div>
 </div>
