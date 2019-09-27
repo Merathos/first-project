@@ -2528,7 +2528,7 @@ template {
           align-items: center;
   padding-top: 16px;
   padding-bottom: 16px; }
-  @media (max-width: 1119px) {
+  @media (max-width: 1199px) {
     .cookie__wrap {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -2548,7 +2548,7 @@ template {
   font-size: 0.8125rem;
   line-height: 1.3;
   color: #707b8c; }
-  @media (max-width: 1119px) {
+  @media (max-width: 1199px) {
     .cookie__text {
       padding-bottom: 10px; } }
 
@@ -2562,7 +2562,7 @@ template {
   padding-left: 20px;
   margin-right: 16px;
   margin-left: 40px; }
-  @media (max-width: 1119px) {
+  @media (max-width: 1199px) {
     .cookie__button {
       margin: 0; } }
 
