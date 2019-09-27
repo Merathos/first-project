@@ -4,3 +4,68 @@
     overflow: hidden;
   }
 }
+
+.page-body__up-btn {
+  position: fixed;
+  z-index: 10;
+  bottom: 16px;
+  right: 60px;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  user-select: none;
+  color: $grey-default;
+  background-color: $white;
+  border: 1px solid $light-grey;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
+  outline: none;
+  cursor: pointer;
+  transition: border-color $style-change-duration, color $style-change-duration;
+
+  &:focus {
+    color: $grey;
+    border-color: $grey;
+  }
+
+  &:focus:not(.focus-visible) {
+    color: $grey-default;
+    border-color: $light-grey;
+  }
+
+  &:hover:not(.focus-visible) {
+    color: $grey;
+    border-color: $grey;
+  }
+
+  svg {
+    pointer-events: none;
+    transform: rotate(-90deg);
+    transition: fill $style-change-duration;
+  }
+}
+
+
+@include desktop-only {
+  .page-body--cookie .page-body__up-btn {
+    bottom: 32px;
+  }
+}
+
+
+@include tablet {
+  .page-body__up-btn {
+    right: 16px;
+    bottom: 16px;
+
+    &:hover:not(.focus-visible) {
+      color: $grey-default;
+      border-color: $light-grey;
+    }
+
+    &:active:not(.focus-visible) {
+      color: $grey;
+      border-color: $grey;
+    }
+  }
+}

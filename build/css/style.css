@@ -441,6 +441,59 @@ template {
   position: fixed;
   overflow: hidden; }
 
+.page-body__up-btn {
+  position: fixed;
+  z-index: 10;
+  bottom: 16px;
+  right: 60px;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #a6abb3;
+  background-color: #ffffff;
+  border: 1px solid #e3e8ee;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
+          box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: border-color 0.2s, color 0.2s;
+  transition: border-color 0.2s, color 0.2s; }
+  .page-body__up-btn:focus {
+    color: #707b8c;
+    border-color: #707b8c; }
+  .page-body__up-btn:focus:not(.focus-visible) {
+    color: #a6abb3;
+    border-color: #e3e8ee; }
+  .page-body__up-btn:hover:not(.focus-visible) {
+    color: #707b8c;
+    border-color: #707b8c; }
+  .page-body__up-btn svg {
+    pointer-events: none;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    -webkit-transition: fill 0.2s;
+    transition: fill 0.2s; }
+
+@media (min-width: 1200px) {
+  .page-body--cookie .page-body__up-btn {
+    bottom: 32px; } }
+
+@media (max-width: 1199px) {
+  .page-body__up-btn {
+    right: 16px;
+    bottom: 16px; }
+    .page-body__up-btn:hover:not(.focus-visible) {
+      color: #a6abb3;
+      border-color: #e3e8ee; }
+    .page-body__up-btn:active:not(.focus-visible) {
+      color: #707b8c;
+      border-color: #707b8c; } }
+
 .page-content {
   padding-top: 40px; }
 
@@ -2455,25 +2508,9 @@ template {
   -webkit-box-shadow: 0 -4px 8px rgba(46, 67, 102, 0.1);
           box-shadow: 0 -4px 8px rgba(46, 67, 102, 0.1); }
   .cookie.js_hide {
-    background-color: transparent;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    pointer-events: none; }
-
-.js_hide .cookie__wrap {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end; }
-
-.js_hide .cookie__main,
-.js_hide .cookie__button {
-  display: none; }
-
-.js_hide .cookie__button-top {
-  pointer-events: auto; }
+    display: none; }
 
 .cookie__wrap {
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2483,27 +2520,25 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 16px 40px; }
+  padding-top: 16px;
+  padding-bottom: 16px; }
   @media (max-width: 1119px) {
     .cookie__wrap {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
-              flex-direction: column;
-      padding: 16px 24px; } }
-  @media (max-width: 767px) {
-    .cookie__wrap {
-      padding: 16px; } }
+              flex-direction: column; } }
 
 .cookie__title {
   padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
   font-size: 0.9375rem;
   line-height: 1.35;
   color: #354052; }
 
 .cookie__text {
+  margin: 0;
   font-size: 0.8125rem;
   line-height: 1.3;
   color: #707b8c; }
@@ -2512,39 +2547,17 @@ template {
       padding-bottom: 10px; } }
 
 .cookie__button {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 175px;
+  padding-right: 20px;
+  padding-left: 20px;
   margin-right: 16px;
   margin-left: 40px; }
   @media (max-width: 1119px) {
     .cookie__button {
-      margin: 0; } }
-
-.cookie__button-top {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 48px;
-  min-width: 48px;
-  height: 48px;
-  min-height: 48px;
-  margin-right: -64px;
-  padding: 0;
-  background-color: #ffffff;
-  border: 1px solid #e3e8ee;
-  border-radius: 5px;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
-          box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
-  pointer-events: auto; }
-  .cookie__button-top svg {
-    color: #a6abb3;
-    -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg); }
-  @media (max-width: 1365px) {
-    .cookie__button-top {
-      margin-right: -10px; } }
-  @media (max-width: 1119px) {
-    .cookie__button-top {
-      position: absolute;
-      right: 16px;
-      bottom: 16px;
       margin: 0; } }
 
 .poll-process p {

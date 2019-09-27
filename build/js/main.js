@@ -28,8 +28,11 @@
   var button = document.querySelector('.js_cookie .js_btn');
 
   if (cookieBlock && button) {
+    document.body.classList.add('page-body--cookie');
+
     button.addEventListener('click', function () {
       cookieBlock.classList.add(hideClass);
+      document.body.classList.remove('page-body--cookie');
     });
   }
 })();
@@ -319,6 +322,30 @@
       });
     });
   }
+})();
+
+'use strict';
+
+
+(function () {
+  var upBtn = document.querySelector('.page-body__up-btn');
+
+  if (!upBtn) {
+    return;
+  }
+
+
+  var onUpBtnClick = function (evt) {
+    evt.preventDefault();
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+
+  upBtn.addEventListener('click', onUpBtnClick);
 })();
 
 'use strict';
