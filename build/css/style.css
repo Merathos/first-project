@@ -1603,7 +1603,7 @@ template {
 .news-notice {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 72px 40px 0;
+  padding: 10px 40px 0;
   text-align: center; }
   @media (max-width: 1119px) {
     .news-notice {
