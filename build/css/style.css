@@ -1920,13 +1920,23 @@ template {
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer; }
-  .social__link--tick::after {
+  .social__link::after {
     content: "";
     display: inline-block;
     width: 16px;
     height: 16px;
+    margin-left: 12px;
     vertical-align: text-top;
-    background-image: url("../img/icon-tick.svg"); }
+    background-size: cover; }
+  .social__link--subscribe::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='13' viewBox='0 0 16 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.875 6.53311L5.52806 11.1862L15.125 1.58923' stroke='%232C8ECC' stroke-width='2'/%3E%3C/svg%3E%0A"); }
+  .social__link--unsubscribe {
+    color: #e55050; }
+    .social__link--unsubscribe:hover, .social__link--unsubscribe:focus {
+      color: #e55050;
+      opacity: 0.8; }
+    .social__link--unsubscribe::after {
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 1.5L14.5 14.5M14.5 1.5L1.5 14.5' stroke='%23E55050' stroke-width='2'/%3E%3C/svg%3E%0A"); }
 
 .poll {
   -webkit-box-sizing: border-box;
