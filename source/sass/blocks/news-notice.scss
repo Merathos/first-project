@@ -134,9 +134,11 @@
   &--link {
     display: block;
 
+    @include font-h5;
+    color: $dark-text;
     text-align: left;
     text-decoration: none;
-    transition: color 0.4s ease;
+    transition: color $style-change-duration;
 
     &:hover,
     &:focus {

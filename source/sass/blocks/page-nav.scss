@@ -46,7 +46,7 @@
   text-decoration: none;
   text-transform: uppercase;
   color: $grey-default;
-  transition: color 0.4s ease;
+  transition: color $style-change-duration;
 
   &:hover,
   &:focus {

@@ -1386,8 +1386,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  -webkit-transition: color 0.4s ease, background-color 0.4s ease, border-color 0.4s ease;
-  transition: color 0.4s ease, background-color 0.4s ease, border-color 0.4s ease; }
+  -webkit-transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s; }
   @media (max-width: 400px) {
     .button {
       width: 100%;
@@ -1434,8 +1434,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   text-transform: uppercase;
   text-decoration: none;
   color: #2c8ecc;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease; }
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
   .link-arrow span {
     padding-right: 6px; }
   .link-arrow:hover, .link-arrow:focus {
@@ -1472,8 +1472,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       align-self: flex-start;
   color: #354052;
   cursor: pointer;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease; }
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
   .form-checkbox label::before {
     content: "";
     -ms-flex-negative: 0;
@@ -1484,8 +1484,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     background-color: #ffffff;
     border-radius: 5px;
     border: 1px solid rgba(161, 167, 174, 0.5);
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease; }
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s; }
   .form-checkbox label::after {
     display: none;
     content: "";
@@ -1497,8 +1497,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     background-image: url("../img/checkbox.svg");
     background-repeat: no-repeat;
     background-position: center;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease; }
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s; }
 
 .form-checkbox input[type="checkbox"]:not(:checked) ~ label:hover::before {
   border: 1px solid #9bd2f4; }
@@ -1546,8 +1546,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       align-self: flex-start;
   color: #354052;
   cursor: pointer;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease; }
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
   .form-radio label::before {
     content: "";
     -ms-flex-negative: 0;
@@ -1558,8 +1558,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     background-color: #ffffff;
     border-radius: 50%;
     border: 1px solid rgba(161, 167, 174, 0.5);
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease; }
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s; }
 
 .form-radio input[type="radio"]:not(:checked) ~ label:hover::before {
   border: 1px solid #9bd2f4; }
@@ -1715,8 +1715,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     -webkit-box-shadow: none;
             box-shadow: none;
     cursor: pointer;
-    -webkit-transition: border-color 0.4s ease;
-    transition: border-color 0.4s ease; }
+    -webkit-transition: border-color 0.2s;
+    transition: border-color 0.2s; }
     .form-range .noUi-horizontal .noUi-handle::before, .form-range .noUi-horizontal .noUi-handle::after {
       display: none; }
     .form-range .noUi-horizontal .noUi-handle:hover {
@@ -2098,8 +2098,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   color: inherit;
   border: 1px solid #e3e8ee;
   border-radius: 5px;
-  -webkit-transition: color 0.4s ease, border 0.4s ease;
-  transition: color 0.4s ease, border 0.4s ease; }
+  -webkit-transition: color 0.2s, border 0.2s;
+  transition: color 0.2s, border 0.2s; }
   .paginator__item:last-child {
     margin-right: 0; }
   .paginator__item[href]:hover, .paginator__item[href]:focus, .paginator__item[href]:active {
@@ -2131,8 +2131,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   padding: 5px;
   color: #e3e8ee;
   cursor: pointer;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease; }
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
   .button-star:hover, .button-star:focus {
     color: #116ca6;
     outline: none; }
@@ -2283,8 +2283,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         align-self: flex-start;
     color: #2c8ecc;
     text-decoration: none;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease; }
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s; }
     .page-footer__item a:hover, .page-footer__item a:focus {
       color: #116ca6; }
 
@@ -2388,8 +2388,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   text-decoration: none;
   text-transform: uppercase;
   color: #a6abb3;
-  -webkit-transition: color 0.4s ease;
-  transition: color 0.4s ease; }
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
   .page-nav__link:hover, .page-nav__link:focus {
     color: #2c8ecc; }
   .page-nav__link--active {
@@ -2609,10 +2609,16 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       padding-bottom: 27px; } }
   .news-notice__text--link {
     display: block;
+    font-family: "Rubik", "Arial", sans-serif;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    color: #333333;
+    color: #354052;
     text-align: left;
     text-decoration: none;
-    -webkit-transition: color 0.4s ease;
-    transition: color 0.4s ease; }
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s; }
     .news-notice__text--link:hover, .news-notice__text--link:focus {
       color: #2c8ecc; }
 
@@ -3381,6 +3387,17 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     @media (max-width: 400px) {
       .discussion--page .discussion__list {
         margin-top: 10px; } }
+  .discussion--page .discussion__text {
+    font-family: "Rubik", "Arial", sans-serif;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    font-weight: 400;
+    color: #333333;
+    color: #354052;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s; }
+    .discussion--page .discussion__text:hover, .discussion--page .discussion__text:focus {
+      color: #2c8ecc; }
   .discussion--page .discussion__button {
     width: 360px;
     margin-top: 24px;
@@ -3491,7 +3508,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   background-image: linear-gradient(#e3e8ee, #e3e8ee);
   background-position: left bottom;
   background-repeat: no-repeat;
-  background-size: 100% 1px; }
+  background-size: 100% 1px;
+  background-color: #ffffff; }
 
 .poll-result__question {
   margin: 0;
@@ -3505,21 +3523,22 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .poll-result__item {
   position: relative;
+  z-index: 2;
   max-width: 800px;
   margin-bottom: 16px;
   border-radius: 5px;
-  background-color: #f9f9fa; }
+  background-color: #f9f9fa;
+  overflow: hidden; }
 
 .poll-result__fill {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 1;
   width: 0%;
   height: 100%;
   border-radius: 5px 0 0 5px;
   background-color: rgba(155, 210, 244, 0.25); }
-  .poll-result__fill--100 {
-    border-radius: 5px; }
 
 .poll-result__description {
   display: -webkit-box;
