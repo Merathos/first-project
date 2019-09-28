@@ -924,9 +924,58 @@ template {
       font-weight: 400;
       color: #333333; } }
 
-.page-body--no-scroll {
+.page-body__up-btn {
   position: fixed;
-  overflow: hidden; }
+  z-index: 10;
+  bottom: 16px;
+  right: 60px;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #a6abb3;
+  background-color: #ffffff;
+  border: 1px solid #e3e8ee;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
+          box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: border-color 0.2s, color 0.2s;
+  transition: border-color 0.2s, color 0.2s; }
+  .page-body__up-btn:focus {
+    color: #707b8c;
+    border-color: #707b8c; }
+  .page-body__up-btn:focus:not(.focus-visible) {
+    color: #a6abb3;
+    border-color: #e3e8ee; }
+  .page-body__up-btn:hover:not(.focus-visible) {
+    color: #707b8c;
+    border-color: #707b8c; }
+  .page-body__up-btn svg {
+    pointer-events: none;
+    -webkit-transform: rotate(-90deg);
+            transform: rotate(-90deg);
+    -webkit-transition: fill 0.2s;
+    transition: fill 0.2s; }
+
+@media (min-width: 1200px) {
+  .page-body--cookie .page-body__up-btn {
+    bottom: 32px; } }
+
+@media (max-width: 1199px) {
+  .page-body__up-btn {
+    right: 16px;
+    bottom: 16px; }
+    .page-body__up-btn:hover:not(.focus-visible) {
+      color: #a6abb3;
+      border-color: #e3e8ee; }
+    .page-body__up-btn:active:not(.focus-visible) {
+      color: #707b8c;
+      border-color: #707b8c; } }
 
 .page-content {
   padding-top: 40px; }
@@ -2390,13 +2439,23 @@ template {
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer; }
-  .social__link--tick::after {
+  .social__link::after {
     content: "";
     display: inline-block;
     width: 16px;
     height: 16px;
+    margin-left: 12px;
     vertical-align: text-top;
-    background-image: url("../img/icon-tick.svg"); }
+    background-size: cover; }
+  .social__link--subscribe::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='13' viewBox='0 0 16 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.875 6.53311L5.52806 11.1862L15.125 1.58923' stroke='%232C8ECC' stroke-width='2'/%3E%3C/svg%3E%0A"); }
+  .social__link--unsubscribe {
+    color: #e55050; }
+    .social__link--unsubscribe:hover, .social__link--unsubscribe:focus {
+      color: #e55050;
+      opacity: 0.8; }
+    .social__link--unsubscribe::after {
+      background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 1.5L14.5 14.5M14.5 1.5L1.5 14.5' stroke='%23E55050' stroke-width='2'/%3E%3C/svg%3E%0A"); }
 
 .poll {
   -webkit-box-sizing: border-box;
@@ -2980,7 +3039,7 @@ template {
   .cookie.js_hide {
     display: none; }
 
-.cookie-wrap {
+.cookie__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2990,38 +3049,43 @@ template {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 16px 40px; }
-  @media (max-width: 1119px) {
-    .cookie-wrap {
+  padding-top: 16px;
+  padding-bottom: 16px; }
+  @media (max-width: 1199px) {
+    .cookie__wrap {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
-              flex-direction: column;
-      padding: 16px 24px; } }
-  @media (max-width: 767px) {
-    .cookie-wrap {
-      padding: 16px; } }
+              flex-direction: column; } }
 
 .cookie__title {
   padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
   font-size: 0.9375rem;
   line-height: 1.35;
   color: #354052; }
 
 .cookie__text {
+  margin: 0;
   font-size: 0.8125rem;
   line-height: 1.3;
   color: #707b8c; }
-  @media (max-width: 1119px) {
+  @media (max-width: 1199px) {
     .cookie__text {
       padding-bottom: 10px; } }
 
 .cookie__button {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 175px;
+  padding-right: 20px;
+  padding-left: 20px;
   margin-right: 16px;
   margin-left: 40px; }
-  @media (max-width: 1119px) {
+  @media (max-width: 1199px) {
     .cookie__button {
       margin: 0; } }
 
