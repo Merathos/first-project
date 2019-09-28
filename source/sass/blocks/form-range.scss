@@ -1,55 +1,97 @@
 .form-range {
   width: 308px;
+  padding-left: 5px;
+  padding-right: 5px;
 
   @media (max-width: $mobile-max-width) {
     width: 100%;
   }
 
-  // & .noUi-horizontal {
-  //   height: 6px;
-  //   cursor: pointer;
-  // }
+  & .noUi-horizontal {
+    height: 6px;
+    background: $light-grey;
+    cursor: pointer;
+  }
 
-  // & .noUi-target {
-  //   border: none;
-  // }
+  & .noUi-target {
+    border: none;
+  }
 
-  // & .noUi-connects {
-  //   background-image: linear-gradient(to right, $light-grey 0%, $light-grey 98%, $grey-default 98%, $grey-default 100%);
-  //   background-position: left bottom;
-  //   background-repeat: repeat-x;
-  //   background-size: 31px 100%;
-  // }
+  & .noUi-connect {
+    background: rgba($blue-default, 1);
+  }
 
-  // & .noUi-connect {
-  //   background-color: $blue-default;
-  // }
+  & .noUi-horizontal .noUi-handle {
+    top: -9px;
+    width: 24px;
+    height: 24px;
+    border-radius: 100%;
+    background-color: $white;
+    border: 8px solid $blue-default;
+    box-shadow: none;
 
-  // & .noUi-horizontal .noUi-handle {
-  //   top: -9px;
-  //   width: 24px;
-  //   height: 24px;
-  //   border-radius: 100%;
-  //   background-color: $white;
-  //   border: 8px solid $blue-default;
-  //   box-shadow: none;
+    cursor: pointer;
+    transition: border-color 0.4s ease;
 
-  //   cursor: pointer;
-  //   transition: border-color 0.4s ease;
+    &::before,
+    &::after {
+      display: none;
+    }
 
-  //   &::before,
-  //   &::after {
-  //     display: none;
-  //   }
+    &:hover {
+      border-color: $blue-accent;
+    }
 
-  //   &:hover {
-  //     border-color: $blue-accent;
-  //   }
+    &:focus {
+      outline: none;
+    }
+  }
 
-  //   &:focus {
-  //     outline: none;
-  //   }
-  // }
+  & .noUi-marker-normal {
+    display: none;
+  }
+
+  & .noUi-pips-horizontal {
+    padding: 0;
+    top: 0;
+  }
+
+  & .noUi-marker-horizontal.noUi-marker-large {
+    display: none;
+  }
+
+  & .noUi-marker-horizontal.noUi-marker-sub {
+    width: 1px;
+    background-color: $grey-default;
+    height: 6px;
+    z-index: 1;
+
+    &.form-range__accent {
+      background-color: $white;
+    }
+  }
+
+  & .noUi-value {
+    display: none;
+  }
+
+  & .noUi-tooltip {
+    border: none;
+
+    @include font-h5;
+    color: $dark-text;
+    padding-bottom: 0;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  & .noUi-horizontal .noUi-tooltip {
+    bottom: 200%;
+  }
+}
+
+html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
+  right: -12px;
 }
 
 .form-range__value {
@@ -62,62 +104,6 @@
 
   & span:nth-child(2) {
     margin-left: 10px;
-  }
-}
-
-.form-range__track {
-  position: relative;
-  width: 308px;
-  height: 6px;
-
-  background-image: linear-gradient(to right, $light-grey 0%, $light-grey 98%, $grey-default 98%, $grey-default 100%);
-  background-position: left bottom;
-  background-repeat: repeat-x;
-  background-size: 31px 100%;
-
-  border-radius: 5px;
-
-  cursor: pointer;
-
-  @media (max-width: $mobile-max-width) {
-    width: 100%;
-    background-size: 29px 100%;
-  }
-}
-
-.form-range__fill {
-  width: 50%;
-  height: 6px;
-
-  background-image: linear-gradient(to right, $blue-default 0%, $blue-default 98%, $white 98%, $white 100%);
-  background-position: left bottom;
-  background-repeat: repeat-x;
-  background-size: 31px 100%;
-
-  border-radius: 5px;
-}
-
-.form-range__button {
-  position: absolute;
-  top: -9px;
-  left: 47%;
-
-  @include btn-reset;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background-color: $white;
-  border: 8px solid $blue-default;
-  cursor: pointer;
-
-  transition: border-color 0.4s ease;
-
-  &:hover {
-    border-color: $blue-accent;
-  }
-
-  &:focus {
-    outline: none;
   }
 }
 
