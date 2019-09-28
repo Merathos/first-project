@@ -222,6 +222,17 @@
     }
   }
 
+  & .discussion__text {
+    @include font-h5;
+    color: $dark-text;
+    transition: color $style-change-duration;
+
+    &:hover,
+    &:focus {
+      color: $blue-default;
+    }
+  }
+
   & .discussion__button {
     width: 360px;
     margin-top: 24px;
