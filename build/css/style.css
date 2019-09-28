@@ -1691,7 +1691,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-left: 9px; }
 
 .form-range {
-  width: 308px; }
+  width: 308px;
+  padding-left: 5px;
+  padding-right: 5px; }
   @media (max-width: 400px) {
     .form-range {
       width: 100%; } }
@@ -1753,6 +1755,38 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   right: -12px; }
+
+.form-range__value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  font-weight: 400;
+  color: #333333;
+  color: #354052; }
+  .form-range__value span:nth-child(2) {
+    margin-left: 10px; }
+
+.form-range__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 12px;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 0.8125rem;
+  line-height: 1.0625rem;
+  font-weight: 400;
+  color: #333333;
+  color: #a6abb3; }
 
 .form__section {
   padding-top: 32px;
