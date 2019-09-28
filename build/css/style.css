@@ -1344,10 +1344,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   max-width: 1200px;
   padding: 0 40px;
   margin: 0 auto; }
-  @media (max-width: 1199px) {
+  @media (max-width: 767px) {
     .container {
       padding: 0 24px; } }
-  @media (max-width: 767px) {
+  @media (max-width: 400px) {
     .container {
       padding: 0 16px; } }
 
@@ -2356,6 +2356,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   border-radius: 5px; }
   @media (max-width: 767px) {
     .page-nav {
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
       width: 369px;
       padding: 16px 16px; } }
   @media (max-width: 700px) {
@@ -2877,6 +2879,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .poll__item--passed:hover::before {
     background: -webkit-gradient(linear, left top, left bottom, from(#f9f9fa), to(rgba(249, 249, 250, 0)));
     background: linear-gradient(180deg, #f9f9fa 0%, rgba(249, 249, 250, 0) 100%); }
+  .poll__item--passed .poll__text {
+    color: #a6abb3; }
 
 .poll__item--accent {
   border-left: 3px solid #2c8ecc;
@@ -2915,6 +2919,48 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .poll__archive-mobile {
       display: block;
       margin-top: 24px; } }
+
+.poll--poll-list {
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 0; }
+  @media (max-width: 767px) {
+    .poll--poll-list {
+      padding-left: 0;
+      padding-right: 0; } }
+  .poll--poll-list .poll__list {
+    padding-top: 28px; }
+    @media (max-width: 767px) {
+      .poll--poll-list .poll__list {
+        padding-top: 40px; } }
+    @media (max-width: 400px) {
+      .poll--poll-list .poll__list {
+        padding-top: 26px; } }
+  .poll--poll-list .poll__item {
+    min-height: 136px;
+    padding-bottom: 24px; }
+    @media (max-width: 767px) {
+      .poll--poll-list .poll__item {
+        width: calc(100% / 2 - 10px);
+        min-height: 158px; } }
+    @media (max-width: 600px) {
+      .poll--poll-list .poll__item {
+        width: 100%; } }
+    @media (max-width: 400px) {
+      .poll--poll-list .poll__item {
+        margin-bottom: 17px; } }
+  .poll--poll-list .poll__button {
+    width: 360px;
+    margin-top: 0;
+    margin-bottom: 40px; }
+    @media (max-width: 767px) {
+      .poll--poll-list .poll__button {
+        margin-top: 14px; } }
+    @media (max-width: 400px) {
+      .poll--poll-list .poll__button {
+        width: 100%;
+        margin-top: 10px;
+        margin-bottom: 32px; } }
 
 .project {
   -webkit-box-sizing: border-box;
