@@ -5,14 +5,28 @@
   <body class="page-body">
     <include src="source/components/header.html"></include>
 
-    <main>
-      <h1 class="visually-hidden">Главная страница</h1>
+    <main class="page-content">
+      <div class="container">
+        <a class="page-content__back-btn" href="main-page.html">
+          <svg width="8" height="14">
+            <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
+          </svg>
+          Назад
+        </a>
+      </div>
+      <section class="poll-page">
+        <div class="container">
+          <h1 class="poll-page__title page-title">Необходимость введения запрета на назначение административного ареста лицам пенсионного возраста</h1>
+        </div>
+      </section>
 
     </main>
 
     <include src="source/components/footer.html"></include>
 
     <include src="source/components/cookie.html"></include>
+
+    <include src="source/components/up-btn.html"></include>
 
     <script src="js/libs.js"></script>
     <script src="js/main.min.js"></script>

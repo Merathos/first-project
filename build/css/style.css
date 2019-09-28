@@ -3539,3 +3539,6 @@ template {
     margin-bottom: 57px; }
   .projects__archive-text {
     max-width: none; } }
+
+.poll-page__title {
+  max-width: inherit; }
