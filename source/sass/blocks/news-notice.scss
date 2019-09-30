@@ -134,11 +134,13 @@
   &--link {
     display: block;
 
-    @include font-h5;
-    color: $dark-text;
     text-align: left;
+    color: $dark-text;
     text-decoration: none;
+
     transition: color $style-change-duration;
+
+    @include font-h5;
 
     &:hover,
     &:focus {
@@ -148,7 +150,18 @@
 }
 
 .news-notice__link {
+  display: block;
+  height: 2.7em;
+  overflow: hidden;
+
   text-decoration: none;
+  text-overflow: ellipsis;
+
+  transition: color $style-change-duration;
+
+  @media (max-width: $desktop-width - 81) {
+    height: auto;
+  }
 
   &:hover {
     color: $blue-default;
