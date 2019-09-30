@@ -169,6 +169,8 @@
 
   cursor: pointer;
 
+  transition: color $style-change-duration;
+
   &:hover {
     color: $blue-default;
   }
@@ -223,9 +225,11 @@
   }
 
   & .discussion__text {
-    @include font-h5;
     color: $dark-text;
+
     transition: color $style-change-duration;
+
+    @include font-h5;
 
     &:hover,
     &:focus {
