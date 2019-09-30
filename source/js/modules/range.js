@@ -11,9 +11,8 @@
     behaviour: 'snap',
     connect: 'lower',
     step: 1,
-    padding: [1, 0],
     range: {
-      'min': [0],
+      'min': [1],
       'max': [10]
     },
     pips: {
@@ -37,7 +36,7 @@
 
     for (var i = 0; i < pips.length; i++) {
 
-      if (i <= maxPos - 1) {
+      if (i <= maxPos - 2) {
         pips[i].classList.add('form-range__accent');
       } else {
         pips[i].classList.remove('form-range__accent');

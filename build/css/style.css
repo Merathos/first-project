@@ -1747,9 +1747,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     font-weight: 400;
     color: #333333;
     color: #354052;
-    padding-bottom: 0;
-    padding-left: 13px;
-    padding-right: 13px; }
+    padding-bottom: 1px;
+    padding-left: 10px;
+    padding-right: 10px; }
   .form-range .noUi-horizontal .noUi-tooltip {
     bottom: 200%; }
 
@@ -1769,7 +1769,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   line-height: 1.375rem;
   font-weight: 400;
   color: #333333;
-  color: #354052; }
+  color: #a6abb3; }
   .form-range__value span:nth-child(2) {
     margin-left: 10px; }
 
@@ -2461,7 +2461,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-bottom: 80px;
   background-color: #f9f9fa;
   border-radius: 5px; }
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     .archive-link {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -2483,7 +2483,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-weight: 400;
   color: #333333;
   color: #707b8c; }
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     .archive-link__description {
       max-width: 442px;
       margin-right: 0;
@@ -2937,12 +2937,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .poll--poll-list {
   padding-top: 0;
-  padding-left: 0;
-  padding-right: 0; }
+  padding-right: 0;
+  padding-left: 0; }
   @media (max-width: 767px) {
     .poll--poll-list {
-      padding-left: 0;
-      padding-right: 0; } }
+      padding-right: 0;
+      padding-left: 0; } }
   .poll--poll-list .poll__list {
     padding-top: 28px; }
     @media (max-width: 767px) {

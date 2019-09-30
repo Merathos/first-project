@@ -80,9 +80,9 @@
 
     @include font-h5;
     color: $dark-text;
-    padding-bottom: 0;
-    padding-left: 13px;
-    padding-right: 13px;
+    padding-bottom: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   & .noUi-horizontal .noUi-tooltip {
@@ -100,7 +100,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-bottom: 10px;
 
   @include font-h5;
-  color: $dark-text;
+  color: $grey-default;
 
   & span:nth-child(2) {
     margin-left: 10px;
