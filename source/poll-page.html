@@ -44,10 +44,14 @@
               Согласно большинству источников Lorem ipsum представляет собой отрывок одного из трактатов Цицерона и его корни уходят в 45 век до н. э.
             </p>
           </div>
-          <div class="poll-page__doc">
-            <a href="#" class="poll-page__doc-name" download>Рыбным текстом называется текст</a>
-            <span class="poll-page__doc-size">3,2 мб</span>
-          </div>
+          <ul class="poll-page__doc-list">
+            <li class="poll-page__doc-item">
+              <a class="poll-page__doc-wrap" href="#" download>
+                <div class="poll-page__doc-name">Рыбным текстом называется текст</div>
+                <span class="poll-page__doc-size">3,2 мб</span>
+              </a>
+            </li>
+          </ul>
           <div class="poll-page__form form">
             <form action="#">
               <div class="poll-page__form-section form__section">
@@ -99,13 +103,10 @@
                 <div class="form__range-wrapper form-range">
                   <div class="form-range__value">
                     <span>1</span>
-                    <span>5</span>
+                    <!-- <span>5</span> -->
                     <span>10</span>
                   </div>
-                  <div class="form-range__track">
-                    <div class="form-range__fill"></div>
-                    <button type="button" class="form-range__button"></button>
-                  </div>
+                  <div id="poll-range"></div>
                   <div class="form-range__description">
                     <span>очень плохо</span>
                     <span>очень хорошо</span>
