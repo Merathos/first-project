@@ -47,6 +47,8 @@
     background-repeat: no-repeat;
     opacity: 0.3;
 
+    transition: opacity $style-change-duration;
+
     @media (max-width: $desktop-width - 81) {
       opacity: 1;
     }
@@ -171,7 +173,9 @@
 
     vertical-align: text-top;
 
-    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
   }
 
   &--subscribe::after {
@@ -184,6 +188,7 @@
     &:hover,
     &:focus {
       color: $red;
+
       opacity: 0.8;
     }
 

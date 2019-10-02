@@ -1260,7 +1260,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     border-color: #e3e8ee; }
   .page-body__up-btn:hover:not(.focus-visible) {
     color: #707b8c;
-    border-color: #707b8c; }
+    border-color: #9bd2f4; }
   .page-body__up-btn svg {
     pointer-events: none;
     -webkit-transform: rotate(-90deg);
@@ -1278,13 +1278,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     bottom: 16px; }
     .page-body__up-btn:hover:not(.focus-visible) {
       color: #a6abb3;
-      border-color: #e3e8ee; }
+      border-color: #9bd2f4; }
     .page-body__up-btn:active:not(.focus-visible) {
       color: #707b8c;
-      border-color: #707b8c; } }
+      border-color: #9bd2f4; } }
 
 .page-content {
-  padding-top: 40px; }
+  padding-top: 40px;
+  min-width: 320px; }
 
 .page-content__back-btn {
   display: -webkit-inline-box;
@@ -2694,7 +2695,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     content: "";
     position: absolute;
     background-repeat: no-repeat;
-    opacity: 0.3; }
+    opacity: 0.3;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s; }
     @media (max-width: 1119px) {
       .social__item::after {
         opacity: 1; } }
@@ -2783,7 +2786,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     height: 16px;
     margin-left: 12px;
     vertical-align: text-top;
-    background-size: cover; }
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; }
   .social__link--subscribe::after {
     background-image: url("data:image/svg+xml,%3Csvg width='16' height='13' viewBox='0 0 16 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.875 6.53311L5.52806 11.1862L15.125 1.58923' stroke='%232C8ECC' stroke-width='2'/%3E%3C/svg%3E%0A"); }
   .social__link--unsubscribe {
@@ -3068,7 +3073,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .project__info-doc {
   position: relative;
-  padding-left: 36px; }
+  padding-left: 36px;
+  text-decoration: none; }
   .project__info-doc::before {
     content: "";
     position: absolute;
@@ -3485,7 +3491,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       margin: 0; } }
   @media (max-width: 767px) {
     .cookie__button {
-      width: 100%; } }
+      width: calc(100% - 58px);
+      -ms-flex-item-align: start;
+          align-self: flex-start; } }
 
 .poll-process p {
   position: relative;
@@ -4577,6 +4585,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     height: 24px;
     background-image: url("../img/icon-odt.svg");
     background-repeat: no-repeat; }
+
+.poll-page__doc-item {
+  max-width: 100%; }
 
 .poll-page__doc-name {
   -ms-flex-item-align: start;
