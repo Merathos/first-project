@@ -123,6 +123,10 @@
 
 .poll-page__doc-item {
   max-width: 100%;
+
+  @include mobile {
+    width: 100%;
+  }
 }
 
 .poll-page__doc-name {
