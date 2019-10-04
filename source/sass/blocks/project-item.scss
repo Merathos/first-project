@@ -24,7 +24,7 @@
   }
 
   &--voted {
-    background-color: $light-green;
+    background-color: $pale-green;
 
     &::before {
       background-color: $green;
@@ -46,7 +46,7 @@
   }
 
   &--against {
-    background-color: $light-red;
+    background-color: $pale-red;
 
     &::before {
       background-color: $red;
