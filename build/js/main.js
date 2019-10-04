@@ -178,7 +178,7 @@
         slideChange: function () {
           description.textContent = items[this.realIndex].querySelector('.gallery__item-text').textContent;
           currentCounter.textContent = +this.realIndex + 1;
-        },
+        }
       }
     });
 
@@ -192,10 +192,10 @@
     if (evt.target.classList.contains('gallery__item-link')) {
       evt.preventDefault();
 
-      prepareSlider(evt.target);
-
       bodyScrollLock.disableBodyScroll(popup);
       popup.classList.add('popup--shown');
+
+      prepareSlider(evt.target);
     }
   };
 
