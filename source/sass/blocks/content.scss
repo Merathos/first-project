@@ -1,0 +1,152 @@
+.content {
+  color: $dark-main;
+
+  h1:not([class]) {
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: rem(40px);
+    line-height: rem(47px);
+  }
+
+  h2:not([class]) {
+    margin-top: 40px;
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: rem(30px);
+    line-height: rem(36px);
+  }
+
+  p:not([class]) {
+    margin: 0;
+    font-size: rem(15px);
+    line-height: rem(27px);
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  ul:not([class]) {
+    @include list-reset;
+
+    padding: 32px;
+    margin-bottom: 48px;
+    font-size: rem(16px);
+    line-height: rem(22px);
+    background-color: $color-bg;
+    border-radius: $border-radius;
+
+    li {
+      position: relative;
+      padding-left: 14px;
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 6px;
+        height: 6px;
+        background-color: $grey;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  strong:not([class]),
+  b:not([class]) {
+    font-weight: 500;
+  }
+
+  img:not([class]) {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 48px;
+  }
+
+  .highlighted-text {
+    position: relative;
+    padding-left: 27px;
+    margin-bottom: 48px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 3px;
+      height: auto;
+      background-color: $blue-default;
+      border-radius: $border-radius;
+    }
+  }
+
+
+  @include tablet {
+    h1:not([class]),
+    h2:not([class]),
+    p:not([class]),
+    img:not([class]),
+    ul:not([class]),
+    .highlighted-text {
+      width: calc(100% - 2 * #{$tablet-padding});
+      margin-right: $tablet-padding;
+      margin-left: $tablet-padding;
+    }
+
+    .highlighted-text p:not([class]) {
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    h1:not([class]) {
+      margin-bottom: 32px;
+    }
+  }
+
+
+  @include mobile {
+    h1:not([class]),
+    h2:not([class]),
+    p:not([class]),
+    img:not([class]),
+    ul:not([class]),
+    .highlighted-text {
+      width: calc(100% - 2 * #{$mobile-padding});
+      margin-right: $mobile-padding;
+      margin-left: $mobile-padding;
+    }
+
+    .highlighted-text p:not([class]) {
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+    }
+
+    h1:not([class]) {
+      margin-bottom: 24px;
+      font-size: rem(30px);
+      line-height: rem(36px);
+    }
+
+    h2:not([class]) {
+      margin-top: 48px;
+    }
+
+    ul:not([class]) {
+      padding: 24px;
+    }
+
+    img:not([class]) {
+      margin-bottom: 40px;
+    }
+  }
+}

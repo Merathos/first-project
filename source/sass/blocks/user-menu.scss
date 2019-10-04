@@ -66,11 +66,12 @@
   height: 13px;
   fill: $grey-default;
   pointer-events: none;
+  transform: rotate(-90deg);
   transition: transform 0.5s;
 }
 
 .user-menu--open .user-menu__dropdown-icon {
-  transform: rotate(180deg);
+  transform: rotate(90deg);
 }
 
 .user-menu__list {
