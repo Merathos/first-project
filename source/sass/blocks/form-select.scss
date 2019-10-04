@@ -1,6 +1,7 @@
 .form-select {
   & .ss-main {
     width: auto;
+    max-width: 100%;
   }
 
   & .ss-main .ss-single-selected .ss-arrow span {
@@ -23,6 +24,10 @@
   .ss-main .ss-content .ss-search input,
   .ss-main .ss-multi-selected {
     background-color: $color-bg;
+  }
+
+  & .ss-content {
+    border: none;
   }
 
   & .ss-option {
@@ -92,17 +97,10 @@
     &:hover {
       color: $blue-accent;
     }
-
-    @media (max-width: $tablet-width - 1) {
-      max-width: 356px;
-    }
-
-    @media (max-width: $mobile-max-width) {
-      max-width: 268px;
-    }
   }
 
   & .ss-main .ss-single-selected .placeholder {
+    display: inline-block;
     background-image: linear-gradient(to right, $light-blue-accent 0%, $light-blue-accent 50%, transparent 50%, transparent 75%);
     background-position: center bottom;
     background-repeat: repeat-x;
