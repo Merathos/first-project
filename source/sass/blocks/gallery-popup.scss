@@ -9,6 +9,8 @@
   width: 1120px;
   height: 624px;
   background-color: $white;
+  border-radius: $border-radius;
+  overflow: hidden;
 }
 
 .gallery-popup__frame {
@@ -140,6 +142,7 @@
     display: block;
     width: 100%;
     height: 100%;
+    border-radius: 0;
   }
 
   .gallery-popup__frame {

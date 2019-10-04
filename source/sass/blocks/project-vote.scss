@@ -5,34 +5,38 @@
 }
 
 .project-vote__container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
   padding: 24px;
-  margin-bottom: 24px;
   border-bottom: 1px solid $light-grey;
+
+  &--meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 }
 
 .project-vote__title {
   width: 100%;
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 11px;
   font-weight: 400;
   font-size: rem(18px);
   line-height: rem(23px);
 }
 
 .project-vote__date {
+  margin: 0;
   font-size: rem(13px);
   line-height: rem(17px);
   color: $grey-default;
 
   &:first-of-type {
-    margin-right: 32px;
+    margin-right: 33px;
   }
 
   time {
     display: block;
+    margin-top: 4px;
     font-size: rem(16px);
     line-height: rem(22px);
     color: $grey;
@@ -58,20 +62,239 @@
 }
 
 .project-vote__results {
+  margin-bottom: 24px;
+}
+
+.project-vote__submit-form form {
+  display: flex;
+  flex-wrap: wrap;
+
+  input {
+    display: none;
+  }
+}
+
+.project-vote__vote-btn {
   display: flex;
   align-items: center;
-  padding: 0 24px;
+  padding: 11px 28px;
+  font-size: rem(16px);
+  line-height: rem(22px);
+  user-select: none;
+  color: $dark-text;
+  background-color: $white;
+  border: 1px solid $light-grey;
+  border-radius: $border-radius;
+  cursor: pointer;
+  outline: none;
+  transition: background-color $style-change-duration;
+
+  &--approve {
+    margin-right: 16px;
+  }
+
+  &:focus {
+    background-color: $light-grey;
+  }
+
+  &:focus:not(.focus-visible) {
+    background-color: $white;
+  }
+
+  &:hover:not(.focus-visible) {
+    background-color: $light-grey;
+  }
+
+  .project-vote__confirmation-text {
+    display: none;
+  }
+
+  input:checked ~ span .project-vote__confirmation-text {
+    display: inline;
+  }
+
+  span,
+  svg {
+    pointer-events: none;
+  }
+
+  svg {
+    display: block;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    margin-right: 14px;
+    fill: none;
+  }
+
+  &--approve svg {
+    stroke: $green;
+  }
+
+  &--reject svg {
+    stroke: $red;
+  }
+}
+
+.project-vote--voted .project-vote__vote-btn {
+  display: none;
+
+  &--selected {
+    display: flex;
+
+    &:focus,
+    &:hover:not(.focus-visible) {
+      background-color: $white;
+    }
+  }
+}
+
+.project-vote__submit {
+  margin-top: 16px;
+}
+
+.project-vote--js .project-vote__submit {
+  display: none;
+}
+
+.project-vote__notion {
   margin: 0;
-  margin-bottom: 12px;
-  font-size: rem(18px);
-  line-height: rem(23px);
+  margin-top: 16px;
+  font-size: rem(13px);
+  line-height: rem(17px);
+  color: $grey-default;
 }
 
-.project-vote__results-value--against {
-  margin-left: auto;
+.project-vote__revoke-form {
+  display: none;
+  margin-top: 8px;
 }
 
-.project-vote form {
-  padding: 24px;
-  border-bottom: 1px solid $light-grey;
+.project-vote--voted .project-vote__revoke-form {
+  display: block;
+}
+
+.project-vote__revoke-btn {
+  padding: 0;
+  font-size: rem(15px);
+  line-height: rem(20px);
+  user-select: none;
+  color: $red;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: opacity $style-change-duration;
+
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:focus:not(.focus-visible) {
+    opacity: 1;
+  }
+
+  &:hover:not(.focus-visible) {
+    opacity: 0.7;
+  }
+}
+
+
+@include tablet {
+  .project-vote__container {
+    &--vote {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+  }
+
+  .project-vote__expire {
+    margin-top: 0;
+    margin-left: auto;
+  }
+
+  .project-vote__results {
+    width: 50%;
+    margin-bottom: 0;
+  }
+
+  .project-vote__vote-btn {
+    &:hover:not(.focus-visible) {
+      background-color: $white;
+    }
+
+    &:active:not(.focus-visible) {
+      background-color: $light-grey;
+    }
+
+    &--selected {
+      width: 100%;
+      margin: 0;
+
+      &:active:not(.focus-visible) {
+        background-color: $white;
+      }
+    }
+  }
+
+  .project-vote__submit-form {
+    width: 268px;
+  }
+
+  .project-vote__notion {
+    margin-top: 27px;
+  }
+
+  .project-vote__revoke-form {
+    margin-top: 25px;
+  }
+
+  .project-vote__revoke-btn {
+    &:hover:not(.focus-visible) {
+      opacity: 1;
+    }
+
+    &:active:not(.focus-visible) {
+      opacity: 0.7;
+    }
+  }
+}
+
+
+@include mobile {
+  .project-vote__container {
+    padding: 24px 16px;
+
+    &--vote {
+      display: block;
+    }
+  }
+
+  .project-vote__expire {
+    margin-top: 16px;
+    margin-left: 0;
+  }
+
+  .project-vote__results,
+  .project-vote__submit-form {
+    width: 100%;
+  }
+
+  .project-vote__results {
+    margin-bottom: 23px;
+  }
+
+  .project-vote__vote-btn {
+    padding: 11px 25px;
+  }
+
+  .project-vote__notion {
+    margin-top: 16px;
+  }
+
+  .project-vote__revoke-form {
+    margin-top: 16px;
+  }
 }

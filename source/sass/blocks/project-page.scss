@@ -18,6 +18,7 @@
 
 .project-page__budget {
   padding: 24px;
+  margin: 0;
   font-size: rem(13px);
   line-height: rem(17px);
   color: $grey;
@@ -156,6 +157,7 @@
   }
 
   .project-page__meta,
+  .project-page__vote,
   .project-page__text,
   .project-page__files,
   .project-page__project-link,
@@ -168,6 +170,10 @@
 
   .project-page__meta {
     margin-bottom: 16px;
+  }
+
+  .project-page__vote {
+    margin-bottom: 56px;
   }
 
   .project-page__text p:not([class]) {
@@ -184,6 +190,7 @@
   }
 
   .project-page__meta,
+  .project-page__vote,
   .project-page__text,
   .project-page__files,
   .project-page__project-link,
@@ -219,7 +226,7 @@
       bottom: 0;
       left: 0;
       height: 54px;
-      background-image: linear-gradient(to top, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+      background-image: linear-gradient(to top, $white 0%, rgba($white, 0) 100%);
     }
   }
 

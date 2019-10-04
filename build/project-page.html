@@ -116,7 +116,7 @@
 </header>
 
 
-    <main class="project-page  page-content  page-content--with-back-btn">
+    <main class="project-page page-content page-content--with-back-btn">
       <div class="container">
         <a class="page-content__back-btn" href="#">
           <svg width="8" height="14">
@@ -126,17 +126,17 @@
         </a>
       </div>
 
-      <div class="container  container--desktop-only">
+      <div class="container container--desktop-only">
         <div class="content">
           <h1>Ремонт дороги по улице Петровская, г. Москва</h1>
 
           <div class="project-page__container" data-sticky-container="">
-            <div class="project-page__meta  project-meta">
+            <div class="project-page__meta project-meta">
               <h2 class="visually-hidden">Общая информация о проекте</h2>
 
               <p class="project-meta__category">
                 Категория
-                <a class="project-meta__category-link  link" href="#">
+                <a class="project-meta__category-link link" href="#">
                   <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
                     <path d="M14.9262 5.09091V1H5.07227v6.54545M8.35742 19H11.642M8.35721 10H.966797v9H8.35721v-9zM19.031 7.54541h-7.3904V19h7.3904V7.54541zM14.9258 10.8181h.8211M14.9258 13.2727h.8211M14.9258 15.7273h.8211M4.25 15.7273h.82115M4.25 13.2727h.82115" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="square"></path>
                   </svg>
@@ -155,7 +155,7 @@
                   <span class="project-meta__item-value">Голосование окончено</span>
                 </p>
 
-                <button class="project-meta__fovorite-btn  button-star" type="button">
+                <button class="project-meta__fovorite-btn button-star" type="button">
                   <svg width="20" height="19">
                     <use xlink:href="img/sprite.svg#icon-star"></use>
                   </svg>
@@ -164,8 +164,8 @@
               </div>
             </div>
 
-            <div class="project-page__vote  project-vote" data-margin-top="90" data-sticky-for="1199">
-              <div class="project-vote__container">
+            <div class="project-page__vote project-vote" data-margin-top="90" data-sticky-for="1199">
+              <div class="project-vote__container project-vote__container--meta">
                 <h2 class="project-vote__title">Голосование</h2>
 
                 <p class="project-vote__date">
@@ -186,16 +186,62 @@
                 </p>
               </div>
 
-              <p class="project-vote__results">
-                <span class="project-vote__results-value project-vote__results-value--approve">1 057</span>&nbsp;<span>за</span>
-                <span class="project-vote__results-value project-vote__results-value--against">47</span>&nbsp;<span>против</span>
-              </p>
+              <div class="project-vote__container project-vote__container--vote">
+                <div class="project-vote__results vote-results">
+                  <p class="vote-results__output">
+                    <span class="visually-hidden">Соотношение голосов:</span>
 
-              <form action="#" method="post">
-                <!-- <div class="project-page__btn">
-                  <input type="radio" name="vote" value="approve">
-                </div> -->
-              </form>
+                    <span class="vote-results__value vote-results__value--approve">1 057</span>&nbsp;<span>за</span>
+
+                    <span class="vote-results__value vote-results__value--reject">47</span>&nbsp;<span>против</span>
+                  </p>
+
+                  <div class="vote-results__scale">
+                    <div class="vote-results__indicator"></div>
+                  </div>
+                </div>
+
+
+                <div class="project-vote__submit-form">
+                  <form action="#" method="post">
+                    <label class="project-vote__vote-btn project-vote__vote-btn--approve" tabindex="0">
+                      <input type="radio" name="vote" value="approve">
+
+                      <svg width="16" height="16">
+                        <use xlink:href="img/sprite.svg#icon-tick"></use>
+                      </svg>
+
+                      <span>
+                        <span class="project-vote__confirmation-text">Вы проголосовали&nbsp</span>
+                        За
+                      </span>
+                    </label>
+
+                    <label class="project-vote__vote-btn project-vote__vote-btn--reject" tabindex="0">
+                      <input type="radio" name="vote" value="reject">
+
+                      <svg width="16" height="16">
+                        <use xlink:href="img/sprite.svg#icon-cross"></use>
+                      </svg>
+
+                      <span>
+                        <span class="project-vote__confirmation-text">Вы проголосовали&nbsp</span>
+                        Против
+                      </span>
+                    </label>
+
+                    <button class="project-vote__submit button button--blue" type="submit">Проголосовать</button>
+                  </form>
+                </div>
+
+                <p class="project-vote__notion">Отозвать голос можно только один раз в&nbsp;течение 2&nbsp;часов с&nbsp;момента голосования</p>
+
+                <div class="project-vote__revoke-form">
+                  <form action="#" method="post">
+                    <button class="project-vote__revoke-btn" type="submit" name="revoke-vote">Отозвать голос</button>
+                  </form>
+                </div>
+              </div>
 
               <p class="project-page__budget">
                 Бюджет
@@ -246,7 +292,7 @@
                   <p>Здесь будет описание проекта (информация из стандартного поля). Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как текст-заполнитель или же текст-наполнитель. Иногда текст-«рыба» также используется композиторами при написании музыки. Они напевают его перед тем, как сочинены соответствующие слова. Уже в 16-том веке рыбные тексты имели широкое распространение у печатников.</p>
                 </div>
 
-                <button class="project-page__text-btn  link" type="button">
+                <button class="project-page__text-btn link" type="button">
                   <span class="project-page__text-btn-caption">Показать полностью</span>
                   <svg width="13" height="13">
                     <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
@@ -315,8 +361,8 @@
 
               <h2>Изображения из стандартных полей</h2>
 
-              <div class="project-page__gallery  gallery  swiper-container">
-                <div class="gallery__tape  swiper-wrapper">
+              <div class="project-page__gallery gallery swiper-container">
+                <div class="gallery__tape swiper-wrapper">
                   <div class="swiper-slide">
                     <a class="gallery__item-link" href="img/img-project/1.jpg" target="_blank">
                       <figure class="gallery__item">
@@ -475,8 +521,8 @@
 
               <h2>Изображения из дополнительных полей. Заголовок приходит из API</h2>
 
-              <div class="project-page__gallery  gallery  swiper-container">
-                <div class="gallery__tape  swiper-wrapper">
+              <div class="project-page__gallery gallery swiper-container">
+                <div class="gallery__tape swiper-wrapper">
                   <div class="swiper-slide">
                     <a class="gallery__item-link" href="img/img-project/1.jpg" target="_blank">
                       <figure class="gallery__item">
@@ -538,7 +584,7 @@
                   <p>Короткий текст – длина от 0 до 256 символов. Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как текст-заполнитель или.</p>
                 </div>
 
-                <button class="project-page__text-btn  link" type="button">
+                <button class="project-page__text-btn link" type="button">
                   <span class="project-page__text-btn-caption">Показать полностью</span>
                   <svg width="13" height="13">
                     <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
@@ -553,14 +599,14 @@
                 <p>Недостатком является то обстоятельство, что в латыни некоторые буквы используются чаще или реже других, что создает другое изображение печати. Кроме того в латинском языке заглавная буква используется только в начале предложений. Тем самым Lorem ipsum не отображает написание, к примеру, имен собственных. В следствии этого использование этого текста в качестве визуального заполнителя макетов.</p>
               </div>
 
-              <a class="project-page__project-link  link" href="#">
+              <a class="project-page__project-link link" href="#">
                 <svg width="20" height="20">
                   <use xlink:href="img/sprite.svg#icon-link"></use>
                 </svg>
                 Ссылка для проекта из API. Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов
               </a>
 
-              <a class="project-page__video-link  link" href="#">
+              <a class="project-page__video-link link" href="#">
                 <svg width="24" height="24">
                   <use xlink:href="img/sprite.svg#icon-youtube"></use>
                 </svg>
@@ -583,7 +629,7 @@
                   <p>Согласно большинству источников Lorem ipsum представляет собой отрывок одного из трактатов Цицерона и его корни уходят в 45 век до н. э.</p>
                 </div>
 
-                <button class="project-page__text-btn  link" type="button">
+                <button class="project-page__text-btn link" type="button">
                   <span class="project-page__text-btn-caption">Показать полностью</span>
                   <svg width="13" height="13">
                     <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
@@ -614,11 +660,11 @@
               </div>
             </div>
 
-            <button class="project-page__survey-btn  button  button--blue" type="submit">Отправить</button>
+            <button class="project-page__survey-btn button button--blue" type="submit">Отправить</button>
           </form>
         </div>
 
-        <a class="project-page__back-btn  button  button--light-blue" href="#">
+        <a class="project-page__back-btn button button--light-blue" href="#">
           <span class="project-page__mobile-hidden">Вернуться</span>
           ко всем проектам раздела
         </a>
@@ -663,13 +709,20 @@
   </div>
 </footer>
 
+    <button class="page-body__up-btn">
+  <svg width="20" height="12" viewbox="0 0 33 12">
+    <use xlink:href="img/sprite.svg#icon-arrow"></use>
+  </svg>
+  <span class="visually-hidden">Наверх</span>
+</button>
 
-    <div class="gallery-popup  popup">
+
+    <div class="gallery-popup popup">
       <div class="popup__container">
         <div class="popup__overlay"></div>
 
-        <div class="gallery-popup__content  popup__content">
-          <div class="popup__bar  popup__bar--top">
+        <div class="gallery-popup__content popup__content">
+          <div class="popup__bar popup__bar--top">
             <button class="popup__close-btn" type="button">
               <span class="visually-hidden">Закрыть</span>
               <svg width="16" height="16">
@@ -678,14 +731,14 @@
             </button>
           </div>
 
-          <div class="gallery-popup__frame  swiper-container">
+          <div class="gallery-popup__frame swiper-container">
 
           </div>
 
           <p class="gallery-popup__photo-description"></p>
 
-          <div class="popup__bar  popup__bar--bottom">
-            <button class="gallery-popup__nav-btn  gallery-popup__nav-btn--prev" type="button">
+          <div class="popup__bar popup__bar--bottom">
+            <button class="gallery-popup__nav-btn gallery-popup__nav-btn--prev" type="button">
               <svg width="24" height="24">
                 <use xlink:href="img/sprite.svg#icon-paginator-prev"></use>
               </svg>
@@ -695,7 +748,7 @@
               <span class="gallery-popup__counter-current"></span>/<span class="gallery-popup__counter-total"></span>
             </p>
 
-            <button class="gallery-popup__nav-btn  gallery-popup__nav-btn--next" type="button">
+            <button class="gallery-popup__nav-btn gallery-popup__nav-btn--next" type="button">
               <svg width="24" height="24">
                 <use xlink:href="img/sprite.svg#icon-paginator-next"></use>
               </svg>
@@ -703,6 +756,20 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="vote-popup">
+      <p class="vote-popup__text">
+        <svg class="vote-popup__icon" width="20" height="20">
+          <use xlink:href="img/sprite.svg#icon-attention"></use>
+        </svg>
+
+        Вы&nbsp;проголосовали за&nbsp;проект. Отозвать голос можно только один раз в&nbsp;течение 2&nbsp;часов с&nbsp;момента голосования.
+      </p>
+
+      <form action="#" method="post">
+        <button class="vote-popup__revoke-btn" type="submit" name="revoke-vote">Отозвать</button>
+      </form>
     </div>
 
     <script src="js/libs.js"></script>
