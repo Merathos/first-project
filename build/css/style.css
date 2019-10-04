@@ -1747,12 +1747,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   max-width: 1200px;
   padding: 0 40px;
   margin: 0 auto; }
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
     .container {
       padding: 0 24px; }
       .container--desktop-only {
         padding: 0; } }
-  @media (max-width: 400px) {
+  @media (max-width: 767px) {
     .container {
       padding: 0 16px; }
       .container--desktop-only {
@@ -2119,7 +2119,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     border: 1px solid rgba(161, 167, 174, 0.5); }
 
 .form-select .ss-main {
-  width: auto; }
+  width: auto;
+  max-width: 100%; }
 
 .form-select .ss-main .ss-single-selected .ss-arrow span {
   width: 12px;
@@ -2137,6 +2138,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .form-select .ss-main .ss-content .ss-search input,
 .form-select .ss-main .ss-multi-selected {
   background-color: #f9f9fa; }
+
+.form-select .ss-content {
+  border: none; }
 
 .form-select .ss-option {
   font-family: "Rubik", "Arial", sans-serif;
@@ -2201,18 +2205,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .form-select .ss-main .ss-single-selected:hover,
   .form-select .ss-main .ss-single-selected .placeholder .ss-disabled:hover {
     color: #116ca6; }
-  @media (max-width: 767px) {
-    .form-select .ss-main .ss-multi-selected,
-    .form-select .ss-main .ss-single-selected,
-    .form-select .ss-main .ss-single-selected .placeholder .ss-disabled {
-      max-width: 356px; } }
-  @media (max-width: 400px) {
-    .form-select .ss-main .ss-multi-selected,
-    .form-select .ss-main .ss-single-selected,
-    .form-select .ss-main .ss-single-selected .placeholder .ss-disabled {
-      max-width: 268px; } }
 
 .form-select .ss-main .ss-single-selected .placeholder {
+  display: inline-block;
   background-image: -webkit-gradient(linear, left top, right top, from(#9bd2f4), color-stop(50%, #9bd2f4), color-stop(50%, transparent), color-stop(75%, transparent));
   background-image: linear-gradient(to right, #9bd2f4 0%, #9bd2f4 50%, transparent 50%, transparent 75%);
   background-position: center bottom;
@@ -5438,7 +5433,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .project-item--win::before {
       background-color: #2c8ecc; }
   .project-item--voted {
-    background-color: #aae55c; }
+    background-color: #f8fcf7; }
     .project-item--voted::before {
       background-color: #70bf56; }
     .project-item--voted .project-item__link:focus {
