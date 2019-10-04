@@ -33,7 +33,7 @@
 
       <a class="page-header__link page-header__site-name" href="#">Общественное голосование</a>
 
-      <a class="page-header__link page-header__version-btn page-header__version-btn--bar" href="#">
+      <a class="page-header__link page-header__version-btn page-header__version-btn--bar js-open-popup" href="#">
         <svg width="18" height="18">
           <use xlink:href="img/sprite.svg#icon-glasses"></use>
         </svg>
@@ -54,7 +54,7 @@
 
         <form action="#" method="post">
           <div class="location-switcher__btn form-radio">
-            <input id="location-residence" class="visually-hidden" type="radio" name="location" value="residence" checked="">
+            <input id="location-residence" type="radio" name="location" value="residence" checked="">
             <label for="location-residence">
               Адрес проживания
               <span class="page-header__location-address location-switcher__address">Городской округ рабочий поселок Новогуровский</span>
@@ -62,7 +62,7 @@
           </div>
 
           <div class="location-switcher__btn form-radio">
-            <input id="location-registration" class="visually-hidden" type="radio" name="location" value="registration">
+            <input id="location-registration" type="radio" name="location" value="registration">
             <label for="location-registration">
               Адрес регистрации
               <span class="page-header__location-address location-switcher__address">Краснобродский городской округ</span>
@@ -73,7 +73,7 @@
         </form>
       </div>
 
-      <a class="page-header__link page-header__version-btn page-header__version-btn--menu" href="#">
+      <a class="page-header__link page-header__version-btn page-header__version-btn--menu js-open-popup" href="#">
         <svg width="18" height="18">
           <use xlink:href="img/sprite.svg#icon-glasses"></use>
         </svg>
@@ -176,6 +176,13 @@
     </div>
   </div>
 </footer>
+
+    <button class="page-body__up-btn">
+  <svg width="20" height="12" viewbox="0 0 33 12">
+    <use xlink:href="img/sprite.svg#icon-arrow"></use>
+  </svg>
+  <span class="visually-hidden">Наверх</span>
+</button>
 
 
     <script src="js/libs.js"></script>

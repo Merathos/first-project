@@ -23,14 +23,17 @@
   };
 
   var onWindowResize = function () {
+    header.classList.remove('page-header--above-content');
+
     adjustPageContentTopPadding();
+    adjustHeaderAppearance();
   };
 
 
   header.classList.add('page-header--js');
 
-  adjustHeaderAppearance();
   adjustPageContentTopPadding();
+  adjustHeaderAppearance();
 
 
   document.addEventListener('scroll', adjustHeaderAppearance);

@@ -22,7 +22,7 @@ body {
   font-style: normal;
   font-size: rem(15px);
   line-height: rem(20px);
-  color: dark-text;
+  color: $dark-text;
   background-color: white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -37,7 +37,9 @@ img {
   height: auto;
 }
 
-.visually-hidden {
+.visually-hidden,
+.form-radio input[type="radio"],
+.form-checkbox input[type="checkbox"] {
   position: absolute;
   width: 1px;
   height: 1px;

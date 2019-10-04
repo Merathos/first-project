@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <include src="source/components/head.html"></include>
+
+  <body class="page-body">
+    <include src="source/components/header.html"></include>
+
+    <main class="page-content">
+      <div class="container">
+        <a class="page-content__back-btn" href="main-page.html">
+          <svg width="8" height="14">
+            <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
+          </svg>
+          Назад
+        </a>
+      </div>
+      <section class="poll-page">
+        <div class="container">
+          <h1 class="poll-page__title page-title">Необходимость введения запрета на назначение административного ареста лицам пенсионного возраста</h1>
+          <div class="poll-page__dates">
+            <div class="poll-page__date-start">
+              <span class="poll-page__date-title">Дата публикации:</span>
+              <time class="poll-page__date-time" datetime="2019-10-25">25.10.2019</time>
+            </div>
+            <div class="poll-page__date-finish">
+              <span class="poll-page__date-title">Дата окончания обсуждения:</span>
+              <time class="poll-page__date-time" datetime="2019-12-29">29.12.2019</time>
+            </div>
+          </div>
+          <div class="poll-page__description">
+            <p class="poll-page__description-part">
+              Описание - 2000 символов. Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как текст-заполнитель или же текст-наполнитель. Иногда текст-«рыба» также используется композиторами при написании музыки. Они напевают его перед тем, как сочинены соответствующие слова. Уже в 16-том веке рыбные тексты имели широкое распространение у печатников.
+            </p>
+            <p class="poll-page__description-part">
+              Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.
+            </p>
+            <p class="poll-page__description-part">
+              Недостатком является то обстоятельство, что в латыни некоторые буквы используются чаще или реже других, что создает другое изображение печати. Кроме того в латинском языке заглавная буква используется только в начале предложений. Тем самым Lorem ipsum не отображает написание, к примеру, имен собственных. Вследствии этого использование этого текста в качестве визуального заполнителя макета в испанском языке ограничено. Если вы хотите использовать рыбный текст для сравнения особенностей шрифтов, то имеет смысл выбрать текст содержащий, по возможности все буквы и типичные для языка специальные знаки.
+            </p>
+            <p class="poll-page__description-part">
+              В настоящее время существует множество читаемых рыбных текстов. В большинстве случаев они используются только в целях заполнения места. Часто эти альтернативы классического Lorem ipsum занимательны и рассказывают небольшие, веселые или бессмысленные истории.
+            </p>
+            <p class="poll-page__description-part">
+              Согласно большинству источников Lorem ipsum представляет собой отрывок одного из трактатов Цицерона и его корни уходят в 45 век до н. э.
+            </p>
+          </div>
+          <ul class="poll-page__doc-list">
+            <li class="poll-page__doc-item">
+              <a class="poll-page__doc-wrap" href="#" download>
+                <div class="poll-page__doc-name">Рыбным текстом называется текст</div>
+                <span class="poll-page__doc-size">3,2 мб</span>
+              </a>
+            </li>
+          </ul>
+          <div class="poll-page__form form">
+            <form action="#">
+              <div class="poll-page__form-section form__section">
+                <p class="form__question">Согласны ли вы с написанным в документе?</p>
+                <p class="form__description">Выберите один вариант ответа</p>
+                <div class="form-radio">
+                  <input type="radio" name="quality" id="quality-yes" value="да">
+                  <label for="quality-yes">Да, согласен</label>
+                </div>
+                <div class="form-radio">
+                  <input type="radio" name="quality" id="quality-no" value="нет" checked>
+                  <label for="quality-no">Нет, не согласен</label>
+                </div>
+              </div>
+              <div class="poll-page__form-section form__section">
+                <p class="form__question">О каких способах взаимодействия с&nbsp;органами власти Вам известно?</p>
+                <p class="form__description">Выберите один или несколько вариантов ответа</p>
+                <div class="form-checkbox">
+                  <input type="checkbox" name="interaction-1" id="interaction-1" value="Личный прием должностного лица">
+                  <label for="interaction-1">Личный прием должностного лица</label>
+                </div>
+                <div class="form-checkbox">
+                  <input type="checkbox" name="interaction-2" id="interaction-2" value="Телефон доверия Губернатора" checked>
+                  <label for="interaction-2">Телефон доверия Губернатора</label>
+                </div>
+                <div class="form-checkbox">
+                  <input type="checkbox" name="interaction-3" id="interaction-3" value="Электронное письмо посредством e-mail" checked>
+                  <label for="interaction-3">Электронное письмо посредством e-mail</label>
+                </div>
+                <div class="form-checkbox">
+                  <input type="checkbox" name="interaction-4" id="interaction-4" value="Официальное письмо">
+                  <label for="interaction-4">Официальное письмо</label>
+                </div>
+                <div class="form-checkbox">
+                  <input type="checkbox" name="interaction-5" id="interaction-5" value="Обращение на портале" checked>
+                  <label for="interaction-5">Обращение на портале</label>
+                </div>
+                <div class="form-checkbox">
+                  <input type="checkbox" name="interaction-6" id="interaction-6" value="Ничего этого не знаю">
+                  <label for="interaction-6">Ничего этого не знаю</label>
+                </div>
+                <div class="form-checkbox">
+                  <input type="checkbox" name="interaction-7" id="interaction-7" value="Другое">
+                  <label for="interaction-7">Другое</label>
+                </div>
+              </div>
+              <div class="poll-page__form-section form__section">
+                <p class="form__question">Оцените качество получения государственных и муниципальных услуг</p>
+                <div class="form__range-wrapper form-range">
+                  <div class="form-range__value">
+                    <span>1</span>
+                    <!-- <span>5</span> -->
+                    <span>10</span>
+                  </div>
+                  <div id="poll-range"></div>
+                  <div class="form-range__description">
+                    <span>очень плохо</span>
+                    <span>очень хорошо</span>
+                  </div>
+                </div>
+              </div>
+              <button type="submit" class="button button--blue poll-page__button">Отправить</button>
+            </form>
+          </div>
+          <a href="#" class="button button--light-blue poll-page__button-back">
+            <span class="poll-page__hide">Вернуться </span>ко всем обсуждениям
+          </a>
+        </div>
+      </section>
+
+    </main>
+
+    <include src="source/components/footer.html"></include>
+
+    <include src="source/components/cookie.html"></include>
+
+    <include src="source/components/up-btn.html"></include>
+
+    <script src="js/libs.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

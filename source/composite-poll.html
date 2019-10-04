@@ -26,11 +26,11 @@
               <p class="form__question">Удовлетворены ли Вы качеством предоставления государственных и муниципальных услуг в настоящее время?</p>
               <p class="form__description">Выберите один вариант ответа</p>
               <div class="form-radio">
-                <input class="visually-hidden" type="radio" name="quality" id="quality-yes" value="да">
+                <input type="radio" name="quality" id="quality-yes" value="да">
                 <label for="quality-yes">Да, удовлетворен</label>
               </div>
               <div class="form-radio">
-                <input class="visually-hidden" type="radio" name="quality" id="quality-no" value="нет" checked>
+                <input type="radio" name="quality" id="quality-no" value="нет" checked>
                 <label for="quality-no">Нет, не удовлетворен</label>
               </div>
             </div>
@@ -38,15 +38,15 @@
               <p class="form__question">Знаете ли Вы о возможности получения государственных и муниципальных услуг по принципу "одного окна" в вашей области?</p>
               <p class="form__description">Выберите один вариант ответа</p>
               <div class="form-radio">
-                <input class="visually-hidden" type="radio" name="one-window" id="one-window-yes" value="Да, знаю точно" checked>
+                <input type="radio" name="one-window" id="one-window-yes" value="Да, знаю точно" checked>
                 <label for="one-window-yes">Да, знаю точно</label>
               </div>
               <div class="form-radio">
-                <input class="visually-hidden" type="radio" name="one-window" id="one-window-about" value="Да, примерно знаю">
+                <input type="radio" name="one-window" id="one-window-about" value="Да, примерно знаю">
                 <label for="one-window-about">Да, примерно знаю</label>
               </div>
               <div class="form-radio">
-                <input class="visually-hidden" type="radio" name="one-window" id="one-window-no" value="нет">
+                <input type="radio" name="one-window" id="one-window-no" value="нет">
                 <label for="one-window-no">Нет</label>
               </div>
             </div>
@@ -54,31 +54,31 @@
               <p class="form__question">О каких способах взаимодействия с&nbsp;органами власти Вам известно?</p>
               <p class="form__description">Выберите один или несколько вариантов ответа</p>
               <div class="form-checkbox">
-                <input class="visually-hidden" type="checkbox" name="interaction-1" id="interaction-1" value="Личный прием должностного лица">
+                <input type="checkbox" name="interaction-1" id="interaction-1" value="Личный прием должностного лица">
                 <label for="interaction-1">Личный прием должностного лица</label>
               </div>
               <div class="form-checkbox">
-                <input class="visually-hidden" type="checkbox" name="interaction-2" id="interaction-2" value="Телефон доверия Губернатора" checked>
+                <input type="checkbox" name="interaction-2" id="interaction-2" value="Телефон доверия Губернатора" checked>
                 <label for="interaction-2">Телефон доверия Губернатора</label>
               </div>
               <div class="form-checkbox">
-                <input class="visually-hidden" type="checkbox" name="interaction-3" id="interaction-3" value="Электронное письмо посредством e-mail" checked>
+                <input type="checkbox" name="interaction-3" id="interaction-3" value="Электронное письмо посредством e-mail" checked>
                 <label for="interaction-3">Электронное письмо посредством e-mail</label>
               </div>
               <div class="form-checkbox">
-                <input class="visually-hidden" type="checkbox" name="interaction-4" id="interaction-4" value="Официальное письмо">
+                <input type="checkbox" name="interaction-4" id="interaction-4" value="Официальное письмо">
                 <label for="interaction-4">Официальное письмо</label>
               </div>
               <div class="form-checkbox">
-                <input class="visually-hidden" type="checkbox" name="interaction-5" id="interaction-5" value="Обращение на портале" checked>
+                <input type="checkbox" name="interaction-5" id="interaction-5" value="Обращение на портале" checked>
                 <label for="interaction-5">Обращение на портале</label>
               </div>
               <div class="form-checkbox">
-                <input class="visually-hidden" type="checkbox" name="interaction-6" id="interaction-6" value="Ничего этого не знаю">
+                <input type="checkbox" name="interaction-6" id="interaction-6" value="Ничего этого не знаю">
                 <label for="interaction-6">Ничего этого не знаю</label>
               </div>
               <div class="form-checkbox">
-                <input class="visually-hidden" type="checkbox" name="interaction-7" id="interaction-7" value="Другое">
+                <input type="checkbox" name="interaction-7" id="interaction-7" value="Другое">
                 <label for="interaction-7">Другое</label>
               </div>
             </div>
@@ -87,13 +87,10 @@
               <div class="form__range-wrapper form-range">
                 <div class="form-range__value">
                   <span>1</span>
-                  <span>5</span>
+                  <!-- <span>5</span> -->
                   <span>10</span>
                 </div>
-                <div class="form-range__track">
-                  <div class="form-range__fill"></div>
-                  <button type="button" class="form-range__button"></button>
-                </div>
+                <div id="poll-range"></div>
                 <div class="form-range__description">
                   <span>очень плохо</span>
                   <span>очень хорошо</span>
@@ -104,11 +101,11 @@
               <p class="form__question">Обращались ли в течение последнего года в орган государственной власти для получения государственных (муниципальных) услуг?</p>
               <p class="form__description">Выберите один вариант ответа</p>
               <div class="form-radio">
-                <input class="visually-hidden" type="radio" name="appeal" id="appeal-yes" value="да" checked>
+                <input type="radio" name="appeal" id="appeal-yes" value="да" checked>
                 <label for="appeal-yes">Да</label>
               </div>
               <div class="form-radio">
-                <input class="visually-hidden" type="radio" name="appeal" id="appeal-no" value="нет">
+                <input type="radio" name="appeal" id="appeal-no" value="нет">
                 <label for="appeal-no">Нет</label>
               </div>
             </div>
@@ -116,19 +113,19 @@
               <p class="form__question">Сколько составило время ожидания?</p>
               <p class="form__description">Выберите один вариант ответа</p>
               <div class="form-radio">
-                <input class="visually-hidden" type="radio" name="time" id="time-1" value="Менее 15 минут" checked>
+                <input type="radio" name="time" id="time-1" value="Менее 15 минут" checked>
                 <label for="time-1">Менее 15 минут</label>
               </div>
               <div class="form-radio">
-                <input class="visually-hidden" type="radio" name="time" id="time-2" value="От 15 минут до 30 минут">
+                <input type="radio" name="time" id="time-2" value="От 15 минут до 30 минут">
                 <label for="time-2">От 15 минут до 30 минут</label>
               </div>
               <div class="form-radio">
-                <input class="visually-hidden" type="radio" name="time" id="time-3" value="От 30 минут до часа">
+                <input type="radio" name="time" id="time-3" value="От 30 минут до часа">
                 <label for="time-3">От 30 минут до часа</label>
               </div>
               <div class="form-radio">
-                <input class="visually-hidden" type="radio" name="time" id="time-4" value="Более 1 часа">
+                <input type="radio" name="time" id="time-4" value="Более 1 часа">
                 <label for="time-4">Более 1 часа</label>
               </div>
             </div>
@@ -136,15 +133,15 @@
               <p class="form__question">Знаете ли Вы о программах, реализуемых органами государственной и муниципальной власти, направленных на формирование кадрового&nbsp;резерва?</p>
               <p class="form__description">Выберите один вариант ответа</p>
               <div class="form-radio">
-                <input class="visually-hidden" type="radio" name="reserve" id="reserve-yes" value="Да, знаю точно" checked>
+                <input type="radio" name="reserve" id="reserve-yes" value="Да, знаю точно" checked>
                 <label for="reserve-yes">Да, знаю точно</label>
               </div>
               <div class="form-radio">
-                <input class="visually-hidden" type="radio" name="reserve" id="reserve-about" value="Да, примерно знаю">
+                <input type="radio" name="reserve" id="reserve-about" value="Да, примерно знаю">
                 <label for="reserve-about">Да, примерно знаю</label>
               </div>
               <div class="form-radio">
-                <input class="visually-hidden" type="radio" name="reserve" id="reserve-no" value="нет">
+                <input type="radio" name="reserve" id="reserve-no" value="нет">
                 <label for="reserve-no">Нет</label>
               </div>
             </div>
@@ -152,39 +149,39 @@
               <p class="form__question">О каких способах взаимодействия с органами власти Вам известно?</p>
               <p class="form__description">Выберите один или несколько вариантов ответа</p>
               <div class="form-checkbox">
-                <input class="visually-hidden" type="checkbox" name="social-1" id="social-1" value="Служащий">
+                <input type="checkbox" name="social-1" id="social-1" value="Служащий">
                 <label for="social-1">Служащий</label>
               </div>
               <div class="form-checkbox">
-                <input class="visually-hidden" type="checkbox" name="social-1-2" id="social-1-2" value="Государственный, муниципальный служащий" checked>
+                <input type="checkbox" name="social-1-2" id="social-1-2" value="Государственный, муниципальный служащий" checked>
                 <label for="social-1-2">Государственный, муниципальный служащий</label>
               </div>
               <div class="form-checkbox">
-                <input class="visually-hidden" type="checkbox" name="social-2" id="social-2" value="Рабочий">
+                <input type="checkbox" name="social-2" id="social-2" value="Рабочий">
                 <label for="social-2">Рабочий</label>
               </div>
               <div class="form-checkbox">
-                <input class="visually-hidden" type="checkbox" name="social-3" id="social-3" value="Пенсионер">
+                <input type="checkbox" name="social-3" id="social-3" value="Пенсионер">
                 <label for="social-3">Пенсионер</label>
               </div>
               <div class="form-checkbox">
-                <input class="visually-hidden" type="checkbox" name="social-4" id="social-4" value="Студент (вуза, техникума, колледжа)">
+                <input type="checkbox" name="social-4" id="social-4" value="Студент (вуза, техникума, колледжа)">
                 <label for="social-4">Студент (вуза, техникума, колледжа)</label>
               </div>
               <div class="form-checkbox">
-                <input class="visually-hidden" type="checkbox" name="social-5" id="social-5" value="Безработный, временно не работающий">
+                <input type="checkbox" name="social-5" id="social-5" value="Безработный, временно не работающий">
                 <label for="social-5">Безработный, временно не работающий</label>
               </div>
               <div class="form-checkbox">
-                <input class="visually-hidden" type="checkbox" name="social-6" id="social-6" value="Предприниматель">
+                <input type="checkbox" name="social-6" id="social-6" value="Предприниматель">
                 <label for="social-6">Предприниматель</label>
               </div>
               <div class="form-checkbox">
-                <input class="visually-hidden" type="checkbox" name="social-7" id="social-7" value="Военнослужащий, работник правоохранительных органов" checked>
+                <input type="checkbox" name="social-7" id="social-7" value="Военнослужащий, работник правоохранительных органов" checked>
                 <label for="social-7">Военнослужащий, работник правоохранительных органов</label>
               </div>
               <div class="form-checkbox">
-                <input class="visually-hidden" type="checkbox" name="social-8" id="social-8" value="Другое">
+                <input type="checkbox" name="social-8" id="social-8" value="Другое">
                 <label for="social-8">Другое</label>
               </div>
             </div>
@@ -201,6 +198,7 @@
     </main>
 
     <include src="source/components/footer.html"></include>
+    <include src="source/components/up-btn.html"></include>
 
     <script src="js/libs.js"></script>
     <script src="js/main.min.js"></script>

@@ -8,7 +8,7 @@
   background-color: $color-bg;
   border-radius: 5px;
 
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $desktop-width - 1) {
     flex-direction: column;
     margin-top: 64px;
     margin-bottom: 88px;
@@ -27,7 +27,7 @@
   @include font-h5;
   color: $grey;
 
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $desktop-width - 1) {
     max-width: 442px;
     margin-right: 0;
     margin-bottom: 24px;

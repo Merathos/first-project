@@ -12,6 +12,7 @@
   border-radius: 5px;
 
   @media (max-width: $tablet-width - 1) {
+    justify-content: space-around;
     width: 369px;
     padding: 16px 16px;
   }
@@ -45,7 +46,7 @@
   text-decoration: none;
   text-transform: uppercase;
   color: $grey-default;
-  transition: color 0.4s ease;
+  transition: color $style-change-duration;
 
   &:hover,
   &:focus {

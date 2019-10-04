@@ -3,14 +3,21 @@
   <include src="source/components/head.html"></include>
 
   <body class="page-body">
+    <include src="source/components/special-popup.html"></include>
+
     <include src="source/components/header.html"></include>
 
     <main class="main-page">
       <h1 class="visually-hidden">Главная страница</h1>
       <div class="news-notice">
         <div class="news-notice__wrap">
-          <div class="news-notice__news">
-            <h2 class="news-notice__title news-notice__title--news">Новости</h2>
+          <div class="news-notice__news section">
+            <div class="section__head">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#icon-news"></use>
+              </svg>
+              <h2 class="section__title">Новости</h2>
+            </div>
             <ul class="news-notice__list">
               <li class="news-notice__item">
                 <time class="news-notice__date" datetime="2019-04-02">02.04.2019</time>
@@ -38,8 +45,13 @@
               </li>
             </ul>
           </div>
-          <div class="news-notice__notice">
-            <h2 class="news-notice__title news-notice__title--notice">Уведомления</h2>
+          <div class="news-notice__notice section">
+            <div class="section__head">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#icon-notification"></use>
+              </svg>
+              <h2 class="section__title">Уведомления</h2>
+            </div>
             <ul class="news-notice__list">
               <li class="news-notice__item">
                 <time class="news-notice__date news-notice__date--notice" datetime="2019-04-02">02.04.2019</time>
@@ -84,8 +96,8 @@
           <div class="social__text">
             <p class="social__text-inner">Вы можете подписаться на самые важные<br>и актуальные обновления проектов и событий</p>
           </div>
-          <a class="social__link social__link--tick link-arrow" href="#">
-            <span>Подписаться</span>
+          <a class="social__link social__link--subscribe link-arrow" href="#">
+            Подписаться
           </a>
         </div>
         <div class="social__item social__item--icq">
@@ -102,9 +114,12 @@
         </div>
       </section>
 
-      <section class="poll">
-        <div class="poll__head">
-          <h2 class="poll__title">Опросы</h2>
+      <section class="poll section">
+        <div class="poll__head section__head">
+          <svg width="32" height="33" viewBox="0 0 32 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#icon-poll"></use>
+          </svg>
+          <h2 class="poll__title section__title">Опросы</h2>
           <a href="#" class="poll__archive-link link-arrow link-arrow--grey">
             <span>Архив опросов</span>
             <svg width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -194,9 +209,12 @@
         </a>
       </section>
 
-      <section class="project">
-        <div class="project__head">
-          <h2 class="project__title">Проекты на голосовании</h2>
+      <section class="project section">
+        <div class="project__head section__head">
+          <svg width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#icon-projects"></use>
+          </svg>
+          <h2 class="project__title section__title">Проекты на голосовании</h2>
           <a href="#" class="project__archive-link link-arrow link-arrow--grey">
             <span>Архив<span class="project__hide"> проектов</span></span>
             <svg width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -213,10 +231,10 @@
           <p class="project__info-text">
             Голосование завершено, победители указаны в соответствующих категориях
           </p>
-          <div class="project__info-doc">
-            <a class="project__doc-name" href="#" download>Протокол</a>
-            <p class="project__doc-size">3,2 МБ</p>
-          </div>
+          <a class="project__info-doc" href="#">
+            <div class="project__doc-name" href="#" download>Протокол</div>
+            <div class="project__doc-size">3,2 МБ</div>
+          </a>
         </div>
         <ul class="project__list js_short_list">
           <li class="project__item project__item--library">
@@ -463,8 +481,11 @@
       </section>
 
       <section class="discussion">
-        <div class="discussion__head">
-          <h2 class="discussion__title">Обсуждения</h2>
+        <div class="discussion__head section__head">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#icon-discussion"></use>
+          </svg>
+          <h2 class="discussion__title section__title">Обсуждения</h2>
           <a href="#" class="discussion__archive-link link-arrow link-arrow--grey">
             <span>Архив обсуждений</span>
             <svg width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -600,8 +621,8 @@
     </main>
 
     <include src="source/components/footer.html"></include>
-
     <include src="source/components/cookie.html"></include>
+    <include src="source/components/up-btn.html"></include>
 
     <script src="js/libs.js"></script>
     <script src="js/main.min.js"></script>

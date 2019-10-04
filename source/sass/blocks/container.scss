@@ -3,7 +3,7 @@
   padding: 0 40px;
   margin: 0 auto;
 
-  @include tablet {
+  @media (max-width: $tablet-width - 1) {
     padding: 0 24px;
 
     &--desktop-only {
@@ -11,7 +11,7 @@
     }
   }
 
-  @include mobile {
+  @media (max-width: $mobile-max-width) {
     padding: 0 16px;
 
     &--desktop-only {

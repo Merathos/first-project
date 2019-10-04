@@ -2,6 +2,7 @@
   position: fixed;
   bottom: 0;
   left: 0;
+  z-index: 1;
 
   width: 100%;
 
@@ -13,25 +14,21 @@
   }
 }
 
-.cookie-wrap {
+.cookie__wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: $desktop-width;
-  margin: 0 auto;
-  padding: 16px 40px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 
-  @media (max-width: $desktop-width - 81) {
+  @include tablet {
     flex-direction: column;
-    padding: 16px 24px;
-  }
-
-  @media (max-width: $tablet-width - 1) {
-    padding: 16px;
   }
 }
 
 .cookie__title {
+  margin: 0;
+  margin-bottom: 10px;
   padding: 0;
 
   font-size: rem(15px);
@@ -40,20 +37,36 @@
 }
 
 .cookie__text {
+  margin: 0;
+
   font-size: rem(13px);
   line-height: 1.3;
   color: $grey;
 
-  @media (max-width: $desktop-width - 81) {
+  @include tablet {
     padding-bottom: 10px;
   }
 }
 
 .cookie__button {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 175px;
   margin-right: 16px;
   margin-left: 40px;
+  padding-right: 20px;
+  padding-left: 20px;
 
-  @media (max-width: $desktop-width - 81) {
+  @media (min-width: $desktop-width) and (max-width: 1250px) {
+    margin-right: 32px;
+  }
+
+  @include tablet {
     margin: 0;
+  }
+
+  @include mobile {
+    width: calc(100% - 58px);
+    align-self: flex-start;
   }
 }
