@@ -1,0 +1,23 @@
+.text-hidden__container {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.4s ease, max-height 0.4s ease;
+  display: none;
+
+  &--open {
+    max-height: 100%;
+    opacity: 1;
+    display: block;
+    transition: opacity 0.4s ease, max-height 0.4s ease;
+  }
+}
+
+.text-hidden__btn {
+  &--open {
+    & svg {
+      transition: transform $style-change-duration;
+      transform: rotate(90deg);
+    }
+  }
+}
