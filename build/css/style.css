@@ -3274,7 +3274,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   @media (max-width: 767px) {
     .special-popup__reset {
       bottom: 40px;
-      left: 16px; } }
+      left: 16px;
+      width: calc(100% - 32px); } }
 
 .news-notice {
   -webkit-box-sizing: border-box;

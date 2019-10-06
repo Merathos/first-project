@@ -308,5 +308,6 @@
   @include mobile {
     bottom: 40px;
     left: 16px;
+    width: calc(100% - 32px);
   }
 }
