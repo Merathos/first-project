@@ -7312,7 +7312,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       outline: none; }
   .answers__count:hover {
     background-color: #ffffff; }
-    .answers__count:hover input {
+    .answers__count:hover input[type="text"] {
+      background-color: #ffffff; }
+  .answers__count--hover {
+    background-color: #ffffff; }
+    .answers__count--hover input[type="text"] {
       background-color: #ffffff; }
 
 @media (min-width: 1200px) {
@@ -7382,18 +7386,22 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
             animation: tooltips-vert 300ms ease-out forwards; } }
 
 .text-hidden__container {
-  opacity: 0;
-  max-height: 0;
+  max-height: 162px;
   overflow: hidden;
-  -webkit-transition: opacity 0.4s ease, max-height 0.4s ease;
-  transition: opacity 0.4s ease, max-height 0.4s ease;
-  display: none; }
+  -webkit-transition: max-height 0.2s;
+  transition: max-height 0.2s; }
+  @media (max-width: 767px) {
+    .text-hidden__container {
+      max-height: 135px; } }
+  .text-hidden__container--comment {
+    max-height: 54px; }
+    @media (max-width: 400px) {
+      .text-hidden__container--comment {
+        max-height: 81px; } }
   .text-hidden__container--open {
     max-height: 100%;
-    opacity: 1;
-    display: block;
-    -webkit-transition: opacity 0.4s ease, max-height 0.4s ease;
-    transition: opacity 0.4s ease, max-height 0.4s ease; }
+    -webkit-transition: max-height 0.2s;
+    transition: max-height 0.2s; }
 
 .text-hidden__btn--open svg {
   -webkit-transition: -webkit-transform 0.2s;

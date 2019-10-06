@@ -330,7 +330,15 @@
   &:hover {
     background-color: $white;
 
-    & input {
+    & input[type="text"] {
+      background-color: $white;
+    }
+  }
+
+  &--hover {
+    background-color: $white;
+
+    & input[type="text"] {
       background-color: $white;
     }
   }
