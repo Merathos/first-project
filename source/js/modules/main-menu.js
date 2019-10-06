@@ -10,6 +10,9 @@
   }
 
 
+  var windowWidth = document.documentElement.clientWidth;
+
+
   var topBar = header.querySelector('.page-header__bar');
 
   var menu = header.querySelector('.main-menu');
@@ -24,32 +27,41 @@
   };
 
 
+  var openMenu = function () {
+    header.classList.add('page-header--open-menu');
+    bodyScrollLock.disableBodyScroll(menuContainer);
+
+    menuBtn.classList.add('menu-btn--close');
+    menuBtnText.textContent = 'Закрыть основное меню';
+  };
+
+  var closeMenu = function () {
+    header.classList.remove('page-header--open-menu');
+    bodyScrollLock.enableBodyScroll(menuContainer);
+
+    menuBtn.classList.remove('menu-btn--close');
+    menuBtnText.textContent = 'Открыть основное меню';
+  };
+
+
   var onMenuBtnClick = function () {
-    header.classList.toggle('page-header--open-menu');
+    if (header.classList.contains('page-header--open-menu')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
 
     adjustMenuHeight();
-
-    if (header.classList.contains('page-header--open-menu')) {
-      bodyScrollLock.disableBodyScroll(menuContainer);
-
-      menuBtn.classList.add('menu-btn--close');
-      menuBtnText.textContent = 'Закрыть меню';
-    } else {
-      bodyScrollLock.enableBodyScroll(menuContainer);
-
-      menuBtn.classList.remove('menu-btn--close');
-      menuBtnText.textContent = 'Открыть меню';
-    }
   };
 
   var onWindowResize = function () {
-    adjustMenuHeight();
+    if (windowWidth !== document.documentElement.clientWidth) {
+      windowWidth = document.documentElement.clientWidth;
 
-    if (header.classList.contains('page-header--open-menu') && document.documentElement.clientWidth >= window.const.resolution.DESKTOP) {
-      header.classList.remove('page-header--open-menu');
-      menuBtn.classList.remove('menu-btn--close');
-      document.body.classList.remove('page-body--no-scroll');
+      closeMenu();
     }
+
+    adjustMenuHeight();
   };
 
 

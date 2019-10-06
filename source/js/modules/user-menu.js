@@ -17,28 +17,31 @@
   var list = menu.querySelector('.user-menu__list');
 
 
-  var onMenuBtnClick = function () {
-    menu.classList.toggle('user-menu--open');
-    overlay.classList.toggle('user-menu__overlay--shown');
+  var openDropdown = function () {
+    menu.classList.add('user-menu--open');
+    overlay.classList.add('user-menu__overlay--shown');
 
-    list.style.height =
-      (list.offsetHeight === 0) ?
-        list.scrollHeight + 'px'
-        :
-        '';
-
-    menuBtnText.textContent =
-      menu.classList.contains('user-menu--open') ?
-        'Закрыть меню'
-        :
-        'Открыть меню';
+    menuBtnText.textContent = 'Закрыть меню пользователя';
   };
 
   var closeDropdown = function () {
     menu.classList.remove('user-menu--open');
     overlay.classList.remove('user-menu__overlay--shown');
 
-    menuBtnText.textContent = 'Открыть меню';
+    menuBtnText.textContent = 'Открыть меню пользователя';
+  };
+
+
+  var onMenuBtnClick = function () {
+    if (menu.classList.contains('user-menu--open')) {
+      closeDropdown();
+
+      list.style.height = '';
+    } else {
+      openDropdown();
+
+      list.style.height = list.scrollHeight + 'px';
+    }
   };
 
 
