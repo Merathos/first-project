@@ -1,0 +1,92 @@
+.vote-popup {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 602px;
+  padding: 12px 16px;
+  font-size: rem(15px);
+  line-height: rem(20px);
+  color: $white;
+  background-color: $dark-text;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 8px rgba(17, 35, 56, 0.4);
+  transform: translateX(-50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s;
+
+  &--shown {
+    pointer-events: auto;
+    opacity: 1;
+  }
+}
+
+.vote-popup__text {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  margin-right: 30px;
+}
+
+.vote-popup__icon {
+  display: block;
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+}
+
+.vote-popup__revoke-btn {
+  padding: 0;
+  color: $white;
+  background-color: transparent;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+  opacity: 0.7;
+  outline: none;
+  transition: opacity $style-change-duration;
+
+  &:focus {
+    opacity: 1;
+  }
+
+  &:focus:not(.focus-visible) {
+    opacity: 0.7;
+  }
+
+  &:hover:not(.focus-visible) {
+    opacity: 1;
+  }
+}
+
+
+@include tablet {
+  .vote-popup__revoke-btn {
+    &:hover:not(.focus-visible) {
+      opacity: 0.7;
+    }
+
+    &:active:not(.focus-visible) {
+      opacity: 1;
+    }
+  }
+}
+
+
+@include mobile {
+  .vote-popup {
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 2 * #{$mobile-padding});
+  }
+
+  .vote-popup__text {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+}

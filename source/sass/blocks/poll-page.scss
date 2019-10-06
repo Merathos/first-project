@@ -4,6 +4,7 @@
   @include tablet {
     padding-bottom: 80px;
   }
+
   @include mobile {
     padding-bottom: 64px;
   }
@@ -117,6 +118,14 @@
 
     background-image: url("../img/icon-odt.svg");
     background-repeat: no-repeat;
+  }
+}
+
+.poll-page__doc-item {
+  max-width: 100%;
+
+  @include mobile {
+    width: 100%;
   }
 }
 

@@ -28,7 +28,7 @@
 
   &:hover:not(.focus-visible) {
     color: $grey;
-    border-color: $grey;
+    border-color: $light-blue-accent;
   }
 
   svg {
@@ -53,12 +53,12 @@
 
     &:hover:not(.focus-visible) {
       color: $grey-default;
-      border-color: $light-grey;
+      border-color: $light-blue-accent;
     }
 
     &:active:not(.focus-visible) {
       color: $grey;
-      border-color: $grey;
+      border-color: $light-blue-accent;
     }
   }
 }

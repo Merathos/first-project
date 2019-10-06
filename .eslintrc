@@ -7,4 +7,9 @@ extends:
   "htmlacademy/es5"
 
 globals:
+  "Sticky": true
   "bodyScrollLock": true
+
+rules: {
+    "no-new": 0
+  }

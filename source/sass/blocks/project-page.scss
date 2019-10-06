@@ -1,0 +1,321 @@
+.project-page {
+  padding-bottom: 122px;
+}
+
+.project-page__container {
+  position: relative;
+}
+
+.project-page__meta,
+.project-page__content,
+.project-page__survey {
+  width: 740px;
+}
+
+.project-page__meta {
+  margin-bottom: 40px;
+}
+
+.project-page__budget {
+  padding: 24px;
+  margin: 0;
+  font-size: rem(13px);
+  line-height: rem(17px);
+  color: $grey;
+}
+
+.project-page__budget-value {
+  display: block;
+  margin-top: 8px;
+  font-weight: 300;
+  font-size: rem(40px);
+  line-height: rem(47px);
+  color: $dark-text;
+}
+
+.project-page__content {
+  grid-area: content;
+  margin-bottom: 48px;
+}
+
+.project-page__files {
+  margin-bottom: 48px;
+}
+
+.project-page__text {
+  margin-bottom: 40px;
+}
+
+.project-page__text-btn {
+  display: none;
+}
+
+.project-page__gallery {
+  margin-bottom: 48px;
+}
+
+.project-page__project-link {
+  align-items: flex-start;
+  margin-bottom: 48px;
+  font-size: rem(18px);
+  line-height: rem(23px);
+  user-select: none;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+  }
+}
+
+.project-page__video-link {
+  align-items: flex-start;
+  padding: 23px;
+  margin-bottom: 48px;
+  font-size: rem(18px);
+  line-height: rem(23px);
+  user-select: none;
+  border: 1px solid $light-grey;
+  border-radius: $border-radius;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+  }
+}
+
+.project-page__examination-date {
+  display: flex;
+  align-items: center;
+  padding: 24px;
+  margin: 0;
+  margin-bottom: 48px;
+  font-size: rem(18px);
+  line-height: rem(23px);
+  background-color: $color-bg;
+  border-radius: $border-radius;
+
+  svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    margin-right: 17px;
+  }
+}
+
+.project-page__survey {
+  padding: 23px 24px;
+  margin-bottom: 40px;
+  background-color: $color-bg;
+  border-radius: $border-radius;
+}
+
+.project-page__survey-container {
+  padding-bottom: 34px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid $light-grey;
+
+  .form-radio:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.project-page__survey-btn {
+  width: 230px;
+}
+
+.project-page__back-btn {
+  width: 372px;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-size: rem(14px);
+  line-height: rem(19px);
+}
+
+
+@include desktop-only {
+  .project-page__vote {
+    &--js {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 360px;
+    }
+  }
+}
+
+
+@include tablet {
+  .project-page {
+    padding-bottom: 88px;
+  }
+
+  .project-page__content,
+  .project-page__survey {
+    width: 100%;
+  }
+
+  .project-page__meta,
+  .project-page__vote,
+  .project-page__text,
+  .project-page__files,
+  .project-page__project-link,
+  .project-page__video-link,
+  .project-page__examination-date {
+    width: calc(100% - 2 * #{$tablet-padding});
+    margin-right: $tablet-padding;
+    margin-left: $tablet-padding;
+  }
+
+  .project-page__meta {
+    margin-bottom: 16px;
+  }
+
+  .project-page__vote {
+    margin-bottom: 56px;
+  }
+
+  .project-page__text p:not([class]) {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+
+@include mobile {
+  .project-page {
+    padding-bottom: 64px;
+  }
+
+  .project-page__meta,
+  .project-page__vote,
+  .project-page__text,
+  .project-page__files,
+  .project-page__project-link,
+  .project-page__video-link,
+  .project-page__examination-date {
+    width: calc(100% - 2 * #{$mobile-padding});
+    margin-right: $mobile-padding;
+    margin-left: $mobile-padding;
+  }
+
+  .project-page__text {
+    margin-bottom: 48px;
+
+    p:not([class]) {
+      width: 100%;
+      margin-right: 0;
+      margin-left: 0;
+    }
+  }
+
+  .project-page__text-container {
+    overflow: hidden;
+    transition: height 0.5s;
+  }
+
+  .project-page__text--collapsed .project-page__text-container {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 54px;
+      background-image: linear-gradient(to top, $white 0%, rgba($white, 0) 100%);
+    }
+  }
+
+  .project-page__text--js .project-page__text-btn {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin-top: 12px;
+    background-color: transparent;
+    border: none;
+    font-size: rem(15px);
+    line-height: rem(20px);
+    cursor: pointer;
+
+    .project-page__text-btn-caption,
+    svg {
+      pointer-events: none;
+    }
+
+    svg {
+      width: 13px;
+      height: 13px;
+      margin-left: 10px;
+      fill: currentColor;
+      transform: rotate(90deg);
+      transition: transform 0.5s;
+    }
+  }
+
+  .project-page__text--collapsed .project-page__text-btn svg {
+    transform: rotate(-90deg);
+  }
+
+  .project-page__gallery {
+    margin-bottom: 40px;
+  }
+
+  .project-page__project-link {
+    display: block;
+    margin-bottom: 32px;
+
+    svg {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+  }
+
+  .project-page__video-link {
+    display: block;
+    padding: 23px;
+    margin-bottom: 32px;
+
+    svg {
+      margin-right: 0;
+      margin-bottom: 16px;
+    }
+  }
+
+  .project-page__examination-date {
+    display: block;
+    padding: 24px;
+    margin-bottom: 32px;
+
+    svg {
+      margin-right: 0;
+      margin-bottom: 14px;
+    }
+  }
+
+  .project-page__survey {
+    padding: 23px 16px;
+    margin-bottom: 32px;
+  }
+
+  .project-page__survey-btn {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .project-page__back-btn {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .project-page__mobile-hidden {
+    display: none;
+  }
+}

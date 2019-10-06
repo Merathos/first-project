@@ -1,0 +1,312 @@
+.special-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 110;
+
+  width: 100%;
+  min-width: $mobile-width;
+
+  &.js-hide {
+    display: none;
+  }
+}
+
+.special-popup__wrap {
+  position: relative;
+
+  box-sizing: border-box;
+  width: 100%;
+  max-width: $desktop-width - 80;
+  margin: 0 auto;
+  padding: 40px;
+
+  background-color: $white;
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 4px 15px rgba(46, 67, 102, 0.1);
+
+  @include tablet {
+    padding: 32px 82px 148px 24px;
+  }
+
+  @include mobile {
+    padding: 32px 16px 132px;
+  }
+}
+
+.special-popup__btn-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  @include tablet {
+    top: 24px;
+    right: 24px;
+  }
+
+  @include mobile {
+    top: 16px;
+    right: 16px;
+  }
+
+  &:hover {
+    svg {
+      stroke: $blue-accent;
+    }
+  }
+
+  svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+
+    transition: stroke $style-change-duration;
+
+    stroke: $dark-text;
+  }
+}
+
+.special-popup__title {
+  padding-bottom: 32px;
+
+  font-size: rem(24px);
+  line-height: rem(28px);
+}
+
+.special-popup__group-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include tablet {
+    flex-direction: column;
+  }
+}
+
+.special-popup__group {
+  flex-shrink: 0;
+  max-width: 100%;
+  margin-bottom: 48px;
+
+  @include tablet {
+    margin-bottom: 56px;
+    overflow: hidden;
+  }
+
+  &:first-child {
+    margin-right: 40px;
+
+    @include tablet {
+      margin-right: 0;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.special-popup__list {
+  position: relative;
+
+  display: flex;
+  margin: 0;
+  padding: 0 0 24px;
+
+  list-style: none;
+
+  border-bottom: 1px solid $light-grey;
+
+  @include tablet {
+    width: fit-content;
+    min-width: 100%;
+  }
+
+  &--font {
+    padding-bottom: 20px;
+
+    .special-popup__item:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
+}
+
+.special-popup__item {
+  flex-shrink: 0;
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+}
+
+.special-popup__name {
+  padding-bottom: 16px;
+
+  font-size: rem(18px);
+  line-height: 1.3;
+}
+
+.special-popup__scroll-wrap {
+  @include tablet {
+    max-width: 100%;
+    margin-bottom: -30px;
+    padding-bottom: 30px;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.special-popup__btn-size,
+.special-popup__btn-color,
+.special-popup__btn-font {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-size: 18px;
+  line-height: 1.3;
+
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.special-popup__btn-size {
+  width: 44px;
+  height: 44px;
+
+  background-color: $light-grey;
+  border: 1px solid $light-grey;
+  border-radius: 4px;
+
+  &--S {
+    font-size: 18px;
+  }
+
+  &--M {
+    font-size: 24px;
+  }
+
+  &--L {
+    font-size: 32px;
+  }
+
+  &.active {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -26px;
+      left: 0;
+
+      width: 100%;
+      height: 5px;
+
+      background-color: $blue-default;
+    }
+  }
+}
+
+.special-popup__btn-color {
+  padding: 10px 24px 9px;
+
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+
+  &.active {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -26px;
+      left: 0;
+
+      width: 100%;
+      height: 5px;
+
+      background-color: $blue-default;
+    }
+  }
+
+  &--standard {
+    color: $dark-text;
+
+    background-color: $white;
+    border-color: $grey-default;
+  }
+
+  &--inverse {
+    color: $white;
+
+    background-color: $dark;
+    border-color: $dark;
+  }
+
+  &--blue {
+    color: $dark-text;
+
+    background-color: $light-blue-accent;
+    border-color: $light-blue-accent;
+  }
+
+  &--comfort {
+    color: $comfort;
+
+    background-color: $light-yellow;
+    border-color: $light-yellow;
+  }
+
+  &--brown {
+    color: $light-green;
+
+    background-color: $brown;
+    border-color: $brown;
+  }
+}
+
+.special-popup__btn-font {
+  &.active {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -21px;
+      left: 0;
+
+      width: 100%;
+      height: 5px;
+
+      background-color: $blue-default;
+    }
+  }
+}
+
+.special-popup__reset {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+
+  @include tablet {
+    bottom: 48px;
+    left: 24px;
+  }
+
+  @include mobile {
+    bottom: 40px;
+    left: 16px;
+  }
+}

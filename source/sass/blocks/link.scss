@@ -1,0 +1,35 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  color: $blue-default;
+  text-decoration: none;
+  outline: none;
+  transition: color $style-change-duration;
+
+  &:focus {
+    color: $blue-accent;
+  }
+
+  &:focus:not(.focus-visible) {
+    color: $blue-default;
+  }
+
+  &:active:not(.focus-visible) {
+    color: $blue-accent;
+  }
+
+  svg {
+    flex-shrink: 0;
+    display: block;
+    transition: fill $style-change-duration stroke $style-change-duration;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .link {
+    &:hover:not(.focus-visible) {
+      color: $blue-accent;
+    }
+  }
+}

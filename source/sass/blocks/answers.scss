@@ -217,7 +217,7 @@
 
 .answers__text-wrapper {
   padding: 16px;
-  background-color: $light-green;
+  background-color: $pale-green;
   border-radius: 5px;
 
   @media (max-width: $desktop-width - 1) {
@@ -246,7 +246,7 @@
   }
 
   &--accent {
-    background-color: $light-red;
+    background-color: $pale-red;
   }
 }
 
