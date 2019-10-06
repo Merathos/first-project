@@ -1,0 +1,28 @@
+.discussion-list {
+  margin-top: 24px;
+
+  @media (max-width: $tablet-width - 1) {
+    margin-top: 0;
+  }
+}
+
+.discussion-list__button {
+  width: 360px;
+  margin: 0 auto;
+  margin-top: 24px;
+
+  @media (max-width: $tablet-width - 1) {
+    margin-top: 40px;
+    margin-bottom: 32px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    width: 100%;
+    margin-top: 32px;
+  }
+}
+
+.discussion-list__button-wrapper {
+  display: flex;
+  justify-content: center;
+}

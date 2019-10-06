@@ -1,0 +1,31 @@
+.text-hidden__container {
+  max-height: 162px;
+  overflow: hidden;
+  transition: max-height $style-change-duration;
+
+  @media (max-width: $tablet-width - 1) {
+    max-height: 135px;
+  }
+
+  &--comment {
+    max-height: 54px;
+
+    @media (max-width: $mobile-max-width) {
+      max-height: 81px;
+    }
+  }
+
+  &--open {
+    max-height: 100%;
+    transition: max-height $style-change-duration;
+  }
+}
+
+.text-hidden__btn {
+  &--open {
+    & svg {
+      transition: transform $style-change-duration;
+      transform: rotate(90deg);
+    }
+  }
+}

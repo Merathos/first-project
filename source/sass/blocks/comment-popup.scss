@@ -1,0 +1,46 @@
+.comment-popup {
+  & .popup__close-btn {
+    margin-left: auto;
+
+    @media (max-width: $tablet-width - 1) {
+      margin-right: 24px;
+      margin-top: 6px;
+      margin-bottom: 6px;
+
+      & svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    @media (max-width: $mobile-max-width) {
+      margin-right: 0;
+      margin-top: 0;
+      margin-bottom: 18px;
+
+      & svg {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+.comment-popup__container {
+  padding-top: 115px;
+  padding-bottom: 48px;
+
+  @media (max-width: $desktop-width - 1) {
+    padding: 0;
+  }
+}
+
+.comment-popup__content {
+  width: 930px;
+  border-radius: 5px;
+  background-color: $white;
+
+  @media (max-width: $desktop-width - 1) {
+    width: 100%;
+  }
+}

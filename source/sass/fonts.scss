@@ -38,6 +38,15 @@
   font-family: "Rubik";
   font-style: normal;
   font-display: swap;
+  font-weight: 500;
+  src: url("../fonts/Rubik-Medium-latin.woff2") format("woff2"),
+    url("../fonts/Rubik-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-display: swap;
   font-weight: 700;
   src: url("../fonts/Rubik-Bold.woff2") format("woff2"),
     url("../fonts/Rubik-Bold.woff") format("woff");
