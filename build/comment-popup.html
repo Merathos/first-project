@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8">
+  <title>Общественное голосование</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preload" href="fonts/Rubik-Light.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Rubik-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Rubik-Regular-cyrillic.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Rubik-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Rubik-Medium-latin.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Rubik-Bold.woff2" as="font" crossorigin="anonymous">
+  <link href="css/style.min.css" rel="stylesheet">
+</head>
+
+
+  <body class="page-body">
+    <header class="page-header">
+  <div class="page-header__bar">
+    <div class="page-header__container container">
+      <a class="logo-link" href="#">
+        <img class="page-header__roi-logo" width="180" height="56" src="img/roi-logo.svg" alt="Российская общественная инициатива">
+      </a>
+
+      <a class="page-header__link page-header__site-name" href="#">Общественное голосование</a>
+
+      <a class="page-header__link page-header__version-btn page-header__version-btn--bar js-open-popup" href="#">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#icon-glasses"></use>
+        </svg>
+        Версия для слабовидящих
+      </a>
+
+      <button class="page-header__menu-btn menu-btn" type="button">
+        <span class="menu-btn__text visually-hidden">Открыть меню</span>
+        <span class="menu-btn__icon"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="page-header__main-menu main-menu">
+    <div class="container">
+      <div class="page-header__location-switcher location-switcher">
+        <p class="visually-hidden">Выберите регион голосования:</p>
+
+        <form action="#" method="post">
+          <div class="location-switcher__btn form-radio">
+            <input id="location-residence" type="radio" name="location" value="residence" checked="">
+            <label for="location-residence">
+              Адрес проживания
+              <span class="page-header__location-address location-switcher__address">Городской округ рабочий поселок Новогуровский</span>
+            </label>
+          </div>
+
+          <div class="location-switcher__btn form-radio">
+            <input id="location-registration" type="radio" name="location" value="registration">
+            <label for="location-registration">
+              Адрес регистрации
+              <span class="page-header__location-address location-switcher__address">Краснобродский городской округ</span>
+            </label>
+          </div>
+
+          <button class="location-switcher__show-btn button button--blue" type="submit">Показать</button>
+        </form>
+      </div>
+
+      <a class="page-header__link page-header__version-btn page-header__version-btn--menu js-open-popup" href="#">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#icon-glasses"></use>
+        </svg>
+        Версия для слабовидящих
+      </a>
+
+      <nav class="page-header__user-menu user-menu">
+        <div class="user-menu__overlay"></div>
+
+        <button class="user-menu__dropdown-btn" type="button">
+          <span class="user-menu__dropdown-btn-text visually-hidden">Открыть меню</span>
+
+          <svg class="user-menu__user-icon" width="16" height="16">
+            <use xlink:href="img/sprite.svg#icon-user"></use>
+          </svg>
+
+          <span class="user-menu__user-name">Анастасия</span>
+
+          <svg class="user-menu__dropdown-icon" width="13" height="13">
+            <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
+          </svg>
+        </button>
+
+        <ul class="user-menu__list">
+          <li class="user-menu__item">
+            <a class="page-header__link user-menu__link" href="#">Избранное</a>
+          </li>
+
+          <li class="user-menu__item">
+            <a class="page-header__link user-menu__link" href="#">Моя активность</a>
+          </li>
+
+          <li class="user-menu__item">
+            <a class="page-header__link user-menu__link" href="#">Выход</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <main class="page-content">
+      <div class="container">
+        <ul>
+          <li>
+            <a href="#" data-target="comment-add">Добавить комментарий</a>
+          </li>
+          <li>
+            <a href="#" data-target="comment-edit">Ваш комментарий - редактировать</a>
+          </li>
+          <li>
+            <a href="#" data-target="comment-your">Ваш комментарий</a>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+  <div class="container">
+    <div class="page-footer__top">
+      <ul class="page-footer__list">
+        <li class="page-footer__item">
+          <span>Сайт Президента Российской Федерации</span>
+          <a href="http://kremlin.ru/" target="_blank">kremlin.ru</a>
+        </li>
+        <li class="page-footer__item">
+          <span>Сайт Правительства Российской Федерации</span>
+          <a href="http://government.ru/" target="_blank">government.ru</a>
+        </li>
+        <li class="page-footer__item">
+          <span>Государственная дума Российской Федерации</span>
+          <a href="http://duma.gov.ru/" target="_blank">duma.gov.ru</a>
+        </li>
+      </ul>
+      <ul class="page-footer__list">
+        <li class="page-footer__item">
+          <span>Портал государственных услуг</span>
+          <a href="http://gosuslugi.ru/" target="_blank">gosuslugi.ru</a>
+        </li>
+        <li class="page-footer__item">
+          <span>Единый портал раскрытия информации о подготовке проектов нормативных актов</span>
+          <a href="http://regulation.gov.ru/" target="_blank">regulation.gov.ru</a>
+        </li>
+        <li class="page-footer__item">
+          <span>Официальный интернет-портал правовой информации</span>
+          <a href="http://pravo.gov.ru/" target="_blank">pravo.gov.ru</a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__bottom">
+      <span>© 2019</span>
+    </div>
+  </div>
+</footer>
+
+    <button class="page-body__up-btn">
+  <svg width="20" height="12" viewbox="0 0 33 12">
+    <use xlink:href="img/sprite.svg#icon-arrow"></use>
+  </svg>
+  <span class="visually-hidden">Наверх</span>
+</button>
+
+
+    <div class="comment-popup comment-popup--add popup">
+      <div class="comment-popup__container popup__container">
+        <div class="popup__overlay"></div>
+
+        <div class="comment-popup__content popup__content">
+          <div class="popup__bar popup__bar--top">
+            <button class="popup__close-btn" type="button">
+              <span class="visually-hidden">Закрыть</span>
+              <svg width="16" height="16">
+                <use xlink:href="img/sprite.svg#icon-cross"></use>
+              </svg>
+            </button>
+          </div>
+
+          <section class="comment-add">
+            <h2 class="visually-hidden">Добавить комментарий</h2>
+            <p>Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как текст-заполнитель или же текст&#8209;наполнитель. Иногда текст-«рыба» также используется композиторами при написании музыки. Они напевают его перед тем, как сочинены соответствующие слова. Уже в 16-том веке рыбные тексты имели широкое распространение у печатников.</p>
+            <div class="comment-add__textarea">
+              <textarea name="commenttextarea" id="comment-textarea" placeholder="Введите комментарий" required="" rows="5" aria-label="Добавить комментарий"></textarea>
+            </div>
+            <button type="submit" class="comment-add__button button button--blue">Отправить</button>
+          </section>
+          <section class="all-comments">
+            <div class="all-comments__top">
+              <h2 class="all-comments__title">Комментарии пользователей</h2>
+              <span class="all-comments__count">49</span>
+            </div>
+            <ul class="all-comments__list">
+              <li class="all-comments__item">
+                <time datetime="2019-06-16 15:45">16.06.2019 в 15:45</time>
+                <p>Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.</p>
+              </li>
+              <li class="all-comments__item">
+                <time datetime="2019-09-22 14:30">22.09.2019 в 14:30</time>
+                <p>Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан.</p>
+              </li>
+              <li class="all-comments__item">
+                <time datetime="2019-11-01 12:05">01.11.2019 в 12:05</time>
+                <p>Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.</p>
+              </li>
+              <li class="all-comments__item">
+                <time datetime="2019-06-16 11:34">16.06.2019 в 11:34</time>
+                <p>Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.</p>
+              </li>
+              <li class="all-comments__item">
+                <time datetime="2019-09-22 18:10">22.09.2019 в 18:10</time>
+                <p>Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан.</p>
+              </li>
+              <li class="all-comments__item">
+                <time datetime="2019-11-01 13:44">01.11.2019 в 13:44</time>
+                <p>Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.</p>
+              </li>
+            </ul>
+            <a href="#" class="all-comments__button button button--light-blue">ПОКАЗАТЬ ЕЩЁ</a>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div class="comment-popup comment-popup--edit popup popup--shown">
+      <div class="comment-popup__container popup__container">
+        <div class="popup__overlay"></div>
+
+        <div class="comment-popup__content popup__content">
+          <div class="popup__bar popup__bar--top">
+            <button class="popup__close-btn" type="button">
+              <span class="visually-hidden">Закрыть</span>
+              <svg width="16" height="16">
+                <use xlink:href="img/sprite.svg#icon-cross"></use>
+              </svg>
+            </button>
+          </div>
+
+          <section class="your-comment answers">
+            <div class="your-comment__img-wrapper">
+              <img src="img/comments-img.jpg" width="264" height="389" alt="описание картинки">
+            </div>
+            <div class="your-comment__content">
+              <div class="your-comment__top-wrapper">
+                <h2 class="your-comment__title">Ваш комментарий:</h2>
+                <div class="your-comment__actions">
+                  <a href="#" class="your-comment__link">
+                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-pencil"></use>
+                    </svg>
+                    <span>Редактировать</span>
+                  </a>
+                  <a href="#" class="your-comment__link">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-trash"></use>
+                    </svg>
+                    <span>Удалить</span>
+                  </a>
+                </div>
+                <p class="your-comment__description">Отредактировать или удалить комментарий вы можете только в течение двух часов с момента публикации.</p>
+              </div>
+              <p class="your-comment__text">Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит</p>
+              <div class="answers__button-wrapper answers__button-wrapper--blue-gradient">
+                <button type="button" class="answers__button text-hidden__btn">
+                  <span>Развернуть</span>
+                  <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-arrow-big"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </section>
+
+          <section class="all-comments">
+            <div class="all-comments__top">
+              <h2 class="all-comments__title">Комментарии пользователей</h2>
+              <span class="all-comments__count">49</span>
+            </div>
+            <ul class="all-comments__list">
+              <li class="all-comments__item">
+                <time datetime="2019-06-16 15:45">16.06.2019 в 15:45</time>
+                <p>Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.</p>
+              </li>
+              <li class="all-comments__item">
+                <time datetime="2019-09-22 14:30">22.09.2019 в 14:30</time>
+                <p>Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан.</p>
+              </li>
+              <li class="all-comments__item">
+                <time datetime="2019-11-01 12:05">01.11.2019 в 12:05</time>
+                <p>Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.</p>
+              </li>
+              <li class="all-comments__item">
+                <time datetime="2019-06-16 11:34">16.06.2019 в 11:34</time>
+                <p>Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.</p>
+              </li>
+              <li class="all-comments__item">
+                <time datetime="2019-09-22 18:10">22.09.2019 в 18:10</time>
+                <p>Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан.</p>
+              </li>
+              <li class="all-comments__item">
+                <time datetime="2019-11-01 13:44">01.11.2019 в 13:44</time>
+                <p>Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.</p>
+              </li>
+            </ul>
+            <a href="#" class="all-comments__button button button--light-blue">ПОКАЗАТЬ ЕЩЁ</a>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div class="comment-popup comment-popup--your popup">
+        <div class="comment-popup__container popup__container">
+          <div class="popup__overlay"></div>
+
+          <div class="comment-popup__content popup__content">
+            <div class="popup__bar popup__bar--top">
+              <button class="popup__close-btn" type="button">
+                <span class="visually-hidden">Закрыть</span>
+                <svg width="16" height="16">
+                  <use xlink:href="img/sprite.svg#icon-cross"></use>
+                </svg>
+              </button>
+            </div>
+
+            <section class="your-comment answers">
+              <div class="your-comment__img-wrapper">
+                <img src="img/comments-img.jpg" width="264" height="389" alt="описание картинки">
+              </div>
+              <div class="your-comment__content">
+                <div class="your-comment__top-wrapper">
+                  <h2 class="your-comment__title">Ваш комментарий:</h2>
+                </div>
+                <p class="your-comment__text">Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит</p>
+                <div class="answers__button-wrapper answers__button-wrapper--blue-gradient">
+                  <button type="button" class="answers__button text-hidden__btn">
+                    <span>Развернуть</span>
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-arrow-big"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </section>
+
+            <section class="all-comments">
+              <div class="all-comments__top">
+                <h2 class="all-comments__title">Комментарии пользователей</h2>
+                <span class="all-comments__count">49</span>
+              </div>
+              <ul class="all-comments__list">
+                <li class="all-comments__item">
+                  <time datetime="2019-06-16 15:45">16.06.2019 в 15:45</time>
+                  <p>Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.</p>
+                </li>
+                <li class="all-comments__item">
+                  <time datetime="2019-09-22 14:30">22.09.2019 в 14:30</time>
+                  <p>Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан.</p>
+                </li>
+                <li class="all-comments__item">
+                  <time datetime="2019-11-01 12:05">01.11.2019 в 12:05</time>
+                  <p>Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.</p>
+                </li>
+                <li class="all-comments__item">
+                  <time datetime="2019-06-16 11:34">16.06.2019 в 11:34</time>
+                  <p>Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.</p>
+                </li>
+                <li class="all-comments__item">
+                  <time datetime="2019-09-22 18:10">22.09.2019 в 18:10</time>
+                  <p>Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан.</p>
+                </li>
+                <li class="all-comments__item">
+                  <time datetime="2019-11-01 13:44">01.11.2019 в 13:44</time>
+                  <p>Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.</p>
+                </li>
+              </ul>
+              <a href="#" class="all-comments__button button button--light-blue">ПОКАЗАТЬ ЕЩЁ</a>
+            </section>
+          </div>
+        </div>
+      </div>
+
+    <script src="js/libs.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

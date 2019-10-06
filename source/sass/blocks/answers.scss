@@ -172,6 +172,12 @@
       display: none;
     }
   }
+
+  &--blue-gradient {
+    &::before {
+      background: linear-gradient(180deg, $light-blue 0%, rgba(234, 244, 250, 0) 100%);
+    }
+  }
 }
 
 .answers__button {
