@@ -4398,7 +4398,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-weight: 400;
   color: #333333;
   color: #a6abb3; }
-  .composite-poll__date b {
+  .composite-poll__date time {
     color: #354052;
     font-weight: 400; }
 
