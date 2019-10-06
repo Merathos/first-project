@@ -50,11 +50,9 @@
   };
 
 
-  vote.classList.add('project-page__vote--js', 'project-vote--js');
+  vote.classList.add('project-vote--js');
 
   scaleIndicator.style.width = Math.trunc(approveValue / (approveValue + rejectValue) * 100) + '%';
-
-  new Sticky('.project-page__vote');
 
   submitForm.addEventListener('click', onSubmitFormClick);
   revokeBtn.addEventListener('click', revokeVote);

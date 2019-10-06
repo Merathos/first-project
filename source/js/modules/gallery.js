@@ -9,9 +9,6 @@
   }
 
 
-  var ITEM_WIDTH = 135;
-
-
   galleries.forEach(function (gallery) {
     var previews = gallery.querySelectorAll('.gallery__item-link');
 

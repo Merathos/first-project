@@ -7,7 +7,7 @@
 }
 
 .filter__header {
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .filter__header-item {
@@ -58,6 +58,7 @@
 
   & .ss-main .ss-multi-selected,
   .ss-main .ss-single-selected,
+  .ss-main .ss-single-selected .placeholder,
   .ss-main .ss-single-selected .placeholder .ss-disabled {
     height: 20px;
     font-size: rem(15px);
@@ -79,24 +80,6 @@
   & .ss-main .ss-single-selected .ss-arrow span {
     width: 8px;
     height: 8px;
-  }
-
-  .form-select__title {
-    font-size: rem(15px);
-    line-height: rem(20px);
-
-    &::after {
-      width: 13px;
-      height: 8px;
-      margin-left: 6px;
-      background-size: cover;
-    }
-  }
-
-  .form-select__group,
-  .form-select__scrollbar-content {
-    width: 146px;
-    height: auto;
   }
 }
 

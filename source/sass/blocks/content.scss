@@ -88,6 +88,55 @@
     }
   }
 
+  a:not([class]) {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 48px;
+    font-size: rem(18px);
+    line-height: rem(23px);
+    text-decoration: none;
+    user-select: none;
+    color: $blue-default;
+    outline: none;
+    transition: color $style-change-duration;
+
+    &::before {
+      content: "";
+      display: block;
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      margin-right: 8px;
+      background-image: url("../img/icon-link.svg");
+      background-size: cover;
+    }
+
+    &:focus {
+      color: $blue-accent;
+    }
+
+    &:focus:not(.focus-visible) {
+      color: $blue-default;
+    }
+
+    &:hover:not(.focus-visible) {
+      color: $blue-accent;
+    }
+  }
+
+  a[href*="youtube"]:not([class]) {
+    padding: 23px;
+    border: 1px solid $light-grey;
+    border-radius: $border-radius;
+
+    &::before {
+      width: 24px;
+      height: 24px;
+      margin-right: 12px;
+      background-image: url("../img/icon-youtube.svg");
+    }
+  }
+
 
   @include tablet {
     h1:not([class]),
@@ -95,6 +144,7 @@
     p:not([class]),
     img:not([class]),
     ul:not([class]),
+    a:not([class]),
     .highlighted-text {
       width: calc(100% - 2 * #{$tablet-padding});
       margin-right: $tablet-padding;
@@ -110,6 +160,16 @@
     h1:not([class]) {
       margin-bottom: 32px;
     }
+
+    a:not([class]) {
+      &:hover:not(.focus-visible) {
+        color: $blue-default;
+      }
+
+      &:active:not(.focus-visible) {
+        color: $blue-accent;
+      }
+    }
   }
 
 
@@ -119,6 +179,7 @@
     p:not([class]),
     img:not([class]),
     ul:not([class]),
+    a:not([class]),
     .highlighted-text {
       width: calc(100% - 2 * #{$mobile-padding});
       margin-right: $mobile-padding;
@@ -147,6 +208,16 @@
 
     img:not([class]) {
       margin-bottom: 40px;
+    }
+
+    a:not([class]) {
+      display: block;
+      margin-bottom: 32px;
+
+      &::before {
+        margin-right: 0;
+        margin-bottom: 16px;
+      }
     }
   }
 }
