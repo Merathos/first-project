@@ -653,7 +653,7 @@
     return;
   }
 
-  var ellipsis = Ellipsis({
+  var ellipsis = new Ellipsis({
     lines: 3
   });
 
