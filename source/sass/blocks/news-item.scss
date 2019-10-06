@@ -71,6 +71,10 @@
   }
 }
 
+.news-item__list {
+  @include list-reset;
+}
+
 .news-item__link {
   display: flex;
   margin-top: 48px;

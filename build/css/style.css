@@ -6773,6 +6773,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .news-item__text p:last-child {
       margin-bottom: 0; }
 
+.news-item__list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
 .news-item__link {
   display: -webkit-box;
   display: -ms-flexbox;
