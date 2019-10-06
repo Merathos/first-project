@@ -319,9 +319,6 @@
   }
 
 
-  var ITEM_WIDTH = 135;
-
-
   galleries.forEach(function (gallery) {
     var previews = gallery.querySelectorAll('.gallery__item-link');
 
@@ -459,6 +456,22 @@
 
   document.addEventListener('scroll', adjustHeaderAppearance);
   window.addEventListener('resize', onWindowResize);
+})();
+
+'use strict';
+
+
+(function () {
+  var panel = document.querySelector('.project-page__panel');
+
+  if (!panel) {
+    return;
+  }
+
+
+  panel.classList.add('project-page__panel--js');
+
+  new Sticky('.project-page__panel');
 })();
 
 'use strict';
@@ -609,11 +622,9 @@
   };
 
 
-  vote.classList.add('project-page__vote--js', 'project-vote--js');
+  vote.classList.add('project-vote--js');
 
   scaleIndicator.style.width = Math.trunc(approveValue / (approveValue + rejectValue) * 100) + '%';
-
-  new Sticky('.project-page__vote');
 
   submitForm.addEventListener('click', onSubmitFormClick);
   revokeBtn.addEventListener('click', revokeVote);

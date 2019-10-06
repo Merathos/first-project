@@ -2,14 +2,13 @@
   padding-bottom: 122px;
 }
 
-.project-page__container {
-  position: relative;
-}
-
-.project-page__meta,
-.project-page__content,
+.project-page__container,
 .project-page__survey {
   width: 740px;
+}
+
+.project-page__container {
+  margin-bottom: 48px;
 }
 
 .project-page__meta {
@@ -33,11 +32,6 @@
   color: $dark-text;
 }
 
-.project-page__content {
-  grid-area: content;
-  margin-bottom: 48px;
-}
-
 .project-page__files {
   margin-bottom: 48px;
 }
@@ -52,37 +46,6 @@
 
 .project-page__gallery {
   margin-bottom: 48px;
-}
-
-.project-page__project-link {
-  align-items: flex-start;
-  margin-bottom: 48px;
-  font-size: rem(18px);
-  line-height: rem(23px);
-  user-select: none;
-
-  svg {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
-  }
-}
-
-.project-page__video-link {
-  align-items: flex-start;
-  padding: 23px;
-  margin-bottom: 48px;
-  font-size: rem(18px);
-  line-height: rem(23px);
-  user-select: none;
-  border: 1px solid $light-grey;
-  border-radius: $border-radius;
-
-  svg {
-    width: 24px;
-    height: 24px;
-    margin-right: 12px;
-  }
 }
 
 .project-page__examination-date {
@@ -131,15 +94,23 @@
   padding-left: 20px;
   font-size: rem(14px);
   line-height: rem(19px);
+
+  span {
+    padding: 0;
+  }
 }
 
 
 @include desktop-only {
-  .project-page__vote {
+  .project-page__container {
+    position: relative;
+  }
+
+  .project-page__panel {
     &--js {
       position: absolute;
       top: 0;
-      right: 0;
+      left: calc(100% + 20px);
       width: 360px;
     }
   }
@@ -151,17 +122,15 @@
     padding-bottom: 88px;
   }
 
-  .project-page__content,
+  .project-page__container,
   .project-page__survey {
     width: 100%;
   }
 
   .project-page__meta,
-  .project-page__vote,
+  .project-page__panel,
   .project-page__text,
   .project-page__files,
-  .project-page__project-link,
-  .project-page__video-link,
   .project-page__examination-date {
     width: calc(100% - 2 * #{$tablet-padding});
     margin-right: $tablet-padding;
@@ -172,7 +141,7 @@
     margin-bottom: 16px;
   }
 
-  .project-page__vote {
+  .project-page__panel {
     margin-bottom: 56px;
   }
 
@@ -190,11 +159,9 @@
   }
 
   .project-page__meta,
-  .project-page__vote,
+  .project-page__panel,
   .project-page__text,
   .project-page__files,
-  .project-page__project-link,
-  .project-page__video-link,
   .project-page__examination-date {
     width: calc(100% - 2 * #{$mobile-padding});
     margin-right: $mobile-padding;
@@ -262,27 +229,6 @@
 
   .project-page__gallery {
     margin-bottom: 40px;
-  }
-
-  .project-page__project-link {
-    display: block;
-    margin-bottom: 32px;
-
-    svg {
-      margin-right: 0;
-      margin-bottom: 16px;
-    }
-  }
-
-  .project-page__video-link {
-    display: block;
-    padding: 23px;
-    margin-bottom: 32px;
-
-    svg {
-      margin-right: 0;
-      margin-bottom: 16px;
-    }
   }
 
   .project-page__examination-date {
