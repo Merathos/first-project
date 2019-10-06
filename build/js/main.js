@@ -2,6 +2,99 @@
 
 
 (function () {
+
+  var modal = function (btns, popup) {
+    Array.prototype.forEach.call(btns, function (btn) {
+      btn.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        bodyScrollLock.disableBodyScroll(popup);
+        popup.classList.add('popup--shown');
+      });
+    });
+
+    var overlay = popup.querySelector('.popup__overlay');
+    var closeBtn = popup.querySelector('.popup__close-btn');
+
+    var closePopup = function () {
+      bodyScrollLock.enableBodyScroll(popup);
+      popup.classList.remove('popup--shown');
+    };
+
+    var onEscPress = function (evt) {
+      if (evt.keyCode === window.const.keyCode.ESC && popup.classList.contains('popup--shown')) {
+        evt.preventDefault();
+
+        closePopup();
+      }
+    };
+
+    overlay.addEventListener('click', closePopup);
+    closeBtn.addEventListener('click', closePopup);
+    document.addEventListener('keydown', onEscPress);
+  };
+
+  var popupCommentAdd = document.querySelector('.comment-popup--add');
+  var btnsCommentAdd = document.querySelectorAll('[data-target="comment-add"]');
+
+  if (!popupCommentAdd && !btnsCommentAdd.length) {
+    return;
+  }
+
+  modal(btnsCommentAdd, popupCommentAdd);
+
+  var popupCommentEdit = document.querySelector('.comment-popup--edit');
+  var btnsCommentEdit = document.querySelectorAll('[data-target="comment-edit"]');
+
+  if (!popupCommentEdit && !btnsCommentEdit.length) {
+    return;
+  }
+
+  modal(btnsCommentEdit, popupCommentEdit);
+
+  var popupCommentYour = document.querySelector('.comment-popup--your');
+  var btnsCommentYour = document.querySelectorAll('[data-target="comment-your"]');
+
+  if (!popupCommentYour && !btnsCommentYour.length) {
+    return;
+  }
+
+  modal(btnsCommentYour, popupCommentYour);
+})();
+
+'use strict';
+
+(function () {
+  var form = document.querySelector('.answers__form');
+  if (!form) {
+    return;
+  }
+  var inputCount = form.querySelector('#count-answer');
+  var inputContainer = document.querySelector('.answers__count');
+
+  if (!inputCount && !inputContainer) {
+    return;
+  }
+
+  inputContainer.addEventListener('mouseover', function () {
+    inputCount.focus();
+  });
+
+  inputContainer.addEventListener('mouseout', function () {
+    inputCount.blur();
+    inputContainer.classList.remove('answers__count--hover');
+  });
+
+  inputCount.oninput = function () {
+    inputCount.value = inputCount.value.replace(/[^\+\d]/g, '');
+    inputCount.focus();
+    inputContainer.classList.add('answers__count--hover');
+  };
+})();
+
+'use strict';
+
+
+(function () {
   var KeyCode = {
     ENTER: 13,
     ESC: 27
@@ -707,6 +800,32 @@
 
 
   subscribeLink.addEventListener('click', onSubscribeLinkClick);
+})();
+
+'use strict';
+
+(function () {
+  var textContainers = document.querySelectorAll('.text-hidden');
+  if (!textContainers.length) {
+    return;
+  }
+
+  Array.prototype.forEach.call(textContainers, function (textContainer) {
+    var btnTextOpen = textContainer.querySelector('.text-hidden__btn');
+    var btnText = textContainer.querySelector('.text-hidden__btn span');
+    var text = textContainer.querySelector('.text-hidden__container');
+    var btnContainer = textContainer.querySelector('.answers__button-wrapper');
+    if (!btnTextOpen && !text && !btnContainer) {
+      return;
+    }
+    btnTextOpen.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      btnTextOpen.classList.toggle('text-hidden__btn--open');
+      text.classList.toggle('text-hidden__container--open');
+      btnContainer.classList.toggle('answers__button-wrapper--open');
+      btnText.textContent = btnText.textContent === 'Развернуть' ? 'Свернуть' : 'Развернуть';
+    });
+  });
 })();
 
 'use strict';

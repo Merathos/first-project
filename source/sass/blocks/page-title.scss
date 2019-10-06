@@ -13,7 +13,7 @@
     @include font-h3;
   }
 
-  &--news {
+  &--large {
     @media (max-width: $tablet-width - 1) {
       @include font-h1;
     }

@@ -262,3 +262,82 @@
     }
   }
 }
+
+.poll-page--final {
+  @media (max-width: $tablet-width - 1) {
+    padding-bottom: 88px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-bottom: 64px;
+  }
+
+  & .poll-page__title {
+    @include font-h2;
+    padding-bottom: 32px;
+
+    @media (max-width: $tablet-width - 1) {
+      padding-bottom: 34px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      padding-bottom: 24px;
+    }
+  }
+
+  & .poll-page__description-part {
+    margin-bottom: 6px;
+
+    @media (max-width: $tablet-width - 1) {
+      margin-top: 14px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      margin-bottom: 14px;
+    }
+  }
+
+  & .poll-page__doc-item {
+    width: 100%;
+  }
+
+  & .poll-page__doc-wrap {
+    width: 364px;
+
+    @media (max-width: $mobile-max-width) {
+      width: 100%;
+    }
+  }
+
+  & .poll-page__doc-list {
+    padding-bottom: 22px;
+    background-image: linear-gradient($light-grey, $light-grey);
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+
+    @media (max-width: $tablet-width - 1) {
+      padding-bottom: 30px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      padding-bottom: 20px;
+    }
+  }
+
+  & .poll-page__date-title {
+    & b {
+      font-weight: 400;
+      color: $dark-text;
+    }
+  }
+
+  & .poll-page__form {
+    margin-top: 40px;
+
+    @media (max-width: $mobile-max-width) {
+      margin-top: 36px;
+    }
+  }
+}

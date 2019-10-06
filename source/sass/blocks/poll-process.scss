@@ -4,7 +4,7 @@
 
     @include font-h5;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin: 0;
     padding: 24px 32px;
     color: $white;
@@ -20,6 +20,10 @@
       background-image: url("../img/icon-time-white.svg");
       background-repeat: no-repeat;
       background-position: center;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      padding: 24px 24px;
     }
   }
 }
