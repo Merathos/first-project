@@ -88,6 +88,10 @@
   & .noUi-horizontal .noUi-tooltip {
     bottom: 200%;
   }
+
+  & .noUi-pips-horizontal {
+    height: 0;
+  }
 }
 
 html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {

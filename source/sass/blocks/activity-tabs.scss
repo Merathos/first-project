@@ -1,0 +1,84 @@
+.activity-tabs {
+  max-width: $desktop-width;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @media (max-width: $desktop-width - 1) {
+    padding: 0 24px;
+  }
+
+  @media (max-width: 800px) {
+    padding: 0;
+  }
+}
+
+.activity-tabs__list {
+  @include list-reset;
+  display: flex;
+  flex-wrap: no-wrap;
+  width: 100%;
+  margin-bottom: 48px;
+  overflow-x: auto;
+
+  background-image: linear-gradient($light-grey, $light-grey);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+
+  @media (max-width: 800px) {
+    padding: 0 24px;
+    margin-bottom: 40px;
+    background-position: 24px bottom;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 0 16px;
+    margin-bottom: 32px;
+    background-position: 16px bottom;
+  }
+}
+
+.activity-tabs__item {
+  flex-shrink: 0;
+  margin-right: 40px;
+
+  &:last-child {
+    padding-right: 40px;
+  }
+}
+
+.activity-tabs__link {
+  display: block;
+  padding-bottom: 13px;
+
+  @include font-h3;
+  color: $grey;
+  text-decoration: none;
+  transition: color $style-change-duration;
+
+  @media (max-width: $mobile-max-width) {
+    @include font-h4;
+    color: $grey;
+    padding-bottom: 18px;
+  }
+
+  &:hover {
+    color: $blue-default;
+  }
+
+  &:focus {
+    color: $blue-default;
+    background-image: linear-gradient($blue-default, $blue-default);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+  }
+
+  &--active {
+    color: $blue-default;
+    background-image: linear-gradient($blue-default, $blue-default);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 2px;
+  }
+}
