@@ -7752,3 +7752,85 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     display: block; }
   .partners-list__item:not(:last-child) {
     margin-bottom: 16px; } }
+
+.activity-tabs {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px; }
+  @media (max-width: 1199px) {
+    .activity-tabs {
+      padding: 0 24px; } }
+  @media (max-width: 800px) {
+    .activity-tabs {
+      padding: 0; } }
+
+.activity-tabs__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: no-wrap;
+      flex-wrap: no-wrap;
+  width: 100%;
+  margin-bottom: 48px;
+  overflow-x: auto;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e3e8ee), to(#e3e8ee));
+  background-image: linear-gradient(#e3e8ee, #e3e8ee);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 1px; }
+  @media (max-width: 800px) {
+    .activity-tabs__list {
+      padding: 0 24px;
+      margin-bottom: 40px;
+      background-position: 24px bottom; } }
+  @media (max-width: 400px) {
+    .activity-tabs__list {
+      padding: 0 16px;
+      margin-bottom: 32px;
+      background-position: 16px bottom; } }
+
+.activity-tabs__item {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  margin-right: 40px; }
+  .activity-tabs__item:last-child {
+    padding-right: 40px; }
+
+.activity-tabs__link {
+  display: block;
+  padding-bottom: 13px;
+  font-size: 1.5rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  color: #333333;
+  color: #707b8c;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
+  @media (max-width: 400px) {
+    .activity-tabs__link {
+      font-size: 1.125rem;
+      line-height: 1.4375rem;
+      font-weight: 400;
+      color: #333333;
+      color: #707b8c;
+      padding-bottom: 18px; } }
+  .activity-tabs__link:hover {
+    color: #2c8ecc; }
+  .activity-tabs__link:focus {
+    color: #2c8ecc;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#2c8ecc), to(#2c8ecc));
+    background-image: linear-gradient(#2c8ecc, #2c8ecc);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 2px; }
+  .activity-tabs__link--active {
+    color: #2c8ecc;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#2c8ecc), to(#2c8ecc));
+    background-image: linear-gradient(#2c8ecc, #2c8ecc);
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 2px; }
