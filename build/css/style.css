@@ -3218,6 +3218,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       flex-shrink: 0; }
   .special-popup__item:not(:last-child) {
     margin-right: 16px; }
+  .special-popup__item span {
+    pointer-events: none; }
 
 .special-popup__name {
   padding-bottom: 16px;
