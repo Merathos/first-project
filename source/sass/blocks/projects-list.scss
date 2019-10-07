@@ -1,0 +1,28 @@
+.projects-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+
+  .project-item {
+    width: auto;
+  }
+}
+
+
+@include tablet {
+  .projects-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@include mobile {
+  .projects-list {
+    display: block;
+
+    .project-item {
+      margin-bottom: 16px;
+    }
+  }
+}
