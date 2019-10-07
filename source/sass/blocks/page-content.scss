@@ -39,6 +39,15 @@
   }
 }
 
+.page-content__title {
+  margin: 0;
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: rem(40px);
+  line-height: rem(47px);
+  color: $dark-main;
+}
+
 
 @include tablet {
   .page-content__back-btn {
@@ -68,5 +77,11 @@
     svg {
       padding-bottom: 0;
     }
+  }
+
+  .page-content__title {
+    margin-bottom: 32px;
+    font-size: rem(30px);
+    line-height: rem(36px);
   }
 }

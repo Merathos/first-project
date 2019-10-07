@@ -1,0 +1,49 @@
+.activity {
+  padding-bottom: 120px;
+
+  .discussion__list,
+  .poll__list {
+    padding-top: 0;
+  }
+}
+
+.activity__list-btn {
+  display: block;
+  width: 360px;
+  margin: 24px auto 40px;
+}
+
+
+@include tablet {
+  .activity {
+    padding-bottom: 88px;
+
+    .discussion__list,
+    .poll__list {
+      padding-top: 0;
+    }
+  }
+
+  .activity__list-btn {
+    margin-top: 48px;
+  }
+}
+
+
+@include mobile {
+  .activity {
+    padding-bottom: 65px;
+
+    .discussion__list,
+    .poll__list {
+      padding-top: 0;
+    }
+  }
+
+  .activity__list-btn {
+    width: 100%;
+    max-width: 360px;
+    margin-top: 40px;
+    margin-bottom: 32px;
+  }
+}
