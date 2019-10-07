@@ -147,6 +147,10 @@
   &:not(:last-child) {
     margin-right: 16px;
   }
+
+  span {
+    pointer-events: none;
+  }
 }
 
 .special-popup__name {

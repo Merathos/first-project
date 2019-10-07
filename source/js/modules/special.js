@@ -7,19 +7,16 @@
 
   if (popup && btnsOpenPopup) {
     var popupCloseBtn = popup.querySelector('.js-close-popup');
-    var listsOptions = popup.querySelectorAll('.special-popup__list');
+    var btns = popup.querySelectorAll('[data-item]');
 
-    listsOptions.forEach(function (list) {
-      var btns = list.querySelectorAll('button');
-
-      btns.forEach(function (btn) {
-        btn.addEventListener('click', function (evt) {
-          evt.preventDefault();
-          btns.forEach(function (btn) {
-            btn.classList.remove('active');
-          });
-          btn.classList.add('active');
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        var selector = '[data-item=' + evt.target.getAttribute('data-item') + ']';
+        popup.querySelectorAll(selector).forEach(function (item) {
+          item.classList.remove('active');
         });
+        evt.target.classList.add('active');
       });
     });
 
