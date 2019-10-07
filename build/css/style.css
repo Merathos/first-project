@@ -43,8 +43,19 @@
 
 html {
   font-size: 100%;
+  font-family: "Rubik", "Arial", sans-serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
+  html.font-family--arial {
+    font-family: "Arial", sans-serif; }
+  html.font-family--times {
+    font-family: "Times New Roman", serif; }
+  html.font-size--s {
+    font-size: 16px; }
+  html.font-size--m {
+    font-size: 24px; }
+  html.font-size--l {
+    font-size: 28px; }
 
 *,
 *::before,
@@ -65,7 +76,6 @@ body {
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  font-family: "Rubik", "Arial", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 0.9375rem;
@@ -1625,7 +1635,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .section__title {
   margin: 0 auto 0 0;
   padding: 0 0 0 20px;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 2.5rem;
   line-height: 2.9375rem;
   font-weight: 400;
@@ -1633,7 +1642,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   @media (max-width: 767px) {
     .section__title {
       padding-left: 14px;
-      font-family: "Rubik", "Arial", sans-serif;
       font-size: 1.875rem;
       line-height: 2.25rem;
       font-weight: 400;
@@ -2097,7 +2105,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-bottom: 17px; }
 
 .form-checkbox label {
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-weight: 400;
@@ -2171,7 +2178,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
           flex-direction: column; }
 
 .form-radio label {
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-weight: 400;
@@ -2240,7 +2246,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   border: none; }
 
 .form-select .ss-option {
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-weight: 400;
@@ -2288,7 +2293,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .form-select .ss-main .ss-single-selected,
 .form-select .ss-main .ss-single-selected .placeholder .ss-disabled {
   height: 36px;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 400;
@@ -2376,7 +2380,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     display: none; }
   .form-range .noUi-tooltip {
     border: none;
-    font-family: "Rubik", "Arial", sans-serif;
     font-size: 1rem;
     line-height: 1.375rem;
     font-weight: 400;
@@ -2399,7 +2402,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 10px;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 1rem;
   line-height: 1.375rem;
   font-weight: 400;
@@ -2416,7 +2418,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 12px;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 0.8125rem;
   line-height: 1.0625rem;
   font-weight: 400;
@@ -2493,7 +2494,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .form__question {
   margin: 0;
   margin-bottom: 12px;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 1rem;
   line-height: 1.375rem;
   font-weight: 400;
@@ -2503,7 +2503,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .form__description {
   margin: 0;
   margin-bottom: 24px;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-weight: 400;
@@ -2802,7 +2801,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         width: 208px;
         height: 85px; } }
   .page-404__content p {
-    font-family: "Rubik", "Arial", sans-serif;
     font-size: 1.875rem;
     line-height: 2.25rem;
     font-weight: 400;
@@ -2812,14 +2810,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     margin-bottom: 72px; }
     @media (max-width: 767px) {
       .page-404__content p {
-        font-family: "Rubik", "Arial", sans-serif;
         font-size: 1.5rem;
         line-height: 1.75rem;
         font-weight: 400;
         color: #333333; } }
     @media (max-width: 400px) {
       .page-404__content p {
-        font-family: "Rubik", "Arial", sans-serif;
         font-size: 1.125rem;
         line-height: 1.4375rem;
         font-weight: 400;
@@ -2880,7 +2876,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   list-style: none; }
 
 .page-footer__item {
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 1rem;
   line-height: 1.375rem;
   font-weight: 400;
@@ -2927,7 +2922,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .page-title {
   max-width: 1040px;
   margin: 0;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 2.5rem;
   line-height: 2.9375rem;
   font-weight: 400;
@@ -2935,28 +2929,24 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   color: #354052; }
   @media (max-width: 767px) {
     .page-title {
-      font-family: "Rubik", "Arial", sans-serif;
       font-size: 1.875rem;
       line-height: 2.25rem;
       font-weight: 400;
       color: #333333; } }
   @media (max-width: 400px) {
     .page-title {
-      font-family: "Rubik", "Arial", sans-serif;
       font-size: 1.5rem;
       line-height: 1.75rem;
       font-weight: 400;
       color: #333333; } }
   @media (max-width: 767px) {
     .page-title--large {
-      font-family: "Rubik", "Arial", sans-serif;
       font-size: 2.5rem;
       line-height: 2.9375rem;
       font-weight: 400;
       color: #333333; } }
   @media (max-width: 400px) {
     .page-title--large {
-      font-family: "Rubik", "Arial", sans-serif;
       font-size: 1.875rem;
       line-height: 2.25rem;
       font-weight: 400;
@@ -3003,7 +2993,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       margin: 0 8px; } }
 
 .page-nav__link {
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-weight: 400;
@@ -3093,7 +3082,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .archive-link__description {
   margin: 0;
   margin-right: 24px;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 1rem;
   line-height: 1.375rem;
   font-weight: 400;
@@ -3468,7 +3456,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     text-decoration: none;
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
-    font-family: "Rubik", "Arial", sans-serif;
     font-size: 1rem;
     line-height: 1.375rem;
     font-weight: 400;
@@ -3603,7 +3590,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin: 0;
   padding: 0;
   color: #354052;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 400;
@@ -4261,7 +4247,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     color: #354052;
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
-    font-family: "Rubik", "Arial", sans-serif;
     font-size: 1rem;
     line-height: 1.375rem;
     font-weight: 400;
@@ -4353,7 +4338,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .poll-process p {
   position: relative;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 1rem;
   line-height: 1.375rem;
   font-weight: 400;
@@ -4396,7 +4380,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .poll-result__question {
   margin: 0;
   margin-bottom: 26px;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 1rem;
   line-height: 1.375rem;
   font-weight: 400;
@@ -4437,7 +4420,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   padding-bottom: 9px;
   padding-left: 18px;
   padding-right: 16px;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-weight: 400;
@@ -4464,7 +4446,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .composite-poll__date {
   margin: 0;
   margin-bottom: 32px;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 1rem;
   line-height: 1.375rem;
   font-weight: 400;
@@ -4478,7 +4459,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin: 0;
   margin-bottom: 16px;
   padding: 32px;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-weight: 400;
@@ -6394,7 +6374,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   @media (max-width: 767px) {
     .poll-page__title {
       padding-bottom: 33px;
-      font-family: "Rubik", "Arial", sans-serif;
       font-size: 1.875rem;
       line-height: 2.25rem;
       font-weight: 400;
@@ -6608,7 +6587,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     padding-bottom: 64px; } }
 
 .poll-page--final .poll-page__title {
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 400;
@@ -6686,7 +6664,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
               flex-direction: column;
       margin-bottom: 12px; } }
   .news-item__subtitle span {
-    font-family: "Rubik", "Arial", sans-serif;
     font-size: 1rem;
     line-height: 1.375rem;
     font-weight: 400;
@@ -6722,7 +6699,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .news-item__text p {
     margin: 0;
     margin-bottom: 22px;
-    font-family: "Rubik", "Arial", sans-serif;
     font-size: 0.9375rem;
     line-height: 1.25rem;
     font-weight: 400;
@@ -6760,7 +6736,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         flex-shrink: 0;
     margin-right: 8px; }
   .news-item__link a {
-    font-family: "Rubik", "Arial", sans-serif;
     font-size: 1.125rem;
     line-height: 1.4375rem;
     font-weight: 400;
@@ -6839,7 +6814,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       width: 100%;
       margin-right: 0; } }
   .discussion-item__content p {
-    font-family: "Rubik", "Arial", sans-serif;
     font-size: 0.9375rem;
     line-height: 1.25rem;
     font-weight: 400;
@@ -6895,7 +6869,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-weight: 400;
@@ -6960,7 +6933,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .answers__title {
   margin: 0;
   margin-bottom: 24px;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 400;
@@ -6983,7 +6955,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .answers__subtitle {
   margin-bottom: 16px;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 1.125rem;
   line-height: 1.4375rem;
   font-weight: 400;
@@ -7024,7 +6995,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       padding-top: 0; } }
   .answers__discussion-col p {
     margin: 0;
-    font-family: "Rubik", "Arial", sans-serif;
     font-size: 0.9375rem;
     line-height: 1.25rem;
     font-weight: 400;
@@ -7055,7 +7025,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       -ms-flex-align: center;
           align-items: center;
   margin-right: 16px;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-weight: 400;
@@ -7132,7 +7101,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-weight: 400;
@@ -7171,7 +7139,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       padding-bottom: 24px; } }
   .answers__text-wrapper p {
     margin: 0;
-    font-family: "Rubik", "Arial", sans-serif;
     font-size: 0.9375rem;
     line-height: 1.25rem;
     font-weight: 400;
@@ -7181,7 +7148,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .answers__text-wrapper span {
     display: none;
     margin-bottom: 8px;
-    font-family: "Rubik", "Arial", sans-serif;
     font-size: 0.9375rem;
     line-height: 1.25rem;
     font-weight: 400;
@@ -7232,7 +7198,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
           align-items: baseline;
   padding-right: 20px;
   padding-left: 4px;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 400;
@@ -7244,7 +7209,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   transition: background-color 0.2s; }
   @media (max-width: 400px) {
     .answers__count {
-      font-family: "Rubik", "Arial", sans-serif;
       font-size: 1.5rem;
       line-height: 1.75rem;
       font-weight: 400;
@@ -7253,7 +7217,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .answers__count input[type="text"] {
     width: 46px;
     padding: 5px;
-    font-family: "Rubik", "Arial", sans-serif;
     font-size: 1.875rem;
     line-height: 2.25rem;
     font-weight: 400;
@@ -7266,7 +7229,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     transition: background-color 0.2s; }
     @media (max-width: 400px) {
       .answers__count input[type="text"] {
-        font-family: "Rubik", "Arial", sans-serif;
         font-size: 1.5rem;
         line-height: 1.75rem;
         font-weight: 400;
@@ -7296,7 +7258,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     position: absolute;
     display: none;
     opacity: 0;
-    font-family: "Rubik", "Arial", sans-serif;
     font-size: 0.8125rem;
     line-height: 1.0625rem;
     font-weight: 400;
@@ -7505,7 +7466,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin: 0;
   margin-right: 16px;
   margin-bottom: 14px;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 400;
@@ -7521,7 +7481,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   width: 40px;
   height: 40px;
   padding-top: 9px;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 1.125rem;
   line-height: 1.4375rem;
   font-weight: 400;
@@ -7547,7 +7506,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   background-repeat: no-repeat;
   background-size: 100% 1px; }
   .all-comments__item time {
-    font-family: "Rubik", "Arial", sans-serif;
     font-size: 0.9375rem;
     line-height: 1.25rem;
     font-weight: 400;
@@ -7631,7 +7589,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .your-comment__title {
   margin: 0;
   margin-bottom: 16px;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 1.125rem;
   line-height: 1.4375rem;
   font-weight: 400;
@@ -7690,7 +7647,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .your-comment__description {
   margin: 0;
   margin-bottom: 24px;
-  font-family: "Rubik", "Arial", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-weight: 400;
