@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8">
+  <title>Общественное голосование</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preload" href="fonts/Rubik-Light.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Rubik-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Rubik-Regular-cyrillic.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Rubik-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Rubik-Medium-latin.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Rubik-Bold.woff2" as="font" crossorigin="anonymous">
+  <link href="css/style.min.css" rel="stylesheet">
+</head>
+
+
+  <body class="page-body">
+    <section class="special-popup js-hide">
+  <div class="special-popup__wrap">
+    <button class="special-popup__btn-close js-close-popup" type="button">
+      <svg width="18" height="18" viewbox="0 0 18 18" stroke="#354052" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1L17 17M17 1L1 17" stroke-width="2"></path>
+      </svg>
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+    <div class="special-popup__title">Настройки</div>
+    <div class="special-popup__group-list">
+      <div class="special-popup__group">
+        <div class="special-popup__name">Размер шрифта:</div>
+        <ul class="special-popup__list">
+          <li class="special-popup__item">
+            <button class="special-popup__btn-size special-popup__btn-size--S active" type="button">
+              <span>A</span>
+            </button>
+          </li>
+          <li class="special-popup__item">
+            <button class="special-popup__btn-size special-popup__btn-size--M" type="button">
+              <span>A</span>
+            </button>
+          </li>
+          <li class="special-popup__item">
+            <button class="special-popup__btn-size special-popup__btn-size--L" type="button">
+              <span>A</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="special-popup__group">
+        <div class="special-popup__name">Цветовая схема:</div>
+        <div class="special-popup__scroll-wrap">
+          <ul class="special-popup__list">
+            <li class="special-popup__item">
+              <button class="special-popup__btn-color special-popup__btn-color--standard active" type="button">
+                <span>Стандартный</span>
+              </button>
+            </li>
+            <li class="special-popup__item">
+              <button class="special-popup__btn-color special-popup__btn-color--inverse" type="button">
+                <span>Инверсия</span>
+              </button>
+            </li>
+            <li class="special-popup__item">
+              <button class="special-popup__btn-color special-popup__btn-color--blue" type="button">
+                <span>Синий</span>
+              </button>
+            </li>
+            <li class="special-popup__item">
+              <button class="special-popup__btn-color special-popup__btn-color--comfort" type="button">
+                <span>Комфортный</span>
+              </button>
+            </li>
+            <li class="special-popup__item">
+              <button class="special-popup__btn-color special-popup__btn-color--brown" type="button">
+                <span>Коричневый</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="special-popup__group">
+        <div class="special-popup__name">Шрифт:</div>
+        <ul class="special-popup__list special-popup__list--font">
+          <li class="special-popup__item">
+            <button class="special-popup__btn-font special-popup__btn-font--S active" type="button">
+              <span>Arial</span>
+            </button>
+          </li>
+          <li class="special-popup__item">
+            <button class="special-popup__btn-font special-popup__btn-font--M" type="button">
+              <span>Times New Roman</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <button type="button" class="special-popup__reset button button--blue">Сбросить всё</button>
+  </div>
+</section>
+
+
+    <header class="page-header">
+  <div class="page-header__bar">
+    <div class="page-header__container container">
+      <a class="logo-link" href="#">
+        <img class="page-header__roi-logo" width="180" height="56" src="img/roi-logo.svg" alt="Российская общественная инициатива">
+      </a>
+
+      <a class="page-header__link page-header__site-name" href="#">Общественное голосование</a>
+
+      <a class="page-header__link page-header__version-btn page-header__version-btn--bar js-open-popup" href="#">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#icon-glasses"></use>
+        </svg>
+        Версия для слабовидящих
+      </a>
+
+      <button class="page-header__menu-btn menu-btn" type="button">
+        <span class="menu-btn__text visually-hidden">Открыть основное меню</span>
+        <span class="menu-btn__icon"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="page-header__main-menu main-menu">
+    <div class="container">
+      <div class="page-header__location-switcher location-switcher">
+        <p class="visually-hidden">Выберите регион голосования:</p>
+
+        <form action="#" method="post">
+          <div class="location-switcher__btn form-radio">
+            <input id="location-residence" type="radio" name="location" value="residence" checked="">
+            <label for="location-residence">
+              Адрес проживания
+              <span class="page-header__location-address location-switcher__address">Городской округ рабочий поселок Новогуровский</span>
+            </label>
+          </div>
+
+          <div class="location-switcher__btn form-radio">
+            <input id="location-registration" type="radio" name="location" value="registration">
+            <label for="location-registration">
+              Адрес регистрации
+              <span class="page-header__location-address location-switcher__address">Краснобродский городской округ</span>
+            </label>
+          </div>
+
+          <button class="location-switcher__show-btn button button--blue" type="submit">Показать</button>
+        </form>
+      </div>
+
+      <a class="page-header__link page-header__version-btn page-header__version-btn--menu js-open-popup" href="#">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#icon-glasses"></use>
+        </svg>
+        Версия для слабовидящих
+      </a>
+
+      <nav class="page-header__user-menu user-menu">
+        <div class="user-menu__overlay"></div>
+
+        <button class="user-menu__dropdown-btn" type="button">
+          <span class="user-menu__dropdown-btn-text visually-hidden">Открыть меню пользователя</span>
+
+          <svg class="user-menu__user-icon" width="16" height="16">
+            <use xlink:href="img/sprite.svg#icon-user"></use>
+          </svg>
+
+          <span class="user-menu__user-name">Анастасия</span>
+
+          <svg class="user-menu__dropdown-icon" width="13" height="13">
+            <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
+          </svg>
+        </button>
+
+        <ul class="user-menu__list">
+          <li class="user-menu__item">
+            <a class="page-header__link user-menu__link" href="#">Избранное</a>
+          </li>
+
+          <li class="user-menu__item">
+            <a class="page-header__link user-menu__link" href="#">Моя активность</a>
+          </li>
+
+          <li class="user-menu__item">
+            <a class="page-header__link user-menu__link" href="#">Выход</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+    <main class="activity page-content">
+      <div class="container">
+        <a class="page-content__back-btn" href="main-page.html">
+          <svg width="8" height="14">
+            <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
+          </svg>
+          Назад
+        </a>
+
+        <h1 class="page-content__title">Активность</h1>
+
+        <section class="discussion discussion--page">
+          <ul class="discussion__list">
+            <li class="discussion__item discussion__item--sign">
+              <div class="discussion__item-top">
+                <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+                <div class="discussion__used">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <p class="discussion__help">Участие принято</p>
+                </div>
+              </div>
+              <div class="discussion__content">
+                <a class="discussion__text" href="#">
+                  Оценка качества услуг учреждений сферы государственной молодежной политики
+                </a>
+                <button type="button" class="discussion__button-star button-star">
+                  <span class="visually-hidden">Добавить в избранное</span>
+                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+            <li class="discussion__item discussion__item--used">
+              <div class="discussion__item-top">
+                <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+                <div class="discussion__used">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <p class="discussion__help">Участие принято</p>
+                </div>
+              </div>
+              <div class="discussion__content">
+                <a class="discussion__text" href="#">
+                  Развитие животноводства в Тульской области
+                </a>
+                <button type="button" class="discussion__button-star button-star">
+                  <span class="visually-hidden">Добавить в избранное</span>
+                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+            <li class="discussion__item">
+              <div class="discussion__item-top">
+                <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+                <div class="discussion__used">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <p class="discussion__help">Участие принято</p>
+                </div>
+              </div>
+              <div class="discussion__content">
+                <a class="discussion__text" href="#">
+                  Реконструкция моста через р. Дон на км 11+600 автомобильной дороги Новомосковское кольцо в Узловском районе Тульской области
+                </a>
+                <button type="button" class="discussion__button-star button-star">
+                  <span class="visually-hidden">Добавить в избранное</span>
+                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+            <li class="discussion__item discussion__item--used discussion__item--sign">
+              <div class="discussion__item-top">
+                <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+                <div class="discussion__used">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <p class="discussion__help">Участие принято</p>
+                </div>
+              </div>
+              <div class="discussion__content">
+                <a class="discussion__text" href="#">
+                  Государственное дошкольное образовательное учреждение Тульской области «Узловский детский сад»
+                </a>
+                <button type="button" class="discussion__button-star button-star">
+                  <span class="visually-hidden">Добавить в избранное</span>
+                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+            <li class="discussion__item">
+              <div class="discussion__item-top">
+                <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+                <div class="discussion__used">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <p class="discussion__help">Участие принято</p>
+                </div>
+              </div>
+              <div class="discussion__content">
+                <a class="discussion__text" href="#">
+                  Оказание услуг по организации питания пациентов ГУЗ "ТОКПБ №1 им. Н.П. Каменева"
+                </a>
+                <button type="button" class="discussion__button-star button-star">
+                  <span class="visually-hidden">Добавить в избранное</span>
+                  <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-star"></use>
+                  </svg>
+                </button>
+              </div>
+            </li>
+            <li class="discussion__item discussion__item--sign">
+                <div class="discussion__item-top">
+                  <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+                  <div class="discussion__used">
+                    <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                    </svg>
+                    <p class="discussion__help">Участие принято</p>
+                  </div>
+                </div>
+                <div class="discussion__content">
+                  <a class="discussion__text" href="#">
+                    Оценка качества услуг учреждений сферы государственной молодежной политики
+                  </a>
+                  <button type="button" class="discussion__button-star button-star">
+                    <span class="visually-hidden">Добавить в избранное</span>
+                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li class="discussion__item discussion__item--used">
+                <div class="discussion__item-top">
+                  <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+                  <div class="discussion__used">
+                    <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                    </svg>
+                    <p class="discussion__help">Участие принято</p>
+                  </div>
+                </div>
+                <div class="discussion__content">
+                  <a class="discussion__text" href="#">
+                    Развитие животноводства в Тульской области
+                  </a>
+                  <button type="button" class="discussion__button-star button-star">
+                    <span class="visually-hidden">Добавить в избранное</span>
+                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li class="discussion__item">
+                <div class="discussion__item-top">
+                  <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+                  <div class="discussion__used">
+                    <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                    </svg>
+                    <p class="discussion__help">Участие принято</p>
+                  </div>
+                </div>
+                <div class="discussion__content">
+                  <a class="discussion__text" href="#">
+                    Реконструкция моста через р. Дон на км 11+600 автомобильной дороги Новомосковское кольцо в Узловском районе Тульской области
+                  </a>
+                  <button type="button" class="discussion__button-star button-star">
+                    <span class="visually-hidden">Добавить в избранное</span>
+                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li class="discussion__item discussion__item--used discussion__item--sign">
+                <div class="discussion__item-top">
+                  <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+                  <div class="discussion__used">
+                    <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                    </svg>
+                    <p class="discussion__help">Участие принято</p>
+                  </div>
+                </div>
+                <div class="discussion__content">
+                  <a class="discussion__text" href="#">
+                    Государственное дошкольное образовательное учреждение Тульской области «Узловский детский сад»
+                  </a>
+                  <button type="button" class="discussion__button-star button-star">
+                    <span class="visually-hidden">Добавить в избранное</span>
+                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li class="discussion__item">
+                <div class="discussion__item-top">
+                  <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+                  <div class="discussion__used">
+                    <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                    </svg>
+                    <p class="discussion__help">Участие принято</p>
+                  </div>
+                </div>
+                <div class="discussion__content">
+                  <a class="discussion__text" href="#">
+                    Оказание услуг по организации питания пациентов ГУЗ "ТОКПБ №1 им. Н.П. Каменева"
+                  </a>
+                  <button type="button" class="discussion__button-star button-star">
+                    <span class="visually-hidden">Добавить в избранное</span>
+                    <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-star"></use>
+                    </svg>
+                  </button>
+                </div>
+              </li>
+              <li class="discussion__item discussion__item--sign">
+                  <div class="discussion__item-top">
+                    <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+                    <div class="discussion__used">
+                      <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                      </svg>
+                      <p class="discussion__help">Участие принято</p>
+                    </div>
+                  </div>
+                  <div class="discussion__content">
+                    <a class="discussion__text" href="#">
+                      Оценка качества услуг учреждений сферы государственной молодежной политики
+                    </a>
+                    <button type="button" class="discussion__button-star button-star">
+                      <span class="visually-hidden">Добавить в избранное</span>
+                      <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+                <li class="discussion__item discussion__item--used">
+                  <div class="discussion__item-top">
+                    <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+                    <div class="discussion__used">
+                      <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                      </svg>
+                      <p class="discussion__help">Участие принято</p>
+                    </div>
+                  </div>
+                  <div class="discussion__content">
+                    <a class="discussion__text" href="#">
+                      Развитие животноводства в Тульской области
+                    </a>
+                    <button type="button" class="discussion__button-star button-star">
+                      <span class="visually-hidden">Добавить в избранное</span>
+                      <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+                <li class="discussion__item">
+                  <div class="discussion__item-top">
+                    <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+                    <div class="discussion__used">
+                      <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                      </svg>
+                      <p class="discussion__help">Участие принято</p>
+                    </div>
+                  </div>
+                  <div class="discussion__content">
+                    <a class="discussion__text" href="#">
+                      Реконструкция моста через р. Дон на км 11+600 автомобильной дороги Новомосковское кольцо в Узловском районе Тульской области
+                    </a>
+                    <button type="button" class="discussion__button-star button-star">
+                      <span class="visually-hidden">Добавить в избранное</span>
+                      <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+                <li class="discussion__item discussion__item--used discussion__item--sign">
+                  <div class="discussion__item-top">
+                    <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+                    <div class="discussion__used">
+                      <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                      </svg>
+                      <p class="discussion__help">Участие принято</p>
+                    </div>
+                  </div>
+                  <div class="discussion__content">
+                    <a class="discussion__text" href="#">
+                      Государственное дошкольное образовательное учреждение Тульской области «Узловский детский сад»
+                    </a>
+                    <button type="button" class="discussion__button-star button-star">
+                      <span class="visually-hidden">Добавить в избранное</span>
+                      <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+                <li class="discussion__item">
+                  <div class="discussion__item-top">
+                    <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+                    <div class="discussion__used">
+                      <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                      </svg>
+                      <p class="discussion__help">Участие принято</p>
+                    </div>
+                  </div>
+                  <div class="discussion__content">
+                    <a class="discussion__text" href="#">
+                      Оказание услуг по организации питания пациентов ГУЗ "ТОКПБ №1 им. Н.П. Каменева"
+                    </a>
+                    <button type="button" class="discussion__button-star button-star">
+                      <span class="visually-hidden">Добавить в избранное</span>
+                      <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite.svg#icon-star"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </li>
+          </ul>
+        </section>
+
+        <button class="activity__list-btn button button--light-blue" type="button">Показать ещё</button>
+
+        <div class="page-content__paginator paginator">
+  <a class="paginator__item paginator__item--prev paginator__item--disabled" aria-label="предыдущий">
+      <svg width="18" height="10" viewbox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#icon-paginator-prev"></use>
+    </svg>
+  </a>
+  <a class="paginator__item paginator__item--current">1</a>
+  <a class="paginator__item" href="#2">2</a>
+  <a class="paginator__item" href="#3">3</a>
+  <a class="paginator__item paginator__item--hidden" href="#">&hellip;</a>
+  <a class="paginator__item paginator__item--hidden" href="#9">9</a>
+  <a class="paginator__item paginator__item--hidden" href="#10">10</a>
+  <a class="paginator__item paginator__item--hidden" href="#11">11</a>
+  <a class="paginator__item paginator__item--next" href="#next" aria-label="следующий">
+    <svg width="18" height="10" viewbox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <use xlink:href="img/sprite.svg#icon-paginator-next"></use>
+    </svg>
+  </a>
+</div>
+
+      </div>
+    </main>
+
+    <footer class="page-footer">
+  <div class="container">
+    <div class="page-footer__top">
+      <ul class="page-footer__list">
+        <li class="page-footer__item">
+          <span>Сайт Президента Российской Федерации</span>
+          <a href="http://kremlin.ru/" target="_blank">kremlin.ru</a>
+        </li>
+        <li class="page-footer__item">
+          <span>Сайт Правительства Российской Федерации</span>
+          <a href="http://government.ru/" target="_blank">government.ru</a>
+        </li>
+        <li class="page-footer__item">
+          <span>Государственная дума Российской Федерации</span>
+          <a href="http://duma.gov.ru/" target="_blank">duma.gov.ru</a>
+        </li>
+      </ul>
+      <ul class="page-footer__list">
+        <li class="page-footer__item">
+          <span>Портал государственных услуг</span>
+          <a href="http://gosuslugi.ru/" target="_blank">gosuslugi.ru</a>
+        </li>
+        <li class="page-footer__item">
+          <span>Единый портал раскрытия информации о подготовке проектов нормативных актов</span>
+          <a href="http://regulation.gov.ru/" target="_blank">regulation.gov.ru</a>
+        </li>
+        <li class="page-footer__item">
+          <span>Официальный интернет-портал правовой информации</span>
+          <a href="http://pravo.gov.ru/" target="_blank">pravo.gov.ru</a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__bottom">
+      <span>© 2019</span>
+    </div>
+  </div>
+</footer>
+
+    <button class="page-body__up-btn">
+  <svg width="20" height="12" viewbox="0 0 33 12">
+    <use xlink:href="img/sprite.svg#icon-arrow"></use>
+  </svg>
+  <span class="visually-hidden">Наверх</span>
+</button>
+
+
+    <script src="js/libs.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

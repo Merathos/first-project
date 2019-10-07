@@ -647,7 +647,7 @@
 
 
 (function () {
-  var list = document.querySelector('.projects__list');
+  var list = document.querySelector('.projects-list');
 
   if (!list) {
     return;
