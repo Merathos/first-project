@@ -54,10 +54,22 @@
       display: block;
 
       color: var(--color-interactive-default);
+
+      &:hover,
+      &:focus {
+        color: var(--color-interactive-accent);
+        outline: none;
+      }
     }
   }
 
   &:hover {
+    .discussion__button-star {
+      display: block;
+    }
+  }
+
+  @media (max-width: $desktop-width - 1) {
     .discussion__button-star {
       display: block;
     }

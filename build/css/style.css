@@ -3842,6 +3842,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .poll__hide {
     display: none; } }
 
+span.poll__hide {
+  padding-right: 0; }
+
 .poll__archive-mobile {
   display: none; }
   @media (max-width: 767px) {
@@ -3983,7 +3986,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .project__info-doc {
   position: relative;
   padding-left: 36px;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s; }
   .project__info-doc::before {
     content: "";
     position: absolute;
@@ -3994,6 +3999,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     background-image: url("../img/icon-doc.svg");
     background-repeat: no-repeat;
     background-position-y: center; }
+  .project__info-doc:hover {
+    opacity: 0.8; }
 
 .project__doc-name {
   display: block;
@@ -4183,8 +4190,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .discussion__item--sign .discussion__button-star {
     display: block;
     color: var(--color-interactive-default); }
+    .discussion__item--sign .discussion__button-star:hover, .discussion__item--sign .discussion__button-star:focus {
+      color: var(--color-interactive-accent);
+      outline: none; }
   .discussion__item:hover .discussion__button-star {
     display: block; }
+  @media (max-width: 1199px) {
+    .discussion__item .discussion__button-star {
+      display: block; } }
 
 .discussion__item-top {
   display: -webkit-box;

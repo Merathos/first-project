@@ -115,6 +115,8 @@
 
   text-decoration: none;
 
+  transition: opacity $style-change-duration;
+
   &::before {
     content: "";
     position: absolute;
@@ -127,6 +129,10 @@
     background-image: url("../img/icon-doc.svg");
     background-repeat: no-repeat;
     background-position-y: center;
+  }
+
+  &:hover {
+    opacity: 0.8;
   }
 }
 
