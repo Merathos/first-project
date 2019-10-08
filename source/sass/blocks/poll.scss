@@ -107,7 +107,7 @@
     line-height: 1.3;
     color: var(--color-text-caption);
 
-    background-color: $light-grey;
+    background-color: var(--color-tag);
     border-radius: $border-radius 0;
     opacity: 0.5;
   }

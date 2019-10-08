@@ -101,10 +101,7 @@
 
   & .ss-main .ss-single-selected .placeholder {
     display: inline-block;
-    background-image: linear-gradient(to right, $light-blue-accent 0%, $light-blue-accent 50%, transparent 50%, transparent 75%);
-    background-position: center bottom;
-    background-repeat: repeat-x;
-    background-size: 8px 2px;
+    border-bottom: 2px dashed var(--color-interactive-default);
 
     @media (max-width: $tablet-width - 1) {
       white-space: nowrap;

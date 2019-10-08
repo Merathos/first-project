@@ -51,8 +51,8 @@
   padding: 0 8px;
   font-size: rem(16px);
   line-height: rem(22px);
-  color: $blue-default;
-  background-color: $light-blue;
+  color: var(--color-interactive-default);
+  background-color: var(--color-interactive-light-default);
   border-radius: 50%;
 }
 

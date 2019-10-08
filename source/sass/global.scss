@@ -29,6 +29,7 @@ html {
   --color-bg-secondary-transparent: #{rgba($color-bg, 0)};
 
   --color-stroke: #{$light-grey};
+  --color-tag: #{$light-grey};
 
   --color-text-main: #{$dark-text};
   --color-text-secondary: #{$grey};
@@ -36,6 +37,9 @@ html {
 
   --color-interactive-default: #{$blue-default};
   --color-interactive-accent: #{$blue-accent};
+
+  --color-interactive-light-default: #{$light-blue};
+  --color-interactive-light-accent: #{$light-blue-accent};
 
 
   &.mod-theme-inverse {
@@ -46,13 +50,17 @@ html {
     --color-bg-secondary-transparent: #{rgba($dark-main, 0)};
 
     --color-stroke: #{$light-grey};
+    --color-tag: #{$grey};
 
     --color-text-main: #{$white};
-    --color-text-secondary: #{$grey};
-    --color-text-caption: #{$grey-default};
+    --color-text-secondary: #{$white};
+    --color-text-caption: #{$white};
 
     --color-interactive-default: #{$blue-default};
     --color-interactive-accent: #{$blue-accent};
+
+    --color-interactive-light-default: #{$grey};
+    --color-interactive-light-accent: #{$light-blue-accent};
   }
 
 
@@ -63,14 +71,18 @@ html {
     --color-bg-main-transparent: #{rgba($light-blue-accent, 0)};
     --color-bg-secondary-transparent: #{rgba($light-blue, 0)};
 
-    --color-stroke: #{$light-grey};
+    --color-stroke: #{$blue-default};
+    --color-tag: #{$light-grey};
 
     --color-text-main: #{$dark-text};
-    --color-text-secondary: #{$grey};
-    --color-text-caption: #{$white};
+    --color-text-secondary: #{$dark-text};
+    --color-text-caption: #{$dark-text};
 
     --color-interactive-default: #{$blue-default};
     --color-interactive-accent: #{$blue-accent};
+
+    --color-interactive-light-default: #{$light-blue};
+    --color-interactive-light-accent: #{$blue-accent};
   }
 
 
@@ -81,14 +93,18 @@ html {
     --color-bg-main-transparent: #{rgba($light-yellow, 0)};
     --color-bg-secondary-transparent: #{rgba(#f7e4d8, 0)};
 
-    --color-stroke: #{$comfort};
+    --color-stroke: #{$grey};
+    --color-tag: #{$light-grey};
 
     --color-text-main: #{$comfort};
-    --color-text-secondary: #{$grey};
-    --color-text-caption: #{$brown};
+    --color-text-secondary: #{$comfort};
+    --color-text-caption: #{$comfort};
 
     --color-interactive-default: #{$blue-default};
     --color-interactive-accent: #{$blue-accent};
+
+    --color-interactive-light-default: #{$light-blue};
+    --color-interactive-light-accent: #{$light-blue-accent};
   }
 
 
@@ -99,14 +115,18 @@ html {
     --color-bg-main-transparent: #{rgba($brown, 0)};
     --color-bg-secondary-transparent: #{rgba($dark-main, 0)};
 
-    --color-stroke: #{$light-green};
+    --color-stroke: #{$grey};
+    --color-tag: #{$grey};
 
     --color-text-main: #{$light-green};
-    --color-text-secondary: #{$green};
-    --color-text-caption: #{$grey-default};
+    --color-text-secondary: #{$light-green};
+    --color-text-caption: #{$light-green};
 
     --color-interactive-default: #{$red};
     --color-interactive-accent: #{rgba($red, 0.8)};
+
+    --color-interactive-light-default: #{rgba($red, 0.4)};
+    --color-interactive-light-accent: #{rgba($red, 0.6)};
   }
 }
 

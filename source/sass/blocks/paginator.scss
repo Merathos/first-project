@@ -36,7 +36,7 @@
   &[href]:focus,
   &[href]:active {
     color: var(--color-interactive-accent);
-    border: 1px solid $light-blue-accent;
+    border: 1px solid var(--color-interactive-light-accent);
   }
 
   &--current {

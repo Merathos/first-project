@@ -50,7 +50,7 @@
         left: 0;
         width: 6px;
         height: 6px;
-        background-color: $grey;
+        background-color: var(--color-text-secondary);
         border-radius: 50%;
       }
     }
@@ -81,7 +81,7 @@
       left: 0;
       width: 3px;
       height: auto;
-      background-color: $blue-default;
+      background-color: var(--color-interactive-default);
       border-radius: $border-radius;
     }
   }
@@ -124,7 +124,7 @@
 
   a[href*="youtube"]:not([class]) {
     padding: 23px;
-    border: 1px solid $light-grey;
+    border: 1px solid var(--color-stroke);
     border-radius: $border-radius;
 
     &::before {

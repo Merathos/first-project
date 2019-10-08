@@ -9,7 +9,7 @@
 
   & .noUi-horizontal {
     height: 6px;
-    background: $light-grey;
+    background: var(--color-stroke);
     cursor: pointer;
   }
 
@@ -18,7 +18,7 @@
   }
 
   & .noUi-connect {
-    background: rgba($blue-default, 1);
+    background: var(--color-interactive-default);
   }
 
   & .noUi-horizontal .noUi-handle {
@@ -27,7 +27,7 @@
     height: 24px;
     border-radius: 100%;
     background-color: var(--color-bg-main);
-    border: 8px solid $blue-default;
+    border: 8px solid var(--color-interactive-default);
     box-shadow: none;
 
     cursor: pointer;
@@ -39,7 +39,7 @@
     }
 
     &:hover {
-      border-color: $blue-accent;
+      border-color: var(--color-interactive-accent);
     }
 
     &:focus {
@@ -52,8 +52,9 @@
   }
 
   & .noUi-pips-horizontal {
-    padding: 0;
     top: 0;
+    height: 0;
+    padding: 0;
   }
 
   & .noUi-marker-horizontal.noUi-marker-large {
@@ -76,21 +77,17 @@
   }
 
   & .noUi-tooltip {
-    border: none;
-
     @include font-h5;
-    color: $dark-text;
+    color: var(--color-text-main);
     padding-bottom: 1px;
     padding-left: 10px;
     padding-right: 10px;
+    background-color: var(--color-bg-main);
+    border: none;
   }
 
   & .noUi-horizontal .noUi-tooltip {
     bottom: 200%;
-  }
-
-  & .noUi-pips-horizontal {
-    height: 0;
   }
 }
 

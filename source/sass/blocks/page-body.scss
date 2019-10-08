@@ -18,7 +18,7 @@
 
   &:focus {
     color: var(--color-text-secondary);
-    border-color: $light-blue-accent;
+    border-color: var(--color-interactive-light-accent);
   }
 
   &:focus:not(.focus-visible) {
@@ -28,7 +28,7 @@
 
   &:hover:not(.focus-visible) {
     color: var(--color-text-secondary);
-    border-color: $light-blue-accent;
+    border-color: var(--color-interactive-light-accent);
   }
 
   svg {
@@ -58,7 +58,7 @@
 
     &:active:not(.focus-visible) {
       color: var(--color-text-secondary);
-      border-color: $light-blue-accent;
+      border-color: var(--color-interactive-light-accent);
     }
   }
 }

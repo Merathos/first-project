@@ -38,7 +38,7 @@
   max-width: 740px;
   padding-bottom: 40px;
 
-  background-image: linear-gradient($light-grey, $light-grey);
+  background-image: linear-gradient(var(--color-stroke), var(--color-stroke));
   background-position: left bottom;
   background-repeat: no-repeat;
   background-size: 100% 1px;
@@ -103,7 +103,7 @@
 // }
 
 .news-item__bottom {
-  border: 1px solid $light-grey;
+  border: 1px solid var(--color-stroke);
   border-radius: 5px;
 
   @media (max-width: $mobile-max-width) {
