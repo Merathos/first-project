@@ -9,14 +9,30 @@
 
     <main class="activity page-content">
       <div class="container">
-        <a class="page-content__back-btn" href="main-page.html">
-          <svg width="8" height="14">
-            <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
-          </svg>
-          Назад
-        </a>
+        <include src="source/components/back-btn.html"></include>
 
         <h1 class="page-content__title">Активность</h1>
+
+      </div>
+      <div class="activity-tabs">
+
+        <ul class="activity-tabs__list">
+          <li class="activity-tabs__item">
+            <a href="activity-discussions.html" class="activity-tabs__link">Обсуждения</a>
+          </li>
+          <li class="activity-tabs__item">
+            <a href="#" class="activity-tabs__link activity-tabs__link--active">Проекты</a>
+          </li>
+          <li class="activity-tabs__item">
+            <a href="activity-surveys.html" class="activity-tabs__link">Опросы</a>
+          </li>
+          <li class="activity-tabs__item">
+            <a href="activity-partners.html" class="activity-tabs__link">На сторонних ресурсах</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="container">
 
         <div class="projects-list">
           <article class="project-item">

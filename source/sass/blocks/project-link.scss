@@ -1,0 +1,33 @@
+.project-link__item {
+  margin-bottom: 48px;
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.project-link__link {
+  display: flex;
+
+  @include font-h4;
+  text-decoration: none;
+  color: $blue-default;
+
+  transition: color $style-change-duration;
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    background-image: url('../img/icon-link.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &:hover,
+  &:focus {
+    color: $blue-accent;
+  }
+}

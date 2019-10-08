@@ -1,0 +1,35 @@
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 40px;
+  font-size: rem(18px);
+  line-height: rem(23px);
+  text-decoration: none;
+  user-select: none;
+  color: var(--color-text-secondary);
+  outline: none;
+  transition: color $style-change-duration;
+
+  &:focus {
+    color: var(--color-interactive-accent);
+  }
+
+  &:focus:not(.focus-visible) {
+    color: var(--color-text-secondary);
+  }
+
+  &:hover:not(.focus-visible) {
+    color: var(--color-interactive-accent);
+  }
+
+  svg {
+    display: block;
+    width: 8px;
+    height: 14px;
+    padding-bottom: 3px;
+    margin-right: 12px;
+    fill: currentColor;
+    pointer-events: none;
+    transition: fill $style-change-duration;
+  }
+}

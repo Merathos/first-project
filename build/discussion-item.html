@@ -27,10 +27,11 @@
 
   <body class="page-body">
     <section class="special-popup js-hide">
+  <h2 class="visually-hidden">Настройки для слабовидящих</h2>
   <div class="special-popup__wrap">
-    <button class="special-popup__btn-close js-close-popup" type="button">
-      <svg width="18" height="18" viewbox="0 0 18 18" stroke="#354052" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 1L17 17M17 1L1 17" stroke-width="2"></path>
+    <button class="special-popup__btn-close js-close-popup" type="button" aria-label="Закрыть">
+      <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <use xlink:href="img/sprite.svg#icon-close"></use>
       </svg>
       <span class="visually-hidden">Закрыть</span>
     </button>
@@ -203,12 +204,13 @@
 
     <main class="page-content">
       <div class="container">
-        <a class="page-content__back-btn" href="main-page.html">
-          <svg width="8" height="14">
-            <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
-          </svg>
-          Назад
-        </a>
+        <a class="back-btn" href="main-page.html">
+  <svg width="8" height="14">
+    <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
+  </svg>
+  Назад
+</a>
+
       </div>
       <section class="news-item">
         <div class="container">
@@ -539,7 +541,7 @@
           </div>
           <div class="answers__pagination">
             <a href="#" class="answers__pagination-arrow answers__pagination-arrow--prev answers__pagination-arrow--disabled" aria-label="предыдущий">
-              <svg width="24" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="img/sprite.svg#icon-paginator-prev"></use>
               </svg>
             </a>
@@ -551,7 +553,7 @@
               <span class="answers__all-count">24</span>
             </div>
             <a href="#" class="answers__pagination-arrow answers__pagination-arrow--next" aria-label="следующий">
-              <svg width="24" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg width="25" height="16" viewBox="0 0 25 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="img/sprite.svg#icon-paginator-next"></use>
               </svg>
             </a>
@@ -560,7 +562,7 @@
       </section>
       <section class="poll-page poll-page--final">
         <div class="container">
-          <h1 class="poll-page__title page-title">Финальная версия документа</h1>
+          <h2 class="poll-page__title page-title">Финальная версия документа</h2>
           <div class="poll-page__dates">
             <div class="poll-page__date-start">
               <span class="poll-page__date-title">Дата добавления:</span>
@@ -571,7 +573,7 @@
             </div>
           </div>
           <div class="poll-page__description">
-            <p class="poll-page__description-part">
+            <p>
               Описание - 2000 символов. Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как текст-заполнитель или же текст-наполнитель. Иногда текст-«рыба» также используется композиторами при написании музыки. Они напевают его перед тем, как сочинены соответствующие слова. Уже в 16-том веке рыбные тексты имели широкое распространение у печатников.
             </p>
           </div>
@@ -698,7 +700,7 @@
   </div>
 </footer>
 
-    <button class="page-body__up-btn">
+    <button class="page-body__up-btn" type="button">
   <svg width="20" height="12" viewbox="0 0 33 12">
     <use xlink:href="img/sprite.svg#icon-arrow"></use>
   </svg>
@@ -730,7 +732,7 @@
             </section>
             <section class="all-comments">
               <div class="all-comments__top">
-                <h2 class="all-comments__title">Комментарии пользователей</h2>
+                <h3 class="all-comments__title">Комментарии пользователей</h3>
                 <span class="all-comments__count">49</span>
               </div>
               <ul class="all-comments__list">
@@ -816,7 +818,7 @@
 
             <section class="all-comments">
               <div class="all-comments__top">
-                <h2 class="all-comments__title">Комментарии пользователей</h2>
+                <h3 class="all-comments__title">Комментарии пользователей</h3>
                 <span class="all-comments__count">49</span>
               </div>
               <ul class="all-comments__list">
@@ -887,7 +889,7 @@
 
               <section class="all-comments">
                 <div class="all-comments__top">
-                  <h2 class="all-comments__title">Комментарии пользователей</h2>
+                  <h3 class="all-comments__title">Комментарии пользователей</h3>
                   <span class="all-comments__count">49</span>
                 </div>
                 <ul class="all-comments__list">

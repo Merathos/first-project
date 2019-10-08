@@ -44,10 +44,14 @@
   margin: 0;
   padding: 0;
 
+  color: $dark-text;
+
   background-color: transparent;
   border: none;
   outline: none;
   cursor: pointer;
+
+  transition: color $style-change-duration;
 
   @include tablet {
     top: 24px;
