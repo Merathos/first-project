@@ -3181,7 +3181,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   height: 20px;
   margin: 0;
   padding: 0;
-  color: #354052;
+  color: var(--color-text-main);
   background-color: transparent;
   border: none;
   outline: none;
@@ -3196,15 +3196,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .special-popup__btn-close {
       top: 16px;
       right: 16px; } }
-  .special-popup__btn-close:hover svg {
-    stroke: var(--color-interactive-accent); }
+  .special-popup__btn-close:hover {
+    color: var(--color-interactive-accent); }
   .special-popup__btn-close svg {
     display: block;
     width: 20px;
-    height: 20px;
-    -webkit-transition: stroke 0.2s;
-    transition: stroke 0.2s;
-    stroke: var(--color-text-main); }
+    height: 20px; }
 
 .special-popup__title {
   padding-bottom: 32px;
