@@ -1927,10 +1927,18 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   height: auto;
   margin-bottom: 48px; }
 
+.content iframe:not([class]) {
+  display: block;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 48px;
+  border: none; }
+
 .content .highlighted-text {
   position: relative;
   padding-left: 27px;
-  margin-bottom: 48px; }
+  margin-bottom: 48px;
+  margin-top: 48px; }
   .content .highlighted-text::before {
     content: "";
     position: absolute;
@@ -1993,6 +2001,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .content h2:not([class]),
   .content p:not([class]),
   .content img:not([class]),
+  .content iframe:not([class]),
   .content ul:not([class]),
   .content a:not([class]),
   .content .highlighted-text {
@@ -2015,6 +2024,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .content h2:not([class]),
   .content p:not([class]),
   .content img:not([class]),
+  .content iframe:not([class]),
   .content ul:not([class]),
   .content a:not([class]),
   .content .highlighted-text {
@@ -2033,7 +2043,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     margin-top: 48px; }
   .content ul:not([class]) {
     padding: 24px; }
-  .content img:not([class]) {
+  .content img:not([class]),
+  .content iframe:not([class]) {
     margin-bottom: 40px; }
   .content a:not([class]) {
     display: block;

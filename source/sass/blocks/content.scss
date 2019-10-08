@@ -68,10 +68,19 @@
     margin-bottom: 48px;
   }
 
+  iframe:not([class]) {
+    display: block;
+    width: 100%;
+    height: 400px;
+    margin-bottom: 48px;
+    border: none;
+  }
+
   .highlighted-text {
     position: relative;
     padding-left: 27px;
     margin-bottom: 48px;
+    margin-top: 48px;
 
     &::before {
       content: "";
@@ -141,6 +150,7 @@
     h2:not([class]),
     p:not([class]),
     img:not([class]),
+    iframe:not([class]),
     ul:not([class]),
     a:not([class]),
     .highlighted-text {
@@ -176,6 +186,7 @@
     h2:not([class]),
     p:not([class]),
     img:not([class]),
+    iframe:not([class]),
     ul:not([class]),
     a:not([class]),
     .highlighted-text {
@@ -204,7 +215,8 @@
       padding: 24px;
     }
 
-    img:not([class]) {
+    img:not([class]),
+    iframe:not([class]) {
       margin-bottom: 40px;
     }
 
