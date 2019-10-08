@@ -6609,7 +6609,7 @@ span.poll-page__hide {
     left: 32px;
     width: 24px;
     height: 24px;
-    background-image: url("../../img/icon-time-white.svg");
+    background-image: url("../img/icon-time-white.svg");
     background-repeat: no-repeat; }
     @media (max-width: 1199px) {
       .poll-page__finish::before {
