@@ -44,7 +44,7 @@
   margin: 0;
   padding: 0;
 
-  color: $dark-text;
+  color: var(--color-text-main);
 
   background-color: transparent;
   border: none;
@@ -64,19 +64,13 @@
   }
 
   &:hover {
-    svg {
-      stroke: var(--color-interactive-accent);
-    }
+    color: var(--color-interactive-accent);
   }
 
   svg {
     display: block;
     width: 20px;
     height: 20px;
-
-    transition: stroke $style-change-duration;
-
-    stroke: var(--color-text-main);
   }
 }
 
