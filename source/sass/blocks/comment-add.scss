@@ -37,12 +37,13 @@
   }
 
   & textarea {
-    font: inherit;
+    font-family: inherit;
     font-size: rem(15px);
     line-height: rem(27px);
     color: inherit;
     width: 100%;
     padding: 16px 24px;
+    -webkit-appearance: none;
     border: 1px solid $light-grey;
     border-radius: 5px;
     background-color: var(--color-bg-secondary);
@@ -50,7 +51,7 @@
 
     &::placeholder {
       font-size: rem(15px);
-      line-height: rem(27px);
+      line-height: rem(28px);
       color: var(--color-text-caption);
     }
   }
