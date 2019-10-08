@@ -4,6 +4,24 @@ html {
   box-sizing: border-box;
 
 
+  &.mod-font-family-arial {
+    font-family: "Arial", sans-serif;
+  }
+
+  &.mod-font-family-times {
+    font-family: "Times New Roman", serif;
+  }
+
+
+  &.mod-font-size-larger {
+    font-size: 18px;
+  }
+
+  &.mod-font-size-largest {
+    font-size: 20px;
+  }
+
+
   --color-bg-main: #{$white};
   --color-bg-secondary: #{$color-bg};
 
@@ -20,7 +38,7 @@ html {
   --color-interactive-accent: #{$blue-accent};
 
 
-  &.theme-inverse {
+  &.mod-theme-inverse {
     --color-bg-main: #{$dark};
     --color-bg-secondary: #{$dark-main};
 
@@ -38,7 +56,7 @@ html {
   }
 
 
-  &.theme-blue {
+  &.mod-theme-blue {
     --color-bg-main: #{$light-blue-accent};
     --color-bg-secondary: #{$light-blue};
 
@@ -56,7 +74,7 @@ html {
   }
 
 
-  &.theme-comfort {
+  &.mod-theme-comfort {
     --color-bg-main: #{$light-yellow};
     --color-bg-secondary: #{#f7e4d8};
 
@@ -74,7 +92,7 @@ html {
   }
 
 
-  &.theme-brown {
+  &.mod-theme-brown {
     --color-bg-main: #{$brown};
     --color-bg-secondary: #{$dark-main};
 
@@ -90,28 +108,8 @@ html {
     --color-interactive-default: #{$red};
     --color-interactive-accent: #{rgba($red, 0.8)};
   }
-
-
-  &.font-family-arial {
-    font-family: "Arial", sans-serif;
-  }
-
-  &.font-family-times {
-    font-family: "Times New Roman", serif;
-  }
-
-  &.font-size-s {
-    font-size: 16px;
-  }
-
-  &.font-size-m {
-    font-size: 24px;
-  }
-
-  &.font-size-l {
-    font-size: 28px;
-  }
 }
+
 
 *,
 *::before,

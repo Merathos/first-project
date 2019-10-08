@@ -26,6 +26,10 @@
     padding-right: 26px;
   }
 
+  &:disabled {
+    cursor: default;
+  }
+
   & span {
     padding-right: 6px;
   }
