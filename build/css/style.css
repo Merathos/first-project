@@ -3181,7 +3181,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   height: 20px;
   margin: 0;
   padding: 0;
-  color: #354052;
+  color: var(--color-text-main);
   background-color: transparent;
   border: none;
   outline: none;
@@ -3196,15 +3196,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .special-popup__btn-close {
       top: 16px;
       right: 16px; } }
-  .special-popup__btn-close:hover svg {
-    stroke: var(--color-interactive-accent); }
+  .special-popup__btn-close:hover {
+    color: var(--color-interactive-accent); }
   .special-popup__btn-close svg {
     display: block;
     width: 20px;
-    height: 20px;
-    -webkit-transition: stroke 0.2s;
-    transition: stroke 0.2s;
-    stroke: var(--color-text-main); }
+    height: 20px; }
 
 .special-popup__title {
   padding-bottom: 32px;
@@ -3842,6 +3839,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .poll__hide {
     display: none; } }
 
+span.poll__hide {
+  padding-right: 0; }
+
 .poll__archive-mobile {
   display: none; }
   @media (max-width: 767px) {
@@ -3983,7 +3983,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .project__info-doc {
   position: relative;
   padding-left: 36px;
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s; }
   .project__info-doc::before {
     content: "";
     position: absolute;
@@ -3994,6 +3996,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     background-image: url("../img/icon-doc.svg");
     background-repeat: no-repeat;
     background-position-y: center; }
+  .project__info-doc:hover {
+    opacity: 0.8; }
 
 .project__doc-name {
   display: block;
@@ -4183,8 +4187,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .discussion__item--sign .discussion__button-star {
     display: block;
     color: var(--color-interactive-default); }
+    .discussion__item--sign .discussion__button-star:hover, .discussion__item--sign .discussion__button-star:focus {
+      color: var(--color-interactive-accent);
+      outline: none; }
   .discussion__item:hover .discussion__button-star {
     display: block; }
+  @media (max-width: 1199px) {
+    .discussion__item .discussion__button-star {
+      display: block; } }
 
 .discussion__item-top {
   display: -webkit-box;
