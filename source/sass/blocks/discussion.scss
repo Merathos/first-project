@@ -53,7 +53,7 @@
     .discussion__button-star {
       display: block;
 
-      color: $blue-default;
+      color: var(--color-interactive-default);
     }
   }
 
@@ -78,7 +78,7 @@
 
   font-size: rem(14px);
   line-height: 1.3;
-  color: $grey-default;
+  color: var(--color-text-caption);
 
   &::before {
     content: "";
@@ -120,7 +120,7 @@
 
   font-size: rem(13px);
   line-height: 1.3;
-  color: $dark-text;
+  color: var(--color-text-main);
   white-space: nowrap;
 
   background-color: $light-blue;
@@ -164,16 +164,6 @@
   font-size: rem(16px);
   line-height: 1.4;
   text-align: left;
-  color: $dark-text;
-  text-decoration: none;
-
-  cursor: pointer;
-
-  transition: color $style-change-duration;
-
-  &:hover {
-    color: $blue-default;
-  }
 }
 
 .discussion__button-star {
@@ -221,19 +211,6 @@
 
     @media (max-width: $mobile-max-width) {
       margin-top: 10px;
-    }
-  }
-
-  & .discussion__text {
-    color: $dark-text;
-
-    transition: color $style-change-duration;
-
-    @include font-h5;
-
-    &:hover,
-    &:focus {
-      color: $blue-default;
     }
   }
 

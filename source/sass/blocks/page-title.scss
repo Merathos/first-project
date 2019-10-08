@@ -3,7 +3,6 @@
   margin: 0;
 
   @include font-h1;
-  color: $dark-text;
 
   @media (max-width: $tablet-width - 1) {
     @include font-h2;

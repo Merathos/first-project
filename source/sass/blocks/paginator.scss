@@ -6,7 +6,6 @@
 
   font-size: rem(15px);
   line-height: rem(27px);
-  color: $dark-text;
 
   @media (max-width: 617px) {
     width: 312px;
@@ -25,7 +24,7 @@
   text-align: center;
   text-decoration: none;
   color: inherit;
-  border: 1px solid $light-grey;
+  border: 1px solid var(--color-stroke);
   border-radius: 5px;
   transition: color $style-change-duration, border $style-change-duration;
 
@@ -36,13 +35,14 @@
   &[href]:hover,
   &[href]:focus,
   &[href]:active {
-    color: $blue-accent;
+    color: var(--color-interactive-accent);
     border: 1px solid $light-blue-accent;
   }
 
   &--current {
     color: $white;
-    background-color: $blue-default;
+    background-color: var(--color-interactive-default);
+    border-color: var(--color-interactive-default);
   }
 
   &--prev {
@@ -62,7 +62,7 @@
   }
 
   &--disabled {
-    color: $grey-default;
+    color: var(--color-text-caption);
   }
 
   &--hidden {

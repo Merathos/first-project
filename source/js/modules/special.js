@@ -22,7 +22,7 @@
         }
       });
 
-      root.classList.add(targetProperty + '--' + targetValue);
+      root.classList.add(targetProperty + '-' + targetValue);
     };
 
 

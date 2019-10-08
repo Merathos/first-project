@@ -6,24 +6,24 @@
   padding: 18px 23px;
   font-size: rem(13px);
   line-height: rem(17px);
-  color: $dark-text;
+  color: var(--color-text-main);
   text-decoration: none;
   user-select: none;
-  border: 1px solid $light-grey;
+  border: 1px solid var(--color-stroke);
   border-radius: $border-radius;
   outline: none;
   transition: color $style-change-duration;
 
   &:focus {
-    color: $blue-accent;
+    color: var(--color-interactive-default);
   }
 
   &:focus:not(.focus-visible) {
-    color: $blue-default;
+    color: var(--color-text-main);
   }
 
-  &:hover:not(.focus-visible) {
-    color: $blue-accent;
+  &:active:not(.focus-visible) {
+    color: var(--color-interactive-default);
   }
 }
 
@@ -50,5 +50,14 @@
 
 .file-item__size {
   text-transform: uppercase;
-  color: $grey-default;
+  color: var(--color-text-caption);
+}
+
+
+@media (min-width: $desktop-width) {
+  .file-item {
+    &:hover:not(.focus-visible) {
+      color: var(--color-interactive-default);
+    }
+  }
 }

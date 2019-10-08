@@ -1,6 +1,6 @@
 .counter {
   padding: 24px 32px;
-  border: 1px solid $light-grey;
+  border: 1px solid var(--color-stroke);
   border-radius: $border-radius;
 
   &--hidden {
@@ -32,14 +32,14 @@
   margin-left: 46px;
   font-size: rem(13px);
   line-height: rem(17px);
-  color: $grey-default;
+  color: var(--color-text-caption);
 }
 
 .counter__item-caption {
   margin-right: 12px;
   font-size: rem(15px);
   line-height: rem(20px);
-  color: $dark-text;
+  color: var(--color-text-main);
 }
 
 .counter__item-avaliable {

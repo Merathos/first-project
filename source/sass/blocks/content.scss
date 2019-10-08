@@ -1,6 +1,4 @@
 .content {
-  color: $dark-main;
-
   h1:not([class]) {
     margin: 0;
     margin-bottom: 40px;
@@ -34,7 +32,7 @@
     margin-bottom: 48px;
     font-size: rem(16px);
     line-height: rem(22px);
-    background-color: $color-bg;
+    background-color: var(--color-bg-secondary);
     border-radius: $border-radius;
 
     li {
@@ -96,7 +94,7 @@
     line-height: rem(23px);
     text-decoration: none;
     user-select: none;
-    color: $blue-default;
+    color: var(--color-interactive-default);
     outline: none;
     transition: color $style-change-duration;
 
@@ -112,15 +110,15 @@
     }
 
     &:focus {
-      color: $blue-accent;
+      color: var(--color-interactive-accent);
     }
 
     &:focus:not(.focus-visible) {
-      color: $blue-default;
+      color: var(--color-interactive-default);
     }
 
     &:hover:not(.focus-visible) {
-      color: $blue-accent;
+      color: var(--color-interactive-accent);
     }
   }
 
@@ -163,11 +161,11 @@
 
     a:not([class]) {
       &:hover:not(.focus-visible) {
-        color: $blue-default;
+        color: var(--color-interactive-default);
       }
 
       &:active:not(.focus-visible) {
-        color: $blue-accent;
+        color: var(--color-interactive-accent);
       }
     }
   }

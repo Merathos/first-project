@@ -41,6 +41,7 @@
 
 .popup__content {
   position: relative;
+  background-color: var(--color-bg-main);
 }
 
 .popup__close-btn {
@@ -81,7 +82,7 @@
 
 @include tablet {
   .popup {
-    background-color: $white;
+    background-color: var(--color-bg-main);
   }
 
   .popup__overlay {

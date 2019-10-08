@@ -61,27 +61,27 @@
         <div class="special-popup__scroll-wrap">
           <ul class="special-popup__list">
             <li class="special-popup__item">
-              <button class="special-popup__btn-color special-popup__btn-color--standard active" type="button" data-item="color">
+              <button class="special-popup__btn-color special-popup__btn-color--standard active" data-property="theme" data-value="default" type="button" data-item="color">
                 <span>Стандартный</span>
               </button>
             </li>
             <li class="special-popup__item">
-              <button class="special-popup__btn-color special-popup__btn-color--inverse" type="button" data-item="color">
+              <button class="special-popup__btn-color special-popup__btn-color--inverse" data-property="theme" data-value="inverse" type="button">
                 <span>Инверсия</span>
               </button>
             </li>
             <li class="special-popup__item">
-              <button class="special-popup__btn-color special-popup__btn-color--blue" type="button" data-item="color">
+              <button class="special-popup__btn-color special-popup__btn-color--blue" data-property="theme" data-value="blue" type="button">
                 <span>Синий</span>
               </button>
             </li>
             <li class="special-popup__item">
-              <button class="special-popup__btn-color special-popup__btn-color--comfort" type="button" data-item="color">
+              <button class="special-popup__btn-color special-popup__btn-color--comfort" data-property="theme" data-value="comfort" type="button">
                 <span>Комфортный</span>
               </button>
             </li>
             <li class="special-popup__item">
-              <button class="special-popup__btn-color special-popup__btn-color--brown" type="button" data-item="color">
+              <button class="special-popup__btn-color special-popup__btn-color--brown" data-property="theme" data-value="brown" type="button">
                 <span>Коричневый</span>
               </button>
             </li>
@@ -116,9 +116,9 @@
         <img class="page-header__roi-logo" width="180" height="56" src="img/roi-logo.svg" alt="Российская общественная инициатива">
       </a>
 
-      <a class="page-header__link page-header__site-name" href="#">Общественное голосование</a>
+      <a class="page-header__site-name link link--black" href="#">Общественное голосование</a>
 
-      <a class="page-header__link page-header__version-btn page-header__version-btn--bar js-open-popup" href="#">
+      <a class="page-header__version-btn page-header__version-btn--bar link link--black js-open-popup" href="#">
         <svg width="18" height="18">
           <use xlink:href="img/sprite.svg#icon-glasses"></use>
         </svg>
@@ -158,7 +158,7 @@
         </form>
       </div>
 
-      <a class="page-header__link page-header__version-btn page-header__version-btn--menu js-open-popup" href="#">
+      <a class="page-header__version-btn page-header__version-btn--menu link link--black js-open-popup" href="#">
         <svg width="18" height="18">
           <use xlink:href="img/sprite.svg#icon-glasses"></use>
         </svg>
@@ -168,7 +168,7 @@
       <nav class="page-header__user-menu user-menu">
         <div class="user-menu__overlay"></div>
 
-        <button class="user-menu__dropdown-btn" type="button">
+        <button class="user-menu__dropdown-btn link link--black" type="button">
           <span class="user-menu__dropdown-btn-text visually-hidden">Открыть меню пользователя</span>
 
           <svg class="user-menu__user-icon" width="16" height="16">
@@ -184,15 +184,15 @@
 
         <ul class="user-menu__list">
           <li class="user-menu__item">
-            <a class="page-header__link user-menu__link" href="#">Избранное</a>
+            <a class="user-menu__link link link--black" href="#">Избранное</a>
           </li>
 
           <li class="user-menu__item">
-            <a class="page-header__link user-menu__link" href="#">Моя активность</a>
+            <a class="user-menu__link link link--black" href="#">Моя активность</a>
           </li>
 
           <li class="user-menu__item">
-            <a class="page-header__link user-menu__link" href="#">Выход</a>
+            <a class="user-menu__link link link--black" href="#">Выход</a>
           </li>
         </ul>
       </nav>
@@ -515,29 +515,29 @@
       <ul class="page-footer__list">
         <li class="page-footer__item">
           <span>Сайт Президента Российской Федерации</span>
-          <a href="http://kremlin.ru/" target="_blank">kremlin.ru</a>
+          <a class="link link--blue" href="http://kremlin.ru/" target="_blank">kremlin.ru</a>
         </li>
         <li class="page-footer__item">
           <span>Сайт Правительства Российской Федерации</span>
-          <a href="http://government.ru/" target="_blank">government.ru</a>
+          <a class="link link--blue" href="http://government.ru/" target="_blank">government.ru</a>
         </li>
         <li class="page-footer__item">
           <span>Государственная дума Российской Федерации</span>
-          <a href="http://duma.gov.ru/" target="_blank">duma.gov.ru</a>
+          <a class="link link--blue" href="http://duma.gov.ru/" target="_blank">duma.gov.ru</a>
         </li>
       </ul>
       <ul class="page-footer__list">
         <li class="page-footer__item">
           <span>Портал государственных услуг</span>
-          <a href="http://gosuslugi.ru/" target="_blank">gosuslugi.ru</a>
+          <a class="link link--blue" href="http://gosuslugi.ru/" target="_blank">gosuslugi.ru</a>
         </li>
         <li class="page-footer__item">
           <span>Единый портал раскрытия информации о подготовке проектов нормативных актов</span>
-          <a href="http://regulation.gov.ru/" target="_blank">regulation.gov.ru</a>
+          <a class="link link--blue" href="http://regulation.gov.ru/" target="_blank">regulation.gov.ru</a>
         </li>
         <li class="page-footer__item">
           <span>Официальный интернет-портал правовой информации</span>
-          <a href="http://pravo.gov.ru/" target="_blank">pravo.gov.ru</a>
+          <a class="link link--blue" href="http://pravo.gov.ru/" target="_blank">pravo.gov.ru</a>
         </li>
       </ul>
     </div>

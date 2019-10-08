@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   padding: 23px;
-  background-color: $color-bg;
+  background-color: var(--color-bg-secondary);
   border-radius: $border-radius;
 
   @media (max-width: $desktop-width - 1) {
@@ -16,7 +16,7 @@
   margin-right: 24px;
 
   @include font-h5;
-  color: $grey;
+  color: var(--color-text-secondary);
 
   @media (max-width: $desktop-width - 1) {
     max-width: 442px;

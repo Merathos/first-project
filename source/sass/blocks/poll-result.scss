@@ -5,7 +5,6 @@
   background-position: left bottom;
   background-repeat: no-repeat;
   background-size: 100% 1px;
-  background-color: $white;
 }
 
 .poll-result__question {
@@ -13,7 +12,6 @@
   margin-bottom: 26px;
 
   @include font-h5;
-  color: $dark-text;
 }
 
 .poll-result__item {
@@ -22,7 +20,7 @@
   max-width: 800px;
   margin-bottom: 16px;
   border-radius: 5px;
-  background-color: $color-bg;
+  background-color: var(--color-bg-secondary);
   overflow: hidden;
 }
 
@@ -49,7 +47,6 @@
   padding-right: 16px;
 
   @include main-text;
-  color: $dark-text;
   border-radius: 5px;
 
   & b {
@@ -64,5 +61,5 @@
 }
 
 .poll-result__caption {
-  color: $grey-default;
+  color: var(--color-text-caption);
 }

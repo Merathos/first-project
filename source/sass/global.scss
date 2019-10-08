@@ -3,23 +3,112 @@ html {
   font-family: "Rubik", "Arial", sans-serif;
   box-sizing: border-box;
 
-  &.font-family--arial {
+
+  --color-bg-main: #{$white};
+  --color-bg-secondary: #{$color-bg};
+
+  --color-bg-main-transparent: #{rgba($white, 0)};
+  --color-bg-secondary-transparent: #{rgba($color-bg, 0)};
+
+  --color-stroke: #{$light-grey};
+
+  --color-text-main: #{$dark-text};
+  --color-text-secondary: #{$grey};
+  --color-text-caption: #{$grey-default};
+
+  --color-interactive-default: #{$blue-default};
+  --color-interactive-accent: #{$blue-accent};
+
+
+  &.theme-inverse {
+    --color-bg-main: #{$dark};
+    --color-bg-secondary: #{$dark-main};
+
+    --color-bg-main-transparent: #{rgba($dark, 0)};
+    --color-bg-secondary-transparent: #{rgba($dark-main, 0)};
+
+    --color-stroke: #{$light-grey};
+
+    --color-text-main: #{$white};
+    --color-text-secondary: #{$grey};
+    --color-text-caption: #{$grey-default};
+
+    --color-interactive-default: #{$blue-default};
+    --color-interactive-accent: #{$blue-accent};
+  }
+
+
+  &.theme-blue {
+    --color-bg-main: #{$light-blue-accent};
+    --color-bg-secondary: #{$light-blue};
+
+    --color-bg-main-transparent: #{rgba($light-blue-accent, 0)};
+    --color-bg-secondary-transparent: #{rgba($light-blue, 0)};
+
+    --color-stroke: #{$light-grey};
+
+    --color-text-main: #{$dark-text};
+    --color-text-secondary: #{$grey};
+    --color-text-caption: #{$white};
+
+    --color-interactive-default: #{$blue-default};
+    --color-interactive-accent: #{$blue-accent};
+  }
+
+
+  &.theme-comfort {
+    --color-bg-main: #{$light-yellow};
+    --color-bg-secondary: #{#f7e4d8};
+
+    --color-bg-main-transparent: #{rgba($light-yellow, 0)};
+    --color-bg-secondary-transparent: #{rgba(#f7e4d8, 0)};
+
+    --color-stroke: #{$comfort};
+
+    --color-text-main: #{$comfort};
+    --color-text-secondary: #{$grey};
+    --color-text-caption: #{$brown};
+
+    --color-interactive-default: #{$blue-default};
+    --color-interactive-accent: #{$blue-accent};
+  }
+
+
+  &.theme-brown {
+    --color-bg-main: #{$brown};
+    --color-bg-secondary: #{$dark-main};
+
+    --color-bg-main-transparent: #{rgba($brown, 0)};
+    --color-bg-secondary-transparent: #{rgba($dark-main, 0)};
+
+    --color-stroke: #{$light-green};
+
+    --color-text-main: #{$light-green};
+    --color-text-secondary: #{$green};
+    --color-text-caption: #{$grey-default};
+
+    --color-interactive-default: #{$red};
+    --color-interactive-accent: #{rgba($red, 0.8)};
+  }
+
+
+  &.font-family-arial {
     font-family: "Arial", sans-serif;
   }
 
-  &.font-family--times {
+  &.font-family-times {
     font-family: "Times New Roman", serif;
   }
 
-  &.font-size--s {
+  &.font-size-s {
     font-size: 16px;
   }
 
-  &.font-size--m {
+  &.font-size-m {
     font-size: 24px;
   }
 
-  &.font-size--l {
+  &.font-size-l {
     font-size: 28px;
   }
 }
@@ -42,8 +131,8 @@ body {
   font-style: normal;
   font-size: rem(15px);
   line-height: rem(20px);
-  color: $dark-text;
-  background-color: $white;
+  color: var(--color-text-main);
+  background-color: var(--color-bg-main);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

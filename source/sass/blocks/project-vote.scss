@@ -1,12 +1,11 @@
 .project-vote {
-  color: $dark-main;
-  background-color: $color-bg;
+  background-color: var(--color-bg-secondary);
   border-radius: $border-radius;
 }
 
 .project-vote__container {
   padding: 24px;
-  border-bottom: 1px solid $light-grey;
+  border-bottom: 1px solid var(--color-stroke);
 
   &--meta {
     display: flex;
@@ -28,7 +27,7 @@
   margin: 0;
   font-size: rem(13px);
   line-height: rem(17px);
-  color: $grey-default;
+  color: var(--color-text-caption);
 
   &:first-of-type {
     margin-right: 33px;
@@ -39,7 +38,7 @@
     margin-top: 4px;
     font-size: rem(16px);
     line-height: rem(22px);
-    color: $grey;
+    color: var(--color-text-secondary);
   }
 }
 
@@ -50,7 +49,7 @@
   margin-top: 16px;
   font-size: rem(16px);
   line-height: rem(22px);
-  color: $grey;
+  color: var(--color-text-secondary);
 
   svg {
     display: block;
@@ -81,28 +80,31 @@
   font-size: rem(16px);
   line-height: rem(22px);
   user-select: none;
-  color: $dark-text;
-  background-color: $white;
-  border: 1px solid $light-grey;
+  color: var(--color-text-main);
+  background-color: var(--color-bg-main);
+  border: 1px solid var(--color-stroke);
   border-radius: $border-radius;
   cursor: pointer;
   outline: none;
-  transition: background-color $style-change-duration;
+  transition: color $style-change-duration, background-color $style-change-duration;
 
   &--approve {
     margin-right: 16px;
   }
 
   &:focus {
-    background-color: $light-grey;
+    color: var(--color-bg-main);
+    background-color: var(--color-interactive-default);
   }
 
   &:focus:not(.focus-visible) {
-    background-color: $white;
+    color: var(--color-text-main);
+    background-color: var(--color-bg-main);
   }
 
   &:hover:not(.focus-visible) {
-    background-color: $light-grey;
+    color: var(--color-bg-main);
+    background-color: var(--color-interactive-default);
   }
 
   .project-vote__confirmation-text {
@@ -144,7 +146,8 @@
 
     &:focus,
     &:hover:not(.focus-visible) {
-      background-color: $white;
+      color: var(--color-text-main);
+      background-color: var(--color-bg-main);
     }
   }
 }
@@ -222,11 +225,13 @@
 
   .project-vote__vote-btn {
     &:hover:not(.focus-visible) {
-      background-color: $white;
+      color: var(--color-text-main);
+      background-color: var(--color-bg-main);
     }
 
     &:active:not(.focus-visible) {
-      background-color: $light-grey;
+      color: var(--color-bg-main);
+      background-color: var(--color-interactive-default);
     }
 
     &--selected {
@@ -234,7 +239,8 @@
       margin: 0;
 
       &:active:not(.focus-visible) {
-        background-color: $white;
+        color: var(--color-text-main);
+        background-color: var(--color-bg-main);
       }
     }
   }

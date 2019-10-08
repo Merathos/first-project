@@ -32,7 +32,7 @@
 
   font-size: rem(16px);
   line-height: 1.35;
-  color: $grey-default;
+  color: var(--color-text-caption);
 
   @include mobile {
     flex-direction: column;
@@ -48,7 +48,7 @@
 }
 
 .poll-page__date-time {
-  color: $dark-text;
+  color: var(--color-text-main);
 }
 
 .poll-page__description {
@@ -160,7 +160,7 @@
   margin: 38px 0 0;
   padding: 24px 24px 32px;
 
-  background-color: $color-bg;
+  background-color: var(--color-bg-secondary);
   border-radius: $border-radius;
 
   @include mobile {
@@ -329,7 +329,7 @@
   & .poll-page__date-title {
     & b {
       font-weight: 400;
-      color: $dark-text;
+      color: var(--color-text-main);
     }
   }
 

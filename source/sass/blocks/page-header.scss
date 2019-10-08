@@ -2,8 +2,7 @@
   width: 100%;
   font-size: rem(16px);
   line-height: rem(19px);
-  color: $dark-text;
-  background-color: $white;
+  background-color: var(--color-bg-main);
 
   &--js {
     position: fixed;
@@ -15,26 +14,6 @@
 .page-header .container {
   display: flex;
   align-items: center;
-}
-
-.page-header__link {
-  text-decoration: none;
-  user-select: none;
-  color: inherit;
-  outline: none;
-  transition: color $style-change-duration;
-
-  &:focus {
-    color: $blue-accent;
-  }
-
-  &:focus:not(.focus-visible) {
-    color: inherit;
-  }
-
-  &[href]:hover:not(.focus-visible) {
-    color: $blue-accent;
-  }
 }
 
 .page-header__bar {
@@ -118,16 +97,6 @@
       left: 0;
       width: 100%;
       height: 100%;
-    }
-  }
-
-  .page-header__link {
-    &[href]:hover:not(.focus-visible) {
-      color: inherit;
-    }
-
-    &[href]:active:not(.focus-visible) {
-      color: $blue-accent;
     }
   }
 

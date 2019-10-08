@@ -21,7 +21,7 @@
   padding: 40px 48px;
   overflow: hidden;
 
-  background-color: $color-bg;
+  background-color: var(--color-bg-secondary);
   border-radius: $border-radius;
 
   @media (max-width: $desktop-width - 81) {
@@ -127,8 +127,6 @@
   margin: 0;
   padding: 0;
 
-  color: $dark-text;
-
   @include font-h2();
 }
 
@@ -138,7 +136,7 @@
 
   font-size: rem(15px);
   line-height: 1.35;
-  color: $grey;
+  color: var(--color-text-secondary);
 
   @media (max-width: $tablet-width - 1) {
     padding-top: 24px;

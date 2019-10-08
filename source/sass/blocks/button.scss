@@ -32,11 +32,11 @@
 
   &--blue {
     color: $white;
-    background-color: $blue-default;
+    background-color: var(--color-interactive-default);
 
     &:hover,
     &:focus {
-      background-color: $blue-accent;
+      background-color: var(--color-interactive-accent);
     }
 
     &:disabled {
