@@ -3,42 +3,6 @@
   min-width: $mobile-width;
 }
 
-.page-content__back-btn {
-  display: inline-flex;
-  align-items: center;
-  margin-bottom: 40px;
-  font-size: rem(18px);
-  line-height: rem(23px);
-  text-decoration: none;
-  user-select: none;
-  color: $grey;
-  outline: none;
-  transition: color $style-change-duration;
-
-  &:focus {
-    color: $blue-accent;
-  }
-
-  &:focus:not(.focus-visible) {
-    color: $grey;
-  }
-
-  &:hover:not(.focus-visible) {
-    color: $blue-accent;
-  }
-
-  svg {
-    display: block;
-    width: 8px;
-    height: 14px;
-    padding-bottom: 3px;
-    margin-right: 12px;
-    fill: currentColor;
-    pointer-events: none;
-    transition: fill $style-change-duration;
-  }
-}
-
 .page-content__title {
   margin: 0;
   margin-bottom: 40px;
