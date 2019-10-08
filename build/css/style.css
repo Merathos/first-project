@@ -1672,6 +1672,58 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   right: 120%; }
 
 /* Блоки */
+.document {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 36px;
+  text-decoration: none;
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s; }
+  .document::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position-y: center; }
+  .document--doc::before {
+    background-image: url("../img/icon-doc.svg"); }
+  .document:hover, .document:focus {
+    opacity: 0.6; }
+  .document:focus:not(.focus-visible) {
+    opacity: 1; }
+  .document:hover:not(.focus-visible) {
+    opacity: 0.6; }
+  @media (max-width: 1199px) {
+    .document:hover:not(.focus-visible) {
+      opacity: 1; }
+    .document:active:not(.focus-visible) {
+      opacity: 0.6; } }
+
+.document__name {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 0.8125rem;
+  line-height: 1.3;
+  text-decoration: none; }
+
+.document__size {
+  margin: 0;
+  padding: 0;
+  font-weight: 300;
+  font-size: 0.8125rem;
+  line-height: 1.3;
+  color: #9bd2f4; }
+
 .section__head {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3985,41 +4037,6 @@ span.poll__hide {
       .project__info--finish .project__info-doc {
         margin-top: 10px; } }
 
-.project__info-doc {
-  position: relative;
-  padding-left: 36px;
-  text-decoration: none;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s; }
-  .project__info-doc::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 24px;
-    height: 100%;
-    background-image: url("../img/icon-doc.svg");
-    background-repeat: no-repeat;
-    background-position-y: center; }
-  .project__info-doc:hover {
-    opacity: 0.8; }
-
-.project__doc-name {
-  display: block;
-  margin: 0;
-  padding: 0;
-  font-size: 0.8125rem;
-  line-height: 1.3;
-  text-decoration: none; }
-
-.project__doc-size {
-  margin: 0;
-  padding: 0;
-  font-weight: 300;
-  font-size: 0.8125rem;
-  line-height: 1.3;
-  color: #9bd2f4; }
-
 .project__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4103,18 +4120,6 @@ span.poll__hide {
   @media (max-width: 767px) {
     .project__name {
       padding: 37px 0 0; } }
-  .project__name::before {
-    content: "";
-    position: absolute;
-    top: -5px;
-    left: 0;
-    width: 32px;
-    height: 32px;
-    background-repeat: no-repeat;
-    background-position: center center; }
-    @media (max-width: 767px) {
-      .project__name::before {
-        top: -2px; } }
 
 .project__count {
   display: -webkit-box;
@@ -5458,53 +5463,12 @@ span.poll__hide {
   font-size: 1rem;
   line-height: 1.375rem; }
 
-.vote-end__protocol {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 26px;
-  font-size: 0.8125rem;
-  line-height: 1.0625rem;
-  color: inherit;
-  text-decoration: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s; }
-  .vote-end__protocol:focus {
-    opacity: 0.6; }
-  .vote-end__protocol:focus:not(.focus-visible) {
-    opacity: 1; }
-  .vote-end__protocol:hover:not(.focus-visible) {
-    opacity: 0.6; }
-
-.vote-end__protocol-icon {
-  display: block;
-  width: 24px;
-  height: 24px;
-  margin-right: 12px; }
-
-.vote-end__protocol-size {
-  display: block;
-  font-weight: 300;
-  text-transform: uppercase;
-  color: #9bd2f4; }
-
 @media (max-width: 1199px) {
   .vote-end {
     padding: 25px 24px; }
   .vote-end__text-group {
     width: 100%;
-    margin-bottom: 17px; }
-  .vote-end__protocol:hover:not(.focus-visible) {
-    opacity: 1; }
-  .vote-end__protocol:active:not(.focus-visible) {
-    opacity: 0.6; } }
+    margin-bottom: 17px; } }
 
 @media (max-width: 767px) {
   .vote-end {
@@ -6618,7 +6582,7 @@ span.poll-page__hide {
     left: 32px;
     width: 24px;
     height: 24px;
-    background-image: url("../../img/icon-time-white.svg");
+    background-image: url("../img/icon-time-white.svg");
     background-repeat: no-repeat; }
     @media (max-width: 1199px) {
       .poll-page__finish::before {
