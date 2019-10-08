@@ -78,6 +78,7 @@
 
   inputContainer.addEventListener('mouseover', function () {
     inputCount.focus();
+    inputCount.select();
   });
 
   inputContainer.addEventListener('mouseout', function () {

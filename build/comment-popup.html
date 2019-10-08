@@ -38,7 +38,7 @@
     <div class="special-popup__title">Настройки</div>
     <div class="special-popup__group-list">
       <div class="special-popup__group">
-        <div class="special-popup__name">Размер шрифта:</div>
+        <h3 class="special-popup__name">Размер шрифта:</h3>
         <ul class="special-popup__list">
           <li class="special-popup__item">
             <button class="special-popup__btn-size special-popup__btn-size--S active" data-property="font-size" data-value="default" type="button">
@@ -58,7 +58,7 @@
         </ul>
       </div>
       <div class="special-popup__group">
-        <div class="special-popup__name">Цветовая схема:</div>
+        <h3 class="special-popup__name">Цветовая схема:</h3>
         <div class="special-popup__scroll-wrap">
           <ul class="special-popup__list">
             <li class="special-popup__item">
@@ -90,24 +90,26 @@
         </div>
       </div>
       <div class="special-popup__group">
-        <div class="special-popup__name">Шрифт:</div>
-        <ul class="special-popup__list special-popup__list--font">
-          <li class="special-popup__item">
-            <button class="special-popup__btn-font special-popup__btn-font--default active" data-property="font-family" data-value="default" type="button">
-              <span>Стандартный</span>
-            </button>
-          </li>
-          <li class="special-popup__item">
-            <button class="special-popup__btn-font special-popup__btn-font--arial" data-property="font-family" data-value="arial" type="button">
-              <span>Arial</span>
-            </button>
-          </li>
-          <li class="special-popup__item">
-            <button class="special-popup__btn-font special-popup__btn-font--times" data-property="font-family" data-value="times" type="button">
-              <span>Times New Roman</span>
-            </button>
-          </li>
-        </ul>
+        <h3 class="special-popup__name">Шрифт:</h3>
+        <div class="special-popup__scroll-wrap">
+          <ul class="special-popup__list special-popup__list--font">
+            <li class="special-popup__item">
+              <button class="special-popup__btn-font special-popup__btn-font--default active" data-property="font-family" data-value="default" type="button">
+                <span>Стандартный</span>
+              </button>
+            </li>
+            <li class="special-popup__item">
+              <button class="special-popup__btn-font special-popup__btn-font--arial" data-property="font-family" data-value="arial" type="button">
+                <span>Arial</span>
+              </button>
+            </li>
+            <li class="special-popup__item">
+              <button class="special-popup__btn-font special-popup__btn-font--times" data-property="font-family" data-value="times" type="button">
+                <span>Times New Roman</span>
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <button type="button" class="special-popup__reset button button--blue" disabled="">Сбросить всё</button>
@@ -365,9 +367,10 @@
                 </div>
                 <p class="your-comment__description">Отредактировать или удалить комментарий вы можете только в течение двух часов с момента публикации.</p>
               </div>
-              <p class="your-comment__text text-hidden__container text-hidden__container--comment">Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.</p>
+              <p class="your-comment__text text-hidden__container text-hidden__container--comment">Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.
+              </p>
               <div class="answers__button-wrapper answers__button-wrapper--blue-gradient">
-                <button type="button" class="answers__button text-hidden__btn">
+                <button type="button" class="answers__button link link--blue text-hidden__btn">
                   <span>Развернуть</span>
                   <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="img/sprite.svg#icon-arrow-big"></use>
@@ -436,9 +439,9 @@
                 <div class="your-comment__top-wrapper">
                   <h2 class="your-comment__title">Ваш комментарий:</h2>
                 </div>
-                <p class="your-comment__text text-hidden__container text-hidden__container--comment">Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.</p>
+                <p class="your-comment__text text-hidden__container text-hidden__container--comment">Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.</p>
                 <div class="answers__button-wrapper answers__button-wrapper--blue-gradient">
-                  <button type="button" class="answers__button text-hidden__btn">
+                  <button type="button" class="answers__button link link--blue text-hidden__btn">
                     <span>Развернуть</span>
                     <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use xlink:href="img/sprite.svg#icon-arrow-big"></use>

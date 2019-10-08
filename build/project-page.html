@@ -38,7 +38,7 @@
     <div class="special-popup__title">Настройки</div>
     <div class="special-popup__group-list">
       <div class="special-popup__group">
-        <div class="special-popup__name">Размер шрифта:</div>
+        <h3 class="special-popup__name">Размер шрифта:</h3>
         <ul class="special-popup__list">
           <li class="special-popup__item">
             <button class="special-popup__btn-size special-popup__btn-size--S active" data-property="font-size" data-value="default" type="button">
@@ -58,7 +58,7 @@
         </ul>
       </div>
       <div class="special-popup__group">
-        <div class="special-popup__name">Цветовая схема:</div>
+        <h3 class="special-popup__name">Цветовая схема:</h3>
         <div class="special-popup__scroll-wrap">
           <ul class="special-popup__list">
             <li class="special-popup__item">
@@ -90,24 +90,26 @@
         </div>
       </div>
       <div class="special-popup__group">
-        <div class="special-popup__name">Шрифт:</div>
-        <ul class="special-popup__list special-popup__list--font">
-          <li class="special-popup__item">
-            <button class="special-popup__btn-font special-popup__btn-font--default active" data-property="font-family" data-value="default" type="button">
-              <span>Стандартный</span>
-            </button>
-          </li>
-          <li class="special-popup__item">
-            <button class="special-popup__btn-font special-popup__btn-font--arial" data-property="font-family" data-value="arial" type="button">
-              <span>Arial</span>
-            </button>
-          </li>
-          <li class="special-popup__item">
-            <button class="special-popup__btn-font special-popup__btn-font--times" data-property="font-family" data-value="times" type="button">
-              <span>Times New Roman</span>
-            </button>
-          </li>
-        </ul>
+        <h3 class="special-popup__name">Шрифт:</h3>
+        <div class="special-popup__scroll-wrap">
+          <ul class="special-popup__list special-popup__list--font">
+            <li class="special-popup__item">
+              <button class="special-popup__btn-font special-popup__btn-font--default active" data-property="font-family" data-value="default" type="button">
+                <span>Стандартный</span>
+              </button>
+            </li>
+            <li class="special-popup__item">
+              <button class="special-popup__btn-font special-popup__btn-font--arial" data-property="font-family" data-value="arial" type="button">
+                <span>Arial</span>
+              </button>
+            </li>
+            <li class="special-popup__item">
+              <button class="special-popup__btn-font special-popup__btn-font--times" data-property="font-family" data-value="times" type="button">
+                <span>Times New Roman</span>
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
     <button type="button" class="special-popup__reset button button--blue" disabled="">Сбросить всё</button>
@@ -690,7 +692,11 @@
               <p>Недостатком является то обстоятельство, что в латыни некоторые буквы используются чаще или реже других, что создает другое изображение печати. Кроме того в латинском языке заглавная буква используется только в начале предложений. Тем самым Lorem ipsum не отображает написание, к примеру, имен собственных. В следствии этого использование этого текста в качестве визуального заполнителя макетов.</p>
             </div>
 
-            <a href="#">Ссылка для проекта из API. Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов</a>
+            <ul class="project-page__project-link project-link">
+              <li class="project-link__item">
+                <a href="#" class="project-link__link">Ссылка для новости из API. Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов</a>
+              </li>
+            </ul>
 
             <a href="https://www.youtube.com/">Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как текст-заполнитель или же текст-наполнитель. Иногда текст-«рыба» также.</a>
 
