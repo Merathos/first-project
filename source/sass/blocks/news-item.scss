@@ -1,6 +1,6 @@
 .news-item__title {
   max-width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 
   @media (max-width: $mobile-max-width) {
     margin-bottom: 32px;
@@ -10,7 +10,12 @@
 .news-item__subtitle {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 22px;
+  align-items: center;
+  margin-bottom: 12px;
+
+  @media (max-width: $tablet-width - 1) {
+    align-items: flex-start;
+  }
 
   @media (max-width: $mobile-max-width) {
     flex-direction: column;
@@ -20,7 +25,7 @@
   & span {
     @include font-h5;
     color: var(--color-text-caption);
-    margin-right: 32px;
+    margin-right: 29px;
     margin-bottom: 12px;
 
     @media (max-width: $mobile-max-width) {
@@ -31,6 +36,14 @@
   & b {
     color: var(--color-text-main);
     font-weight: 400;
+  }
+}
+
+.news-item__button-star {
+  margin-bottom: 12px;
+
+  @media (max-width: $tablet-width - 1) {
+    display: none;
   }
 }
 
@@ -78,29 +91,6 @@
     margin-top: 40px;
   }
 }
-
-// .news-item__list-item {
-//   margin-bottom: 48px;
-
-//   @media (max-width: $mobile-max-width) {
-//     margin-bottom: 40px;
-//   }
-// }
-
-// .news-item__link {
-//   display: flex;
-
-//   @include font-h4;
-//   text-decoration: none;
-//   color: $blue-default;
-
-//   transition: color $style-change-duration;
-
-//   &:hover,
-//   &:focus {
-//     color: $blue-accent;
-//   }
-// }
 
 .news-item__bottom {
   border: 1px solid $light-grey;
