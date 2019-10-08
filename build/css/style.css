@@ -3388,6 +3388,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       left: 16px;
       width: calc(100% - 32px); } }
 
+.project-link {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
 .project-link__item {
   margin-bottom: 48px; }
   @media (max-width: 400px) {
@@ -6755,9 +6760,6 @@ span.poll-page__hide {
       margin-bottom: 0; }
 
 .news-item__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
   margin-top: 48px; }
   @media (max-width: 400px) {
     .news-item__list {
