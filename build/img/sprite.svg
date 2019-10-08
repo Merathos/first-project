@@ -152,7 +152,7 @@
 <rect x="10.625" y="8.375" width="0.75" height="3.25" transform="rotate(90 10.625 8.375)" stroke="#707B8C" stroke-width="0.75"/>
 </g>
 </symbol><symbol id="icon-close" viewBox="0 0 18 18">
-<path d="M1 1L17 17M17 1L1 17" stroke="#A6ABB3" stroke-width="2"/>
+<path d="M1 1L17 17M17 1L1 17" stroke="currentColor" stroke-width="2"/>
 </symbol><symbol id="icon-comments" viewBox="0 0 18 18">
 <path d="M17 1H1V13H6.09091L9 17L11.9091 13H17V1Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M5.35938 5H12.6321" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
