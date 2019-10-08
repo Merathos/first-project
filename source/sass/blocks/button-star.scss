@@ -7,12 +7,12 @@
 
   &:hover,
   &:focus {
-    color: $blue-accent;
+    color: var(--color-interactive-accent);
     outline: none;
   }
 
   &:active,
   &--active {
-    color: $blue-default;
+    color: var(--color-interactive-default);
   }
 }

@@ -1,6 +1,5 @@
 .project-meta {
-  color: $dark-text;
-  border: 1px solid $light-grey;
+  border: 1px solid var(--color-stroke);
   border-radius: $border-radius;
 }
 
@@ -11,7 +10,7 @@
   margin: 0;
   font-size: rem(18px);
   line-height: rem(23px);
-  border-bottom: 1px solid $light-grey;
+  border-bottom: 1px solid var(--color-stroke);
 }
 
 .project-meta__category-link {
@@ -46,7 +45,7 @@
   margin-bottom: 4px;
   font-size: rem(13px);
   line-height: rem(17px);
-  color: $grey-default;
+  color: var(--color-text-caption);
 }
 
 .project-meta__item-value {
@@ -115,7 +114,7 @@
 
     &:last-of-type {
       padding-bottom: 16px;
-      border-bottom: 1px solid $light-grey;
+      border-bottom: 1px solid var(--color-stroke);
     }
   }
 

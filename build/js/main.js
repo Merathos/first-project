@@ -752,11 +752,21 @@
   var popup = document.querySelector('.special-popup');
   var btnsOpenPopup = document.querySelectorAll('.js-open-popup');
 
-  var root = document.documentElement;
 
   if (popup && btnsOpenPopup) {
+    var root = document.documentElement;
+
+
+    var isDefault = {
+      'font-size': true,
+      'font-family': true,
+      'theme': true
+    };
+
+
     var popupCloseBtn = popup.querySelector('.js-close-popup');
     var btns = popup.querySelectorAll('[data-property]');
+    var resetBtn = popup.querySelector('.special-popup__reset');
 
 
     var toggleProperty = function (btn) {
@@ -769,7 +779,29 @@
         }
       });
 
-      root.classList.add(targetProperty + '--' + targetValue);
+      if (targetValue !== 'default') {
+        isDefault[targetProperty] = false;
+        root.classList.add('mod-' + targetProperty + '-' + targetValue);
+      } else {
+        isDefault[targetProperty] = true;
+      }
+
+      resetBtn.disabled = isDefault['font-size'] && isDefault['font-family'] && isDefault['theme'];
+    };
+
+
+    var onResetBtnClick = function () {
+      root.className.split(' ').forEach(function (item) {
+        if (item.indexOf('mod-') !== -1) {
+          root.classList.remove(item);
+        }
+      });
+
+      btns.forEach(function (btn) {
+        btn.classList.toggle('active', btn.dataset.value === 'default');
+      });
+
+      resetBtn.disabled = true;
     };
 
 
@@ -777,7 +809,9 @@
       btn.addEventListener('click', function (evt) {
         evt.preventDefault();
 
-        btns.forEach(function (item) {
+        var selector = '[data-property=' + evt.target.getAttribute('data-property') + ']';
+
+        popup.querySelectorAll(selector).forEach(function (item) {
           item.classList.remove('active');
         });
         evt.target.classList.add('active');
@@ -785,6 +819,9 @@
         toggleProperty(evt.currentTarget);
       });
     });
+
+    resetBtn.addEventListener('click', onResetBtnClick);
+
 
     btnsOpenPopup.forEach(function (btn) {
       btn.addEventListener('click', function (evt) {
@@ -804,7 +841,6 @@
       }
     });
   }
-
 })();
 
 'use strict';

@@ -20,7 +20,7 @@
   justify-content: center;
   align-items: center;
 
-  & img {
+  & svg {
     width: 400px;
     height: 165px;
 
@@ -37,7 +37,6 @@
 
   & p {
     @include font-h2;
-    color: $dark-text;
     margin-top: 40px;
     margin-bottom: 72px;
 

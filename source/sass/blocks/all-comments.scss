@@ -22,7 +22,6 @@
   margin-bottom: 14px;
 
   @include font-h2;
-  color: $dark-text;
 
   @media (max-width: $mobile-max-width) {
     margin-bottom: 8px;
@@ -36,11 +35,11 @@
   padding-top: 9px;
 
   @include font-h4;
-  color: $grey-default;
+  color: var(--color-text-caption);
   text-align: center;
 
   border-radius: 50%;
-  background-color: $color-bg;
+  background-color: var(--color-bg-secondary);
 
   @media (max-width: $mobile-max-width) {
     margin-top: 16px;
@@ -61,7 +60,7 @@
 
   & time {
     @include main-text;
-    color: $grey-default;
+    color: var(--color-text-caption);
   }
 
   & p {
@@ -70,7 +69,6 @@
 
     font-size: rem(15px);
     line-height: rem(27px);
-    color: $dark-text;
   }
 }
 

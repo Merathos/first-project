@@ -27,20 +27,6 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  outline: none;
-  transition: color $style-change-duration;
-
-  &:focus {
-    color: $blue-accent;
-  }
-
-  &:focus:not(.focus-visible) {
-    color: inherit;
-  }
-
-  &:hover:not(.focus-visible) {
-    color: $blue-accent;
-  }
 }
 
 .user-menu__user-icon {
@@ -80,7 +66,7 @@
   box-sizing: border-box;
   width: 300px;
   padding-left: 32px;
-  background-color: $white;
+  background-color: var(--color-bg-main);
   border-radius: $border-radius;
   box-shadow: 0 2px 10px rgba(46, 67, 102, 0.1);
 }
@@ -98,7 +84,7 @@
 
 .user-menu__item {
   &:not(:last-child) {
-    border-bottom: 1px solid $light-grey;
+    border-bottom: 1px solid var(--color-stroke);
   }
 }
 
@@ -119,14 +105,6 @@
 
   .user-menu__dropdown-btn {
     max-width: none;
-
-    &:hover:not(.focus-visible) {
-      color: inherit;
-    }
-
-    &:active:not(.focus-visible) {
-      color: $blue-accent;
-    }
   }
 
   .user-menu__user-icon {
@@ -153,12 +131,6 @@
     height: 0;
     overflow: hidden;
     transition: height 0.5s;
-  }
-
-  .user-menu__item {
-    &:not(:last-child) {
-      border-bottom: 1px solid $light-grey;
-    }
   }
 
   .user-menu__link {

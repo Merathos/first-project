@@ -26,7 +26,7 @@
     width: 24px;
     height: 24px;
     border-radius: 100%;
-    background-color: $white;
+    background-color: var(--color-bg-main);
     border: 8px solid $blue-default;
     box-shadow: none;
 
@@ -62,12 +62,12 @@
 
   & .noUi-marker-horizontal.noUi-marker-sub {
     width: 1px;
-    background-color: $grey-default;
+    background-color: var(--color-text-caption);
     height: 6px;
     z-index: 1;
 
     &.form-range__accent {
-      background-color: $white;
+      background-color: var(--color-bg-main);
     }
   }
 
@@ -104,7 +104,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-bottom: 10px;
 
   @include font-h5;
-  color: $grey-default;
+  color: var(--color-text-caption);
 
   & span:nth-child(2) {
     margin-left: 10px;
@@ -117,5 +117,5 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-top: 12px;
 
   @include caption-text;
-  color: $grey-default;
+  color: var(--color-text-caption);
 }

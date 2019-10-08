@@ -31,7 +31,6 @@
   & p {
     @include main-text;
     line-height: rem(27px);
-    color: $dark-text;
 
     margin: 0;
   }
@@ -40,7 +39,7 @@
 .discussion-item__img-wrapper {
   width: 740px;
   height: 416px;
-  background-color: $color-bg;
+  background-color: var(--color-bg-secondary);
   border-radius: 5px;
 
   @media (max-width: $desktop-width - 1) {
@@ -91,7 +90,7 @@
   @include main-text;
   font-weight: 500;
   text-decoration: none;
-  color: $grey-default;
+  color: var(--color-text-caption);
 
   transition: color $style-change-duration;
 
@@ -115,6 +114,6 @@
 
   &:hover,
   &:focus {
-    color: $blue-default;
+    color: var(--color-text-caption);
   }
 }

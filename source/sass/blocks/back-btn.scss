@@ -6,20 +6,20 @@
   line-height: rem(23px);
   text-decoration: none;
   user-select: none;
-  color: $grey;
+  color: var(--color-text-secondary);
   outline: none;
   transition: color $style-change-duration;
 
   &:focus {
-    color: $blue-accent;
+    color: var(--color-interactive-accent);
   }
 
   &:focus:not(.focus-visible) {
-    color: $grey;
+    color: var(--color-text-secondary);
   }
 
   &:hover:not(.focus-visible) {
-    color: $blue-accent;
+    color: var(--color-interactive-accent);
   }
 
   svg {

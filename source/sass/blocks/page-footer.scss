@@ -1,8 +1,8 @@
 .page-footer {
   margin-top: auto;
   padding-top: 40px;
-  background-color: $color-bg;
-  background-image: linear-gradient($light-grey, $light-grey);
+  background-color: var(--color-bg-secondary);
+  background-image: linear-gradient(var(--color-stroke), var(--color-stroke));
   background-repeat: no-repeat;
   background-position: top left;
   background-size: 100% 2px;
@@ -44,7 +44,6 @@
 
   & span {
     margin-bottom: 6px;
-    color: $dark-text;
 
     @media (max-width: $tablet-width - 1) {
       margin-bottom: 5px;
@@ -53,26 +52,18 @@
 
   & a {
     align-self: flex-start;
-    color: $blue-default;
-    text-decoration: none;
-    transition: all $style-change-duration;
-
-    &:hover,
-    &:focus {
-      color: $blue-accent;
-    }
   }
 }
 
 .page-footer__bottom {
   padding: 10px 0;
-  background-image: linear-gradient($light-grey, $light-grey);
+  background-image: linear-gradient(var(--color-stroke), var(--color-stroke));
   background-repeat: no-repeat;
   background-position: top left;
   background-size: 100% 1px;
 
   & span {
-    color: $grey-default;
+    color: var(--color-text-caption);
     font-size: rem(15px);
     line-height: rem(27px);
   }

@@ -26,17 +26,21 @@
     padding-right: 26px;
   }
 
+  &:disabled {
+    cursor: default;
+  }
+
   & span {
     padding-right: 6px;
   }
 
   &--blue {
     color: $white;
-    background-color: $blue-default;
+    background-color: var(--color-interactive-default);
 
     &:hover,
     &:focus {
-      background-color: $blue-accent;
+      background-color: var(--color-interactive-accent);
     }
 
     &:disabled {

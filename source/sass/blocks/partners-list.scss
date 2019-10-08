@@ -10,7 +10,7 @@
 .partners-list__item {
   box-sizing: border-box;
   height: 138px;
-  border: 1px solid $light-grey;
+  border: 1px solid var(--color-stroke);
   border-radius: $border-radius;
 }
 

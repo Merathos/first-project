@@ -8,7 +8,7 @@
   padding: 24px 16px;
   margin-left: 20px;
 
-  background-color: $color-bg;
+  background-color: var(--color-bg-secondary);
   border-radius: 5px;
 
   @media (max-width: $tablet-width - 1) {
@@ -45,16 +45,16 @@
   font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
-  color: $grey-default;
+  color: var(--color-text-caption);
   transition: color $style-change-duration;
 
   &:hover,
   &:focus {
-    color: $blue-default;
+    color: var(--color-interactive-default);
   }
 
   &--active {
-    color: $blue-default;
+    color: var(--color-interactive-default);
     background-image: linear-gradient(to right, $light-blue-accent 0%, $light-blue-accent 50%, transparent 50%, transparent 75%);
     background-position: center bottom;
     background-repeat: repeat-x;

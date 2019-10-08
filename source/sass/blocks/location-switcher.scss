@@ -43,7 +43,7 @@
   margin-top: 3px;
   font-size: rem(13px);
   line-height: rem(15px);
-  color: rgba($grey, 0.75);
+  color: var(--color-text-secondary);
 }
 
 .location-switcher__show-btn {
@@ -60,7 +60,7 @@
 @include tablet {
   .location-switcher {
     padding: 0 24px;
-    background-color: $color-bg;
+    background-color: var(--color-bg-secondary);
   }
 
   .location-switcher form {

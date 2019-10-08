@@ -7,7 +7,7 @@
   & .ss-main .ss-single-selected .ss-arrow span {
     width: 12px;
     height: 12px;
-    border-color: $blue-default;
+    border-color: var(--color-interactive-default);
 
     &:focus {
       outline: none;
@@ -15,15 +15,15 @@
   }
 
   & .ss-main .ss-content .ss-list .ss-option.ss-disabled {
-    color: $blue-default;
+    color: var(--color-interactive-default);
     cursor: default;
-    background-color: $color-bg;
   }
 
   & .ss-main .ss-content,
+  .ss-main .ss-content .ss-list .ss-option.ss-disabled,
   .ss-main .ss-content .ss-search input,
   .ss-main .ss-multi-selected {
-    background-color: $color-bg;
+    background-color: var(--color-bg-secondary);
   }
 
   & .ss-content {
@@ -32,13 +32,13 @@
 
   & .ss-option {
     @include main-text;
-    color: $dark-text;
+    color: var(--color-text-main);
   }
 
   & .ss-main .ss-content .ss-list .ss-optgroup-label-selectable:hover,
   .ss-main .ss-content .ss-list .ss-option.ss-highlighted,
   .ss-main .ss-content .ss-list .ss-option:hover {
-    color: $blue-accent;
+    color: var(--color-interactive-accent);
     background-color: #f5f6f7;
   }
 
@@ -76,7 +76,7 @@
     & .scrollbar-thumb {
       width: 6px;
       min-height: 242px;
-      background-color: $light-grey;
+      background-color: var(--color-stroke);
       border-radius: 5px;
     }
   }
@@ -87,7 +87,7 @@
     height: 36px;
 
     @include font-h2;
-    color: $blue-default;
+    color: var(--color-interactive-default);
 
     border: none;
     background-color: transparent;
@@ -95,7 +95,7 @@
     transition: color $style-change-duration;
 
     &:hover {
-      color: $blue-accent;
+      color: var(--color-interactive-accent);
     }
   }
 

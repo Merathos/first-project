@@ -10,7 +10,6 @@
   display: flex;
   align-items: flex-start;
   align-self: flex-start;
-  color: $dark-text;
   cursor: pointer;
   transition: all $style-change-duration;
 
@@ -20,7 +19,7 @@
     width: 20px;
     height: 20px;
     margin-right: 8px;
-    background-color: $white;
+    background-color: var(--color-bg-main);
     border-radius: 50%;
     border: 1px solid rgba(161, 167, 174, 0.5);
     transition: all $style-change-duration;
@@ -30,7 +29,7 @@
 .form-radio input[type="radio"]:not(:checked) ~ label {
   &:hover {
     &::before {
-      border: 1px solid $light-blue-accent;
+      border: 1px solid var(--color-interactive-accent);
     }
   }
 }
@@ -38,7 +37,7 @@
 
 .form-radio input[type="radio"]:checked ~ label {
   &::before {
-    border: 6px solid $blue-default;
+    border: 6px solid var(--color-interactive-default);
   }
 }
 

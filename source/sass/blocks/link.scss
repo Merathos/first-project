@@ -1,35 +1,84 @@
 .link {
   display: inline-flex;
   align-items: center;
-  color: $blue-default;
   text-decoration: none;
   outline: none;
   transition: color $style-change-duration;
-
-  &:focus {
-    color: $blue-accent;
-  }
-
-  &:focus:not(.focus-visible) {
-    color: $blue-default;
-  }
-
-  &:active:not(.focus-visible) {
-    color: $blue-accent;
-  }
 
   svg {
     flex-shrink: 0;
     display: block;
     transition: fill $style-change-duration stroke $style-change-duration;
   }
+
+  &--blue {
+    color: var(--color-interactive-default);
+
+    &:focus {
+      color: var(--color-interactive-accent);
+    }
+
+    &:focus:not(.focus-visible) {
+      color: var(--color-interactive-default);
+    }
+
+    &:active:not(.focus-visible) {
+      color: var(--color-interactive-accent);
+    }
+  }
+
+  &--grey {
+    color: var(--color-text-caption);
+
+    &:focus {
+      color: var(--color-interactive-accent);
+    }
+
+    &:focus:not(.focus-visible) {
+      color: var(--color-text-caption);
+    }
+
+    &:active:not(.focus-visible) {
+      color: var(--color-interactive-accent);
+    }
+  }
+
+  &--black {
+    color: var(--color-text-main);
+
+    &:focus {
+      color: var(--color-interactive-default);
+    }
+
+    &:focus:not(.focus-visible) {
+      color: var(--color-text-main);
+    }
+
+    &:active:not(.focus-visible) {
+      color: var(--color-interactive-default);
+    }
+  }
 }
 
 
 @media (min-width: $desktop-width) {
   .link {
-    &:hover:not(.focus-visible) {
-      color: $blue-accent;
+    &--blue {
+      &:hover:not(.focus-visible) {
+        color: var(--color-interactive-accent);
+      }
+    }
+
+    &--grey {
+      &:hover:not(.focus-visible) {
+        color: var(--color-interactive-accent);
+      }
+    }
+
+    &--black {
+      &:hover:not(.focus-visible) {
+        color: var(--color-interactive-default);
+      }
     }
   }
 }

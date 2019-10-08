@@ -22,7 +22,6 @@
     margin-bottom: 32px;
     font-size: rem(15px);
     line-height: rem(27px);
-    color: $dark-text;
 
     @media (max-width: $mobile-max-width) {
       margin-bottom: 24px;
@@ -41,18 +40,18 @@
     font: inherit;
     font-size: rem(15px);
     line-height: rem(27px);
-    color: $dark-text;
+    color: inherit;
     width: 100%;
     padding: 16px 24px;
     border: 1px solid $light-grey;
     border-radius: 5px;
-    background-color: $color-bg;
+    background-color: var(--color-bg-secondary);
     resize: none;
 
     &::placeholder {
       font-size: rem(15px);
       line-height: rem(27px);
-      color: $grey-default;
+      color: var(--color-text-caption);
     }
   }
 }

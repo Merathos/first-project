@@ -17,11 +17,12 @@
     position: relative;
     display: flex;
     align-items: center;
+    flex-shrink: 0;
     width: 28px;
     height: 21px;
     padding: 0;
     user-select: none;
-    color: $blue-default;
+    color: var(--color-interactive-default);
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -29,15 +30,15 @@
     transition: color $style-change-duration;
 
     &:focus {
-      color: $blue-accent;
+      color: var(--color-interactive-accent);
     }
 
     &:focus:not(.focus-visible) {
-      color: $blue-default;
+      color: var(--color-interactive-default);
     }
 
     &:active:not(.focus-visible) {
-      color: $blue-accent;
+      color: var(--color-interactive-accent);
     }
 
     &::before,

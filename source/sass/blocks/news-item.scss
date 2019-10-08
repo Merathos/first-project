@@ -19,7 +19,7 @@
 
   & span {
     @include font-h5;
-    color: $grey-default;
+    color: var(--color-text-caption);
     margin-right: 32px;
     margin-bottom: 12px;
 
@@ -29,7 +29,7 @@
   }
 
   & b {
-    color: $dark-text;
+    color: var(--color-text-main);
     font-weight: 400;
   }
 }
@@ -63,7 +63,6 @@
 
     @include main-text;
     line-height: rem(27px);
-    color: $dark-text;
 
     &:last-child {
       margin-bottom: 0;

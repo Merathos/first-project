@@ -2,8 +2,7 @@
   width: 100%;
   font-size: rem(16px);
   line-height: rem(19px);
-  color: $dark-text;
-  background-color: $white;
+  background-color: var(--color-bg-main);
 
   &--js {
     position: fixed;
@@ -15,26 +14,6 @@
 .page-header .container {
   display: flex;
   align-items: center;
-}
-
-.page-header__link {
-  text-decoration: none;
-  user-select: none;
-  color: inherit;
-  outline: none;
-  transition: color $style-change-duration;
-
-  &:focus {
-    color: $blue-accent;
-  }
-
-  &:focus:not(.focus-visible) {
-    color: inherit;
-  }
-
-  &[href]:hover:not(.focus-visible) {
-    color: $blue-accent;
-  }
 }
 
 .page-header__bar {
@@ -57,6 +36,8 @@
   margin-left: 49px;
   margin-right: auto;
   font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
   text-transform: uppercase;
 
   &::after {
@@ -75,7 +56,7 @@
 .page-header__version-btn {
   display: flex;
   align-items: center;
-  max-width: 240px;
+  max-width: 295px;
 
   &--menu {
     display: none;
@@ -84,6 +65,7 @@
 
 .page-header__version-btn svg {
   display: block;
+  flex-shrink: 0;
   width: 18px;
   height: 18px;
   margin-right: 11px;
@@ -121,16 +103,6 @@
     }
   }
 
-  .page-header__link {
-    &[href]:hover:not(.focus-visible) {
-      color: inherit;
-    }
-
-    &[href]:active:not(.focus-visible) {
-      color: $blue-accent;
-    }
-  }
-
   .page-header__roi-logo {
     width: 174px;
     height: 55px;
@@ -139,8 +111,8 @@
   .page-header__site-name {
     width: 130px;
     margin-right: 24px;
-    font-size: rem(15px);
-    line-height: rem(17px);
+    font-size: 15px;
+    line-height: 17px;
   }
 
   .page-header__location-switcher,
@@ -165,8 +137,8 @@
     width: 90px;
     margin-left: 25px;
     margin-right: auto;
-    font-size: rem(10px);
-    line-height: rem(12px);
+    font-size: 10px;
+    line-height: 12px;
 
     &::after {
       content: "";

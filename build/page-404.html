@@ -29,9 +29,9 @@
     <section class="special-popup js-hide">
   <h2 class="visually-hidden">Настройки для слабовидящих</h2>
   <div class="special-popup__wrap">
-    <button class="special-popup__btn-close js-close-popup" type="button">
-      <svg width="18" height="18" viewbox="0 0 18 18" stroke="#354052" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1 1L17 17M17 1L1 17" stroke-width="2"></path>
+    <button class="special-popup__btn-close js-close-popup" type="button" aria-label="Закрыть">
+      <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <use xlink:href="img/sprite.svg#icon-close"></use>
       </svg>
       <span class="visually-hidden">Закрыть</span>
     </button>
@@ -41,17 +41,17 @@
         <div class="special-popup__name">Размер шрифта:</div>
         <ul class="special-popup__list">
           <li class="special-popup__item">
-            <button class="special-popup__btn-size special-popup__btn-size--S active" data-property="font-size" data-value="s" type="button">
+            <button class="special-popup__btn-size special-popup__btn-size--S active" data-property="font-size" data-value="default" type="button">
               <span>A</span>
             </button>
           </li>
           <li class="special-popup__item">
-            <button class="special-popup__btn-size special-popup__btn-size--M" data-property="font-size" data-value="m" type="button">
+            <button class="special-popup__btn-size special-popup__btn-size--M" data-property="font-size" data-value="larger" type="button">
               <span>A</span>
             </button>
           </li>
           <li class="special-popup__item">
-            <button class="special-popup__btn-size special-popup__btn-size--L" data-property="font-size" data-value="l" type="button">
+            <button class="special-popup__btn-size special-popup__btn-size--L" data-property="font-size" data-value="largest" type="button">
               <span>A</span>
             </button>
           </li>
@@ -62,27 +62,27 @@
         <div class="special-popup__scroll-wrap">
           <ul class="special-popup__list">
             <li class="special-popup__item">
-              <button class="special-popup__btn-color special-popup__btn-color--standard active" type="button" data-item="color">
+              <button class="special-popup__btn-color special-popup__btn-color--default active" data-property="theme" data-value="default" type="button">
                 <span>Стандартный</span>
               </button>
             </li>
             <li class="special-popup__item">
-              <button class="special-popup__btn-color special-popup__btn-color--inverse" type="button" data-item="color">
+              <button class="special-popup__btn-color special-popup__btn-color--inverse" data-property="theme" data-value="inverse" type="button">
                 <span>Инверсия</span>
               </button>
             </li>
             <li class="special-popup__item">
-              <button class="special-popup__btn-color special-popup__btn-color--blue" type="button" data-item="color">
+              <button class="special-popup__btn-color special-popup__btn-color--blue" data-property="theme" data-value="blue" type="button">
                 <span>Синий</span>
               </button>
             </li>
             <li class="special-popup__item">
-              <button class="special-popup__btn-color special-popup__btn-color--comfort" type="button" data-item="color">
+              <button class="special-popup__btn-color special-popup__btn-color--comfort" data-property="theme" data-value="comfort" type="button">
                 <span>Комфортный</span>
               </button>
             </li>
             <li class="special-popup__item">
-              <button class="special-popup__btn-color special-popup__btn-color--brown" type="button" data-item="color">
+              <button class="special-popup__btn-color special-popup__btn-color--brown" data-property="theme" data-value="brown" type="button">
                 <span>Коричневый</span>
               </button>
             </li>
@@ -93,7 +93,12 @@
         <div class="special-popup__name">Шрифт:</div>
         <ul class="special-popup__list special-popup__list--font">
           <li class="special-popup__item">
-            <button class="special-popup__btn-font special-popup__btn-font--arial active" data-property="font-family" data-value="arial" type="button">
+            <button class="special-popup__btn-font special-popup__btn-font--default active" data-property="font-family" data-value="default" type="button">
+              <span>Стандартный</span>
+            </button>
+          </li>
+          <li class="special-popup__item">
+            <button class="special-popup__btn-font special-popup__btn-font--arial" data-property="font-family" data-value="arial" type="button">
               <span>Arial</span>
             </button>
           </li>
@@ -105,7 +110,7 @@
         </ul>
       </div>
     </div>
-    <button type="button" class="special-popup__reset button button--blue">Сбросить всё</button>
+    <button type="button" class="special-popup__reset button button--blue" disabled="">Сбросить всё</button>
   </div>
 </section>
 
@@ -117,9 +122,9 @@
         <img class="page-header__roi-logo" width="180" height="56" src="img/roi-logo.svg" alt="Российская общественная инициатива">
       </a>
 
-      <a class="page-header__link page-header__site-name" href="#">Общественное голосование</a>
+      <a class="page-header__site-name link link--black" href="#">Общественное голосование</a>
 
-      <a class="page-header__link page-header__version-btn page-header__version-btn--bar js-open-popup" href="#">
+      <a class="page-header__version-btn page-header__version-btn--bar link link--black js-open-popup" href="#">
         <svg width="18" height="18">
           <use xlink:href="img/sprite.svg#icon-glasses"></use>
         </svg>
@@ -159,7 +164,7 @@
         </form>
       </div>
 
-      <a class="page-header__link page-header__version-btn page-header__version-btn--menu js-open-popup" href="#">
+      <a class="page-header__version-btn page-header__version-btn--menu link link--black js-open-popup" href="#">
         <svg width="18" height="18">
           <use xlink:href="img/sprite.svg#icon-glasses"></use>
         </svg>
@@ -169,7 +174,7 @@
       <nav class="page-header__user-menu user-menu">
         <div class="user-menu__overlay"></div>
 
-        <button class="user-menu__dropdown-btn" type="button">
+        <button class="user-menu__dropdown-btn link link--black" type="button">
           <span class="user-menu__dropdown-btn-text visually-hidden">Открыть меню пользователя</span>
 
           <svg class="user-menu__user-icon" width="16" height="16">
@@ -185,15 +190,15 @@
 
         <ul class="user-menu__list">
           <li class="user-menu__item">
-            <a class="page-header__link user-menu__link" href="#">Избранное</a>
+            <a class="user-menu__link link link--black" href="#">Избранное</a>
           </li>
 
           <li class="user-menu__item">
-            <a class="page-header__link user-menu__link" href="#">Моя активность</a>
+            <a class="user-menu__link link link--black" href="#">Моя активность</a>
           </li>
 
           <li class="user-menu__item">
-            <a class="page-header__link user-menu__link" href="#">Выход</a>
+            <a class="user-menu__link link link--black" href="#">Выход</a>
           </li>
         </ul>
       </nav>
@@ -207,7 +212,9 @@
         <div class="container">
           <div class="page-404__content">
             <h1 class="visually-hidden">404</h1>
-            <img src="img/404.svg" width="400" height="165" alt="404">
+            <svg width="400" height="165" viewBox="0 0 400 165">
+              <path d="M86.0295 162.708c-1.5335 0-2.7603-.458-3.6804-1.375-.9201-.916-1.3801-2.139-1.3801-3.666v-36.209H5.06056c-1.5335 0-2.7603-.458-3.68041-1.375C.460051 119.167 0 117.944 0 116.417v-3.667c0-2.292.843427-4.583 2.53028-6.875L72.458 6.1875c.7668-1.22222 1.9169-2.13889 3.4504-2.75 1.5335-.76389 3.2204-1.14584 5.0606-1.14584H90.4c1.5335 0 2.7603.45834 3.6804 1.37501.9201.91667 1.3802 2.13889 1.3802 3.66666V107.708h20.9324c1.533 0 2.76.459 3.68 1.375.92.917 1.38 2.139 1.38 3.667v3.667c0 1.527-.46 2.75-1.38 3.666-.92.917-2.147 1.375-3.68 1.375H95.4606v36.209c0 1.527-.4601 2.75-1.3802 3.666-.9201.917-2.1469 1.375-3.6804 1.375h-4.3705zm-5.0605-55V18.5625L18.172 107.708h62.797zM200.289 165c-19.322 0-33.277-5.806-41.864-17.417-8.435-11.611-12.882-26.889-13.342-45.833l-.23-19.0208.23-19.4792c.46-18.9444 4.907-34.2222 13.342-45.8333C167.012 5.80556 180.967 0 200.289 0c19.322 0 33.201 5.80556 41.635 17.4167 8.588 11.6111 13.111 26.8889 13.571 45.8333.154 4.2778.23 10.7708.23 19.4792 0 8.5555-.076 14.8958-.23 19.0208-.46 18.944-4.983 34.222-13.571 45.833C233.49 159.194 219.611 165 200.289 165zm0-13.75c13.188 0 23.156-4.354 29.904-13.062 6.9-8.862 10.504-21.389 10.811-37.584.153-4.4304.23-10.5415.23-18.3332 0-7.7916-.077-13.75-.23-17.875-.307-15.8889-3.911-28.2639-10.811-37.125-6.748-9.0139-16.716-13.5208-29.904-13.5208-13.188 0-23.232 4.5069-30.133 13.5208-6.747 8.8611-10.274 21.2361-10.581 37.125l-.23 17.875.23 18.3332c.307 16.195 3.834 28.722 10.581 37.584 6.901 8.708 16.945 13.062 30.133 13.062zM364.576 162.708c-1.533 0-2.76-.458-3.68-1.375-.92-.916-1.38-2.139-1.38-3.666v-36.209h-75.909c-1.533 0-2.76-.458-3.68-1.375-.92-.916-1.38-2.139-1.38-3.666v-3.667c0-2.292.843-4.583 2.53-6.875l69.928-99.6875c.766-1.22222 1.916-2.13889 3.45-2.75 1.533-.76389 3.22-1.14584 5.061-1.14584h9.431c1.533 0 2.76.45834 3.68 1.37501.92.91667 1.38 2.13889 1.38 3.66666V107.708h20.932c1.534 0 2.761.459 3.681 1.375.92.917 1.38 2.139 1.38 3.667v3.667c0 1.527-.46 2.75-1.38 3.666-.92.917-2.147 1.375-3.681 1.375h-20.932v36.209c0 1.527-.46 2.75-1.38 3.666-.92.917-2.147 1.375-3.68 1.375h-4.371zm-5.06-55V18.5625l-62.797 89.1455h62.797z" fill="currentColor"></path>
+            </svg>
             <p>Страница не найдена </p>
             <a href="main.html" class="button button--blue page-404__button">ВЕРНУТЬСЯ НА ГЛАВНУЮ</a>
           </div>
@@ -221,29 +228,29 @@
       <ul class="page-footer__list">
         <li class="page-footer__item">
           <span>Сайт Президента Российской Федерации</span>
-          <a href="http://kremlin.ru/" target="_blank">kremlin.ru</a>
+          <a class="link link--blue" href="http://kremlin.ru/" target="_blank">kremlin.ru</a>
         </li>
         <li class="page-footer__item">
           <span>Сайт Правительства Российской Федерации</span>
-          <a href="http://government.ru/" target="_blank">government.ru</a>
+          <a class="link link--blue" href="http://government.ru/" target="_blank">government.ru</a>
         </li>
         <li class="page-footer__item">
           <span>Государственная дума Российской Федерации</span>
-          <a href="http://duma.gov.ru/" target="_blank">duma.gov.ru</a>
+          <a class="link link--blue" href="http://duma.gov.ru/" target="_blank">duma.gov.ru</a>
         </li>
       </ul>
       <ul class="page-footer__list">
         <li class="page-footer__item">
           <span>Портал государственных услуг</span>
-          <a href="http://gosuslugi.ru/" target="_blank">gosuslugi.ru</a>
+          <a class="link link--blue" href="http://gosuslugi.ru/" target="_blank">gosuslugi.ru</a>
         </li>
         <li class="page-footer__item">
           <span>Единый портал раскрытия информации о подготовке проектов нормативных актов</span>
-          <a href="http://regulation.gov.ru/" target="_blank">regulation.gov.ru</a>
+          <a class="link link--blue" href="http://regulation.gov.ru/" target="_blank">regulation.gov.ru</a>
         </li>
         <li class="page-footer__item">
           <span>Официальный интернет-портал правовой информации</span>
-          <a href="http://pravo.gov.ru/" target="_blank">pravo.gov.ru</a>
+          <a class="link link--blue" href="http://pravo.gov.ru/" target="_blank">pravo.gov.ru</a>
         </li>
       </ul>
     </div>

@@ -8,7 +8,6 @@
   grid-template-rows: 48px auto 68px;
   width: 1120px;
   height: 624px;
-  background-color: $white;
   border-radius: $border-radius;
   overflow: hidden;
 }
@@ -17,7 +16,7 @@
   grid-area: frame;
   width: 835px;
   height: 100%;
-  background-color: #21252b;
+  background-color: $dark;
 }
 
 .gallery-popup__frame .swiper-slide {
@@ -51,14 +50,14 @@
   margin: 0;
   font-size: rem(15px);
   line-height: rem(20px);
-  color: $grey;
+  color: var(--color-text-secondary);
 }
 
 .gallery-popup .popup__bar--bottom {
   grid-area: bottom-bar;
   display: flex;
   align-items: center;
-  background-color: $color-bg;
+  background-color: var(--color-bg-secondary);
 }
 
 .gallery-popup .popup__close-btn {

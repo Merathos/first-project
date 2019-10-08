@@ -9,7 +9,6 @@
   font-weight: 400;
   font-size: rem(40px);
   line-height: rem(47px);
-  color: $dark-main;
 }
 
 .page-content .list-btn {
@@ -29,11 +28,11 @@
     margin-bottom: 31px;
 
     &:hover:not(.focus-visible) {
-      color: $grey;
+      color: var(--color-text-secondary);
     }
 
     &:active:not(.focus-visible) {
-      color: $blue-accent;
+      color: var(--color-interactive-accent);
     }
   }
 

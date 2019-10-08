@@ -9,12 +9,7 @@
 
     <main class="page-content">
       <div class="container">
-        <a class="back-btn" href="main-page.html">
-          <svg width="8" height="14">
-            <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
-          </svg>
-          Назад
-        </a>
+        <include src="source/components/back-btn.html"></include>
       </div>
       <section class="poll-page">
         <div class="container">
@@ -48,10 +43,16 @@
               Согласно большинству источников Lorem ipsum представляет собой отрывок одного из трактатов Цицерона и его корни уходят в 45 век до н. э.
             </p>
           </div>
-          <div class="poll-page__doc">
-            <a href="#" class="poll-page__doc-name" download>Рыбным текстом называется текст</a>
-            <span class="poll-page__doc-size">3,2 мб</span>
-          </div>
+          <a class="file-item" href="#" download>
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#icon-doc-odt"></use>
+            </svg>
+
+            <p class="file-item__info">
+              <span class="file-item__name">Рыбным текстом называется текст</span>
+              <span class="file-item__size">3,2 мб</span>
+            </p>
+          </a>
 
           <div class="poll-page__finish">
             Ведется работа с полученными комментариями, результаты будут опубликованы позже
