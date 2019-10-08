@@ -150,6 +150,11 @@
     margin-right: 0;
     margin-left: 0;
   }
+
+  .project-page__project-link {
+    margin-right: $tablet-padding;
+    margin-left: $tablet-padding;
+  }
 }
 
 
@@ -263,5 +268,10 @@
 
   .project-page__mobile-hidden {
     display: none;
+  }
+
+  .project-page__project-link {
+    margin-right: $mobile-padding;
+    margin-left: $mobile-padding;
   }
 }
