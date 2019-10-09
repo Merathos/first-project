@@ -3368,11 +3368,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   background-color: #e3e8ee;
   border: 1px solid #e3e8ee;
   border-radius: 4px; }
-  .special-popup__btn-size--S {
+  .special-popup__btn-size--default {
     font-size: 18px; }
-  .special-popup__btn-size--M {
+  .special-popup__btn-size--larger {
     font-size: 24px; }
-  .special-popup__btn-size--L {
+  .special-popup__btn-size--largest {
     font-size: 32px; }
   .special-popup__btn-size.active::after {
     content: "";
@@ -3381,7 +3381,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     left: 0;
     width: 100%;
     height: 5px;
-    background-color: var(--color-interactive-default); }
+    background-color: var(--color-interactive-default, #2c8ecc); }
 
 .special-popup__btn-color {
   padding: 10px 24px 9px;
@@ -3397,7 +3397,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       left: 0;
       width: 100%;
       height: 5px;
-      background-color: var(--color-interactive-default); }
+      background-color: var(--color-interactive-default, #2c8ecc); }
   .special-popup__btn-color--default {
     color: #354052;
     background-color: #ffffff;
@@ -3428,7 +3428,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     left: 0;
     width: 100%;
     height: 5px;
-    background-color: var(--color-interactive-default); }
+    background-color: var(--color-interactive-default, #2c8ecc); }
 
 .special-popup__reset {
   position: absolute;
