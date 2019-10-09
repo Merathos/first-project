@@ -9,6 +9,7 @@
 
   &--comment {
     max-height: 54px;
+    transition: max-height $style-change-duration;
 
     @media (max-width: $mobile-max-width) {
       max-height: 81px;
