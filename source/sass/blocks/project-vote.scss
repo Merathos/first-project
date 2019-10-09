@@ -64,12 +64,18 @@
   margin-bottom: 24px;
 }
 
-.project-vote__submit-form form {
-  display: flex;
-  flex-wrap: wrap;
+.project-vote__submit-form {
+  width: 100%;
 
-  input {
-    display: none;
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -16px;
+    margin-left: -16px;
+
+    input {
+      display: none;
+    }
   }
 }
 
@@ -77,6 +83,8 @@
   display: flex;
   align-items: center;
   padding: 11px 28px;
+  margin-top: 16px;
+  margin-left: 16px;
   font-size: rem(16px);
   line-height: rem(22px);
   user-select: none;
@@ -87,10 +95,6 @@
   cursor: pointer;
   outline: none;
   transition: color $style-change-duration, background-color $style-change-duration;
-
-  &--approve {
-    margin-right: 16px;
-  }
 
   &:focus {
     color: var(--color-bg-main);
@@ -236,7 +240,6 @@
 
     &--selected {
       width: 100%;
-      margin: 0;
 
       &:active:not(.focus-visible) {
         color: var(--color-text-main);

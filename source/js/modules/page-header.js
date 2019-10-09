@@ -38,4 +38,7 @@
 
   document.addEventListener('scroll', adjustHeaderAppearance);
   window.addEventListener('resize', onWindowResize);
+
+
+  window.adjustPageContentTopPadding = adjustPageContentTopPadding;
 })();

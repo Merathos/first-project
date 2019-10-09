@@ -20,7 +20,7 @@
   margin-bottom: 48px;
   overflow-x: auto;
 
-  background-image: linear-gradient($light-grey, $light-grey);
+  background-image: linear-gradient(var(--color-stroke), var(--color-stroke));
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: 100% 1px;
@@ -52,31 +52,30 @@
   padding-bottom: 13px;
 
   @include font-h3;
-  color: $grey;
+  color: var(--color-text-secondary);
   text-decoration: none;
   transition: color $style-change-duration;
 
   @media (max-width: $mobile-max-width) {
     @include font-h4;
-    color: $grey;
     padding-bottom: 18px;
   }
 
   &:hover {
-    color: $blue-default;
+    color: var(--color-interactive-default);
   }
 
   &:focus {
-    color: $blue-default;
-    background-image: linear-gradient($blue-default, $blue-default);
+    color: var(--color-interactive-default);
+    background-image: linear-gradient(var(--color-interactive-default), var(--color-interactive-default));
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: 100% 2px;
   }
 
   &--active {
-    color: $blue-default;
-    background-image: linear-gradient($blue-default, $blue-default);
+    color: var(--color-interactive-default);
+    background-image: linear-gradient(var(--color-interactive-default), var(--color-interactive-default));
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: 100% 2px;

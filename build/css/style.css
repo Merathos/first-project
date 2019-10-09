@@ -100,7 +100,7 @@ html {
     --color-bg-secondary: #f7e4d8;
     --color-bg-main-transparent: rgba(247, 243, 216, 0);
     --color-bg-secondary-transparent: rgba(247, 228, 216, 0);
-    --color-stroke: #707b8c;
+    --color-stroke: #4d4b43;
     --color-tag: #e3e8ee;
     --color-text-main: #4d4b43;
     --color-text-secondary: #4d4b43;
@@ -114,7 +114,7 @@ html {
     --color-bg-secondary: #333333;
     --color-bg-main-transparent: rgba(59, 39, 23, 0);
     --color-bg-secondary-transparent: rgba(51, 51, 51, 0);
-    --color-stroke: #707b8c;
+    --color-stroke: #aae55c;
     --color-tag: #707b8c;
     --color-text-main: #aae55c;
     --color-text-secondary: #aae55c;
@@ -4876,7 +4876,8 @@ span.poll__hide {
   margin: 0;
   font-size: 0.9375rem;
   line-height: 1.25rem;
-  color: var(--color-text-secondary); }
+  color: var(--color-text-secondary);
+  overflow: auto; }
 
 .gallery-popup .popup__bar--bottom {
   grid-area: bottom-bar;
@@ -6097,14 +6098,18 @@ span.poll__hide {
 .project-vote__results {
   margin-bottom: 24px; }
 
-.project-vote__submit-form form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
-  .project-vote__submit-form form input {
-    display: none; }
+.project-vote__submit-form {
+  width: 100%; }
+  .project-vote__submit-form form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-top: -16px;
+    margin-left: -16px; }
+    .project-vote__submit-form form input {
+      display: none; }
 
 .project-vote__vote-btn {
   display: -webkit-box;
@@ -6114,6 +6119,8 @@ span.poll__hide {
       -ms-flex-align: center;
           align-items: center;
   padding: 11px 28px;
+  margin-top: 16px;
+  margin-left: 16px;
   font-size: 1rem;
   line-height: 1.375rem;
   -webkit-user-select: none;
@@ -6128,8 +6135,6 @@ span.poll__hide {
   outline: none;
   -webkit-transition: color 0.2s, background-color 0.2s;
   transition: color 0.2s, background-color 0.2s; }
-  .project-vote__vote-btn--approve {
-    margin-right: 16px; }
   .project-vote__vote-btn:focus {
     color: var(--color-bg-main);
     background-color: var(--color-interactive-default); }
@@ -6237,8 +6242,7 @@ span.poll__hide {
     color: var(--color-bg-main);
     background-color: var(--color-interactive-default); }
   .project-vote__vote-btn--selected {
-    width: 100%;
-    margin: 0; }
+    width: 100%; }
     .project-vote__vote-btn--selected:active:not(.focus-visible) {
       color: var(--color-text-main);
       background-color: var(--color-bg-main); }
@@ -7755,8 +7759,8 @@ span.poll-page__hide {
   width: 100%;
   margin-bottom: 48px;
   overflow-x: auto;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e3e8ee), to(#e3e8ee));
-  background-image: linear-gradient(#e3e8ee, #e3e8ee);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--color-stroke)), to(var(--color-stroke)));
+  background-image: linear-gradient(var(--color-stroke), var(--color-stroke));
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: 100% 1px; }
@@ -7784,7 +7788,7 @@ span.poll-page__hide {
   font-size: 1.5rem;
   line-height: 1.75rem;
   font-weight: 400;
-  color: #707b8c;
+  color: var(--color-text-secondary);
   text-decoration: none;
   -webkit-transition: color 0.2s;
   transition: color 0.2s; }
@@ -7793,21 +7797,20 @@ span.poll-page__hide {
       font-size: 1.125rem;
       line-height: 1.4375rem;
       font-weight: 400;
-      color: #707b8c;
       padding-bottom: 18px; } }
   .activity-tabs__link:hover {
-    color: #2c8ecc; }
+    color: var(--color-interactive-default); }
   .activity-tabs__link:focus {
-    color: #2c8ecc;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#2c8ecc), to(#2c8ecc));
-    background-image: linear-gradient(#2c8ecc, #2c8ecc);
+    color: var(--color-interactive-default);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--color-interactive-default)), to(var(--color-interactive-default)));
+    background-image: linear-gradient(var(--color-interactive-default), var(--color-interactive-default));
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: 100% 2px; }
   .activity-tabs__link--active {
-    color: #2c8ecc;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#2c8ecc), to(#2c8ecc));
-    background-image: linear-gradient(#2c8ecc, #2c8ecc);
+    color: var(--color-interactive-default);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--color-interactive-default)), to(var(--color-interactive-default)));
+    background-image: linear-gradient(var(--color-interactive-default), var(--color-interactive-default));
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: 100% 2px; }

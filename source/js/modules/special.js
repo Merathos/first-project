@@ -39,6 +39,10 @@
         isDefault[targetProperty] = true;
       }
 
+      if (targetProperty === 'font-size') {
+        window.adjustPageContentTopPadding();
+      }
+
       resetBtn.disabled = isDefault['font-size'] && isDefault['font-family'] && isDefault['theme'];
     };
 

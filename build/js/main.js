@@ -477,6 +477,9 @@
 
   document.addEventListener('scroll', adjustHeaderAppearance);
   window.addEventListener('resize', onWindowResize);
+
+
+  window.adjustPageContentTopPadding = adjustPageContentTopPadding;
 })();
 
 'use strict';
@@ -785,6 +788,10 @@
         root.classList.add('mod-' + targetProperty + '-' + targetValue);
       } else {
         isDefault[targetProperty] = true;
+      }
+
+      if (targetProperty === 'font-size') {
+        window.adjustPageContentTopPadding();
       }
 
       resetBtn.disabled = isDefault['font-size'] && isDefault['font-family'] && isDefault['theme'];
