@@ -26,6 +26,7 @@
   <body class="page-body">
     <section class="special-popup js-hide">
   <h2 class="visually-hidden">Настройки для слабовидящих</h2>
+
   <div class="special-popup__wrap">
     <button class="special-popup__btn-close js-close-popup" type="button" aria-label="Закрыть">
       <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,21 +34,26 @@
       </svg>
       <span class="visually-hidden">Закрыть</span>
     </button>
+
     <div class="special-popup__title">Настройки</div>
+
     <div class="special-popup__group-list">
       <div class="special-popup__group">
         <h3 class="special-popup__name">Размер шрифта:</h3>
+
         <ul class="special-popup__list">
           <li class="special-popup__item">
             <button class="special-popup__btn-size special-popup__btn-size--default active" data-property="font-size" data-value="default" type="button">
               <span>A</span>
             </button>
           </li>
+
           <li class="special-popup__item">
             <button class="special-popup__btn-size special-popup__btn-size--larger" data-property="font-size" data-value="larger" type="button">
               <span>A</span>
             </button>
           </li>
+
           <li class="special-popup__item">
             <button class="special-popup__btn-size special-popup__btn-size--largest" data-property="font-size" data-value="largest" type="button">
               <span>A</span>
@@ -55,61 +61,68 @@
           </li>
         </ul>
       </div>
+
       <div class="special-popup__group">
         <h3 class="special-popup__name">Цветовая схема:</h3>
-        <div class="special-popup__scroll-wrap">
-          <ul class="special-popup__list">
-            <li class="special-popup__item">
-              <button class="special-popup__btn-color special-popup__btn-color--default active" data-property="theme" data-value="default" type="button">
-                <span>Стандартный</span>
-              </button>
-            </li>
-            <li class="special-popup__item">
-              <button class="special-popup__btn-color special-popup__btn-color--inverse" data-property="theme" data-value="inverse" type="button">
-                <span>Инверсия</span>
-              </button>
-            </li>
-            <li class="special-popup__item">
-              <button class="special-popup__btn-color special-popup__btn-color--blue" data-property="theme" data-value="blue" type="button">
-                <span>Синий</span>
-              </button>
-            </li>
-            <li class="special-popup__item">
-              <button class="special-popup__btn-color special-popup__btn-color--comfort" data-property="theme" data-value="comfort" type="button">
-                <span>Комфортный</span>
-              </button>
-            </li>
-            <li class="special-popup__item">
-              <button class="special-popup__btn-color special-popup__btn-color--brown" data-property="theme" data-value="brown" type="button">
-                <span>Коричневый</span>
-              </button>
-            </li>
-          </ul>
-        </div>
+
+        <ul class="special-popup__list">
+          <li class="special-popup__item">
+            <button class="special-popup__btn-color special-popup__btn-color--default active" data-property="theme" data-value="default" type="button">
+              <span>Стандартный</span>
+            </button>
+          </li>
+
+          <li class="special-popup__item">
+            <button class="special-popup__btn-color special-popup__btn-color--inverse" data-property="theme" data-value="inverse" type="button">
+              <span>Инверсия</span>
+            </button>
+          </li>
+
+          <li class="special-popup__item">
+            <button class="special-popup__btn-color special-popup__btn-color--blue" data-property="theme" data-value="blue" type="button">
+              <span>Синий</span>
+            </button>
+          </li>
+
+          <li class="special-popup__item">
+            <button class="special-popup__btn-color special-popup__btn-color--comfort" data-property="theme" data-value="comfort" type="button">
+              <span>Комфортный</span>
+            </button>
+          </li>
+
+          <li class="special-popup__item">
+            <button class="special-popup__btn-color special-popup__btn-color--brown" data-property="theme" data-value="brown" type="button">
+              <span>Коричневый</span>
+            </button>
+          </li>
+        </ul>
       </div>
+
       <div class="special-popup__group">
         <h3 class="special-popup__name">Шрифт:</h3>
-        <div class="special-popup__scroll-wrap">
-          <ul class="special-popup__list special-popup__list--font">
-            <li class="special-popup__item">
-              <button class="special-popup__btn-font special-popup__btn-font--default active" data-property="font-family" data-value="default" type="button">
-                <span>Стандартный</span>
-              </button>
-            </li>
-            <li class="special-popup__item">
-              <button class="special-popup__btn-font special-popup__btn-font--arial" data-property="font-family" data-value="arial" type="button">
-                <span>Arial</span>
-              </button>
-            </li>
-            <li class="special-popup__item">
-              <button class="special-popup__btn-font special-popup__btn-font--times" data-property="font-family" data-value="times" type="button">
-                <span>Times New Roman</span>
-              </button>
-            </li>
-          </ul>
-        </div>
+
+        <ul class="special-popup__list special-popup__list--font">
+          <li class="special-popup__item">
+            <button class="special-popup__btn-font special-popup__btn-font--default active" data-property="font-family" data-value="default" type="button">
+              <span>Стандартный</span>
+            </button>
+          </li>
+
+          <li class="special-popup__item">
+            <button class="special-popup__btn-font special-popup__btn-font--arial" data-property="font-family" data-value="arial" type="button">
+              <span>Arial</span>
+            </button>
+          </li>
+
+          <li class="special-popup__item">
+            <button class="special-popup__btn-font special-popup__btn-font--times" data-property="font-family" data-value="times" type="button">
+              <span>Times New Roman</span>
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
+
     <button type="button" class="special-popup__reset button button--blue" disabled="">Сбросить всё</button>
   </div>
 </section>
