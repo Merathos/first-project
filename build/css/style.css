@@ -2877,13 +2877,13 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .page-404 {
   padding-top: 16vh;
   padding-bottom: 14vh; }
+  @media (max-width: 1199px) {
+    .page-404 {
+      padding-top: 66px;
+      padding-bottom: 88px; } }
   @media (max-width: 767px) {
     .page-404 {
-      padding-top: 88px;
-      padding-bottom: 88px; } }
-  @media (max-width: 400px) {
-    .page-404 {
-      padding-top: 76px;
+      padding-top: 56px;
       padding-bottom: 64px; } }
 
 .page-404__content {
@@ -2901,40 +2901,41 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
-  .page-404__content svg {
-    width: 400px;
-    height: 165px; }
+  .page-404__content h1 {
+    margin: 0;
+    font-weight: 300;
+    font-size: 230px;
+    line-height: 1; }
+    @media (max-width: 1199px) {
+      .page-404__content h1 {
+        font-size: 164px; } }
     @media (max-width: 767px) {
-      .page-404__content svg {
-        width: 286px;
-        height: 117px; } }
-    @media (max-width: 400px) {
-      .page-404__content svg {
-        width: 208px;
-        height: 85px; } }
+      .page-404__content h1 {
+        font-size: 120px; } }
   .page-404__content p {
     font-size: 1.875rem;
     line-height: 2.25rem;
     font-weight: 400;
-    margin-top: 40px;
+    margin-top: 5px;
     margin-bottom: 72px; }
-    @media (max-width: 767px) {
+    @media (max-width: 1199px) {
       .page-404__content p {
         font-size: 1.5rem;
         line-height: 1.75rem;
-        font-weight: 400; } }
-    @media (max-width: 400px) {
+        font-weight: 400;
+        margin-top: 15px; } }
+    @media (max-width: 767px) {
       .page-404__content p {
         font-size: 1.125rem;
         line-height: 1.4375rem;
         font-weight: 400;
-        margin-top: 32px;
+        margin-top: 14px;
         margin-bottom: 47px; } }
 
 .page-404__button {
   padding-left: 60px;
   padding-right: 60px; }
-  @media (max-width: 400px) {
+  @media (max-width: 767px) {
     .page-404__button {
       width: 100%;
       padding-left: 30px;
