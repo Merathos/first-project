@@ -31,6 +31,7 @@
   box-shadow: 0 4px 15px rgba(46, 67, 102, 0.1);
 
   @include tablet {
+    min-height: 100%;
     padding: 32px 82px 148px 24px;
   }
 
