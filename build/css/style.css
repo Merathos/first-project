@@ -3925,7 +3925,12 @@ span.poll__hide {
   display: none; }
   @media (max-width: 767px) {
     .poll__archive-mobile {
-      display: block;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       margin-top: 24px; } }
 
 .poll--poll-list {
@@ -4177,7 +4182,12 @@ span.poll__hide {
   display: none; }
   @media (max-width: 767px) {
     .project__archive-mobile {
-      display: block;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       margin-top: 24px; } }
 
 .discussion {
@@ -4341,7 +4351,12 @@ span.poll__hide {
   display: none; }
   @media (max-width: 767px) {
     .discussion__archive-mobile {
-      display: block;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       margin-top: 24px; } }
 
 .discussion--page {
