@@ -941,6 +941,30 @@
   });
 })();
 
+(function () {
+  var textContainers = document.querySelectorAll('.text-hidden-popup');
+  if (!textContainers.length) {
+    return;
+  }
+
+  Array.prototype.forEach.call(textContainers, function (textContainer) {
+    var btnTextOpen = textContainer.querySelector('.text-hidden__btn');
+    var btnText = textContainer.querySelector('.text-hidden__btn span');
+    var text = textContainer.querySelector('.text-hidden__container-popup');
+    var btnContainer = textContainer.querySelector('.answers__button-wrapper');
+    if (!btnTextOpen && !text && !btnContainer) {
+      return;
+    }
+    btnTextOpen.addEventListener('click', function (evt) {
+      evt.preventDefault();
+      btnTextOpen.classList.toggle('text-hidden__btn--open');
+      text.classList.toggle('text-hidden__container-popup--open');
+      btnContainer.classList.toggle('answers__button-wrapper--open');
+      btnText.textContent = btnText.textContent === 'Развернуть' ? 'Свернуть' : 'Развернуть';
+    });
+  });
+})();
+
 'use strict';
 
 
