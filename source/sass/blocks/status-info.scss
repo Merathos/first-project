@@ -1,14 +1,18 @@
-.vote-end {
+.status-info {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 19px 32px;
+  padding: 24px 32px;
   color: $white;
   background-color: $blue-default;
   border-radius: $border-radius;
+
+  &--accent {
+    background-color: $orange;
+  }
 }
 
-.vote-end__text-group {
+.status-info__text-group {
   display: flex;
   align-items: center;
   margin-right: auto;
@@ -24,31 +28,35 @@
   }
 }
 
-.vote-end__text {
+.status-info__text {
   margin: 0;
   font-weight: 500;
   font-size: rem(16px);
   line-height: rem(22px);
 }
 
+
 @include tablet {
-  .vote-end {
+  .status-info {
     padding: 25px 24px;
   }
 
-  .vote-end__text-group {
+  .status-info__text-group {
     width: 100%;
-    margin-bottom: 17px;
+  }
+
+  .status-info__file {
+    margin-top: 17px;
   }
 }
 
 
 @include mobile {
-  .vote-end {
+  .status-info {
     padding: 25px 24px 26px;
   }
 
-  .vote-end__text-group {
+  .status-info__text-group {
     align-items: flex-start;
   }
 }

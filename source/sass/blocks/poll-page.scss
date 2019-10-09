@@ -77,82 +77,16 @@
   list-style: none;
 }
 
-.poll-page__doc-wrap {
-  position: relative;
-
-  display: flex;
-  flex-shrink: 0;
-  flex-direction: column;
-  align-self: flex-start;
-  margin: 0 10px 10px 0;
-  padding: 19px 24px 19px 60px;
-
-  font-size: rem(13px);
-  line-height: 1.3;
-  text-decoration: none;
-
-  border: 1px solid $light-grey;
-  border-radius: $border-radius;
-
-  @include mobile {
-    width: 100%;
-    max-width: 100%;
-    margin-right: 0;
-  }
-
-  &:hover,
-  &:focus {
-    .poll-page__doc-name {
-      color: $blue-default;
-    }
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: calc(50% - 12px);
-    left: 24px;
-
-    width: 24px;
-    height: 24px;
-
-    background-image: url("../img/icon-odt.svg");
-    background-repeat: no-repeat;
-  }
-}
-
 .poll-page__doc-item {
   max-width: 100%;
 
   @include mobile {
     width: 100%;
+
+    .file-item {
+      width: 100%;
+    }
   }
-}
-
-.poll-page__doc-name {
-  align-self: flex-start;
-  min-width: 280px;
-
-  color: $dark-text;
-  text-decoration: none;
-
-  transition: color $style-change-duration;
-
-  @include mobile {
-    min-width: auto;
-    max-width: 100%;
-    overflow: hidden;
-
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-}
-
-.poll-page__doc-size {
-  align-self: flex-start;
-
-  color: $grey-default;
-  text-transform: uppercase;
 }
 
 .poll-page__form {
@@ -232,39 +166,7 @@ span.poll-page__hide {
 }
 
 .poll-page__finish {
-  position: relative;
-
   margin-top: 48px;
-  padding: 25px 40px 25px 68px;
-
-  font-size: rem(16px);
-  line-height: 1.35;
-  color: $white;
-
-  background-color: $orange;
-  border-radius: $border-radius;
-
-  @include tablet {
-    padding: 24px 38px 24px 64px;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 24px;
-    left: 32px;
-
-    width: 24px;
-    height: 24px;
-
-    background-image: url("../img/icon-time-white.svg");
-    background-repeat: no-repeat;
-
-    @include tablet {
-      top: 26px;
-      left: 24px;
-    }
-  }
 }
 
 .poll-page--final {
@@ -301,18 +203,6 @@ span.poll-page__hide {
       @media (max-width: $mobile-max-width) {
         margin-bottom: 14px;
       }
-    }
-  }
-
-  & .poll-page__doc-item {
-    width: 100%;
-  }
-
-  & .poll-page__doc-wrap {
-    width: 364px;
-
-    @media (max-width: $mobile-max-width) {
-      width: 100%;
     }
   }
 

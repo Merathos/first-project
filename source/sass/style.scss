@@ -11,7 +11,6 @@
 @import "plugins/nouislider";
 
 /* Блоки */
-@import "blocks/document";
 @import "blocks/section";
 @import "blocks/page-body";
 @import "blocks/page-content";
@@ -39,6 +38,7 @@
 @import "blocks/archive-link";
 @import "blocks/special-popup";
 @import "blocks/project-link";
+@import "blocks/status-info";
 
 // main page
 @import "blocks/news-notice";
@@ -49,7 +49,6 @@
 @import "blocks/cookie";
 
 // composite poll
-@import "blocks/poll-process";
 @import "blocks/poll-result";
 @import "blocks/composite-poll";
 @import "blocks/files";
@@ -66,7 +65,6 @@
 @import "blocks/user-menu";
 
 // projects
-@import "blocks/vote-end";
 @import "blocks/project-item";
 @import "blocks/projects-list";
 @import "blocks/projects";

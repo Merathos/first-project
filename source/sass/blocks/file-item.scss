@@ -25,6 +25,32 @@
   &:active:not(.focus-visible) {
     color: var(--color-interactive-default, $blue-default);
   }
+
+  &--small {
+    width: auto;
+    padding: 0;
+    border: none;
+  }
+
+  &--white {
+    color: $white;
+    transition: opacity $style-change-duration;
+
+    &:focus {
+      color: $white;
+      opacity: 0.6;
+    }
+
+    &:focus:not(.focus-visible) {
+      color: $white;
+      opacity: 1;
+    }
+
+    &:active:not(.focus-visible) {
+      color: $white;
+      opacity: 0.6;
+    }
+  }
 }
 
 .file-item svg {
@@ -49,8 +75,13 @@
 }
 
 .file-item__size {
+  font-size: 300;
   text-transform: uppercase;
   color: var(--color-text, $grey-default);
+}
+
+.file-item--white .file-item__size {
+  color: $light-blue-accent;
 }
 
 
@@ -59,11 +90,12 @@
     &:hover:not(.focus-visible) {
       color: var(--color-interactive-default, $blue-default);
     }
-  }
-}
 
-@media (max-width: $mobile-max-width) {
-  .file-item {
-    width: 100%;
+    &--white {
+      &:hover:not(.focus-visible) {
+        color: $white;
+        opacity: 0.6;
+      }
+    }
   }
 }

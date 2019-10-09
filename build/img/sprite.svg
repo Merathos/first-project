@@ -146,11 +146,9 @@
 <path d="M18.521 9.72726V13" stroke="#2C8ECC" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
 <path d="M18.521 9.72727C20.9599 9.72727 22.937 7.77361 22.937 5.36364C22.937 2.95367 20.9599 1 18.521 1C16.0821 1 14.105 2.95367 14.105 5.36364C14.105 7.77361 16.0821 9.72727 18.521 9.72727Z" stroke="#2C8ECC" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
 </symbol><symbol id="icon-clock" viewBox="0 0 16 16">
-<g opacity="0.5">
-<circle cx="8" cy="8" r="7.25" stroke="currentColor" stroke-width="1.5"/>
-<rect x="7.375" y="3.375" width="0.75" height="5.25" stroke="currentColor" stroke-width="0.75"/>
-<rect x="10.625" y="8.375" width="0.75" height="3.25" transform="rotate(90 10.625 8.375)" stroke="currentColor" stroke-width="0.75"/>
-</g>
+  <circle cx="8" cy="8" r="7.25" stroke="currentColor" stroke-width="1.5"/>
+  <rect x="7.375" y="3.375" width="0.75" height="5.25" stroke="currentColor" stroke-width="0.75"/>
+  <rect x="10.625" y="8.375" width="0.75" height="3.25" transform="rotate(90 10.625 8.375)" stroke="currentColor" stroke-width="0.75"/>
 </symbol><symbol id="icon-close" viewBox="0 0 18 18">
 <path d="M1 1L17 17M17 1L1 17" stroke="currentColor" stroke-width="2"/>
 </symbol><symbol id="icon-comments" viewBox="0 0 18 18">
