@@ -363,6 +363,8 @@
 
     menuBtn.classList.remove('menu-btn--close');
     menuBtnText.textContent = 'Открыть основное меню';
+
+    window.adjustPageContentTopPadding();
   };
 
 
