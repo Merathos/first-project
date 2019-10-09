@@ -84,20 +84,29 @@
       btn.addEventListener('click', function (evt) {
         evt.preventDefault();
         popup.classList.remove(hideClass);
-        window.bodyScrollLock.disableBodyScroll(popup);
+
+        if (root.clientWidth < window.const.resolution.DESKTOP) {
+          window.bodyScrollLock.disableBodyScroll(popup);
+        }
       });
     });
 
     popupCloseBtn.addEventListener('click', function () {
       popup.classList.add(hideClass);
-      window.bodyScrollLock.enableBodyScroll(popup);
+
+      if (root.clientWidth < window.const.resolution.DESKTOP) {
+        window.bodyScrollLock.enableBodyScroll(popup);
+      }
     });
 
     window.addEventListener('keydown', function (evt) {
       if (evt.keyCode === window.const.keyCode.ESC) {
         evt.preventDefault();
         popup.classList.add(hideClass);
-        window.bodyScrollLock.enableBodyScroll(popup);
+
+        if (root.clientWidth < window.const.resolution.DESKTOP) {
+          window.bodyScrollLock.enableBodyScroll(popup);
+        }
       }
     });
   }
