@@ -78,17 +78,24 @@
 
 
 @include desktop-only {
-  .page-header--above-content {
-    box-shadow: 0 4px 8px rgba(46, 67, 102, 0.1);
+  .page-header {
+    transition: top 0.4s;
 
-    .page-header__bar,
-    .page-header__location-address {
-      display: none;
-    }
+    &--above-content {
+      box-shadow: 0 4px 8px rgba(46, 67, 102, 0.1);
 
-    .page-header__version-btn--menu {
-      display: flex;
-      margin-right: 38px;
+      .page-header__bar {
+        box-shadow: none;
+      }
+
+      .page-header__location-address {
+        display: none;
+      }
+
+      .page-header__version-btn--menu {
+        display: flex;
+        margin-right: 38px;
+      }
     }
   }
 }
