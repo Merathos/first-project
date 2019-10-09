@@ -35,6 +35,12 @@
     inputCount.focus();
     inputContainer.classList.add('answers__count--hover');
   };
+
+  form.addEventListener('submit', function (evt) {
+    evt.preventDefault();
+    inputCount.blur();
+  });
+
 })();
 
 'use strict';
