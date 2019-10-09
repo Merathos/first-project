@@ -2,7 +2,7 @@
   padding-top: 32px;
   padding-bottom: 18px;
 
-  background-image: linear-gradient(var(--color-stroke), var(--color-stroke));
+  background-image: linear-gradient(var(--color-stroke, $light-grey), var(--color-stroke, $light-grey));
   background-position: left bottom;
   background-repeat: no-repeat;
   background-size: 100% 1px;
@@ -97,5 +97,5 @@
   margin-bottom: 24px;
 
   @include main-text;
-  color: var(--color-text-caption);
+  color: var(--color-text, $grey-default);
 }

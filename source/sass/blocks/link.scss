@@ -12,50 +12,50 @@
   }
 
   &--blue {
-    color: var(--color-interactive-default);
+    color: var(--color-interactive-default, $blue-default);
 
     &:focus {
-      color: var(--color-interactive-accent);
+      color: var(--color-interactive-accent, $blue-accent);
     }
 
     &:focus:not(.focus-visible) {
-      color: var(--color-interactive-default);
+      color: var(--color-interactive-default, $blue-default);
     }
 
     &:active:not(.focus-visible) {
-      color: var(--color-interactive-accent);
+      color: var(--color-interactive-accent, $blue-accent);
     }
   }
 
   &--grey {
-    color: var(--color-text-caption);
+    color: var(--color-text, $grey-default);
 
     &:focus {
-      color: var(--color-interactive-accent);
+      color: var(--color-interactive-default, $blue-accent);
     }
 
     &:focus:not(.focus-visible) {
-      color: var(--color-text-caption);
+      color: var(--color-text, $grey-default);
     }
 
     &:active:not(.focus-visible) {
-      color: var(--color-interactive-accent);
+      color: var(--color-interactive-default, $blue-accent);
     }
   }
 
   &--black {
-    color: var(--color-text-main);
+    color: var(--color-text, $dark-text);
 
     &:focus {
-      color: var(--color-interactive-default);
+      color: var(--color-interactive-default, $blue-default);
     }
 
     &:focus:not(.focus-visible) {
-      color: var(--color-text-main);
+      color: var(--color-text, $dark-text);
     }
 
     &:active:not(.focus-visible) {
-      color: var(--color-interactive-default);
+      color: var(--color-interactive-default, $blue-default);
     }
   }
 }
@@ -65,19 +65,19 @@
   .link {
     &--blue {
       &:hover:not(.focus-visible) {
-        color: var(--color-interactive-accent);
+        color: var(--color-interactive-accent, $blue-accent);
       }
     }
 
     &--grey {
       &:hover:not(.focus-visible) {
-        color: var(--color-interactive-accent);
+        color: var(--color-interactive-default, $blue-accent);
       }
     }
 
     &--black {
       &:hover:not(.focus-visible) {
-        color: var(--color-interactive-default);
+        color: var(--color-interactive-default, $blue-default);
       }
     }
   }

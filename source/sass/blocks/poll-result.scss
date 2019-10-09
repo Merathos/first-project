@@ -1,7 +1,7 @@
 .poll-result__section {
   padding-top: 32px;
   padding-bottom: 25px;
-  background-image: linear-gradient($light-grey, $light-grey);
+  background-image: linear-gradient(var(--color-stroke, $light-grey), var(--color-stroke, $light-grey));
   background-position: left bottom;
   background-repeat: no-repeat;
   background-size: 100% 1px;
@@ -20,7 +20,7 @@
   max-width: 800px;
   margin-bottom: 16px;
   border-radius: 5px;
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-secondary, $color-bg);
   overflow: hidden;
 }
 
@@ -61,5 +61,5 @@
 }
 
 .poll-result__caption {
-  color: var(--color-text-caption);
+  color: var(--color-text, $grey-default);
 }

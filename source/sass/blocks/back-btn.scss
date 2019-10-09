@@ -6,20 +6,20 @@
   line-height: rem(23px);
   text-decoration: none;
   user-select: none;
-  color: var(--color-text-secondary);
+  color: var(--color-text, $grey);
   outline: none;
   transition: color $style-change-duration;
 
   &:focus {
-    color: var(--color-interactive-accent);
+    color: var(--color-interactive-default, $blue-accent);
   }
 
   &:focus:not(.focus-visible) {
-    color: var(--color-text-secondary);
+    color: var(--color-text, $grey);
   }
 
   &:hover:not(.focus-visible) {
-    color: var(--color-interactive-accent);
+    color: var(--color-interactive-default, $blue-accent);
   }
 
   svg {
@@ -31,5 +31,33 @@
     fill: currentColor;
     pointer-events: none;
     transition: fill $style-change-duration;
+  }
+}
+
+
+@include tablet {
+  .back-btn {
+    margin-bottom: 31px;
+
+    &:hover:not(.focus-visible) {
+      color: var(--color-text, $grey);
+    }
+
+    &:active:not(.focus-visible) {
+      color: var(--color-interactive-default, $blue-accent);
+    }
+  }
+}
+
+
+@include mobile {
+  .back-btn {
+    margin-bottom: 24px;
+    font-size: rem(15px);
+    line-height: rem(20px);
+
+    svg {
+      padding-bottom: 0;
+    }
   }
 }

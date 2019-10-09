@@ -49,7 +49,7 @@
   padding: 24px;
   padding-bottom: 29px;
 
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-secondary, $color-bg);
   border-radius: $border-radius;
   cursor: pointer;
 
@@ -88,8 +88,8 @@
 }
 
 .poll__item--passed {
-  background-color: var(--color-bg-main);
-  border: 1px solid var(--color-stroke);
+  background-color: var(--color-bg-main, $white);
+  border: 1px solid var(--color-stroke, $light-grey);
 
   &::before {
     background-image: linear-gradient(180deg, var(--color-bg-main) 0%, var(--color-bg-main-transparent) 100%);
@@ -105,9 +105,9 @@
 
     font-size: rem(13px);
     line-height: 1.3;
-    color: var(--color-text-caption);
+    color: var(--color-text, $grey-default);
 
-    background-color: var(--color-tag);
+    background-color: var(--color-tag, $light-grey);
     border-radius: $border-radius 0;
     opacity: 0.5;
   }
@@ -119,7 +119,7 @@
   }
 
   & .poll__text {
-    color: var(--color-text-caption);
+    color: var(--color-text, $grey-default);
   }
 }
 

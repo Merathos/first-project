@@ -8,7 +8,7 @@
   padding: 24px 16px;
   margin-left: 20px;
 
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-secondary, $color-bg);
   border-radius: 5px;
 
   @media (max-width: $tablet-width - 1) {
@@ -45,19 +45,16 @@
   font-weight: 500;
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--color-text-caption);
+  color: var(--color-text, $grey-default);
   transition: color $style-change-duration;
 
   &:hover,
   &:focus {
-    color: var(--color-interactive-default);
+    color: var(--color-interactive-default, $blue-default);
   }
 
   &--active {
-    color: var(--color-interactive-default);
-    background-image: linear-gradient(to right, $light-blue-accent 0%, $light-blue-accent 50%, transparent 50%, transparent 75%);
-    background-position: center bottom;
-    background-repeat: repeat-x;
-    background-size: 6px 2px;
+    color: var(--color-interactive-default, $blue-default);
+    border-bottom: 2px dashed var(--color-interactive-default, $blue-default);
   }
 }

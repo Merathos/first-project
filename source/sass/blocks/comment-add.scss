@@ -3,7 +3,7 @@
   padding-right: 32px;
   padding-bottom: 32px;
 
-  background-image: linear-gradient($light-grey, $light-grey);
+  background-image: linear-gradient(var(--color-stroke, $light-grey), var(--color-stroke, $light-grey));
   background-position: left bottom;
   background-repeat: no-repeat;
   background-size: 100% 1px;
@@ -44,15 +44,15 @@
     width: 100%;
     padding: 16px 24px;
     -webkit-appearance: none;
-    border: 1px solid $light-grey;
+    border: 1px solid var(--color-stroke, $light-grey);
     border-radius: 5px;
-    background-color: var(--color-bg-secondary);
+    background-color: var(--color-bg-secondary, $color-bg);
     resize: none;
 
     &::placeholder {
       font-size: rem(15px);
       line-height: rem(28px);
-      color: var(--color-text-caption);
+      color: var(--color-text, $grey-default);
     }
   }
 }

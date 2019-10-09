@@ -6,24 +6,50 @@
   padding: 18px 23px;
   font-size: rem(13px);
   line-height: rem(17px);
-  color: var(--color-text-main);
+  color: var(--color-text, $dark-text);
   text-decoration: none;
   user-select: none;
-  border: 1px solid var(--color-stroke);
+  border: 1px solid var(--color-stroke, $light-grey);
   border-radius: $border-radius;
   outline: none;
   transition: color $style-change-duration;
 
   &:focus {
-    color: var(--color-interactive-default);
+    color: var(--color-interactive-default, $blue-default);
   }
 
   &:focus:not(.focus-visible) {
-    color: var(--color-text-main);
+    color: var(--color-text, $dark-text);
   }
 
   &:active:not(.focus-visible) {
-    color: var(--color-interactive-default);
+    color: var(--color-interactive-default, $blue-default);
+  }
+
+  &--small {
+    width: auto;
+    padding: 0;
+    border: none;
+  }
+
+  &--white {
+    color: $white;
+    transition: opacity $style-change-duration;
+
+    &:focus {
+      color: $white;
+      opacity: 0.6;
+    }
+
+    &:focus:not(.focus-visible) {
+      color: $white;
+      opacity: 1;
+    }
+
+    &:active:not(.focus-visible) {
+      color: $white;
+      opacity: 0.6;
+    }
   }
 }
 
@@ -49,21 +75,27 @@
 }
 
 .file-item__size {
+  font-size: 300;
   text-transform: uppercase;
-  color: var(--color-text-caption);
+  color: var(--color-text, $grey-default);
+}
+
+.file-item--white .file-item__size {
+  color: $light-blue-accent;
 }
 
 
 @media (min-width: $desktop-width) {
   .file-item {
     &:hover:not(.focus-visible) {
-      color: var(--color-interactive-default);
+      color: var(--color-interactive-default, $blue-default);
     }
-  }
-}
 
-@media (max-width: $mobile-max-width) {
-  .file-item {
-    width: 100%;
+    &--white {
+      &:hover:not(.focus-visible) {
+        color: $white;
+        opacity: 0.6;
+      }
+    }
   }
 }

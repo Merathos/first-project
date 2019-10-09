@@ -17,9 +17,7 @@
 
   <link rel="preload" href="fonts/Rubik-Light.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Rubik-Regular.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/Rubik-Regular-cyrillic.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Rubik-Medium.woff2" as="font" crossorigin="anonymous">
-  <link rel="preload" href="fonts/Rubik-Medium-latin.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Rubik-Bold.woff2" as="font" crossorigin="anonymous">
   <link href="css/style.min.css" rel="stylesheet">
 </head>
@@ -28,6 +26,7 @@
   <body class="page-body">
     <section class="special-popup js-hide">
   <h2 class="visually-hidden">Настройки для слабовидящих</h2>
+
   <div class="special-popup__wrap">
     <button class="special-popup__btn-close js-close-popup" type="button" aria-label="Закрыть">
       <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,83 +34,95 @@
       </svg>
       <span class="visually-hidden">Закрыть</span>
     </button>
+
     <div class="special-popup__title">Настройки</div>
+
     <div class="special-popup__group-list">
       <div class="special-popup__group">
         <h3 class="special-popup__name">Размер шрифта:</h3>
+
         <ul class="special-popup__list">
           <li class="special-popup__item">
-            <button class="special-popup__btn-size special-popup__btn-size--S active" data-property="font-size" data-value="default" type="button">
+            <button class="special-popup__btn-size special-popup__btn-size--default active" data-property="font-size" data-value="default" type="button">
               <span>A</span>
             </button>
           </li>
+
           <li class="special-popup__item">
-            <button class="special-popup__btn-size special-popup__btn-size--M" data-property="font-size" data-value="larger" type="button">
+            <button class="special-popup__btn-size special-popup__btn-size--larger" data-property="font-size" data-value="larger" type="button">
               <span>A</span>
             </button>
           </li>
+
           <li class="special-popup__item">
-            <button class="special-popup__btn-size special-popup__btn-size--L" data-property="font-size" data-value="largest" type="button">
+            <button class="special-popup__btn-size special-popup__btn-size--largest" data-property="font-size" data-value="largest" type="button">
               <span>A</span>
             </button>
           </li>
         </ul>
       </div>
+
       <div class="special-popup__group">
         <h3 class="special-popup__name">Цветовая схема:</h3>
-        <div class="special-popup__scroll-wrap">
-          <ul class="special-popup__list">
-            <li class="special-popup__item">
-              <button class="special-popup__btn-color special-popup__btn-color--default active" data-property="theme" data-value="default" type="button">
-                <span>Стандартный</span>
-              </button>
-            </li>
-            <li class="special-popup__item">
-              <button class="special-popup__btn-color special-popup__btn-color--inverse" data-property="theme" data-value="inverse" type="button">
-                <span>Инверсия</span>
-              </button>
-            </li>
-            <li class="special-popup__item">
-              <button class="special-popup__btn-color special-popup__btn-color--blue" data-property="theme" data-value="blue" type="button">
-                <span>Синий</span>
-              </button>
-            </li>
-            <li class="special-popup__item">
-              <button class="special-popup__btn-color special-popup__btn-color--comfort" data-property="theme" data-value="comfort" type="button">
-                <span>Комфортный</span>
-              </button>
-            </li>
-            <li class="special-popup__item">
-              <button class="special-popup__btn-color special-popup__btn-color--brown" data-property="theme" data-value="brown" type="button">
-                <span>Коричневый</span>
-              </button>
-            </li>
-          </ul>
-        </div>
+
+        <ul class="special-popup__list">
+          <li class="special-popup__item">
+            <button class="special-popup__btn-color special-popup__btn-color--default active" data-property="theme" data-value="default" type="button">
+              <span>Стандартный</span>
+            </button>
+          </li>
+
+          <li class="special-popup__item">
+            <button class="special-popup__btn-color special-popup__btn-color--inverse" data-property="theme" data-value="inverse" type="button">
+              <span>Инверсия</span>
+            </button>
+          </li>
+
+          <li class="special-popup__item">
+            <button class="special-popup__btn-color special-popup__btn-color--blue" data-property="theme" data-value="blue" type="button">
+              <span>Синий</span>
+            </button>
+          </li>
+
+          <li class="special-popup__item">
+            <button class="special-popup__btn-color special-popup__btn-color--comfort" data-property="theme" data-value="comfort" type="button">
+              <span>Комфортный</span>
+            </button>
+          </li>
+
+          <li class="special-popup__item">
+            <button class="special-popup__btn-color special-popup__btn-color--brown" data-property="theme" data-value="brown" type="button">
+              <span>Коричневый</span>
+            </button>
+          </li>
+        </ul>
       </div>
+
       <div class="special-popup__group">
         <h3 class="special-popup__name">Шрифт:</h3>
-        <div class="special-popup__scroll-wrap">
-          <ul class="special-popup__list special-popup__list--font">
-            <li class="special-popup__item">
-              <button class="special-popup__btn-font special-popup__btn-font--default active" data-property="font-family" data-value="default" type="button">
-                <span>Стандартный</span>
-              </button>
-            </li>
-            <li class="special-popup__item">
-              <button class="special-popup__btn-font special-popup__btn-font--arial" data-property="font-family" data-value="arial" type="button">
-                <span>Arial</span>
-              </button>
-            </li>
-            <li class="special-popup__item">
-              <button class="special-popup__btn-font special-popup__btn-font--times" data-property="font-family" data-value="times" type="button">
-                <span>Times New Roman</span>
-              </button>
-            </li>
-          </ul>
-        </div>
+
+        <ul class="special-popup__list special-popup__list--font">
+          <li class="special-popup__item">
+            <button class="special-popup__btn-font special-popup__btn-font--default active" data-property="font-family" data-value="default" type="button">
+              <span>Стандартный</span>
+            </button>
+          </li>
+
+          <li class="special-popup__item">
+            <button class="special-popup__btn-font special-popup__btn-font--arial" data-property="font-family" data-value="arial" type="button">
+              <span>Arial</span>
+            </button>
+          </li>
+
+          <li class="special-popup__item">
+            <button class="special-popup__btn-font special-popup__btn-font--times" data-property="font-family" data-value="times" type="button">
+              <span>Times New Roman</span>
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
+
     <button type="button" class="special-popup__reset button button--blue" disabled="">Сбросить всё</button>
   </div>
 </section>
@@ -252,18 +263,24 @@
               </div>
             </div>
 
-            <div class="projects__vote-end vote-end">
-              <div class="vote-end__text-group">
+            <div class="projects__vote-end status-info">
+              <div class="status-info__text-group">
                 <svg width="24" height="19">
                   <use xlink:href="img/sprite.svg#icon-tick"></use>
                 </svg>
 
-                <p class="vote-end__text">Голосование завершено, победители указаны в&nbsp;соответствующих категориях</p>
+                <p class="status-info__text">Голосование завершено, победители указаны в&nbsp;соответствующих категориях</p>
               </div>
 
-              <a class="vote-end__doc document document--doc" href="#" download="">
-                <span class="document__name">Протокол</span>
-                <span class="document__size">3,2 МБ</span>
+              <a class="status-info__file file-item file-item--small file-item--white" href="#" download="">
+                <svg width="24" height="24">
+                  <use xlink:href="img/sprite.svg#icon-doc-doc"></use>
+                </svg>
+
+                <p class="file-item__info">
+                  <span class="file-item__name">Протокол</span>
+                  <span class="file-item__size">3,2 мб</span>
+                </p>
               </a>
             </div>
 

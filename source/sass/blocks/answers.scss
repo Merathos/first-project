@@ -50,7 +50,7 @@
   display: flex;
   padding: 24px 0;
 
-  background-image: linear-gradient($light-grey, $light-grey);
+  background-image: linear-gradient(var(--color-stroke, $light-grey), var(--color-stroke, $light-grey));
   background-position: left top;
   background-repeat: no-repeat;
   background-size: 100% 1px;
@@ -123,7 +123,7 @@
 
   & span {
     display: none;
-    color: var(--color-text-main);
+    color: var(--color-text, $dark-text);
 
     transition: color $style-change-duration;
 
@@ -151,7 +151,7 @@
     left: 0;
     width: 100%;
     height: 48px;
-    background-image: linear-gradient(180deg, var(--color-bg-main) 0%, var(--color-bg-main-transparent) 100%);
+    background-image: linear-gradient(180deg, var(--color-bg-main, $white) 0%, var(--color-bg-main-transparent, rgba($white, 0)) 100%);
     transform: matrix(1, 0, 0, -1, 0, 0);
   }
 
@@ -163,7 +163,7 @@
 
   &--blue-gradient {
     &::before {
-      background: linear-gradient(180deg, $light-blue 0%, rgba(234, 244, 250, 0) 100%);
+      background-image: linear-gradient(180deg, var(--color-bg-secondary, $light-blue) 0%, var(--color-bg-secondary-transparent, rgba($light-blue, 0)) 100%);
     }
   }
 }
@@ -200,7 +200,7 @@
 
 .answers__text-wrapper {
   padding: 16px;
-  background-color: $pale-green;
+  background-color: var(--color-bg-secondary, $pale-green);
   border-radius: 5px;
 
   @media (max-width: $desktop-width - 1) {
@@ -220,7 +220,7 @@
     margin-bottom: 8px;
 
     @include main-text;
-    color: var(--color-text-caption);
+    color: var(--color-text, $grey-default);
 
     @media (max-width: $desktop-width - 1) {
       display: block;
@@ -228,7 +228,7 @@
   }
 
   &--accent {
-    background-color: $pale-red;
+    background-color: var(--color-bg-secondary, $pale-red);
   }
 }
 
@@ -238,11 +238,11 @@
   align-items: center;
   width: 100%;
   padding: 11px 32px;
-  color: $grey-default;
-  background-color: var(--color-bg-secondary);
+  color: var(--color-stroke, $grey-default);
+  background-color: var(--color-bg-secondary, $color-bg);
   border-radius: 0 0 5px 5px;
 
-  background-image: linear-gradient($light-grey, $light-grey);
+  background-image: linear-gradient(var(--color-stroke, $light-grey), var(--color-stroke, $light-grey));
   background-position: left top;
   background-repeat: no-repeat;
   background-size: 100% 1px;
@@ -270,7 +270,7 @@
   padding-left: 4px;
 
   @include font-h2;
-  color: var(--color-text-caption);
+  color: var(--color-text, $grey-default);
 
   border-radius: 5px;
 
@@ -285,7 +285,7 @@
     padding: 5px;
 
     @include font-h2;
-    color: var(--color-text-caption);
+    color: var(--color-text, $grey-default);
     text-align: right;
     border: none;
     background-color: transparent;
@@ -301,18 +301,18 @@
   }
 
   &:hover {
-    background-color: var(--color-bg-main);
+    background-color: var(--color-bg-main, $white);
 
     & input[type="text"] {
-      background-color: var(--color-bg-main);
+      background-color: var(--color-bg-main, $white);
     }
   }
 
   &--hover {
-    background-color: var(--color-bg-main);
+    background-color: var(--color-bg-main, $white);
 
     & input[type="text"] {
-      background-color: var(--color-bg-main);
+      background-color: var(--color-bg-main, $white);
     }
   }
 }
@@ -332,7 +332,7 @@
 
     @include caption-text;
     text-align: center;
-    color: var(--color-text-main);
+    color: var(--color-text, $dark-text);
   }
 
   [data-tooltip]::before {
@@ -346,7 +346,7 @@
     min-width: 130px;
     padding: 4px 8px;
 
-    color: var(--color-text-main);
+    color: var(--color-text, $dark-text);
 
     border-radius: 2px;
     background-color: $light-blue;

@@ -24,18 +24,6 @@
 
 
 @include tablet {
-  .page-content__back-btn {
-    margin-bottom: 31px;
-
-    &:hover:not(.focus-visible) {
-      color: var(--color-text-secondary);
-    }
-
-    &:active:not(.focus-visible) {
-      color: var(--color-interactive-accent);
-    }
-  }
-
   .page-content .list-btn {
     margin-top: 48px;
   }
@@ -50,16 +38,6 @@
 @include mobile {
   .page-content {
     padding-top: 24px;
-  }
-
-  .page-content__back-btn {
-    margin-bottom: 24px;
-    font-size: rem(15px);
-    line-height: rem(20px);
-
-    svg {
-      padding-bottom: 0;
-    }
   }
 
   .page-content__title {

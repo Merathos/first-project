@@ -3,7 +3,7 @@
   padding-bottom: 40px;
   margin-bottom: 0;
 
-  background-image: linear-gradient($light-grey, $light-grey);
+  background-image: linear-gradient(var(--color-stroke, $light-grey), var(--color-stroke, $light-grey));
   background-position: left bottom;
   background-repeat: no-repeat;
   background-size: 100% 1px;
@@ -18,7 +18,7 @@
   width: 100%;
   height: 389px;
   margin-bottom: 16px;
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-secondary, $color-bg);
   border-radius: 5px;
 
   @media (max-width: $mobile-max-width) {
@@ -42,7 +42,7 @@
   padding: 32px;
   padding-bottom: 16px;
 
-  background-color: $light-blue;
+  background-color: var(--color-bg-secondary, $light-blue);
   border-radius: 5px;
 
   @media (max-width: 600px) {
@@ -63,7 +63,7 @@
   margin-bottom: 16px;
 
   @include font-h4;
-  color: $dark-text;
+  color: var(--color-text, $dark-text);
 
   @media (max-width: 600px) {
     order: 1;
@@ -90,7 +90,7 @@
   font-size: rem(15px);
   line-height: rem(27px);
   font-weight: 500;
-  color: $grey;
+  color: var(--color-text, $grey);
   text-decoration: none;
 
   transition: color $style-change-duration;
@@ -110,7 +110,7 @@
   }
 
   &:hover {
-    color: $dark-text;
+    color: var(--color-interactive-default, $dark-text);
   }
 }
 
@@ -119,7 +119,7 @@
   margin-bottom: 24px;
 
   @include main-text;
-  color: $grey;
+  color: var(--color-text, $grey);
 
   @media (max-width: 600px) {
     order: 2;
@@ -133,5 +133,5 @@
 
   font-size: rem(15px);
   line-height: rem(27px);
-  color: $dark-text;
+  color: var(--color-text, $dark-text);
 }

@@ -5,7 +5,7 @@
   line-height: rem(20px);
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--color-interactive-default);
+  color: var(--color-interactive-default, $blue-default);
 
   transition: all $style-change-duration;
 
@@ -15,7 +15,7 @@
 
   &:hover,
   &:focus {
-    color: var(--color-interactive-accent);
+    color: var(--color-interactive-accent, $blue-accent);
   }
 
   &--small {
@@ -23,6 +23,6 @@
   }
 
   &--grey {
-    color: var(--color-text-caption);
+    color: var(--color-text, $grey-default);
   }
 }

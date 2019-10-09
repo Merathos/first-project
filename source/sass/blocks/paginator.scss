@@ -24,7 +24,7 @@
   text-align: center;
   text-decoration: none;
   color: inherit;
-  border: 1px solid var(--color-stroke);
+  border: 1px solid var(--color-stroke, $light-grey);
   border-radius: 5px;
   transition: color $style-change-duration, border $style-change-duration;
 
@@ -35,14 +35,14 @@
   &[href]:hover,
   &[href]:focus,
   &[href]:active {
-    color: var(--color-interactive-accent);
-    border: 1px solid var(--color-interactive-light-accent);
+    color: var(--color-interactive-default, $blue-accent);
+    border: 1px solid var(--color-interactive-default, $light-blue-accent);
   }
 
   &--current {
     color: $white;
-    background-color: var(--color-interactive-default);
-    border-color: var(--color-interactive-default);
+    background-color: var(--color-interactive-default, $blue-default);
+    border-color: var(--color-interactive-default, $blue-default);
   }
 
   &--prev {
@@ -62,7 +62,7 @@
   }
 
   &--disabled {
-    color: var(--color-text-caption);
+    color: $grey-default;
   }
 
   &--hidden {

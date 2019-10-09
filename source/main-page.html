@@ -97,7 +97,13 @@
             <p class="social__text-inner">Вы можете подписаться на самые важные<br>и актуальные обновления проектов и событий</p>
           </div>
           <a class="social__link social__link--subscribe link-arrow" href="#">
-            Подписаться
+            <span class="social__link-text">Подписаться</span>
+            <svg class="social__link--subscribe-icon" width="16" height="13" viewBox="0 0 16 13">
+              <use xlink:href="img/sprite.svg#icon-tick"></use>
+            </svg>
+            <svg class="social__link--unsubscribe-icon" width="16" height="16" viewBox="0 0 16 16">
+              <use xlink:href="img/sprite.svg#icon-cross"></use>
+            </svg>
           </a>
         </div>
         <div class="social__item social__item--icq">
@@ -222,18 +228,32 @@
             </svg>
           </a>
         </div>
-        <div class="project__info">
-          <p class="project__info-text">
-            Голосование завершено, идет подведение итогов
-          </p>
+        <div class="project__info status-info status-info--accent">
+          <div class="status-info__text-group">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#icon-clock"></use>
+            </svg>
+
+            <p class="status-info__text">Голосование завершено, идет подведение итогов</p>
+          </div>
         </div>
-        <div class="project__info project__info--finish">
-          <p class="project__info-text">
-            Голосование завершено, победители указаны в соответствующих категориях
-          </p>
-          <a class="project__info-doc document document--doc" href="#" download>
-            <span class="document__name">Протокол</span>
-            <span class="document__size">3,2 МБ</span>
+        <div class="project__info status-info">
+          <div class="status-info__text-group">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#icon-tick"></use>
+            </svg>
+
+            <p class="status-info__text">Голосование завершено, победители указаны в&nbsp;соответствующих категориях</p>
+          </div>
+          <a class="status-info__file file-item file-item--small file-item--white" href="#" download>
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#icon-doc-doc"></use>
+            </svg>
+
+            <p class="file-item__info">
+              <span class="file-item__name">Протокол</span>
+              <span class="file-item__size">3,2 мб</span>
+            </p>
           </a>
         </div>
         <ul class="project__list js_short_list">

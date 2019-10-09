@@ -1,8 +1,8 @@
 .page-footer {
   margin-top: auto;
   padding-top: 40px;
-  background-color: var(--color-bg-secondary);
-  background-image: linear-gradient(var(--color-stroke), var(--color-stroke));
+  background-color: var(--color-bg-secondary, $color-bg);
+  background-image: linear-gradient(var(--color-stroke, $light-grey), var(--color-stroke, $light-grey));
   background-repeat: no-repeat;
   background-position: top left;
   background-size: 100% 2px;
@@ -57,13 +57,13 @@
 
 .page-footer__bottom {
   padding: 10px 0;
-  background-image: linear-gradient(var(--color-stroke), var(--color-stroke));
+  background-image: linear-gradient(var(--color-stroke, $light-grey), var(--color-stroke, $light-grey));
   background-repeat: no-repeat;
   background-position: top left;
   background-size: 100% 1px;
 
   & span {
-    color: var(--color-text-caption);
+    color: var(--color-text, $grey-default);
     font-size: rem(15px);
     line-height: rem(27px);
   }

@@ -9,7 +9,7 @@
 
   & .noUi-horizontal {
     height: 6px;
-    background: var(--color-stroke);
+    background: var(--color-stroke, $light-grey);
     cursor: pointer;
   }
 
@@ -18,7 +18,7 @@
   }
 
   & .noUi-connect {
-    background: var(--color-interactive-default);
+    background: var(--color-interactive-default, $blue-default);
   }
 
   & .noUi-horizontal .noUi-handle {
@@ -26,8 +26,8 @@
     width: 24px;
     height: 24px;
     border-radius: 100%;
-    background-color: var(--color-bg-main);
-    border: 8px solid var(--color-interactive-default);
+    background-color: var(--color-bg-main, $white);
+    border: 8px solid var(--color-interactive-default, $blue-default);
     box-shadow: none;
 
     cursor: pointer;
@@ -39,7 +39,7 @@
     }
 
     &:hover {
-      border-color: var(--color-interactive-accent);
+      border-color: var(--color-interactive-accent, $blue-accent);
     }
 
     &:focus {
@@ -63,12 +63,12 @@
 
   & .noUi-marker-horizontal.noUi-marker-sub {
     width: 1px;
-    background-color: var(--color-text-caption);
+    background-color: var(--color-text, $grey-default);
     height: 6px;
     z-index: 1;
 
     &.form-range__accent {
-      background-color: var(--color-bg-main);
+      background-color: var(--color-bg-main, $white);
     }
   }
 
@@ -78,11 +78,11 @@
 
   & .noUi-tooltip {
     @include font-h5;
-    color: var(--color-text-main);
+    color: var(--color-text, $dark-text);
     padding-bottom: 1px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: var(--color-bg-main);
+    background-color: var(--color-bg-main, $white);
     border: none;
   }
 
@@ -101,7 +101,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-bottom: 10px;
 
   @include font-h5;
-  color: var(--color-text-caption);
+  color: var(--color-text, $grey-default);
 
   & span:nth-child(2) {
     margin-left: 10px;
@@ -114,5 +114,5 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-top: 12px;
 
   @include caption-text;
-  color: var(--color-text-caption);
+  color: var(--color-text, $grey-default);
 }
