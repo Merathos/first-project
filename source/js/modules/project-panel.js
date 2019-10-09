@@ -11,5 +11,7 @@
 
   panel.classList.add('project-page__panel--js');
 
-  new Sticky('.project-page__panel');
+  (function () {
+    return new window.Sticky('.project-page__panel');
+  })();
 })();

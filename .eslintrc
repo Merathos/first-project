@@ -5,16 +5,3 @@ env:
 
 extends:
   "htmlacademy/es5"
-
-globals:
-  "Sticky": true
-  "bodyScrollLock": true
-  "Ellipsis": true
-  "wNumb": true
-  "SlimSelect": true
-  "noUiSlider": true
-  "Swiper": true
-
-rules: {
-    "no-new": 0
-  }
