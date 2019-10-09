@@ -137,24 +137,12 @@
   bottom: 6px;
   opacity: 0;
   transition: opacity $style-change-duration;
-
-  &--active {
-    opacity: 1;
-  }
-
-  &:focus {
-    opacity: 1;
-  }
-
-  &:hover {
-    opacity: 1;
-  }
 }
 
-.project-item__link:focus + .button-star {
-  opacity: 1;
-}
-
+.project-item .button-star--active,
+.project-item .button-star:focus,
+.project-item .button-star:hover,
+.project-item__link:focus + .button-star,
 .project-item__link:hover + .button-star {
   opacity: 1;
 }

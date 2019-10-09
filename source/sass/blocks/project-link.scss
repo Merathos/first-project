@@ -15,7 +15,7 @@
 
   @include font-h4;
   text-decoration: none;
-  color: $blue-default;
+  color: var(--color-interactive-default);
 
   transition: color $style-change-duration;
 
@@ -32,6 +32,6 @@
 
   &:hover,
   &:focus {
-    color: $blue-accent;
+    color: var(--color-interactive-accent);
   }
 }
