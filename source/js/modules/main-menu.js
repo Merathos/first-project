@@ -21,6 +21,7 @@
   var menuBtn = header.querySelector('.menu-btn');
   var menuBtnText = menuBtn.querySelector('.menu-btn__text');
 
+  var specialBtn = document.querySelectorAll('.js-open-popup');
 
   var adjustMenuHeight = function () {
     menu.style.height = header.classList.contains('page-header--open-menu') && document.documentElement.clientWidth < window.const.resolution.DESKTOP ? window.innerHeight - topBar.offsetHeight + 'px' : '';
@@ -68,5 +69,8 @@
 
 
   menuBtn.addEventListener('click', onMenuBtnClick);
+  specialBtn.forEach(function (btn) {
+    btn.addEventListener('click', onMenuBtnClick);
+  });
   window.addEventListener('resize', onWindowResize);
 })();
