@@ -2,8 +2,6 @@
   box-sizing: border-box;
   padding: 96px 40px 0;
 
-  text-align: center;
-
   @media (max-width: $desktop-width - 81) {
     padding: 88px 24px 0;
   }
@@ -43,68 +41,9 @@
 
 .project__info {
   margin: 40px 0;
-  padding: 26px 68px;
-
-  font-weight: 500;
-  font-size: rem(16px);
-  line-height: 1.35;
-  text-align: left;
-  color: $white;
-
-  background-color: $orange;
-  border-radius: $border-radius;
 
   @media (max-width: $tablet-width - 1) {
     margin: 26px 0;
-    padding: 24px 24px 24px 60px;
-  }
-}
-
-.project__info-text {
-  position: relative;
-
-  margin: 0;
-  padding: 0;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: -3px;
-    left: -36px;
-
-    width: 24px;
-    height: 24px;
-
-    background-image: url("../img/icon-time-white.svg");
-    background-repeat: no-repeat;
-
-    @media (max-width: $tablet-width - 1) {
-      top: 1px;
-    }
-  }
-}
-
-.project__info--finish {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  background-color: $blue-default;
-
-  .project__info-text {
-    &::before {
-      background-image: url("../img/icon-tick-white.svg");
-      background-size: 24px 24px;
-    }
-  }
-
-  @media (max-width: $tablet-width - 1) {
-    flex-direction: column;
-    align-items: flex-start;
-
-    .project__info-doc {
-      margin-top: 10px;
-    }
   }
 }
 
