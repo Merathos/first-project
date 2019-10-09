@@ -24,7 +24,7 @@
 
   & span {
     @include font-h5;
-    color: var(--color-text-caption);
+    color: var(--color-text, $grey-default);
     margin-right: 29px;
     margin-bottom: 12px;
 
@@ -34,7 +34,7 @@
   }
 
   & b {
-    color: var(--color-text-main);
+    color: var(--color-text, $dark-text);
     font-weight: 400;
   }
 }
@@ -51,7 +51,7 @@
   max-width: 740px;
   padding-bottom: 40px;
 
-  background-image: linear-gradient(var(--color-stroke), var(--color-stroke));
+  background-image: linear-gradient(var(--color-stroke, $light-grey), var(--color-stroke, $light-grey));
   background-position: left bottom;
   background-repeat: no-repeat;
   background-size: 100% 1px;
@@ -92,7 +92,7 @@
 }
 
 .news-item__bottom {
-  border: 1px solid var(--color-stroke);
+  border: 1px solid var(--color-stroke, $light-grey);
   border-radius: 5px;
 
   @media (max-width: $mobile-max-width) {

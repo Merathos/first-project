@@ -1,6 +1,6 @@
 .main-menu {
   padding: 25px 0;
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-secondary, $color-bg);
 }
 
 

@@ -21,7 +21,7 @@
   padding: 40px 48px;
   overflow: hidden;
 
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-secondary, $color-bg);
   border-radius: $border-radius;
 
   @media (max-width: $desktop-width - 81) {
@@ -136,7 +136,7 @@
 
   font-size: rem(15px);
   line-height: 1.35;
-  color: var(--color-text-secondary);
+  color: var(--color-text, $grey);
 
   @media (max-width: $tablet-width - 1) {
     padding-top: 24px;
@@ -161,37 +161,34 @@
 
   cursor: pointer;
 
-  &::after {
-    content: "";
-
-    display: inline-block;
+  .social__link--subscribe-icon,
+  .social__link--unsubscribe-icon {
+    display: none;
     width: 16px;
     height: 16px;
-    margin-left: 12px;
-
     vertical-align: text-top;
-
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    fill: none;
+    stroke: currentColor;
   }
 
-  &--subscribe::after {
-    background-image: url("data:image/svg+xml,%3Csvg width='16' height='13' viewBox='0 0 16 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.875 6.53311L5.52806 11.1862L15.125 1.58923' stroke='%232C8ECC' stroke-width='2'/%3E%3C/svg%3E%0A");
+  &--subscribe {
+    .social__link--subscribe-icon {
+      display: inline-block;
+    }
   }
 
   &--unsubscribe {
-    color: $red;
+    color: var(--color-interactive-default, $red);
 
     &:hover,
     &:focus {
-      color: $red;
+      color: var(--color-interactive-accent, $red);
 
       opacity: 0.8;
     }
 
-    &::after {
-      background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5 1.5L14.5 14.5M14.5 1.5L1.5 14.5' stroke='%23E55050' stroke-width='2'/%3E%3C/svg%3E%0A");
+    .social__link--unsubscribe-icon {
+      display: inline-block;
     }
   }
 }

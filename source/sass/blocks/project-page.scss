@@ -20,7 +20,7 @@
   margin: 0;
   font-size: rem(13px);
   line-height: rem(17px);
-  color: var(--color-text-secondary);
+  color: var(--color-text, $grey);
 }
 
 .project-page__budget-value {
@@ -29,7 +29,7 @@
   font-weight: 300;
   font-size: rem(40px);
   line-height: rem(47px);
-  color: var(--color-text-main);
+  color: var(--color-text, $dark-text);
 }
 
 .project-page__files {
@@ -56,7 +56,7 @@
   margin-bottom: 48px;
   font-size: rem(18px);
   line-height: rem(23px);
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-secondary, $color-bg);
   border-radius: $border-radius;
 
   svg {
@@ -70,7 +70,7 @@
 .project-page__survey {
   padding: 23px 24px;
   margin-bottom: 40px;
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-secondary, $color-bg);
   border-radius: $border-radius;
 }
 
@@ -198,7 +198,7 @@
       bottom: 0;
       left: 0;
       height: 54px;
-      background-image: linear-gradient(to top, var(--color-bg-main) 0%, var(--color-bg-main-transparent) 100%);
+      background-image: linear-gradient(to top, var(--color-bg-main, $white) 0%, var(--color-bg-main-transparent, rgba($color-bg, 0)) 100%);
     }
   }
 

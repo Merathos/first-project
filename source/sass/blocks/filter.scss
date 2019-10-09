@@ -25,8 +25,8 @@
 
 .filter__main {
   padding: 24px 32px;
-  background-color: var(--color-bg-secondary);
-  border: 1px solid var(--color-stroke);
+  background-color: var(--color-bg-secondary, $color-bg);
+  border: 1px solid var(--color-stroke, $light-grey);
   border-radius: $border-radius;
 }
 

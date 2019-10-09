@@ -7,9 +7,9 @@
   height: 48px;
   padding: 0;
   user-select: none;
-  color: var(--color-text-caption);
-  background-color: var(--color-bg-main);
-  border: 1px solid var(--color-stroke);
+  color: var(--color-text, $grey-default);
+  background-color: var(--color-bg-main, $white);
+  border: 1px solid var(--color-stroke, $light-grey);
   border-radius: $border-radius;
   box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
   outline: none;
@@ -17,18 +17,18 @@
   transition: border-color $style-change-duration, color $style-change-duration;
 
   &:focus {
-    color: var(--color-text-secondary);
-    border-color: var(--color-interactive-light-accent);
+    color: var(--color-interactive-default, $grey);
+    border-color: var(--color-interactive-default, $light-blue-accent);
   }
 
   &:focus:not(.focus-visible) {
-    color: var(--color-text-caption);
-    border-color: var(--color-stroke);
+    color: var(--color-text, $grey-default);
+    border-color: var(--color-stroke, $light-grey);
   }
 
   &:hover:not(.focus-visible) {
-    color: var(--color-text-secondary);
-    border-color: var(--color-interactive-light-accent);
+    color: var(--color-interactive-default, $grey);
+    border-color: var(--color-interactive-default, $light-blue-accent);
   }
 
   svg {
@@ -52,13 +52,13 @@
     bottom: 16px;
 
     &:hover:not(.focus-visible) {
-      color: var(--color-text-caption);
-      border-color: var(--color-stroke);
+      color: var(--color-text, $grey-default);
+      border-color: var(--color-stroke, $light-grey);
     }
 
     &:active:not(.focus-visible) {
-      color: var(--color-text-secondary);
-      border-color: var(--color-interactive-light-accent);
+      color: var(--color-interactive-default, $grey);
+      border-color: var(--color-interactive-default, $light-blue-accent);
     }
   }
 }

@@ -19,9 +19,9 @@
     width: 20px;
     height: 20px;
     margin-right: 8px;
-    background-color: var(--color-bg-main);
+    background-color: var(--color-bg-main, $white);
     border-radius: 5px;
-    border: 1px solid rgba(161, 167, 174, 0.5);
+    border: 1px solid var(--color-stroke, rgba(161, 167, 174, 0.5));
     transition: all $style-change-duration;
   }
 
@@ -43,7 +43,7 @@
 .form-checkbox input[type="checkbox"]:not(:checked) ~ label {
   &:hover {
     &::before {
-      border: 1px solid var(--color-interactive-accent);
+      border: 1px solid var(--color-interactive-default, $blue-accent);
     }
   }
 }
@@ -51,7 +51,7 @@
 
 .form-checkbox input[type="checkbox"]:checked ~ label {
   &::before {
-    background-color: var(--color-interactive-default);
+    background-color: var(--color-interactive-default, $blue-default);
   }
 
   &::after {
@@ -63,7 +63,7 @@
   cursor: text;
 
   &::before {
-    background-color: #f9f9fa;
+    background-color: $color-bg;
   }
 
   &::after {

@@ -22,26 +22,6 @@ html {
   }
 
 
-  --color-bg-main: #{$white};
-  --color-bg-secondary: #{$color-bg};
-
-  --color-bg-main-transparent: #{rgba($white, 0)};
-  --color-bg-secondary-transparent: #{rgba($color-bg, 0)};
-
-  --color-stroke: #{$light-grey};
-  --color-tag: #{$light-grey};
-
-  --color-text-main: #{$dark-text};
-  --color-text-secondary: #{$grey};
-  --color-text-caption: #{$grey-default};
-
-  --color-interactive-default: #{$blue-default};
-  --color-interactive-accent: #{$blue-accent};
-
-  --color-interactive-light-default: #{$light-blue};
-  --color-interactive-light-accent: #{$light-blue-accent};
-
-
   &.mod-theme-inverse {
     --color-bg-main: #{$dark};
     --color-bg-secondary: #{$dark-main};
@@ -51,16 +31,13 @@ html {
 
     --color-stroke: #{$light-grey};
     --color-tag: #{$grey};
+    --color-icon: #{$white};
 
-    --color-text-main: #{$white};
-    --color-text-secondary: #{$white};
-    --color-text-caption: #{$white};
+    --color-text: #{$white};
+    --color-btn-text: #{$white};
 
     --color-interactive-default: #{$blue-default};
     --color-interactive-accent: #{$blue-accent};
-
-    --color-interactive-light-default: #{$grey};
-    --color-interactive-light-accent: #{$light-blue-accent};
   }
 
 
@@ -73,16 +50,13 @@ html {
 
     --color-stroke: #{$blue-default};
     --color-tag: #{$light-grey};
+    --color-icon: #{$dark-text};
 
-    --color-text-main: #{$dark-text};
-    --color-text-secondary: #{$dark-text};
-    --color-text-caption: #{$dark-text};
+    --color-text: #{$dark-text};
+    --color-btn-text: #{$white};
 
     --color-interactive-default: #{$blue-default};
     --color-interactive-accent: #{$blue-accent};
-
-    --color-interactive-light-default: #{$light-blue};
-    --color-interactive-light-accent: #{$blue-accent};
   }
 
 
@@ -95,16 +69,13 @@ html {
 
     --color-stroke: #{$comfort};
     --color-tag: #{$light-grey};
+    --color-icon: #{$comfort};
 
-    --color-text-main: #{$comfort};
-    --color-text-secondary: #{$comfort};
-    --color-text-caption: #{$comfort};
+    --color-text: #{$comfort};
+    --color-btn-text: #{$white};
 
     --color-interactive-default: #{$blue-default};
     --color-interactive-accent: #{$blue-accent};
-
-    --color-interactive-light-default: #{$light-blue};
-    --color-interactive-light-accent: #{$light-blue-accent};
   }
 
 
@@ -117,16 +88,13 @@ html {
 
     --color-stroke: #{$light-green};
     --color-tag: #{$grey};
+    --color-icon: #{$light-green};
 
-    --color-text-main: #{$light-green};
-    --color-text-secondary: #{$light-green};
-    --color-text-caption: #{$light-green};
+    --color-text: #{$light-green};
+    --color-btn-text: #{$white};
 
     --color-interactive-default: #{$red};
-    --color-interactive-accent: #{rgba($red, 0.8)};
-
-    --color-interactive-light-default: #{rgba($red, 0.4)};
-    --color-interactive-light-accent: #{rgba($red, 0.6)};
+    --color-interactive-accent: #{$orange};
   }
 }
 
@@ -149,8 +117,8 @@ body {
   font-style: normal;
   font-size: rem(15px);
   line-height: rem(20px);
-  color: var(--color-text-main);
-  background-color: var(--color-bg-main);
+  color: var(--color-text, $dark-text);
+  background-color: var(--color-bg-main, $white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

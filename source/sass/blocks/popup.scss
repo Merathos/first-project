@@ -41,7 +41,7 @@
 
 .popup__content {
   position: relative;
-  background-color: var(--color-bg-main);
+  background-color: var(--color-bg-main, $white);
 }
 
 .popup__close-btn {
@@ -61,28 +61,28 @@
     display: block;
     width: 16px;
     height: 16px;
-    stroke: $grey-default;
+    stroke: var(--color-text, $grey-default);
     pointer-events: none;
     transition: stroke $style-change-duration;
   }
 
   &:focus svg {
-    stroke: $blue-default;
+    stroke: var(--color-interactive-default, $blue-default);
   }
 
   &:focus:not(.focus-visible) svg {
-    stroke: $grey-default;
+    stroke: var(--color-text, $grey-default);
   }
 
   &:hover:not(.focus-visible) svg {
-    stroke: $blue-default;
+    stroke: var(--color-interactive-default, $blue-default);
   }
 }
 
 
 @include tablet {
   .popup {
-    background-color: var(--color-bg-main);
+    background-color: var(--color-bg-main, $white);
   }
 
   .popup__overlay {
@@ -108,11 +108,11 @@
     }
 
     &:hover:not(.focus-visible) svg {
-      stroke: $grey-default;
+      stroke: var(--color-text, $grey-default);
     }
 
     &:active:not(.focus-visible) svg {
-      stroke: $blue-default;
+      stroke: var(--color-interactive-default, $blue-default);
     }
   }
 }

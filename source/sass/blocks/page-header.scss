@@ -2,7 +2,7 @@
   width: 100%;
   font-size: rem(16px);
   line-height: rem(19px);
-  background-color: var(--color-bg-main);
+  background-color: var(--color-bg-main, $white);
 
   &--js {
     position: fixed;
@@ -47,7 +47,7 @@
     left: -25px;
     width: 1px;
     height: 48px;
-    background-color: #dedede;
+    background-color: var(--color-stroke, #dedede);
     transform: translateY(-50%);
     pointer-events: none;
   }

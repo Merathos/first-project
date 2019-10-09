@@ -50,7 +50,7 @@
   margin: 0;
   font-size: rem(15px);
   line-height: rem(20px);
-  color: var(--color-text-secondary);
+  color: var(--color-text, $grey);
   overflow: auto;
 }
 
@@ -58,7 +58,7 @@
   grid-area: bottom-bar;
   display: flex;
   align-items: center;
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-secondary, $color-bg);
 }
 
 .gallery-popup .popup__close-btn {
@@ -72,7 +72,7 @@
   width: 88px;
   height: 68px;
   padding: 0;
-  color: $grey-default;
+  color: var(--color-text, $grey-default);
   user-select: none;
   background-color: transparent;
   border: none;
@@ -81,15 +81,15 @@
   transition: color $style-change-duration;
 
   &:focus {
-    color: $blue-default;
+    color: var(--color-interactive-default, $blue-default);
   }
 
   &:focus:not(.focus-visible) {
-    color: $grey-default;
+    color: var(--color-text, $grey-default);
   }
 
   &:hover:not(.focus-visible) {
-    color: $blue-default;
+    color: var(--color-interactive-default, $blue-default);
   }
 
   svg {
@@ -110,7 +110,7 @@
   margin: 0;
   font-size: rem(30px);
   line-height: rem(36px);
-  color: $grey-default;
+  color: var(--color-text, $grey-default);
 }
 
 
@@ -125,7 +125,7 @@
     z-index: 2;
     right: 0;
     left: 0;
-    background-color: $white;
+    background-color: var(--color-bg-main, $white);
 
     &--top {
       top: 0;
@@ -173,11 +173,11 @@
     height: 24px;
 
     &:hover:not(.focus-visible) {
-      color: $grey-default;
+      color: var(--color-text, $grey-default);
     }
 
     &:active:not(.focus-visible) {
-      color: $blue-default;
+      color: var(--color-interactive-default, $blue-default);
     }
   }
 

@@ -32,7 +32,7 @@
 
   font-size: rem(16px);
   line-height: 1.35;
-  color: var(--color-text-caption);
+  color: var(--color-text, $grey-default);
 
   @include mobile {
     flex-direction: column;
@@ -48,7 +48,7 @@
 }
 
 .poll-page__date-time {
-  color: var(--color-text-main);
+  color: var(--color-text, $dark-text);
 }
 
 .poll-page__description {
@@ -160,7 +160,7 @@
   margin: 38px 0 0;
   padding: 24px 24px 32px;
 
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-secondary, $color-bg);
   border-radius: $border-radius;
 
   @include mobile {
@@ -179,7 +179,7 @@
   }
 
   .noUi-tooltip {
-    background-color: $color-bg;
+    background-color: var(--color-bg-secondary, $color-bg);
   }
 
   .noUi-horizontal .noUi-handle-lower {
@@ -335,7 +335,7 @@ span.poll-page__hide {
   & .poll-page__date-title {
     & b {
       font-weight: 400;
-      color: var(--color-text-main);
+      color: var(--color-text, $dark-text);
     }
   }
 

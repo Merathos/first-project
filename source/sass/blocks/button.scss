@@ -35,12 +35,12 @@
   }
 
   &--blue {
-    color: $white;
-    background-color: var(--color-interactive-default);
+    color: var(--color-btn-text, $white);
+    background-color: var(--color-interactive-default, $blue-default);
 
     &:hover,
     &:focus {
-      background-color: var(--color-interactive-accent);
+      background-color: var(--color-interactive-accent, $blue-accent);
     }
 
     &:disabled {
@@ -49,24 +49,29 @@
   }
 
   &--light-blue {
-    color: $blue-default;
-    background-color: $light-blue;
+    color: var(--color-btn-text, $blue-default);
+    background-color: var(--color-interactive-default, $light-blue);
 
     &:hover,
     &:focus {
-      color: $blue-accent;
+      color: var(--color-btn-text, $blue-accent);
+      background-color: var(--color-interactive-accent, $light-blue);
+    }
+
+    &:disabled {
+      background-color: $light-grey;
     }
   }
 
   &--white {
-    color: $blue-default;
-    background-color: $white;
-    border: 1px solid $light-grey;
+    color: var(--color-text, $blue-default);
+    background-color: var(--color-bg-main, $white);
+    border: 1px solid var(--color-stroke, $light-grey);
 
     &:hover,
     &:focus {
-      color: $blue-accent;
-      border-color: $light-blue-accent;
+      color: var(--color-interactive-accent, $blue-accent);
+      border-color: var(--color-interactive-accent, $light-blue-accent);
     }
 
     &:disabled {
@@ -75,14 +80,14 @@
   }
 
   &--grey {
-    color: $grey;
-    background-color: $white;
-    border: 1px solid $light-grey;
+    color: var(--color-text, $grey);
+    background-color: var(--color-bg-main, $white);
+    border: 1px solid var(--color-stroke, $light-grey);
 
     &:hover,
     &:focus {
-      color: $blue-accent;
-      border-color: $light-blue-accent;
+      color: var(--color-interactive-accent, $blue-accent);
+      border-color: var(--color-interactive-accent, $light-blue-accent);
     }
 
     &:disabled {

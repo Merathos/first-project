@@ -1,11 +1,11 @@
 .project-vote {
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-secondary, $color-bg);
   border-radius: $border-radius;
 }
 
 .project-vote__container {
   padding: 24px;
-  border-bottom: 1px solid var(--color-stroke);
+  border-bottom: 1px solid var(--color-stroke, $light-grey);
 
   &--meta {
     display: flex;
@@ -27,7 +27,7 @@
   margin: 0;
   font-size: rem(13px);
   line-height: rem(17px);
-  color: var(--color-text-caption);
+  color: var(--color-text, $grey-default);
 
   &:first-of-type {
     margin-right: 33px;
@@ -38,7 +38,7 @@
     margin-top: 4px;
     font-size: rem(16px);
     line-height: rem(22px);
-    color: var(--color-text-secondary);
+    color: var(--color-text, $grey);
   }
 }
 
@@ -49,7 +49,7 @@
   margin-top: 16px;
   font-size: rem(16px);
   line-height: rem(22px);
-  color: var(--color-text-secondary);
+  color: var(--color-text, $grey);
 
   svg {
     display: block;
@@ -88,27 +88,27 @@
   font-size: rem(16px);
   line-height: rem(22px);
   user-select: none;
-  color: var(--color-text-main);
-  background-color: var(--color-bg-main);
-  border: 1px solid var(--color-stroke);
+  color: var(--color-text, $dark-text);
+  background-color: var(--color-bg-main, $white);
+  border: 1px solid var(--color-stroke, $light-grey);
   border-radius: $border-radius;
   cursor: pointer;
   outline: none;
   transition: color $style-change-duration, background-color $style-change-duration;
 
   &:focus {
-    color: var(--color-bg-main);
-    background-color: var(--color-interactive-default);
+    color: var(--color-text, $white);
+    background-color: var(--color-interactive-default, $blue-default);
   }
 
   &:focus:not(.focus-visible) {
-    color: var(--color-text-main);
-    background-color: var(--color-bg-main);
+    color: var(--color-text, $dark-text);
+    background-color: var(--color-bg-main, $white);
   }
 
   &:hover:not(.focus-visible) {
-    color: var(--color-bg-main);
-    background-color: var(--color-interactive-default);
+    color: var(--color-text, $white);
+    background-color: var(--color-interactive-default, $blue-default);
   }
 
   .project-vote__confirmation-text {
@@ -134,11 +134,11 @@
   }
 
   &--approve svg {
-    stroke: $green;
+    stroke: var(--color-icon, $green);
   }
 
   &--reject svg {
-    stroke: $red;
+    stroke: var(--color-icon, $red);
   }
 }
 
@@ -150,8 +150,8 @@
 
     &:focus,
     &:hover:not(.focus-visible) {
-      color: var(--color-text-main);
-      background-color: var(--color-bg-main);
+      color: var(--color-text, $dark-text);
+      background-color: var(--color-bg-main, $white);
     }
   }
 }
@@ -169,7 +169,7 @@
   margin-top: 16px;
   font-size: rem(13px);
   line-height: rem(17px);
-  color: var(--color-text-caption);
+  color: var(--color-text, $grey-default);
 }
 
 .project-vote__revoke-form {
@@ -229,21 +229,21 @@
 
   .project-vote__vote-btn {
     &:hover:not(.focus-visible) {
-      color: var(--color-text-main);
-      background-color: var(--color-bg-main);
+      color: var(--color-text, $dark-text);
+      background-color: var(--color-bg-main, $white);
     }
 
     &:active:not(.focus-visible) {
-      color: var(--color-bg-main);
-      background-color: var(--color-interactive-default);
+      color: var(--color-text, $white);
+      background-color: var(--color-interactive-default, $blue-default);
     }
 
     &--selected {
       width: 100%;
 
       &:active:not(.focus-visible) {
-        color: var(--color-text-main);
-        background-color: var(--color-bg-main);
+        color: var(--color-text, $dark-text);
+        background-color: var(--color-bg-main, $white);
       }
     }
   }

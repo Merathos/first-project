@@ -11,10 +11,10 @@
   margin-bottom: 32px;
 
   @include font-h5;
-  color: var(--color-text-caption);
+  color: var(--color-text, $grey-default);
 
   & time {
-    color: var(--color-text-main);
+    color: var(--color-text, $dark-text);
     font-weight: 400;
   }
 }
@@ -27,7 +27,7 @@
   @include main-text;
   line-height: rem(27px);
 
-  background-color: var(--color-bg-secondary);
+  background-color: var(--color-bg-secondary, $color-bg);
   border-radius: 5px;
 
   @media (max-width: $mobile-max-width) {

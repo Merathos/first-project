@@ -20,7 +20,7 @@
   margin-bottom: 48px;
   overflow-x: auto;
 
-  background-image: linear-gradient(var(--color-stroke), var(--color-stroke));
+  background-image: linear-gradient(var(--color-stroke, $light-grey), var(--color-stroke, $light-grey));
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: 100% 1px;
@@ -52,7 +52,7 @@
   padding-bottom: 13px;
 
   @include font-h3;
-  color: var(--color-text-secondary);
+  color: var(--color-text, $grey);
   text-decoration: none;
   transition: color $style-change-duration;
 
@@ -62,20 +62,20 @@
   }
 
   &:hover {
-    color: var(--color-interactive-default);
+    color: var(--color-interactive-default, $blue-default);
   }
 
   &:focus {
-    color: var(--color-interactive-default);
-    background-image: linear-gradient(var(--color-interactive-default), var(--color-interactive-default));
+    color: var(--color-interactive-default, $blue-default);
+    background-image: linear-gradient(var(--color-interactive-default, $blue-default), var(--color-interactive-default, $blue-default));
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: 100% 2px;
   }
 
   &--active {
-    color: var(--color-interactive-default);
-    background-image: linear-gradient(var(--color-interactive-default), var(--color-interactive-default));
+    color: var(--color-interactive-default, $blue-default);
+    background-image: linear-gradient(var(--color-interactive-default, $blue-default), var(--color-interactive-default, $blue-default));
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: 100% 2px;

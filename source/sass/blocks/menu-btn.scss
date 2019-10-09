@@ -22,7 +22,7 @@
     height: 21px;
     padding: 0;
     user-select: none;
-    color: var(--color-interactive-default);
+    color: var(--color-interactive-default, $blue-default);
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -30,15 +30,15 @@
     transition: color $style-change-duration;
 
     &:focus {
-      color: var(--color-interactive-accent);
+      color: var(--color-interactive-accent, $blue-accent);
     }
 
     &:focus:not(.focus-visible) {
-      color: var(--color-interactive-default);
+      color: var(--color-interactive-default, $blue-default);
     }
 
     &:active:not(.focus-visible) {
-      color: var(--color-interactive-accent);
+      color: var(--color-interactive-accent, $blue-accent);
     }
 
     &::before,

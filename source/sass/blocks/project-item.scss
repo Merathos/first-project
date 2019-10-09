@@ -1,7 +1,7 @@
 .project-item {
   position: relative;
   width: 360px;
-  background-color: $color-bg;
+  background-color: var(--color-bg-secondary, $color-bg);
   border: 1px solid transparent;
   border-radius: $border-radius;
 
@@ -16,7 +16,7 @@
   }
 
   &--win {
-    background-color: $light-blue;
+    background-color: var(--color-bg-secondary, $light-blue);
 
     &::before {
       background-color: $blue-default;
@@ -24,7 +24,7 @@
   }
 
   &--voted {
-    background-color: $pale-green;
+    background-color: var(--color-bg-secondary, $pale-green);
 
     &::before {
       background-color: $green;
@@ -32,21 +32,21 @@
 
     .project-item__link {
       &:focus {
-        color: $green;
+        color: var(--color-interactive-default, $green);
       }
 
       &:focus:not(.focus-visible) {
-        color: $dark-text;
+        color: var(--color-text, $dark-text);
       }
 
       &:hover:not(.focus-visible) {
-        color: $green;
+        color: var(--color-interactive-default, $green);
       }
     }
   }
 
   &--against {
-    background-color: $pale-red;
+    background-color: var(--color-bg-secondary, $pale-red);
 
     &::before {
       background-color: $red;
@@ -54,30 +54,30 @@
 
     .project-item__link {
       &:focus {
-        color: $red;
+        color: var(--color-interactive-default, $red);
       }
 
       &:focus:not(.focus-visible) {
-        color: $dark-text;
+        color: var(--color-text, $dark-text);
       }
 
       &:hover:not(.focus-visible) {
-        color: $red;
+        color: var(--color-interactive-default, $red);
       }
     }
   }
 
   &--disabled {
     background-color: transparent;
-    border-color: $light-grey;
+    border-color: var(--color-stroke, $light-grey);
 
     .project-item__link {
-      color: $grey-default;
+      color: var(--color-text, $grey-default);
 
       &:focus,
       &:focus:not(.focus-visible),
       &:hover:not(.focus-visible) {
-        color: $grey-default;
+        color: var(--color-text, $grey-default);
         box-shadow: 0 0 0 rgba(0, 30, 75, 0);
       }
     }
@@ -93,22 +93,22 @@
   padding: 23px 24px 15px;
   user-select: none;
   text-decoration: none;
-  color: $dark-text;
+  color: var(--color-text, $dark-text);
   outline: none;
   transition: color $style-change-duration, box-shadow $style-change-duration;
 
   &:focus {
-    color: $blue-default;
+    color: var(--color-interactive-default, $blue-default);
     box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
   }
 
   &:focus:not(.focus-visible) {
-    color: $dark-text;
+    color: var(--color-text, $dark-text);
     box-shadow: 0 0 0 rgba(0, 30, 75, 0);
   }
 
   &:hover:not(.focus-visible) {
-    color: $blue-default;
+    color: var(--color-interactive-default, $blue-default);
     box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
   }
 }
@@ -127,8 +127,8 @@
   margin-top: auto;
   font-size: rem(13px);
   line-height: rem(17px);
-  color: $grey-default;
-  border-top: 1px solid $light-grey;
+  color: var(--color-text, $grey-default);
+  border-top: 1px solid var(--color-stroke, $light-grey);
 }
 
 .project-item .button-star {
@@ -161,11 +161,11 @@
     &--voted {
       .project-item__link {
         &:hover:not(.focus-visible) {
-          color: $dark-text;
+          color: var(--color-text, $dark-text);
         }
 
         &:active:not(.focus-visible) {
-          color: $green;
+          color: var(--color-interactive-default, $green);
         }
       }
     }
@@ -173,11 +173,11 @@
     &--against {
       .project-item__link {
         &:hover:not(.focus-visible) {
-          color: $dark-text;
+          color: var(--color-text, $dark-text);
         }
 
         &:active:not(.focus-visible) {
-          color: $red;
+          color: var(--color-interactive-default, $red);
         }
       }
     }
@@ -185,12 +185,12 @@
 
   .project-item__link {
     &:hover:not(.focus-visible) {
-      color: $dark-text;
+      color: var(--color-text, $dark-text);
       box-shadow: 0 0 0 rgba(0, 30, 75, 0);
     }
 
     &:active:not(.focus-visible) {
-      color: $blue-default;
+      color: var(--color-interactive-default, $blue-default);
       box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
     }
   }

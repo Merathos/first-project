@@ -32,7 +32,7 @@
     margin-bottom: 48px;
     font-size: rem(16px);
     line-height: rem(22px);
-    background-color: var(--color-bg-secondary);
+    background-color: var(--color-bg-secondary, $color-bg);
     border-radius: $border-radius;
 
     li {
@@ -50,7 +50,7 @@
         left: 0;
         width: 6px;
         height: 6px;
-        background-color: var(--color-text-secondary);
+        background-color: var(--color-text, $grey);
         border-radius: 50%;
       }
     }
@@ -90,7 +90,7 @@
       left: 0;
       width: 3px;
       height: auto;
-      background-color: var(--color-interactive-default);
+      background-color: var(--color-interactive-default, $blue-default);
       border-radius: $border-radius;
     }
   }
@@ -103,7 +103,7 @@
     line-height: rem(23px);
     text-decoration: none;
     user-select: none;
-    color: var(--color-interactive-default);
+    color: var(--color-interactive-default, $blue-default);
     outline: none;
     transition: color $style-change-duration;
 
@@ -119,21 +119,21 @@
     }
 
     &:focus {
-      color: var(--color-interactive-accent);
+      color: var(--color-interactive-accent, $blue-accent);
     }
 
     &:focus:not(.focus-visible) {
-      color: var(--color-interactive-default);
+      color: var(--color-interactive-default, $blue-default);
     }
 
     &:hover:not(.focus-visible) {
-      color: var(--color-interactive-accent);
+      color: var(--color-interactive-accent, $blue-accent);
     }
   }
 
   a[href*="youtube"]:not([class]) {
     padding: 23px;
-    border: 1px solid var(--color-stroke);
+    border: 1px solid var(--color-stroke, $light-grey);
     border-radius: $border-radius;
 
     &::before {
@@ -171,11 +171,11 @@
 
     a:not([class]) {
       &:hover:not(.focus-visible) {
-        color: var(--color-interactive-default);
+        color: var(--color-interactive-default, $blue-default);
       }
 
       &:active:not(.focus-visible) {
-        color: var(--color-interactive-accent);
+        color: var(--color-interactive-accent, $blue-accent);
       }
     }
   }

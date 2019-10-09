@@ -7,7 +7,7 @@
   & .ss-main .ss-single-selected .ss-arrow span {
     width: 12px;
     height: 12px;
-    border-color: var(--color-interactive-default);
+    border-color: var(--color-interactive-default, $blue-default);
 
     &:focus {
       outline: none;
@@ -15,7 +15,7 @@
   }
 
   & .ss-main .ss-content .ss-list .ss-option.ss-disabled {
-    color: var(--color-interactive-default);
+    color: var(--color-interactive-default, $blue-default);
     cursor: default;
   }
 
@@ -23,7 +23,7 @@
   .ss-main .ss-content .ss-list .ss-option.ss-disabled,
   .ss-main .ss-content .ss-search input,
   .ss-main .ss-multi-selected {
-    background-color: var(--color-bg-secondary);
+    background-color: var(--color-bg-secondary, $color-bg);
   }
 
   & .ss-content {
@@ -32,14 +32,14 @@
 
   & .ss-option {
     @include main-text;
-    color: var(--color-text-main);
+    color: var(--color-text, $dark-text);
   }
 
   & .ss-main .ss-content .ss-list .ss-optgroup-label-selectable:hover,
   .ss-main .ss-content .ss-list .ss-option.ss-highlighted,
   .ss-main .ss-content .ss-list .ss-option:hover {
-    color: var(--color-interactive-accent);
-    background-color: #f5f6f7;
+    color: var(--color-text, $blue-accent);
+    background-color: var(--color-bg-main, #f5f6f7);
   }
 
   & .ss-main .ss-content {
@@ -76,7 +76,7 @@
     & .scrollbar-thumb {
       width: 6px;
       min-height: 242px;
-      background-color: var(--color-stroke);
+      background-color: var(--color-stroke, $light-grey);
       border-radius: 5px;
     }
   }
@@ -87,7 +87,7 @@
     height: 36px;
 
     @include font-h2;
-    color: var(--color-interactive-default);
+    color: var(--color-interactive-default, $blue-default);
 
     border: none;
     background-color: transparent;
@@ -95,13 +95,13 @@
     transition: color $style-change-duration;
 
     &:hover {
-      color: var(--color-interactive-accent);
+      color: var(--color-interactive-accent, $blue-accent);
     }
   }
 
   & .ss-main .ss-single-selected .placeholder {
     display: inline-block;
-    border-bottom: 2px dashed var(--color-interactive-default);
+    border-bottom: 2px dashed var(--color-interactive-default, $blue-default);
 
     @media (max-width: $tablet-width - 1) {
       white-space: nowrap;
