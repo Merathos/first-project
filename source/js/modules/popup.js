@@ -7,7 +7,7 @@
     Array.prototype.forEach.call(btns, function (btn) {
       btn.addEventListener('click', function (evt) {
         evt.preventDefault();
-        bodyScrollLock.disableBodyScroll(popup);
+        window.bodyScrollLock.disableBodyScroll(popup);
         popup.classList.add('popup--shown');
       });
     });
@@ -16,7 +16,7 @@
     var closeBtn = popup.querySelector('.popup__close-btn');
 
     var closePopup = function () {
-      bodyScrollLock.enableBodyScroll(popup);
+      window.bodyScrollLock.enableBodyScroll(popup);
       popup.classList.remove('popup--shown');
     };
 

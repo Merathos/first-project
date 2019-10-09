@@ -27,7 +27,7 @@
     swiper.destroy();
     slider.innerHTML = '';
 
-    bodyScrollLock.enableBodyScroll(popup);
+    window.bodyScrollLock.enableBodyScroll(popup);
     popup.classList.remove('popup--shown');
   };
 
@@ -49,7 +49,7 @@
 
     slider.appendChild(sliderTape);
 
-    swiper = new Swiper(slider, {
+    swiper = new window.Swiper(slider, {
       initialSlide: +target.dataset.index,
       slidesPerView: 1,
       watchOverflow: true,
@@ -79,7 +79,7 @@
     if (evt.target.classList.contains('gallery__item-link')) {
       evt.preventDefault();
 
-      bodyScrollLock.disableBodyScroll(popup);
+      window.bodyScrollLock.disableBodyScroll(popup);
       popup.classList.add('popup--shown');
 
       prepareSlider(evt.target);

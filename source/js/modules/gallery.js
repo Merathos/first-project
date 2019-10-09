@@ -8,15 +8,8 @@
     return;
   }
 
-
-  galleries.forEach(function (gallery) {
-    var previews = gallery.querySelectorAll('.gallery__item-link');
-
-    previews.forEach(function (preview, i) {
-      preview.dataset.index = i;
-    });
-
-    new Swiper(gallery, {
+  var sliderSwiper = function (gallery) {
+    return new window.Swiper(gallery, {
       slidesPerView: 'auto',
       spaceBetween: 16,
 
@@ -29,5 +22,29 @@
       watchOverflow: true,
       grabCursor: true
     });
+  };
+
+
+  galleries.forEach(function (gallery) {
+    var previews = gallery.querySelectorAll('.gallery__item-link');
+
+    previews.forEach(function (preview, i) {
+      preview.dataset.index = i;
+    });
+
+    sliderSwiper(gallery);
+    // new Swiper(gallery, {
+    //   slidesPerView: 'auto',
+    //   spaceBetween: 16,
+
+    //   breakpoints: {
+    //     320: {
+    //       spaceBetween: 12
+    //     }
+    //   },
+
+    //   watchOverflow: true,
+    //   grabCursor: true
+    // });
   });
 })();

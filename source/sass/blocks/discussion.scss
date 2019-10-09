@@ -213,7 +213,8 @@
   display: none;
 
   @media (max-width: $tablet-width - 1) {
-    display: block;
+    display: flex;
+    justify-content: center;
     margin-top: 24px;
   }
 }
