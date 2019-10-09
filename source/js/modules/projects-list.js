@@ -8,7 +8,7 @@
     return;
   }
 
-  var ellipsis = new Ellipsis({
+  var ellipsis = new window.Ellipsis({
     lines: 3
   });
 

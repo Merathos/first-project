@@ -6,7 +6,7 @@
     return;
   }
 
-  noUiSlider.create(rangeSlider, {
+  window.noUiSlider.create(rangeSlider, {
     start: [5],
     behaviour: 'snap',
     connect: 'lower',
@@ -21,7 +21,7 @@
       density: 4
     },
     tooltips: true,
-    format: wNumb({
+    format: window.wNumb({
       decimals: 0,
     })
   });

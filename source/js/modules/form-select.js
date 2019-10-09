@@ -6,7 +6,7 @@
   var voteSelect = document.querySelector('#vote-select');
 
   var addSelect = function (el) {
-    var select = new SlimSelect({
+    var select = new window.SlimSelect({
       select: el,
       showSearch: false,
       afterClose: function () {

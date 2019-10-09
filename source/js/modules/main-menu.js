@@ -29,7 +29,7 @@
 
   var openMenu = function () {
     header.classList.add('page-header--open-menu');
-    bodyScrollLock.disableBodyScroll(menuContainer);
+    window.bodyScrollLock.disableBodyScroll(menuContainer);
 
     menuBtn.classList.add('menu-btn--close');
     menuBtnText.textContent = 'Закрыть основное меню';
@@ -37,7 +37,7 @@
 
   var closeMenu = function () {
     header.classList.remove('page-header--open-menu');
-    bodyScrollLock.enableBodyScroll(menuContainer);
+    window.bodyScrollLock.enableBodyScroll(menuContainer);
 
     menuBtn.classList.remove('menu-btn--close');
     menuBtnText.textContent = 'Открыть основное меню';
