@@ -70,7 +70,7 @@
 
   menuBtn.addEventListener('click', onMenuBtnClick);
   specialBtn.forEach(function (btn) {
-    btn.addEventListener('click', onMenuBtnClick);
+    btn.addEventListener('click', closeMenu);
   });
   window.addEventListener('resize', onWindowResize);
 })();
