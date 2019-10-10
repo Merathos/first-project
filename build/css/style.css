@@ -5573,7 +5573,9 @@ span.poll__hide {
   .project-item__link:active:not(.focus-visible) {
     color: var(--color-interactive-default, #2c8ecc);
     -webkit-box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
-            box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15); } }
+            box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15); }
+  .project-item .button-star {
+    opacity: 1; } }
 
 @media (max-width: 1199px) {
   .project-item {
