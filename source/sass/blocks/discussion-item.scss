@@ -114,6 +114,6 @@
 
   &:hover,
   &:focus {
-    color: var(--color-text, $grey-default);
+    color: var(--color-interactive-default, $blue-default);
   }
 }
