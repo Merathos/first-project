@@ -1,3 +1,15 @@
+.projects {
+  padding-bottom: 80px;
+
+  @include tablet {
+    padding-bottom: 88px;
+  }
+
+  @include mobile {
+    padding-bottom: 64px;
+  }
+}
+
 .projects__filter {
   margin-bottom: 32px;
 }
