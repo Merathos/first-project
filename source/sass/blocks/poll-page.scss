@@ -122,7 +122,7 @@
 }
 
 .poll-page__section {
-  border-bottom: 1px solid $light-grey;
+  border-bottom: 1px solid var(--color-stroke, $light-grey);
 }
 
 .poll-page__button {
@@ -208,7 +208,7 @@ span.poll-page__hide {
 
   & .poll-page__doc-list {
     padding-bottom: 22px;
-    background-image: linear-gradient($light-grey, $light-grey);
+    background-image: linear-gradient(var(--color-stroke, $light-grey), var(--color-stroke, $light-grey));
     background-position: left bottom;
     background-repeat: no-repeat;
     background-size: 100% 1px;

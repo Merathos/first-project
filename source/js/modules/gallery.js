@@ -33,18 +33,5 @@
     });
 
     sliderSwiper(gallery);
-    // new Swiper(gallery, {
-    //   slidesPerView: 'auto',
-    //   spaceBetween: 16,
-
-    //   breakpoints: {
-    //     320: {
-    //       spaceBetween: 12
-    //     }
-    //   },
-
-    //   watchOverflow: true,
-    //   grabCursor: true
-    // });
   });
 })();

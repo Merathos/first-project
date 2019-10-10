@@ -11,7 +11,6 @@
 
 
   var openBtn = filter.querySelector('.filter__open-btn');
-  // var body = filter.querySelector('.filter__body');
 
   var onOpenBtnClick = function (evt) {
     filter.classList.toggle('filter--open');

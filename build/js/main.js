@@ -138,7 +138,6 @@
 
 
   var openBtn = filter.querySelector('.filter__open-btn');
-  // var body = filter.querySelector('.filter__body');
 
   var onOpenBtnClick = function (evt) {
     filter.classList.toggle('filter--open');
@@ -320,19 +319,6 @@
     });
 
     sliderSwiper(gallery);
-    // new Swiper(gallery, {
-    //   slidesPerView: 'auto',
-    //   spaceBetween: 16,
-
-    //   breakpoints: {
-    //     320: {
-    //       spaceBetween: 12
-    //     }
-    //   },
-
-    //   watchOverflow: true,
-    //   grabCursor: true
-    // });
   });
 })();
 

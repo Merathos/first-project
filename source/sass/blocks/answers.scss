@@ -116,7 +116,7 @@
 .answers__comment-link {
   display: flex;
   align-items: center;
-  color: $light-blue-accent;
+  color: var(--color-interactive-default, $light-blue-accent);
   text-decoration: none;
 
   transition: color $style-change-duration;
@@ -132,7 +132,7 @@
       margin-left: 8px;
 
       &:hover {
-        color: $light-blue-accent;
+        color: var(--color-interactive-accent, $light-blue-accent);
       }
     }
   }
@@ -349,7 +349,7 @@
     color: var(--color-text, $dark-text);
 
     border-radius: 2px;
-    background-color: $light-blue;
+    background-color: var(--color-bg-secondary, $light-blue);
   }
 
   [data-tooltip]:hover::before,
@@ -366,7 +366,7 @@
   [data-tooltip][data-flow^="down"]::before {
     top: calc(100% + 5px);
     border-top-width: 0;
-    border-bottom-color: $light-blue;
+    border-bottom-color: var(--color-bg-secondary, $light-blue);
   }
 
   [data-tooltip][data-flow^="down"]::after {
