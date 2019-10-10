@@ -1,0 +1,24 @@
+.main-empty {
+  & p {
+    margin: 0;
+    max-width: 971px;
+    margin-top: 12vh;
+    margin-bottom: 24vh;
+
+    @include font-h2;
+    color: var(--color-text, $dark-text);
+
+    @media (max-width: $desktop-width - 1) {
+      margin-top: 154px;
+      margin-bottom: 143px;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      margin-top: 72px;
+      margin-bottom: 64px;
+
+      @include font-h3;
+      color: var(--color-text, $dark-text);
+    }
+  }
+}

@@ -3502,6 +3502,28 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         -ms-flex-align: start;
             align-items: flex-start; } }
 
+.main-empty p {
+  margin: 0;
+  max-width: 971px;
+  margin-top: 12vh;
+  margin-bottom: 24vh;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 400;
+  color: var(--color-text, #354052); }
+  @media (max-width: 1199px) {
+    .main-empty p {
+      margin-top: 154px;
+      margin-bottom: 143px; } }
+  @media (max-width: 400px) {
+    .main-empty p {
+      margin-top: 72px;
+      margin-bottom: 64px;
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+      font-weight: 400;
+      color: var(--color-text, #354052); } }
+
 .news-notice {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -3855,8 +3877,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     bottom: 24px;
     width: 100%;
     height: 40px;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg-secondary)), to(var(--color-bg-secondary-transparent)));
-    background-image: linear-gradient(180deg, var(--color-bg-secondary) 0%, var(--color-bg-secondary-transparent) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg-secondary, #f9f9fa)), to(var(--color-bg-secondary-transparent, rgba(249, 249, 250, 0))));
+    background-image: linear-gradient(180deg, var(--color-bg-secondary, #f9f9fa) 0%, var(--color-bg-secondary-transparent, rgba(249, 249, 250, 0)) 100%);
     -webkit-transform: matrix(1, 0, 0, -1, 0, 0);
             transform: matrix(1, 0, 0, -1, 0, 0);
     -webkit-transition: bottom 0.2s linear;
@@ -3871,8 +3893,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   background-color: var(--color-bg-main, #ffffff);
   border: 1px solid var(--color-stroke, #e3e8ee); }
   .poll__item--passed::before {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg-main)), to(var(--color-bg-main-transparent)));
-    background-image: linear-gradient(180deg, var(--color-bg-main) 0%, var(--color-bg-main-transparent) 100%); }
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg-main, #ffffff)), to(var(--color-bg-main-transparent, rgba(255, 255, 255, 0))));
+    background-image: linear-gradient(180deg, var(--color-bg-main, #ffffff) 0%, var(--color-bg-main-transparent, rgba(255, 255, 255, 0)) 100%); }
   .poll__item--passed::after {
     content: "Пройден";
     position: absolute;
@@ -3886,8 +3908,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     border-radius: 5px 0;
     opacity: 0.5; }
   .poll__item--passed:hover::before {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg-secondary)), to(var(--color-bg-secondary-transparent)));
-    background-image: linear-gradient(180deg, var(--color-bg-secondary) 0%, var(--color-bg-secondary-transparent) 100%); }
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg-secondary, #f9f9fa)), to(var(--color-bg-secondary-transparent, rgba(249, 249, 250, 0))));
+    background-image: linear-gradient(180deg, var(--color-bg-secondary, #f9f9fa) 0%, var(--color-bg-secondary-transparent, rgba(249, 249, 250, 0)) 100%); }
   .poll__item--passed .poll__text {
     color: var(--color-text, #a6abb3); }
 
@@ -3910,7 +3932,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   padding-top: 46px;
   padding-bottom: 14px;
   padding-left: 24px;
-  background-image: linear-gradient(var(--color-bg-secondary-transparent), var(--color-bg-secondary) 35px);
+  background-image: linear-gradient(var(--color-bg-secondary-transparent, rgba(249, 249, 250, 0)), var(--color-bg-secondary, #f9f9fa) 35px);
   border-radius: 5px; }
 
 .poll__button {
@@ -6723,7 +6745,7 @@ span.poll-page__hide {
     .discussion-item__link--add svg {
       margin-right: 5px; }
   .discussion-item__link:hover, .discussion-item__link:focus {
-    color: var(--color-text, #a6abb3); }
+    color: var(--color-interactive-default, #2c8ecc); }
 
 .discussion-list {
   margin-top: 24px; }
