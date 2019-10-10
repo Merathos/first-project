@@ -9,9 +9,6 @@
   }
 
 
-  var overlay = popup.querySelector('.popup__overlay');
-  var closeBtn = popup.querySelector('.popup__close-btn');
-
   var slider = popup.querySelector('.swiper-container');
   var prevBtn = popup.querySelector('.gallery-popup__nav-btn--prev');
   var nextBtn = popup.querySelector('.gallery-popup__nav-btn--next');
@@ -23,16 +20,12 @@
   var swiper = null;
 
 
-  var closePopup = function () {
+  var resetSlider = function () {
     swiper.destroy();
     slider.innerHTML = '';
-
-    window.bodyScrollLock.enableBodyScroll(popup);
-    popup.classList.remove('popup--shown');
   };
 
-
-  var prepareSlider = function (target) {
+  var initializeSlider = function (target) {
     var items = target.parentElement.parentElement.children;
     var currentItemDescription = target.querySelector('.gallery__item-text');
 
@@ -79,25 +72,14 @@
     if (evt.target.classList.contains('gallery__item-link')) {
       evt.preventDefault();
 
-      window.bodyScrollLock.disableBodyScroll(popup);
-      popup.classList.add('popup--shown');
+      if (swiper) {
+        resetSlider();
+      }
 
-      prepareSlider(evt.target);
+      window.openPopup(popup);
+      initializeSlider(evt.target);
     }
   };
-
-  var onEscPress = function (evt) {
-    if (evt.keyCode === window.const.keyCode.ESC && popup.classList.contains('popup--shown')) {
-      evt.preventDefault();
-
-      closePopup();
-    }
-  };
-
-
-  overlay.addEventListener('click', closePopup);
-  closeBtn.addEventListener('click', closePopup);
 
   document.addEventListener('click', onDocumentClick);
-  document.addEventListener('keydown', onEscPress);
 })();
