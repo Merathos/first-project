@@ -84,7 +84,7 @@
   & .ss-main .ss-multi-selected,
   .ss-main .ss-single-selected,
   .ss-main .ss-single-selected .placeholder .ss-disabled {
-    height: 36px;
+    height: auto;
 
     @include font-h2;
     color: var(--color-interactive-default, $blue-default);
@@ -117,8 +117,61 @@
     padding: 8px 24px;
   }
 
-  & .ss-main .ss-single-selected .ss-arrow,
-  .ss-main .ss-single-selected .ss-deselect {
+  & .ss-main .ss-single-selected .ss-arrow {
     margin-left: 9px;
+  }
+
+  & .ss-main .ss-deselect {
+    order: -1;
+    align-self: center;
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    margin-right: 10px;
+  }
+
+  & .ss-deselect button {
+    display: block;
+    padding: 0;
+    color: var(--color-text, $red);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+    transition: color $style-change-duration;
+
+    &:focus {
+      color: var(--color-interactive-accent, rgba($red, 0.8));
+    }
+
+    &:focus:not(.focus-visible) {
+      color: var(--color-text, $red);
+    }
+
+    &:hover:not(.focus-visible) {
+      color: var(--color-interactive-accent, rgba($red, 0.8));
+    }
+
+    @include tablet {
+      &:hover:not(.focus-visible) {
+        color: var(--color-text, $red);
+      }
+
+      &:active:not(.focus-visible) {
+        color: var(--color-interactive-default, rgba($red, 0.8));
+      }
+    }
+  }
+
+  & .ss-deselect svg {
+    display: block;
+    width: 12px;
+    height: 12px;
+    fill: currentColor;
+    stroke: currentColor;
+    pointer-events: none;
+    transition: stroke $style-change-duration;
   }
 }

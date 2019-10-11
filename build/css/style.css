@@ -2318,7 +2318,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .form-select .ss-main .ss-multi-selected,
 .form-select .ss-main .ss-single-selected,
 .form-select .ss-main .ss-single-selected .placeholder .ss-disabled {
-  height: 36px;
+  height: auto;
   font-size: 1.875rem;
   line-height: 2.25rem;
   font-weight: 400;
@@ -2346,9 +2346,56 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .form-select .ss-main .ss-content .ss-list .ss-option {
   padding: 8px 24px; }
 
-.form-select .ss-main .ss-single-selected .ss-arrow,
-.form-select .ss-main .ss-single-selected .ss-deselect {
+.form-select .ss-main .ss-single-selected .ss-arrow {
   margin-left: 9px; }
+
+.form-select .ss-main .ss-deselect {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  margin-right: 10px; }
+
+.form-select .ss-deselect button {
+  display: block;
+  padding: 0;
+  color: var(--color-text, #e55050);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
+  .form-select .ss-deselect button:focus {
+    color: var(--color-interactive-accent, rgba(229, 80, 80, 0.8)); }
+  .form-select .ss-deselect button:focus:not(.focus-visible) {
+    color: var(--color-text, #e55050); }
+  .form-select .ss-deselect button:hover:not(.focus-visible) {
+    color: var(--color-interactive-accent, rgba(229, 80, 80, 0.8)); }
+  @media (max-width: 1199px) {
+    .form-select .ss-deselect button:hover:not(.focus-visible) {
+      color: var(--color-text, #e55050); }
+    .form-select .ss-deselect button:active:not(.focus-visible) {
+      color: var(--color-interactive-default, rgba(229, 80, 80, 0.8)); } }
+
+.form-select .ss-deselect svg {
+  display: block;
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+  stroke: currentColor;
+  pointer-events: none;
+  -webkit-transition: stroke 0.2s;
+  transition: stroke 0.2s; }
 
 .form-range {
   width: 308px;
@@ -2567,30 +2614,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-bottom: 0;
   margin-top: 16px;
   margin-left: 32px; }
+  .filter__item--vote {
+    margin-left: 90px; }
   .filter__item--separated {
     margin-left: auto; }
-
-.filter__vote-select {
-  margin-left: 90px; }
-  .filter__vote-select .ss-main .ss-multi-selected,
-  .filter__vote-select .ss-main .ss-single-selected,
-  .filter__vote-select .ss-main .ss-single-selected .placeholder,
-  .filter__vote-select .ss-main .ss-single-selected .placeholder .ss-disabled {
-    height: 20px;
-    font-size: 0.9375rem;
-    line-height: 1.25rem; }
-  .filter__vote-select .ss-main .ss-content {
-    width: 146px;
-    right: auto;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%); }
-  .filter__vote-select .ss-main .ss-content .ss-list {
-    width: 146px;
-    height: auto; }
-  .filter__vote-select .ss-main .ss-single-selected .ss-arrow span {
-    width: 8px;
-    height: 8px; }
 
 .filter__show-btn {
   max-width: 200px;
@@ -2603,7 +2630,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 @media (max-width: 1199px) {
   .filter__main {
     padding: 25px 24px; }
-  .filter__vote-select {
+  .filter__item--vote {
     margin-left: 32px; } }
 
 @media (max-width: 767px) {
@@ -2627,6 +2654,31 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     display: block; }
   .filter__item--separated {
     margin-left: 32px; } }
+
+.filter-vote .ss-main .ss-multi-selected,
+.filter-vote .ss-main .ss-single-selected,
+.filter-vote .ss-main .ss-single-selected .placeholder,
+.filter-vote .ss-main .ss-single-selected .placeholder .ss-disabled {
+  font-size: 0.9375rem;
+  line-height: 1.25rem; }
+
+.filter-vote .ss-main .ss-content {
+  width: 146px;
+  right: auto;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
+
+.filter-vote .ss-main .ss-content:not(.ss-open) {
+  pointer-events: none; }
+
+.filter-vote .ss-main .ss-content .ss-list {
+  width: 146px;
+  height: auto; }
+
+.filter-vote .ss-main .ss-single-selected .ss-arrow span {
+  width: 8px;
+  height: 8px; }
 
 .counter {
   padding: 24px 32px;
