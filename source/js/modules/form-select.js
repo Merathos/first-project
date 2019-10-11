@@ -3,7 +3,6 @@
   var Scrollbar = window.Scrollbar;
   var selectItem = document.querySelector('#projects-select');
   var categorySelect = document.querySelector('#category-select');
-  var voteSelect = document.querySelector('#vote-select');
 
   var addSelect = function (el) {
     var select = new window.SlimSelect({
@@ -34,9 +33,4 @@
   if (categorySelect) {
     addSelect(categorySelect);
   }
-
-  if (voteSelect) {
-    addSelect(voteSelect);
-  }
-
 })();
