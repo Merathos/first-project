@@ -30,6 +30,11 @@
 
 .page-footer__list {
   @include list-reset;
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .page-footer__item {

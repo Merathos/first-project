@@ -51,6 +51,10 @@
       opacity: 0.6;
     }
   }
+
+  @media (max-width: $mobile-max-width) {
+    width: 100%;
+  }
 }
 
 .file-item svg {

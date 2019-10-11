@@ -55,7 +55,7 @@
   .ss-main .ss-single-selected,
   .ss-main .ss-single-selected .placeholder,
   .ss-main .ss-single-selected .placeholder .ss-disabled {
-    height: 20px;
+    height: rem(20px);
     font-size: rem(15px);
     line-height: rem(20px);
   }

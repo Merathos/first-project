@@ -1,6 +1,7 @@
 .activity-tabs {
   max-width: $desktop-width;
   margin: 0 auto;
+  margin-bottom: 48px;
   padding: 0 40px;
 
   @media (max-width: $desktop-width - 1) {
@@ -9,6 +10,11 @@
 
   @media (max-width: 800px) {
     padding: 0;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 32px;
   }
 }
 
@@ -17,24 +23,31 @@
   display: flex;
   flex-wrap: no-wrap;
   width: 100%;
-  margin-bottom: 48px;
   overflow-x: auto;
 
+  @media (max-width: 800px) {
+    padding: 0 24px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding: 0 16px;
+  }
+}
+
+.activity-tabs__bottom {
+  height: 1px;
+  margin-top: -1px;
   background-image: linear-gradient(var(--color-stroke, $light-grey), var(--color-stroke, $light-grey));
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: 100% 1px;
 
   @media (max-width: 800px) {
-    padding: 0 24px;
-    margin-bottom: 40px;
-    background-position: 24px bottom;
+    width: calc(100% - 48px);
   }
 
   @media (max-width: $mobile-max-width) {
-    padding: 0 16px;
-    margin-bottom: 32px;
-    background-position: 16px bottom;
+    width: calc(100% - 32px);
   }
 }
 
