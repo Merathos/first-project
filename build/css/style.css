@@ -6026,6 +6026,15 @@ span.poll__hide {
     font-size: 1rem;
     line-height: 1.375rem; } }
 
+@media (min-width: 1200px) {
+  .project-meta__fovorite-btn[data-tooltip][data-flow^="down"]::before, .project-meta__fovorite-btn[data-tooltip][data-flow^="down"]::after {
+    -webkit-transform: translate(-50%, 10px);
+            transform: translate(-50%, 10px); }
+  .project-meta__fovorite-btn[data-tooltip][data-flow^="down"]::before {
+    top: calc(100% - 5px); }
+  .project-meta__fovorite-btn[data-tooltip][data-flow^="down"]::after {
+    top: 100%; } }
+
 .project-vote {
   background-color: var(--color-bg-secondary, #f9f9fa);
   border-radius: 5px; }
