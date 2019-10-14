@@ -1,25 +1,25 @@
 'use strict';
 
 (function () {
-  var vote = document.querySelector('.project-vote');
-  var popup = document.querySelector('.vote-popup');
+  var vote = document.querySelector('.js-project-vote');
+  var popup = document.querySelector('.js-vote-popup');
 
   if (!vote || !popup) {
     return;
   }
 
 
-  var submitForm = vote.querySelector('.project-vote__submit-form form');
-  var revokeBtn = vote.querySelector('.project-vote__revoke-btn');
+  var submitForm = vote.querySelector('.js-project-vote__submit-form form');
+  var revokeBtn = vote.querySelector('.js-project-vote__revoke-btn');
 
-  var popupBtn = popup.querySelector('.vote-popup__revoke-btn');
+  var popupBtn = popup.querySelector('.js-vote-popup__revoke-btn');
 
   var popupShownTimeout = null;
 
-  var approveValue = +vote.querySelector('.vote-results__value--approve').textContent.replace(/\s+/g, '');
-  var rejectValue = +vote.querySelector('.vote-results__value--reject').textContent.replace(/\s+/g, '');
+  var approveValue = +vote.querySelector('.js-vote-results__value--approve').textContent.replace(/\s+/g, '');
+  var rejectValue = +vote.querySelector('.js-vote-results__value--reject').textContent.replace(/\s+/g, '');
 
-  var scaleIndicator = vote.querySelector('.vote-results__indicator');
+  var scaleIndicator = vote.querySelector('.js-vote-results__indicator');
 
 
   var onSubmitFormClick = function (evt) {

@@ -2,7 +2,7 @@
 
 
 (function () {
-  var popups = document.querySelectorAll('.popup');
+  var popups = document.querySelectorAll('.js-popup');
 
 
   window.openPopup = function (popup) {
@@ -26,8 +26,8 @@
 
 
   popups.forEach(function (popup) {
-    var overlay = popup.querySelector('.popup__overlay');
-    var closeBtn = popup.querySelector('.popup__close-btn');
+    var overlay = popup.querySelector('.js-popup__overlay');
+    var closeBtn = popup.querySelector('.js-popup__close-btn');
 
 
     overlay.addEventListener('click', function () {

@@ -123,13 +123,13 @@
       </div>
     </div>
 
-    <button type="button" class="special-popup__reset button button--blue" disabled="">Сбросить всё</button>
+    <button type="button" class="special-popup__reset js-special-popup__reset button button--blue" disabled="">Сбросить всё</button>
   </div>
 </section>
 
 
-    <header class="page-header">
-  <div class="page-header__bar">
+    <header class="page-header js-page-header">
+  <div class="page-header__bar js-page-header__bar">
     <div class="page-header__container container">
       <a class="page-header__roi-logo logo-link" href="#">
         <span class="visually-hidden">Перейти на сайт российской общественной инициативы</span>
@@ -156,16 +156,16 @@
         Версия для слабовидящих
       </a>
 
-      <button class="page-header__menu-btn menu-btn" type="button">
+      <button class="page-header__menu-btn menu-btn js-menu-btn" type="button">
         <span class="menu-btn__text visually-hidden">Открыть основное меню</span>
         <span class="menu-btn__icon"></span>
       </button>
     </div>
   </div>
 
-  <div class="page-header__main-menu main-menu">
+  <div class="page-header__main-menu main-menu js-main-menu">
     <div class="container">
-      <div class="page-header__location-switcher location-switcher">
+      <div class="page-header__location-switcher location-switcher js-location-switcher">
         <p class="visually-hidden">Выберите регион голосования:</p>
 
         <form action="#" method="post">
@@ -196,10 +196,10 @@
         Версия для слабовидящих
       </a>
 
-      <nav class="page-header__user-menu user-menu">
-        <div class="user-menu__overlay"></div>
+      <nav class="page-header__user-menu user-menu js-user-menu">
+        <div class="user-menu__overlay js-user-menu__overlay"></div>
 
-        <button class="user-menu__dropdown-btn link link--black" type="button">
+        <button class="user-menu__dropdown-btn js-user-menu__dropdown-btn link link--black" type="button">
           <span class="user-menu__dropdown-btn-text visually-hidden">Открыть меню пользователя</span>
 
           <svg class="user-menu__user-icon" width="16" height="16">
@@ -213,7 +213,7 @@
           </svg>
         </button>
 
-        <ul class="user-menu__list">
+        <ul class="user-menu__list js-user-menu__list">
           <li class="user-menu__item">
             <a class="user-menu__link link link--black" href="#">Избранное</a>
           </li>
@@ -236,13 +236,13 @@
       <div class="container">
         <ul>
           <li>
-            <a href="#" data-target="comment-add">Добавить комментарий</a>
+            <a class="js-comment-add" href="#">Добавить комментарий</a>
           </li>
           <li>
-            <a href="#" data-target="comment-edit">Ваш комментарий - редактировать</a>
+            <a class="js-comment-edit" href="#">Ваш комментарий - редактировать</a>
           </li>
           <li>
-            <a href="#" data-target="comment-your">Ваш комментарий</a>
+            <a class="js-comment-your" href="#">Ваш комментарий</a>
           </li>
         </ul>
       </div>
@@ -286,7 +286,7 @@
   </div>
 </footer>
 
-    <button class="page-body__up-btn" type="button">
+    <button class="page-body__up-btn js-page-body__up-btn" type="button">
   <svg width="20" height="12" viewbox="0 0 33 12">
     <use xlink:href="img/sprite.svg#icon-arrow"></use>
   </svg>
@@ -294,13 +294,13 @@
 </button>
 
 
-    <div class="comment-popup comment-popup--add popup">
+    <div class="comment-popup comment-popup--add js-comment-popup--add popup js-popup">
       <div class="comment-popup__container popup__container">
-        <div class="popup__overlay"></div>
+        <div class="popup__overlay js-popup__overlay"></div>
 
         <div class="comment-popup__content popup__content">
           <div class="popup__bar popup__bar--top">
-            <button class="popup__close-btn" type="button">
+            <button class="popup__close-btn js-popup__close-btn" type="button">
               <span class="visually-hidden">Закрыть</span>
               <svg width="16" height="16">
                 <use xlink:href="img/sprite.svg#icon-cross"></use>
@@ -353,13 +353,13 @@
       </div>
     </div>
 
-    <div class="comment-popup comment-popup--edit popup">
+    <div class="comment-popup comment-popup--edit js-comment-popup--edit popup js-popup">
       <div class="comment-popup__container popup__container">
-        <div class="popup__overlay"></div>
+        <div class="popup__overlay js-popup__overlay"></div>
 
         <div class="comment-popup__content popup__content">
           <div class="popup__bar popup__bar--top">
-            <button class="popup__close-btn" type="button">
+            <button class="popup__close-btn js-popup__close-btn" type="button">
               <span class="visually-hidden">Закрыть</span>
               <svg width="16" height="16">
                 <use xlink:href="img/sprite.svg#icon-cross"></use>
@@ -371,7 +371,7 @@
             <div class="your-comment__img-wrapper">
               <img src="img/comments-img.jpg" width="264" height="389" alt="описание картинки">
             </div>
-            <div class="your-comment__content text-hidden">
+            <div class="your-comment__content text-hidden js-text-hidden">
               <div class="your-comment__top-wrapper">
                 <h2 class="your-comment__title">Ваш комментарий:</h2>
                 <div class="your-comment__actions">
@@ -393,7 +393,7 @@
               <p class="your-comment__text text-hidden__container text-hidden__container--comment">Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.
               </p>
               <div class="answers__button-wrapper answers__button-wrapper--blue-gradient">
-                <button type="button" class="answers__button link link--blue text-hidden__btn">
+                <button type="button" class="answers__button link link--blue text-hidden__btn js-text-hidden__btn">
                   <span>Развернуть</span>
                   <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="img/sprite.svg#icon-arrow-big"></use>
@@ -440,13 +440,13 @@
       </div>
     </div>
 
-    <div class="comment-popup comment-popup--your popup">
+    <div class="comment-popup comment-popup--your js-comment-popup--your popup js-popup">
         <div class="comment-popup__container popup__container">
-          <div class="popup__overlay"></div>
+          <div class="popup__overlay js-popup__overlay"></div>
 
           <div class="comment-popup__content popup__content">
             <div class="popup__bar popup__bar--top">
-              <button class="popup__close-btn" type="button">
+              <button class="popup__close-btn js-popup__close-btn" type="button">
                 <span class="visually-hidden">Закрыть</span>
                 <svg width="16" height="16">
                   <use xlink:href="img/sprite.svg#icon-cross"></use>
@@ -458,13 +458,13 @@
               <div class="your-comment__img-wrapper">
                 <img src="img/comments-img.jpg" width="264" height="389" alt="описание картинки">
               </div>
-              <div class="your-comment__content text-hidden">
+              <div class="your-comment__content text-hidden js-text-hidden">
                 <div class="your-comment__top-wrapper">
                   <h2 class="your-comment__title">Ваш комментарий:</h2>
                 </div>
                 <p class="your-comment__text text-hidden__container text-hidden__container--comment">Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.</p>
                 <div class="answers__button-wrapper answers__button-wrapper--blue-gradient">
-                  <button type="button" class="answers__button link link--blue text-hidden__btn">
+                  <button type="button" class="answers__button link link--blue text-hidden__btn js-text-hidden__btn">
                     <span>Развернуть</span>
                     <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use xlink:href="img/sprite.svg#icon-arrow-big"></use>

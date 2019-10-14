@@ -2,7 +2,7 @@
 
 
 (function () {
-  var list = document.querySelector('.projects-list');
+  var list = document.querySelector('.js-projects-list');
 
   if (!list) {
     return;

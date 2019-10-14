@@ -1,14 +1,14 @@
 'use strict';
 
 (function () {
-  var textContainers = document.querySelectorAll('.text-hidden');
+  var textContainers = document.querySelectorAll('.js-text-hidden');
   if (!textContainers.length) {
     return;
   }
 
   Array.prototype.forEach.call(textContainers, function (textContainer) {
-    var btnTextOpen = textContainer.querySelector('.text-hidden__btn');
-    var btnText = textContainer.querySelector('.text-hidden__btn span');
+    var btnTextOpen = textContainer.querySelector('.js-text-hidden__btn');
+    var btnText = btnTextOpen.querySelector('span');
     var text = textContainer.querySelector('.text-hidden__container');
     var btnContainer = textContainer.querySelector('.answers__button-wrapper');
     if (!btnTextOpen && !text && !btnContainer) {

@@ -2,7 +2,7 @@
 
 
 (function () {
-  var menu = document.querySelector('.user-menu');
+  var menu = document.querySelector('.js-user-menu');
 
 
   if (!menu) {
@@ -10,11 +10,11 @@
   }
 
 
-  var menuBtn = menu.querySelector('.user-menu__dropdown-btn');
+  var menuBtn = menu.querySelector('.js-user-menu__dropdown-btn');
   var menuBtnText = menuBtn.querySelector('.user-menu__dropdown-btn-text');
 
-  var overlay = menu.querySelector('.user-menu__overlay');
-  var list = menu.querySelector('.user-menu__list');
+  var overlay = menu.querySelector('.js-user-menu__overlay');
+  var list = menu.querySelector('.js-user-menu__list');
 
 
   var openDropdown = function () {

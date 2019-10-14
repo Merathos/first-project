@@ -13,8 +13,8 @@
     });
   };
 
-  var popupCommentAdd = document.querySelector('.comment-popup--add');
-  var btnsCommentAdd = document.querySelectorAll('[data-target="comment-add"]');
+  var popupCommentAdd = document.querySelector('.js-comment-popup--add');
+  var btnsCommentAdd = document.querySelectorAll('.js-comment-add');
 
   if (!popupCommentAdd && !btnsCommentAdd.length) {
     return;
@@ -22,8 +22,8 @@
 
   modal(btnsCommentAdd, popupCommentAdd);
 
-  var popupCommentEdit = document.querySelector('.comment-popup--edit');
-  var btnsCommentEdit = document.querySelectorAll('[data-target="comment-edit"]');
+  var popupCommentEdit = document.querySelector('.js-comment-popup--edit');
+  var btnsCommentEdit = document.querySelectorAll('.js-comment-edit');
 
   if (!popupCommentEdit && !btnsCommentEdit.length) {
     return;
@@ -31,8 +31,8 @@
 
   modal(btnsCommentEdit, popupCommentEdit);
 
-  var popupCommentYour = document.querySelector('.comment-popup--your');
-  var btnsCommentYour = document.querySelectorAll('[data-target="comment-your"]');
+  var popupCommentYour = document.querySelector('.js-comment-popup--your');
+  var btnsCommentYour = document.querySelectorAll('.js-comment-your');
 
   if (!popupCommentYour && !btnsCommentYour.length) {
     return;

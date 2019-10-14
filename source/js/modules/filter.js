@@ -2,7 +2,7 @@
 
 
 (function () {
-  var filter = document.querySelector('.filter');
+  var filter = document.querySelector('.js-filter');
 
 
   if (!filter) {
@@ -10,7 +10,7 @@
   }
 
 
-  var openBtn = filter.querySelector('.filter__open-btn');
+  var openBtn = filter.querySelector('.js-filter__open-btn');
 
   var onOpenBtnClick = function (evt) {
     filter.classList.toggle('filter--open');

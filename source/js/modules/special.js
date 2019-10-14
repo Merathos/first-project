@@ -19,7 +19,7 @@
 
     var popupCloseBtn = popup.querySelector('.js-close-popup');
     var btns = popup.querySelectorAll('[data-property]');
-    var resetBtn = popup.querySelector('.special-popup__reset');
+    var resetBtn = popup.querySelector('.js-special-popup__reset');
 
 
     var toggleProperty = function (btn) {

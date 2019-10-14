@@ -2,7 +2,7 @@
 
 
 (function () {
-  var upBtn = document.querySelector('.page-body__up-btn');
+  var upBtn = document.querySelector('.js-page-body__up-btn');
   var container = document.querySelector('footer .container');
 
   if (!upBtn) {

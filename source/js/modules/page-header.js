@@ -2,14 +2,14 @@
 
 
 (function () {
-  var header = document.querySelector('.page-header');
+  var header = document.querySelector('.js-page-header');
 
   if (!header) {
     return;
   }
 
 
-  var headerBar = header.querySelector('.page-header__bar');
+  var headerBar = header.querySelector('.js-page-header__bar');
 
 
   var adjustHeaderAppearance = function () {

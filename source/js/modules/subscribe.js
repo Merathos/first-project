@@ -2,7 +2,7 @@
 
 
 (function () {
-  var subscribeLink = document.querySelector('.social__link--subscribe, .social__link--unsubscribe');
+  var subscribeLink = document.querySelector('.js-social__link--subscribe, .js-social__link--unsubscribe');
 
   if (!subscribeLink) {
     return;

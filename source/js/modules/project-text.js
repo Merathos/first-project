@@ -2,7 +2,7 @@
 
 
 (function () {
-  var textItems = document.querySelectorAll('.project-page__text');
+  var textItems = document.querySelectorAll('.js-project-page__text');
 
   if (!textItems.length) {
     return;
@@ -32,7 +32,7 @@
   };
 
   var onDocumentClick = function (evt) {
-    if (evt.target.classList.contains('project-page__text-btn')) {
+    if (evt.target.classList.contains('js-project-page__text-btn')) {
       toggleTextContent(evt.target);
     }
   };
