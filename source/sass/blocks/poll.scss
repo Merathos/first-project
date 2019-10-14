@@ -135,6 +135,10 @@
   padding-left: 24px;
   background-image: linear-gradient(var(--color-bg-secondary-transparent, rgba($color-bg, 0)), var(--color-bg-secondary, $color-bg) 35px);
   border-radius: $border-radius;
+
+  @media (max-width: $desktop-width - 1) {
+    display: block;
+  }
 }
 
 .poll__button {
@@ -205,7 +209,6 @@ span.poll__hide {
   & .poll__button {
     width: 360px;
     margin-top: 0;
-    margin-bottom: 40px;
 
     @media (max-width: $tablet-width - 1) {
       margin-top: 14px;
@@ -214,7 +217,6 @@ span.poll__hide {
     @media (max-width: $mobile-max-width) {
       width: 100%;
       margin-top: 10px;
-      margin-bottom: 32px;
     }
   }
 }
