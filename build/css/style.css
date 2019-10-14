@@ -3455,6 +3455,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     font-size: 24px; }
   .special-popup__btn-size--largest {
     font-size: 32px; }
+  .special-popup__btn-size span {
+    pointer-events: none; }
   .special-popup__btn-size.active::after {
     content: "";
     position: absolute;
@@ -4516,7 +4518,6 @@ span.poll__hide {
       margin: 0; } }
   @media (max-width: 767px) {
     .cookie__button {
-      width: calc(100% - 58px);
       -ms-flex-item-align: start;
           align-self: flex-start; } }
 

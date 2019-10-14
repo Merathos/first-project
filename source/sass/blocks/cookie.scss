@@ -65,7 +65,6 @@
   }
 
   @include mobile {
-    width: calc(100% - 58px);
     align-self: flex-start;
   }
 }
