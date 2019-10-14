@@ -142,3 +142,21 @@
     line-height: rem(22px);
   }
 }
+
+
+@media (min-width: $desktop-width) {
+  .project-meta__fovorite-btn[data-tooltip][data-flow^="down"] {
+    &::before,
+    &::after {
+      transform: translate(-50%, 10px);
+    }
+
+    &::before {
+      top: calc(100% - 5px);
+    }
+
+    &::after {
+      top: 100%;
+    }
+  }
+}

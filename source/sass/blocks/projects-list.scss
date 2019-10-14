@@ -1,4 +1,5 @@
 .projects-list {
+  margin-bottom: 24px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
@@ -12,6 +13,7 @@
 
 @include tablet {
   .projects-list {
+    margin-bottom: 48px;
     grid-template-columns: 1fr 1fr;
   }
 }
@@ -19,6 +21,7 @@
 
 @include mobile {
   .projects-list {
+    margin-bottom: 40px;
     display: block;
 
     .project-item {
