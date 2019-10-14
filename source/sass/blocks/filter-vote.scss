@@ -1,0 +1,30 @@
+.filter-vote {
+  & .ss-main .ss-multi-selected,
+  .ss-main .ss-single-selected,
+  .ss-main .ss-single-selected .placeholder,
+  .ss-main .ss-single-selected .placeholder .ss-disabled {
+    font-size: rem(15px);
+    line-height: rem(20px);
+  }
+
+  & .ss-main .ss-content {
+    width: 146px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  & .ss-main .ss-content:not(.ss-open) {
+    pointer-events: none;
+  }
+
+  & .ss-main .ss-content .ss-list {
+    width: 146px;
+    height: auto;
+  }
+
+  & .ss-main .ss-single-selected .ss-arrow span {
+    width: 8px;
+    height: 8px;
+  }
+}

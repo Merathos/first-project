@@ -30,6 +30,11 @@
 
 .page-footer__list {
   @include list-reset;
+  margin-right: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .page-footer__item {
@@ -52,7 +57,36 @@
 
   & a {
     align-self: flex-start;
+    text-decoration: none;
+    outline: none;
+    transition: color $style-change-duration;
+    color: var(--color-text, $blue-default);
+
+    &:focus {
+      color: var(--color-interactive-default, $blue-accent);
+    }
+
+    &:focus:not(.focus-visible) {
+      color: var(--color-text, $blue-default);
+    }
+
+    &:active:not(.focus-visible) {
+      color: var(--color-interactive-default, $blue-accent);
+    }
+
+    @media (min-width: $desktop-width) {
+      &:hover:not(.focus-visible) {
+        color: var(--color-interactive-default, $blue-accent);
+      }
+    }
   }
+}
+
+.mod-theme-inverse .page-footer__item a,
+.mod-theme-blue .page-footer__item a,
+.mod-theme-comfort .page-footer__item a,
+.mod-theme-brown .page-footer__item a {
+  text-decoration: underline;
 }
 
 .page-footer__bottom {

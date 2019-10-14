@@ -81,6 +81,15 @@
       margin-bottom: 0;
     }
   }
+
+  .article-link,
+  .video-link {
+    margin-bottom: 48px;
+
+    @media (max-width: $mobile-max-width) {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .news-item__list {
