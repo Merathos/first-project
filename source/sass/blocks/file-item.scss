@@ -65,6 +65,13 @@
   margin-right: 12px;
 }
 
+.mod-theme-inverse .file-item svg,
+.mod-theme-blue .file-item svg,
+.mod-theme-comfort .file-item svg,
+.mod-theme-brown .file-item svg {
+  display: none;
+}
+
 .file-item__info {
   flex-grow: 1;
   margin: 0;
@@ -78,14 +85,36 @@
   text-overflow: ellipsis;
 }
 
+.mod-theme-inverse .file-item--white .file-item__name,
+.mod-theme-blue .file-item--white .file-item__name,
+.mod-theme-comfort .file-item--white .file-item__name,
+.mod-theme-brown .file-item--white .file-item__name {
+  text-decoration: underline;
+}
+
+.mod-theme-inverse .file-item--white .file-item__name,
+.mod-theme-brown .file-item--white .file-item__name {
+  color: var(--color-bg-main);
+}
+
 .file-item__size {
   font-size: 300;
   text-transform: uppercase;
   color: var(--color-text, $grey-default);
 }
 
-.file-item--white .file-item__size {
+.file-item--white .file-item--white .file-item__size {
   color: $light-blue-accent;
+}
+
+.mod-theme-blue .file-item--white .file-item__size,
+.mod-theme-comfort .file-item--white .file-item__size {
+  color: $white;
+}
+
+.mod-theme-inverse .file-item--white .file-item__size,
+.mod-theme-brown .file-item--white .file-item__size {
+  color: var(--color-bg-main);
 }
 
 

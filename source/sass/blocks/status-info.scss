@@ -4,12 +4,17 @@
   align-items: center;
   padding: 24px 32px;
   color: $white;
-  background-color: $blue-default;
+  background-color: var(--color-text, $blue-default);
   border-radius: $border-radius;
 
   &--accent {
-    background-color: $orange;
+    background-color: var(--color-text, $orange);
   }
+}
+
+.mod-theme-inverse .status-info,
+.mod-theme-brown .status-info {
+  color: var(--color-bg-main);
 }
 
 .status-info__text-group {
@@ -24,7 +29,7 @@
     height: 24px;
     margin-right: 12px;
     fill: none;
-    stroke: $white;
+    stroke: currentColor;
   }
 }
 
