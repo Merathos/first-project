@@ -4,7 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-shrink: 0;
-  width: 395px;
+  width: rem(395px);
   padding: 24px 16px;
   margin-left: 20px;
 
@@ -13,7 +13,7 @@
 
   @media (max-width: $tablet-width - 1) {
     justify-content: space-around;
-    width: 369px;
+    width: rem(369px);
     padding: 16px 16px;
   }
 
@@ -22,7 +22,7 @@
     margin-top: 24px;
   }
 
-  @media (max-width: $mobile-max-width) {
+  @media (max-width: 500px) {
     width: 100%;
     padding: 16px 8px;
   }
@@ -35,7 +35,7 @@
     margin: 0 16px;
   }
 
-  @media (max-width: $mobile-max-width) {
+  @media (max-width: 500px) {
     margin: 0 8px;
   }
 }

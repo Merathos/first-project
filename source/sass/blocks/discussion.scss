@@ -234,7 +234,6 @@
   & .discussion__button {
     width: 360px;
     margin-top: 24px;
-    margin-bottom: 40px;
 
     @media (max-width: $tablet-width - 1) {
       margin-top: 48px;
@@ -243,7 +242,6 @@
     @media (max-width: $mobile-max-width) {
       width: 100%;
       margin-top: 40px;
-      margin-bottom: 32px;
     }
   }
 }
