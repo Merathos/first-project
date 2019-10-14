@@ -13,8 +13,8 @@
     });
   };
 
-  var popupCommentAdd = document.querySelector('.comment-popup--add');
-  var btnsCommentAdd = document.querySelectorAll('[data-target="comment-add"]');
+  var popupCommentAdd = document.querySelector('.js-comment-popup--add');
+  var btnsCommentAdd = document.querySelectorAll('.js-comment-add');
 
   if (!popupCommentAdd && !btnsCommentAdd.length) {
     return;
@@ -22,8 +22,8 @@
 
   modal(btnsCommentAdd, popupCommentAdd);
 
-  var popupCommentEdit = document.querySelector('.comment-popup--edit');
-  var btnsCommentEdit = document.querySelectorAll('[data-target="comment-edit"]');
+  var popupCommentEdit = document.querySelector('.js-comment-popup--edit');
+  var btnsCommentEdit = document.querySelectorAll('.js-comment-edit');
 
   if (!popupCommentEdit && !btnsCommentEdit.length) {
     return;
@@ -31,8 +31,8 @@
 
   modal(btnsCommentEdit, popupCommentEdit);
 
-  var popupCommentYour = document.querySelector('.comment-popup--your');
-  var btnsCommentYour = document.querySelectorAll('[data-target="comment-your"]');
+  var popupCommentYour = document.querySelector('.js-comment-popup--your');
+  var btnsCommentYour = document.querySelectorAll('.js-comment-your');
 
   if (!popupCommentYour && !btnsCommentYour.length) {
     return;
@@ -44,13 +44,13 @@
 'use strict';
 
 (function () {
-  var form = document.querySelector('.answers__form');
+  var form = document.querySelector('.js-answers__form');
   if (!form) {
     return;
   }
-  var inputCount = form.querySelector('#count-answer');
-  var inputContainer = document.querySelector('.answers__count');
-  var countAll = document.querySelector('.answers__all-count');
+  var inputCount = form.querySelector('.js-count-answer');
+  var inputContainer = document.querySelector('.js-answers__count');
+  var countAll = document.querySelector('.js-answers__all-count');
 
   if (!inputCount && !inputContainer && !countAll) {
     return;
@@ -113,7 +113,7 @@
 (function () {
   var hideClass = 'js_hide';
   var cookieBlock = document.querySelector('.js_cookie');
-  var button = document.querySelector('.js_cookie .js_btn');
+  var button = document.querySelector('.js-cookie__button');
 
   if (cookieBlock && button) {
     document.body.classList.add('page-body--cookie');
@@ -129,7 +129,7 @@
 
 
 (function () {
-  var filterVote = document.querySelector('.filter-vote');
+  var filterVote = document.querySelector('.js-filter-vote');
 
   if (!filterVote) {
     return;
@@ -141,7 +141,7 @@
 
   var addSelect = function () {
     return new window.SlimSelect({
-      select: '.filter-vote select',
+      select: '.js-filter-vote select',
       showSearch: false,
       allowDeselect: true,
       placeholder: 'Голосовал',
@@ -158,7 +158,7 @@
 
 
 (function () {
-  var filter = document.querySelector('.filter');
+  var filter = document.querySelector('.js-filter');
 
 
   if (!filter) {
@@ -166,7 +166,7 @@
   }
 
 
-  var openBtn = filter.querySelector('.filter__open-btn');
+  var openBtn = filter.querySelector('.js-filter__open-btn');
 
   var onOpenBtnClick = function (evt) {
     filter.classList.toggle('filter--open');
@@ -225,20 +225,20 @@
 
 
 (function () {
-  var popup = document.querySelector('.gallery-popup');
+  var popup = document.querySelector('.js-gallery-popup');
 
   if (!popup) {
     return;
   }
 
 
-  var slider = popup.querySelector('.swiper-container');
-  var prevBtn = popup.querySelector('.gallery-popup__nav-btn--prev');
-  var nextBtn = popup.querySelector('.gallery-popup__nav-btn--next');
+  var slider = popup.querySelector('.js-gallery-popup__frame');
+  var prevBtn = popup.querySelector('.js-gallery-popup__nav-btn--prev');
+  var nextBtn = popup.querySelector('.js-gallery-popup__nav-btn--next');
 
-  var description = popup.querySelector('.gallery-popup__photo-description');
-  var currentCounter = popup.querySelector('.gallery-popup__counter-current');
-  var totalCounter = popup.querySelector('.gallery-popup__counter-total');
+  var description = popup.querySelector('.js-gallery-popup__photo-description');
+  var currentCounter = popup.querySelector('.js-gallery-popup__counter-current');
+  var totalCounter = popup.querySelector('.js-gallery-popup__counter-total');
 
   var swiper = null;
 
@@ -349,7 +349,7 @@
 
 
 (function () {
-  var switcher = document.querySelector('.location-switcher');
+  var switcher = document.querySelector('.js-location-switcher');
 
 
   if (!switcher) {
@@ -364,7 +364,7 @@
 
 
 (function () {
-  var header = document.querySelector('.page-header');
+  var header = document.querySelector('.js-page-header');
 
 
   if (!header) {
@@ -375,12 +375,12 @@
   var windowWidth = document.documentElement.clientWidth;
 
 
-  var topBar = header.querySelector('.page-header__bar');
+  var topBar = header.querySelector('.js-page-header__bar');
 
-  var menu = header.querySelector('.main-menu');
+  var menu = header.querySelector('.js-main-menu');
   var menuContainer = menu.querySelector('.container');
 
-  var menuBtn = header.querySelector('.menu-btn');
+  var menuBtn = header.querySelector('.js-menu-btn');
   var menuBtnText = menuBtn.querySelector('.menu-btn__text');
 
   var specialBtn = document.querySelectorAll('.js-open-popup');
@@ -441,14 +441,14 @@
 
 
 (function () {
-  var header = document.querySelector('.page-header');
+  var header = document.querySelector('.js-page-header');
 
   if (!header) {
     return;
   }
 
 
-  var headerBar = header.querySelector('.page-header__bar');
+  var headerBar = header.querySelector('.js-page-header__bar');
 
 
   var adjustHeaderAppearance = function () {
@@ -491,7 +491,7 @@
 
 
 (function () {
-  var popups = document.querySelectorAll('.popup');
+  var popups = document.querySelectorAll('.js-popup');
 
 
   window.openPopup = function (popup) {
@@ -515,8 +515,8 @@
 
 
   popups.forEach(function (popup) {
-    var overlay = popup.querySelector('.popup__overlay');
-    var closeBtn = popup.querySelector('.popup__close-btn');
+    var overlay = popup.querySelector('.js-popup__overlay');
+    var closeBtn = popup.querySelector('.js-popup__close-btn');
 
 
     overlay.addEventListener('click', function () {
@@ -536,7 +536,7 @@
 
 
 (function () {
-  var panel = document.querySelector('.project-page__panel');
+  var panel = document.querySelector('.js-project-page__panel');
 
   if (!panel) {
     return;
@@ -546,7 +546,7 @@
   panel.classList.add('project-page__panel--js');
 
   (function () {
-    return new window.Sticky('.project-page__panel');
+    return new window.Sticky('.js-project-page__panel');
   })();
 })();
 
@@ -554,7 +554,7 @@
 
 
 (function () {
-  var textItems = document.querySelectorAll('.project-page__text');
+  var textItems = document.querySelectorAll('.js-project-page__text');
 
   if (!textItems.length) {
     return;
@@ -584,7 +584,7 @@
   };
 
   var onDocumentClick = function (evt) {
-    if (evt.target.classList.contains('project-page__text-btn')) {
+    if (evt.target.classList.contains('js-project-page__text-btn')) {
       toggleTextContent(evt.target);
     }
   };
@@ -649,25 +649,25 @@
 'use strict';
 
 (function () {
-  var vote = document.querySelector('.project-vote');
-  var popup = document.querySelector('.vote-popup');
+  var vote = document.querySelector('.js-project-vote');
+  var popup = document.querySelector('.js-vote-popup');
 
   if (!vote || !popup) {
     return;
   }
 
 
-  var submitForm = vote.querySelector('.project-vote__submit-form form');
-  var revokeBtn = vote.querySelector('.project-vote__revoke-btn');
+  var submitForm = vote.querySelector('.js-project-vote__submit-form form');
+  var revokeBtn = vote.querySelector('.js-project-vote__revoke-btn');
 
-  var popupBtn = popup.querySelector('.vote-popup__revoke-btn');
+  var popupBtn = popup.querySelector('.js-vote-popup__revoke-btn');
 
   var popupShownTimeout = null;
 
-  var approveValue = +vote.querySelector('.vote-results__value--approve').textContent.replace(/\s+/g, '');
-  var rejectValue = +vote.querySelector('.vote-results__value--reject').textContent.replace(/\s+/g, '');
+  var approveValue = +vote.querySelector('.js-vote-results__value--approve').textContent.replace(/\s+/g, '');
+  var rejectValue = +vote.querySelector('.js-vote-results__value--reject').textContent.replace(/\s+/g, '');
 
-  var scaleIndicator = vote.querySelector('.vote-results__indicator');
+  var scaleIndicator = vote.querySelector('.js-vote-results__indicator');
 
 
   var onSubmitFormClick = function (evt) {
@@ -711,7 +711,7 @@
 
 
 (function () {
-  var list = document.querySelector('.projects-list');
+  var list = document.querySelector('.js-projects-list');
 
   if (!list) {
     return;
@@ -729,7 +729,7 @@
 'use strict';
 
 (function () {
-  var rangeSlider = document.getElementById('poll-range');
+  var rangeSlider = document.querySelector('js-poll-range');
   if (!rangeSlider) {
     return;
   }
@@ -822,7 +822,7 @@
 
     var popupCloseBtn = popup.querySelector('.js-close-popup');
     var btns = popup.querySelectorAll('[data-property]');
-    var resetBtn = popup.querySelector('.special-popup__reset');
+    var resetBtn = popup.querySelector('.js-special-popup__reset');
 
 
     var toggleProperty = function (btn) {
@@ -919,7 +919,7 @@
 
 
 (function () {
-  var subscribeLink = document.querySelector('.social__link--subscribe, .social__link--unsubscribe');
+  var subscribeLink = document.querySelector('.js-social__link--subscribe, .js-social__link--unsubscribe');
 
   if (!subscribeLink) {
     return;
@@ -951,14 +951,14 @@
 'use strict';
 
 (function () {
-  var textContainers = document.querySelectorAll('.text-hidden');
+  var textContainers = document.querySelectorAll('.js-text-hidden');
   if (!textContainers.length) {
     return;
   }
 
   Array.prototype.forEach.call(textContainers, function (textContainer) {
-    var btnTextOpen = textContainer.querySelector('.text-hidden__btn');
-    var btnText = textContainer.querySelector('.text-hidden__btn span');
+    var btnTextOpen = textContainer.querySelector('.js-text-hidden__btn');
+    var btnText = btnTextOpen.querySelector('span');
     var text = textContainer.querySelector('.text-hidden__container');
     var btnContainer = textContainer.querySelector('.answers__button-wrapper');
     if (!btnTextOpen && !text && !btnContainer) {
@@ -978,12 +978,15 @@
 
 
 (function () {
-  var upBtn = document.querySelector('.page-body__up-btn');
+  var upBtn = document.querySelector('.js-page-body__up-btn');
   var container = document.querySelector('footer .container');
 
   if (!upBtn) {
     return;
   }
+
+
+  var cookieBtn = document.querySelector('.js-cookie__button');
 
 
   var onUpBtnClick = function (evt) {
@@ -1005,6 +1008,10 @@
         upBtn.style.left = '';
         upBtn.style.right = '16px';
       }
+
+      if (cookieBtn) {
+        upBtn.style.bottom = window.innerHeight - cookieBtn.getBoundingClientRect().bottom + 'px';
+      }
     };
 
     var onWindowResize = function () {
@@ -1017,14 +1024,28 @@
   }
 
 
+  var onDocumentClick = function (evt) {
+    if ((evt.target.classList.contains('js-special-popup__btn-size') || evt.target.classList.contains('js-special-popup__reset')) && cookieBtn) {
+      var cookieBtnHeight = cookieBtn.offsetHeight;
+      var cookieBtnBottom = window.innerHeight - cookieBtn.getBoundingClientRect().bottom;
+
+      upBtn.style.height = cookieBtnHeight + 'px';
+      upBtn.style.width = cookieBtnHeight + 'px';
+      upBtn.style.bottom = cookieBtnBottom + 'px';
+    }
+  };
+
+
   upBtn.addEventListener('click', onUpBtnClick);
+
+  document.addEventListener('click', onDocumentClick);
 })();
 
 'use strict';
 
 
 (function () {
-  var menu = document.querySelector('.user-menu');
+  var menu = document.querySelector('.js-user-menu');
 
 
   if (!menu) {
@@ -1032,11 +1053,11 @@
   }
 
 
-  var menuBtn = menu.querySelector('.user-menu__dropdown-btn');
+  var menuBtn = menu.querySelector('.js-user-menu__dropdown-btn');
   var menuBtnText = menuBtn.querySelector('.user-menu__dropdown-btn-text');
 
-  var overlay = menu.querySelector('.user-menu__overlay');
-  var list = menu.querySelector('.user-menu__list');
+  var overlay = menu.querySelector('.js-user-menu__overlay');
+  var list = menu.querySelector('.js-user-menu__list');
 
 
   var openDropdown = function () {

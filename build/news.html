@@ -43,19 +43,19 @@
 
         <ul class="special-popup__list">
           <li class="special-popup__item">
-            <button class="special-popup__btn-size special-popup__btn-size--default active" data-property="font-size" data-value="default" type="button">
+            <button class="special-popup__btn-size special-popup__btn-size--default js-special-popup__btn-size active" data-property="font-size" data-value="default" type="button">
               <span>A</span>
             </button>
           </li>
 
           <li class="special-popup__item">
-            <button class="special-popup__btn-size special-popup__btn-size--larger" data-property="font-size" data-value="larger" type="button">
+            <button class="special-popup__btn-size special-popup__btn-size--larger js-special-popup__btn-size" data-property="font-size" data-value="larger" type="button">
               <span>A</span>
             </button>
           </li>
 
           <li class="special-popup__item">
-            <button class="special-popup__btn-size special-popup__btn-size--largest" data-property="font-size" data-value="largest" type="button">
+            <button class="special-popup__btn-size special-popup__btn-size--largest js-special-popup__btn-size" data-property="font-size" data-value="largest" type="button">
               <span>A</span>
             </button>
           </li>
@@ -123,13 +123,13 @@
       </div>
     </div>
 
-    <button type="button" class="special-popup__reset button button--blue" disabled="">Сбросить всё</button>
+    <button type="button" class="special-popup__reset js-special-popup__reset button button--blue" disabled="">Сбросить всё</button>
   </div>
 </section>
 
 
-    <header class="page-header">
-  <div class="page-header__bar">
+    <header class="page-header js-page-header">
+  <div class="page-header__bar js-page-header__bar">
     <div class="page-header__container container">
       <a class="page-header__roi-logo logo-link" href="#">
         <span class="visually-hidden">Перейти на сайт российской общественной инициативы</span>
@@ -156,16 +156,16 @@
         Версия для слабовидящих
       </a>
 
-      <button class="page-header__menu-btn menu-btn" type="button">
+      <button class="page-header__menu-btn menu-btn js-menu-btn" type="button">
         <span class="menu-btn__text visually-hidden">Открыть основное меню</span>
         <span class="menu-btn__icon"></span>
       </button>
     </div>
   </div>
 
-  <div class="page-header__main-menu main-menu">
+  <div class="page-header__main-menu main-menu js-main-menu">
     <div class="container">
-      <div class="page-header__location-switcher location-switcher">
+      <div class="page-header__location-switcher location-switcher js-location-switcher">
         <p class="visually-hidden">Выберите регион голосования:</p>
 
         <form action="#" method="post">
@@ -196,10 +196,10 @@
         Версия для слабовидящих
       </a>
 
-      <nav class="page-header__user-menu user-menu">
-        <div class="user-menu__overlay"></div>
+      <nav class="page-header__user-menu user-menu js-user-menu">
+        <div class="user-menu__overlay js-user-menu__overlay"></div>
 
-        <button class="user-menu__dropdown-btn link link--black" type="button">
+        <button class="user-menu__dropdown-btn js-user-menu__dropdown-btn link link--black" type="button">
           <span class="user-menu__dropdown-btn-text visually-hidden">Открыть меню пользователя</span>
 
           <svg class="user-menu__user-icon" width="16" height="16">
@@ -213,7 +213,7 @@
           </svg>
         </button>
 
-        <ul class="user-menu__list">
+        <ul class="user-menu__list js-user-menu__list">
           <li class="user-menu__item">
             <a class="user-menu__link link link--black" href="#">Избранное</a>
           </li>
@@ -431,7 +431,7 @@
   </div>
 </footer>
 
-    <button class="page-body__up-btn" type="button">
+    <button class="page-body__up-btn js-page-body__up-btn" type="button">
   <svg width="20" height="12" viewbox="0 0 33 12">
     <use xlink:href="img/sprite.svg#icon-arrow"></use>
   </svg>

@@ -2,7 +2,7 @@
 
 
 (function () {
-  var header = document.querySelector('.page-header');
+  var header = document.querySelector('.js-page-header');
 
 
   if (!header) {
@@ -13,12 +13,12 @@
   var windowWidth = document.documentElement.clientWidth;
 
 
-  var topBar = header.querySelector('.page-header__bar');
+  var topBar = header.querySelector('.js-page-header__bar');
 
-  var menu = header.querySelector('.main-menu');
+  var menu = header.querySelector('.js-main-menu');
   var menuContainer = menu.querySelector('.container');
 
-  var menuBtn = header.querySelector('.menu-btn');
+  var menuBtn = header.querySelector('.js-menu-btn');
   var menuBtnText = menuBtn.querySelector('.menu-btn__text');
 
   var specialBtn = document.querySelectorAll('.js-open-popup');

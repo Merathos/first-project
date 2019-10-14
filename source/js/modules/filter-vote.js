@@ -2,7 +2,7 @@
 
 
 (function () {
-  var filterVote = document.querySelector('.filter-vote');
+  var filterVote = document.querySelector('.js-filter-vote');
 
   if (!filterVote) {
     return;
@@ -14,7 +14,7 @@
 
   var addSelect = function () {
     return new window.SlimSelect({
-      select: '.filter-vote select',
+      select: '.js-filter-vote select',
       showSearch: false,
       allowDeselect: true,
       placeholder: 'Голосовал',

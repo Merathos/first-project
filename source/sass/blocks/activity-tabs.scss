@@ -68,6 +68,12 @@
   &:last-child {
     padding-right: 40px;
   }
+
+  @include tablet {
+    &--active:not(:last-child) {
+      order: -1;
+    }
+  }
 }
 
 .activity-tabs__link {
@@ -95,12 +101,12 @@
     background-repeat: no-repeat;
     background-size: 100% 2px;
   }
+}
 
-  &--active {
-    color: var(--color-interactive-default, $blue-default);
-    background-image: linear-gradient(var(--color-interactive-default, $blue-default), var(--color-interactive-default, $blue-default));
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    background-size: 100% 2px;
-  }
+.activity-tabs__item--active .activity-tabs__link {
+  color: var(--color-interactive-default, $blue-default);
+  background-image: linear-gradient(var(--color-interactive-default, $blue-default), var(--color-interactive-default, $blue-default));
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
 }

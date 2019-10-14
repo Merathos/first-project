@@ -43,19 +43,19 @@
 
         <ul class="special-popup__list">
           <li class="special-popup__item">
-            <button class="special-popup__btn-size special-popup__btn-size--default active" data-property="font-size" data-value="default" type="button">
+            <button class="special-popup__btn-size special-popup__btn-size--default js-special-popup__btn-size active" data-property="font-size" data-value="default" type="button">
               <span>A</span>
             </button>
           </li>
 
           <li class="special-popup__item">
-            <button class="special-popup__btn-size special-popup__btn-size--larger" data-property="font-size" data-value="larger" type="button">
+            <button class="special-popup__btn-size special-popup__btn-size--larger js-special-popup__btn-size" data-property="font-size" data-value="larger" type="button">
               <span>A</span>
             </button>
           </li>
 
           <li class="special-popup__item">
-            <button class="special-popup__btn-size special-popup__btn-size--largest" data-property="font-size" data-value="largest" type="button">
+            <button class="special-popup__btn-size special-popup__btn-size--largest js-special-popup__btn-size" data-property="font-size" data-value="largest" type="button">
               <span>A</span>
             </button>
           </li>
@@ -123,13 +123,13 @@
       </div>
     </div>
 
-    <button type="button" class="special-popup__reset button button--blue" disabled="">Сбросить всё</button>
+    <button type="button" class="special-popup__reset js-special-popup__reset button button--blue" disabled="">Сбросить всё</button>
   </div>
 </section>
 
 
-    <header class="page-header">
-  <div class="page-header__bar">
+    <header class="page-header js-page-header">
+  <div class="page-header__bar js-page-header__bar">
     <div class="page-header__container container">
       <a class="page-header__roi-logo logo-link" href="#">
         <span class="visually-hidden">Перейти на сайт российской общественной инициативы</span>
@@ -156,16 +156,16 @@
         Версия для слабовидящих
       </a>
 
-      <button class="page-header__menu-btn menu-btn" type="button">
+      <button class="page-header__menu-btn menu-btn js-menu-btn" type="button">
         <span class="menu-btn__text visually-hidden">Открыть основное меню</span>
         <span class="menu-btn__icon"></span>
       </button>
     </div>
   </div>
 
-  <div class="page-header__main-menu main-menu">
+  <div class="page-header__main-menu main-menu js-main-menu">
     <div class="container">
-      <div class="page-header__location-switcher location-switcher">
+      <div class="page-header__location-switcher location-switcher js-location-switcher">
         <p class="visually-hidden">Выберите регион голосования:</p>
 
         <form action="#" method="post">
@@ -196,10 +196,10 @@
         Версия для слабовидящих
       </a>
 
-      <nav class="page-header__user-menu user-menu">
-        <div class="user-menu__overlay"></div>
+      <nav class="page-header__user-menu user-menu js-user-menu">
+        <div class="user-menu__overlay js-user-menu__overlay"></div>
 
-        <button class="user-menu__dropdown-btn link link--black" type="button">
+        <button class="user-menu__dropdown-btn js-user-menu__dropdown-btn link link--black" type="button">
           <span class="user-menu__dropdown-btn-text visually-hidden">Открыть меню пользователя</span>
 
           <svg class="user-menu__user-icon" width="16" height="16">
@@ -213,7 +213,7 @@
           </svg>
         </button>
 
-        <ul class="user-menu__list">
+        <ul class="user-menu__list js-user-menu__list">
           <li class="user-menu__item">
             <a class="user-menu__link link link--black" href="#">Избранное</a>
           </li>
@@ -281,7 +281,7 @@
               </div>
             </div>
 
-            <div class="project-page__panel project-vote" data-margin-top="90" data-sticky-for="1199">
+            <div class="project-page__panel js-project-page__panel project-vote js-project-vote" data-margin-top="90" data-sticky-for="1199">
               <div class="project-vote__container project-vote__container--meta">
                 <h2 class="project-vote__title">Голосование</h2>
 
@@ -308,18 +308,18 @@
                   <p class="vote-results__output">
                     <span class="visually-hidden">Соотношение голосов:</span>
 
-                    <span class="vote-results__value vote-results__value--approve">1 057</span>&nbsp;<span>за</span>
+                    <span class="vote-results__value vote-results__value--approve js-vote-results__value--approve">1 057</span>&nbsp;<span>за</span>
 
-                    <span class="vote-results__value vote-results__value--reject">47</span>&nbsp;<span>против</span>
+                    <span class="vote-results__value vote-results__value--reject js-vote-results__value--reject">47</span>&nbsp;<span>против</span>
                   </p>
 
                   <div class="vote-results__scale">
-                    <div class="vote-results__indicator"></div>
+                    <div class="vote-results__indicator js-vote-results__indicator"></div>
                   </div>
                 </div>
 
 
-                <div class="project-vote__submit-form">
+                <div class="project-vote__submit-form js-project-vote__submit-form">
                   <form action="#" method="post">
                     <label class="project-vote__vote-btn project-vote__vote-btn--approve" tabindex="0">
                       <input type="radio" name="vote" value="approve">
@@ -355,7 +355,7 @@
 
                 <div class="project-vote__revoke-form">
                   <form action="#" method="post">
-                    <button class="project-vote__revoke-btn" type="submit" name="revoke-vote">Отозвать голос</button>
+                    <button class="project-vote__revoke-btn js-project-vote__revoke-btn" type="submit" name="revoke-vote">Отозвать голос</button>
                   </form>
                 </div>
               </div>
@@ -403,12 +403,12 @@
               </a>
             </div>
 
-            <div class="project-page__text">
+            <div class="project-page__text js-project-page__text">
               <div class="project-page__text-container">
                 <p>Здесь будет описание проекта (информация из стандартного поля). Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как текст-заполнитель или же текст-наполнитель. Иногда текст-«рыба» также используется композиторами при написании музыки. Они напевают его перед тем, как сочинены соответствующие слова. Уже в 16-том веке рыбные тексты имели широкое распространение у печатников.</p>
               </div>
 
-              <button class="project-page__text-btn link link--blue" type="button">
+              <button class="project-page__text-btn js-project-page__text-btn link link--blue" type="button">
                 <span class="project-page__text-btn-caption">Показать полностью</span>
                 <svg width="13" height="13">
                   <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
@@ -695,12 +695,12 @@
               </div>
             </div>
 
-            <div class="project-page__text">
+            <div class="project-page__text js-project-page__text">
               <div class="project-page__text-container">
                 <p>Короткий текст – длина от 0 до 256 символов. Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как текст-заполнитель или.</p>
               </div>
 
-              <button class="project-page__text-btn link link--blue" type="button">
+              <button class="project-page__text-btn js-project-page__text-btn link link--blue" type="button">
                 <span class="project-page__text-btn-caption">Показать полностью</span>
                 <svg width="13" height="13">
                   <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
@@ -726,7 +726,7 @@
               Дата проведенной экспертизы Дороги —&nbsp; <time datetime="2019-10-02">02.10.2019</time>
             </p>
 
-            <div class="project-page__text">
+            <div class="project-page__text js-project-page__text">
               <div class="project-page__text-container">
                 <p>Описание - 2000 символов. Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как текст-заполнитель или же текст-наполнитель. Иногда текст-«рыба» также используется композиторами при написании музыки. Они напевают его перед тем, как сочинены соответствующие слова. Уже в 16-том веке рыбные тексты имели широкое распространение у печатников.</p>
                 <p>Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке. Lorem ipsum был создан на псевдо-латыни, которая приблизительно соответствует настоящей латыни. Этот текст содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не имеет смысла, а лишь имитирует ритм большинства европейских языков использующих латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum хороши тем, что не привлекают к себе внимания и не отвлекают от дизайна.</p>
@@ -735,7 +735,7 @@
                 <p>Согласно большинству источников Lorem ipsum представляет собой отрывок одного из трактатов Цицерона и его корни уходят в 45 век до н. э.</p>
               </div>
 
-              <button class="project-page__text-btn link link--blue" type="button">
+              <button class="project-page__text-btn js-project-page__text-btn link link--blue" type="button">
                 <span class="project-page__text-btn-caption">Показать полностью</span>
                 <svg width="13" height="13">
                   <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
@@ -814,7 +814,7 @@
   </div>
 </footer>
 
-    <button class="page-body__up-btn" type="button">
+    <button class="page-body__up-btn js-page-body__up-btn" type="button">
   <svg width="20" height="12" viewbox="0 0 33 12">
     <use xlink:href="img/sprite.svg#icon-arrow"></use>
   </svg>
@@ -822,13 +822,13 @@
 </button>
 
 
-    <div class="gallery-popup popup">
+    <div class="gallery-popup js-gallery-popup popup js-popup">
       <div class="popup__container">
-        <div class="popup__overlay"></div>
+        <div class="popup__overlay js-popup__overlay"></div>
 
         <div class="gallery-popup__content popup__content">
           <div class="popup__bar popup__bar--top">
-            <button class="popup__close-btn" type="button">
+            <button class="popup__close-btn js-popup__close-btn" type="button">
               <span class="visually-hidden">Закрыть</span>
               <svg width="16" height="16">
                 <use xlink:href="img/sprite.svg#icon-cross"></use>
@@ -836,22 +836,22 @@
             </button>
           </div>
 
-          <div class="gallery-popup__frame swiper-container"></div>
+          <div class="gallery-popup__frame js-gallery-popup__frame swiper-container"></div>
 
-          <p class="gallery-popup__photo-description"></p>
+          <p class="gallery-popup__photo-description js-gallery-popup__photo-description"></p>
 
           <div class="popup__bar popup__bar--bottom">
-            <button class="gallery-popup__nav-btn gallery-popup__nav-btn--prev" type="button">
+            <button class="gallery-popup__nav-btn gallery-popup__nav-btn--prev js-gallery-popup__nav-btn--prev" type="button">
               <svg width="24" height="24">
                 <use xlink:href="img/sprite.svg#icon-paginator-prev"></use>
               </svg>
             </button>
 
             <p class="gallery-popup__counter">
-              <span class="gallery-popup__counter-current"></span>/<span class="gallery-popup__counter-total"></span>
+              <span class="gallery-popup__counter-current js-gallery-popup__counter-current"></span>/<span class="gallery-popup__counter-total js-gallery-popup__counter-total"></span>
             </p>
 
-            <button class="gallery-popup__nav-btn gallery-popup__nav-btn--next" type="button">
+            <button class="gallery-popup__nav-btn gallery-popup__nav-btn--next js-gallery-popup__nav-btn--next" type="button">
               <svg width="24" height="24">
                 <use xlink:href="img/sprite.svg#icon-paginator-next"></use>
               </svg>
@@ -861,7 +861,7 @@
       </div>
     </div>
 
-    <div class="vote-popup">
+    <div class="vote-popup js-vote-popup">
       <p class="vote-popup__text">
         <svg class="vote-popup__icon" width="20" height="20">
           <use xlink:href="img/sprite.svg#icon-attention"></use>
@@ -871,7 +871,7 @@
       </p>
 
       <form action="#" method="post">
-        <button class="vote-popup__revoke-btn" type="submit" name="revoke-vote">Отозвать</button>
+        <button class="vote-popup__revoke-btn js-vote-popup__revoke-btn" type="submit" name="revoke-vote">Отозвать</button>
       </form>
     </div>
 

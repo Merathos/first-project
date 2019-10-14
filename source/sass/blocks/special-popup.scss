@@ -223,6 +223,10 @@
     font-size: 32px;
   }
 
+  span {
+    pointer-events: none;
+  }
+
   &.active {
     &::after {
       content: "";

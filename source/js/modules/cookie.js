@@ -3,7 +3,7 @@
 (function () {
   var hideClass = 'js_hide';
   var cookieBlock = document.querySelector('.js_cookie');
-  var button = document.querySelector('.js_cookie .js_btn');
+  var button = document.querySelector('.js-cookie__button');
 
   if (cookieBlock && button) {
     document.body.classList.add('page-body--cookie');

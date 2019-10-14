@@ -2,7 +2,7 @@
 
 
 (function () {
-  var switcher = document.querySelector('.location-switcher');
+  var switcher = document.querySelector('.js-location-switcher');
 
 
   if (!switcher) {

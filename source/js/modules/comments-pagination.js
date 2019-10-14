@@ -1,13 +1,13 @@
 'use strict';
 
 (function () {
-  var form = document.querySelector('.answers__form');
+  var form = document.querySelector('.js-answers__form');
   if (!form) {
     return;
   }
-  var inputCount = form.querySelector('#count-answer');
-  var inputContainer = document.querySelector('.answers__count');
-  var countAll = document.querySelector('.answers__all-count');
+  var inputCount = form.querySelector('.js-count-answer');
+  var inputContainer = document.querySelector('.js-answers__count');
+  var countAll = document.querySelector('.js-answers__all-count');
 
   if (!inputCount && !inputContainer && !countAll) {
     return;

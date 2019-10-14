@@ -2,20 +2,20 @@
 
 
 (function () {
-  var popup = document.querySelector('.gallery-popup');
+  var popup = document.querySelector('.js-gallery-popup');
 
   if (!popup) {
     return;
   }
 
 
-  var slider = popup.querySelector('.swiper-container');
-  var prevBtn = popup.querySelector('.gallery-popup__nav-btn--prev');
-  var nextBtn = popup.querySelector('.gallery-popup__nav-btn--next');
+  var slider = popup.querySelector('.js-gallery-popup__frame');
+  var prevBtn = popup.querySelector('.js-gallery-popup__nav-btn--prev');
+  var nextBtn = popup.querySelector('.js-gallery-popup__nav-btn--next');
 
-  var description = popup.querySelector('.gallery-popup__photo-description');
-  var currentCounter = popup.querySelector('.gallery-popup__counter-current');
-  var totalCounter = popup.querySelector('.gallery-popup__counter-total');
+  var description = popup.querySelector('.js-gallery-popup__photo-description');
+  var currentCounter = popup.querySelector('.js-gallery-popup__counter-current');
+  var totalCounter = popup.querySelector('.js-gallery-popup__counter-total');
 
   var swiper = null;
 
