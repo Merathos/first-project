@@ -396,7 +396,8 @@
 
 @media print {
   .answers__button-wrapper,
-  .answers__pagination {
+  .answers__pagination,
+  .answers__top-wrapper {
     display: none;
   }
 }

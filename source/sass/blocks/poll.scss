@@ -47,6 +47,7 @@
   padding-bottom: 29px;
   background-color: var(--color-bg-secondary, $color-bg);
   border-radius: $border-radius;
+  text-decoration: none;
   cursor: pointer;
   transition: box-shadow $style-change-duration linear;
 
@@ -75,6 +76,10 @@
 
     .poll__link {
       display: block;
+
+      @media (max-width: $desktop-width - 1) {
+        display: none;
+      }
     }
   }
 }
@@ -137,7 +142,7 @@
   border-radius: $border-radius;
 
   @media (max-width: $desktop-width - 1) {
-    display: block;
+    display: none;
   }
 }
 
@@ -234,5 +239,10 @@ span.poll__hide {
 
   .poll__item::before {
     display: none;
+  }
+
+  .poll__item {
+    page-break-inside: avoid;
+    break-inside: avoid;
   }
 }

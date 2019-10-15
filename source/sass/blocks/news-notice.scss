@@ -175,3 +175,10 @@
     display: block;
   }
 }
+
+@media print {
+  .news-notice__item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+}

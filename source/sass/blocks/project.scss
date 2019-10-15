@@ -178,4 +178,9 @@
   .project__button {
     display: none;
   }
+
+  .project__item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
 }
