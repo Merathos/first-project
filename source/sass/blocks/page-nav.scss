@@ -58,3 +58,9 @@
     border-bottom: 2px dashed var(--color-interactive-default, $blue-default);
   }
 }
+
+@media print {
+  .page-nav {
+    display: none;
+  }
+}

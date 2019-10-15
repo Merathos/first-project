@@ -220,3 +220,19 @@ span.poll__hide {
     }
   }
 }
+
+@media print {
+  .poll__link,
+  .poll__archive-link,
+  .poll__archive-mobile {
+    display: none;
+  }
+
+  .poll__item--accent {
+    border: 2px solid $blue-default;
+  }
+
+  .poll__item::before {
+    display: none;
+  }
+}

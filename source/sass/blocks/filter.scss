@@ -113,3 +113,11 @@
     }
   }
 }
+
+@media print {
+  .filter__body,
+  .filter--open .filter__body,
+  .filter__open-btn {
+    display: none;
+  }
+}

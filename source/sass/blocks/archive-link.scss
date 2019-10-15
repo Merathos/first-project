@@ -31,3 +31,9 @@
     text-align: center;
   }
 }
+
+@media print {
+  .archive-link {
+    display: none;
+  }
+}

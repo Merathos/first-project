@@ -122,3 +122,13 @@
     color: var(--color-interactive-default, $blue-default);
   }
 }
+
+@media print {
+  .discussion-item__wrapper {
+    display: none;
+  }
+
+  .discussion-item__img-wrapper {
+    display: none;
+  }
+}

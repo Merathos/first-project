@@ -393,3 +393,10 @@
     animation: tooltips-vert 300ms ease-out forwards;
   }
 }
+
+@media print {
+  .answers__button-wrapper,
+  .answers__pagination {
+    display: none;
+  }
+}

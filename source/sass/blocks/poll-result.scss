@@ -63,3 +63,9 @@
 .poll-result__caption {
   color: var(--color-text, $grey-default);
 }
+
+@media print {
+  .poll-result__fill {
+    display: none;
+  }
+}
