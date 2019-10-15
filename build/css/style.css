@@ -5828,15 +5828,6 @@ span.poll__hide {
     .projects-list .project-item {
       margin-bottom: 16px; } }
 
-.projects {
-  padding-bottom: 80px; }
-  @media (max-width: 1199px) {
-    .projects {
-      padding-bottom: 88px; } }
-  @media (max-width: 767px) {
-    .projects {
-      padding-bottom: 64px; } }
-
 .projects__filter {
   margin-bottom: 32px; }
 
@@ -7915,11 +7906,6 @@ span.poll-page__hide {
   margin-right: 40px; }
   .activity-tabs__item:last-child {
     padding-right: 40px; }
-  @media (max-width: 1199px) {
-    .activity-tabs__item--active:not(:last-child) {
-      -webkit-box-ordinal-group: 0;
-          -ms-flex-order: -1;
-              order: -1; } }
 
 .activity-tabs__link {
   display: block;
