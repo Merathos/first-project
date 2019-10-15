@@ -729,7 +729,7 @@
 'use strict';
 
 (function () {
-  var rangeSlider = document.querySelector('js-poll-range');
+  var rangeSlider = document.querySelector('.js-poll-range');
   if (!rangeSlider) {
     return;
   }
