@@ -265,3 +265,10 @@
     display: none;
   }
 }
+
+@media print {
+  .project-page__survey-btn,
+  .project-page__back-btn {
+    display: none;
+  }
+}

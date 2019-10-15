@@ -143,3 +143,9 @@
     margin-bottom: 32px;
   }
 }
+
+@media print {
+  .news-item__bottom {
+    display: none;
+  }
+}

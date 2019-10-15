@@ -33,3 +33,9 @@
 .page-top__checkbox {
   margin-bottom: 0;
 }
+
+@media print {
+  .page-top__form-wrapper {
+    display: none;
+  }
+}

@@ -26,3 +26,9 @@
     color: var(--color-text, $grey-default);
   }
 }
+
+@media print {
+  .link-arrow {
+    display: none;
+  }
+}

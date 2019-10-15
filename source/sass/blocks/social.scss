@@ -192,3 +192,9 @@
     }
   }
 }
+
+@media print {
+  .social__link {
+    display: none;
+  }
+}

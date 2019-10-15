@@ -171,3 +171,11 @@
     margin-top: 24px;
   }
 }
+
+@media print {
+  .project__archive-link,
+  .project__archive-mobile,
+  .project__button {
+    display: none;
+  }
+}

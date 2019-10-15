@@ -310,3 +310,9 @@
     margin-top: 16px;
   }
 }
+
+@media print {
+  .project-vote__submit-form {
+    display: none;
+  }
+}

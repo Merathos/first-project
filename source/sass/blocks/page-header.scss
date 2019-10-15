@@ -179,3 +179,20 @@
     }
   }
 }
+
+@media print {
+  .page-header {
+    display: none;
+  }
+
+  @page :first {
+    .page-header {
+      display: block;
+    }
+  }
+
+  .page-header__version-btn,
+  .page-header__main-menu {
+    display: none;
+  }
+}

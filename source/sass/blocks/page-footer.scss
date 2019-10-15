@@ -102,3 +102,9 @@
     line-height: rem(27px);
   }
 }
+
+@media print {
+  .page-footer {
+    display: none;
+  }
+}

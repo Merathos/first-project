@@ -245,3 +245,10 @@
     }
   }
 }
+
+@media print {
+  .discussion__archive-link,
+  .discussion__archive-mobile {
+    display: none;
+  }
+}
