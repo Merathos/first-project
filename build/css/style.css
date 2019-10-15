@@ -6376,6 +6376,7 @@ span.poll__hide {
 
 .vote-popup {
   position: fixed;
+  z-index: 50;
   bottom: 16px;
   left: 50%;
   display: -webkit-box;
