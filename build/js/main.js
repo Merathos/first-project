@@ -292,7 +292,7 @@
 
 
   var onDocumentClick = function (evt) {
-    if (evt.target.classList.contains('gallery__item-link')) {
+    if (evt.target.classList.contains('js-gallery__item-link')) {
       evt.preventDefault();
 
       if (swiper) {
@@ -311,7 +311,7 @@
 
 
 (function () {
-  var galleries = document.querySelectorAll('.gallery');
+  var galleries = document.querySelectorAll('.js-gallery');
 
   if (!galleries.length) {
     return;
@@ -335,7 +335,7 @@
 
 
   galleries.forEach(function (gallery) {
-    var previews = gallery.querySelectorAll('.gallery__item-link');
+    var previews = gallery.querySelectorAll('.js-gallery__item-link');
 
     previews.forEach(function (preview, i) {
       preview.dataset.index = i;

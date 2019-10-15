@@ -2,7 +2,7 @@
 
 
 (function () {
-  var galleries = document.querySelectorAll('.gallery');
+  var galleries = document.querySelectorAll('.js-gallery');
 
   if (!galleries.length) {
     return;
@@ -26,7 +26,7 @@
 
 
   galleries.forEach(function (gallery) {
-    var previews = gallery.querySelectorAll('.gallery__item-link');
+    var previews = gallery.querySelectorAll('.js-gallery__item-link');
 
     previews.forEach(function (preview, i) {
       preview.dataset.index = i;

@@ -69,7 +69,7 @@
 
 
   var onDocumentClick = function (evt) {
-    if (evt.target.classList.contains('gallery__item-link')) {
+    if (evt.target.classList.contains('js-gallery__item-link')) {
       evt.preventDefault();
 
       if (swiper) {
