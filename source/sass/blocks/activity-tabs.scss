@@ -69,11 +69,11 @@
     padding-right: 40px;
   }
 
-  @include tablet {
-    &--active:not(:last-child) {
-      order: -1;
-    }
-  }
+  // @include tablet {
+  //   &--active:not(:last-child) {
+  //     order: -1;
+  //   }
+  // }
 }
 
 .activity-tabs__link {
