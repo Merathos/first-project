@@ -235,4 +235,9 @@ span.poll__hide {
   .poll__item::before {
     display: none;
   }
+
+  .poll__item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
 }

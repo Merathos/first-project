@@ -149,3 +149,10 @@ img {
   max-width: $desktop-width;
   margin: 0 auto;
 }
+
+@media print {
+  @page {
+    size: auto;
+    margin: 11mm 17mm 17mm 17mm;
+  }
+}

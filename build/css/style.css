@@ -141,6 +141,11 @@ img {
   max-width: 1200px;
   margin: 0 auto; }
 
+@media print {
+  @page {
+    size: auto;
+    margin: 11mm 17mm 17mm 17mm; } }
+
 /* Плагины */
 /* stylelint-disable */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -3826,6 +3831,13 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .news-notice--news .news-notice__date {
     display: block; }
 
+@media print {
+  .news-notice__item {
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+       -moz-column-break-inside: avoid;
+            break-inside: avoid; } }
+
 .social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4170,7 +4182,12 @@ span.poll__hide {
   .poll__item--accent {
     border: 2px solid #2c8ecc; }
   .poll__item::before {
-    display: none; } }
+    display: none; }
+  .poll__item {
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+       -moz-column-break-inside: avoid;
+            break-inside: avoid; } }
 
 .project {
   -webkit-box-sizing: border-box;
@@ -4338,7 +4355,12 @@ span.poll__hide {
   .project__archive-link,
   .project__archive-mobile,
   .project__button {
-    display: none; } }
+    display: none; }
+  .project__item {
+    -webkit-column-break-inside: avoid;
+       -moz-column-break-inside: avoid;
+            break-inside: avoid;
+    page-break-inside: avoid; } }
 
 .discussion {
   -webkit-box-sizing: border-box;
@@ -6196,6 +6218,10 @@ span.poll__hide {
   .project-meta__fovorite-btn[data-tooltip][data-flow^="down"]::after {
     top: 100%; } }
 
+@media print {
+  .project-meta__fovorite-btn {
+    display: none; } }
+
 .project-vote {
   background-color: var(--color-bg-secondary, #f9f9fa);
   border-radius: 5px; }
@@ -7404,7 +7430,8 @@ span.poll-page__hide {
 
 @media print {
   .answers__button-wrapper,
-  .answers__pagination {
+  .answers__pagination,
+  .answers__top-wrapper {
     display: none; } }
 
 .text-hidden__container {
@@ -7434,6 +7461,10 @@ span.poll-page__hide {
   transition: transform 0.2s, -webkit-transform 0.2s;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg); }
+
+@media print {
+  .text-hidden__container {
+    max-height: 100%; } }
 
 .comment-popup .popup__close-btn {
   margin-left: auto; }

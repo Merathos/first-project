@@ -30,3 +30,9 @@
     }
   }
 }
+
+@media print {
+  .text-hidden__container {
+    max-height: 100%;
+  }
+}

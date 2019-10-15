@@ -160,3 +160,9 @@
     }
   }
 }
+
+@media print {
+  .project-meta__fovorite-btn {
+    display: none;
+  }
+}
