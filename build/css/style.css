@@ -4032,6 +4032,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   padding-bottom: 29px;
   background-color: var(--color-bg-secondary, #f9f9fa);
   border-radius: 5px;
+  text-decoration: none;
   cursor: pointer;
   -webkit-transition: -webkit-box-shadow 0.2s linear;
   transition: -webkit-box-shadow 0.2s linear;
@@ -4061,6 +4062,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
             box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15); }
     .poll__item:hover .poll__link {
       display: block; }
+      @media (max-width: 1199px) {
+        .poll__item:hover .poll__link {
+          display: none; } }
 
 .poll__item--passed {
   background-color: var(--color-bg-main, #ffffff);
@@ -4109,7 +4113,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   border-radius: 5px; }
   @media (max-width: 1199px) {
     .poll__link {
-      display: block; } }
+      display: none; } }
 
 .poll__button {
   font-size: 0.875rem;
