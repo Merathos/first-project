@@ -4046,7 +4046,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       width: calc(50% - 10px); } }
   @media (max-width: 767px) {
     .poll__item {
-      width: 100%; } }
+      width: 100%;
+      min-height: 158px; } }
   .poll__item::before {
     content: "";
     position: absolute;
