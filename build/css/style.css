@@ -2873,6 +2873,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .button-star:active, .button-star--active {
     color: var(--color-interactive-default, #2c8ecc); }
 
+@media print {
+  .button-star {
+    display: none; } }
+
 .page-404 {
   padding-top: 16vh;
   padding-bottom: 14vh; }
@@ -3979,7 +3983,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       display: inline-block; }
 
 @media print {
-  .social__link {
+  .social {
     display: none; } }
 
 .poll {
@@ -4188,15 +4192,16 @@ span.poll__hide {
   .poll__archive-link,
   .poll__archive-mobile {
     display: none; }
-  .poll__item--accent {
-    border: 2px solid #2c8ecc; }
   .poll__item::before {
     display: none; }
   .poll__item {
+    border: none;
     page-break-inside: avoid;
     -webkit-column-break-inside: avoid;
        -moz-column-break-inside: avoid;
-            break-inside: avoid; } }
+            break-inside: avoid; }
+  .poll__item--passed::after {
+    display: none; } }
 
 .project {
   -webkit-box-sizing: border-box;
@@ -4363,7 +4368,8 @@ span.poll__hide {
 @media print {
   .project__archive-link,
   .project__archive-mobile,
-  .project__button {
+  .project__button,
+  .project__info {
     display: none; }
   .project__item {
     -webkit-column-break-inside: avoid;
@@ -4558,8 +4564,19 @@ span.poll__hide {
 
 @media print {
   .discussion__archive-link,
-  .discussion__archive-mobile {
-    display: none; } }
+  .discussion__archive-mobile,
+  .discussion__button-star,
+  .discussion__used {
+    display: none; }
+  .discussion__item {
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+       -moz-column-break-inside: avoid;
+            break-inside: avoid; }
+    .discussion__item .discussion__button-star {
+      display: none; }
+    .discussion__item .discussion__used {
+      display: none; } }
 
 .cookie {
   position: fixed;
@@ -5838,6 +5855,10 @@ span.poll__hide {
 @media (max-width: 767px) {
   .project-item {
     width: 288px; } }
+
+@media print {
+  .project-item--disabled {
+    border: none; } }
 
 .projects-list {
   margin-bottom: 24px;

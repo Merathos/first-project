@@ -16,3 +16,9 @@
     color: var(--color-interactive-default, $blue-default);
   }
 }
+
+@media print {
+  .button-star {
+    display: none;
+  }
+}

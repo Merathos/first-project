@@ -247,16 +247,17 @@ span.poll__hide {
     display: none;
   }
 
-  .poll__item--accent {
-    border: 2px solid $blue-default;
-  }
-
   .poll__item::before {
     display: none;
   }
 
   .poll__item {
+    border: none;
     page-break-inside: avoid;
     break-inside: avoid;
+  }
+
+  .poll__item--passed::after {
+    display: none;
   }
 }

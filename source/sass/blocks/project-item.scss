@@ -199,3 +199,11 @@
     width: 288px;
   }
 }
+
+@media print {
+  .project-item {
+    &--disabled {
+      border: none;
+    }
+  }
+}

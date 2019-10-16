@@ -248,7 +248,22 @@
 
 @media print {
   .discussion__archive-link,
-  .discussion__archive-mobile {
+  .discussion__archive-mobile,
+  .discussion__button-star,
+  .discussion__used {
     display: none;
+  }
+
+  .discussion__item {
+    page-break-inside: avoid;
+    break-inside: avoid;
+
+    & .discussion__button-star {
+      display: none;
+    }
+
+    & .discussion__used {
+      display: none;
+    }
   }
 }
