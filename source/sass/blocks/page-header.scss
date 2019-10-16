@@ -185,8 +185,13 @@
     display: none;
   }
 
-  @page :first {
+  .page-body {
+    padding-top: 0 !important;
+  }
+
+  .page-main {
     .page-header {
+      position: static;
       display: block;
     }
   }
