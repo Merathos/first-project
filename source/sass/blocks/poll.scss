@@ -76,8 +76,14 @@
 
     .poll__link {
       display: block;
+    }
+  }
 
-      @media (max-width: $desktop-width - 1) {
+  @media (max-width: $desktop-width - 1) {
+    &:hover {
+      box-shadow: none;
+
+      .poll__link {
         display: none;
       }
     }
@@ -109,6 +115,14 @@
   &:hover {
     &::before {
       background-image: linear-gradient(180deg, var(--color-bg-secondary, $color-bg) 0%, var(--color-bg-secondary-transparent, rgba($color-bg, 0)) 100%);
+    }
+  }
+
+  @media (max-width: $desktop-width - 1) {
+    &:hover {
+      &::before {
+        display: none;
+      }
     }
   }
 
@@ -233,16 +247,17 @@ span.poll__hide {
     display: none;
   }
 
-  .poll__item--accent {
-    border: 2px solid $blue-default;
-  }
-
   .poll__item::before {
     display: none;
   }
 
   .poll__item {
+    border: none;
     page-break-inside: avoid;
     break-inside: avoid;
+  }
+
+  .poll__item--passed::after {
+    display: none;
   }
 }
