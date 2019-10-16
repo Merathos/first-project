@@ -5376,9 +5376,11 @@ span.poll__hide {
 @media print {
   .page-header {
     display: none; }
-  @page :first {
-    .page-header {
-      display: block; } }
+  .page-body {
+    padding-top: 0 !important; }
+  .page-main .page-header {
+    position: static;
+    display: block; }
   .page-header__version-btn,
   .page-header__main-menu {
     display: none; } }
