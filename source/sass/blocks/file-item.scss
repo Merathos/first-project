@@ -92,8 +92,7 @@
   text-decoration: underline;
 }
 
-.mod-theme-inverse .file-item--white .file-item__name,
-.mod-theme-brown .file-item--white .file-item__name {
+.mod-theme-inverse .file-item--white .file-item__name {
   color: var(--color-bg-main);
 }
 
@@ -103,17 +102,17 @@
   color: var(--color-text, $grey-default);
 }
 
-.file-item--white .file-item--white .file-item__size {
+.file-item--white .file-item__size {
   color: $light-blue-accent;
 }
 
 .mod-theme-blue .file-item--white .file-item__size,
-.mod-theme-comfort .file-item--white .file-item__size {
+.mod-theme-comfort .file-item--white .file-item__size,
+.mod-theme-brown .file-item--white .file-item__size {
   color: $white;
 }
 
-.mod-theme-inverse .file-item--white .file-item__size,
-.mod-theme-brown .file-item--white .file-item__size {
+.mod-theme-inverse .file-item--white .file-item__size {
   color: var(--color-bg-main);
 }
 

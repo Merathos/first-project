@@ -2029,19 +2029,19 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .button span {
     padding-right: 6px; }
   .button--blue {
-    color: var(--color-text, #ffffff);
-    background-color: var(--color-bg-secondary, #2c8ecc); }
+    color: var(--color-bg-secondary, #ffffff);
+    background-color: var(--color-text, #2c8ecc); }
     .button--blue:hover, .button--blue:focus {
-      color: var(--color-bg-secondary, #ffffff);
-      background-color: var(--color-text, #116ca6); }
+      color: var(--color-text, #ffffff);
+      background-color: var(--color-bg-secondary, #116ca6); }
     .button--blue:disabled {
       background-color: #e3e8ee; }
   .button--light-blue {
-    color: var(--color-text, #2c8ecc);
-    background-color: var(--color-bg-secondary, #eaf4fa); }
+    color: var(--color-bg-secondary, #2c8ecc);
+    background-color: var(--color-text, #eaf4fa); }
     .button--light-blue:hover, .button--light-blue:focus {
-      color: var(--color-bg-secondary, #116ca6);
-      background-color: var(--color-text, #eaf4fa); }
+      color: var(--color-text, #116ca6);
+      background-color: var(--color-bg-secondary, #eaf4fa); }
     .button--light-blue:disabled {
       background-color: #e3e8ee; }
   .button--white {
@@ -3622,8 +3622,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .status-info--accent {
     background-color: var(--color-text, #fca844); }
 
-.mod-theme-inverse .status-info,
-.mod-theme-brown .status-info {
+.mod-theme-inverse .status-info {
   color: var(--color-bg-main); }
 
 .status-info__text-group {
@@ -4844,8 +4843,7 @@ span.poll__hide {
 .mod-theme-brown .file-item--white .file-item__name {
   text-decoration: underline; }
 
-.mod-theme-inverse .file-item--white .file-item__name,
-.mod-theme-brown .file-item--white .file-item__name {
+.mod-theme-inverse .file-item--white .file-item__name {
   color: var(--color-bg-main); }
 
 .file-item__size {
@@ -4853,15 +4851,15 @@ span.poll__hide {
   text-transform: uppercase;
   color: var(--color-text, #a6abb3); }
 
-.file-item--white .file-item--white .file-item__size {
+.file-item--white .file-item__size {
   color: #9bd2f4; }
 
 .mod-theme-blue .file-item--white .file-item__size,
-.mod-theme-comfort .file-item--white .file-item__size {
+.mod-theme-comfort .file-item--white .file-item__size,
+.mod-theme-brown .file-item--white .file-item__size {
   color: #ffffff; }
 
-.mod-theme-inverse .file-item--white .file-item__size,
-.mod-theme-brown .file-item--white .file-item__size {
+.mod-theme-inverse .file-item--white .file-item__size {
   color: var(--color-bg-main); }
 
 @media (min-width: 1200px) {

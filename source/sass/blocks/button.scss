@@ -35,13 +35,13 @@
   }
 
   &--blue {
-    color: var(--color-text, $white);
-    background-color: var(--color-bg-secondary, $blue-default);
+    color: var(--color-bg-secondary, $white);
+    background-color: var(--color-text, $blue-default);
 
     &:hover,
     &:focus {
-      color: var(--color-bg-secondary, $white);
-      background-color: var(--color-text, $blue-accent);
+      color: var(--color-text, $white);
+      background-color: var(--color-bg-secondary, $blue-accent);
     }
 
     &:disabled {
@@ -50,13 +50,13 @@
   }
 
   &--light-blue {
-    color: var(--color-text, $blue-default);
-    background-color: var(--color-bg-secondary, $light-blue);
+    color: var(--color-bg-secondary, $blue-default);
+    background-color: var(--color-text, $light-blue);
 
     &:hover,
     &:focus {
-      color: var(--color-bg-secondary, $blue-accent);
-      background-color: var(--color-text, $light-blue);
+      color: var(--color-text, $blue-accent);
+      background-color: var(--color-bg-secondary, $light-blue);
     }
 
     &:disabled {
