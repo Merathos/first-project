@@ -4061,9 +4061,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
             box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15); }
     .poll__item:hover .poll__link {
       display: block; }
-      @media (max-width: 1199px) {
-        .poll__item:hover .poll__link {
-          display: none; } }
+  @media (max-width: 1199px) {
+    .poll__item:hover {
+      -webkit-box-shadow: none;
+              box-shadow: none; }
+      .poll__item:hover .poll__link {
+        display: none; } }
 
 .poll__item--passed {
   background-color: var(--color-bg-main, #ffffff);
@@ -4086,6 +4089,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .poll__item--passed:hover::before {
     background-image: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg-secondary, #f9f9fa)), to(var(--color-bg-secondary-transparent, rgba(249, 249, 250, 0))));
     background-image: linear-gradient(180deg, var(--color-bg-secondary, #f9f9fa) 0%, var(--color-bg-secondary-transparent, rgba(249, 249, 250, 0)) 100%); }
+  @media (max-width: 1199px) {
+    .poll__item--passed:hover::before {
+      display: none; } }
   .poll__item--passed .poll__text {
     color: var(--color-text, #a6abb3); }
 
