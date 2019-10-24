@@ -58,9 +58,9 @@
   }
 
   &--current {
-    color: $white;
-    background-color: var(--color-interactive-default, $blue-default);
-    border-color: var(--color-interactive-default, $blue-default);
+    color: var(--color-bg-secondary, $white);
+    background-color: var(--color-text, $blue-default);
+    border-color: var(--color-text, $blue-default);
   }
 
   &--prev {
