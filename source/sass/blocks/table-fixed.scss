@@ -140,9 +140,9 @@
   max-height: 463px;
   overflow: auto;
 
-  & .scrollbar-thumb {
-    background-color: var(--color-bg-secondary, $light-grey);
-  }
+  // & .scrollbar-thumb {
+  //   background-color: var(--color-bg-secondary, $light-grey);
+  // }
 }
 
 .table-fixed__container {
@@ -150,9 +150,7 @@
 }
 
 .table-fixed__header {
-  // position: sticky;
-  // top: 0;
-  position: absolute;
+  position: sticky;
   top: 0;
   z-index: 10;
   background-color: $white;
@@ -282,6 +280,10 @@ table {
     left: 0;
     width: 100%;
     padding-top: 24px;
+
+    & tr {
+      padding-top: 24px;
+    }
   }
 
   & .table-fixed__header--scroll {
