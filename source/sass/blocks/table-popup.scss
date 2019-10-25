@@ -1,0 +1,33 @@
+.table-popup__container {
+  padding: 0;
+}
+
+.table-popup__content {
+  width: 100%;
+  height: 100%;
+}
+
+.table-popup__bar {
+  // max-width: $desktop-width;
+  margin: 0 auto;
+  height: 24px;
+
+  & button {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    z-index: 10;
+
+    & svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    & button {
+      top: 12px;
+      right: 12px;
+    }
+  }
+}
