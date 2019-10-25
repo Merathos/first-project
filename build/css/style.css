@@ -7007,7 +7007,7 @@ span.poll-page__hide {
       top: 0;
       z-index: 10;
       width: 16px;
-      height: 100%;
+      height: 90%;
       background-image: -webkit-gradient(linear, right top, left top, from(var(--color-bg-secondary, #ffffff)), to(var(--color-bg-secondary-transparent, rgba(255, 255, 255, 0))));
       background-image: linear-gradient(270deg, var(--color-bg-secondary, #ffffff) 0%, var(--color-bg-secondary-transparent, rgba(255, 255, 255, 0)) 100%); }
 
@@ -7564,15 +7564,12 @@ span.poll-page__hide {
   overflow: auto; }
   .table-fixed .scrollbar-thumb {
     background-color: var(--color-bg-secondary, #e3e8ee); }
-  .table-fixed .scrollbar-track {
-    background-color: rgba(0, 0, 0, 0); }
 
 .table-fixed__container {
   position: relative; }
 
 .table-fixed__header {
-  position: -webkit-sticky;
-  position: sticky;
+  position: absolute;
   top: 0;
   z-index: 10;
   background-color: #ffffff;
@@ -7583,7 +7580,8 @@ span.poll-page__hide {
 
 table {
   position: relative;
-  table-layout: fixed; }
+  table-layout: fixed;
+  border-collapse: collapse; }
   table th {
     width: 191px;
     padding-right: 40px;
@@ -7670,9 +7668,10 @@ table {
     width: 100%;
     padding-top: 24px; }
   .table-fixed--all-screen .table-fixed__header--scroll {
-    background-image: none;
     -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); }
+    .table-fixed--all-screen .table-fixed__header--scroll tr {
+      background-image: none; }
 
 .comment-popup .popup__close-btn {
   margin-left: auto; }

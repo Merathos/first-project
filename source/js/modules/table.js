@@ -12,4 +12,7 @@
     alwaysShowTracks: true
   });
 
+  window.addEventListener('scroll', function () {
+    document.querySelector('.table-fixed--all-screen .table-fixed__header').classList.add('table-fixed__header--scroll');
+  });
 })();

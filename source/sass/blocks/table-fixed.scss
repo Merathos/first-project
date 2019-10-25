@@ -143,10 +143,6 @@
   & .scrollbar-thumb {
     background-color: var(--color-bg-secondary, $light-grey);
   }
-
-  & .scrollbar-track {
-    background-color: rgba(0, 0, 0, 0);
-  }
 }
 
 .table-fixed__container {
@@ -154,7 +150,9 @@
 }
 
 .table-fixed__header {
-  position: sticky;
+  // position: sticky;
+  // top: 0;
+  position: absolute;
   top: 0;
   z-index: 10;
   background-color: $white;
@@ -168,6 +166,7 @@
 table {
   position: relative;
   table-layout: fixed;
+  border-collapse: collapse;
 
   & th {
     width: 191px;
@@ -286,7 +285,10 @@ table {
   }
 
   & .table-fixed__header--scroll {
-    background-image: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+
+    & tr {
+      background-image: none;
+    }
   }
 }
