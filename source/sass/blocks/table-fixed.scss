@@ -140,13 +140,9 @@
   max-height: 463px;
   overflow: auto;
 
-  & .scrollbar-thumb {
-    background-color: var(--color-bg-secondary, $light-grey);
-  }
-
-  & .scrollbar-track {
-    background-color: rgba(0, 0, 0, 0);
-  }
+  // & .scrollbar-thumb {
+  //   background-color: var(--color-bg-secondary, $light-grey);
+  // }
 }
 
 .table-fixed__container {
@@ -168,6 +164,7 @@
 table {
   position: relative;
   table-layout: fixed;
+  border-collapse: collapse;
 
   & th {
     width: 191px;
@@ -283,10 +280,17 @@ table {
     left: 0;
     width: 100%;
     padding-top: 24px;
+
+    & tr {
+      padding-top: 24px;
+    }
   }
 
   & .table-fixed__header--scroll {
-    background-image: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+
+    & tr {
+      background-image: none;
+    }
   }
 }
