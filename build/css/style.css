@@ -2835,9 +2835,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     color: var(--color-interactive-default, #116ca6);
     border: 1px solid var(--color-interactive-default, #9bd2f4); }
   .paginator__item--current {
-    color: #ffffff;
-    background-color: var(--color-interactive-default, #2c8ecc);
-    border-color: var(--color-interactive-default, #2c8ecc); }
+    color: var(--color-bg-secondary, #ffffff);
+    background-color: var(--color-text, #2c8ecc);
+    border-color: var(--color-text, #2c8ecc); }
   .paginator__item--prev {
     margin-right: 23px; }
     @media (max-width: 617px) {
