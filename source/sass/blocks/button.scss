@@ -65,14 +65,15 @@
   }
 
   &--white {
-    color: var(--color-text, $blue-default);
-    background-color: var(--color-bg-main, $white);
-    border: 1px solid var(--color-stroke, $light-grey);
+    color: var(--color-bg-secondary, $blue-default);
+    background-color: var(--color-text, $white);
+    border: 1px solid var(--color-text, $light-grey);
 
     &:hover,
     &:focus {
-      color: var(--color-interactive-default, $blue-accent);
-      border-color: var(--color-interactive-default, $light-blue-accent);
+      color: var(--color-text, $blue-accent);
+      background-color: var(--color-bg-secondary, transparent);
+      border-color: var(--color-bg-secondary, $light-blue-accent);
     }
 
     &:disabled {
@@ -81,14 +82,15 @@
   }
 
   &--grey {
-    color: var(--color-text, $grey);
-    background-color: var(--color-bg-main, $white);
-    border: 1px solid var(--color-stroke, $light-grey);
+    color: var(--color-bg-secondary, $grey);
+    background-color: var(--color-text, $white);
+    border: 1px solid var(--color-text, $light-grey);
 
     &:hover,
     &:focus {
-      color: var(--color-interactive-default, $blue-accent);
-      border-color: var(--color-interactive-default, $light-blue-accent);
+      color: var(--color-text, $blue-accent);
+      background-color: var(--color-bg-secondary, transparent);
+      border-color: var(--color-bg-secondary, $light-blue-accent);
     }
 
     &:disabled {
