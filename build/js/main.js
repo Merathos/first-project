@@ -39,6 +39,25 @@
   }
 
   modal(btnsCommentYour, popupCommentYour);
+
+  var popupCommentTable = document.querySelector('.js-comment-popup--table');
+  var btnsCommentTable = document.querySelectorAll('.js-comment-table');
+
+  if (!popupCommentTable && !btnsCommentTable.length) {
+    return;
+  }
+
+  modal(btnsCommentTable, popupCommentTable);
+
+  var popupTable = document.querySelector('.js-table-popup');
+  var btnsTable = document.querySelectorAll('.js-table');
+
+  if (!popupTable && !btnsTable.length) {
+    return;
+  }
+
+  modal(btnsTable, popupTable);
+
 })();
 
 'use strict';
@@ -946,6 +965,44 @@
 
 
   subscribeLink.addEventListener('click', onSubscribeLinkClick);
+})();
+
+'use strict';
+(function () {
+  var Scrollbar = window.Scrollbar;
+  var tableContainer = document.querySelector('.table-fixed');
+
+  if (!tableContainer) {
+    return;
+  }
+
+  Scrollbar.init(tableContainer, {
+    continuousScrolling: false
+  });
+
+  var table = tableContainer.querySelector('.table-fixed__table tbody');
+  Scrollbar.init(table, {
+    continuousScrolling: false
+  });
+
+  var tablePopup = document.querySelector('.table-fixed--all-screen .table-fixed__table tbody');
+  if (!tablePopup) {
+    return;
+  }
+
+  Scrollbar.init(tablePopup, {
+    continuousScrolling: false
+  });
+
+  var tableCommentPopup = document.querySelector('.table-fixed--popup');
+  if (!tableCommentPopup) {
+    return;
+  }
+
+  Scrollbar.init(tableCommentPopup, {
+    continuousScrolling: false
+  });
+
 })();
 
 'use strict';
