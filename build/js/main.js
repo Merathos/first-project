@@ -40,15 +40,6 @@
 
   modal(btnsCommentYour, popupCommentYour);
 
-  var popupCommentTable = document.querySelector('.js-comment-popup--table');
-  var btnsCommentTable = document.querySelectorAll('.js-comment-table');
-
-  if (!popupCommentTable && !btnsCommentTable.length) {
-    return;
-  }
-
-  modal(btnsCommentTable, popupCommentTable);
-
   var popupTable = document.querySelector('.js-table-popup');
   var btnsTable = document.querySelectorAll('.js-table');
 
@@ -57,6 +48,15 @@
   }
 
   modal(btnsTable, popupTable);
+
+  var popupCommentTable = document.querySelector('.js-comment-popup--table');
+  var btnsCommentTable = document.querySelectorAll('.js-comment-table');
+
+  if (!popupCommentTable && !btnsCommentTable.length) {
+    return;
+  }
+
+  modal(btnsCommentTable, popupCommentTable);
 
 })();
 
@@ -969,24 +969,57 @@
 
 'use strict';
 (function () {
-  // var Scrollbar = window.Scrollbar;
-  // var tableContainer = document.querySelector('.table-fixed');
+  var tableContainers = document.querySelectorAll('.table-fixed');
 
-  // if (!tableContainer) {
-  //   return;
-  // }
+  if (!tableContainers.length) {
+    return;
+  }
+  var scroll = null;
 
-  // Scrollbar.init(tableContainer, {
-  //   continuousScrolling: false,
-  //   alwaysShowTracks: true
-  // });
+  Array.prototype.forEach.call(tableContainers, function (tableContainer) {
+    scroll = new window.SimpleBar(tableContainer, {
+      autoHide: false
+    });
+    return scroll;
+  });
 
-  // window.addEventListener('scroll', function () {
-  //   document.querySelector('.table-fixed--all-screen .table-fixed__header').classList.add('table-fixed__header--scroll');
-  // });
+})();
 
-  var container = document.querySelector('.table-fixed');
-  var ps = new window.PerfectScrollbar(container);
+(function () {
+  var tableBodys = document.querySelectorAll('.table-fixed__body');
+
+  if (!tableBodys.length) {
+    return;
+  }
+
+  var scroll = null;
+
+  Array.prototype.forEach.call(tableBodys, function (tableBody) {
+    scroll = new window.SimpleBar(tableBody, {
+      autoHide: false
+    });
+    return scroll;
+  });
+
+})();
+
+(function () {
+  var el = document.querySelector('.table-fixed--all-screen .table-fixed__body .simplebar-content-wrapper');
+  var header = document.querySelector('.table-fixed--all-screen .table-fixed__header');
+
+  if (!el && !header) {
+    return;
+  }
+
+  el.addEventListener('scroll', function () {
+
+    if (el.scrollTop > 50) {
+      header.classList.add('table-fixed__header--scroll');
+    }
+    if (el.scrollTop < 50) {
+      header.classList.remove('table-fixed__header--scroll');
+    }
+  });
 
 })();
 
