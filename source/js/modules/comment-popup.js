@@ -40,15 +40,6 @@
 
   modal(btnsCommentYour, popupCommentYour);
 
-  var popupCommentTable = document.querySelector('.js-comment-popup--table');
-  var btnsCommentTable = document.querySelectorAll('.js-comment-table');
-
-  if (!popupCommentTable && !btnsCommentTable.length) {
-    return;
-  }
-
-  modal(btnsCommentTable, popupCommentTable);
-
   var popupTable = document.querySelector('.js-table-popup');
   var btnsTable = document.querySelectorAll('.js-table');
 
@@ -57,5 +48,14 @@
   }
 
   modal(btnsTable, popupTable);
+
+  var popupCommentTable = document.querySelector('.js-comment-popup--table');
+  var btnsCommentTable = document.querySelectorAll('.js-comment-table');
+
+  if (!popupCommentTable && !btnsCommentTable.length) {
+    return;
+  }
+
+  modal(btnsCommentTable, popupCommentTable);
 
 })();
