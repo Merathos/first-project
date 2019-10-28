@@ -7793,7 +7793,8 @@ span.poll-page__hide {
         font-size: 0.8125rem;
         line-height: 1.0625rem; } }
     .table-fixed__table th:first-child {
-      width: 118px; }
+      width: 119px;
+      min-width: 119px; }
       @media (max-width: 767px) {
         .table-fixed__table th:first-child {
           width: 100px; } }
@@ -7816,7 +7817,8 @@ span.poll-page__hide {
         width: 152px;
         padding-right: 32px; } }
     .table-fixed__table td:first-child {
-      width: 118px; }
+      width: 119px;
+      min-width: 119px; }
       @media (max-width: 767px) {
         .table-fixed__table td:first-child {
           width: 100px; } }
@@ -7877,6 +7879,8 @@ span.poll-page__hide {
       .table-fixed--all-screen .table-fixed__body {
         padding-left: 15px;
         padding-right: 15px; } }
+    .table-fixed--all-screen .table-fixed__body .table-fixed__table {
+      display: block; }
     .table-fixed--all-screen .table-fixed__body .simplebar-vertical {
       right: 0; }
   .table-fixed--all-screen .table-fixed__header--scroll {
