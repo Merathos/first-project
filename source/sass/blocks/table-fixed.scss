@@ -39,6 +39,7 @@
 }
 
 .table-fixed__table {
+  width: 100%;
   table-layout: fixed;
   border-collapse: collapse;
 
@@ -139,7 +140,7 @@
   overflow-x: hidden;
 
   & .simplebar-vertical {
-    right: 16px;
+    right: 10px;
   }
 }
 
@@ -147,6 +148,11 @@
 .table-fixed--all-screen {
   margin: 0 auto;
   max-height: 100%;
+
+  &::before,
+  &::after {
+    display: none;
+  }
 
   & td.table-fixed__long-name {
     width: 280px;
