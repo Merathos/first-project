@@ -7198,8 +7198,8 @@ span.poll-page__hide {
   background-color: transparent;
   border: none;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 13px;
+  right: 13px;
   z-index: 20;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7772,6 +7772,7 @@ span.poll-page__hide {
     margin-bottom: 32px; }
 
 .table-fixed__table {
+  width: 100%;
   table-layout: fixed;
   border-collapse: collapse; }
   .table-fixed__table th {
@@ -7849,11 +7850,13 @@ span.poll-page__hide {
   overflow-y: auto;
   overflow-x: hidden; }
   .table-fixed__body .simplebar-vertical {
-    right: 16px; }
+    right: 10px; }
 
 .table-fixed--all-screen {
   margin: 0 auto;
   max-height: 100%; }
+  .table-fixed--all-screen::before, .table-fixed--all-screen::after {
+    display: none; }
   .table-fixed--all-screen td.table-fixed__long-name {
     width: 280px; }
   .table-fixed--all-screen th.table-fixed__long-name {

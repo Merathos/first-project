@@ -44,8 +44,8 @@
 .discussion-item__screen-btn {
   @include btn-reset;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 13px;
+  right: 13px;
   z-index: 20;
   display: flex;
   align-items: center;
