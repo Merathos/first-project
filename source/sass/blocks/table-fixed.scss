@@ -64,7 +64,8 @@
     }
 
     &:first-child {
-      width: 118px;
+      width: 119px;
+      min-width: 119px;
 
       @media (max-width: $tablet-width - 1) {
         width: 100px;
@@ -96,7 +97,8 @@
     }
 
     &:first-child {
-      width: 118px;
+      width: 119px;
+      min-width: 119px;
 
       @media (max-width: $tablet-width - 1) {
         width: 100px;
@@ -183,6 +185,10 @@
     @media (max-width: $desktop-width - 1) {
       padding-left: 15px;
       padding-right: 15px;
+    }
+
+    & .table-fixed__table {
+      display: block;
     }
 
     & .simplebar-vertical {
