@@ -2988,18 +2988,17 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 545px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
   margin: 0 auto;
   margin-top: 40px;
   margin-bottom: 80px;
   font-size: 0.9375rem;
   line-height: 1.6875rem; }
-  @media (max-width: 617px) {
-    .paginator {
-      width: 312px; } }
   @media (max-width: 400px) {
     .paginator {
-      width: 288px;
       margin-top: 32px; } }
 
 @media (max-width: 1199px) {
