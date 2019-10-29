@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <include src="source/components/head.html"></include>
+
+  <body class="page-body">
+    <include src="source/components/special-popup.html"></include>
+
+    <include src="source/components/header.html"></include>
+
+    <main class="page-content">
+        <div class="container">
+          <include src="source/components/back-btn.html"></include>
+        </div>
+        <div class="container">
+            <h1 class="page-title page-title--large">Настройка виджета</h1>
+        </div>
+        <section>
+          <div class="container container_overflow">
+              <div class="widget_block">
+                <form action="">
+                      <div class="form-select widget_block__select">
+                          <select name="widget-select-type" id="widget-select-type">
+                              <option value="Тип виджета">Тип виджета</option>
+                              <option value="Обсуждения">Обсуждения</option>
+                              <option value="Опросы">Опросы</option>
+                              <option value="Новости">Новости</option>
+                              <option value="Проекты">Проекты</option>
+                            </select>
+                            <select name="widget-select-level" id="widget-select-level">
+                                <option data-placeholder="true" value="Уровень реализации инициатив">Уровень реализации инициатив</option>
+                                <option value="Региональный">Региональный</option>
+                                <option value="Муниципальный">Муниципальный</option>
+                              </select>
+                      </div>
+                      <div class="widget_block__input widget_block__input_top">
+                        <input type="text" id="widget_count_page" placeholder="Количество элементов на странице">
+                        <input type="text" id="widget_count_all" placeholder="Общее количество элементов в виджете">
+                      </div>
+                      <div class="widget_block__input widget_block__input_bottom">
+                          <input type="text" id="widget_width_input" placeholder="Ширина в px">
+                          <input type="text" id="widget_timer" placeholder="Частота обновления в сек">
+                      </div>
+
+                      <div class="widget_block__preview">
+                        <div class="widget_block__preview__title">
+                          Предварительный просмотр виджета
+                        </div>
+                        <div class="widget_block__preview__block">
+                          <div class="widget_block__preview__header">
+                            <div class="widget_block__header_title">Общественное <br> голосование</div>
+                            <div class="widget_block__header_link"><a href="#">
+                              <span>На сайт</span>
+                              <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <use xlink:href="img/sprite.svg#icon-arrow-big"></use>
+                              </svg>
+                            </a></div>
+                          </div>
+                          <div class="widget_block__selected">
+                              <div class="form-select">
+                                  <select name="widget_block-preview-select" id="widget_block-preview-select">
+                                      <option value="Тип виджета">Тип виджета</option>
+                                      <option value="Обсуждения">Обсуждения</option>
+                                      <option value="Опросы">Опросы</option>
+                                      <option value="Новости">Новости</option>
+                                      <option value="Проекты">Проекты</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="widget_slider swiper-container">
+                            <div class="swiper-wrapper">
+                              <div class="widget_block__items swiper-slide">
+                                <div class="widget_block__item">
+                                  <a href="#">
+                                      Заседание межведомственной комиссии по реализации отдельных указов Президента РФ и мониторингу достижения указанных в новостной с...
+                                  </a>
+                                </div>
+                                <div class="widget_block__item">
+                                  <a href="#">
+                                      Развитие животноводства в Тульской области
+                                  </a>
+                                </div>
+                                <div class="widget_block__item">
+                                    <a href="#">
+                                        Оценка качества услуг учреждений сферы государственной молодежной политики
+                                    </a>
+                                </div>
+                                <div class="widget_block__item">
+                                    <a href="#">
+                                        Реконструкция моста через р. Дон на км 11+600 автомобильной дороги Новомосковское кольцо в Узловском районе Тульской области
+                                    </a>
+                                </div>
+                                <div class="widget_block__item">
+                                    <a href="#">
+                                        Государственное дошкольное образовательное учреждение Тульской области «Узловский детский сад»
+                                    </a>
+                                </div>
+                              </div>
+                              <div class="widget_block__items swiper-slide">
+                                <div class="widget_block__item">
+                                  <a href="#">
+                                      Заседание межведомственной комиссии по реализации отдельных указов Президента РФ и мониторингу достижения указанных в новостной с...
+                                  </a>
+                                </div>
+                                <div class="widget_block__item">
+                                  <a href="#">
+                                      Развитие животноводства в Тульской области
+                                  </a>
+                                </div>
+                                <div class="widget_block__item">
+                                    <a href="#">
+                                        Оценка качества услуг учреждений сферы государственной молодежной политики
+                                    </a>
+                                </div>
+                                <div class="widget_block__item">
+                                    <a href="#">
+                                        Реконструкция моста через р. Дон на км 11+600 автомобильной дороги Новомосковское кольцо в Узловском районе Тульской области
+                                    </a>
+                                </div>
+                                <div class="widget_block__item">
+                                    <a href="#">
+                                        Государственное дошкольное образовательное учреждение Тульской области «Узловский детский сад»
+                                    </a>
+                                </div>
+                              </div>
+                              <div class="widget_block__items swiper-slide">
+                                  <div class="widget_block__item">
+                                    <a href="#">
+                                        Заседание межведомственной комиссии по реализации отдельных указов Президента РФ и мониторингу достижения указанных в новостной с...
+                                    </a>
+                                  </div>
+                                  <div class="widget_block__item">
+                                    <a href="#">
+                                        Развитие животноводства в Тульской области
+                                    </a>
+                                  </div>
+                                  <div class="widget_block__item">
+                                      <a href="#">
+                                          Оценка качества услуг учреждений сферы государственной молодежной политики
+                                      </a>
+                                  </div>
+                                  <div class="widget_block__item">
+                                      <a href="#">
+                                          Реконструкция моста через р. Дон на км 11+600 автомобильной дороги Новомосковское кольцо в Узловском районе Тульской области
+                                      </a>
+                                  </div>
+                                  <div class="widget_block__item">
+                                      <a href="#">
+                                          Государственное дошкольное образовательное учреждение Тульской области «Узловский детский сад»
+                                      </a>
+                                  </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-pagination"></div>
+ 
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                          
+                          </div>
+                        </div>
+                      </div>
+                      <div class="widget_block_button">
+                          <button type="button" class="js-widget-open button button--blue">Получить код</button>
+                      </div>
+                </form>
+              </div>
+
+              <div class="widget-popup gallery-popup js-gallery-popup popup js-popup">
+                  <div class="popup__container">
+                    <div class="popup__overlay js-popup__overlay"></div>
+            
+                    <div class="gallery-popup__content popup__content">
+                      <div class="popup__bar popup__bar--top">
+                        <button class="popup__close-btn js-popup__close-btn" type="button">
+                          <span class="visually-hidden">Закрыть</span>
+                          <svg width="16" height="16">
+                            <use xlink:href="img/sprite.svg#icon-cross"></use>
+                          </svg>
+                        </button>
+                      </div>
+            
+                      <div class="gallery-popup__frame js-gallery-popup__frame swiper-container">
+                        <textarea name="" id="" cols="50" rows="10"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+          </div>
+        </section>
+    </main>
+
+    <include src="source/components/footer.html"></include>
+    <include src="source/components/up-btn.html"></include>
+
+    <script src="js/libs.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
