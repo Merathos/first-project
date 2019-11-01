@@ -21,7 +21,6 @@
 
 .composite-poll__description {
   margin: 0;
-  margin-bottom: 16px;
   padding: 32px;
 
   @include main-text;
@@ -32,11 +31,6 @@
 
   @media (max-width: $mobile-max-width) {
     padding: 24px;
-    margin-bottom: 10px;
-  }
-
-  &--process {
-    margin-bottom: 120px;
   }
 }
 
@@ -46,11 +40,6 @@
 
 .composite-poll__button-wrapper {
   margin-top: 40px;
-  margin-bottom: 120px;
-
-  @media (max-width: $tablet-width - 1) {
-    margin-bottom: 88px;
-  }
 }
 
 .composite-poll__button {

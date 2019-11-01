@@ -1,14 +1,4 @@
 .poll-page {
-  padding-bottom: 120px;
-
-  @include tablet {
-    padding-bottom: 80px;
-  }
-
-  @include mobile {
-    padding-bottom: 64px;
-  }
-
   .container {
     display: flex;
     flex-direction: column;
@@ -170,14 +160,6 @@ span.poll-page__hide {
 }
 
 .poll-page--final {
-  @media (max-width: $tablet-width - 1) {
-    padding-bottom: 88px;
-  }
-
-  @media (max-width: $mobile-max-width) {
-    padding-bottom: 64px;
-  }
-
   & .poll-page__title {
     @include font-h2;
     padding-bottom: 32px;
