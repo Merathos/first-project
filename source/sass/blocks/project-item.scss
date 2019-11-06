@@ -118,6 +118,8 @@
   font-weight: 400;
   font-size: rem(16px);
   line-height: rem(22px);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .project-item__expire {

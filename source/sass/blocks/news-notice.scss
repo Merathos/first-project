@@ -145,6 +145,9 @@
   height: 2.7em;
   overflow: hidden;
   text-overflow: ellipsis;
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 
   @media (max-width: $desktop-width - 81) {
     height: auto;

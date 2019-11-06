@@ -34,7 +34,7 @@
       }
 
       if (cookieBtn) {
-        upBtn.style.bottom = window.innerHeight - cookieBtn.getBoundingClientRect().bottom + 'px';
+        upBtn.style.bottom = window.innerHeight - cookieBtn.getBoundingClientRect().bottom + (cookieBtn.getBoundingClientRect().height - upBtn.getBoundingClientRect().height) / 2 + 1 + 'px';
       }
     };
 

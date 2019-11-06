@@ -1,7 +1,6 @@
 .projects-list {
-  margin-bottom: 24px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, calc((100% - 40px)/3));
   grid-template-rows: auto;
   grid-gap: 20px;
 
@@ -13,19 +12,19 @@
 
 @include tablet {
   .projects-list {
-    margin-bottom: 48px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, calc((100% - 20px)/2));
   }
 }
 
 
 @include mobile {
   .projects-list {
-    margin-bottom: 40px;
     display: block;
 
     .project-item {
-      margin-bottom: 16px;
+      &:not(:last-child) {
+        margin-bottom: 16px;
+      }
     }
   }
 }
