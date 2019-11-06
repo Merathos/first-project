@@ -1,28 +1,66 @@
 .text-hidden__container {
-  max-height: 142px;
+  max-height: 100%;
   overflow: hidden;
   transition: max-height $style-change-duration;
 
-  @media (max-width: $tablet-width - 1) {
-    max-height: 135px;
-  }
-
-  &--comment {
+  &--close {
     max-height: 54px;
-    transition: max-height $style-change-duration;
-
-    @media (max-width: $mobile-max-width) {
-      max-height: 81px;
-    }
-  }
-
-  &--open {
-    max-height: 100%;
     transition: max-height $style-change-duration;
   }
 }
 
+.text-hidden__btn-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -48px;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    background-image: linear-gradient(180deg, var(--color-bg-main, $white) 0%, var(--color-bg-main-transparent, rgba($white, 0)) 100%);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+  }
+
+  &--open {
+    &::before {
+      display: none;
+    }
+  }
+
+  &--blue-gradient {
+    &::before {
+      background-image: linear-gradient(180deg, var(--color-bg-secondary, $light-blue) 0%, var(--color-bg-secondary-transparent, rgba($light-blue, 0)) 100%);
+    }
+  }
+
+  &--hidden {
+    display: none;
+  }
+}
+
 .text-hidden__btn {
+  @include btn-reset;
+
+  display: flex;
+  align-items: center;
+
+  @include main-text;
+
+  cursor: pointer;
+
+  & span {
+    margin-right: 9px;
+  }
+
+  & svg {
+    transform: rotate(-90deg);
+  }
+
   &--open {
     & svg {
       transition: transform $style-change-duration;
@@ -34,5 +72,9 @@
 @media print {
   .text-hidden__container {
     max-height: 100%;
+  }
+
+  .text-hidden__btn-wrapper {
+    display: none;
   }
 }

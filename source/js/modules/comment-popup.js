@@ -9,6 +9,10 @@
         evt.preventDefault();
 
         window.openPopup(popup);
+        var textsHidden = popup.querySelectorAll('.js-text-hidden');
+        if (textsHidden.length) {
+          window.openText(textsHidden);
+        }
       });
     });
   };
