@@ -17,7 +17,7 @@
 })();
 
 (function () {
-  var tableBodys = document.querySelectorAll('.table-fixed__body');
+  var tableBodys = document.querySelectorAll('.table-fixed tbody');
 
   if (!tableBodys.length) {
     return;
@@ -35,8 +35,8 @@
 })();
 
 (function () {
-  var el = document.querySelector('.table-fixed--all-screen .table-fixed__body .simplebar-content-wrapper');
-  var header = document.querySelector('.table-fixed--all-screen .table-fixed__header');
+  var el = document.querySelector('.table-fixed--all-screen table tbody .simplebar-content-wrapper');
+  var header = document.querySelector('.table-fixed--all-screen table tr:first-child');
 
   if (!el && !header) {
     return;
