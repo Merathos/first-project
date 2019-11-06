@@ -36,9 +36,13 @@
 
 .table-fixed table {
   width: 100%;
-  min-width: 1000px;
+  min-width: $desktop-width;
   table-layout: fixed;
   border-collapse: collapse;
+
+  @media (max-width: $tablet-width - 1) {
+    min-width: 1000px;
+  }
 
   & th {
     width: 191px;
