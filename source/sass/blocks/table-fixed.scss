@@ -35,17 +35,15 @@
 }
 
 .table-fixed table {
+  display: block;
   width: 100%;
   min-width: $desktop-width;
   table-layout: fixed;
   border-collapse: collapse;
 
-  @media (max-width: $tablet-width - 1) {
-    min-width: 1000px;
-  }
-
   & th {
     width: 191px;
+    min-width: 191px;
     padding-right: 40px;
     padding-bottom: 16px;
     font-weight: 500;
@@ -59,6 +57,7 @@
 
     @media (max-width: $tablet-width - 1) {
       width: 152px;
+      min-width: 152px;
       padding-right: 32px;
       font-size: rem(13px);
       line-height: rem(17px);
@@ -70,12 +69,14 @@
 
       @media (max-width: $tablet-width - 1) {
         width: 100px;
+        min-width: 100px;
       }
     }
   }
 
   & td {
     width: 191px;
+    min-width: 191px;
     padding-top: 16px;
     padding-bottom: 16px;
     padding-right: 40px;
@@ -88,6 +89,7 @@
 
     @media (max-width: $tablet-width - 1) {
       width: 152px;
+      min-width: 152px;
       padding-right: 32px;
     }
 
@@ -97,16 +99,8 @@
 
       @media (max-width: $tablet-width - 1) {
         width: 100px;
+        min-width: 100px;
       }
-    }
-  }
-
-  & th:nth-child(4),
-  & th:nth-child(5),
-  & td:nth-child(4),
-  & td:nth-child(5) {
-    @media (max-width: $tablet-width - 1) {
-      width: 191px;
     }
   }
 
@@ -168,12 +162,13 @@
 
 
   & table {
-    & th:nth-child(4),
-    & th:nth-child(5),
-    & td:nth-child(4),
-    & td:nth-child(5) {
-      width: 280px;
-    }
+    // & th:nth-child(4),
+    // & th:nth-child(5),
+    // & td:nth-child(4),
+    // & td:nth-child(5) {
+    //   width: 280px;
+    //   min-width: 280px;
+    // }
 
     & tr {
       display: flex;
