@@ -7707,15 +7707,14 @@ span.poll-page__hide {
     background-image: linear-gradient(270deg, var(--color-bg-secondary, #ffffff) 0%, var(--color-bg-secondary-transparent, rgba(255, 255, 255, 0)) 100%); }
 
 .table-fixed table {
+  display: block;
   width: 100%;
   min-width: 1200px;
   table-layout: fixed;
   border-collapse: collapse; }
-  @media (max-width: 767px) {
-    .table-fixed table {
-      min-width: 1000px; } }
   .table-fixed table th {
     width: 191px;
+    min-width: 191px;
     padding-right: 40px;
     padding-bottom: 16px;
     font-weight: 500;
@@ -7728,6 +7727,7 @@ span.poll-page__hide {
     @media (max-width: 767px) {
       .table-fixed table th {
         width: 152px;
+        min-width: 152px;
         padding-right: 32px;
         font-size: 0.8125rem;
         line-height: 1.0625rem; } }
@@ -7736,9 +7736,11 @@ span.poll-page__hide {
       min-width: 119px; }
       @media (max-width: 767px) {
         .table-fixed table th:first-child {
-          width: 100px; } }
+          width: 100px;
+          min-width: 100px; } }
   .table-fixed table td {
     width: 191px;
+    min-width: 191px;
     padding-top: 16px;
     padding-bottom: 16px;
     padding-right: 40px;
@@ -7751,19 +7753,15 @@ span.poll-page__hide {
     @media (max-width: 767px) {
       .table-fixed table td {
         width: 152px;
+        min-width: 152px;
         padding-right: 32px; } }
     .table-fixed table td:first-child {
       width: 119px;
       min-width: 119px; }
       @media (max-width: 767px) {
         .table-fixed table td:first-child {
-          width: 100px; } }
-  @media (max-width: 767px) {
-    .table-fixed table th:nth-child(4),
-    .table-fixed table th:nth-child(5),
-    .table-fixed table td:nth-child(4),
-    .table-fixed table td:nth-child(5) {
-      width: 191px; } }
+          width: 100px;
+          min-width: 100px; } }
   .table-fixed table tr {
     width: 100%;
     display: block;
@@ -7808,11 +7806,6 @@ span.poll-page__hide {
   max-height: 100%; }
   .table-fixed--all-screen::before, .table-fixed--all-screen::after {
     display: none; }
-  .table-fixed--all-screen table th:nth-child(4),
-  .table-fixed--all-screen table th:nth-child(5),
-  .table-fixed--all-screen table td:nth-child(4),
-  .table-fixed--all-screen table td:nth-child(5) {
-    width: 280px; }
   .table-fixed--all-screen table tr {
     display: -webkit-box;
     display: -ms-flexbox;
