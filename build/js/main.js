@@ -142,166 +142,76 @@
 
 
 (function () {
-  var filterVote = document.querySelector('.js-filter-vote');
 
-  if (!filterVote) {
-    return;
-  }
+    var initJsFilter = function (filter) {
+        if (!filter) {
+            return;
+        }
+        var openBtn = filter.querySelector('.js-filter__open-btn');
+
+        var onOpenBtnClick = function (evt) {
+            filter.classList.toggle('filter--open');
+
+            evt.currentTarget.textContent =
+                filter.classList.contains('filter--open') ?
+                    'Скрыть фильтры'
+                    :
+                    'Фильтры';
+        };
+
+
+        filter.classList.add('filter--js');
+
+        openBtn.addEventListener('click', onOpenBtnClick);
+    };
+
+  var filter = document.querySelector('.js-filter');
+
+  initJsFilter(filter);
+
+  window.initJsFilter = initJsFilter;
+})();
+
+'use strict';
+
+
+(function () {
+  var selects = document.querySelectorAll('.js-form-select select');
 
 
   var deselectLabel = '<button type="button"><span class="visually-hidden">Сбросить фильтр по голосам</span><svg width="12" height="12" viewBox="0 0 12 12"><path d="M1 1L11 11M11 1L1 11" stroke-width="2"/></svg></button>';
 
 
-  var addSelect = function () {
-    return new window.SlimSelect({
-      select: '.js-filter-vote select',
-      showSearch: false,
-      allowDeselect: true,
-      placeholder: 'Голосовал',
-
-      deselectLabel: deselectLabel
-    });
-  };
-
-
-  addSelect();
-})();
-
-'use strict';
-
-
-(function () {
-  var filter = document.querySelector('.js-filter');
-
-
-  if (!filter) {
-    return;
-  }
-
-
-  var openBtn = filter.querySelector('.js-filter__open-btn');
-
-  var onOpenBtnClick = function (evt) {
-    filter.classList.toggle('filter--open');
-
-    evt.currentTarget.textContent =
-      filter.classList.contains('filter--open') ?
-        'Скрыть фильтры'
-        :
-        'Фильтры';
-  };
-
-
-  filter.classList.add('filter--js');
-
-  openBtn.addEventListener('click', onOpenBtnClick);
-})();
-
-'use strict';
-(function () {
-  var Scrollbar = window.Scrollbar;
-  var selectItem = document.querySelector('#projects-select');
-  var categorySelect = document.querySelector('#category-select');
-  var widgetSelectType = document.querySelector('#widget-select-type');
-  var widgetSelectLevel = document.querySelector('#widget-select-level');
-  var widgetSelectPreview = document.querySelector('#widget_block-preview-select');
-
-  if(widgetSelectType) {
-    var global = widgetSelectType.value;
-  }
-
   var addSelect = function (el) {
-    var select = new window.SlimSelect({
+    return new window.SlimSelect({
       select: el,
       showSearch: false,
+
+      placeholder: el.dataset.placeholderText ? el.dataset.placeholderText : '',
+
+      allowDeselect: el.dataset.deselect ? true : false,
+      deselectLabel: deselectLabel,
+      showContent: 'down',
+
       afterClose: function () {
-        Scrollbar.destroy(document.querySelector('.form-select .ss-list'));
+        window.Scrollbar.destroy(document.querySelector('.form-select .ss-list'));
       },
+
       afterOpen: function () {
-        Scrollbar.init(document.querySelector('.form-select .ss-list'), {
+        window.Scrollbar.init(document.querySelector('.form-select .ss-list'), {
           continuousScrolling: false
         });
       },
     });
-
-    if (!select) {
-      return;
-    }
-    Scrollbar.init(document.querySelector('.form-select .ss-main .ss-content .ss-list'), {
-      continuousScrolling: false
-    });
   };
 
-  var addSelectType = function (el) {
-    var select = new window.SlimSelect({
-      select: el,
-      showSearch: false,
-      onChange: function (el) {
-        global = el.value;
-        addSelectPreview(widgetSelectPreview);
-      },
-      afterClose: function () {
-        Scrollbar.destroy(document.querySelector('.form-select .ss-list'));
-      },
-      afterOpen: function () {
-        Scrollbar.init(document.querySelector('.form-select .ss-list'), {
-          continuousScrolling: false
-        });
-      },
-    });
 
-    if (!select) {
-      return;
-    }
-    Scrollbar.init(document.querySelector('.form-select .ss-main .ss-content .ss-list'), {
-      continuousScrolling: false
-    });
-  };
+  selects.forEach(function (select) {
+    addSelect(select);
+  });
 
-  function addSelectPreview(el) {
-    var select = new window.SlimSelect({
-      select: el,
-      showSearch: false,
-      afterClose: function () {
-        Scrollbar.destroy(document.querySelector('.form-select .ss-list'));
-      },
-      afterOpen: function () {
-        Scrollbar.init(document.querySelector('.form-select .ss-list'), {
-          continuousScrolling: false
-        });
-      },
-    });
 
-    select.set(global)
-
-    if (!select) {
-      return;
-    }
-    Scrollbar.init(document.querySelector('.form-select .ss-main .ss-content .ss-list'), {
-      continuousScrolling: false
-    });
-  };
-
-  if (selectItem) {
-    addSelect(selectItem);
-  }
-
-  if (categorySelect) {
-    addSelect(categorySelect);
-  }
-
-  if (widgetSelectType) {
-    addSelectType(widgetSelectType);
-  }
-
-  if (widgetSelectLevel) {
-    addSelect(widgetSelectLevel);
-  }
-
-  if (widgetSelectPreview) {
-    addSelectPreview(widgetSelectPreview);
-  }
-  
+  window.addSelect = addSelect;
 })();
 
 'use strict';
@@ -811,63 +721,63 @@
 
 'use strict';
 
-// function initRangeSlider(rangeSlider) {
+function initRangeSlider(rangeSlider) {
 
-//     if (!rangeSlider) {
-//         return;
-//     }
+    if (!rangeSlider) {
+        return;
+    }
 
-//     var input = document.getElementById(rangeSlider.dataset.input);
+    var input = document.getElementById(rangeSlider.dataset.input);
 
-//     var min = parseInt(rangeSlider.dataset.min);
-//     var max = parseInt(rangeSlider.dataset.max);
-//     var start = input.value ? input.value : max / 2;
-//     window.noUiSlider.create(rangeSlider, {
-//         start: start,
-//         behaviour: 'snap',
-//         connect: 'lower',
-//         step: parseInt(rangeSlider.dataset.step),
-//         range: {
-//             'min': [min],
-//             'max': [max]
-//         },
-//         pips: {
-//             mode: 'steps',
-//             stepped: true,
-//             density: 4
-//         },
-//         tooltips: true,
-//         format: window.wNumb({
-//             decimals: 0,
-//         })
-//     });
+    var min = parseInt(rangeSlider.dataset.min);
+    var max = parseInt(rangeSlider.dataset.max);
+    var start = input.value ? input.value : max / 2;
+    window.noUiSlider.create(rangeSlider, {
+        start: start,
+        behaviour: 'snap',
+        connect: 'lower',
+        step: parseInt(rangeSlider.dataset.step),
+        range: {
+            'min': [min],
+            'max': [max]
+        },
+        pips: {
+            mode: 'steps',
+            stepped: true,
+            density: 4
+        },
+        tooltips: true,
+        format: window.wNumb({
+            decimals: 0,
+        })
+    });
 
-//     rangeSlider.noUiSlider.on('update', function (values, handle) {
+    rangeSlider.noUiSlider.on('update', function (values, handle) {
 
-//         var value = values[handle];
-//         var maxPos = Math.max(values);
-//         var pips = rangeSlider.querySelectorAll('.noUi-marker-horizontal.noUi-marker-sub');
+        var value = values[handle];
+        var maxPos = Math.max(values);
+        var pips = rangeSlider.querySelectorAll('.noUi-marker-horizontal.noUi-marker-sub');
 
-//         input.value = value;
+        input.value = value;
 
-//         if (!pips) {
-//             return;
-//         }
+        if (!pips) {
+            return;
+        }
 
-//         for (var i = 0; i < pips.length; i++) {
+        for (var i = 0; i < pips.length; i++) {
 
-//             if (i <= maxPos - 2) {
-//                 pips[i].classList.add('form-range__accent');
-//             } else {
-//                 pips[i].classList.remove('form-range__accent');
-//             }
-//         }
+            if (i <= maxPos - 2) {
+                pips[i].classList.add('form-range__accent');
+            } else {
+                pips[i].classList.remove('form-range__accent');
+            }
+        }
 
-//     });
-// }
-// document.querySelectorAll('.js-poll-range').forEach(function (item) {
-//     initRangeSlider(item);
-// });
+    });
+}
+document.querySelectorAll('.js-poll-range').forEach(function (item) {
+    initRangeSlider(item);
+});
 
 
 'use strict';
@@ -1298,21 +1208,21 @@
   var widgetCountPage = document.getElementById("widget_count_page");
   var widgetCountAll = document.getElementById("widget_count_all");
   var widgetTimer = document.getElementById("widget_timer");
-  var widgetInput = document.querySelector('.widget_block__input_bottom');
+  var widgetWidthInput = document.getElementById('widget_width_input');
+  var widgetPreview = document.querySelector('.widget_block__preview__block');
 
   var widgetPaginationItemOnPage = 5;
   var widgetPaginationItemAll = 15;
   var widgetTimerValue = 2000;
 
-  var widgetPaginationEl = (widgetPaginationItemAll / widgetPaginationItemOnPage) + 1;
+  var widgetPaginationEl = Math.ceil((widgetPaginationItemAll / widgetPaginationItemOnPage) + 1);
 
-  if (!widgetCountPage && !widgetCountAll && !widgetTimer) {
+  if (!widgetCountPage && !widgetCountAll && !widgetTimer && !widgetPreview) {
     return;
   }
 
   var mySwiper = null;
-  var i = 0;
-  var q = 0;
+  var i = 1;
 
   var paginationSlider = function() {
     $('.swiper-pagination').pagination({
@@ -1321,7 +1231,7 @@
       displayedPages: 3,
       edges: 1,
       cssStyle: '',
-      currentPage: i,
+      currentPage: 1,
       prevText: '<svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="img/sprite.svg#icon-paginator-prev"></use></svg>',
       nextText: '<svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="img/sprite.svg#icon-paginator-next"></use></svg>',
       onPageClick: function(pageNumber, event) {
@@ -1329,6 +1239,7 @@
       },
     });
   }
+
   
   var mySwiper = new Swiper('.swiper-container', {
     speed: 400,
@@ -1343,11 +1254,21 @@
     on: {
       init: function () {
         paginationSlider();
-        // WidgetTimerDelay();
       },
       slideChangeTransitionStart: function () {
-        paginationSlider();
-        i++;        
+          $('.swiper-pagination').pagination({
+            items: widgetPaginationItemAll,
+            itemsOnPage: widgetPaginationItemOnPage,
+            displayedPages: 3,
+            edges: 1,
+            cssStyle: '',
+            currentPage: i++,
+            prevText: '<svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="img/sprite.svg#icon-paginator-prev"></use></svg>',
+            nextText: '<svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="img/sprite.svg#icon-paginator-next"></use></svg>',
+            onPageClick: function(pageNumber, event) {
+              mySwiper.slideTo(pageNumber - 1,400,false);
+            },
+          });   
         if(i === widgetPaginationEl){
           i = 1;
         }
@@ -1364,39 +1285,26 @@
 
   if(widgetCountPage) {
     widgetCountPage.addEventListener('focusout',function(event){
-      widgetInput.append(error);
+
+      if(event.srcElement.value === ''){
+        return;
+      }
+
+      i = 1;
+
       if(event.srcElement.value > 0 && event.srcElement.value != '') {
         error.remove();
+        this.style.border = '1px solid #e3e8ee';
+
         widgetPaginationItemOnPage = Number(event.srcElement.value);
-        paginationSlider();
-        widgetPaginationEl = (widgetPaginationItemAll / widgetPaginationItemOnPage) + 1;
-      } else {widgetInput.append(error);error.innerHTML = "Количество элементов на странице не может быть 0";} 
-    });
-  }
+        widgetPaginationEl = Math.ceil((widgetPaginationItemAll / widgetPaginationItemOnPage) + 1);
 
-  if(widgetCountAll) {
-    widgetCountAll.addEventListener('focusout',function(event){
-      widgetInput.append(error);
-      if(event.srcElement.value > 0 && event.srcElement.value != '') {
-        error.remove();
-        widgetPaginationItemAll = Number(event.srcElement.value);
-        paginationSlider();
-        widgetPaginationEl = (widgetPaginationItemAll / widgetPaginationItemOnPage) + 1;
-      } else  {widgetInput.append(error);error.innerHTML = "Количество элементов на странице не может быть 0";} 
-    });
-  }
-
-  if(widgetTimer) {
-    widgetTimer.addEventListener('focusout',function(event){
-      widgetInput.append(error);
-      if(event.srcElement.value > 0 && event.srcElement.value != '') {
-        error.remove();
         var mySwiper = document.querySelector('.swiper-container').swiper;
         mySwiper.destroy(true,true);
         var mySwiper = new Swiper('.swiper-container', {
           speed: 400,
           autoplay: {
-            delay: event.srcElement.value,
+            delay: widgetTimerValue,
           },
           watchOverflow: true,
           grabCursor: true,
@@ -1414,23 +1322,204 @@
                 displayedPages: 3,
                 edges: 1,
                 cssStyle: '',
-                currentPage: q,
+                currentPage: i++,
                 prevText: '<svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="img/sprite.svg#icon-paginator-prev"></use></svg>',
                 nextText: '<svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="img/sprite.svg#icon-paginator-next"></use></svg>',
                 onPageClick: function(pageNumber, event) {
                   mySwiper.slideTo(pageNumber - 1,400,false);
                 },
               });
-      
-              q++;        
-              if(q === widgetPaginationEl){
-                q = 1;
+             
+              if(i === widgetPaginationEl){
+                i = 1;
               }
             }
           },
         });
         var mySwiper = document.querySelector('.swiper-container').swiper;
-      } else {widgetInput.append(error);error.innerHTML = "Время не может быть пустым";} 
+
+      } else {
+        this.parentElement.append(error);
+        this.style.border = '1px solid #F3A8A8';
+        error.innerHTML = "Количество элементов на странице не может быть 0";} 
+
+    });
+  }
+
+  if(widgetCountAll) {
+    widgetCountAll.addEventListener('focusout',function(event){
+
+      if(event.srcElement.value === ''){
+        return;
+      }
+      i = 1;
+
+      if(event.srcElement.value > 0 && event.srcElement.value != '') {
+        error.remove();
+        this.style.border = '1px solid #e3e8ee';
+
+        widgetPaginationItemAll = Number(event.srcElement.value);
+        widgetPaginationEl = Math.ceil((widgetPaginationItemAll / widgetPaginationItemOnPage) + 1);
+
+        var mySwiper = document.querySelector('.swiper-container').swiper;
+        mySwiper.destroy(true,true);
+        var mySwiper = new Swiper('.swiper-container', {
+          speed: 400,
+          autoplay: {
+            delay: widgetTimerValue,
+          },
+          watchOverflow: true,
+          grabCursor: true,
+          loop: true,
+          allowTouchMove:false,
+          hashNavigation: false,
+          on: {
+            init: function () {
+              paginationSlider();
+            },
+            slideChangeTransitionStart: function () {
+              $('.swiper-pagination').pagination({
+                items: widgetPaginationItemAll,
+                itemsOnPage: widgetPaginationItemOnPage,
+                displayedPages: 3,
+                edges: 1,
+                cssStyle: '',
+                currentPage: i++,
+                prevText: '<svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="img/sprite.svg#icon-paginator-prev"></use></svg>',
+                nextText: '<svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="img/sprite.svg#icon-paginator-next"></use></svg>',
+                onPageClick: function(pageNumber, event) {
+                  mySwiper.slideTo(pageNumber - 1,400,false);
+                },
+              });
+             
+              if(i === widgetPaginationEl){
+                i = 1;
+              }
+            }
+          },
+        });
+        var mySwiper = document.querySelector('.swiper-container').swiper;
+      } else  {
+        this.parentElement.append(error);
+        this.style.border = '1px solid #F3A8A8';
+        error.innerHTML = "Общее количество элементов не может быть 0";
+      } 
+    });
+  }
+
+  if(widgetTimer) {
+    widgetTimer.addEventListener('focusout',function(event){
+
+      if(event.srcElement.value === ''){
+        return;
+      }
+      i = 1;
+
+      if(event.srcElement.value > 0 && event.srcElement.value != '') {
+        error.remove();
+        this.style.border = '1px solid #e3e8ee';
+        var mySwiper = document.querySelector('.swiper-container').swiper;
+        mySwiper.destroy(true,true);
+        widgetTimerValue = event.srcElement.value;
+        var mySwiper = new Swiper('.swiper-container', {
+          speed: 400,
+          autoplay: {
+            delay: widgetTimerValue,
+          },
+          watchOverflow: true,
+          grabCursor: true,
+          loop: true,
+          allowTouchMove:false,
+          hashNavigation: false,
+          on: {
+            init: function () {
+              paginationSlider();
+            },
+            slideChangeTransitionStart: function () {
+              $('.swiper-pagination').pagination({
+                items: widgetPaginationItemAll,
+                itemsOnPage: widgetPaginationItemOnPage,
+                displayedPages: 3,
+                edges: 1,
+                cssStyle: '',
+                currentPage: i++,
+                prevText: '<svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="img/sprite.svg#icon-paginator-prev"></use></svg>',
+                nextText: '<svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="img/sprite.svg#icon-paginator-next"></use></svg>',
+                onPageClick: function(pageNumber, event) {
+                  mySwiper.slideTo(pageNumber - 1,400,false);
+                },
+              });
+             
+              if(i === widgetPaginationEl){
+                i = 1;
+              }
+            }
+          },
+        });
+        var mySwiper = document.querySelector('.swiper-container').swiper;
+      } else {
+        this.parentElement.append(error);
+        this.style.border = '1px solid #F3A8A8';
+        error.innerHTML = "Время не может быть пустым";} 
+    });
+  }
+
+  if(widgetWidthInput) {
+    widgetWidthInput.addEventListener('focusout',function(event){
+      if(event.srcElement.value === ''){
+        return
+      }
+
+      i = 1;
+
+      if(event.srcElement.value >= 320){
+        widgetPreview.style.width = event.srcElement.value + 'px';
+        error.remove();
+        this.style.border = '1px solid #e3e8ee';
+
+        var mySwiper = document.querySelector('.swiper-container').swiper;
+        mySwiper.destroy(true,true);
+        var mySwiper = new Swiper('.swiper-container', {
+          speed: 400,
+          autoplay: {
+            delay: widgetTimerValue,
+          },
+          watchOverflow: true,
+          grabCursor: true,
+          loop: true,
+          allowTouchMove:false,
+          hashNavigation: false,
+          on: {
+            init: function () {
+              paginationSlider();
+            },
+            slideChangeTransitionStart: function () {
+              $('.swiper-pagination').pagination({
+                items: widgetPaginationItemAll,
+                itemsOnPage: widgetPaginationItemOnPage,
+                displayedPages: 3,
+                edges: 1,
+                cssStyle: '',
+                currentPage: i++,
+                prevText: '<svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="img/sprite.svg#icon-paginator-prev"></use></svg>',
+                nextText: '<svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg"><use xlink:href="img/sprite.svg#icon-paginator-next"></use></svg>',
+                onPageClick: function(pageNumber, event) {
+                  mySwiper.slideTo(pageNumber - 1,400,false);
+                },
+              });
+             
+              if(i === widgetPaginationEl){
+                i = 1;
+              }
+            }
+          },
+        });
+        var mySwiper = document.querySelector('.swiper-container').swiper;
+      } else {
+        this.parentElement.append(error);
+        this.style.border = '1px solid #F3A8A8';
+        error.innerHTML = "Ширина должна быть не менее 320px";
+      }
     });
   }
 
@@ -1452,32 +1541,102 @@
 })();
 
 'use strict';
-
 (function () {
-  var widgetWidthInput = document.getElementById('widget_width_input');
-  var widgetPreview = document.querySelector('.widget_block__preview__block');
-  var widgetInput = document.querySelector('.widget_block__input_bottom');
+  var Scrollbar = window.Scrollbar;
+  var widgetSelectType = document.querySelector('#widget-select-type');
+  var widgetSelectLevel = document.querySelector('#widget-select-level');
+  var widgetSelectPreview = document.querySelector('#widget_block-preview-select');
+  var widgetClassAdd = document.querySelector('.widget_block__selected_preview');
 
-  var error = document.createElement("div");
-  error.classList.add('error');
+  var arr;
+  var obj;
 
-  if (!widgetPreview && !widgetInput) {
-    return;
-  }
-
-  if(widgetWidthInput) {
-    widgetWidthInput.addEventListener('focusout',function(event){
-      if(event.srcElement.value === ''){
-        return
-      }
-      if(event.srcElement.value >= 320){
-        widgetPreview.style.width = event.srcElement.value + 'px';
-        error.remove();
-      } else {
-        widgetInput.append(error);
-        error.innerHTML = "Ширина должна быть не менее 320px";
-      }
+  var addSelectLevel = function (el) {
+    var select = new window.SlimSelect({
+      select: el,
+      showSearch: false,
+      afterOpen: function () {
+        Scrollbar.init(document.querySelector('.form-select .ss-list'), {
+          continuousScrolling: false
+        });
+      },
     });
+
+    if (!select) {
+      return;
+    }
+    Scrollbar.init(document.querySelector('.form-select .ss-main .ss-content .ss-list'), {
+      continuousScrolling: false
+    });
+  };
+
+  var addSelectType = function (el) {
+    var select = new window.SlimSelect({
+      select: el,
+      showSearch: false,
+      onChange: function (el) {
+        arr = new Array;
+        obj = new Object;
+        for(var i = 0;i < el.length;i++){
+          obj = {};
+          obj['text'] = el[i].value;
+          arr.push(obj);
+        }
+        if(arr.length > 1){
+          widgetClassAdd.classList.add('ss-arrow-show');
+        } else {
+          widgetClassAdd.classList.remove('ss-arrow-show');
+        }
+        addSelectPreview(widgetSelectPreview);
+      },
+      afterOpen: function () {
+        Scrollbar.init(document.querySelector('.form-select .ss-list'), {
+          continuousScrolling: false
+        });
+      },
+    });
+
+    if (!select) {
+      return;
+    }
+    Scrollbar.init(document.querySelector('.form-select .ss-main .ss-content .ss-list'), {
+      continuousScrolling: false
+    });
+  };
+
+  function addSelectPreview(el) {
+    var select = new window.SlimSelect({
+      select: el,
+      showSearch: false,
+      placeholder: 'Тип виджета',
+      data: arr,
+      afterOpen: function () {
+        Scrollbar.init(document.querySelector('.form-select .ss-list'), {
+          continuousScrolling: false
+        });
+      },
+    });
+
+    //select.set(arr)
+
+    if (!select) {
+      return;
+    }
+    Scrollbar.init(document.querySelector('.form-select .ss-main .ss-content .ss-list'), {
+      continuousScrolling: false
+    });
+  };
+
+  if (widgetSelectType) {
+    addSelectType(widgetSelectType);
   }
 
+  if (widgetSelectLevel) {
+    addSelectLevel(widgetSelectLevel);
+  }
+
+  if (widgetSelectPreview) {
+    addSelectPreview(widgetSelectPreview);
+  }
+  
 })();

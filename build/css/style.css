@@ -2506,6 +2506,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   background-color: var(--color-bg-main, #f5f6f7); }
 
 .form-select .ss-main .ss-content {
+  z-index: 10;
   top: calc(100% + 8px);
   right: 0;
   width: 343px;
@@ -6498,7 +6499,7 @@ span.poll__hide {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 11px 28px;
+  padding: 11px 20px;
   margin-top: 16px;
   margin-left: 16px;
   font-size: 1rem;
@@ -8453,6 +8454,10 @@ span.poll-page__hide {
         width: 360px;
         height: 48px;
         padding: 0 20px; }
+        @media (max-width: 868px) {
+          .widget_block__select .ss-main .ss-multi-selected {
+            width: 100%;
+            height: 48px; } }
         .widget_block__select .ss-main .ss-multi-selected .ss-value {
           padding: 0;
           margin: 0;
@@ -8527,31 +8532,38 @@ span.poll-page__hide {
       .widget_block__input {
         display: block;
         margin-bottom: 0px; } }
-    .widget_block__input input {
-      background: #fff;
-      border: 1px solid #e3e8ee;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      border-radius: 5px;
+    .widget_block__input_item {
       width: 360px;
-      height: 48px;
-      padding: 0 20px;
-      margin-right: 20px; }
+      display: inline-block;
+      margin-right: 20px;
+      position: relative; }
+      .widget_block__input_item input {
+        background: #fff;
+        border: 1px solid #e3e8ee;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        border-radius: 5px;
+        width: 360px;
+        height: 48px;
+        padding: 0 20px; }
+        @media (max-width: 868px) {
+          .widget_block__input_item input {
+            width: 100%; } }
       @media (max-width: 868px) {
-        .widget_block__input input {
+        .widget_block__input_item {
           margin-right: 10px;
           width: 50%; } }
       @media (max-width: 550px) {
-        .widget_block__input input {
+        .widget_block__input_item {
           margin-right: 0px;
           width: 100%;
           margin-bottom: 20px; } }
       @media (max-width: 868px) {
-        .widget_block__input input:last-child {
+        .widget_block__input_item:last-child {
           margin-right: 0px;
           margin-left: 10px; } }
       @media (max-width: 550px) {
-        .widget_block__input input:last-child {
+        .widget_block__input_item:last-child {
           margin-right: 0px;
           margin-left: 0px; } }
   .widget_block__preview {
@@ -8742,11 +8754,31 @@ span.poll-page__hide {
     margin-bottom: 120px; }
   .widget_block .error {
     margin-top: 10px;
-    padding: 10px 20px;
-    background: #fb7272;
-    border-radius: 5px;
+    padding: 10px 10px;
+    background: #e55050;
+    border-radius: 3px;
+    text-align: center;
     color: #fff;
-    width: 360px; }
+    width: 360px;
+    position: absolute;
+    font-size: 13px;
+    z-index: 99; }
+    @media (max-width: 868px) {
+      .widget_block .error {
+        width: 100%; } }
+    .widget_block .error:before {
+      content: '';
+      width: 12px;
+      height: 12px;
+      background: #e55050;
+      position: absolute;
+      top: -4px;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+      border-radius: 2px; }
 
 .widget-popup .gallery-popup__content {
   display: block;
