@@ -19,8 +19,8 @@
               <div class="widget_block">
                 <form action="">
                       <div class="form-select widget_block__select">
-                          <select name="widget-select-type" id="widget-select-type">
-                              <option value="Тип виджета">Тип виджета</option>
+                          <select name="widget-select-type" id="widget-select-type" multiple>
+                              <option data-placeholder="true" value="Тип виджета">Тип виджета</option>
                               <option value="Обсуждения">Обсуждения</option>
                               <option value="Опросы">Опросы</option>
                               <option value="Новости">Новости</option>
@@ -33,12 +33,20 @@
                               </select>
                       </div>
                       <div class="widget_block__input widget_block__input_top">
-                        <input type="text" id="widget_count_page" placeholder="Количество элементов на странице">
-                        <input type="text" id="widget_count_all" placeholder="Общее количество элементов в виджете">
+                          <div class="widget_block__input_item">
+                            <input type="text" id="widget_count_page" placeholder="Количество элементов на странице (5)">
+                          </div>
+                          <div class="widget_block__input_item">
+                              <input type="text" id="widget_count_all" placeholder="Общее количество элементов в виджете (15)">
+                          </div>
                       </div>
                       <div class="widget_block__input widget_block__input_bottom">
-                          <input type="text" id="widget_width_input" placeholder="Ширина в px">
-                          <input type="text" id="widget_timer" placeholder="Частота обновления в сек">
+                          <div class="widget_block__input_item">
+                              <input type="text" id="widget_width_input" placeholder="Ширина в px (320)">                          
+                          </div>
+                          <div class="widget_block__input_item">
+                              <input type="text" id="widget_timer" placeholder="Частота обновления в мс (2000)">
+                          </div>
                       </div>
 
                       <div class="widget_block__preview">
@@ -55,14 +63,14 @@
                               </svg>
                             </a></div>
                           </div>
-                          <div class="widget_block__selected">
+                          <div class="widget_block__selected widget_block__selected_preview">
                               <div class="form-select">
                                   <select name="widget_block-preview-select" id="widget_block-preview-select">
-                                      <option value="Тип виджета">Тип виджета</option>
-                                      <option value="Обсуждения">Обсуждения</option>
+                                      <option data-placeholder="true" value="Тип виджета">Тип виджета</option>
+                                      <!-- <option value="Обсуждения">Обсуждения</option>
                                       <option value="Опросы">Опросы</option>
                                       <option value="Новости">Новости</option>
-                                      <option value="Проекты">Проекты</option>
+                                      <option value="Проекты">Проекты</option> -->
                                   </select>
                               </div>
                           </div>
@@ -152,10 +160,10 @@
                             </div>
 
                             <div class="swiper-pagination"></div>
- 
+
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-button-next"></div>
-                          
+
                           </div>
                         </div>
                       </div>
@@ -165,7 +173,7 @@
                 </form>
               </div>
 
-              <div class="widget-popup gallery-popup js-gallery-popup popup js-popup">
+              <div class="widget-popup gallery-popup js-widget-popup popup js-popup">
                   <div class="popup__container">
                     <div class="popup__overlay js-popup__overlay"></div>
             
@@ -178,7 +186,7 @@
                           </svg>
                         </button>
                       </div>
-            
+
                       <div class="gallery-popup__frame js-gallery-popup__frame swiper-container">
                         <textarea name="" id="" cols="50" rows="10"></textarea>
                       </div>

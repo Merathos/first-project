@@ -17,7 +17,7 @@
               <h1 class="filter__header-item">Проекты на голосовании&nbsp;</h1>
               <span class="filter__header-item filter__header-item--last">в категории</span>
 
-              <div class="filter__category-select form-select">
+              <div class="filter__category-select form-select js-form-select">
                 <select name="category-select" id="category-select">
                   <option value="Библиотеки">Библиотеки</option>
                   <option value="Благоустройство">Благоустройство</option>
@@ -75,8 +75,8 @@
                     <label for="filter-location-local">Местные</label>
                   </div>
 
-                  <div class="filter__item filter__item--vote filter-vote js-filter-vote form-select">
-                    <select name="vote-select" id="vote-select">
+                  <div class="filter__item filter__item--vote filter-vote form-select js-form-select">
+                    <select name="vote-select" id="vote-select" data-placeholder-text="Голосовал" data-deselect="true">
                       <option data-placeholder="true"></option>
                       <option value="За">За</option>
                       <option value="Против">Против</option>

@@ -43,6 +43,7 @@
   }
 
   & .ss-main .ss-content {
+    z-index: 10;
     top: calc(100% + 8px);
     right: 0;
     width: 343px;
