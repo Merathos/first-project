@@ -17,6 +17,7 @@
 
       allowDeselect: el.dataset.deselect ? true : false,
       deselectLabel: deselectLabel,
+      showContent: 'down',
 
       afterClose: function () {
         window.Scrollbar.destroy(document.querySelector('.form-select .ss-list'));
