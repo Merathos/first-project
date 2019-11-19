@@ -32,7 +32,7 @@
 
   function initTable() {
     initTableContainerScroll(document.querySelectorAll('.table-fixed'));
-    initTableScroll(document.querySelectorAll('.table-fixed tbody'));
+    // initTableScroll(document.querySelectorAll('.table-fixed tbody'));
   }
 
   initTable();
@@ -57,6 +57,6 @@
     });
   }
 
-  initTableHeader(document.querySelector('.table-fixed--all-screen table tbody .simplebar-content-wrapper'), document.querySelector('.table-fixed--all-screen table tr:first-child'));
+  initTableHeader(document.querySelector('.table-fixed--all-screen table tbody'), document.querySelector('.table-fixed--all-screen table tr:first-child'));
 
 })();

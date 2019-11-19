@@ -35,10 +35,10 @@
 }
 
 .table-fixed table {
-  display: block;
+  // display: block;
   width: 100%;
   min-width: $desktop-width;
-  table-layout: fixed;
+  // table-layout: fixed;
   border-collapse: collapse;
 
   & th {
@@ -176,6 +176,7 @@
       align-items: center;
       min-height: 66px;
       margin: 0 auto;
+      padding-left: 20px;
 
       &:first-child {
         display: flex;
