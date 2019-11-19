@@ -13,6 +13,8 @@
         if (textsHidden.length) {
           window.openText(textsHidden);
         }
+
+        window.initTable();
       });
     });
   };
@@ -956,6 +958,18 @@
 'use strict';
 (function () {
 
+  function addTableWidth(tables) {
+    if (!tables.length) {
+      return;
+    }
+
+    Array.prototype.forEach.call(tables, function (table) {
+      var minWidth = table.scrollWidth;
+      var style = 'min-width: ' + minWidth + 'px;';
+      table.style = style;
+    });
+  }
+
   function initTableContainerScroll(tableContainers) {
     if (!tableContainers.length) {
       return;
@@ -985,12 +999,14 @@
     });
   }
 
-  function initTable() {
+  window.initTable = function () {
+    addTableWidth(document.querySelectorAll('.table-fixed table'));
     initTableContainerScroll(document.querySelectorAll('.table-fixed'));
-    // initTableScroll(document.querySelectorAll('.table-fixed tbody'));
-  }
+    initTableScroll(document.querySelectorAll('.table-fixed tbody'));
+  };
 
-  initTable();
+  window.initTable();
+
 
 })();
 
@@ -1002,17 +1018,24 @@
     }
 
     el.addEventListener('scroll', function () {
+      var topContainer = document.querySelector('.table-fixed--all-screen table tr:first-child');
+      if (!topContainer) {
+        return;
+      }
+      var top = topContainer.scrollHeight + 16;
 
       if (el.scrollTop > 50) {
-        header.classList.add('table-fixed__header--scroll');
+        header.classList.add('table-popup__header--scroll');
+        var style = 'top: ' + top + 'px;';
+        header.style = style;
       }
       if (el.scrollTop < 50) {
-        header.classList.remove('table-fixed__header--scroll');
+        header.classList.remove('table-popup__header--scroll');
       }
     });
   }
 
-  initTableHeader(document.querySelector('.table-fixed--all-screen table tbody'), document.querySelector('.table-fixed--all-screen table tr:first-child'));
+  initTableHeader(document.querySelector('.table-fixed--all-screen table tbody .simplebar-content-wrapper'), document.querySelector('.table-popup__header'));
 
 })();
 

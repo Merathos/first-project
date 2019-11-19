@@ -13,6 +13,8 @@
         if (textsHidden.length) {
           window.openText(textsHidden);
         }
+
+        window.initTable();
       });
     });
   };
