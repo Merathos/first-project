@@ -8,6 +8,21 @@
   min-height: 100vh;
 }
 
+.table-popup__header {
+  display: none;
+  position: absolute;
+  top: 90px;
+  width: 100%;
+  height: 8px;
+  background-color: $white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  z-index: 20;
+
+  &--scroll {
+    display: block;
+  }
+}
+
 .table-popup__bar {
   margin: 0 auto;
   height: 24px;

@@ -7801,45 +7801,17 @@ span.poll-page__hide {
   background-image: linear-gradient(var(--color-stroke, #f5f6f7), var(--color-stroke, #f5f6f7)); }
 
 .table-fixed--all-screen {
+  width: 1200px;
   margin: 0 auto;
-  max-height: 100%; }
-  .table-fixed--all-screen::before, .table-fixed--all-screen::after {
-    display: none; }
-  .table-fixed--all-screen table tr {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    min-height: 66px;
-    margin: 0 auto;
-    padding-left: 20px; }
-    .table-fixed--all-screen table tr:first-child {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center; }
+  height: calc(100vh - 24px); }
+  @media (max-width: 1199px) {
+    .table-fixed--all-screen table tr {
+      padding-left: 15px;
+      padding-right: 15px; } }
   .table-fixed--all-screen table tbody {
-    max-height: calc(100vh - 81px); }
-    @media (max-width: 1199px) {
-      .table-fixed--all-screen table tbody {
-        padding-left: 15px;
-        padding-right: 15px; } }
+    max-height: calc(100vh - 110px); }
     .table-fixed--all-screen table tbody .simplebar-vertical {
       right: 0; }
-  .table-fixed--all-screen .table-fixed__header--scroll {
-    -webkit-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-    background-image: none; }
 
 .comment-popup .popup__close-btn {
   margin-left: auto; }
@@ -8147,6 +8119,19 @@ span.poll-page__hide {
   width: 100%;
   height: 100%;
   min-height: 100vh; }
+
+.table-popup__header {
+  display: none;
+  position: absolute;
+  top: 90px;
+  width: 100%;
+  height: 8px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08);
+  z-index: 20; }
+  .table-popup__header--scroll {
+    display: block; }
 
 .table-popup__bar {
   margin: 0 auto;
