@@ -7027,7 +7027,8 @@ span.poll-page__hide {
   .news-item__text--line {
     max-width: 100%;
     padding-right: 380px;
-    padding-bottom: 48px; }
+    padding-bottom: 48px;
+    background-image: none; }
     @media (max-width: 1199px) {
       .news-item__text--line {
         padding-right: 0; } }
@@ -7263,6 +7264,15 @@ span.poll-page__hide {
   @media (max-width: 767px) {
     .discussion-list {
       margin-top: 0; } }
+  .discussion-list h2 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 1.875rem;
+    line-height: 2.25rem; }
+    @media (max-width: 767px) {
+      .discussion-list h2 {
+        margin-bottom: 10px; } }
 
 .discussion-list__button {
   width: 360px;
@@ -7709,7 +7719,6 @@ span.poll-page__hide {
 
 .table-fixed table {
   width: 100%;
-  min-width: 1200px;
   border-collapse: collapse; }
   .table-fixed table th {
     width: 191px;
