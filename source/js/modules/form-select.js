@@ -12,12 +12,12 @@
     return new window.SlimSelect({
       select: el,
       showSearch: false,
+      showContent: 'down',
 
       placeholder: el.dataset.placeholderText ? el.dataset.placeholderText : '',
 
       allowDeselect: el.dataset.deselect ? true : false,
       deselectLabel: deselectLabel,
-      showContent: 'down',
 
       afterClose: function () {
         window.Scrollbar.destroy(document.querySelector('.form-select .ss-list'));

@@ -150,6 +150,12 @@ img {
   margin: 0 auto;
 }
 
+// ios 13 ruble sign fix
+.ruble-sign {
+  font-weight: 400;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
 @media print {
   @page {
     size: auto;

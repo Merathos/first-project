@@ -3,17 +3,31 @@
   padding: 5px;
   color: $light-grey;
   cursor: pointer;
-  transition: color $style-change-duration;
+  outline: none;
 
-  &:hover,
   &:focus {
     color: var(--color-interactive-accent, $blue-accent);
-    outline: none;
   }
 
-  &:active,
-  &--active {
+  &:focus:not(.focus-visible) {
+    color: $light-grey;
+  }
+
+  &:hover:not(.focus-visible) {
+    color: var(--color-interactive-accent, $blue-accent);
+  }
+
+  &--active:not(.focus-visible),
+  &--active:focus:not(.focus-visible) {
     color: var(--color-interactive-default, $blue-default);
+  }
+
+  &--active:hover:not(.focus-visible) {
+    color: var(--color-interactive-accent, $blue-accent);
+  }
+
+  svg {
+    pointer-events: none;
   }
 }
 
