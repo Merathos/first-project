@@ -50,7 +50,7 @@
   }
 
   &--sign {
-    .discussion__button-star {
+    .button-star {
       display: block;
 
       color: var(--color-interactive-default, $blue-default);
@@ -64,13 +64,7 @@
   }
 
   &:hover {
-    .discussion__button-star {
-      display: block;
-    }
-  }
-
-  @media (max-width: $desktop-width - 1) {
-    .discussion__button-star {
+    .button-star {
       display: block;
     }
   }
@@ -182,13 +176,17 @@
   text-align: left;
 }
 
-.discussion__button-star {
+.discussion .button-star {
   position: absolute;
   right: 0;
   bottom: 1px;
 
   display: none;
   padding: 0;
+
+  @media (max-width: $desktop-width - 1) {
+    display: block;
+  }
 
   @media (max-width: $desktop-width - 81) {
     bottom: 0;
@@ -249,7 +247,7 @@
 @media print {
   .discussion__archive-link,
   .discussion__archive-mobile,
-  .discussion__button-star,
+  .discussion .button-star,
   .discussion__used {
     display: none;
   }
@@ -258,7 +256,7 @@
     page-break-inside: avoid;
     break-inside: avoid;
 
-    & .discussion__button-star {
+    & .button-star {
       display: none;
     }
 

@@ -54,8 +54,8 @@
   line-height: rem(22px);
 }
 
-.project-meta__fovorite-btn {
-  padding: 8px;
+.project-meta .button-star {
+  padding: 0;
   margin-left: auto;
 
   svg {
@@ -64,7 +64,7 @@
   }
 }
 
-.project-meta__fovorite-btn-text {
+.project-meta .button-star__text {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -73,13 +73,6 @@
   padding: 0;
   margin: -1px;
   border: 0;
-}
-
-
-@include tablet {
-  .project-meta__fovorite-btn {
-    padding: 0;
-  }
 }
 
 
@@ -118,7 +111,7 @@
     }
   }
 
-  .project-meta__fovorite-btn {
+  .project-meta .button-star {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,7 +124,7 @@
     }
   }
 
-  .project-meta__fovorite-btn-text {
+  .project-meta .button-star__text {
     position: static;
     width: auto;
     height: auto;
@@ -145,7 +138,7 @@
 
 
 @media (min-width: $desktop-width) {
-  .project-meta__fovorite-btn[data-tooltip][data-flow^="down"] {
+  .project-meta .button-star[data-tooltip][data-flow^="down"] {
     &::before,
     &::after {
       transform: translate(-50%, 10px);
@@ -162,7 +155,7 @@
 }
 
 @media print {
-  .project-meta__fovorite-btn {
+  .project-meta .button-star {
     display: none;
   }
 }

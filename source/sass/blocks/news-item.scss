@@ -39,8 +39,13 @@
   }
 }
 
-.news-item__button-star {
+.news-item .button-star {
   margin-bottom: 12px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
 
   @media (max-width: $tablet-width - 1) {
     display: none;
