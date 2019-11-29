@@ -64,17 +64,6 @@
   }
 }
 
-.project-meta .button-star__text {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  border: 0;
-}
-
 
 @include mobile {
   .project-meta__category {
@@ -136,23 +125,6 @@
   }
 }
 
-
-@media (min-width: $desktop-width) {
-  .project-meta .button-star[data-tooltip][data-flow^="down"] {
-    &::before,
-    &::after {
-      transform: translate(-50%, 10px);
-    }
-
-    &::before {
-      top: calc(100% - 5px);
-    }
-
-    &::after {
-      top: 100%;
-    }
-  }
-}
 
 @media print {
   .project-meta .button-star {

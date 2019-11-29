@@ -41,12 +41,7 @@
                   <span class="project-meta__item-value">Голосование окончено</span>
                 </p>
 
-                <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
-                  <svg width="24" height="24">
-                    <use xlink:href="img/sprite.svg#icon-star"></use>
-                  </svg>
-                  <span class="button-star__text">В избранное</span>
-                </button>
+                <include src="source/components/button-star.html"></include>
               </div>
             </div>
 
@@ -546,6 +541,7 @@
     </main>
 
     <include src="source/components/footer.html"></include>
+    <include src="source/components/cookie.html"></include>
     <include src="source/components/up-btn.html"></include>
 
     <div class="gallery-popup js-gallery-popup popup js-popup">

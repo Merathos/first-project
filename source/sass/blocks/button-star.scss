@@ -33,6 +33,31 @@
   }
 }
 
+.button-star__text {
+  @include visually-hidden;
+
+  pointer-events: none;
+}
+
+
+@media (min-width: $desktop-width) {
+  .button-star[data-tooltip][data-flow^="down"] {
+    &::before,
+    &::after {
+      transform: translate(-50%, 10px);
+    }
+
+    &::before {
+      top: calc(100% - 5px);
+    }
+
+    &::after {
+      top: 100%;
+    }
+  }
+}
+
+
 @media print {
   .button-star {
     display: none;
