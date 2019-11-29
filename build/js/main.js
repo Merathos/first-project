@@ -209,7 +209,19 @@
 
 
   selects.forEach(function (select) {
-    addSelect(select);
+    var customSelectInstance = addSelect(select);
+    var customSelectElement = customSelectInstance.slim.container;
+
+    var selectOptions = select.querySelectorAll('option[value]');
+    var customSelectOptions = customSelectElement.querySelectorAll('.ss-option[data-id]');
+
+    setTimeout(function () {
+      customSelectElement.setAttribute('title', select.title);
+
+      customSelectOptions.forEach(function (option, i) {
+        option.setAttribute('title', selectOptions[i].title);
+      });
+    }, 100);
   });
 
 
