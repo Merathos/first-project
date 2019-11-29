@@ -73,8 +73,8 @@
   form {
     display: flex;
     flex-wrap: wrap;
-    margin-top: -16px;
-    margin-left: -16px;
+    margin-top: -11px;
+    margin-left: -11px;
 
     input {
       display: none;
@@ -85,10 +85,10 @@
 .project-vote__vote-btn {
   display: flex;
   align-items: center;
-  padding: 11px 20px;
-  margin-top: 16px;
-  margin-left: 16px;
-  font-size: rem(16px);
+  padding: 11px;
+  margin-top: 11px;
+  margin-left: 11px;
+  font-size: rem(13px);
   line-height: rem(22px);
   user-select: none;
   color: var(--color-text, $dark-text);
@@ -122,6 +122,10 @@
     display: inline;
   }
 
+  input:checked ~ span .project-vote__btn-text {
+    display: none;
+  }
+
   span,
   svg {
     pointer-events: none;
@@ -132,7 +136,7 @@
     flex-shrink: 0;
     width: 16px;
     height: 16px;
-    margin-right: 14px;
+    margin-right: 11px;
     fill: none;
   }
 
@@ -215,7 +219,7 @@
     &--vote {
       display: flex;
       flex-wrap: wrap;
-      align-items: flex-start;
+      align-items: center;
       justify-content: space-between;
     }
   }
@@ -242,7 +246,7 @@
     }
 
     &--selected {
-      width: 100%;
+      margin-left: auto;
 
       &:active:not(.focus-visible) {
         color: var(--color-text, $dark-text);
@@ -252,7 +256,7 @@
   }
 
   .project-vote__submit-form {
-    width: 268px;
+    width: 312px;
   }
 
   .project-vote__notion {
@@ -299,7 +303,7 @@
   }
 
   .project-vote__vote-btn {
-    padding: 11px 25px;
+    flex-grow: 1;
   }
 
   .project-vote__notion {

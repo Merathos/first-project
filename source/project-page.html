@@ -69,16 +69,19 @@
 
               <div class="project-vote__container project-vote__container--vote">
                 <div class="project-vote__results vote-results">
-                  <p class="vote-results__output">
-                    <span class="visually-hidden">Соотношение голосов:</span>
+                  <div class="vote-results__output">
+                    <span class="vote-results__value vote-results__value--approve js-vote-results__value--approve">1 057</span>
 
-                    <span class="vote-results__value vote-results__value--approve js-vote-results__value--approve">1 057</span>&nbsp;<span>за</span>
-
-                    <span class="vote-results__value vote-results__value--reject js-vote-results__value--reject">47</span>&nbsp;<span>против</span>
-                  </p>
+                    <span class="vote-results__value vote-results__value--reject js-vote-results__value--reject">47</span>
+                  </div>
 
                   <div class="vote-results__scale">
                     <div class="vote-results__indicator js-vote-results__indicator"></div>
+                  </div>
+
+                  <div class="vote-results__labels">
+                    <span>Поддерживаю</span>
+                    <span>Не поддерживаю</span>
                   </div>
                 </div>
 
@@ -93,8 +96,8 @@
                       </svg>
 
                       <span>
-                        <span class="project-vote__confirmation-text">Вы проголосовали&nbsp;</span>
-                        За
+                        <span class="project-vote__confirmation-text">Вы поддержали проект</span>
+                        <span class="project-vote__btn-text">Поддерживаю</span>
                       </span>
                     </label>
 
@@ -106,8 +109,8 @@
                       </svg>
 
                       <span>
-                        <span class="project-vote__confirmation-text">Вы проголосовали&nbsp;</span>
-                        Против
+                        <span class="project-vote__confirmation-text">Вы не поддержали проект</span>
+                        <span class="project-vote__btn-text">Не поддерживаю</span>
                       </span>
                     </label>
 

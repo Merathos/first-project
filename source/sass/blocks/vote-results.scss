@@ -11,7 +11,7 @@
 }
 
 .vote-results__scale {
-  margin-top: 13px;
+  margin-top: 7px;
   width: 100%;
   height: 10px;
   background-color: var(--color-interactive-accent, $light-blue-accent);
@@ -23,4 +23,13 @@
   width: 0;
   height: 100%;
   background-color: var(--color-interactive-default, $blue-default);
+}
+
+.vote-results__labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-size: rem(15px);
+  line-height: 1.35;
+  color: $grey-default;
 }
