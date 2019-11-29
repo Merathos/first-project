@@ -1,22 +1,29 @@
 .discussion-list {
   margin-top: 22px;
+}
 
-  & h2 {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-bottom: 24px;
+.discussion-list__title-wrapper {
+  padding-bottom: 24px;
+  background-image: linear-gradient(var(--color-stroke, $light-grey), var(--color-stroke, $light-grey));
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+
+  @media (max-width: $tablet-width - 1) {
+    padding-bottom: 32px;
+  }
+
+  h2 {
+    display: inline;
+    margin: 0;
     font-weight: 400;
     font-size: rem(30px);
     line-height: rem(36px);
+  }
 
-    background-image: linear-gradient(var(--color-stroke, $light-grey), var(--color-stroke, $light-grey));
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    background-size: 100% 1px;
-
-    @media (max-width: $tablet-width - 1) {
-      padding-bottom: 32px;
-    }
+  .info-tooltip {
+    margin-left: 5px;
+    transform: translateY(-2px);
   }
 }
 
