@@ -19,6 +19,8 @@
 .poll-page__dates {
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
 
   font-size: rem(16px);
   line-height: 1.35;
@@ -26,6 +28,20 @@
 
   @include mobile {
     flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.poll-page__dates .button-star {
+  margin-bottom: 10px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include mobile {
+    margin-bottom: 0;
   }
 }
 
@@ -34,6 +50,16 @@
 
   @include mobile {
     padding: 0 0 16px;
+  }
+}
+
+.poll-page__dates--long-list {
+  & .poll-page__date-start {
+    margin-bottom: 10px;
+
+    @include mobile {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -55,6 +81,10 @@
 
   & p {
     margin: 24px 0;
+  }
+
+  &--padding {
+    padding-top: 0;
   }
 }
 
