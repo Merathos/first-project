@@ -34,6 +34,7 @@
 }
 
 .discussion__item {
+  position: relative;
   padding-top: 24px;
   padding-bottom: 32px;
 
@@ -153,12 +154,11 @@
 }
 
 .discussion__content {
-  position: relative;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 13px;
+  padding-right: 82px;
 
   @media (max-width: $desktop-width - 81) {
     padding-right: 60px;
@@ -179,7 +179,8 @@
 .discussion .button-star {
   position: absolute;
   right: 0;
-  bottom: 1px;
+  top: 50%;
+  transform: translateY(-50%);
 
   display: none;
   padding: 0;
