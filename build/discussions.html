@@ -242,16 +242,34 @@
 </a>
 
       </div>
-      <div class="container page-top">
+      <div class="container page-top page-top--wrapper">
         <h1 class="page-title page-title--large">Обсуждения</h1>
-        <div class="page-top__form-wrapper">
+        <div class="page-top__action-wrapper">
+          <div class="page-top__form-wrapper">
+            <form action="#" class="form">
+              <div class="form-checkbox page-top__checkbox">
+                <input type="checkbox" name="checkbox-top" id="checkbox-top" value="">
+                <label for="checkbox-top">Только избранные</label>
+              </div>
+            </form>
+          </div>
+          <ul class="page-top__nav page-nav">
+            <li class="page-nav__item">
+              <a href="#" class="page-nav__link page-nav__link--active">Документы</a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#" class="page-nav__link">Опросы</a>
+            </li>
+          </ul>
+        </div>
+        <!-- <div class="page-top__form-wrapper">
           <form action="#" class="form">
             <div class="form-checkbox page-top__checkbox">
               <input type="checkbox" name="checkbox-top" id="checkbox-top" value="">
               <label for="checkbox-top">Только избранные</label>
             </div>
           </form>
-        </div>
+        </div> -->
       </div>
       <section class="discussion discussion--page">
         <div class="container">

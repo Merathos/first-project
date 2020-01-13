@@ -32,6 +32,19 @@
   @media (max-width: $mobile-max-width) {
     padding: 24px;
   }
+
+  & a {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+
+    @media (max-width: $tablet-width - 1) {
+      display: block;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
 }
 
 .composite-poll__process {
