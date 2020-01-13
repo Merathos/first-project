@@ -11,19 +11,15 @@
   background-color: var(--color-bg-secondary, $color-bg);
   border-radius: 5px;
 
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $tablet-width) {
     justify-content: space-around;
-    width: rem(369px);
+    width: 100%;
+    margin-left: 0;
+    margin-top: 24px;
     padding: 16px 16px;
   }
 
-  @media (max-width: 700px) {
-    margin-left: 0;
-    margin-top: 24px;
-  }
-
   @media (max-width: 500px) {
-    width: 100%;
     padding: 16px 8px;
   }
 }
