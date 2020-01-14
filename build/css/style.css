@@ -8470,13 +8470,13 @@ span.poll-page__hide {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: no-wrap;
-      flex-wrap: no-wrap;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   width: 100%;
   overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none; }
-  .activity-tabs__list::-webkit-scrollbar {
+  .activity-tabs__list:-webkit-scrollbar {
     width: 0; }
   @media (max-width: 800px) {
     .activity-tabs__list {
@@ -8493,9 +8493,6 @@ span.poll-page__hide {
   background-position: center bottom;
   background-repeat: no-repeat;
   background-size: 100% 1px; }
-  @media (max-width: 815px) {
-    .activity-tabs__bottom {
-      margin-top: -19px; } }
   @media (max-width: 800px) {
     .activity-tabs__bottom {
       width: calc(100% - 48px); } }
