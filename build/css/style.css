@@ -5918,9 +5918,9 @@ span.poll__hide {
     max-width: none;
     padding: 25px 0 23px;
     margin-bottom: 0; }
-    .location-switcher__btn:first-child {
+    .location-switcher__btn:first-of-type {
       margin-right: 0; }
-      .location-switcher__btn:first-child::after {
+      .location-switcher__btn:first-of-type::after {
         top: auto;
         right: 0;
         bottom: 0;
