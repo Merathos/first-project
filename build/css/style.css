@@ -5077,21 +5077,20 @@ span.poll__hide {
   line-height: 1.25rem;
   font-weight: 400;
   line-height: 1.6875rem;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
   background-color: var(--color-bg-secondary, #f9f9fa);
-  border-radius: 5px; }
+  border-radius: 5px;
+  overflow: hidden; }
   @media (max-width: 400px) {
     .composite-poll__description {
       padding: 24px; } }
-  .composite-poll__description a {
-    overflow-wrap: break-word;
-    word-wrap: break-word; }
-    @media (max-width: 767px) {
-      .composite-poll__description a {
-        display: block;
-        width: 100%;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap; } }
+  @media (max-width: 767px) {
+    .composite-poll__description a {
+      display: block; } }
 
 .composite-poll__process {
   margin-bottom: 26px; }
