@@ -1,111 +1,112 @@
-@import "functions";
-@import "variables";
-@import "mixins";
-@import "fonts";
-@import "global";
+@import 'functions';
+@import 'variables';
+@import 'mixins';
+@import 'fonts';
+@import 'global';
 
 /* Плагины */
-@import "plugins/normalize";
-@import "plugins/swiper";
-@import "plugins/slimselect";
-@import "plugins/nouislider";
-@import "plugins/simplebar";
+@import 'plugins/normalize';
+@import 'plugins/swiper';
+@import 'plugins/slimselect';
+@import 'plugins/nouislider';
+@import 'plugins/simplebar';
 
 /* Блоки */
-@import "blocks/section";
-@import "blocks/page-body";
-@import "blocks/page-content";
-@import "blocks/back-btn";
-@import "blocks/container";
-@import "blocks/content";
-@import "blocks/logo-link";
-@import "blocks/button";
-@import "blocks/link-arrow";
-@import "blocks/link";
-@import "blocks/form-checkbox";
-@import "blocks/form-radio";
-@import "blocks/form-select";
-@import "blocks/form-range";
-@import "blocks/form";
-@import "blocks/filter";
-@import "blocks/filter-vote";
-@import "blocks/counter";
-@import "blocks/paginator";
-@import "blocks/button-star";
-@import "blocks/page-404";
-@import "blocks/page-footer";
-@import "blocks/page-title";
-@import "blocks/page-nav";
-@import "blocks/page-top";
-@import "blocks/archive-link";
-@import "blocks/article-link";
-@import "blocks/video-link";
-@import "blocks/special-popup";
-@import "blocks/status-info";
-@import "blocks/info-tooltip";
-@import "blocks/main-empty";
+@import 'blocks/section';
+@import 'blocks/page-body';
+@import 'blocks/page-content';
+@import 'blocks/back-btn';
+@import 'blocks/container';
+@import 'blocks/content';
+@import 'blocks/logo-link';
+@import 'blocks/button';
+@import 'blocks/link-arrow';
+@import 'blocks/link';
+@import 'blocks/form-checkbox';
+@import 'blocks/form-radio';
+@import 'blocks/form-select';
+@import 'blocks/form-range';
+@import 'blocks/form';
+@import 'blocks/filter';
+@import 'blocks/filter-vote';
+@import 'blocks/counter';
+@import 'blocks/paginator';
+@import 'blocks/button-star';
+@import 'blocks/page-404';
+@import 'blocks/page-footer';
+@import 'blocks/page-title';
+@import 'blocks/page-nav';
+@import 'blocks/page-top';
+@import 'blocks/archive-link';
+@import 'blocks/article-link';
+@import 'blocks/video-link';
+@import 'blocks/special-popup';
+@import 'blocks/status-info';
+@import 'blocks/info-tooltip';
+@import 'blocks/main-empty';
+@import 'blocks/info-banner';
 
 // main page
-@import "blocks/news-notice";
-@import "blocks/social";
-@import "blocks/poll";
-@import "blocks/project";
-@import "blocks/discussion";
-@import "blocks/cookie";
+@import 'blocks/news-notice';
+@import 'blocks/social';
+@import 'blocks/poll';
+@import 'blocks/project';
+@import 'blocks/discussion';
+@import 'blocks/cookie';
 
 // composite poll
-@import "blocks/poll-result";
-@import "blocks/composite-poll";
-@import "blocks/files";
-@import "blocks/file-item";
-@import "blocks/popup";
-@import "blocks/gallery";
-@import "blocks/gallery-popup";
+@import 'blocks/poll-result';
+@import 'blocks/composite-poll';
+@import 'blocks/files';
+@import 'blocks/file-item';
+@import 'blocks/popup';
+@import 'blocks/gallery';
+@import 'blocks/gallery-popup';
 
 // header
-@import "blocks/page-header";
-@import "blocks/menu-btn";
-@import "blocks/main-menu";
-@import "blocks/location-switcher";
-@import "blocks/user-menu";
+@import 'blocks/page-header';
+@import 'blocks/menu-btn';
+@import 'blocks/main-menu';
+@import 'blocks/location-switcher';
+@import 'blocks/user-menu';
 
 // projects
-@import "blocks/project-item";
-@import "blocks/projects-list";
-@import "blocks/projects";
+@import 'blocks/project-item';
+@import 'blocks/projects-list';
+@import 'blocks/projects';
 
 // project page
-@import "blocks/project-page";
-@import "blocks/project-meta";
-@import "blocks/project-vote";
-@import "blocks/vote-results";
-@import "blocks/vote-popup";
+@import 'blocks/project-page';
+@import 'blocks/project-meta';
+@import 'blocks/project-vote';
+@import 'blocks/vote-results';
+@import 'blocks/vote-popup';
 
 // poll page
-@import "blocks/poll-page";
+@import 'blocks/poll-page';
 
 // news-item
-@import "blocks/news-item";
+@import 'blocks/news-item';
 
 // discussions
-@import "blocks/discussion-content";
-@import "blocks/discussion-item";
-@import "blocks/discussion-list";
-@import "blocks/answers";
-@import "blocks/text-hidden";
-@import "blocks/table-fixed";
+@import 'blocks/discussion-content';
+@import 'blocks/discussion-item';
+@import 'blocks/discussion-list';
+@import 'blocks/answers';
+@import 'blocks/text-hidden';
+@import 'blocks/table-fixed';
 
 // comment popup
-@import "blocks/comment-popup";
-@import "blocks/comment-add";
-@import "blocks/all-comments";
-@import "blocks/your-comment";
-@import "blocks/table-popup";
+@import 'blocks/comment-popup';
+@import 'blocks/comment-add';
+@import 'blocks/all-comments';
+@import 'blocks/your-comment';
+@import 'blocks/table-popup';
 
 // activity
-@import "blocks/activity";
-@import "blocks/partners-list";
-@import "blocks/activity-tabs";
+@import 'blocks/activity';
+@import 'blocks/partners-list';
+@import 'blocks/activity-tabs';
 
 // widget
-@import "blocks/widget";
+@import 'blocks/widget';
