@@ -1,0 +1,34 @@
+.info-banner-button {
+  @include btn-reset;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: var(--color-interactive-default, $blue-default);
+
+  font-size: rem(15px);
+
+  outline: none;
+
+  cursor: pointer;
+
+  transition: color 0.15s ease;
+
+  &__text {
+    margin-right: 9px;
+  }
+
+  &:focus,
+  &:hover {
+    color: var(--color-text, $dark-text)
+  }
+
+  &.opened {
+    .info-banner-button__icon {
+      transform: rotate(-180deg);
+    }
+  }
+}
