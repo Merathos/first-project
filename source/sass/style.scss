@@ -76,9 +76,13 @@
 @import "blocks/projects-list";
 @import "blocks/projects";
 
-// landscaping
+// landscaping-form
 @import "blocks/landscaping.scss";
 @import "blocks/landscaping-form.scss";
+
+// improvement on main page
+@import "blocks/improvement.scss";
+@import "blocks/improvement-item.scss";
 
 // project page
 @import "blocks/project-page";
