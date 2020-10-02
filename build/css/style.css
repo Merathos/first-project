@@ -4844,14 +4844,14 @@ span.poll__hide {
 .discussion {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 88px 40px 120px;
+  padding: 88px 40px 95px;
   text-align: center; }
   @media (max-width: 1119px) {
     .discussion {
-      padding: 79px 24px 104px; } }
+      padding: 79px 24px 24px; } }
   @media (max-width: 767px) {
     .discussion {
-      padding: 64px 16px 65px; } }
+      padding: 64px 16px 7px; } }
 
 @media (max-width: 767px) {
   .discussion__archive-link {
@@ -6734,6 +6734,70 @@ span.poll__hide {
             order: -1;
     margin-bottom: 15px;
     width: 100%; } }
+
+.improvement {
+  padding: 0px 40px 95px; }
+  @media (max-width: 1119px) {
+    .improvement {
+      padding: 79px 24px 104px; } }
+  @media (max-width: 767px) {
+    .improvement {
+      padding: 64px 16px 65px; } }
+
+.improvement__list {
+  margin-bottom: 47px;
+  padding-top: 4px; }
+
+.improvement__button {
+  margin: 0 auto;
+  display: block;
+  width: 291px;
+  padding-left: 55px; }
+
+@media (max-width: 1199px) {
+  .improvement__list {
+    padding-top: 15px; } }
+
+@media (max-width: 767px) {
+  .improvement__archive-link {
+    display: none; }
+  .improvement__list {
+    margin-bottom: 35px;
+    padding-top: 8px; } }
+
+.improvement__item {
+  padding: 35px 0 35px 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--color-stroke, #e3e8ee)), to(var(--color-stroke, #e3e8ee)));
+  background-image: linear-gradient(var(--color-stroke, #e3e8ee), var(--color-stroke, #e3e8ee));
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 1px; }
+
+.improvement__item-status {
+  margin-bottom: 5px;
+  margin-top: 0;
+  position: relative;
+  padding-left: 9px;
+  font-size: 0.875rem;
+  line-height: 1.1375rem;
+  color: #70BF56; }
+  .improvement__item-status--proposal {
+    color: #FCA844; }
+  .improvement__item-status--open {
+    color: #2C8ECC; }
+  .improvement__item-status::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -2px;
+    width: 5px;
+    height: 5px;
+    border: 3px solid;
+    border-radius: 50%; }
+
+.improvement__text {
+  font-size: 1rem;
+  line-height: 1.35rem; }
 
 .project-page__container,
 .project-page__survey {

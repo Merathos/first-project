@@ -1,0 +1,40 @@
+.improvement {
+  padding: 0px 40px 95px;    
+  
+  @media (max-width: $desktop-width - 81) {
+    padding: 79px 24px 104px;
+  }
+  
+  @media (max-width: $tablet-width - 1) {
+    padding: 64px 16px 65px;
+  }
+}
+
+.improvement__list {
+  margin-bottom: 47px;
+  padding-top: 4px;
+}
+
+.improvement__button {
+  margin: 0 auto;
+  display: block;
+  width: 291px;
+  padding-left: 55px;
+}
+
+@include tablet {
+  .improvement__list {
+    padding-top: 15px;
+  }
+}
+
+@include mobile {
+  .improvement__archive-link {
+    display: none;
+  }
+
+  .improvement__list {
+    margin-bottom: 35px;
+    padding-top: 8px;
+  }
+}

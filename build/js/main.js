@@ -634,12 +634,14 @@
     };
   };
 
-  uploadInput.addEventListener("change", onFileUpload());
-  previewContainer.addEventListener("click", function (evt) {
-    if (evt.target.classList.contains("landscaping-form__remove-img")) {
-      evt.target.parentNode.remove();
-    }
-  });
+  if (uploadInput && previewContainer) {
+    uploadInput.addEventListener("change", onFileUpload());
+    previewContainer.addEventListener("click", function (evt) {
+      if (evt.target.classList.contains("landscaping-form__remove-img")) {
+        evt.target.parentNode.remove();
+      }
+    });
+  }
 })();
 
 'use strict';
