@@ -4128,6 +4128,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       content: ""; }
   .info-banner_enough-lines_true .info-banner__button {
     display: initial; }
+  .info-banner--warning {
+    border: 1px solid var(--color-interactive-accent, #ffc989); }
+    .info-banner--warning__title {
+      color: #ffc989; }
+    .info-banner--warning__icon {
+      color: #ffc989; }
 
 .info-banner-button {
   padding: 0;
