@@ -158,13 +158,17 @@
   }
 
   &--warning {
-    border: 1px solid var(--color-interactive-accent, $warning-orange);
+    border: 1px solid $warning-orange;
 
-    &__title {
+    & .info-banner__title {
       color: $warning-orange;
     }
 
-    &__icon {
+    & .info-banner__text {
+      margin-bottom: 6px;
+    }
+
+    & .info-banner__icon {
       color: $warning-orange;
     }
   }

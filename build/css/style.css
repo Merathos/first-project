@@ -4129,10 +4129,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .info-banner_enough-lines_true .info-banner__button {
     display: initial; }
   .info-banner--warning {
-    border: 1px solid var(--color-interactive-accent, #ffc989); }
-    .info-banner--warning__title {
+    border: 1px solid #ffc989; }
+    .info-banner--warning .info-banner__title {
       color: #ffc989; }
-    .info-banner--warning__icon {
+    .info-banner--warning .info-banner__text {
+      margin-bottom: 6px; }
+    .info-banner--warning .info-banner__icon {
       color: #ffc989; }
 
 .info-banner-button {
