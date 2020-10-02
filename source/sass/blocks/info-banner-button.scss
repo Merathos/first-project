@@ -19,14 +19,30 @@
 
   &__text {
     margin-right: 9px;
+
+    &_opened {
+      display: none;
+    }
+
+    &_closed {
+      display: inline-block;
+    }
   }
 
-  &:focus,
-  &:hover {
-    color: var(--color-text, $dark-text)
+  &.focus-visible:focus,
+  &:hover:not(.focus-visible) {
+    color: var(--color-interactive-default, $blue-accent);
   }
 
   &.opened {
+    .info-banner-button__text_opened {
+      display: inline-block;
+    }
+
+    .info-banner-button__text_closed {
+      display: none;
+    }
+
     .info-banner-button__icon {
       transform: rotate(-180deg);
     }
