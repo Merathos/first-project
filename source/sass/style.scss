@@ -12,44 +12,6 @@
 @import "plugins/simplebar";
 
 /* Блоки */
-<<<<<<< HEAD
-@import 'blocks/section';
-@import 'blocks/page-body';
-@import 'blocks/page-content';
-@import 'blocks/back-btn';
-@import 'blocks/container';
-@import 'blocks/content';
-@import 'blocks/logo-link';
-@import 'blocks/button';
-@import 'blocks/link-arrow';
-@import 'blocks/link';
-@import 'blocks/form-checkbox';
-@import 'blocks/form-radio';
-@import 'blocks/form-select';
-@import 'blocks/form-range';
-@import 'blocks/form';
-@import 'blocks/filter';
-@import 'blocks/filter-vote';
-@import 'blocks/counter';
-@import 'blocks/paginator';
-@import 'blocks/button-star';
-@import 'blocks/page-404';
-@import 'blocks/page-footer';
-@import 'blocks/page-title';
-@import 'blocks/page-nav';
-@import 'blocks/page-top';
-@import 'blocks/archive-link';
-@import 'blocks/article-link';
-@import 'blocks/video-link';
-@import 'blocks/special-popup';
-@import 'blocks/status-info';
-@import 'blocks/info-tooltip';
-@import 'blocks/main-empty';
-@import 'blocks/info-banner';
-@import 'blocks/info-banner-button';
-@import 'blocks/proposal';
-@import 'blocks/comments-tab';
-=======
 @import "blocks/section";
 @import "blocks/page-body";
 @import "blocks/page-content";
@@ -84,7 +46,8 @@
 @import "blocks/main-empty";
 @import "blocks/info-banner";
 @import "blocks/info-banner-button";
->>>>>>> improvement-master
+@import 'blocks/proposal';
+@import 'blocks/comments-tab';
 
 // main page
 @import "blocks/news-notice";
