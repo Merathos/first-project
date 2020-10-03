@@ -16,12 +16,20 @@
   line-height: rem(18.2px);
   color: #70BF56;
 
-  &--proposal {
+  &--orange {
     color: #FCA844;
   }
 
-  &--open {
+  &--blue {
     color: #2C8ECC;
+  }
+
+  &--red {
+    color: #E55050;
+  }
+
+  &--grey {
+    color: #A6ABB2;
   }
 
   &::before {
