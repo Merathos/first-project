@@ -84,7 +84,6 @@
 
 .landscaping-form__upload-label {
   margin-top: 2px;
-  margin-left: 19px;
   display: inline-block;
   position: relative;
   width: 205px;
@@ -109,10 +108,10 @@
 
 .landscaping-form__img-container {
   display: flex;
-  margin-left: -6px;
 }
 
 .landscaping-form__img {
+  margin-right: 22px;
   position: relative;
   width: 215px;
   height: 215px;
@@ -121,6 +120,8 @@
 
   img {
     display: block;
+    width: 215px;
+    height: 215px;
   }
 }
 
@@ -287,6 +288,7 @@
   }
   
   .landscaping-form__img {
+    margin-right: 0;
     width: 288px;
     height: 160px;
 

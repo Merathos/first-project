@@ -6788,7 +6788,6 @@ span.poll__hide {
 
 .landscaping-form__upload-label {
   margin-top: 2px;
-  margin-left: 19px;
   display: inline-block;
   position: relative;
   width: 205px;
@@ -6811,10 +6810,10 @@ span.poll__hide {
 .landscaping-form__img-container {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  margin-left: -6px; }
+  display: flex; }
 
 .landscaping-form__img {
+  margin-right: 22px;
   position: relative;
   width: 215px;
   height: 215px;
@@ -6822,7 +6821,9 @@ span.poll__hide {
           filter: drop-shadow(0px 2px 4px rgba(0, 30, 75, 0.15));
   border-radius: 5px; }
   .landscaping-form__img img {
-    display: block; }
+    display: block;
+    width: 215px;
+    height: 215px; }
 
 .landscaping-form__remove-img {
   padding: 0;
@@ -6954,6 +6955,7 @@ span.poll__hide {
         -ms-flex-align: center;
             align-items: center; }
   .landscaping-form__img {
+    margin-right: 0;
     width: 288px;
     height: 160px; }
     .landscaping-form__img img {
@@ -7017,10 +7019,14 @@ span.poll__hide {
   font-size: 0.875rem;
   line-height: 1.1375rem;
   color: #70BF56; }
-  .improvement__item-status--proposal {
+  .improvement__item-status--orange {
     color: #FCA844; }
-  .improvement__item-status--open {
+  .improvement__item-status--blue {
     color: #2C8ECC; }
+  .improvement__item-status--red {
+    color: #E55050; }
+  .improvement__item-status--grey {
+    color: #A6ABB2; }
   .improvement__item-status::before {
     content: "";
     position: absolute;
@@ -7034,6 +7040,87 @@ span.poll__hide {
 .improvement__text {
   font-size: 1rem;
   line-height: 1.35rem; }
+
+.improvement-fork {
+  padding: 40px 0;
+  padding-bottom: 120px; }
+
+.improvement-fork__title {
+  margin-bottom: 24px;
+  max-width: 1120px; }
+
+.improvement-fork__status-container {
+  margin-bottom: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .improvement-fork__status-container p {
+    margin-right: 34px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 1rem;
+    line-height: 1.35rem;
+    color: #A6ABB2; }
+
+.improvement-fork__status {
+  margin-left: 5px;
+  font-size: 1rem;
+  line-height: 1.35rem; }
+  .improvement-fork__status::before {
+    top: 6px; }
+
+.improvement-fork__date {
+  color: #000000; }
+
+.improvement-fork__text {
+  margin-bottom: 47px;
+  max-width: 730px;
+  font-size: 0.9375rem;
+  line-height: 1.6875rem; }
+
+.improvement-fork__btn {
+  width: 100%;
+  max-width: 740px;
+  height: 69px;
+  padding-left: 24px;
+  padding-top: 24px;
+  text-align: start; }
+
+@media (max-width: 1199px) {
+  .improvement-fork__title {
+    margin-bottom: 40px;
+    font-size: 1.875rem;
+    line-height: 2.22187rem; }
+  .improvement-fork__back {
+    margin-bottom: 40px; } }
+
+@media (max-width: 767px) {
+  .improvement-fork {
+    padding: 27px 0;
+    padding-bottom: 70px; }
+  .improvement-fork__title {
+    margin-bottom: 14px;
+    font-size: 1.5rem;
+    line-height: 1.7775rem; }
+  .improvement-fork__back {
+    margin-bottom: 30px; }
+  .improvement-fork__status-container {
+    margin-bottom: 25px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .improvement-fork__status-container p {
+      margin-bottom: 12px; }
+  .improvement-fork__date {
+    display: block; }
+  .improvement-fork__btn {
+    height: 59px;
+    text-align: center;
+    padding: 19px 5px; }
+    .improvement-fork__btn svg {
+      display: none; } }
 
 .project-page__container,
 .project-page__survey {

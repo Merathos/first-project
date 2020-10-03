@@ -1,0 +1,104 @@
+.improvement-fork {
+    padding: 40px 0;
+    padding-bottom: 120px;
+}
+
+.improvement-fork__title {
+    margin-bottom: 24px;
+    max-width: 1120px;
+}
+
+.improvement-fork__status-container {
+    margin-bottom: 18px;
+    display: flex;
+
+    p {
+        margin-right: 34px;
+        width: fit-content;
+        font-size: rem(16px);
+        line-height: rem(21.6px);
+        color: #A6ABB2;
+    }
+}
+
+.improvement-fork__status {
+    margin-left: 5px;
+    font-size: rem(16px);
+    line-height: rem(21.6px);
+
+    &::before {
+        top: 6px;
+    }
+}
+
+.improvement-fork__date {
+    color: #000000;
+}
+
+.improvement-fork__text {
+    margin-bottom: 47px;
+    max-width: 730px;
+    font-size: rem(15px);
+    line-height: rem(27px);
+}
+
+.improvement-fork__btn {
+    width: 100%;
+    max-width: 740px;
+    height: 69px;
+    padding-left: 24px;
+    padding-top: 24px;
+    text-align: start;
+}
+
+@include tablet {
+    .improvement-fork__title {
+        margin-bottom: 40px;
+        font-size: rem(30px);
+        line-height: rem(35.55px);
+    }
+
+    .improvement-fork__back {
+        margin-bottom: 40px;
+    }
+}
+
+@include mobile {
+    .improvement-fork {
+        padding: 27px 0;
+        padding-bottom: 70px;
+    }
+
+    .improvement-fork__title {
+        margin-bottom: 14px;
+        font-size: rem(24px);
+        line-height: rem(28.44px);
+    }
+
+    .improvement-fork__back {
+        margin-bottom: 30px;
+    }
+
+    .improvement-fork__status-container {
+        margin-bottom: 25px;
+        flex-direction: column;
+
+        p {
+            margin-bottom: 12px;
+        }
+    }
+
+    .improvement-fork__date {
+        display: block;
+    }
+
+    .improvement-fork__btn {
+        height: 59px;
+        text-align: center;
+        padding: 19px 5px;
+
+        svg {
+            display: none;
+        }
+    }
+}
