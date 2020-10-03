@@ -1,0 +1,62 @@
+.proposal h2:not([class]) {
+  margin: 0 0 32px;
+  font-weight: 400;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.proposal__title {
+  margin-bottom: 26px;
+}
+
+.proposal__link {
+  margin-bottom: 59px;
+}
+
+.proposal__comments {
+  margin-bottom: 12px;
+}
+
+.proposal__last-comment {
+  margin-bottom: 63px;
+  padding: 13px 16px 15px;
+
+  border: 1px solid var(--color-interactive-default, $blue-default);;
+  border-radius: 5px;
+
+  & p:first-child {
+    margin: 0 0 16px;
+    font-weight: 500;
+    font-size: 0.94rem;
+    line-height: 135%;
+
+    color: var(--color-text, $dark-text);
+  }
+
+  & p:last-child {
+    margin: 0;
+    font-weight: 400;
+    font-size: 0.94rem;
+    line-height: 180%;
+
+    color: var(--color-text, $dark-text);
+  }
+}
+
+.proposal__text-block {
+  margin-bottom: 32px;
+  padding: 12px 16px;
+  background-color: var(--color-bg-secondary, $color-bg);
+
+  & p {
+    margin: 0;
+
+    font-weight: 400;
+    font-size: 0.94rem;
+    line-height: 180%;
+  }
+
+  &--padding {
+    padding-bottom: 40px;
+  }
+}

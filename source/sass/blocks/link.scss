@@ -58,6 +58,33 @@
       color: var(--color-interactive-default, $blue-default);
     }
   }
+
+  &--rules {
+
+    font-size: rem(18px);
+
+    & span {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+
+        width: 100%;
+        height: 1px;
+
+        left: 0;
+        bottom: -4px;
+
+        background-color: var(--color-interactive-default, $light-blue-accent);
+        transition: background-color $style-change-duration;
+      }
+    }
+
+    & svg {
+      margin-right: 8px;
+    }
+  }
 }
 
 
@@ -78,6 +105,12 @@
     &--black {
       &:hover:not(.focus-visible) {
         color: var(--color-interactive-default, $blue-default);
+      }
+    }
+
+    &--rules {
+      &:hover:not(.focus-visible) span::before {
+        background-color: var(--color-interactive-default, $blue-default);
       }
     }
   }
