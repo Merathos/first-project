@@ -156,4 +156,20 @@
       display: initial;
     }
   }
+
+  &--warning {
+    border: 1px solid $warning-orange;
+
+    & .info-banner__title {
+      color: $warning-orange;
+    }
+
+    & .info-banner__text {
+      margin-bottom: 6px;
+    }
+
+    & .info-banner__icon {
+      color: $warning-orange;
+    }
+  }
 }
