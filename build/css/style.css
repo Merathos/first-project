@@ -4975,14 +4975,14 @@ span.poll__hide {
 .discussion {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 88px 40px 120px;
+  padding: 88px 40px 95px;
   text-align: center; }
   @media (max-width: 1119px) {
     .discussion {
-      padding: 79px 24px 104px; } }
+      padding: 79px 24px 24px; } }
   @media (max-width: 767px) {
     .discussion {
-      padding: 64px 16px 65px; } }
+      padding: 64px 16px 7px; } }
 
 @media (max-width: 767px) {
   .discussion__archive-link {
@@ -6523,6 +6523,412 @@ span.poll__hide {
     border-top: 1px solid var(--color-stroke, #e3e8ee);
     border-top-left-radius: 5px;
     border-top-right-radius: 5px; } }
+
+.landscaping__rules-link {
+  margin-top: 25px;
+  margin-left: 29px;
+  margin-bottom: 58px;
+  display: inline-block;
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.125rem;
+  line-height: 1.4625rem;
+  text-decoration: none;
+  color: #116ca6; }
+  .landscaping__rules-link::before {
+    content: "i";
+    position: absolute;
+    left: -29px;
+    bottom: 1px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 19.67px;
+    height: 19.67px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 1rem;
+    line-height: 1.4625rem;
+    font-weight: 500;
+    color: #116ca6;
+    border: 2px solid #116ca6;
+    border-radius: 50%; }
+  .landscaping__rules-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px solid #9bd2f4;
+    border-radius: 5px; }
+  .landscaping__rules-link:hover {
+    color: #2c8ecc; }
+
+.landscaping__general-pin {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  width: 49px;
+  height: 49px;
+  font-size: 1.125rem;
+  line-height: 1.4625rem;
+  color: #ffffff;
+  border-radius: 50%;
+  background-color: #2C8ECC; }
+
+@media (max-width: 1199px) {
+  .landscaping {
+    padding-top: 15px; }
+  .landscaping__rules-link {
+    margin-top: 33px; } }
+
+@media (max-width: 767px) {
+  .landscaping__title {
+    font-size: 1.875rem;
+    line-height: 2.22187rem; }
+  .landscaping {
+    padding-top: 20px; }
+  .landscaping__rules-link {
+    margin-top: 34px;
+    margin-left: 28px;
+    margin-bottom: 48px;
+    text-decoration: underline; }
+    .landscaping__rules-link::before {
+      top: 4px; }
+    .landscaping__rules-link::after {
+      display: none; } }
+
+.landscaping-form__section {
+  margin-bottom: 80px; }
+  .landscaping-form__section--upload {
+    margin-bottom: 73px; }
+    .landscaping-form__section--upload .landscaping-form__tip {
+      margin-bottom: 34px; }
+  .landscaping-form__section--map {
+    margin-bottom: 43px; }
+  .landscaping-form__section iframe {
+    border-radius: 5px; }
+
+.landscaping-form__textarea-container {
+  position: relative; }
+
+.landscaping-form__title {
+  margin: 0;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 400; }
+
+.landscaping-form__tip {
+  margin: 0;
+  margin-top: 12px;
+  margin-bottom: 32px; }
+
+.landscaping-form__textarea {
+  margin-top: 32px;
+  padding: 17px 16px;
+  display: block;
+  width: 100%;
+  resize: none;
+  background-color: #f9f9fa;
+  border: 1px solid #e3e8ee;
+  border-radius: 5px; }
+  .landscaping-form__textarea--error {
+    border: 1px solid #f3a8a8; }
+  .landscaping-form__textarea::-webkit-input-placeholder {
+    color: #a6abb2; }
+  .landscaping-form__textarea::-moz-placeholder {
+    color: #a6abb2; }
+  .landscaping-form__textarea:-ms-input-placeholder {
+    color: #a6abb2; }
+  .landscaping-form__textarea::-ms-input-placeholder {
+    color: #a6abb2; }
+  .landscaping-form__textarea::placeholder {
+    color: #a6abb2; }
+  .landscaping-form__textarea:focus {
+    outline: none; }
+    .landscaping-form__textarea:focus::-webkit-input-placeholder {
+      color: #354052; }
+    .landscaping-form__textarea:focus::-moz-placeholder {
+      color: #354052; }
+    .landscaping-form__textarea:focus:-ms-input-placeholder {
+      color: #354052; }
+    .landscaping-form__textarea:focus::-ms-input-placeholder {
+      color: #354052; }
+    .landscaping-form__textarea:focus::placeholder {
+      color: #354052; }
+
+.landscaping-form__textarea-error {
+  display: none;
+  position: absolute;
+  bottom: -20px;
+  right: 0;
+  font-size: 0.8125rem;
+  line-height: 1.05625rem;
+  color: #e55050; }
+  .landscaping-form__textarea-error--show {
+    display: block; }
+
+.landscaping-form__proposition-name {
+  height: 78px; }
+
+.landscaping-form__description {
+  height: 132px; }
+
+.landscaping-form__upload-label {
+  margin-top: 2px;
+  margin-left: 19px;
+  display: inline-block;
+  position: relative;
+  width: 205px;
+  height: 205px;
+  padding-top: 96px;
+  border: 2px dashed #e3e8ee;
+  border-radius: 5px;
+  font-size: 1.125rem;
+  line-height: 1.4625rem;
+  color: #a6abb2;
+  text-align: center; }
+  .landscaping-form__upload-label::before {
+    content: "+";
+    position: absolute;
+    left: 87px;
+    top: 61px;
+    font-size: 45px;
+    font-weight: 100; }
+
+.landscaping-form__img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -6px; }
+
+.landscaping-form__img {
+  position: relative;
+  width: 215px;
+  height: 215px;
+  -webkit-filter: drop-shadow(0px 2px 4px rgba(0, 30, 75, 0.15));
+          filter: drop-shadow(0px 2px 4px rgba(0, 30, 75, 0.15));
+  border-radius: 5px; }
+  .landscaping-form__img img {
+    display: block; }
+
+.landscaping-form__remove-img {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 28px;
+  height: 28px;
+  border-radius: 5px;
+  background-color: #ffffff; }
+  .landscaping-form__remove-img::before, .landscaping-form__remove-img::after {
+    position: absolute;
+    left: 13px;
+    top: 5px;
+    content: "";
+    height: 17px;
+    width: 2px;
+    background-color: #e55050; }
+  .landscaping-form__remove-img::before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+  .landscaping-form__remove-img::after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+  .landscaping-form__remove-img:hover::before, .landscaping-form__remove-img:hover::after {
+    background-color: #910000; }
+
+.landscaping-form__address {
+  margin-bottom: 25px;
+  width: 100%;
+  height: 51px;
+  padding: 15px 15px;
+  font-size: 0.9375rem;
+  line-height: 1.6875rem;
+  background: #f9f9fa;
+  border: 1px solid #e3e8ee;
+  border-radius: 5px; }
+  .landscaping-form__address::-webkit-input-placeholder {
+    color: #a6abb2; }
+  .landscaping-form__address::-moz-placeholder {
+    color: #a6abb2; }
+  .landscaping-form__address:-ms-input-placeholder {
+    color: #a6abb2; }
+  .landscaping-form__address::-ms-input-placeholder {
+    color: #a6abb2; }
+  .landscaping-form__address::placeholder {
+    color: #a6abb2; }
+  .landscaping-form__address:focus {
+    outline: none; }
+    .landscaping-form__address:focus::-webkit-input-placeholder {
+      color: #354052; }
+    .landscaping-form__address:focus::-moz-placeholder {
+      color: #354052; }
+    .landscaping-form__address:focus:-ms-input-placeholder {
+      color: #354052; }
+    .landscaping-form__address:focus::-ms-input-placeholder {
+      color: #354052; }
+    .landscaping-form__address:focus::placeholder {
+      color: #354052; }
+
+.landscaping-form__button-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.landscaping-form__submit-btn {
+  width: 274px;
+  padding: 16px 16px; }
+
+@media (max-width: 1199px) {
+  .landscaping-form__tip {
+    margin-top: 20px;
+    margin-bottom: 50px; }
+  .landscaping-form__section--upload {
+    margin-bottom: 80px; }
+    .landscaping-form__section--upload .landscaping-form__tip {
+      margin-bottom: 48px; }
+  .landscaping-form__section--map .landscaping-form__tip {
+    margin-top: 12px;
+    margin-bottom: 35px; }
+  .landscaping-form__section iframe {
+    height: 460px; } }
+
+@media (max-width: 767px) {
+  .landscaping-form__title {
+    font-size: 1.5rem;
+    line-height: 1.7775rem; }
+  .landscaping-form__proposition-name {
+    height: 110px; }
+  .landscaping-form__description {
+    margin-top: 25px;
+    height: 180px; }
+  .landscaping-form__section--description {
+    margin-bottom: 70px; }
+  .landscaping-form__section--upload {
+    margin-bottom: 73px; }
+    .landscaping-form__section--upload .landscaping-form__tip {
+      font-size: 0.9375rem;
+      line-height: 1.6875rem;
+      margin-bottom: 13px; }
+  .landscaping-form__section--map {
+    margin-bottom: 18px; }
+    .landscaping-form__section--map .landscaping-form__tip {
+      margin-top: 18px; }
+  .landscaping-form__section iframe {
+    height: 288px; }
+  .landscaping-form__upload-label {
+    margin-left: 0;
+    margin-top: 24px;
+    width: 288px;
+    height: 160px;
+    padding-top: 73px;
+    padding-left: 45px;
+    padding-right: 40px; }
+    .landscaping-form__upload-label::before {
+      top: 38px;
+      left: 132px; }
+  .landscaping-form__img-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .landscaping-form__img {
+    width: 288px;
+    height: 160px; }
+    .landscaping-form__img img {
+      width: 288px;
+      height: 160px; }
+  .landscaping-form__button-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .landscaping-form__submit-btn {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-bottom: 15px;
+    width: 100%; } }
+
+.improvement {
+  padding: 0px 40px 95px; }
+  @media (max-width: 1119px) {
+    .improvement {
+      padding: 79px 24px 104px; } }
+  @media (max-width: 767px) {
+    .improvement {
+      padding: 64px 16px 65px; } }
+
+.improvement__list {
+  margin-bottom: 47px;
+  padding-top: 4px; }
+
+.improvement__button {
+  margin: 0 auto;
+  display: block;
+  width: 291px;
+  padding-left: 55px; }
+
+@media (max-width: 1199px) {
+  .improvement__list {
+    padding-top: 15px; } }
+
+@media (max-width: 767px) {
+  .improvement__archive-link {
+    display: none; }
+  .improvement__list {
+    margin-bottom: 35px;
+    padding-top: 8px; } }
+
+.improvement__item {
+  padding: 35px 0 35px 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--color-stroke, #e3e8ee)), to(var(--color-stroke, #e3e8ee)));
+  background-image: linear-gradient(var(--color-stroke, #e3e8ee), var(--color-stroke, #e3e8ee));
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 1px; }
+
+.improvement__item-status {
+  margin-bottom: 5px;
+  margin-top: 0;
+  position: relative;
+  padding-left: 9px;
+  font-size: 0.875rem;
+  line-height: 1.1375rem;
+  color: #70BF56; }
+  .improvement__item-status--proposal {
+    color: #FCA844; }
+  .improvement__item-status--open {
+    color: #2C8ECC; }
+  .improvement__item-status::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: -2px;
+    width: 5px;
+    height: 5px;
+    border: 3px solid;
+    border-radius: 50%; }
+
+.improvement__text {
+  font-size: 1rem;
+  line-height: 1.35rem; }
 
 .project-page__container,
 .project-page__survey {

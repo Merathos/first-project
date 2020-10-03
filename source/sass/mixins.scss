@@ -56,7 +56,6 @@
   font-weight: 400;
 }
 
-
 @mixin desktop-only {
   @media (min-width: $desktop-width) {
     @content;
@@ -75,13 +74,11 @@
   }
 }
 
-
 @mixin retina {
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     @content;
   }
 }
-
 
 @mixin visually-hidden {
   position: absolute;
