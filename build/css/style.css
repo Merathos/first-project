@@ -6934,17 +6934,17 @@ span.poll__hide {
   display: flex; }
 
 .landscaping-form__img {
-  margin-right: 22px;
+  margin-right: 19px;
   position: relative;
-  width: 215px;
-  height: 215px;
+  width: 205px;
+  height: 205px;
   -webkit-filter: drop-shadow(0px 2px 4px rgba(0, 30, 75, 0.15));
           filter: drop-shadow(0px 2px 4px rgba(0, 30, 75, 0.15));
   border-radius: 5px; }
   .landscaping-form__img img {
     display: block;
-    width: 215px;
-    height: 215px; }
+    width: 205px;
+    height: 205px; }
 
 .landscaping-form__remove-img {
   padding: 0;
@@ -7031,7 +7031,15 @@ span.poll__hide {
     margin-top: 12px;
     margin-bottom: 35px; }
   .landscaping-form__section iframe {
-    height: 460px; } }
+    height: 460px; }
+  .landscaping-form__img-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+  .landscaping-form__img {
+    margin-bottom: 24px; } }
 
 @media (max-width: 767px) {
   .landscaping-form__title {
@@ -7077,6 +7085,7 @@ span.poll__hide {
             align-items: center; }
   .landscaping-form__img {
     margin-right: 0;
+    margin-bottom: 24px;
     width: 288px;
     height: 160px; }
     .landscaping-form__img img {
