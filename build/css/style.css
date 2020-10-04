@@ -4466,19 +4466,38 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .proposal__address {
   margin-bottom: 34px; }
 
+@media (min-width: 1200px) {
+  .proposal--approved {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    grid-column-gap: 20px;
+    grid-template-areas: "a   a" "b   c" "d   c" "e   c" "f   c" "g   c" "h   c" "i   c"; } }
+
+.proposal--approved > * {
+  -ms-flex-item-align: start;
+      align-self: start; }
+
 .proposal--approved .proposal__title {
+  grid-area: a;
   margin-bottom: 41px; }
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     .proposal--approved .proposal__title {
       font-size: 1.5rem;
       line-height: 1.75rem;
       margin-bottom: 26px; } }
 
 .proposal--approved .proposal__text {
-  margin-bottom: 32px;
+  grid-area: b;
+  margin-bottom: 41px;
   line-height: 180%; }
 
-@media (max-width: 768px) {
+.proposal--approved .proposal__vote {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 90px;
+  grid-area: c; }
+
+@media (max-width: 1200px) {
   .proposal--approved .project-vote__container {
     padding: 24px;
     margin-bottom: 48px; } }
@@ -4490,31 +4509,41 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   line-height: 180%; }
 
 .proposal--approved .proposal__subtitle {
+  grid-area: d;
   margin-bottom: 22px; }
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     .proposal--approved .proposal__subtitle {
       font-size: 1.875rem;
       line-height: 2.25rem; } }
 
 .proposal--approved .proposal__subtitle--map {
+  grid-area: f;
   margin-bottom: 9px; }
-  @media (max-width: 768px) {
+  @media (max-width: 1200px) {
     .proposal--approved .proposal__subtitle--map {
       margin-bottom: 16px; } }
 
-@media (max-width: 768px) {
-  .proposal--approved .project-page__gallery {
-    margin-bottom: 58px; } }
+.proposal--approved .project-page__gallery {
+  grid-area: e; }
+  @media (max-width: 1200px) {
+    .proposal--approved .project-page__gallery {
+      margin-bottom: 58px; } }
+
+.proposal--approved .proposal__address {
+  grid-area: g; }
 
 .proposal--approved iframe {
-  margin-bottom: 41px; }
-  @media (max-width: 768px) {
+  grid-area: h;
+  margin-bottom: 46px; }
+  @media (max-width: 1200px) {
     .proposal--approved iframe {
       width: 100%;
       height: 288px;
       margin-bottom: 34px; } }
 
 .proposal--approved .button {
+  justify-self: start;
+  grid-area: i;
   padding: 17px 40px 15px; }
   .proposal--approved .button span {
     padding: 0; }
