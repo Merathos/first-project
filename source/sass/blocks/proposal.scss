@@ -327,16 +327,17 @@
   }
 
   .proposal__vote {
-    position: sticky;
-    top: 90px;
+    @media (min-width: $desktop-width) {
+      position: sticky;
+      top: 90px;
 
-    grid-area: c;
+      grid-area: c;
+    }
   }
 
   .project-vote__container {
     @media (max-width: $desktop-width) {
       padding: 24px;
-
       margin-bottom: 48px;
     }
   }

@@ -4199,6 +4199,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         margin-top: 23px;
         margin-bottom: 32px;
         padding-bottom: 24px; } }
+  .info-banner--declined {
+    border-color: #e55050; }
+    .info-banner--declined .info-banner__title {
+      color: #e55050; }
+    .info-banner--declined .info-banner__icon {
+      color: #e55050; }
 
 .info-banner-button {
   padding: 0;
@@ -4491,11 +4497,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-bottom: 41px;
   line-height: 180%; }
 
-.proposal--approved .proposal__vote {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 90px;
-  grid-area: c; }
+@media (min-width: 1200px) {
+  .proposal--approved .proposal__vote {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 90px;
+    grid-area: c; } }
 
 @media (max-width: 1200px) {
   .proposal--approved .project-vote__container {

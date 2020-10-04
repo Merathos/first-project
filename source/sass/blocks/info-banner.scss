@@ -225,4 +225,16 @@
       padding-bottom: 24px;
     }
   }
+
+  &--declined {
+    border-color: $red;
+
+    & .info-banner__title {
+      color: $red;
+    }
+
+    & .info-banner__icon {
+      color: $red;
+    }
+  }
 }
