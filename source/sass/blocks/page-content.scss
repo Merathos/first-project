@@ -40,6 +40,10 @@
   .page-content {
     padding-top: 24px;
     padding-bottom: 64px;
+
+    &--proposal {
+      padding-bottom: 70px;
+    }
   }
 
   .page-content__title {

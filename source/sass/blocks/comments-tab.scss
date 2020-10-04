@@ -23,13 +23,29 @@
 
     background-color: transparent;
 
+    @media (max-width: $tablet-width) {
+      line-height: 135%;
+      text-align: left;
+      padding: 11px 17px 11px 17px;
+    }
+
     & svg {
       margin-top: 4px;
       margin-left: auto;
       transform: rotate(-90deg);
       color: var(--color-interactive-default, $blue-default);
       transition: transform $style-change-duration;
+
+      @media (max-width: $tablet-width) {
+        align-self: center;
+        width: 10px;
+        height: 16px;
+      }
     }
+  }
+
+  @media (max-width: $tablet-width) {
+    height: 64px;
   }
 }
 
