@@ -79,10 +79,25 @@
         background-color: var(--color-interactive-default, $light-blue-accent);
         transition: background-color $style-change-duration;
       }
+
+      @media (max-width: $tablet-width) {
+        text-decoration: underline;
+        text-underline-offset: 4px;
+
+        line-height: 130%;
+
+        &::before {
+          display: none;
+        }
+      }
     }
 
     & svg {
       margin-right: 8px;
+
+      @media (max-width: $tablet-width) {
+        align-self: flex-start;
+      }
     }
   }
 }

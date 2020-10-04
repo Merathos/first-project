@@ -59,7 +59,7 @@
       renderCloseBtn(imgContainer, file);
       imgContainer.appendChild(preview);
       preview.setAttribute('src', imageUrl);
-      container.appendChild(imgContainer);
+      container.insertBefore(imgContainer, container.querySelector('label'));
     };
 
     // работа приложения //

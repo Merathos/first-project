@@ -2,6 +2,10 @@
   min-width: $mobile-width;
   padding-top: 40px;
   padding-bottom: 120px;
+
+  &--proposal {
+    padding-bottom: 80px;
+  }
 }
 
 .page-content__title {
@@ -40,6 +44,10 @@
   .page-content {
     padding-top: 24px;
     padding-bottom: 64px;
+
+    &--proposal {
+      padding-bottom: 70px;
+    }
   }
 
   .page-content__title {
