@@ -213,6 +213,66 @@
   }
 }
 
+.project-vote__like-counter {
+  width: 100%;
+  margin-top: 24px;
+  padding-top: 25px;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  border-top: 1px solid var(--color-stroke, $light-grey);
+
+  cursor: pointer;
+
+  @media (min-width: $desktop-width) {
+    &:hover:not(.focus-visible) svg {
+      .stroked {
+        fill: transparent;
+      }
+
+      .filled {
+        fill: var(--color-interactive-default, $blue-default);
+      }
+    }
+  }
+
+  span {
+    margin-right: 12px;
+    font-weight: 500;
+    font-size: rem(15px);
+    line-height: 135%;
+  }
+
+  svg {
+    margin-bottom: 5px;
+
+    .stroked {
+      fill: var(--color-interactive-default, $blue-default);
+      transition: fill $style-change-duration;
+    }
+
+    .filled {
+      fill: transparent;
+      transition: fill $style-change-duration;
+    }
+  }
+
+  &--liked {
+    svg {
+      .filled {
+        fill: var(--color-interactive-default, $blue-default);
+      }
+
+      .stroked {
+        fill: transparent;
+      }
+    }
+  }
+}
+
 
 @include tablet {
   .project-vote__container {
