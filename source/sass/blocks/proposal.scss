@@ -1,4 +1,10 @@
-.proposal h2 {
+.proposal {
+
+  & iframe {
+    border: none;
+  }
+}
+.proposal__subtitle {
   margin: 0 0 32px;
   font-weight: 400;
   font-size: 1.875rem;
@@ -13,6 +19,7 @@
 
 .proposal__title {
   margin-bottom: 26px;
+  max-width: 100%;
 
   @media (max-width: $tablet-width) {
     font-size: rem(30px);
@@ -139,12 +146,12 @@
     width: 205px;
     height: 205px;
     overflow: hidden;
-    margin-right: 24px;
+    margin-right: 23.5px;
 
     border-radius: 5px;
     filter: drop-shadow(0px 2px 4px rgba(0, 30, 75, 0.15));
 
-    &:last-of-type {
+    &:nth-of-type(5n) {
       margin-right: 0;
     }
 
@@ -219,7 +226,6 @@
   }
 
   & label {
-    margin-left: 23px;
 
     display: flex;
     align-items: center;
@@ -274,5 +280,42 @@
   @media (max-width: $tablet-width) {
     padding-right: 0;
     margin-bottom: 22px;
+  }
+}
+
+.proposal__address {
+  margin-bottom: 34px;
+}
+
+.proposal--approved {
+  & .proposal__title {
+    margin-bottom: 41px;
+  }
+
+  & .project-page__text-container p {
+    padding-top: 16px;
+    padding-right: 2px;
+    font-size: rem(15px);
+    line-height: 180%;
+  }
+
+  & .proposal__subtitle {
+    margin-bottom: 22px;
+  }
+
+  & .proposal__subtitle--map {
+    margin-bottom: 9px;
+  }
+
+  & iframe {
+    margin-bottom: 41px;
+  }
+
+  & .button {
+    padding: 17px 40px 15px;
+
+    & span {
+      padding: 0;
+    }
   }
 }
