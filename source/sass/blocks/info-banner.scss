@@ -218,5 +218,11 @@
     & .info-banner__icon {
       color: var(--color-icon, $green);
     }
+
+    @media (max-width: $tablet-width) {
+      margin-top: 23px;
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+    }
   }
 }

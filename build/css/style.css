@@ -1973,6 +1973,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     padding-bottom: 64px; }
     .page-content--proposal {
       padding-bottom: 70px; }
+    .page-content--approved {
+      padding-bottom: 72px; }
   .page-content__title {
     margin-bottom: 32px;
     font-size: 1.875rem;
@@ -4192,6 +4194,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       color: var(--color-icon, #70bf56); }
     .info-banner--approved .info-banner__icon {
       color: var(--color-icon, #70bf56); }
+    @media (max-width: 768px) {
+      .info-banner--approved {
+        margin-top: 23px;
+        margin-bottom: 32px;
+        padding-bottom: 24px; } }
 
 .info-banner-button {
   padding: 0;
@@ -4461,6 +4468,20 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .proposal--approved .proposal__title {
   margin-bottom: 41px; }
+  @media (max-width: 768px) {
+    .proposal--approved .proposal__title {
+      font-size: 1.5rem;
+      line-height: 1.75rem;
+      margin-bottom: 26px; } }
+
+.proposal--approved .proposal__text {
+  margin-bottom: 32px;
+  line-height: 180%; }
+
+@media (max-width: 768px) {
+  .proposal--approved .project-vote__container {
+    padding: 24px;
+    margin-bottom: 48px; } }
 
 .proposal--approved .project-page__text-container p {
   padding-top: 16px;
@@ -4470,12 +4491,28 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .proposal--approved .proposal__subtitle {
   margin-bottom: 22px; }
+  @media (max-width: 768px) {
+    .proposal--approved .proposal__subtitle {
+      font-size: 1.875rem;
+      line-height: 2.25rem; } }
 
 .proposal--approved .proposal__subtitle--map {
   margin-bottom: 9px; }
+  @media (max-width: 768px) {
+    .proposal--approved .proposal__subtitle--map {
+      margin-bottom: 16px; } }
+
+@media (max-width: 768px) {
+  .proposal--approved .project-page__gallery {
+    margin-bottom: 58px; } }
 
 .proposal--approved iframe {
   margin-bottom: 41px; }
+  @media (max-width: 768px) {
+    .proposal--approved iframe {
+      width: 100%;
+      height: 288px;
+      margin-bottom: 34px; } }
 
 .proposal--approved .button {
   padding: 17px 40px 15px; }
