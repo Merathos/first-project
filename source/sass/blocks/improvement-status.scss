@@ -1,0 +1,36 @@
+.improvement-status {
+    margin-bottom: 5px;
+    margin-top: 0;
+    position: relative;
+    padding-left: 9px;
+    font-size: rem(14px);
+    line-height: rem(18.2px);
+    color: #70BF56;
+  
+    &--orange {
+      color: #FCA844;
+    }
+  
+    &--blue {
+      color: #2C8ECC;
+    }
+  
+    &--red {
+      color: #E55050;
+    }
+  
+    &--grey {
+      color: #A6ABB2;
+    }
+  
+    &::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: -2px;
+      width: 5px;
+      height: 5px;
+      border: 3px solid;
+      border-radius: 50%;
+    }
+  }
