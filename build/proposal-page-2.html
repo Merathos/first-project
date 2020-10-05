@@ -292,7 +292,7 @@
               Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как текст-заполнитель или же текст-наполнитель. Иногда текст-«рыба» также используется композиторами при написании музыки.
             </p>
           </div>
-          <h2>Название и описание предложения</h2>
+          <h2 class="proposal__subtitle">Название и описание предложения</h2>
           <div class="proposal__text-block">
             <p>Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно.</p>
           </div>
@@ -300,7 +300,7 @@
             <p>В случае произвольного набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных шрифтов, а также от распределения текста на странице (макет или площадь набора). Поэтому большинство рыбных текстов состоят из более или менее произвольного набора слов и слогов.</p>
           </div>
           <form action="#" class="proposal__form landscaping-form" enctype="multipart/form-data">
-            <h2>Загрузка изображений</h2>
+            <h2 class="proposal__subtitle">Загрузка изображений</h2>
             <p>Если необходимо, вы можете загрузить изображения. Максимум 5 изображенний, формата JPEG, PNG, GIF.</p>
             <div class="proposal__uploads js-upload-image-container">
               <input class="visually-hidden" type="file" name="user-images" id="user-images" accept="image/png, image/jpeg, image/jpg, image/gif" multiple="">
@@ -312,7 +312,8 @@
                 Введите адрес проблемной территории или отметьте ее на карте
               </p>
               <input type="text" name="map-search" id="map-search" class="landscaping-form__address" placeholder="Адрес проблемной территории">
-              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9cb3dfe5638344382497a81fa8472068b0dfbf25654b37a69d276c0dce8d2718&amp;source=constructor" width="100%" height="600" frameborder="0"></iframe>
+              <label for="map-search" class="visually-hidden" aria-label="Ввод адреса проблемной территории"></label>
+              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9cb3dfe5638344382497a81fa8472068b0dfbf25654b37a69d276c0dce8d2718&amp;source=constructor" title="Интерактивная карта"></iframe>
             </div>
             <div class="landscaping-form__button-wrapper">
               <button class="button button--white">Отменить</button>

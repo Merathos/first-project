@@ -8,7 +8,7 @@
   }
 
   &--approved {
-    padding-bottom: 74px;
+    padding-bottom: 120px;
   }
 }
 
@@ -33,6 +33,19 @@
 @include tablet {
   .page-content {
     padding-bottom: 88px;
+
+    &--proposal {
+      padding-bottom: 103px;
+    }
+
+    &--approved {
+      padding-bottom: 103px;
+    }
+
+    &--implemented {
+      padding-top: 47px;
+      padding-bottom: 103px;
+    }
   }
 
   .page-content .list-btn {

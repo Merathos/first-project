@@ -2,8 +2,10 @@
 
   & iframe {
     border: none;
+    width: 100%;
+    height: 600px;
 
-    @media (max-width: $desktop-width) {
+    @media (max-width: $tablet-width - 1) {
       width: 100%;
       height: 288px;
     }
@@ -15,7 +17,7 @@
   font-size: 1.875rem;
   line-height: 2.25rem;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $tablet-width - 1) {
     margin-bottom: 25px;
     font-size: rem(24px);
     line-height: rem(28px);
@@ -26,7 +28,11 @@
   margin-bottom: 26px;
   max-width: 100%;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 33px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
     font-size: rem(30px);
     line-height: rem(36px);
 
@@ -37,7 +43,11 @@
 .proposal__link {
   margin-bottom: 59px;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 57px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
     margin-bottom: 46px;
   }
 }
@@ -45,7 +55,11 @@
 .proposal__comments {
   margin-bottom: 12px;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
     margin-bottom: 16px;
   }
 }
@@ -56,6 +70,10 @@
 
   border: 1px solid var(--color-interactive-default, $blue-default);
   border-radius: 5px;
+
+  @media (max-width: $tablet-width - 1) {
+    margin-bottom: 56px;
+  }
 
   & p:first-child {
     margin: 0 0 16px;
@@ -73,12 +91,6 @@
     line-height: 180%;
 
     color: var(--color-text, $dark-text);
-  }
-
-  @media (max-width: $tablet-width) {
-    height: 223px;
-    overflow: hidden;
-    margin-bottom: 56px;
   }
 }
 
@@ -101,7 +113,7 @@
     padding-bottom: 36px;
   }
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $tablet-width - 1) {
     padding-bottom: 14px;
     margin-bottom: 16px;
   }
@@ -113,7 +125,7 @@
   & h2 {
     margin-bottom: 12px;
 
-    @media (max-width: $tablet-width) {
+    @media (max-width: $desktop-width - 1) {
       margin-bottom: 18px;
     }
   }
@@ -121,14 +133,18 @@
   & p {
     margin: 0 0 34px;
 
-    @media (max-width: $tablet-width) {
+    @media (max-width: $desktop-width - 1) {
       line-height: 180%;
       padding-right: 30px;
+      margin-bottom: 37px;
+    }
+
+    @media (max-width: $tablet-width - 1) {
       margin-bottom: 14px;
     }
   }
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $tablet-width - 1) {
     margin-top: 64px;
   }
 }
@@ -140,7 +156,7 @@
   flex-flow: row wrap;
   justify-content: flex-start;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $tablet-width - 1) {
     flex-flow: column wrap;
     margin-bottom: 72px;
   }
@@ -160,7 +176,7 @@
       margin-right: 0;
     }
 
-    @media (max-width: $tablet-width) {
+    @media (max-width: $tablet-width - 1) {
       width: 100%;
       height: calc(100vw / 2);
       margin-right: 0;
@@ -181,7 +197,7 @@
 
       cursor: pointer;
 
-      @media (max-width: $tablet-width) {
+      @media (max-width: $tablet-width - 1) {
         top: 8px;
         right: 8px;
       }
@@ -249,8 +265,13 @@
     border-radius: 5px;
 
     cursor: pointer;
+    transition: opacity $style-change-duration;
 
-    @media (max-width: $tablet-width) {
+    &:hover:not(.focus-visible) {
+      opacity: 0.8;
+    }
+
+    @media (max-width: $tablet-width - 1) {
       width: 100%;
       height: calc(100vw / 2);
       margin-left: 0;
@@ -262,7 +283,7 @@
       padding-top: 34px;
       position: relative;
 
-      @media (max-width: $tablet-width) {
+      @media (max-width: $tablet-width - 1) {
         max-width: 50%;
       }
 
@@ -281,8 +302,36 @@
   }
 }
 
+.proposal .landscaping-form__section--map {
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    margin-bottom: 20px;
+  }
+}
+
+.proposal .landscaping-form__title {
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    margin-bottom: 17px;
+  }
+}
+
 .proposal .landscaping-form__section--map .landscaping-form__tip {
-  @media (max-width: $tablet-width) {
+  @media (max-width: $desktop-width - 1) {
+    margin-top: 0;
+    margin-bottom: 32px;
+  }
+}
+
+.proposal .landscaping-form__section--map .landscaping-form__tip {
+  @media (max-width: $tablet-width - 1) {
     padding-right: 0;
     margin-bottom: 22px;
   }
@@ -298,7 +347,11 @@
   border-radius: $border-radius;
   margin-bottom: 39px;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 23px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
     margin-bottom: 26px;
   }
 
@@ -325,6 +378,7 @@
     grid-column-gap: 20px;
     grid-template-areas:
     "a   a"
+    "k   c"
     "b   c"
     "d   c"
     "e   c"
@@ -343,30 +397,51 @@
     grid-area: a;
     margin-bottom: 41px;
 
-    @media (max-width: $desktop-width) {
+    @media (max-width: $desktop-width - 1) {
+      margin-bottom: 34px;
+    }
+
+    @media (max-width: $tablet-width - 1) {
       font-size: rem(24px);
       line-height: rem(28px);
       margin-bottom: 26px;
     }
+
+    &--declined {
+      margin-bottom: 24px;
+    }
+  }
+
+  .proposal__link {
+    grid-area: k;
+    margin-bottom: 40px;
   }
 
   .proposal__text {
     grid-area: b;
     margin-bottom: 41px;
     line-height: 180%;
+
+    @media (max-width: $tablet-width - 1) {
+      margin-bottom: 32px;
+    }
   }
 
   .proposal__vote {
     @media (min-width: $desktop-width) {
       position: sticky;
-      top: 90px;
+      top: 115px;
 
       grid-area: c;
     }
   }
 
   .project-vote__container {
-    @media (max-width: $desktop-width) {
+    @media (max-width: $desktop-width - 1) {
+      margin-bottom: 73px;
+    }
+
+    @media (max-width: $tablet-width - 1) {
       padding: 24px;
       margin-bottom: 48px;
     }
@@ -383,7 +458,7 @@
     grid-area: d;
     margin-bottom: 22px;
 
-    @media (max-width: $desktop-width) {
+    @media (max-width: $desktop-width - 1) {
       font-size: rem(30px);
       line-height: rem(36px);
     }
@@ -393,14 +468,26 @@
     grid-area: f;
     margin-bottom: 9px;
 
-    @media (max-width: $desktop-width) {
+    @media (max-width: $desktop-width - 1) {
+      margin-bottom: 9px;
+    }
+
+    @media (max-width: $tablet-width - 1) {
       margin-bottom: 16px;
     }
   }
 
-  .project-page__gallery {
+  .proposal__gallery {
     grid-area: e;
-    @media (max-width: $desktop-width) {
+    margin-bottom: 48px;
+    max-width: 740px;
+
+    @media (max-width: $desktop-width - 1) {
+      max-width: unset;
+      margin-bottom: 73px;
+    }
+
+    @media (max-width: $tablet-width - 1) {
       margin-bottom: 58px;
     }
   }
@@ -413,17 +500,26 @@
     grid-area: h;
     margin-bottom: 46px;
 
-    @media (max-width: $desktop-width) {
+    width: 100%;
+    height: 400px;
+
+    @media (max-width: $desktop-width - 1) {
+      margin-bottom: 41px;
+    }
+
+    @media (max-width: $tablet-width - 1) {
       margin-bottom: 34px;
+      height: 288px;
     }
   }
 
   .button {
     justify-self: start;
     grid-area: i;
-    padding: 17px 40px 15px;
+    padding: 17px 46px 15px;
 
     span {
+      font-size: rem(14px);
       padding: 0;
     }
   }
@@ -457,7 +553,7 @@
     grid-area: a;
     margin-bottom: 41px;
 
-    @media (max-width: $desktop-width) {
+    @media (max-width: $tablet-width - 1) {
       font-size: rem(24px);
       line-height: rem(28px);
       margin-bottom: 32px;
@@ -471,24 +567,41 @@
   .proposal__vote {
     grid-area: c;
 
-    @media (max-width: $desktop-width) {
+    @media (min-width: $desktop-width) {
+      position: sticky;
+      top: 90px;
+    }
+
+    @media (max-width: $desktop-width - 1) {
+      margin-bottom: 48px;
+    }
+
+    @media (max-width: $tablet-width - 1) {
       margin-bottom: 55px;
     }
   }
 
   .project-vote__container {
-    @media (max-width: $desktop-width) {
+    @media (max-width: $tablet-width - 1) {
       padding: 24px;
       margin-bottom: 48px;
     }
   }
 
-  .project-vote__like-counter span {
-    @media (max-width: $desktop-width) {
-      margin-right: 0;
+  .project-vote__like-counter {
+
+    span {
       font-weight: 400;
-      font-size: rem(15px);
-      line-height: 135%;
+
+      @media (max-width: $tablet-width - 1) {
+        margin-right: 0;
+        font-size: rem(15px);
+        line-height: 135%;
+      }
+    }
+
+    .project-vote__value {
+      font-weight: 500;
     }
   }
 
@@ -496,7 +609,7 @@
     grid-area: d;
     margin-bottom: 24px;
 
-    @media (max-width: $desktop-width) {
+    @media (max-width: $tablet-width - 1) {
       margin-bottom: 25px;
       font-size: rem(30px);
       line-height: rem(36px);
@@ -510,7 +623,7 @@
       grid-area: j;
       margin-bottom: 6px;
 
-      @media (max-width: $desktop-width) {
+      @media (max-width: $tablet-width - 1) {
         margin-bottom: 16px;
       }
     }
@@ -520,7 +633,7 @@
     grid-area: e;
     margin-bottom: 48px;
 
-    @media (max-width: $desktop-width) {
+    @media (max-width: $tablet-width - 1) {
       margin-bottom: 40px;
     }
   }
@@ -528,7 +641,11 @@
   .proposal__gallery {
     max-width: 740px;
 
-    @media (max-width: $desktop-width) {
+    @media (max-width: $desktop-width - 1) {
+      max-width: unset;
+    }
+
+    @media (max-width: $tablet-width - 1) {
       padding-bottom: 55px;
     }
 
@@ -537,7 +654,7 @@
       padding-bottom: 48px;
       border-bottom: 1px solid var(--color-stroke, $light-grey);
 
-      @media (max-width: $desktop-width) {
+      @media (max-width: $tablet-width - 1) {
         padding-bottom: 47px;
       }
     }
@@ -545,6 +662,14 @@
     &--grid {
       grid-area: i;
       padding-bottom: 48px;
+
+      @media (max-width: $desktop-width - 1) {
+        padding-bottom: 72px;
+      }
+
+      @media (max-width: $tablet-width - 1) {
+        padding-bottom: 55px;
+      }
     }
   }
 
@@ -555,7 +680,12 @@
     line-height: 180%;
     margin-bottom: 40px;
 
-    @media (max-width: $desktop-width) {
+    @media (max-width: $desktop-width - 1) {
+      padding-top: 26px;
+      margin-bottom: 63px;
+    }
+
+    @media (max-width: $tablet-width - 1) {
      margin-top: 0;
      margin-bottom: 55px;
      padding-top: 42px;
@@ -569,9 +699,16 @@
   iframe {
     grid-area: l;
     margin-bottom: 48px;
+    width: 100%;
+    height: 400px;
 
-    @media (max-width: $desktop-width) {
+    @media (max-width: $desktop-width - 1) {
+      margin-bottom: 44px;
+    }
+
+    @media (max-width: $tablet-width - 1) {
       margin-bottom: 34px;
+      height: 288px;
     }
   }
 
@@ -579,9 +716,10 @@
     grid-area: m;
     justify-self: start;
 
-    padding: 17px 40px 15px;
+    padding: 17px 46px 15px;
 
     span {
+      font-size: rem(14px);
       padding: 0;
     }
   }
