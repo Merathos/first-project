@@ -232,7 +232,7 @@
 </header>
 
 
-  <main class="page-content">
+  <main class="landscaping-page page-content">
     <section class="landscaping">
       <div class="container">
         <h1 class="page-title landscaping__title">
@@ -247,11 +247,11 @@
               Название и описание предложения
             </h2>
             <div class="landscaping-form__textarea-container">
-              <textarea name="proposition" id="proposition" cols="30" rows="10" class="landscaping-form__textarea landscaping-form__proposition-name" placeholder="Название (ограничение 255 символов)" required=""></textarea>
+              <textarea name="proposition" id="proposition" cols="30" rows="10" class="landscaping-form__textarea landscaping-form__proposition-name" placeholder="Название (ограничение 255 символов)" aria-label="Название предложения" required=""></textarea>
               <span class="landscaping-form__textarea-error">Вы превысили лимит на хх символов</span>
             </div>
             <div class="landscaping-form__textarea-container">
-              <textarea name="description" id="description" cols="30" rows="10" class="landscaping-form__textarea landscaping-form__textarea--error landscaping-form__description" placeholder="Описание  (ограничение 500 символов)" required=""></textarea>
+              <textarea name="description" id="description" cols="30" rows="10" class="landscaping-form__textarea landscaping-form__textarea--error landscaping-form__description" placeholder="Описание  (ограничение 500 символов)" aria-label="Описание предложения" required=""></textarea>
               <span class="landscaping-form__textarea-error landscaping-form__textarea-error--show">Вы превысили лимит
                 на хх символов</span>
             </div>
@@ -264,7 +264,7 @@
             </p>
             <div class="landscaping-form__img-container">
               <div class="landscaping-form__upload">
-                <input type="file" id="images" name="images" class="visually-hidden" accept=".jpeg, .png, .gif" multiple="">
+                <input type="file" id="images" name="images" class="visually-hidden" accept=".jpeg, .jpg, .png, .gif" multiple="">
                 <label for="images" class="landscaping-form__upload-label">
                   Загрузить изображение
                 </label>
@@ -276,8 +276,8 @@
             <p class="landscaping-form__tip">
               Введите адрес проблемной территории или отметьте ее на карте
             </p>
-            <input type="text" name="map-search" id="map-search" class="landscaping-form__address" placeholder="Адрес проблемной территории">
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9cb3dfe5638344382497a81fa8472068b0dfbf25654b37a69d276c0dce8d2718&amp;source=constructor" width="100%" height="600" frameborder="0"></iframe>
+            <input type="text" name="map-search" id="map-search" class="landscaping-form__address" placeholder="Адрес проблемной территории" aria-label="Введите адрес проблемной территории">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9cb3dfe5638344382497a81fa8472068b0dfbf25654b37a69d276c0dce8d2718&amp;source=constructor" width="800" height="600" title="Карта"></iframe>
           </div>
           <div class="landscaping-form__button-wrapper">
             <button class="button button--white">Отменить</button>

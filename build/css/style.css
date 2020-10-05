@@ -7018,6 +7018,9 @@ span.poll__hide {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px; } }
 
+.landscaping-page {
+  padding-bottom: 79px; }
+
 .landscaping__rules-link {
   margin-top: 25px;
   margin-left: 29px;
@@ -7102,13 +7105,15 @@ span.poll__hide {
 .landscaping-form__section {
   margin-bottom: 80px; }
   .landscaping-form__section--upload {
-    margin-bottom: 73px; }
+    margin-bottom: 80px; }
     .landscaping-form__section--upload .landscaping-form__tip {
       margin-bottom: 34px; }
   .landscaping-form__section--map {
     margin-bottom: 43px; }
   .landscaping-form__section iframe {
-    border-radius: 5px; }
+    border: none;
+    border-radius: 5px;
+    width: 100%; }
 
 .landscaping-form__textarea-container {
   position: relative; }
@@ -7195,6 +7200,10 @@ span.poll__hide {
     top: 61px;
     font-size: 45px;
     font-weight: 100; }
+  .landscaping-form__upload-label:hover {
+    cursor: pointer;
+    color: #7c7c7e;
+    border-color: #7c7c7e; }
 
 .landscaping-form__img-container {
   display: -webkit-box;
@@ -7208,11 +7217,16 @@ span.poll__hide {
   height: 205px;
   -webkit-filter: drop-shadow(0px 2px 4px rgba(0, 30, 75, 0.15));
           filter: drop-shadow(0px 2px 4px rgba(0, 30, 75, 0.15));
-  border-radius: 5px; }
+  border-radius: 5px;
+  overflow: hidden; }
   .landscaping-form__img img {
     display: block;
-    width: 205px;
-    height: 205px; }
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%;
+    width: 100%;
+    height: 100%; }
 
 .landscaping-form__remove-img {
   padding: 0;
@@ -7239,8 +7253,10 @@ span.poll__hide {
   .landscaping-form__remove-img::after {
     -webkit-transform: rotate(-45deg);
             transform: rotate(-45deg); }
-  .landscaping-form__remove-img:hover::before, .landscaping-form__remove-img:hover::after {
-    background-color: #910000; }
+  .landscaping-form__remove-img:hover {
+    cursor: pointer; }
+    .landscaping-form__remove-img:hover::before, .landscaping-form__remove-img:hover::after {
+      background-color: #910000; }
 
 .landscaping-form__address {
   margin-bottom: 25px;
@@ -7334,7 +7350,7 @@ span.poll__hide {
     height: 288px; }
   .landscaping-form__upload-label {
     margin-left: 0;
-    margin-top: 24px;
+    margin-top: 0;
     width: 288px;
     height: 160px;
     padding-top: 73px;
@@ -7357,8 +7373,8 @@ span.poll__hide {
     width: 288px;
     height: 160px; }
     .landscaping-form__img img {
-      width: 288px;
-      height: 160px; }
+      max-width: 100%;
+      height: auto; }
   .landscaping-form__button-wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
