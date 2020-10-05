@@ -12,7 +12,7 @@
   border: 1px solid var(--color-interactive-default, $blue-default);
   border-radius: 5px;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $tablet-width - 1) {
     padding-left: 54px;
   }
 
@@ -31,7 +31,7 @@
 
     color: var(--color-interactive-default, $blue-default);
 
-    @media (max-width: $tablet-width) {
+    @media (max-width: $tablet-width - 1) {
       left: 16px;
     }
 
@@ -159,21 +159,12 @@
 
   &--warning,
   &--approved {
-    // border-color: $warning-orange;
-
-    // & .info-banner__title {
-    //   color: $warning-orange;
-    // }
 
     & .info-banner__text {
       margin-bottom: 6px;
     }
 
-    // & .info-banner__icon {
-    //   color: $warning-orange;
-    // }
-
-    @media (max-width: $tablet-width) {
+    @media (max-width: $tablet-width - 1) {
       padding: 24px 32px 22px 64px;
       margin-top: 14px;
       margin-bottom: 40px;
@@ -219,7 +210,7 @@
       color: var(--color-icon, $green);
     }
 
-    @media (max-width: $tablet-width) {
+    @media (max-width: $tablet-width - 1) {
       margin-top: 23px;
       margin-bottom: 32px;
       padding-bottom: 24px;

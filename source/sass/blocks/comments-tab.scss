@@ -6,7 +6,7 @@
   border: 1px solid var(--color-stroke, $light-grey);
   border-radius: 5px;
 
-  @media (max-width: $tablet-width) {
+  @media (max-width: $tablet-width - 1) {
     height: 64px;
   }
 
@@ -28,14 +28,14 @@
 
     background-color: transparent;
 
-    @media (max-width: $tablet-width) {
+    @media (max-width: $tablet-width - 1) {
       line-height: 135%;
       text-align: left;
       padding: 11px 17px 11px 17px;
     }
 
     & span {
-      @media (max-width: $tablet-width) {
+      @media (max-width: $tablet-width - 1) {
        max-width: 275px;
       }
     }
@@ -47,7 +47,7 @@
       color: var(--color-interactive-default, $blue-default);
       transition: transform $style-change-duration;
 
-      @media (max-width: $tablet-width) {
+      @media (max-width: $tablet-width - 1) {
         align-self: center;
         width: 10px;
         height: 16px;
