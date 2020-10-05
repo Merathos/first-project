@@ -6,6 +6,10 @@
   &--proposal {
     padding-bottom: 80px;
   }
+
+  &--approved {
+    padding-bottom: 74px;
+  }
 }
 
 .page-content__title {
@@ -47,6 +51,15 @@
 
     &--proposal {
       padding-bottom: 70px;
+    }
+
+    &--approved {
+      padding-bottom: 72px;
+    }
+
+    &--implemented {
+      padding-top: 46px;
+      padding-bottom: 72px;
     }
   }
 
