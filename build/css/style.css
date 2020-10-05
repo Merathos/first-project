@@ -4246,7 +4246,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
             transform: rotate(-180deg); }
 
 .proposal iframe {
-  border: none; }
+  border: none;
+  width: 100%;
+  height: 600px; }
   @media (max-width: 1200px) {
     .proposal iframe {
       width: 100%;
