@@ -4244,6 +4244,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .proposal iframe {
   border: none; }
+  @media (max-width: 1200px) {
+    .proposal iframe {
+      width: 100%;
+      height: 288px; } }
 
 .proposal__subtitle {
   margin: 0 0 32px;
@@ -4472,6 +4476,19 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .proposal__address {
   margin-bottom: 34px; }
 
+.proposal__status {
+  padding: 16px 24px;
+  border: 1px solid var(--color-stroke, #e3e8ee);
+  border-radius: 5px; }
+  .proposal__status p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    line-height: 135%; }
+    .proposal__status p span {
+      font-weight: 400;
+      color: var(--color-interactive-default, #70bf56); }
+
 @media (min-width: 1200px) {
   .proposal--approved {
     display: grid;
@@ -4544,8 +4561,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-bottom: 46px; }
   @media (max-width: 1200px) {
     .proposal--approved iframe {
-      width: 100%;
-      height: 288px;
       margin-bottom: 34px; } }
 
 .proposal--approved .button {

@@ -2,6 +2,11 @@
 
   & iframe {
     border: none;
+
+    @media (max-width: $desktop-width) {
+      width: 100%;
+      height: 288px;
+    }
   }
 }
 .proposal__subtitle {
@@ -287,6 +292,25 @@
   margin-bottom: 34px;
 }
 
+.proposal__status {
+  padding: 16px 24px;
+  border: 1px solid var(--color-stroke, $light-grey);
+  border-radius: $border-radius;
+
+  p {
+    margin: 0;
+
+    font-weight: 500;
+    font-size: rem(15px);
+    line-height: 135%;
+
+    span {
+      font-weight: 400;
+      color: var(--color-interactive-default, $green);
+    }
+  }
+}
+
 .proposal--approved {
 
   @media (min-width: $desktop-width) {
@@ -384,8 +408,6 @@
     margin-bottom: 46px;
 
     @media (max-width: $desktop-width) {
-      width: 100%;
-      height: 288px;
       margin-bottom: 34px;
     }
   }
