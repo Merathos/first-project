@@ -2,7 +2,7 @@
   margin-bottom: 80px;
 
   &--upload {
-    margin-bottom: 73px;
+    margin-bottom: 80px;
 
     .landscaping-form__tip {
       margin-bottom: 34px;
@@ -14,7 +14,9 @@
   }
 
   iframe {
+    border: none;
     border-radius: 5px;
+    width: 100%;
   }
 }
 
@@ -104,6 +106,12 @@
     font-size: 45px;
     font-weight: 100;
   }
+
+  &:hover {
+    cursor: pointer;
+    color: #7c7c7e;
+    border-color: #7c7c7e;
+  }
 }
 
 .landscaping-form__img-container {
@@ -117,11 +125,14 @@
   height: 205px;
   filter: drop-shadow(0px 2px 4px rgba(0, 30, 75, 0.15));
   border-radius: 5px;
+  overflow: hidden;
 
   img {
     display: block;
-    width: 205px;
-    height: 205px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -155,6 +166,8 @@
   }
 
   &:hover {
+    cursor: pointer;
+
     &::before,
     &::after {
       background-color: #910000;
@@ -278,7 +291,7 @@
 
   .landscaping-form__upload-label {
     margin-left: 0;
-    margin-top: 24px;
+    margin-top: 0;
     width: 288px;
     height: 160px;
     padding-top: 73px;
@@ -303,8 +316,8 @@
     height: 160px;
 
     img {
-      width: 288px;
-      height: 160px;
+      max-width: 100%;
+      height: auto;
     }
   }
 
