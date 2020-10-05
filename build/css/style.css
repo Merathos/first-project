@@ -4630,7 +4630,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .proposal--implemented .proposal__subtitle--gallery {
     grid-area: h; }
   .proposal--implemented .proposal__subtitle--map {
-    grid-area: j; }
+    grid-area: j;
+    margin-bottom: 6px; }
     @media (max-width: 1200px) {
       .proposal--implemented .proposal__subtitle--map {
         margin-bottom: 16px; } }
@@ -4655,30 +4656,37 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       .proposal--implemented .proposal__gallery--bordered {
         padding-bottom: 47px; } }
   .proposal--implemented .proposal__gallery--grid {
-    grid-area: i; }
+    grid-area: i;
+    padding-bottom: 48px; }
 
 .proposal--implemented .proposal__text {
   grid-area: g;
-  padding-top: 40px;
-  font-size: 0.9375rem; }
+  padding-top: 34px;
+  font-size: 0.9375rem;
+  line-height: 180%;
+  margin-bottom: 40px; }
   @media (max-width: 1200px) {
     .proposal--implemented .proposal__text {
       margin-top: 0;
       margin-bottom: 55px;
-      padding-top: 42px;
-      line-height: 180%; } }
+      padding-top: 42px; } }
 
 .proposal--implemented .proposal__address {
   grid-area: k; }
 
 .proposal--implemented iframe {
-  grid-area: l; }
+  grid-area: l;
+  margin-bottom: 48px; }
   @media (max-width: 1200px) {
     .proposal--implemented iframe {
       margin-bottom: 34px; } }
 
 .proposal--implemented .button {
-  grid-area: m; }
+  grid-area: m;
+  justify-self: start;
+  padding: 17px 40px 15px; }
+  .proposal--implemented .button span {
+    padding: 0; }
 
 .comments-tab {
   height: 46px;

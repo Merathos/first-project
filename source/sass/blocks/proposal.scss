@@ -508,6 +508,7 @@
 
     &--map {
       grid-area: j;
+      margin-bottom: 6px;
 
       @media (max-width: $desktop-width) {
         margin-bottom: 16px;
@@ -543,19 +544,21 @@
 
     &--grid {
       grid-area: i;
+      padding-bottom: 48px;
     }
   }
 
   .proposal__text {
     grid-area: g;
-    padding-top: 40px;
+    padding-top: 34px;
     font-size: rem(15px);
+    line-height: 180%;
+    margin-bottom: 40px;
 
     @media (max-width: $desktop-width) {
      margin-top: 0;
      margin-bottom: 55px;
      padding-top: 42px;
-     line-height: 180%;
     }
   }
 
@@ -565,6 +568,7 @@
 
   iframe {
     grid-area: l;
+    margin-bottom: 48px;
 
     @media (max-width: $desktop-width) {
       margin-bottom: 34px;
@@ -573,5 +577,12 @@
 
   .button {
     grid-area: m;
+    justify-self: start;
+
+    padding: 17px 40px 15px;
+
+    span {
+      padding: 0;
+    }
   }
 }
