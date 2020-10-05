@@ -1942,7 +1942,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .page-content--proposal {
     padding-bottom: 80px; }
   .page-content--approved {
-    padding-bottom: 74px; }
+    padding-bottom: 120px; }
 
 .page-content__title {
   margin: 0;
@@ -4581,6 +4581,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   grid-area: b;
   margin-bottom: 41px;
   line-height: 180%; }
+  @media (max-width: 767px) {
+    .proposal--approved .proposal__text {
+      margin-bottom: 32px; } }
 
 @media (min-width: 1200px) {
   .proposal--approved .proposal__vote {
@@ -4647,12 +4650,13 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       margin-bottom: 41px; } }
   @media (max-width: 767px) {
     .proposal--approved iframe {
-      margin-bottom: 34px; } }
+      margin-bottom: 34px;
+      height: 288px; } }
 
 .proposal--approved .button {
   justify-self: start;
   grid-area: i;
-  padding: 17px 40px 15px; }
+  padding: 17px 46px 15px; }
   .proposal--approved .button span {
     font-size: 0.875rem;
     padding: 0; }
@@ -4794,8 +4798,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .proposal--implemented .button {
   grid-area: m;
   justify-self: start;
-  padding: 17px 40px 15px; }
+  padding: 17px 46px 15px; }
   .proposal--implemented .button span {
+    font-size: 0.875rem;
     padding: 0; }
 
 .comments-tab {
