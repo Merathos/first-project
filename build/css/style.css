@@ -7124,7 +7124,8 @@ span.poll__hide {
     width: 100%; }
   .landscaping-form__section input,
   .landscaping-form__section textarea {
-    -webkit-appearance: none; }
+    -webkit-appearance: none;
+    font-size: 16px; }
 
 .landscaping-form__textarea-container {
   position: relative; }
