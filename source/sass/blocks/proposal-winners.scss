@@ -1,0 +1,55 @@
+.proposal-winners__title {
+    margin-bottom: 35px;
+    padding-top: 40px;
+    font-size: rem(30px);
+    line-height: rem(35.55px);
+    font-weight: 400;
+    background-image: linear-gradient(var(--color-stroke, $light-grey), var(--color-stroke, $light-grey));
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+}
+
+.proposal-winners__list {
+    @include list-reset;
+    
+    p {
+        margin: 0;
+    }
+}
+
+.proposal-winners__item {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 32px 0;
+    background-image: linear-gradient(var(--color-stroke, $light-grey), var(--color-stroke, $light-grey));
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: 100% 1px;
+}
+
+.proposal-winners__text-link {
+    width: 82%;
+    font-size: rem(16px);
+    line-height: 21.6px;
+}
+
+.proposal-winners__status {
+    width: fit-content;
+    font-size: rem(15px);
+    line-height: rem(20.25px);
+
+    &:before {
+        display: none;
+    }
+}
+
+.proposal-winners_yours {
+    width: 100%;
+}
+
+.proposal-winners__address {
+    display: none;
+}
