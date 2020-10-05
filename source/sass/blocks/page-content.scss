@@ -33,6 +33,10 @@
 @include tablet {
   .page-content {
     padding-bottom: 88px;
+
+    &--proposal {
+      padding-bottom: 103px;
+    }
   }
 
   .page-content .list-btn {
