@@ -29,6 +29,10 @@
 }
 
 @include mobile {
+  .improvement__title {
+    padding-left: 7px;
+  }
+
   .improvement__archive-link {
     display: none;
   }

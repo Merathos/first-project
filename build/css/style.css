@@ -7540,6 +7540,8 @@ span.poll__hide {
     padding-top: 15px; } }
 
 @media (max-width: 767px) {
+  .improvement__title {
+    padding-left: 7px; }
   .improvement__archive-link {
     display: none; }
   .improvement__list {
