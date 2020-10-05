@@ -23,7 +23,7 @@
                 <div class="improvement-fork__status-container">
                     <p>Статус: <span class="improvement-fork__status improvement-status">
                             Подведены итоги</span></p>
-                    <p>Период голосования: <span class="improvement-fork__date">20.08.2020 по 20.11.2020</span></p>
+                    <p>Период голосования: <span class="improvement-fork__date">20.08.2020 — 20.11.2020</span></p>
                 </div>
                 <p class="improvement-fork__text main-text">Рыбные тексты также применяются для демонстрации различных
                     видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей
@@ -39,21 +39,33 @@
                 <h2 class="proposal-winners__title">Предложения-победители</h2>
                 <ul class="proposal-winners__list">
                     <li class="proposal-winners__item">
-                        <a class="proposal-winners__text-link proposal-winners__text-link--yours link link--black"
-                            href="#">
+                        <a class="proposal-winners__text-link link link--black" href="#">
                             Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях
                         </a>
                         <p class="proposal-winners__status improvement-status">Реализовано</p>
                     </li>
                     <li class="proposal-winners__item">
-                        <a class="proposal-winners__text-link proposal-winners__text-link--yours link link--black"
-                            href="#">
+                        <a class="proposal-winners__text-link link link--black" href="#">
                             Они напевают его перед тем, как сочинены соответствующие слова
                         </a>
                     </li>
+                    <li class="proposal-winners__item proposal-winners__item--yours">
+                        <p class="proposal-winners_yours">
+                            <svg width="10" height="12" viewBox="0 0 10 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <use xlink:href="img/sprite.svg#proposal-user"></use>
+                            </svg>Ваше предложение</p>
+                        <p class="proposal-winners__address"><svg width="10" height="12" viewBox="0 0 10 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <use xlink:href="img/sprite.svg#proposal-pin"></use>
+                            </svg>Константина Симонова, 5к2</p>
+                        <a class="proposal-winners__text-link link link--black" href="#">
+                            Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях
+                        </a>
+                        <p class="proposal-winners__status improvement-status">Реализовано</p>
+                    </li>
                     <li class="proposal-winners__item">
-                        <a class="proposal-winners__text-link proposal-winners__text-link--yours link link--black"
-                            href="#">
+                        <a class="proposal-winners__text-link link link--black" href="#">
                             Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или
                             производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как
                             текст-заполнитель или же текст-наполнитель. Иногда текст-«рыба» также
@@ -61,41 +73,56 @@
                         <p class="proposal-winners__status improvement-status"">Реализовано</p>
                     </li>
                     <li class=" proposal-winners__item">
-                            <a class="proposal-winners__text-link proposal-winners__text-link--yours link link--black"
-                                href="#">
+                            <a class="proposal-winners__text-link link link--black" href="#">
                                 Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях
                             </a>
                     </li>
                     <li class="proposal-winners__item">
-                        <p class="proposal-winners_yours">Ваше предложение</p>
-                        <p class="proposal-winners__address">Константина Симонова, 5к2</p>
-                        <a class="proposal-winners__text-link proposal-winners__text-link--yours link link--black"
-                            href="#">
-                            Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях
-                        </a>
-                        <p class="proposal-winners__status improvement-status">Реализовано</p>
-                    </li>
-                    <li class="proposal-winners__item">
-                        <a class="proposal-winners__text-link proposal-winners__text-link--yours link link--black"
-                            href="#">
+                        <a class="proposal-winners__text-link link link--black" href="#">
                             Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке
                         </a>
                     </li>
                     <li class="proposal-winners__item">
-                        <a class="proposal-winners__text-link proposal-winners__text-link--yours link link--black"
-                            href="#">
+                        <a class="proposal-winners__text-link link link--black" href="#">
                             Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или
                             производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как
                             текст-заполнитель или же текст-наполнитель. Иногда текст-«рыба» также
                         </a>
                     </li>
                     <li class="proposal-winners__item">
-                        <a class="proposal-winners__text-link proposal-winners__text-link--yours link link--black"
-                            href="#">
+                        <a class="proposal-winners__text-link link link--black" href="#">
                             Они напевают его перед тем, как сочинены соответствующие слова
                         </a>
                     </li>
                 </ul>
+                <div class="proposal-winners__paginator paginator">
+                    <a class="paginator__item paginator__item--prev paginator__item--disabled" aria-label="предыдущий">
+                        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="img/sprite.svg#icon-paginator-prev"></use>
+                        </svg>
+                    </a>
+                    <a class="paginator__item paginator__item--current">1</a>
+                    <a class="paginator__item" href="#2">2</a>
+                    <a class="paginator__item" href="#3">3</a>
+                    <span class="paginator__item paginator__item--hidden">&hellip;</span>
+                    <a class="paginator__item paginator__item--hidden" href="#9">9</a>
+                    <a class="paginator__item paginator__item--hidden" href="#10">10</a>
+                    <a class="paginator__item paginator__item--hidden" href="#11">11</a>
+                    <a class="paginator__item paginator__item--next" href="#next" aria-label="следующий">
+                        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="img/sprite.svg#icon-paginator-next"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <button type="button" class="proposal-winners__show-map-btn">Показать на карте</button>
+            <div class="proposal-winners__map">
+                <div class="proposal-winners__map-container">
+                    <button type="button" aria-label="Закрыть карту"></button>
+                    <iframe
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A9cb3dfe5638344382497a81fa8472068b0dfbf25654b37a69d276c0dce8d2718&amp;source=constructor"
+                        width="800" height="600" title="Карта"></iframe>
+                </div>
             </div>
         </section>
     </main>
@@ -103,6 +130,15 @@
     <include src="source/components/footer.html"></include>
     <include src="source/components/cookie.html"></include>
     <include src="source/components/up-btn.html"></include>
+
+    <template id="pin">
+        <button type="button" class="landscaping__pin"><img src="img/pin.png" width="36" height="54" draggable="false"
+                alt="Метка"></button>
+    </template>
+
+    <template id="general-pin">
+        <button type="button">4</button>
+    </template>
 
     <script src="js/libs.js"></script>
     <script src="js/main.min.js"></script>

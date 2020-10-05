@@ -1,9 +1,42 @@
 .improvement-fork-4 {
+    position: relative;
+    
     .improvement-fork {
         padding-bottom: 15px;
     }
 
     .improvement-fork__text {
         margin-bottom: 0;
+    }
+
+    @include tablet {
+        .improvement-fork__title {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+#general-pin {
+    button {
+        @include btn-reset;
+        width: 49px;
+        height: 49px;
+        font-size: rem(18px);
+        line-height: rem(23.4px);
+        color: #ffffff;
+        border-radius: 50%;
+        background-color: #2C8ECC;
+    }
+}
+
+@include mobile {
+    .improvement-fork-4 {
+        .improvement-fork__back {
+            margin-bottom: 23px;
+        }
+
+        .improvement-fork__title {
+            margin-bottom: 17px;
+        }
     }
 }
