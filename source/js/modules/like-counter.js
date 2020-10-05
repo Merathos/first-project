@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  var container = document.querySelector('.project-vote__like-counter');
+  var container = document.querySelector('.js-like-counter');
 
   if (container) {
     var counter = container.querySelector('span');

@@ -54,7 +54,7 @@
   margin-bottom: 63px;
   padding: 13px 16px 15px;
 
-  border: 1px solid var(--color-interactive-default, $blue-default);;
+  border: 1px solid var(--color-interactive-default, $blue-default);
   border-radius: 5px;
 
   & p:first-child {
@@ -293,9 +293,13 @@
 }
 
 .proposal__status {
-  padding: 16px 24px;
+  padding: 15px 24px;
   border: 1px solid var(--color-stroke, $light-grey);
   border-radius: $border-radius;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 26px;
+  }
 
   p {
     margin: 0;
@@ -305,6 +309,7 @@
     line-height: 135%;
 
     span {
+      margin-left: 5px;
       font-weight: 400;
       color: var(--color-interactive-default, $green);
     }
@@ -419,6 +424,86 @@
 
     span {
       padding: 0;
+    }
+  }
+}
+
+.proposal--implemented {
+  .proposal__title {
+    @media (max-width: $desktop-width) {
+      font-size: rem(24px);
+      line-height: rem(28px);
+      margin-bottom: 32px;
+    }
+  }
+
+  .proposal__vote {
+    @media (max-width: $desktop-width) {
+      margin-bottom: 55px;
+    }
+  }
+
+  .project-vote__container {
+    @media (max-width: $desktop-width) {
+      padding: 24px;
+      margin-bottom: 48px;
+    }
+  }
+
+  .project-vote__like-counter span {
+    @media (max-width: $desktop-width) {
+      margin-right: 0;
+      font-weight: 400;
+      font-size: rem(15px);
+      line-height: 135%;
+    }
+  }
+
+  .proposal__subtitle {
+    @media (max-width: $desktop-width) {
+      font-size: rem(30px);
+      line-height: rem(36px);
+    }
+  }
+
+  .proposal__files {
+    @media (max-width: $desktop-width) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .proposal__gallery {
+    @media (max-width: $desktop-width) {
+      padding-bottom: 55px;
+    }
+
+    &--bordered {
+      @media (max-width: $desktop-width) {
+        padding-bottom: 47px;
+
+        border-bottom: 1px solid var(--color-stroke, $light-grey);
+      }
+    }
+  }
+
+  .proposal__text {
+    @media (max-width: $desktop-width) {
+     margin-top: 0;
+     margin-bottom: 55px;
+     padding-top: 42px;
+     line-height: 180%;
+    }
+  }
+
+  .proposal__subtitle--map {
+    @media (max-width: $desktop-width) {
+      margin-bottom: 16px;
+    }
+  }
+
+  iframe {
+    @media (max-width: $desktop-width) {
+      margin-bottom: 34px;
     }
   }
 }
