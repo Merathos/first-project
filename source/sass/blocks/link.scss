@@ -95,8 +95,9 @@
     & svg {
       margin-right: 8px;
 
-      @media (max-width: $tablet-width) {
+      @media (max-width: $tablet-width - 1) {
         align-self: flex-start;
+        margin-top: 3px;
       }
     }
   }
