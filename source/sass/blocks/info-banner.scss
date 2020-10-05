@@ -160,7 +160,7 @@
   &--warning,
   &--approved {
 
-    & .info-banner__text {
+    .info-banner__text {
       margin-bottom: 6px;
     }
 
@@ -169,18 +169,18 @@
       margin-top: 14px;
       margin-bottom: 40px;
 
-      & .info-banner__title {
+      .info-banner__title {
         margin-top: 0;
         margin-bottom: 7px;
         padding: 0;
       }
 
-      & .info-banner__text {
+      .info-banner__text {
         margin: 0;
         font-size: rem(15px);
       }
 
-      & .info-banner__icon {
+      .info-banner__icon {
         top: 23px;
         left: 23px;
       }
@@ -190,11 +190,11 @@
   &--warning {
     border-color: $warning-orange;
 
-    & .info-banner__title {
+    .info-banner__title {
       color: $warning-orange;
     }
 
-    & .info-banner__icon {
+    .info-banner__icon {
       color: $warning-orange;
     }
   }
@@ -202,12 +202,8 @@
   &--approved {
     border-color: var(--color-icon, $green);
 
-    & .info-banner__title {
-      color: var(--color-icon, $green);
-    }
-
-    & .info-banner__icon {
-      color: var(--color-icon, $green);
+    @media (max-width: $desktop-width - 1) {
+       margin-bottom: 46px;
     }
 
     @media (max-width: $tablet-width - 1) {
@@ -215,16 +211,24 @@
       margin-bottom: 32px;
       padding-bottom: 24px;
     }
+
+    .info-banner__title {
+      color: var(--color-icon, $green);
+    }
+
+    .info-banner__icon {
+      color: var(--color-icon, $green);
+    }
   }
 
   &--declined {
     border-color: $red;
 
-    & .info-banner__title {
+    .info-banner__title {
       color: $red;
     }
 
-    & .info-banner__icon {
+    .info-banner__icon {
       color: $red;
     }
   }

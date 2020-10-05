@@ -1964,6 +1964,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     padding-bottom: 88px; }
     .page-content--proposal {
       padding-bottom: 103px; }
+    .page-content--approved {
+      padding-bottom: 103px; }
   .page-content .list-btn {
     margin-top: 48px; }
   .page-content__archive-link {
@@ -4195,15 +4197,18 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       color: #ffc989; }
   .info-banner--approved {
     border-color: var(--color-icon, #70bf56); }
-    .info-banner--approved .info-banner__title {
-      color: var(--color-icon, #70bf56); }
-    .info-banner--approved .info-banner__icon {
-      color: var(--color-icon, #70bf56); }
+    @media (max-width: 1199px) {
+      .info-banner--approved {
+        margin-bottom: 46px; } }
     @media (max-width: 767px) {
       .info-banner--approved {
         margin-top: 23px;
         margin-bottom: 32px;
         padding-bottom: 24px; } }
+    .info-banner--approved .info-banner__title {
+      color: var(--color-icon, #70bf56); }
+    .info-banner--approved .info-banner__icon {
+      color: var(--color-icon, #70bf56); }
   .info-banner--declined {
     border-color: #e55050; }
     .info-banner--declined .info-banner__title {
@@ -4550,7 +4555,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .proposal--approved .proposal__title {
   grid-area: a;
   margin-bottom: 41px; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199px) {
+    .proposal--approved .proposal__title {
+      margin-bottom: 34px; } }
+  @media (max-width: 767px) {
     .proposal--approved .proposal__title {
       font-size: 1.5rem;
       line-height: 1.75rem;
@@ -4565,10 +4573,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .proposal--approved .proposal__vote {
     position: -webkit-sticky;
     position: sticky;
-    top: 90px;
+    top: 115px;
     grid-area: c; } }
 
-@media (max-width: 1200px) {
+@media (max-width: 1199px) {
+  .proposal--approved .project-vote__container {
+    margin-bottom: 73px; } }
+
+@media (max-width: 767px) {
   .proposal--approved .project-vote__container {
     padding: 24px;
     margin-bottom: 48px; } }
@@ -4590,14 +4602,22 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .proposal--approved .proposal__subtitle--map {
   grid-area: f;
   margin-bottom: 9px; }
-  @media (max-width: 1200px) {
+  @media (max-width: 1199px) {
+    .proposal--approved .proposal__subtitle--map {
+      margin-bottom: 9px; } }
+  @media (max-width: 767px) {
     .proposal--approved .proposal__subtitle--map {
       margin-bottom: 16px; } }
 
-.proposal--approved .project-page__gallery {
-  grid-area: e; }
-  @media (max-width: 1200px) {
-    .proposal--approved .project-page__gallery {
+.proposal--approved .proposal__gallery {
+  grid-area: e;
+  margin-bottom: 48px;
+  max-width: 740px; }
+  @media (max-width: 1199px) {
+    .proposal--approved .proposal__gallery {
+      margin-bottom: 73px; } }
+  @media (max-width: 767px) {
+    .proposal--approved .proposal__gallery {
       margin-bottom: 58px; } }
 
 .proposal--approved .proposal__address {
@@ -4605,8 +4625,13 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .proposal--approved iframe {
   grid-area: h;
-  margin-bottom: 46px; }
-  @media (max-width: 1200px) {
+  margin-bottom: 46px;
+  width: 100%;
+  height: 400px; }
+  @media (max-width: 1199px) {
+    .proposal--approved iframe {
+      margin-bottom: 41px; } }
+  @media (max-width: 767px) {
     .proposal--approved iframe {
       margin-bottom: 34px; } }
 
@@ -4615,6 +4640,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   grid-area: i;
   padding: 17px 40px 15px; }
   .proposal--approved .button span {
+    font-size: 0.875rem;
     padding: 0; }
 
 @media (min-width: 1200px) {
@@ -6195,7 +6221,9 @@ span.poll__hide {
   .gallery__tape .swiper-slide:first-child {
     padding-left: 24px; }
   .gallery__tape .swiper-slide:last-child {
-    padding-right: 24px; } }
+    padding-right: 24px; }
+  .proposal .gallery__tape .swiper-slide:first-child {
+    padding-left: 0; } }
 
 @media (max-width: 767px) {
   .gallery__tape .swiper-slide:first-child {
