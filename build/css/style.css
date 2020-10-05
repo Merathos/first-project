@@ -7114,6 +7114,9 @@ span.poll__hide {
     border: none;
     border-radius: 5px;
     width: 100%; }
+  .landscaping-form__section input,
+  .landscaping-form__section textarea {
+    -webkit-appearance: none; }
 
 .landscaping-form__textarea-container {
   position: relative; }
@@ -7425,7 +7428,11 @@ span.poll__hide {
   background-repeat: no-repeat;
   background-size: 100% 1px; }
 
-.improvement__item-status {
+.improvement__text {
+  font-size: 1rem;
+  line-height: 1.35rem; }
+
+.improvement-status {
   margin-bottom: 5px;
   margin-top: 0;
   position: relative;
@@ -7433,15 +7440,15 @@ span.poll__hide {
   font-size: 0.875rem;
   line-height: 1.1375rem;
   color: #70BF56; }
-  .improvement__item-status--orange {
+  .improvement-status--orange {
     color: #FCA844; }
-  .improvement__item-status--blue {
+  .improvement-status--blue {
     color: #2C8ECC; }
-  .improvement__item-status--red {
+  .improvement-status--red {
     color: #E55050; }
-  .improvement__item-status--grey {
+  .improvement-status--grey {
     color: #A6ABB2; }
-  .improvement__item-status::before {
+  .improvement-status::before {
     content: "";
     position: absolute;
     top: 4px;
@@ -7450,10 +7457,6 @@ span.poll__hide {
     height: 5px;
     border: 3px solid;
     border-radius: 50%; }
-
-.improvement__text {
-  font-size: 1rem;
-  line-height: 1.35rem; }
 
 .improvement-fork {
   padding: 40px 0;
@@ -7535,6 +7538,70 @@ span.poll__hide {
     padding: 19px 5px; }
     .improvement-fork__btn svg {
       display: none; } }
+
+.improvement-fork-4 .improvement-fork {
+  padding-bottom: 15px; }
+
+.improvement-fork-4 .improvement-fork__text {
+  margin-bottom: 0; }
+
+.proposal-winners__title {
+  margin-bottom: 35px;
+  padding-top: 40px;
+  font-size: 1.875rem;
+  line-height: 2.22187rem;
+  font-weight: 400;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--color-stroke, #e3e8ee)), to(var(--color-stroke, #e3e8ee)));
+  background-image: linear-gradient(var(--color-stroke, #e3e8ee), var(--color-stroke, #e3e8ee));
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: 100% 1px; }
+
+.proposal-winners__list {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .proposal-winners__list p {
+    margin: 0; }
+
+.proposal-winners__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 32px 0;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--color-stroke, #e3e8ee)), to(var(--color-stroke, #e3e8ee)));
+  background-image: linear-gradient(var(--color-stroke, #e3e8ee), var(--color-stroke, #e3e8ee));
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 1px; }
+
+.proposal-winners__text-link {
+  width: 82%;
+  font-size: 1rem;
+  line-height: 21.6px; }
+
+.proposal-winners__status {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.9375rem;
+  line-height: 1.26563rem; }
+  .proposal-winners__status:before {
+    display: none; }
+
+.proposal-winners_yours {
+  width: 100%; }
+
+.proposal-winners__address {
+  display: none; }
 
 .project-page__container,
 .project-page__survey {
