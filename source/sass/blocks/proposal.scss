@@ -97,25 +97,8 @@
 
 .proposal__description {
   margin-bottom: 32px;
-  padding: 12px 16px;
-  background-color: var(--color-bg-secondary, $color-bg);
-  border: 1px solid var(--color-stroke, $light-grey);
-  border-radius: 5px;
-
-  & p {
-    margin: 0;
-
-    font-weight: 400;
-    font-size: 0.94rem;
-    line-height: 180%;
-  }
-
-  &--padding {
-    padding-bottom: 36px;
-  }
 
   @media (max-width: $tablet-width - 1) {
-    padding-bottom: 14px;
     margin-bottom: 16px;
   }
 }
@@ -385,10 +368,7 @@
     "b   c"
     "d   c"
     "e   c"
-    "f   c"
-    "g   c"
-    "h   c"
-    "i   c";
+    "f   c";
   }
 
 
@@ -434,9 +414,9 @@
     }
   }
 
-  .proposal__text {
+  .proposal__text-container {
     grid-area: b;
-    margin-bottom: 41px;
+    padding:15px 0 40px;
     line-height: 180%;
 
     @media (max-width: $desktop-width - 1) {
@@ -445,9 +425,17 @@
     }
 
     @media (max-width: $tablet-width - 1) {
-      margin-bottom: 32px;
+      padding-bottom: 24px;
       margin-left: $mobile-padding;
       margin-right: $mobile-padding;
+    }
+  }
+
+  .proposal__text-container p {
+    margin-top: 0;
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
@@ -489,8 +477,20 @@
     line-height: 180%;
   }
 
-  .proposal__subtitle {
+  .proposal__slider {
+    margin-bottom: 48px;
     grid-area: d;
+
+    @media (max-width: $desktop-width - 1) {
+      margin-bottom: 73px;
+    }
+
+    @media (max-width: $tablet-width - 1) {
+      margin-bottom: 58px;
+    }
+  }
+
+  .proposal__subtitle:not(.proposal__subtitle--map) {
     margin-bottom: 22px;
 
     @media (max-width: $desktop-width - 1) {
@@ -507,50 +507,16 @@
     }
   }
 
-  .proposal__subtitle--map {
-    grid-area: f;
-    margin-bottom: 9px;
-
-    @media (max-width: $desktop-width - 1) {
-      margin-bottom: 9px;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      margin-bottom: 16px;
-    }
-  }
-
   .proposal__gallery {
-    grid-area: e;
-    margin-bottom: 48px;
     max-width: 740px;
 
     @media (max-width: $desktop-width - 1) {
       max-width: unset;
-      margin-bottom: 73px;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      margin-bottom: 58px;
     }
   }
 
-  .proposal__address {
-    grid-area: g;
-
-    @media (max-width: $desktop-width - 1) {
-      margin-left: $tablet-padding;
-      margin-right: $tablet-padding;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      margin-left: $mobile-padding;
-      margin-right: $mobile-padding;
-    }
-  }
-
-  .proposal__map-wrapper {
-    grid-area: h;
+  .proposal__map {
+    grid-area: e;
     margin-bottom: 46px;
 
     @media (max-width: $desktop-width - 1) {
@@ -566,6 +532,18 @@
     }
   }
 
+  .proposal__subtitle--map {
+    margin-bottom: 9px;
+
+    @media (max-width: $desktop-width - 1) {
+      margin-bottom: 9px;
+    }
+
+    @media (max-width: $tablet-width - 1) {
+      margin-bottom: 16px;
+    }
+  }
+
   iframe {
     height: 400px;
 
@@ -576,7 +554,7 @@
 
   .proposal__button-wrapper {
     justify-self: start;
-    grid-area: i;
+    grid-area: f;
 
     @media (max-width: $desktop-width - 1) {
       margin-left: $tablet-padding;
@@ -612,11 +590,7 @@
     "f   c"
     "g   c"
     "h   c"
-    "i   c"
-    "j   c"
-    "k   c"
-    "l   c"
-    "m   c";
+    "i   c";
   }
 
   > * {
@@ -701,28 +675,15 @@
   }
 
   .proposal__subtitle {
-    grid-area: d;
     margin-bottom: 24px;
-
-    @media (max-width: $desktop-width - 1) {
-      margin-left: $tablet-padding;
-      margin-right: $tablet-padding;
-    }
 
     @media (max-width: $tablet-width - 1) {
       margin-bottom: 25px;
-      margin-left: $mobile-padding;
-      margin-right: $mobile-padding;
       font-size: rem(30px);
       line-height: rem(36px);
     }
 
-    &--gallery {
-      grid-area: h;
-    }
-
     &--map {
-      grid-area: j;
       margin-bottom: 6px;
 
       @media (max-width: $tablet-width - 1) {
@@ -732,7 +693,7 @@
   }
 
   .proposal__files {
-    grid-area: e;
+    grid-area: d;
     margin-bottom: 48px;
 
     @media (max-width: $desktop-width - 1) {
@@ -759,7 +720,7 @@
     }
 
     &--bordered {
-      grid-area: f;
+      grid-area: e;
       padding-bottom: 48px;
       border-bottom: 1px solid var(--color-stroke, $light-grey);
 
@@ -769,7 +730,6 @@
     }
 
     &--grid {
-      grid-area: i;
       padding-bottom: 48px;
 
       @media (max-width: $desktop-width - 1) {
@@ -782,45 +742,49 @@
     }
   }
 
-  .proposal__text {
-    grid-area: g;
+  .proposal__text-container {
+    grid-area: f;
     padding-top: 34px;
-    font-size: rem(15px);
-    line-height: 180%;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 
     @media (max-width: $desktop-width - 1) {
       padding-top: 26px;
-      margin-bottom: 63px;
+      margin-bottom: 48px;
       margin-left: $tablet-padding;
       margin-right: $tablet-padding;
     }
 
     @media (max-width: $tablet-width - 1) {
-     margin-top: 0;
-     margin-bottom: 55px;
-     margin-left: $mobile-padding;
-      margin-right: $mobile-padding;
-     padding-top: 42px;
-    }
-  }
-
-  .proposal__address {
-    grid-area: k;
-
-    @media (max-width: $desktop-width - 1) {
-      margin-left: $tablet-padding;
-      margin-right: $tablet-padding;
-    }
-
-    @media (max-width: $tablet-width - 1) {
+      margin-top: 0;
+      margin-bottom: 55px;
       margin-left: $mobile-padding;
       margin-right: $mobile-padding;
     }
+
+    p {
+      font-size: rem(15px);
+      line-height: 180%;
+    }
   }
 
-  .proposal__map-wrapper {
-    grid-area: l;
+  .proposal__slider {
+    grid-area: g;
+
+    h2 {
+      @media (max-width: $desktop-width - 1) {
+        margin-left: $tablet-padding;
+        margin-right: $tablet-padding;
+      }
+
+      @media (max-width: $tablet-width - 1) {
+        margin-left: $mobile-padding;
+        margin-right: $mobile-padding;
+      }
+    }
+  }
+
+  .proposal__map {
+    grid-area: h;
     margin-bottom: 48px;
 
     @media (max-width: $desktop-width - 1) {
@@ -846,7 +810,7 @@
   }
 
   .proposal__button-wrapper {
-    grid-area: m;
+    grid-area: i;
     justify-self: start;
 
     @media (max-width: $desktop-width - 1) {

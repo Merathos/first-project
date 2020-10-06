@@ -246,7 +246,8 @@
         </p>
       </div>
       <section class="proposal proposal--approved">
-        <h1 class="proposal__title proposal__title--declined page-title">Рыбные тексты также применяются для демонстрации различных видов шрифта и
+        <h1 class="proposal__title proposal__title--declined page-title">Рыбные тексты также применяются для
+          демонстрации различных видов шрифта и
           в разработке макетов. Как правило их содержание бессмысленно.
         </h1>
         <a class="proposal__link link link--blue link--rules" href="#">
@@ -257,13 +258,16 @@
           </svg>
           <span>Правила размещения проектов</span>
         </a>
-          <p class="proposal__text">
+        <div class="proposal__text-container">
+          <p>
             Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как
             правило их содержание бессмысленно. По причине своей функции текста-заполнителя для макетов
             нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность,
             распознавать определенные образцы и повторения. В случае произвольного набора букв и длины слов ничто не
             отвлекает от оценки воздействия и читаемости различных шрифтов, а также от распределения текста на.
           </p>
+        </div>
+        <div class="proposal__slider">
           <h2 class="proposal__subtitle">Изображения</h2>
           <div class="proposal__gallery gallery js-gallery swiper-container swiper-container-initialized swiper-container-horizontal" style="cursor: grab;">
             <div class="gallery__tape swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
@@ -365,6 +369,8 @@
             </div>
             <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
           </div>
+        </div>
+        <div class="proposal__map">
           <h2 class="proposal__subtitle proposal__subtitle--map">Карта проблемной территории</h2>
           <a class="proposal__address address-pin" href="#">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -372,15 +378,14 @@
             </svg>
             <span>Константина Симонова, 5к2</span>
           </a>
-          <div class="proposal__map-wrapper">
-            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A632dc64482e20035a9e82717af6071fd69e61f588fe2400013fa13d65e070cb6&amp;source=constructor" title="Интерактивная карта">
-            </iframe>
-          </div>
-          <div class="proposal__button-wrapper">
-            <a class="button button--light-blue" href="#">
-              <span>к списку предложений</span>
-            </a>
-          </div>
+          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A632dc64482e20035a9e82717af6071fd69e61f588fe2400013fa13d65e070cb6&amp;source=constructor" title="Интерактивная карта">
+          </iframe>
+        </div>
+        <div class="proposal__button-wrapper">
+          <a class="button button--light-blue" href="#">
+            <span>к списку предложений</span>
+          </a>
+        </div>
       </section>
     </div>
   </main>
