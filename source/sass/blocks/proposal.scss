@@ -97,25 +97,8 @@
 
 .proposal__description {
   margin-bottom: 32px;
-  padding: 12px 16px;
-  background-color: var(--color-bg-secondary, $color-bg);
-  border: 1px solid var(--color-stroke, $light-grey);
-  border-radius: 5px;
-
-  & p {
-    margin: 0;
-
-    font-weight: 400;
-    font-size: 0.94rem;
-    line-height: 180%;
-  }
-
-  &--padding {
-    padding-bottom: 36px;
-  }
 
   @media (max-width: $tablet-width - 1) {
-    padding-bottom: 14px;
     margin-bottom: 16px;
   }
 }
