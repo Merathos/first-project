@@ -17,21 +17,29 @@
                     К списку благоустройств
                 </a>
                 <h1 class="improvement-fork__title page-title">Рыбным текстом называется текст, служащий для временного
-                    наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан.
-                    Рыбный текст также
+                    наполнения макета в
+                    публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также
                     известен как текст- заполнитель или же текст-наполнитель. Иногда текст- «рыба» также</h1>
-                <div class="improvement-fork__status-container">
-                    <p>Статус: <span class="improvement-fork__status improvement-status">
-                            Подведены итоги</span></p>
-                    <p>Период голосования: <span class="improvement-fork__date">20.08.2020 — 20.11.2020</span></p>
+                <div class="improvement-fork__status-container status-container">
+                    <p class="status-container__status">Статус: <span
+                            class="improvement-status improvement-status--green">Подведены итоги</span></p>
+                    <p class="status-container__date">Период голосования: <span><time
+                                datetime="2020-08-20">20.08.2020</time>
+                            — <time datetime="2020-11-20">20.11.2020</time></span></p>
                 </div>
-                <p class="improvement-fork__text main-text">Рыбные тексты также применяются для демонстрации различных
-                    видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей
-                    функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как
-                    человеческое
-                    восприятие имеет особенность, распознавать определенные образцы и повторения. В случае произвольного
-                    набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных шрифтов, а
-                    также от распределения текста на.</p>
+                <div class="improvement-fork__content">
+                    <p>Рыбные тексты также применяются для демонстрации
+                        различных
+                        видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей
+                        функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так
+                        как
+                        человеческое
+                        восприятие имеет особенность, распознавать определенные образцы и повторения. В случае
+                        произвольного
+                        набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных
+                        шрифтов, а
+                        также от распределения текста на.</p>
+                </div>
             </div>
         </section>
         <section class="proposal-winners">
@@ -123,17 +131,6 @@
                         src="https://yandex.ru/map-widget/v1/?um=constructor%3A9cb3dfe5638344382497a81fa8472068b0dfbf25654b37a69d276c0dce8d2718&amp;source=constructor"
                         width="800" height="600" title="Карта"></iframe>
                 </div>
-                <div class="map-popup">
-                    <div class="map-popup__top-wrapper">
-                        <button type="button" aria-label="Закрыть информацию"></button>
-                        <p>Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или
-                            производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как
-                            текст-заполнитель или же текст-наполнитель. Иногда текст-«рыба» также</p>
-                    </div>
-                    <div class="map-popup__bottom-wrapper">
-
-                    </div>
-                </div>
             </div>
         </section>
     </main>
@@ -149,6 +146,27 @@
 
     <template id="general-pin">
         <button type="button">4</button>
+    </template>
+
+    <template id="map-popup">
+        <div class="map-popup">
+            <div class="map-popup__top-wrapper">
+                <button type="button" aria-label="Закрыть информацию" class="map-popup__close-btn"></button>
+                <p>Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или
+                    производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как
+                    текст-заполнитель или же текст-наполнитель. Иногда текст-«рыба» также</p>
+            </div>
+            <div class="map-popup__bottom-wrapper">
+                <p class="map-popup__likes"><span>861</span><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite.svg#proposal-like"></use>
+                    </svg></p>
+                <a href="#" class="map-popup__details-btn"><span>Подробнее</span><svg width="16" height="16"
+                        viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="img/sprite.svg#proposal-right-arrow"></use>
+                    </svg></a>
+            </div>
+        </div>
     </template>
 
     <script src="js/libs.js"></script>

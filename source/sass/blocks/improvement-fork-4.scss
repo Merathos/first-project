@@ -5,8 +5,14 @@
         padding-bottom: 15px;
     }
 
-    .improvement-fork__text {
-        margin-bottom: 0;
+    .improvement-fork__content {
+        p {
+            margin-bottom: 0;
+        }
+    }
+
+    .status-container__status {
+        margin-right: 5px;
     }
 
     @include tablet {

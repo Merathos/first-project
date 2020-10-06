@@ -8,47 +8,55 @@
     max-width: 1120px;
 }
 
-.improvement-fork__status-container {
-    margin-bottom: 18px;
-    display: flex;
+.improvement-fork__content {
+    max-width: 740px;
 
     p {
-        margin-right: 15px;
-        width: 240px;
-        font-size: rem(16px);
-        line-height: rem(21.6px);
-        color: #A6ABB2;
-    }
-
-    p:last-child {
-        width: 318px;
+        margin-bottom: 47px;
+        font-size: rem(15px);
+        line-height: rem(27px);
     }
 }
 
-.improvement-fork__status {
-    margin-left: 5px;
+.improvement-fork__status-container {
+    margin-bottom: 18px;
+}
+
+.status-container {
+    display: flex;
+}
+
+.status-container__status {
+    margin-right: 15px;
+    width: 240px;
     font-size: rem(16px);
     line-height: rem(21.6px);
+    color: #A6ABB2;
 
-    &::before {
-        top: 6px;
+    span {
+        font-size: rem(16px);
+        line-height: rem(21.6px);
+        margin-left: 5px;
+
+        &::before {
+            top: 6px;
+        }
     }
 }
 
-.improvement-fork__date {
-    color: #000000;
-}
+.status-container__date {
+    width: 370px;
+    font-size: rem(16px);
+    line-height: rem(21.6px);
+    color: #A6ABB2;
 
-.improvement-fork__text {
-    margin-bottom: 47px;
-    max-width: 730px;
-    font-size: rem(15px);
-    line-height: rem(27px);
+    span {
+        color: #000000;
+    }
 }
 
 .improvement-fork__btn {
     width: 100%;
-    max-width: 740px;
     height: 69px;
     padding-left: 24px;
     padding-top: 24px;
@@ -89,20 +97,29 @@
 
     .improvement-fork__status-container {
         margin-bottom: 25px;
-        flex-direction: column;
+    }
 
+    .status-container {
+        flex-direction: column;
+    }
+
+    .improvement-fork__content {
         p {
-            margin-bottom: 12px;
-            width: 260px;
+            margin-bottom: 44px;
         }
     }
 
-    .improvement-fork__text {
-        margin-bottom: 44px;
+    .status-container__status {
+        margin-bottom: 12px;
+        width: 260px;
     }
+    
+    .status-container__date {
+        margin-bottom: 12px;
 
-    .improvement-fork__date {
-        display: block;
+        span {
+            display: block;
+        }
     }
 
     .improvement-fork__btn {

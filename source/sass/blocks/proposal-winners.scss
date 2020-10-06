@@ -48,6 +48,7 @@
 
 .proposal-winners__status {
     margin: 0;
+    padding-left: 20px;
     width: fit-content;
     font-size: rem(15px);
     line-height: rem(20.25px);
@@ -99,7 +100,6 @@
 }
 
 .proposal-winners__map {
-    position: relative;  // УБРАТЬ
     margin-bottom: 73px;
 
     button {
