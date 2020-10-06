@@ -4,51 +4,29 @@
 }
 
 .improvement-fork__title {
-    margin-bottom: 24px;
+    margin-bottom: 40px;
     max-width: 1120px;
 }
 
-.improvement-fork__status-container {
-    margin-bottom: 18px;
-    display: flex;
+.improvement-fork__content {
+    max-width: 740px;
 
     p {
-        margin-right: 15px;
-        width: 240px;
-        font-size: rem(16px);
-        line-height: rem(21.6px);
-        color: #A6ABB2;
-    }
-
-    p:last-child {
-        width: 318px;
+        font-size: rem(15px);
+        line-height: rem(27px);
     }
 }
 
-.improvement-fork__status {
-    margin-left: 5px;
-    font-size: rem(16px);
-    line-height: rem(21.6px);
-
-    &::before {
-        top: 6px;
-    }
-}
-
-.improvement-fork__date {
-    color: #000000;
-}
-
-.improvement-fork__text {
-    margin-bottom: 47px;
-    max-width: 730px;
-    font-size: rem(15px);
-    line-height: rem(27px);
+.improvement-fork__status-container {
+    margin-bottom: 33px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
 }
 
 .improvement-fork__btn {
+    margin-top: 33px;
     width: 100%;
-    max-width: 740px;
     height: 69px;
     padding-left: 24px;
     padding-top: 24px;
@@ -61,7 +39,7 @@
     }
 
     .improvement-fork__title {
-        margin-bottom: 25px;
+        margin-bottom: 39px;
         font-size: rem(30px);
         line-height: rem(35.55px);
     }
@@ -78,7 +56,7 @@
     }
 
     .improvement-fork__title {
-        margin-bottom: 14px;
+        margin-bottom: 33px;
         font-size: rem(24px);
         line-height: rem(28.44px);
     }
@@ -88,24 +66,17 @@
     }
 
     .improvement-fork__status-container {
-        margin-bottom: 25px;
-        flex-direction: column;
+        margin-bottom: 0;
+    }
 
+    .improvement-fork__content {
         p {
-            margin-bottom: 12px;
-            width: 260px;
+            margin-top: 7px;
         }
     }
 
-    .improvement-fork__text {
-        margin-bottom: 44px;
-    }
-
-    .improvement-fork__date {
-        display: block;
-    }
-
     .improvement-fork__btn {
+        margin-top: 28px;
         height: 59px;
         text-align: center;
         padding: 19px 5px;
