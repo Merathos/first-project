@@ -109,24 +109,23 @@
 
     }
 
-    @media (max-width: $desktop-width - 1) {
+    @media (max-width: $tablet-width - 1) {
       margin-bottom: 24px;
     }
   }
 
   .area-improvement__select {
-    padding: 15px 16px 15px;
-
     background-color: var(--color-bg-secondary, $select-grey);
 
     border: 1px solid var(--color-stroke, $light-grey);
     border-radius: 5px;
 
-    @media (min-width: $desktop-width) {
-
+    @media (max-width: $desktop-width - 1) {
+      padding: 15px 16px 15px 23px;
     }
 
-    @media (max-width: $desktop-width - 1) {
+    @media (max-width: $tablet-width - 1) {
+      padding: 15px 16px 15px;
       display: flex;
       justify-content: center;
     }
@@ -138,7 +137,13 @@
     }
 
     .ss-content {
-      left: -54.5px;
+      @media (max-width: $desktop-width - 1) {
+        left: -23px;
+      }
+
+      @media (max-width: $tablet-width - 1) {
+        left: -54.5px;
+      }
     }
 
     .ss-main .ss-single-selected .ss-arrow {
@@ -153,5 +158,9 @@
 
   .area-improvement__proposal {
     border-top: none;
+  }
+
+  .area-improvement__paginator {
+    margin-top: 40px;
   }
 }
