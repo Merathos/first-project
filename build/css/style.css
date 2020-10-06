@@ -4498,30 +4498,28 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         font-weight: 200; }
 
 @media (max-width: 1199px) {
-  .proposal .landscaping-form__section--map {
+  .proposal .map-section {
     margin-bottom: 40px; } }
 
 @media (max-width: 767px) {
-  .proposal .landscaping-form__section--map {
+  .proposal .map-section {
     margin-bottom: 20px; } }
 
 @media (max-width: 1199px) {
-  .proposal .landscaping-form__title {
+  .proposal .map-section__title {
     margin-bottom: 10px; } }
 
 @media (max-width: 767px) {
-  .proposal .landscaping-form__title {
+  .proposal .map-section__title {
     margin-bottom: 17px; } }
 
-@media (max-width: 1199px) {
-  .proposal .landscaping-form__section--map .landscaping-form__tip {
-    margin-top: 0;
-    margin-bottom: 32px; } }
-
-.proposal .landscaping-form__section--map .landscaping-form__tip {
+.proposal .map-section .map-section__tip {
   margin-bottom: 32px; }
+  @media (max-width: 1199px) {
+    .proposal .map-section .map-section__tip {
+      margin-top: 0; } }
   @media (max-width: 767px) {
-    .proposal .landscaping-form__section--map .landscaping-form__tip {
+    .proposal .map-section .map-section__tip {
       padding-right: 0;
       margin-bottom: 22px; } }
 
