@@ -42,14 +42,10 @@
               Если необходимо, вы можете загрузить изображения. Максимум 5
               изображенний, формата JPEG, PNG, GIF.
             </p>
-            <div class="landscaping-form__img-container">
-              <div class="landscaping-form__upload">
-                <input type="file" id="images" name="images" class="visually-hidden" accept=".jpeg, .jpg, .png, .gif"
-                  multiple />
-                <label for="images" class="landscaping-form__upload-label">
-                  Загрузить изображение
-                </label>
-              </div>
+            <div class="landscaping-form__uploads js-upload-image-container">
+              <input class="visually-hidden" type="file" name="user-images" id="user-images"
+                accept="image/png, image/jpeg, image/jpg, image/gif" multiple="">
+              <label for="user-images"><span>Загрузить изображение</span></label>
             </div>
           </div>
           <div class="landscaping-form__section landscaping-form__section--map">

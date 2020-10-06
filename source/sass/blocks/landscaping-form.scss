@@ -23,6 +23,11 @@
   textarea {
     -webkit-appearance: none;
     font-size: 16px;
+
+    &::placeholder {
+      font-size: rem(15px);
+      line-height: rem(27px);
+    }
   }
 }
 
@@ -43,7 +48,7 @@
 
 .landscaping-form__textarea {
   margin-top: 32px;
-  padding: 17px 16px;
+  padding: 13px 16px;
   display: block;
   width: 100%;
   resize: none;
@@ -90,40 +95,6 @@
   height: 132px;
 }
 
-.landscaping-form__upload-label {
-  margin-top: 2px;
-  display: inline-block;
-  position: relative;
-  width: 205px;
-  height: 205px;
-  padding-top: 96px;
-  border: 2px dashed #e3e8ee;
-  border-radius: 5px;
-  font-size: rem(18px);
-  line-height: rem(23.4px);
-  color: #a6abb2;
-  text-align: center;
-
-  &::before {
-    content: "+";
-    position: absolute;
-    left: 87px;
-    top: 61px;
-    font-size: 45px;
-    font-weight: 100;
-  }
-
-  &:hover {
-    cursor: pointer;
-    color: #7c7c7e;
-    border-color: #7c7c7e;
-  }
-}
-
-.landscaping-form__img-container {
-  display: flex;
-}
-
 .landscaping-form__img {
   margin-right: 19px;
   position: relative;
@@ -142,41 +113,155 @@
   }
 }
 
-.landscaping-form__remove-img {
-  @include btn-reset;
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  width: 28px;
-  height: 28px;
-  border-radius: 5px;
-  background-color: #ffffff;
+.landscaping-form__uploads {
+  margin-bottom: 80px;
 
-  &::before,
-  &::after {
-    position: absolute;
-    left: 13px;
-    top: 5px;
-    content: "";
-    height: 17px;
-    width: 2px;
-    background-color: $red;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+
+  @media (max-width: $tablet-width - 1) {
+    flex-flow: column wrap;
+    margin-bottom: 72px;
   }
 
-  &::before {
-    transform: rotate(45deg);
+  & div {
+    flex-shrink: 0;
+    position: relative;
+    width: 205px;
+    height: 205px;
+    overflow: hidden;
+    margin-right: 23.5px;
+
+    border-radius: 5px;
+    filter: drop-shadow(0px 2px 4px rgba(0, 30, 75, 0.15));
+
+    &:nth-of-type(5n) {
+      margin-right: 0;
+    }
+
+    @media (max-width: $tablet-width - 1) {
+      width: 100%;
+      height: calc(100vw / 2);
+      margin-right: 0;
+      margin-bottom: 24px;
+    }
+
+    & button[type="button"] {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      width: 28px;
+      height: 28px;
+
+      background-color: var(--color-bg-main, $white);
+      border: none;
+      border-radius: 5px;
+      outline: none;
+
+      cursor: pointer;
+
+      @media (max-width: $tablet-width - 1) {
+        top: 8px;
+        right: 8px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 15px;
+        height: 1px;
+
+        background-color: var(--color-interactive-accent, $red);
+
+        transform: translate(-50%, -50%) rotate(-45deg);
+        transition: background-color $style-change-duration;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 15px;
+        height: 1px;
+
+        background-color: var(--color-interactive-accent, $red);
+
+        transform: translate(-50%, -50%) rotate(45deg);
+        transition: background-color $style-change-duration;
+      }
+
+      &:hover:not(.focus-visible) {
+        &::before,
+        &::after {
+          background-color: var(--color-interactive-accent, rgba($red, 0.5));
+        }
+      }
+    }
   }
 
-  &::after {
-    transform: rotate(-45deg);
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
   }
 
-  &:hover {
+  & label {
+
+    display: flex;
+    align-items: center;
+
+    width: 205px;
+    height: 205px;
+
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+
+    text-align: center;
+    color: var(--color-text, $grey-default);
+
+    border: 2px dashed var(--color-stroke, $light-grey);
+    border-radius: 5px;
+
     cursor: pointer;
+    transition: opacity $style-change-duration;
 
-    &::before,
-    &::after {
-      background-color: #910000;
+    &:hover:not(.focus-visible) {
+      opacity: 0.8;
+    }
+
+    @media (max-width: $tablet-width - 1) {
+      width: 100%;
+      height: calc(100vw / 2);
+      margin-left: 0;
+
+      justify-content: center;
+    }
+
+    & span {
+      padding-top: 34px;
+      position: relative;
+
+      @media (max-width: $tablet-width - 1) {
+        max-width: 50%;
+      }
+
+      &::before {
+        content: '+';
+        position: absolute;
+        top: 1px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        font-size: 2.5rem;
+        color: var(--color-text, $grey-default);
+        font-weight: 200;
+      }
     }
   }
 }
@@ -216,6 +301,10 @@
 }
 
 @include tablet {
+  .landscaping-page {
+    padding-bottom: 102px;
+  }
+
   .landscaping-form__tip {
     margin-top: 20px;
     margin-bottom: 50px;
@@ -226,7 +315,9 @@
       margin-bottom: 80px;
 
       .landscaping-form__tip {
-        margin-bottom: 48px;
+        font-size: rem(15px);
+        line-height: rem(27px);
+        margin-bottom: 37px;
       }
     }
 
@@ -242,17 +333,16 @@
     }
   }
 
-  .landscaping-form__img-container {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   .landscaping-form__img {
     margin-bottom: 24px;
   }
 }
 
 @include mobile {
+  .landscaping-page {
+    padding-bottom: 70px;
+  }
+
   .landscaping-form__title {
     font-size: rem(24px);
     line-height: rem(28.44px);
@@ -276,9 +366,7 @@
       margin-bottom: 73px;
 
       .landscaping-form__tip {
-        font-size: rem(15px);
-        line-height: rem(27px);
-        margin-bottom: 13px;
+        margin-bottom: 14px;
       }
     }
 
@@ -287,32 +375,22 @@
 
       .landscaping-form__tip {
         margin-top: 18px;
+        margin-bottom: 25px;
+        font-size: rem(15px);
+        line-height: rem(27px);
       }
     }
 
     iframe {
       height: 288px;
     }
-  }
 
-  .landscaping-form__upload-label {
-    margin-left: 0;
-    margin-top: 0;
-    width: 288px;
-    height: 160px;
-    padding-top: 73px;
-    padding-left: 45px;
-    padding-right: 40px;
-
-    &::before {
-      top: 38px;
-      left: 132px;
+    input, 
+    textarea {
+    &::placeholder {
+      line-height: rem(21px);
     }
   }
-
-  .landscaping-form__img-container {
-    flex-direction: column;
-    align-items: center;
   }
   
   .landscaping-form__img {
