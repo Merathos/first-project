@@ -7750,7 +7750,7 @@ span.poll__hide {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 0.9375rem;
-  line-height: 1.26563rem; }
+  line-height: 1.26562rem; }
   .proposal-winners__status:before {
     display: none; }
 
@@ -7849,7 +7849,7 @@ span.poll__hide {
     display: block;
     padding: 15px 15px;
     font-size: 0.9375rem;
-    line-height: 1.26563rem;
+    line-height: 1.26562rem;
     font-weight: 500;
     color: #2C8ECC;
     text-transform: uppercase; }
