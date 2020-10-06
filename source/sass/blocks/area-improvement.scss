@@ -41,15 +41,6 @@
   }
 }
 
-.area-improvement__stage {
-  margin-right: 32px;
-  margin-bottom: 0;
-
-  @media (max-width: $tablet-width - 1) {
-    margin-bottom: 25px;
-  }
-}
-
 .area-improvement__stage-wrapper {
   display: flex;
   flex-flow: row wrap;
