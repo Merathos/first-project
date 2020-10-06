@@ -8041,17 +8041,42 @@ span.poll__hide {
   width: 291px;
   padding-left: 55px; }
 
+.improvement__archive-mobile {
+  display: none; }
+  @media (max-width: 767px) {
+    .improvement__archive-mobile {
+      margin-top: 22px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      padding-left: 21px; } }
+  .improvement__archive-mobile span {
+    padding-right: 15px; }
+
 @media (max-width: 1199px) {
   .improvement__list {
     padding-top: 15px; } }
 
 @media (max-width: 767px) {
+  .improvement__head svg {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    width: 30px;
+    height: 30px; }
   .improvement__title {
-    padding-left: 7px; }
+    padding-left: 11px; }
+  .improvement__button {
+    text-align: left; }
   .improvement__archive-link {
     display: none; }
   .improvement__list {
-    margin-bottom: 35px;
+    margin-bottom: 33px;
     padding-top: 8px; } }
 
 .improvement__item {
@@ -8106,13 +8131,13 @@ span.poll__hide {
   display: -ms-flexbox;
   display: flex; }
   .improvement-fork__status-container p {
-    margin-right: 34px;
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    margin-right: 15px;
+    width: 240px;
     font-size: 1rem;
     line-height: 1.35rem;
     color: #A6ABB2; }
+  .improvement-fork__status-container p:last-child {
+    width: 318px; }
 
 .improvement-fork__status {
   margin-left: 5px;
@@ -8139,8 +8164,10 @@ span.poll__hide {
   text-align: start; }
 
 @media (max-width: 1199px) {
+  .improvement-fork {
+    padding-bottom: 105px; }
   .improvement-fork__title {
-    margin-bottom: 40px;
+    margin-bottom: 25px;
     font-size: 1.875rem;
     line-height: 2.22187rem; }
   .improvement-fork__back {
@@ -8165,6 +8192,8 @@ span.poll__hide {
     .improvement-fork__status-container p {
       margin-bottom: 12px;
       width: 260px; }
+  .improvement-fork__text {
+    margin-bottom: 44px; }
   .improvement-fork__date {
     display: block; }
   .improvement-fork__btn {
@@ -8172,7 +8201,9 @@ span.poll__hide {
     text-align: center;
     padding: 19px 5px; }
     .improvement-fork__btn svg {
-      display: none; } }
+      display: none; }
+    .improvement-fork__btn span {
+      padding: 0; } }
 
 .improvement-fork-4 {
   position: relative; }
@@ -8256,7 +8287,7 @@ span.poll__hide {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 0.9375rem;
-  line-height: 1.26562rem; }
+  line-height: 1.26563rem; }
   .proposal-winners__status:before {
     display: none; }
 
@@ -8356,7 +8387,7 @@ span.poll__hide {
     display: block;
     padding: 15px 15px;
     font-size: 0.9375rem;
-    line-height: 1.26562rem;
+    line-height: 1.26563rem;
     font-weight: 500;
     color: #2C8ECC;
     text-transform: uppercase; }
