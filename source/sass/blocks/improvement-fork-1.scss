@@ -13,11 +13,15 @@
     display: flex;
 
     p {
-        margin-right: 34px;
-        width: fit-content;
+        margin-right: 15px;
+        width: 240px;
         font-size: rem(16px);
         line-height: rem(21.6px);
         color: #A6ABB2;
+    }
+
+    p:last-child {
+        width: 318px;
     }
 }
 
@@ -52,8 +56,12 @@
 }
 
 @include tablet {
+    .improvement-fork {
+        padding-bottom: 105px;
+    }
+
     .improvement-fork__title {
-        margin-bottom: 40px;
+        margin-bottom: 25px;
         font-size: rem(30px);
         line-height: rem(35.55px);
     }
@@ -89,6 +97,10 @@
         }
     }
 
+    .improvement-fork__text {
+        margin-bottom: 44px;
+    }
+
     .improvement-fork__date {
         display: block;
     }
@@ -100,6 +112,10 @@
 
         svg {
             display: none;
+        }
+
+        span {
+            padding: 0;
         }
     }
 }
