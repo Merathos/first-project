@@ -7461,36 +7461,6 @@ span.poll__hide {
 .landscaping-form__description {
   height: 132px; }
 
-.landscaping-form__upload-label {
-  margin-top: 2px;
-  display: inline-block;
-  position: relative;
-  width: 205px;
-  height: 205px;
-  padding-top: 96px;
-  border: 2px dashed #e3e8ee;
-  border-radius: 5px;
-  font-size: 1.125rem;
-  line-height: 1.4625rem;
-  color: #a6abb2;
-  text-align: center; }
-  .landscaping-form__upload-label::before {
-    content: "+";
-    position: absolute;
-    left: 87px;
-    top: 61px;
-    font-size: 45px;
-    font-weight: 100; }
-  .landscaping-form__upload-label:hover {
-    cursor: pointer;
-    color: #7c7c7e;
-    border-color: #7c7c7e; }
-
-.landscaping-form__img-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
 .landscaping-form__img {
   margin-right: 19px;
   position: relative;
@@ -7509,35 +7479,137 @@ span.poll__hide {
     width: 100%;
     height: 100%; }
 
-.landscaping-form__remove-img {
-  padding: 0;
-  background-color: transparent;
-  border: none;
-  position: absolute;
-  right: 8px;
-  top: 8px;
-  width: 28px;
-  height: 28px;
-  border-radius: 5px;
-  background-color: #ffffff; }
-  .landscaping-form__remove-img::before, .landscaping-form__remove-img::after {
-    position: absolute;
-    left: 13px;
-    top: 5px;
-    content: "";
-    height: 17px;
-    width: 2px;
-    background-color: #e55050; }
-  .landscaping-form__remove-img::before {
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg); }
-  .landscaping-form__remove-img::after {
-    -webkit-transform: rotate(-45deg);
-            transform: rotate(-45deg); }
-  .landscaping-form__remove-img:hover {
-    cursor: pointer; }
-    .landscaping-form__remove-img:hover::before, .landscaping-form__remove-img:hover::after {
-      background-color: #910000; }
+.landscaping-form__uploads {
+  margin-bottom: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+  @media (max-width: 767px) {
+    .landscaping-form__uploads {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column wrap;
+              flex-flow: column wrap;
+      margin-bottom: 72px; } }
+  .landscaping-form__uploads div {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    position: relative;
+    width: 205px;
+    height: 205px;
+    overflow: hidden;
+    margin-right: 23.5px;
+    border-radius: 5px;
+    -webkit-filter: drop-shadow(0px 2px 4px rgba(0, 30, 75, 0.15));
+            filter: drop-shadow(0px 2px 4px rgba(0, 30, 75, 0.15)); }
+    .landscaping-form__uploads div:nth-of-type(5n) {
+      margin-right: 0; }
+    @media (max-width: 767px) {
+      .landscaping-form__uploads div {
+        width: 100%;
+        height: calc(100vw / 2);
+        margin-right: 0;
+        margin-bottom: 24px; } }
+    .landscaping-form__uploads div button[type="button"] {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      width: 28px;
+      height: 28px;
+      background-color: var(--color-bg-main, #ffffff);
+      border: none;
+      border-radius: 5px;
+      outline: none;
+      cursor: pointer; }
+      @media (max-width: 767px) {
+        .landscaping-form__uploads div button[type="button"] {
+          top: 8px;
+          right: 8px; } }
+      .landscaping-form__uploads div button[type="button"]::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 15px;
+        height: 1px;
+        background-color: var(--color-interactive-accent, #e55050);
+        -webkit-transform: translate(-50%, -50%) rotate(-45deg);
+                transform: translate(-50%, -50%) rotate(-45deg);
+        -webkit-transition: background-color 0.2s;
+        transition: background-color 0.2s; }
+      .landscaping-form__uploads div button[type="button"]::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 15px;
+        height: 1px;
+        background-color: var(--color-interactive-accent, #e55050);
+        -webkit-transform: translate(-50%, -50%) rotate(45deg);
+                transform: translate(-50%, -50%) rotate(45deg);
+        -webkit-transition: background-color 0.2s;
+        transition: background-color 0.2s; }
+      .landscaping-form__uploads div button[type="button"]:hover:not(.focus-visible)::before, .landscaping-form__uploads div button[type="button"]:hover:not(.focus-visible)::after {
+        background-color: var(--color-interactive-accent, rgba(229, 80, 80, 0.5)); }
+  .landscaping-form__uploads img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center; }
+  .landscaping-form__uploads label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 205px;
+    height: 205px;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--color-text, #a6abb3);
+    border: 2px dashed var(--color-stroke, #e3e8ee);
+    border-radius: 5px;
+    cursor: pointer;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s; }
+    .landscaping-form__uploads label:hover:not(.focus-visible) {
+      opacity: 0.8; }
+    @media (max-width: 767px) {
+      .landscaping-form__uploads label {
+        width: 100%;
+        height: calc(100vw / 2);
+        margin-left: 0;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
+    .landscaping-form__uploads label span {
+      padding-top: 34px;
+      position: relative; }
+      @media (max-width: 767px) {
+        .landscaping-form__uploads label span {
+          max-width: 50%; } }
+      .landscaping-form__uploads label span::before {
+        content: '+';
+        position: absolute;
+        top: 1px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+        font-size: 2.5rem;
+        color: var(--color-text, #a6abb3);
+        font-weight: 200; }
 
 .landscaping-form__address {
   margin-bottom: 25px;
@@ -7585,24 +7657,22 @@ span.poll__hide {
   padding: 16px 16px; }
 
 @media (max-width: 1199px) {
+  .landscaping-page {
+    padding-bottom: 102px; }
   .landscaping-form__tip {
     margin-top: 20px;
     margin-bottom: 50px; }
   .landscaping-form__section--upload {
     margin-bottom: 80px; }
     .landscaping-form__section--upload .landscaping-form__tip {
-      margin-bottom: 48px; }
+      font-size: 0.9375rem;
+      line-height: 1.6875rem;
+      margin-bottom: 37px; }
   .landscaping-form__section--map .landscaping-form__tip {
     margin-top: 12px;
     margin-bottom: 35px; }
   .landscaping-form__section iframe {
     height: 460px; }
-  .landscaping-form__img-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
   .landscaping-form__img {
     margin-bottom: 24px; } }
 
@@ -7622,15 +7692,14 @@ span.poll__hide {
   .landscaping-form__section--upload {
     margin-bottom: 73px; }
     .landscaping-form__section--upload .landscaping-form__tip {
-      font-size: 0.9375rem;
-      line-height: 1.6875rem;
-      margin-bottom: 13px; }
+      margin-bottom: 14px; }
   .landscaping-form__section--map {
     margin-bottom: 18px; }
     .landscaping-form__section--map .landscaping-form__tip {
+      margin-top: 18px;
+      margin-bottom: 25px;
       font-size: 0.9375rem;
-      line-height: 1.6875rem;
-      margin-top: 18px; }
+      line-height: 1.6875rem; }
   .landscaping-form__section iframe {
     height: 288px; }
   .landscaping-form__section input::-webkit-input-placeholder,
@@ -7648,25 +7717,6 @@ span.poll__hide {
   .landscaping-form__section input::placeholder,
   .landscaping-form__section textarea::placeholder {
     line-height: 1.3125rem; }
-  .landscaping-form__upload-label {
-    margin-left: 0;
-    margin-top: 0;
-    width: 288px;
-    height: 160px;
-    padding-top: 73px;
-    padding-left: 45px;
-    padding-right: 40px; }
-    .landscaping-form__upload-label::before {
-      top: 38px;
-      left: 132px; }
-  .landscaping-form__img-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
   .landscaping-form__img {
     margin-right: 0;
     margin-bottom: 24px;
