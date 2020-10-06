@@ -3,7 +3,7 @@
   align-items: center;
   text-decoration: none;
   outline: none;
-  transition: opacity $style-change-duration;
+  transition: color $style-change-duration;
   color: var(--color-text, $dark-text);
   font-weight: 400;
   font-size: rem(16px);
