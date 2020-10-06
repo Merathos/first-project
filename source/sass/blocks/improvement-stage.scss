@@ -35,6 +35,14 @@
 
     transform: translateY(-50%);
   }
+
+  &--opened {
+    color: var(--color-interactive-default, $blue-default);
+
+    &::before {
+      background-color: var(--color-interactive-default, $blue-default);
+    }
+  }
 }
 
 .improvement-stage__dates {

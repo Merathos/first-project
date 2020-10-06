@@ -11,6 +11,7 @@
     }
   }
 }
+
 .proposal__subtitle {
   margin: 0 0 32px;
   font-weight: 400;
@@ -399,12 +400,16 @@
 
     @media (max-width: $desktop-width - 1) {
       margin-bottom: 34px;
+      margin-left: $tablet-padding;
+      margin-right: $tablet-padding;
     }
 
     @media (max-width: $tablet-width - 1) {
       font-size: rem(24px);
       line-height: rem(28px);
       margin-bottom: 26px;
+      margin-left: $mobile-padding;
+      margin-right: $mobile-padding;
     }
 
     &--declined {
@@ -422,8 +427,15 @@
     margin-bottom: 41px;
     line-height: 180%;
 
+    @media (max-width: $desktop-width - 1) {
+      margin-left: $tablet-padding;
+      margin-right: $tablet-padding;
+    }
+
     @media (max-width: $tablet-width - 1) {
       margin-bottom: 32px;
+      margin-left: $mobile-padding;
+      margin-right: $mobile-padding;
     }
   }
 
@@ -434,6 +446,17 @@
 
       grid-area: c;
     }
+
+    @media (max-width: $desktop-width - 1) {
+      margin-left: $tablet-padding;
+      margin-right: $tablet-padding;
+    }
+
+    @media (max-width: $tablet-width - 1) {
+      margin-left: $mobile-padding;
+      margin-right: $mobile-padding;
+    }
+
   }
 
   .project-vote__container {
@@ -461,6 +484,14 @@
     @media (max-width: $desktop-width - 1) {
       font-size: rem(30px);
       line-height: rem(36px);
+
+      margin-left: $tablet-padding;
+      margin-right: $tablet-padding;
+    }
+
+    @media (max-width: $tablet-width - 1) {
+      margin-left: $mobile-padding;
+      margin-right: $mobile-padding;
     }
   }
 
@@ -494,28 +525,59 @@
 
   .proposal__address {
     grid-area: g;
+
+    @media (max-width: $desktop-width - 1) {
+      margin-left: $tablet-padding;
+      margin-right: $tablet-padding;
+    }
+
+    @media (max-width: $tablet-width - 1) {
+      margin-left: $mobile-padding;
+      margin-right: $mobile-padding;
+    }
   }
 
-  iframe {
+  .proposal__map-wrapper {
     grid-area: h;
     margin-bottom: 46px;
 
-    width: 100%;
-    height: 400px;
-
     @media (max-width: $desktop-width - 1) {
       margin-bottom: 41px;
+      margin-left: $tablet-padding;
+      margin-right: $tablet-padding;
     }
 
     @media (max-width: $tablet-width - 1) {
       margin-bottom: 34px;
+      margin-left: $mobile-padding;
+      margin-right: $mobile-padding;
+    }
+  }
+
+  iframe {
+    height: 400px;
+
+    @media (max-width: $tablet-width - 1) {
       height: 288px;
     }
   }
 
-  .button {
+  .proposal__button-wrapper {
     justify-self: start;
     grid-area: i;
+
+    @media (max-width: $desktop-width - 1) {
+      margin-left: $tablet-padding;
+      margin-right: $tablet-padding;
+    }
+
+    @media (max-width: $tablet-width - 1) {
+      margin-left: $mobile-padding;
+      margin-right: $mobile-padding;
+    }
+  }
+
+  .button {
     padding: 17px 46px 15px;
 
     span {
