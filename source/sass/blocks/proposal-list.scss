@@ -1,4 +1,11 @@
-.user-proposal {
+.proposal-list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.proposal-list__item {
   padding: 41px 0 33px;
 
   border-top: 1px solid var(--color-stroke, $light-grey);
@@ -15,7 +22,7 @@
   }
 }
 
-.user-proposal__account {
+.proposal-list__account {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -54,7 +61,7 @@
   }
 }
 
-.user-proposal__address {
+.proposal-list__address {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -84,7 +91,7 @@
   }
 }
 
-.user-proposal__title {
+.proposal-list__title {
   margin: 0;
 
   font-weight: 500;
@@ -114,7 +121,7 @@
   }
 }
 
-.user-proposal__status {
+.proposal-list__status {
   font-weight: 400;
   font-size: rem(15px);
   line-height: 135%;
@@ -125,7 +132,7 @@
   }
 }
 
-.user-proposal__like-counter {
+.proposal-list__like-counter {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -175,14 +182,14 @@
   }
 }
 
-.user-proposal--userless {
-  .user-proposal__address {
+.proposal-list__item--userless {
+  .proposal-list__address {
     @media (min-width: $tablet-width) {
       width: 100%;
     }
   }
 
-  .user-proposal__title {
+  .proposal-list__title {
     font-weight: normal;
     font-size: rem(16px);
     line-height: 135%;
