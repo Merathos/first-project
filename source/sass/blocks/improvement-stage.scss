@@ -1,0 +1,42 @@
+.improvement-stage {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 135%;
+  color: var(--color-text, $grey-default);
+
+  &--line-height {
+    @media (max-width: $tablet-width - 1) {
+      line-height: 150%;
+    }
+  }
+}
+
+.improvement-stage__status {
+  padding-left: 19px;
+  position: relative;
+  color: var(--color-text, $orange);
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: 50%;
+    left: 7px;
+
+    width: 6px;
+    height: 6px;
+
+    background-color: var(--color-text, $orange);
+    border-radius: 50%;
+
+    transform: translateY(-50%);
+  }
+}
+
+.improvement-stage__dates {
+  color: var(--color-text, $dark-text);
+}
