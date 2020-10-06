@@ -5112,17 +5112,25 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .area-improvement__text {
       margin-bottom: 39px; } }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+  .area-improvement--list {
+    padding-bottom: 105px; } }
+
 @media (max-width: 767px) {
   .area-improvement--list .area-improvement__back-btn {
     margin-bottom: 24px; } }
 
-@media (max-width: 767px) {
-  .area-improvement--list .area-improvement__info {
-    padding: 24px;
-    margin-bottom: 39px; }
-    .area-improvement--list .area-improvement__info svg {
-      top: 28px;
-      left: 24px; } }
+.area-improvement--list .area-improvement__info {
+  margin-bottom: 38px; }
+  @media (max-width: 1199px) {
+    .area-improvement--list .area-improvement__info {
+      margin-bottom: 39px; } }
+  @media (max-width: 767px) {
+    .area-improvement--list .area-improvement__info {
+      padding: 24px; }
+      .area-improvement--list .area-improvement__info svg {
+        top: 28px;
+        left: 24px; } }
 
 @media (max-width: 767px) {
   .area-improvement--list .area-improvement__text {
@@ -5132,28 +5140,38 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   background-color: var(--color-bg-secondary, #f5f6f7);
   border: 1px solid var(--color-stroke, #e3e8ee);
   border-radius: 5px; }
-  @media (max-width: 1199px) {
-    .area-improvement--list .area-improvement__select {
-      padding: 15px 16px 15px 23px; } }
   @media (max-width: 767px) {
     .area-improvement--list .area-improvement__select {
-      padding: 15px 16px 15px;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; } }
+  .area-improvement--list .area-improvement__select .ss-main {
+    width: 100%; }
+  .area-improvement--list .area-improvement__select .ss-single-selected {
+    padding: 15px 16px 15px 23px; }
+    @media (max-width: 767px) {
+      .area-improvement--list .area-improvement__select .ss-single-selected {
+        padding: 15px 16px;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
   .area-improvement--list .area-improvement__select .placeholder {
-    text-align: center;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: auto;
     font-size: 0.9375rem;
     line-height: 135%; }
-  @media (max-width: 1199px) {
-    .area-improvement--list .area-improvement__select .ss-content {
-      left: -23px; } }
-  @media (max-width: 767px) {
-    .area-improvement--list .area-improvement__select .ss-content {
-      left: -54.5px; } }
+  .area-improvement--list .area-improvement__select .ss-content {
+    top: 41px;
+    left: 0;
+    width: 219px; }
+    @media (max-width: 767px) {
+      .area-improvement--list .area-improvement__select .ss-content {
+        width: 100%; } }
   .area-improvement--list .area-improvement__select .ss-main .ss-single-selected .ss-arrow {
     margin-left: 12px; }
   .area-improvement--list .area-improvement__select .ss-main .ss-single-selected .ss-arrow span {
@@ -5165,6 +5183,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .area-improvement--list .area-improvement__paginator {
   margin-top: 40px; }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .area-improvement--list .area-improvement__paginator {
+      margin-top: 56px; } }
 
 .improvement-stage {
   display: -webkit-box;
@@ -5349,15 +5370,18 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .user-proposal__like-counter--liked .filled {
       fill: var(--color-interactive-accent, #116ca6); }
 
+@media (min-width: 1200px) {
+  .user-proposal--userless .user-proposal__link--address {
+    width: 100%; } }
+
 .user-proposal--userless .user-proposal__title {
   font-weight: normal;
   font-size: 1rem;
   line-height: 135%; }
-
-@media (min-width: 768px) {
-  .user-proposal--userless .user-proposal__title {
-    width: 80%;
-    margin-bottom: 0; } }
+  @media (min-width: 768px) {
+    .user-proposal--userless .user-proposal__title {
+      width: 80%;
+      margin-bottom: 0; } }
 
 .news-notice {
   -webkit-box-sizing: border-box;

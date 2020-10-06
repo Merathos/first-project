@@ -77,6 +77,11 @@
 }
 
 .area-improvement--list {
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+   padding-bottom: 105px;
+  }
+
   .area-improvement__back-btn {
 
     @media (max-width: $desktop-width - 1) {}
@@ -87,14 +92,14 @@
   }
 
   .area-improvement__info {
+    margin-bottom: 38px;
 
     @media (max-width: $desktop-width - 1) {
-
+      margin-bottom: 39px;
     }
 
     @media (max-width: $tablet-width - 1) {
       padding: 24px;
-      margin-bottom: 39px;
 
       svg {
         top: 28px;
@@ -120,29 +125,40 @@
     border: 1px solid var(--color-stroke, $light-grey);
     border-radius: 5px;
 
-    @media (max-width: $desktop-width - 1) {
-      padding: 15px 16px 15px 23px;
-    }
-
     @media (max-width: $tablet-width - 1) {
-      padding: 15px 16px 15px;
       display: flex;
       justify-content: center;
     }
 
+    .ss-main {
+      width: 100%;
+    }
+
+    .ss-single-selected {
+      padding: 15px 16px 15px 23px;
+
+      @media (max-width: $tablet-width - 1) {
+        padding: 15px 16px;
+        justify-content: center;
+      }
+    }
+
     .placeholder {
-      text-align: center;
+      flex: 0 0 auto;
+      width: auto;
+
       font-size: rem(15px);
       line-height: 135%;
     }
 
     .ss-content {
-      @media (max-width: $desktop-width - 1) {
-        left: -23px;
-      }
+      top: 41px;
+      left: 0;
+
+      width: 219px;
 
       @media (max-width: $tablet-width - 1) {
-        left: -54.5px;
+        width: 100%;
       }
     }
 
@@ -162,5 +178,9 @@
 
   .area-improvement__paginator {
     margin-top: 40px;
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+      margin-top: 56px;
+    }
   }
 }
