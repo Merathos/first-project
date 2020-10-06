@@ -15,12 +15,13 @@
   }
 }
 
-.user-proposal__link {
+.user-proposal__account {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
   align-items: center;
 
+  color: var(--color-interactive-default, $blue-default);
   font-weight: normal;
   font-size: rem(14px);
   line-height: 130%;
@@ -37,41 +38,49 @@
     margin-bottom: 8px;
   }
 
-  &--account {
-    color: var(--color-interactive-default, $blue-default);
-
-    @media (min-width: $desktop-width) {
-      &:hover:not(.focus-visible) {
-        opacity: 0.8;
-      }
-    }
-
-    svg {
-      margin-bottom: 3px;
-      margin-left: 1px;
-      width: 10px;
-      height: 12px;
-      fill: var(--color-interactive-default, $blue-default);
-    }
-  }
-
-  &--address {
-    color: var(--color-text, $grey-default);
-
-    @media (min-width: $desktop-width) {
-      &:hover:not(.focus-visible) {
-        color: var(--color-interactive-default, $blue-default);
-      }
-    }
-
-    svg {
-      width: 12px;
-      height: 12px;
+  @media (min-width: $desktop-width) {
+    &:hover:not(.focus-visible) {
+      opacity: 0.8;
     }
   }
 
   svg {
     margin-right: 5px;
+    margin-bottom: 3px;
+    margin-left: 1px;
+    width: 10px;
+    height: 12px;
+    fill: var(--color-interactive-default, $blue-default);
+  }
+}
+
+.user-proposal__address {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 4px;
+    margin-right: 9px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    margin-bottom: 8px;
+  }
+
+  svg {
+    color: var(--color-text, $grey-default);
+    margin-right: 5px;
+    width: 12px;
+    height: 12px;
+  }
+
+  span {
+    color: var(--color-text, $grey-default);
+    font-weight: normal;
+    font-size: rem(14px);
+    line-height: 130%;
   }
 }
 
