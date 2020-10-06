@@ -7375,6 +7375,26 @@ span.poll__hide {
   .landscaping-form__section textarea {
     -webkit-appearance: none;
     font-size: 16px; }
+    .landscaping-form__section input::-webkit-input-placeholder,
+    .landscaping-form__section textarea::-webkit-input-placeholder {
+      font-size: 0.9375rem;
+      line-height: 1.6875rem; }
+    .landscaping-form__section input::-moz-placeholder,
+    .landscaping-form__section textarea::-moz-placeholder {
+      font-size: 0.9375rem;
+      line-height: 1.6875rem; }
+    .landscaping-form__section input:-ms-input-placeholder,
+    .landscaping-form__section textarea:-ms-input-placeholder {
+      font-size: 0.9375rem;
+      line-height: 1.6875rem; }
+    .landscaping-form__section input::-ms-input-placeholder,
+    .landscaping-form__section textarea::-ms-input-placeholder {
+      font-size: 0.9375rem;
+      line-height: 1.6875rem; }
+    .landscaping-form__section input::placeholder,
+    .landscaping-form__section textarea::placeholder {
+      font-size: 0.9375rem;
+      line-height: 1.6875rem; }
 
 .landscaping-form__textarea-container {
   position: relative; }
@@ -7392,7 +7412,7 @@ span.poll__hide {
 
 .landscaping-form__textarea {
   margin-top: 32px;
-  padding: 17px 16px;
+  padding: 13px 16px;
   display: block;
   width: 100%;
   resize: none;
@@ -7587,6 +7607,8 @@ span.poll__hide {
     margin-bottom: 24px; } }
 
 @media (max-width: 767px) {
+  .landscaping-page {
+    padding-bottom: 70px; }
   .landscaping-form__title {
     font-size: 1.5rem;
     line-height: 1.7775rem; }
@@ -7606,9 +7628,26 @@ span.poll__hide {
   .landscaping-form__section--map {
     margin-bottom: 18px; }
     .landscaping-form__section--map .landscaping-form__tip {
+      font-size: 0.9375rem;
+      line-height: 1.6875rem;
       margin-top: 18px; }
   .landscaping-form__section iframe {
     height: 288px; }
+  .landscaping-form__section input::-webkit-input-placeholder,
+  .landscaping-form__section textarea::-webkit-input-placeholder {
+    line-height: 1.3125rem; }
+  .landscaping-form__section input::-moz-placeholder,
+  .landscaping-form__section textarea::-moz-placeholder {
+    line-height: 1.3125rem; }
+  .landscaping-form__section input:-ms-input-placeholder,
+  .landscaping-form__section textarea:-ms-input-placeholder {
+    line-height: 1.3125rem; }
+  .landscaping-form__section input::-ms-input-placeholder,
+  .landscaping-form__section textarea::-ms-input-placeholder {
+    line-height: 1.3125rem; }
+  .landscaping-form__section input::placeholder,
+  .landscaping-form__section textarea::placeholder {
+    line-height: 1.3125rem; }
   .landscaping-form__upload-label {
     margin-left: 0;
     margin-top: 0;
@@ -7882,7 +7921,7 @@ span.poll__hide {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 0.9375rem;
-  line-height: 1.26562rem; }
+  line-height: 1.26563rem; }
   .proposal-winners__status:before {
     display: none; }
 
@@ -7919,6 +7958,7 @@ span.poll__hide {
       padding: 0; } }
 
 .proposal-winners__map {
+  position: relative;
   margin-bottom: 73px; }
   .proposal-winners__map button {
     display: none; }
@@ -7981,7 +8021,7 @@ span.poll__hide {
     display: block;
     padding: 15px 15px;
     font-size: 0.9375rem;
-    line-height: 1.26562rem;
+    line-height: 1.26563rem;
     font-weight: 500;
     color: #2C8ECC;
     text-transform: uppercase; }
@@ -7992,9 +8032,11 @@ span.poll__hide {
   .proposal-winners__map {
     display: none;
     position: fixed;
-    top: 20%;
+    z-index: 222;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 568px;
+    height: 100vh;
     padding: 0;
     background-color: #ffffff; }
     .proposal-winners__map button {
@@ -8024,7 +8066,11 @@ span.poll__hide {
         -webkit-transform: rotate(-45deg);
                 transform: rotate(-45deg); }
     .proposal-winners__map iframe {
-      height: 512px; } }
+      height: 100%; }
+    .proposal-winners__map--show {
+      display: block; }
+  .proposal-winners__map-container {
+    height: 100%; } }
 
 .project-page__container,
 .project-page__survey {

@@ -23,6 +23,11 @@
   textarea {
     -webkit-appearance: none;
     font-size: 16px;
+
+    &::placeholder {
+      font-size: rem(15px);
+      line-height: rem(27px);
+    }
   }
 }
 
@@ -43,7 +48,7 @@
 
 .landscaping-form__textarea {
   margin-top: 32px;
-  padding: 17px 16px;
+  padding: 13px 16px;
   display: block;
   width: 100%;
   resize: none;
@@ -253,6 +258,10 @@
 }
 
 @include mobile {
+  .landscaping-page {
+    padding-bottom: 70px;
+  }
+
   .landscaping-form__title {
     font-size: rem(24px);
     line-height: rem(28.44px);
@@ -286,6 +295,8 @@
       margin-bottom: 18px;
 
       .landscaping-form__tip {
+        font-size: rem(15px);
+        line-height: rem(27px);
         margin-top: 18px;
       }
     }
@@ -293,6 +304,13 @@
     iframe {
       height: 288px;
     }
+
+    input, 
+    textarea {
+    &::placeholder {
+      line-height: rem(21px);
+    }
+  }
   }
 
   .landscaping-form__upload-label {
