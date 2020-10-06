@@ -51,6 +51,14 @@
       background-color: var(--color-interactive-default, $blue-default);
     }
   }
+
+  &--complete {
+    color: #70BF56;
+
+    &::before {
+      background-color:  #70BF56;
+    }
+  }
 }
 
 .improvement-stage__dates {
