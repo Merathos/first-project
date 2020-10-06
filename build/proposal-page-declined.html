@@ -231,7 +231,7 @@
 </header>
 
   <main class="project-page page-content page-content--approved">
-    <div class="container">
+    <div class="container container--desktop-only">
       <div class="info-banner info-banner--declined">
         <svg width="24" height="24" class="info-icon info-banner__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
           <path fill="currentColor" fill-rule="evenodd" d="M.2 12C.2 5.494 5.492.2 12 .2 18.505.2 23.8 5.494 23.8 12c0 6.506-5.294 11.8-11.8 11.8C5.492 23.8.2 18.506.2 12zm2.152 0c0 5.32 4.328 9.647 9.647 9.647 5.32 0 9.647-4.327 9.647-9.647S17.318 2.354 12 2.354 2.352 6.68 2.352 12z" clip-rule="evenodd"></path>
@@ -372,11 +372,15 @@
             </svg>
             <span>Константина Симонова, 5к2</span>
           </a>
-          <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A632dc64482e20035a9e82717af6071fd69e61f588fe2400013fa13d65e070cb6&amp;source=constructor" title="Интерактивная карта">
-          </iframe>
-          <a class="button button--light-blue" href="#">
-            <span>к списку предложений</span>
-          </a>
+          <div class="proposal__map-wrapper">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A632dc64482e20035a9e82717af6071fd69e61f588fe2400013fa13d65e070cb6&amp;source=constructor" title="Интерактивная карта">
+            </iframe>
+          </div>
+          <div class="proposal__button-wrapper">
+            <a class="button button--light-blue" href="#">
+              <span>к списку предложений</span>
+            </a>
+          </div>
       </section>
     </div>
   </main>
