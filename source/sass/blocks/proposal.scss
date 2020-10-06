@@ -308,14 +308,11 @@
 }
 
 .proposal .map-section .map-section__tip {
+  margin-bottom: 32px;
+
   @media (max-width: $desktop-width - 1) {
     margin-top: 0;
-    margin-bottom: 32px;
   }
-}
-
-.proposal .map-section .map-section__tip {
-  margin-bottom: 32px;
 
   @media (max-width: $tablet-width - 1) {
     padding-right: 0;

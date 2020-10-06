@@ -4513,13 +4513,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .proposal .map-section__title {
     margin-bottom: 17px; } }
 
-@media (max-width: 1199px) {
-  .proposal .map-section .map-section__tip {
-    margin-top: 0;
-    margin-bottom: 32px; } }
-
 .proposal .map-section .map-section__tip {
   margin-bottom: 32px; }
+  @media (max-width: 1199px) {
+    .proposal .map-section .map-section__tip {
+      margin-top: 0; } }
   @media (max-width: 767px) {
     .proposal .map-section .map-section__tip {
       padding-right: 0;
