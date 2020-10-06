@@ -332,6 +332,8 @@
 }
 
 .proposal .landscaping-form__section--map .landscaping-form__tip {
+  margin-bottom: 32px;
+
   @media (max-width: $tablet-width - 1) {
     padding-right: 0;
     margin-bottom: 22px;
