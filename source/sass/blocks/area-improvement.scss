@@ -1,4 +1,11 @@
 .area-improvement {
+  padding-top: 40px;
+  padding-bottom: 78px;
+
+  @media (max-width: $desktop-width - 1) {
+    padding-bottom: 87px;
+  }
+
   @media (max-width: $tablet-width - 1) {
     padding-top: 27px;
     padding-bottom: 64px;
@@ -6,6 +13,12 @@
 }
 
 .area-improvement__back-btn {
+  margin-left: 2px;
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 38px;
+  }
+
   @media (max-width: $tablet-width - 1) {
     margin-left: 4px;
     margin-bottom: 28px;
@@ -13,26 +26,52 @@
 }
 
 .area-improvement__title {
+  margin-bottom: 40px;
+
+  @media (max-width: $desktop-width - 1) {
+    font-size: rem(30px);
+    line-height: rem(36px);
+  }
+
   @media (max-width: $tablet-width - 1) {
     margin-bottom: 32px;
+
+    font-size: rem(24px);
+    line-height: rem(28px);
   }
 }
 
 .area-improvement__stage {
+  margin-right: 32px;
+  margin-bottom: 0;
+
   @media (max-width: $tablet-width - 1) {
     margin-bottom: 25px;
   }
 }
 
 .area-improvement__stage-wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+
+  margin-bottom: 35px;
+
   @media (max-width: $tablet-width - 1) {
     margin-bottom: 33px;
   }
 }
 
 .area-improvement__text {
-  @media (max-width: $tablet-width - 1) {
-    line-height: 180%;
+  font-size: rem(15px);
+  line-height: 180%;
+  max-width: 740px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 38px;
+  }
+
+  @media (max-width: $desktop-width - 1) {
     margin-bottom: 39px;
   }
 }
