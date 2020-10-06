@@ -96,6 +96,13 @@
     margin-top: 24px;
     margin-bottom: 22px;
   }
+
+  &--shorter {
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1){
+      width: 80%;
+      margin-bottom: 0;
+    }
+  }
 }
 
 .user-proposal__status {
@@ -120,6 +127,12 @@
   line-height: 130%;
 
   color: var(--color-text, $grey-default);
+
+  @media (min-width: $tablet-width) {
+    margin-top: 5px;
+    margin-left: auto;
+    align-self: flex-start;
+  }
 
   @media (max-width: $tablet-width - 1) {
     margin-top: 27px;
@@ -154,9 +167,20 @@
 }
 
 .user-proposal--userless {
+  .user-proposal__link--address {
+    @media (min-width: $desktop-width) {
+      width: 100%;
+    }
+  }
+
   .user-proposal__title {
     font-weight: normal;
     font-size: rem(16px);
     line-height: 135%;
+
+    @media (min-width: $tablet-width ) {
+      width: 80%;
+      margin-bottom: 0;
+    }
   }
 }

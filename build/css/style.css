@@ -4530,10 +4530,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     margin-top: 0;
     margin-bottom: 32px; } }
 
-@media (max-width: 767px) {
-  .proposal .landscaping-form__section--map .landscaping-form__tip {
-    padding-right: 0;
-    margin-bottom: 22px; } }
+.proposal .landscaping-form__section--map .landscaping-form__tip {
+  margin-bottom: 32px; }
+  @media (max-width: 767px) {
+    .proposal .landscaping-form__section--map .landscaping-form__tip {
+      padding-right: 0;
+      margin-bottom: 22px; } }
 
 .proposal__address {
   margin-bottom: 34px; }
@@ -5110,28 +5112,35 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .area-improvement__text {
       margin-bottom: 39px; } }
 
+@media (min-width: 768px) and (max-width: 1199px) {
+  .area-improvement--list {
+    padding-bottom: 105px; } }
+
 @media (max-width: 767px) {
   .area-improvement--list .area-improvement__back-btn {
     margin-bottom: 24px; } }
 
-@media (max-width: 767px) {
-  .area-improvement--list .area-improvement__info {
-    padding: 24px;
-    margin-bottom: 39px; }
-    .area-improvement--list .area-improvement__info svg {
-      top: 28px;
-      left: 24px; } }
+.area-improvement--list .area-improvement__info {
+  margin-bottom: 38px; }
+  @media (max-width: 1199px) {
+    .area-improvement--list .area-improvement__info {
+      margin-bottom: 39px; } }
+  @media (max-width: 767px) {
+    .area-improvement--list .area-improvement__info {
+      padding: 24px; }
+      .area-improvement--list .area-improvement__info svg {
+        top: 28px;
+        left: 24px; } }
 
-@media (max-width: 1199px) {
+@media (max-width: 767px) {
   .area-improvement--list .area-improvement__text {
     margin-bottom: 24px; } }
 
 .area-improvement--list .area-improvement__select {
-  padding: 15px 16px 15px;
   background-color: var(--color-bg-secondary, #f5f6f7);
   border: 1px solid var(--color-stroke, #e3e8ee);
   border-radius: 5px; }
-  @media (max-width: 1199px) {
+  @media (max-width: 767px) {
     .area-improvement--list .area-improvement__select {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -5139,12 +5148,30 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; } }
+  .area-improvement--list .area-improvement__select .ss-main {
+    width: 100%; }
+  .area-improvement--list .area-improvement__select .ss-single-selected {
+    padding: 15px 16px 15px 23px; }
+    @media (max-width: 767px) {
+      .area-improvement--list .area-improvement__select .ss-single-selected {
+        padding: 15px 16px;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
   .area-improvement--list .area-improvement__select .placeholder {
-    text-align: center;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: auto;
     font-size: 0.9375rem;
     line-height: 135%; }
   .area-improvement--list .area-improvement__select .ss-content {
-    left: -54.5px; }
+    top: 41px;
+    left: 0;
+    width: 219px; }
+    @media (max-width: 767px) {
+      .area-improvement--list .area-improvement__select .ss-content {
+        width: 100%; } }
   .area-improvement--list .area-improvement__select .ss-main .ss-single-selected .ss-arrow {
     margin-left: 12px; }
   .area-improvement--list .area-improvement__select .ss-main .ss-single-selected .ss-arrow span {
@@ -5153,6 +5180,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .area-improvement--list .area-improvement__proposal {
   border-top: none; }
+
+.area-improvement--list .area-improvement__paginator {
+  margin-top: 40px; }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .area-improvement--list .area-improvement__paginator {
+      margin-top: 56px; } }
 
 .improvement-stage {
   display: -webkit-box;
@@ -5281,6 +5314,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .user-proposal__title {
       margin-top: 24px;
       margin-bottom: 22px; } }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .user-proposal__title--shorter {
+      width: 80%;
+      margin-bottom: 0; } }
 
 .user-proposal__status {
   font-weight: 400;
@@ -5309,6 +5346,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-size: 0.8125rem;
   line-height: 130%;
   color: var(--color-text, #a6abb3); }
+  @media (min-width: 768px) {
+    .user-proposal__like-counter {
+      margin-top: 5px;
+      margin-left: auto;
+      -ms-flex-item-align: start;
+          align-self: flex-start; } }
   @media (max-width: 767px) {
     .user-proposal__like-counter {
       margin-top: 27px; } }
@@ -5327,10 +5370,18 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .user-proposal__like-counter--liked .filled {
       fill: var(--color-interactive-accent, #116ca6); }
 
+@media (min-width: 1200px) {
+  .user-proposal--userless .user-proposal__link--address {
+    width: 100%; } }
+
 .user-proposal--userless .user-proposal__title {
   font-weight: normal;
   font-size: 1rem;
   line-height: 135%; }
+  @media (min-width: 768px) {
+    .user-proposal--userless .user-proposal__title {
+      width: 80%;
+      margin-bottom: 0; } }
 
 .news-notice {
   -webkit-box-sizing: border-box;
@@ -7646,16 +7697,6 @@ span.poll__hide {
 
 .landscaping-form__section {
   margin-bottom: 80px; }
-  .landscaping-form__section--upload {
-    margin-bottom: 80px; }
-    .landscaping-form__section--upload .landscaping-form__tip {
-      margin-bottom: 34px; }
-  .landscaping-form__section--map {
-    margin-bottom: 43px; }
-  .landscaping-form__section iframe {
-    border: none;
-    border-radius: 5px;
-    width: 100%; }
   .landscaping-form__section input,
   .landscaping-form__section textarea {
     -webkit-appearance: none;
@@ -7746,25 +7787,167 @@ span.poll__hide {
 .landscaping-form__description {
   height: 132px; }
 
-.landscaping-form__img {
-  margin-right: 19px;
-  position: relative;
-  width: 205px;
-  height: 205px;
-  -webkit-filter: drop-shadow(0px 2px 4px rgba(0, 30, 75, 0.15));
-          filter: drop-shadow(0px 2px 4px rgba(0, 30, 75, 0.15));
-  border-radius: 5px;
-  overflow: hidden; }
-  .landscaping-form__img img {
-    display: block;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: 50% 50%;
-       object-position: 50% 50%;
-    width: 100%;
-    height: 100%; }
+.landscaping-form__button-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
 
-.landscaping-form__uploads {
+.landscaping-form__submit-btn {
+  width: 274px;
+  padding: 16px 16px; }
+
+@media (max-width: 1199px) {
+  .landscaping-page {
+    padding-bottom: 102px; } }
+
+@media (max-width: 767px) {
+  .landscaping-page {
+    padding-bottom: 70px; }
+  .landscaping-form__title {
+    font-size: 1.5rem;
+    line-height: 1.7775rem; }
+  .landscaping-form__proposition-name {
+    height: 110px; }
+  .landscaping-form__description {
+    margin-top: 25px;
+    height: 180px; }
+  .landscaping-form__section--description {
+    margin-bottom: 70px; }
+  .landscaping-form__section input::-webkit-input-placeholder,
+  .landscaping-form__section textarea::-webkit-input-placeholder {
+    line-height: 1.3125rem; }
+  .landscaping-form__section input::-moz-placeholder,
+  .landscaping-form__section textarea::-moz-placeholder {
+    line-height: 1.3125rem; }
+  .landscaping-form__section input:-ms-input-placeholder,
+  .landscaping-form__section textarea:-ms-input-placeholder {
+    line-height: 1.3125rem; }
+  .landscaping-form__section input::-ms-input-placeholder,
+  .landscaping-form__section textarea::-ms-input-placeholder {
+    line-height: 1.3125rem; }
+  .landscaping-form__section input::placeholder,
+  .landscaping-form__section textarea::placeholder {
+    line-height: 1.3125rem; }
+  .landscaping-form__button-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .landscaping-form__submit-btn {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin-bottom: 15px;
+    width: 100%; } }
+
+.map-section {
+  margin-bottom: 43px; }
+  .map-section iframe {
+    border: none;
+    border-radius: 5px;
+    width: 100%; }
+  .map-section input {
+    -webkit-appearance: none;
+    font-size: 16px; }
+    .map-section input::-webkit-input-placeholder {
+      font-size: 0.9375rem;
+      line-height: 1.6875rem; }
+    .map-section input::-moz-placeholder {
+      font-size: 0.9375rem;
+      line-height: 1.6875rem; }
+    .map-section input:-ms-input-placeholder {
+      font-size: 0.9375rem;
+      line-height: 1.6875rem; }
+    .map-section input::-ms-input-placeholder {
+      font-size: 0.9375rem;
+      line-height: 1.6875rem; }
+    .map-section input::placeholder {
+      font-size: 0.9375rem;
+      line-height: 1.6875rem; }
+
+.map-section__title {
+  margin: 0;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 400; }
+
+.map-section__tip {
+  margin: 0;
+  margin-top: 12px;
+  margin-bottom: 32px; }
+
+.map-section__address {
+  margin-bottom: 25px;
+  width: 100%;
+  height: 51px;
+  padding: 15px 15px;
+  font-size: 0.9375rem;
+  line-height: 1.6875rem;
+  background: #f9f9fa;
+  border: 1px solid #e3e8ee;
+  border-radius: 5px; }
+  .map-section__address::-webkit-input-placeholder {
+    color: #a6abb2; }
+  .map-section__address::-moz-placeholder {
+    color: #a6abb2; }
+  .map-section__address:-ms-input-placeholder {
+    color: #a6abb2; }
+  .map-section__address::-ms-input-placeholder {
+    color: #a6abb2; }
+  .map-section__address::placeholder {
+    color: #a6abb2; }
+  .map-section__address:focus {
+    outline: none; }
+    .map-section__address:focus::-webkit-input-placeholder {
+      color: #354052; }
+    .map-section__address:focus::-moz-placeholder {
+      color: #354052; }
+    .map-section__address:focus:-ms-input-placeholder {
+      color: #354052; }
+    .map-section__address:focus::-ms-input-placeholder {
+      color: #354052; }
+    .map-section__address:focus::placeholder {
+      color: #354052; }
+
+@media (max-width: 1199px) {
+  .map-section iframe {
+    height: 460px; }
+  .map-section__tip {
+    margin-top: 12px;
+    margin-bottom: 35px; } }
+
+@media (max-width: 767px) {
+  .map-section {
+    margin-bottom: 18px; }
+    .map-section iframe {
+      height: 288px; }
+  .map-section__title {
+    font-size: 1.5rem;
+    line-height: 1.7775rem; }
+  .map-section__tip {
+    margin-top: 18px;
+    margin-bottom: 25px;
+    font-size: 0.9375rem;
+    line-height: 1.6875rem; } }
+
+.upload-section {
+  margin-bottom: 80px; }
+
+.upload-section__tip {
+  margin: 0;
+  margin-top: 12px;
+  margin-bottom: 34px; }
+
+.upload-section__title {
+  margin: 0;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 400; }
+
+.upload-section__img-wrap {
   margin-bottom: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7777,13 +7960,13 @@ span.poll__hide {
       -ms-flex-pack: start;
           justify-content: flex-start; }
   @media (max-width: 767px) {
-    .landscaping-form__uploads {
+    .upload-section__img-wrap {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-flow: column wrap;
               flex-flow: column wrap;
       margin-bottom: 72px; } }
-  .landscaping-form__uploads div {
+  .upload-section__img-wrap div {
     -ms-flex-negative: 0;
         flex-shrink: 0;
     position: relative;
@@ -7794,15 +7977,15 @@ span.poll__hide {
     border-radius: 5px;
     -webkit-filter: drop-shadow(0px 2px 4px rgba(0, 30, 75, 0.15));
             filter: drop-shadow(0px 2px 4px rgba(0, 30, 75, 0.15)); }
-    .landscaping-form__uploads div:nth-of-type(5n) {
+    .upload-section__img-wrap div:nth-of-type(5n) {
       margin-right: 0; }
     @media (max-width: 767px) {
-      .landscaping-form__uploads div {
+      .upload-section__img-wrap div {
         width: 100%;
         height: calc(100vw / 2);
         margin-right: 0;
         margin-bottom: 24px; } }
-    .landscaping-form__uploads div button[type="button"] {
+    .upload-section__img-wrap div button[type="button"] {
       position: absolute;
       top: 4px;
       right: 4px;
@@ -7814,10 +7997,10 @@ span.poll__hide {
       outline: none;
       cursor: pointer; }
       @media (max-width: 767px) {
-        .landscaping-form__uploads div button[type="button"] {
+        .upload-section__img-wrap div button[type="button"] {
           top: 8px;
           right: 8px; } }
-      .landscaping-form__uploads div button[type="button"]::before {
+      .upload-section__img-wrap div button[type="button"]::before {
         content: '';
         position: absolute;
         top: 50%;
@@ -7829,7 +8012,7 @@ span.poll__hide {
                 transform: translate(-50%, -50%) rotate(-45deg);
         -webkit-transition: background-color 0.2s;
         transition: background-color 0.2s; }
-      .landscaping-form__uploads div button[type="button"]::after {
+      .upload-section__img-wrap div button[type="button"]::after {
         content: '';
         position: absolute;
         top: 50%;
@@ -7841,16 +8024,16 @@ span.poll__hide {
                 transform: translate(-50%, -50%) rotate(45deg);
         -webkit-transition: background-color 0.2s;
         transition: background-color 0.2s; }
-      .landscaping-form__uploads div button[type="button"]:hover:not(.focus-visible)::before, .landscaping-form__uploads div button[type="button"]:hover:not(.focus-visible)::after {
+      .upload-section__img-wrap div button[type="button"]:hover:not(.focus-visible)::before, .upload-section__img-wrap div button[type="button"]:hover:not(.focus-visible)::after {
         background-color: var(--color-interactive-accent, rgba(229, 80, 80, 0.5)); }
-  .landscaping-form__uploads img {
+  .upload-section__img-wrap img {
     width: 100%;
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center;
        object-position: center; }
-  .landscaping-form__uploads label {
+  .upload-section__img-wrap label {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -7869,23 +8052,23 @@ span.poll__hide {
     cursor: pointer;
     -webkit-transition: opacity 0.2s;
     transition: opacity 0.2s; }
-    .landscaping-form__uploads label:hover:not(.focus-visible) {
+    .upload-section__img-wrap label:hover:not(.focus-visible) {
       opacity: 0.8; }
     @media (max-width: 767px) {
-      .landscaping-form__uploads label {
+      .upload-section__img-wrap label {
         width: 100%;
         height: calc(100vw / 2);
         margin-left: 0;
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center; } }
-    .landscaping-form__uploads label span {
+    .upload-section__img-wrap label span {
       padding-top: 34px;
       position: relative; }
       @media (max-width: 767px) {
-        .landscaping-form__uploads label span {
+        .upload-section__img-wrap label span {
           max-width: 50%; } }
-      .landscaping-form__uploads label span::before {
+      .upload-section__img-wrap label span::before {
         content: '+';
         position: absolute;
         top: 1px;
@@ -7896,131 +8079,23 @@ span.poll__hide {
         color: var(--color-text, #a6abb3);
         font-weight: 200; }
 
-.landscaping-form__address {
-  margin-bottom: 25px;
-  width: 100%;
-  height: 51px;
-  padding: 15px 15px;
-  font-size: 0.9375rem;
-  line-height: 1.6875rem;
-  background: #f9f9fa;
-  border: 1px solid #e3e8ee;
-  border-radius: 5px; }
-  .landscaping-form__address::-webkit-input-placeholder {
-    color: #a6abb2; }
-  .landscaping-form__address::-moz-placeholder {
-    color: #a6abb2; }
-  .landscaping-form__address:-ms-input-placeholder {
-    color: #a6abb2; }
-  .landscaping-form__address::-ms-input-placeholder {
-    color: #a6abb2; }
-  .landscaping-form__address::placeholder {
-    color: #a6abb2; }
-  .landscaping-form__address:focus {
-    outline: none; }
-    .landscaping-form__address:focus::-webkit-input-placeholder {
-      color: #354052; }
-    .landscaping-form__address:focus::-moz-placeholder {
-      color: #354052; }
-    .landscaping-form__address:focus:-ms-input-placeholder {
-      color: #354052; }
-    .landscaping-form__address:focus::-ms-input-placeholder {
-      color: #354052; }
-    .landscaping-form__address:focus::placeholder {
-      color: #354052; }
-
-.landscaping-form__button-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
-
-.landscaping-form__submit-btn {
-  width: 274px;
-  padding: 16px 16px; }
-
 @media (max-width: 1199px) {
-  .landscaping-page {
-    padding-bottom: 102px; }
-  .landscaping-form__tip {
-    margin-top: 20px;
-    margin-bottom: 50px; }
-  .landscaping-form__section--upload {
+  .upload-section {
     margin-bottom: 80px; }
-    .landscaping-form__section--upload .landscaping-form__tip {
-      font-size: 0.9375rem;
-      line-height: 1.6875rem;
-      margin-bottom: 37px; }
-  .landscaping-form__section--map .landscaping-form__tip {
-    margin-top: 12px;
-    margin-bottom: 35px; }
-  .landscaping-form__section iframe {
-    height: 460px; }
-  .landscaping-form__img {
-    margin-bottom: 24px; } }
+  .upload-section__tip {
+    margin-top: 20px;
+    margin-bottom: 37px;
+    font-size: 0.9375rem;
+    line-height: 1.6875rem; } }
 
 @media (max-width: 767px) {
-  .landscaping-page {
-    padding-bottom: 70px; }
-  .landscaping-form__title {
-    font-size: 1.5rem;
-    line-height: 1.7775rem; }
-  .landscaping-form__proposition-name {
-    height: 110px; }
-  .landscaping-form__description {
-    margin-top: 25px;
-    height: 180px; }
-  .landscaping-form__section--description {
-    margin-bottom: 70px; }
-  .landscaping-form__section--upload {
+  .upload-section {
     margin-bottom: 73px; }
-    .landscaping-form__section--upload .landscaping-form__tip {
-      margin-bottom: 14px; }
-  .landscaping-form__section--map {
-    margin-bottom: 18px; }
-    .landscaping-form__section--map .landscaping-form__tip {
-      margin-top: 18px;
-      margin-bottom: 25px;
-      font-size: 0.9375rem;
-      line-height: 1.6875rem; }
-  .landscaping-form__section iframe {
-    height: 288px; }
-  .landscaping-form__section input::-webkit-input-placeholder,
-  .landscaping-form__section textarea::-webkit-input-placeholder {
-    line-height: 1.3125rem; }
-  .landscaping-form__section input::-moz-placeholder,
-  .landscaping-form__section textarea::-moz-placeholder {
-    line-height: 1.3125rem; }
-  .landscaping-form__section input:-ms-input-placeholder,
-  .landscaping-form__section textarea:-ms-input-placeholder {
-    line-height: 1.3125rem; }
-  .landscaping-form__section input::-ms-input-placeholder,
-  .landscaping-form__section textarea::-ms-input-placeholder {
-    line-height: 1.3125rem; }
-  .landscaping-form__section input::placeholder,
-  .landscaping-form__section textarea::placeholder {
-    line-height: 1.3125rem; }
-  .landscaping-form__img {
-    margin-right: 0;
-    margin-bottom: 24px;
-    width: 288px;
-    height: 160px; }
-    .landscaping-form__img img {
-      max-width: 100%;
-      height: auto; }
-  .landscaping-form__button-wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-  .landscaping-form__submit-btn {
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
-    margin-bottom: 15px;
-    width: 100%; } }
+  .upload-section__tip {
+    margin-bottom: 14px; }
+  .upload-section__title {
+    font-size: 1.5rem;
+    line-height: 1.7775rem; } }
 
 .improvement {
   padding: 0px 40px 95px; }
