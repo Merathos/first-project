@@ -5065,13 +5065,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       font-size: 1.5rem;
       line-height: 1.75rem; } }
 
-.area-improvement__stage {
-  margin-right: 32px;
-  margin-bottom: 0; }
-  @media (max-width: 767px) {
-    .area-improvement__stage {
-      margin-bottom: 25px; } }
-
 .area-improvement__stage-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5174,7 +5167,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .area-improvement--list .area-improvement__paginator {
       margin-top: 56px; } }
 
-.improvement-stage {
+.improvement-stage__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5188,10 +5181,17 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-weight: normal;
   font-size: 16px;
   line-height: 135%;
-  color: var(--color-text, #a6abb3); }
+  color: var(--color-text, #a6abb3);
+  margin-right: 32px;
+  margin-bottom: 0; }
   @media (max-width: 767px) {
-    .improvement-stage--line-height {
-      line-height: 150%; } }
+    .improvement-stage__wrapper {
+      margin-bottom: 25px; } }
+  .improvement-stage__wrapper--line-height {
+    margin-right: 0; }
+    @media (max-width: 767px) {
+      .improvement-stage__wrapper--line-height {
+        line-height: 150%; } }
 
 .improvement-stage__status {
   padding-left: 19px;
@@ -5379,8 +5379,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .user-proposal__like-counter--liked .filled {
       fill: var(--color-interactive-accent, #116ca6); }
 
-@media (min-width: 1200px) {
-  .user-proposal--userless .user-proposal__link--address {
+@media (min-width: 768px) {
+  .user-proposal--userless .user-proposal__address {
     width: 100%; } }
 
 .user-proposal--userless .user-proposal__title {

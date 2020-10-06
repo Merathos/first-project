@@ -1,4 +1,4 @@
-.improvement-stage {
+.improvement-stage__wrapper {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -8,7 +8,15 @@
   line-height: 135%;
   color: var(--color-text, $grey-default);
 
+  margin-right: 32px;
+  margin-bottom: 0;
+
+  @media (max-width: $tablet-width - 1) {
+    margin-bottom: 25px;
+  }
+
   &--line-height {
+    margin-right: 0;
     @media (max-width: $tablet-width - 1) {
       line-height: 150%;
     }
