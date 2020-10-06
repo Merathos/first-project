@@ -164,10 +164,14 @@
       margin-bottom: 6px;
     }
 
+    @media (max-width: $desktop-width - 1) {
+      margin-left: $tablet-padding;
+      margin-right: $tablet-padding;
+    }
+
     @media (max-width: $tablet-width - 1) {
       padding: 24px 32px 22px 64px;
-      margin-top: 14px;
-      margin-bottom: 40px;
+      margin: 14px $mobile-padding 40px;
 
       .info-banner__title {
         margin-top: 0;
@@ -223,6 +227,16 @@
 
   &--declined {
     border-color: $red;
+
+    @media (max-width: $desktop-width - 1) {
+      margin-left: $tablet-padding;
+      margin-right: $tablet-padding;
+    }
+
+    @media (max-width: $tablet-width - 1) {
+      margin-left: $tablet-padding;
+      margin-right: $tablet-padding;
+    }
 
     .info-banner__title {
       color: $red;

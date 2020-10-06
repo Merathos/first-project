@@ -3,6 +3,16 @@
 
   border-top: 1px solid var(--color-stroke, $light-grey);
   border-bottom: 1px solid var(--color-stroke, $light-grey);
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+
+  &--userless {
+    padding-top: 32px;
+  }
 }
 
 .user-proposal__link {
@@ -17,6 +27,15 @@
 
   text-decoration: none;
   transition: color $style-change-duration, opacity $style-change-duration;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 4px;
+    margin-right: 9px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    margin-bottom: 8px;
+  }
 
   &--account {
     color: var(--color-interactive-default, $blue-default);
@@ -54,10 +73,6 @@
   svg {
     margin-right: 5px;
   }
-
-  @media (max-width: $tablet-width - 1) {
-    margin-bottom: 8px;
-  }
 }
 
 .user-proposal__title {
@@ -67,6 +82,15 @@
   font-size: rem(18px);
   line-height: 130%;
   color: var(--color-text, $dark-text);
+
+  @media (min-width: $desktop-width) {
+    width: 80%;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1){
+    width: 100%;
+    margin-bottom: 24px;
+  }
 
   @media (max-width: $tablet-width - 1) {
     margin-top: 24px;
@@ -80,7 +104,59 @@
   line-height: 135%;
   color: var(--color-interactive-default, $blue-default);
 
-  @media (max-width: $tablet-width - 1) {
+  @media (min-width: $desktop-width) {
+    margin-left: auto;
+  }
+}
 
+.user-proposal__like-counter {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  font-weight: normal;
+  font-size: rem(13px);
+  line-height: 130%;
+
+  color: var(--color-text, $grey-default);
+
+  @media (max-width: $tablet-width - 1) {
+    margin-top: 27px;
+  }
+
+  span {
+    margin-right: 13px;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+
+    margin-top: -2px;
+  }
+
+  & .stroked {
+    fill: var(--color-text, $grey-default);
+  }
+
+  &--liked {
+    color: var(--color-interactive-accent, $blue-accent);
+
+    & .stroked {
+      fill: transparent;
+    }
+
+    & .filled {
+      fill: var(--color-interactive-accent, $blue-accent)
+    }
+  }
+}
+
+.user-proposal--userless {
+  .user-proposal__title {
+    font-weight: normal;
+    font-size: rem(16px);
+    line-height: 135%;
   }
 }
