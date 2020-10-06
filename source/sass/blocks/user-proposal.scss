@@ -167,13 +167,17 @@
 }
 
 .user-proposal--userless {
+  .user-proposal__link--address {
+    @media (min-width: $desktop-width) {
+      width: 100%;
+    }
+  }
+
   .user-proposal__title {
     font-weight: normal;
     font-size: rem(16px);
     line-height: 135%;
-  }
 
-  .user-proposal__title {
     @media (min-width: $tablet-width ) {
       width: 80%;
       margin-bottom: 0;
