@@ -5368,7 +5368,8 @@ h2 {
 .concurrent-projects {
   margin: 0;
   padding: 20px 0;
-  list-style: none; }
+  list-style: none;
+  text-align: left; }
 
 .concurrent-projects__item {
   margin-bottom: 16px; }
@@ -5377,40 +5378,65 @@ h2 {
 
 .concurrent-projects__link {
   padding: 16px 32px 16px 24px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
+  display: grid;
+  grid-template-columns: 1fr 15.7%;
+  grid-template-areas: "a    b" "c    b";
   background-color: var(--color-bg-secondary, #f9f9fa);
   border-radius: 5px;
   text-decoration: none; }
   @media (max-width: 1119px) {
     .concurrent-projects__link {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column wrap;
+              flex-flow: column wrap;
       padding: 16px 24px 24px; } }
   @media (max-width: 767px) {
     .concurrent-projects__link {
       padding: 24px; } }
 
-.concurrent-projects__level {
+.concurrent-projects__link > * {
+  -ms-flex-item-align: start;
+      align-self: start; }
+
+.concurrent-projects__status-wrapper {
+  grid-area: a;
   margin-bottom: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap; }
+  @media (max-width: 767px) {
+    .concurrent-projects__status-wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column wrap;
+              flex-flow: column wrap;
+      margin-bottom: 20px; } }
+
+.concurrent-projects__level {
+  margin-right: 12px;
   font-weight: 400;
   font-size: 0.875rem;
   line-height: 130%;
   color: var(--color-text, #707b8c); }
+  @media (max-width: 767px) {
+    .concurrent-projects__level {
+      margin-right: 0;
+      margin-bottom: 8px; } }
 
 .concurrent-projects__status {
   position: relative;
-  margin-bottom: 8px;
   padding-left: 9px;
   font-weight: normal;
   font-size: 0.875rem;
   line-height: 130%; }
-  @media (max-width: 767px) {
-    .concurrent-projects__status {
-      margin-bottom: 20px; } }
   .concurrent-projects__status::before {
     content: "";
     position: absolute;
@@ -5431,6 +5457,7 @@ h2 {
 
 .concurrent-projects__title {
   margin: 0;
+  grid-area: c;
   font-weight: 400;
   font-size: 1rem;
   line-height: 140%; }
@@ -5442,6 +5469,7 @@ h2 {
       margin-bottom: 29px; } }
 
 .concurrent-projects__period {
+  grid-area: b;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5453,6 +5481,15 @@ h2 {
   font-size: 0.8125rem;
   line-height: 132%;
   color: var(--color-text, #a6abb3); }
+  @media (min-width: 1200px) {
+    .concurrent-projects__period {
+      margin-top: 8px; } }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .concurrent-projects__period {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap; } }
   .concurrent-projects__period span:not(.concurrent-projects__dates) {
     margin-bottom: 2px;
     margin-right: 0; }
@@ -5463,7 +5500,11 @@ h2 {
     @media (max-width: 767px) {
       .concurrent-projects__period span:not(.concurrent-projects__dates) {
         margin-bottom: 2px;
-        margin-right: 0; } }
+        margin-right: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column wrap;
+                flex-flow: column wrap; } }
 
 .concurrent-projects__dates {
   color: var(--color-text, #354052); }
@@ -6348,25 +6389,46 @@ span.poll__hide {
     .discussion__item .discussion__used {
       display: none; } }
 
-@media (max-width: 767px) {
-  .concurrent-voting {
-    padding: 24px 0 0; } }
+.concurrent-voting {
+  text-align: center;
+  padding: 72px 0 0;
+  margin-bottom: 10px; }
+  @media (max-width: 1199px) {
+    .concurrent-voting {
+      margin-bottom: 25px; } }
+  @media (max-width: 767px) {
+    .concurrent-voting {
+      padding: 24px 0 0;
+      margin-bottom: 0; } }
 
-@media (max-width: 767px) {
-  .concurrent-voting__archive {
+.concurrent-voting__archive {
+  margin-top: 4px;
+  margin-left: auto; }
+  @media (max-width: 1199px) {
+    .concurrent-voting__archive {
+      margin-top: 8px; } }
+  @media (max-width: 767px) {
+    .concurrent-voting__archive {
+      display: none; } }
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .concurrent-voting__archive-hidden {
     display: none; } }
 
-.concurrent-voting__head svg {
-  width: 48px;
-  height: 48px;
-  -ms-flex-item-align: start;
-      align-self: flex-start; }
+.concurrent-voting__head {
+  margin-bottom: 20px; }
+  @media (max-width: 767px) {
+    .concurrent-voting__head {
+      margin-bottom: 12px; } }
+  @media (max-width: 767px) {
+    .concurrent-voting__head svg {
+      width: 48px;
+      height: 48px;
+      -ms-flex-item-align: start;
+          align-self: flex-start; } }
 
 .concurrent-voting__title {
-  margin: 0 0 20px; }
-  @media (max-width: 767px) {
-    .concurrent-voting__title {
-      margin: 0 0 12px; } }
+  margin: 0; }
 
 .concurrent-voting__projects {
   margin: 0 auto 28px; }
@@ -6375,13 +6437,14 @@ span.poll__hide {
       margin-bottom: 12px; } }
 
 .concurrent-voting__all {
-  padding: 18px 20px 16px 38px;
+  padding: 18px 58px 16px;
   font-weight: 500;
   font-size: 0.875rem;
   line-height: 135%; }
   @media (max-width: 767px) {
     .concurrent-voting__all {
-      margin: 0 0 32px; } }
+      margin: 0 0 32px;
+      padding: 18px 20px 16px 38px; } }
 
 .concurrent-voting__archive-mobile {
   margin: 0 auto;
