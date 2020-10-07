@@ -12,19 +12,6 @@
   }
 }
 
-.proposal__subtitle {
-  margin: 0 0 32px;
-  font-weight: 400;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-
-  @media (max-width: $tablet-width - 1) {
-    margin-bottom: 25px;
-    font-size: rem(24px);
-    line-height: rem(28px);
-  }
-}
-
 .proposal__title {
   margin-bottom: 26px;
   max-width: 100%;
@@ -34,10 +21,14 @@
   }
 
   @media (max-width: $tablet-width - 1) {
-    font-size: rem(30px);
-    line-height: rem(36px);
-
     margin-bottom: 34px;
+  }
+
+  &--big {
+    @media (max-width: $tablet-width - 1) {
+      font-size: rem(30px);
+      line-height: rem(36px);
+    }
   }
 }
 
@@ -106,217 +97,16 @@
 .proposal__form {
   margin-top: 80px;
 
-  & h2 {
-    margin-bottom: 12px;
-
-    @media (max-width: $desktop-width - 1) {
-      margin-bottom: 18px;
-    }
-  }
-
-  & p {
-    margin: 0 0 34px;
-
-    @media (max-width: $desktop-width - 1) {
-      line-height: 180%;
-      padding-right: 30px;
-      margin-bottom: 37px;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      margin-bottom: 14px;
-    }
-  }
-
   @media (max-width: $tablet-width - 1) {
     margin-top: 64px;
   }
 }
 
-.proposal__uploads {
+.proposal__uploads-container {
   margin-bottom: 80px;
 
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-
   @media (max-width: $tablet-width - 1) {
-    flex-flow: column wrap;
     margin-bottom: 72px;
-  }
-
-  & div {
-    flex-shrink: 0;
-    position: relative;
-    width: 205px;
-    height: 205px;
-    overflow: hidden;
-    margin-right: 23.5px;
-
-    border-radius: 5px;
-    filter: drop-shadow(0px 2px 4px rgba(0, 30, 75, 0.15));
-
-    &:nth-of-type(5n) {
-      margin-right: 0;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      width: 100%;
-      height: calc(100vw / 2);
-      margin-right: 0;
-      margin-bottom: 24px;
-    }
-
-    & button[type="button"] {
-      position: absolute;
-      top: 4px;
-      right: 4px;
-      width: 28px;
-      height: 28px;
-
-      background-color: var(--color-bg-main, $white);
-      border: none;
-      border-radius: 5px;
-      outline: none;
-
-      cursor: pointer;
-
-      @media (max-width: $tablet-width - 1) {
-        top: 8px;
-        right: 8px;
-      }
-
-      &::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 15px;
-        height: 1px;
-
-        background-color: var(--color-interactive-accent, $red);
-
-        transform: translate(-50%, -50%) rotate(-45deg);
-        transition: background-color $style-change-duration;
-      }
-
-      &::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 15px;
-        height: 1px;
-
-        background-color: var(--color-interactive-accent, $red);
-
-        transform: translate(-50%, -50%) rotate(45deg);
-        transition: background-color $style-change-duration;
-      }
-
-      &:hover:not(.focus-visible) {
-        &::before,
-        &::after {
-          background-color: var(--color-interactive-accent, rgba($red, 0.5));
-        }
-      }
-    }
-  }
-
-  & img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-  }
-
-  & label {
-
-    display: flex;
-    align-items: center;
-
-    width: 205px;
-    height: 205px;
-
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 130%;
-
-    text-align: center;
-    color: var(--color-text, $grey-default);
-
-    border: 2px dashed var(--color-stroke, $light-grey);
-    border-radius: 5px;
-
-    cursor: pointer;
-    transition: opacity $style-change-duration;
-
-    &:hover:not(.focus-visible) {
-      opacity: 0.8;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      width: 100%;
-      height: calc(100vw / 2);
-      margin-left: 0;
-
-      justify-content: center;
-    }
-
-    & span {
-      padding-top: 34px;
-      position: relative;
-
-      @media (max-width: $tablet-width - 1) {
-        max-width: 50%;
-      }
-
-      &::before {
-        content: '+';
-        position: absolute;
-        top: 1px;
-        left: 50%;
-        transform: translateX(-50%);
-
-        font-size: 2.5rem;
-        color: var(--color-text, $grey-default);
-        font-weight: 200;
-      }
-    }
-  }
-}
-
-.proposal .map-section {
-
-  @media (max-width: $desktop-width - 1) {
-    margin-bottom: 40px;
-  }
-
-  @media (max-width: $tablet-width - 1) {
-    margin-bottom: 20px;
-  }
-}
-
-.proposal .map-section__title {
-  @media (max-width: $desktop-width - 1) {
-    margin-bottom: 10px;
-  }
-
-  @media (max-width: $tablet-width - 1) {
-    margin-bottom: 17px;
-  }
-}
-
-.proposal .map-section .map-section__tip {
-  margin-bottom: 32px;
-
-  @media (max-width: $desktop-width - 1) {
-    margin-top: 0;
-  }
-
-  @media (max-width: $tablet-width - 1) {
-    padding-right: 0;
-    margin-bottom: 22px;
   }
 }
 
@@ -384,9 +174,7 @@
     }
 
     @media (max-width: $tablet-width - 1) {
-      font-size: rem(24px);
-      line-height: rem(28px);
-      margin-bottom: 26px;
+      margin-bottom: 25px;
       margin-left: $mobile-padding;
       margin-right: $mobile-padding;
     }
@@ -413,27 +201,23 @@
 
   .proposal__text-container {
     grid-area: b;
-    padding:15px 0 40px;
-    line-height: 180%;
+    margin-bottom: 25px;
 
     @media (max-width: $desktop-width - 1) {
+      margin-bottom: 40px;
       margin-left: $tablet-padding;
       margin-right: $tablet-padding;
     }
 
     @media (max-width: $tablet-width - 1) {
-      padding-bottom: 24px;
+      margin-bottom: 32px;
       margin-left: $mobile-padding;
       margin-right: $mobile-padding;
     }
   }
 
   .proposal__text-container p {
-    margin-top: 0;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+    line-height: 180%;
   }
 
   .proposal__vote {
@@ -485,22 +269,19 @@
     @media (max-width: $tablet-width - 1) {
       margin-bottom: 58px;
     }
-  }
 
-  .proposal__subtitle:not(.proposal__subtitle--map) {
-    margin-bottom: 22px;
+    h2 {
+      margin-bottom: 22px;
 
-    @media (max-width: $desktop-width - 1) {
-      font-size: rem(30px);
-      line-height: rem(36px);
+      @media (max-width: $desktop-width - 1) {
+        margin-left: $tablet-padding;
+        margin-right: $tablet-padding;
+      }
 
-      margin-left: $tablet-padding;
-      margin-right: $tablet-padding;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      margin-left: $mobile-padding;
-      margin-right: $mobile-padding;
+      @media (max-width: $tablet-width - 1) {
+        margin-left: $mobile-padding;
+        margin-right: $mobile-padding;
+      }
     }
   }
 
@@ -527,17 +308,17 @@
       margin-left: $mobile-padding;
       margin-right: $mobile-padding;
     }
-  }
 
-  .proposal__subtitle--map {
-    margin-bottom: 9px;
-
-    @media (max-width: $desktop-width - 1) {
+    h2 {
       margin-bottom: 9px;
-    }
 
-    @media (max-width: $tablet-width - 1) {
-      margin-bottom: 16px;
+      @media (max-width: $desktop-width - 1) {
+        margin-bottom: 9px;
+      }
+
+      @media (max-width: $tablet-width - 1) {
+        margin-bottom: 16px;
+      }
     }
   }
 
@@ -671,24 +452,6 @@
     }
   }
 
-  .proposal__subtitle {
-    margin-bottom: 24px;
-
-    @media (max-width: $tablet-width - 1) {
-      margin-bottom: 25px;
-      font-size: rem(30px);
-      line-height: rem(36px);
-    }
-
-    &--map {
-      margin-bottom: 6px;
-
-      @media (max-width: $tablet-width - 1) {
-        margin-bottom: 16px;
-      }
-    }
-  }
-
   .proposal__files {
     grid-area: d;
     margin-bottom: 48px;
@@ -702,6 +465,10 @@
       padding-left: $mobile-padding;
       padding-right: $mobile-padding;
       margin-bottom: 40px;
+    }
+
+    h2 {
+      margin-bottom: 25px;
     }
   }
 
@@ -746,7 +513,7 @@
 
     @media (max-width: $desktop-width - 1) {
       padding-top: 26px;
-      margin-bottom: 48px;
+      margin-bottom: 62px;
       margin-left: $tablet-padding;
       margin-right: $tablet-padding;
     }
@@ -768,6 +535,8 @@
     grid-area: g;
 
     h2 {
+      margin-bottom: 24px;
+
       @media (max-width: $desktop-width - 1) {
         margin-left: $tablet-padding;
         margin-right: $tablet-padding;
@@ -782,7 +551,7 @@
 
   .proposal__map {
     grid-area: h;
-    margin-bottom: 48px;
+    margin-bottom: 40px;
 
     @media (max-width: $desktop-width - 1) {
       margin-bottom: 44px;
@@ -794,6 +563,14 @@
       margin-bottom: 34px;
       margin-left: $mobile-padding;
       margin-right: $mobile-padding;
+    }
+
+    h2 {
+      margin-bottom: 8px;
+
+      @media (max-width: $tablet-width - 1) {
+        margin-bottom: 16px;
+      }
     }
   }
 

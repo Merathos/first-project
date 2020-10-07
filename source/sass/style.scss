@@ -53,6 +53,8 @@
 @import 'blocks/improvement-stage';
 @import 'blocks/proposal-list';
 @import 'blocks/proposal-description';
+@import 'blocks/image-uploads';
+@import 'blocks/subtitle';
 
 // main page
 @import "blocks/news-notice";
@@ -87,7 +89,6 @@
 @import "blocks/landscaping.scss";
 @import "blocks/landscaping-form.scss";
 @import "blocks/map-section.scss";
-@import "blocks/upload-section.scss";
 
 // improvement on main page
 @import "blocks/improvement.scss";
