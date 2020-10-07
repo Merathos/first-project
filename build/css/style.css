@@ -4905,7 +4905,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-decoration: none;
   color: var(--color-text, #354052);
   font-weight: 400;
   font-size: 1rem;
