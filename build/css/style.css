@@ -5057,20 +5057,19 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     left: 7px;
     width: 6px;
     height: 6px;
-    background-color: var(--color-text, #fca844);
+    background-color: currentColor;
     border-radius: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%); }
   .improvement-stage__status--opened {
     color: var(--color-interactive-default, #2c8ecc); }
-    .improvement-stage__status--opened::before {
-      background-color: var(--color-interactive-default, #2c8ecc); }
   .improvement-stage__status--complete {
-    color: #70BF56; }
-    .improvement-stage__status--complete::before {
-      background-color: #70BF56; }
+    color: var(--color-interactive-default, #70bf56); }
 
 .improvement-stage__dates {
+  color: var(--color-text, #354052); }
+
+.improvement-stage__level {
   color: var(--color-text, #354052); }
 
 .proposal-list {
@@ -5581,6 +5580,58 @@ h2 {
 
 .concurrent-projects__dates {
   color: var(--color-text, #354052); }
+
+@media (max-width: 767px) {
+  .budgets {
+    padding: 30px 0 24px; } }
+
+@media (max-width: 767px) {
+  .budgets__back-btn {
+    margin-left: 5px; } }
+
+@media (max-width: 767px) {
+  .budgets__info {
+    margin-bottom: 39px; } }
+
+@media (max-width: 767px) {
+  .budgets__title {
+    margin-bottom: 32px; } }
+
+.budgets__status {
+  margin-bottom: 40px; }
+  @media (max-width: 1199px) {
+    .budgets__status {
+      margin-bottom: 48px; } }
+  @media (max-width: 767px) {
+    .budgets__status {
+      margin-bottom: 32px; } }
+
+.budgets__stage-wrapper {
+  margin-bottom: 32px; }
+  @media (max-width: 767px) {
+    .budgets__stage-wrapper {
+      margin-bottom: 24px; } }
+  @media (max-width: 767px) {
+    .budgets__stage-wrapper .improvement-stage__wrapper {
+      margin-bottom: 21px; } }
+
+.budgets__content {
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--color-stroke, #e3e8ee); }
+  @media (max-width: 767px) {
+    .budgets__content {
+      padding-bottom: 17px; } }
+  .budgets__content p {
+    line-height: 180%; }
+
+.budgets .budgets__list {
+  padding: 40px 0; }
+  @media (max-width: 767px) {
+    .budgets .budgets__list .project__link {
+      min-height: 108px; } }
+  @media (max-width: 767px) {
+    .budgets .budgets__list .project__name {
+      max-width: 200px; } }
 
 .news-notice {
   -webkit-box-sizing: border-box;
