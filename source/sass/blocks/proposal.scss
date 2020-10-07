@@ -21,10 +21,14 @@
   }
 
   @media (max-width: $tablet-width - 1) {
-    font-size: rem(30px);
-    line-height: rem(36px);
-
     margin-bottom: 34px;
+  }
+
+  &--big {
+    @media (max-width: $tablet-width - 1) {
+      font-size: rem(30px);
+      line-height: rem(36px);
+    }
   }
 }
 
@@ -170,9 +174,7 @@
     }
 
     @media (max-width: $tablet-width - 1) {
-      font-size: rem(24px);
-      line-height: rem(28px);
-      margin-bottom: 26px;
+      margin-bottom: 25px;
       margin-left: $mobile-padding;
       margin-right: $mobile-padding;
     }
@@ -199,27 +201,23 @@
 
   .proposal__text-container {
     grid-area: b;
-    padding:15px 0 40px;
-    line-height: 180%;
+    margin-bottom: 25px;
 
     @media (max-width: $desktop-width - 1) {
+      margin-bottom: 40px;
       margin-left: $tablet-padding;
       margin-right: $tablet-padding;
     }
 
     @media (max-width: $tablet-width - 1) {
-      padding-bottom: 24px;
+      margin-bottom: 32px;
       margin-left: $mobile-padding;
       margin-right: $mobile-padding;
     }
   }
 
   .proposal__text-container p {
-    margin-top: 0;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+    line-height: 180%;
   }
 
   .proposal__vote {
@@ -271,22 +269,19 @@
     @media (max-width: $tablet-width - 1) {
       margin-bottom: 58px;
     }
-  }
 
-  .proposal__subtitle:not(.proposal__subtitle--map) {
-    margin-bottom: 22px;
+    h2 {
+      margin-bottom: 22px;
 
-    @media (max-width: $desktop-width - 1) {
-      font-size: rem(30px);
-      line-height: rem(36px);
+      @media (max-width: $desktop-width - 1) {
+        margin-left: $tablet-padding;
+        margin-right: $tablet-padding;
+      }
 
-      margin-left: $tablet-padding;
-      margin-right: $tablet-padding;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      margin-left: $mobile-padding;
-      margin-right: $mobile-padding;
+      @media (max-width: $tablet-width - 1) {
+        margin-left: $mobile-padding;
+        margin-right: $mobile-padding;
+      }
     }
   }
 
@@ -313,17 +308,17 @@
       margin-left: $mobile-padding;
       margin-right: $mobile-padding;
     }
-  }
 
-  .proposal__subtitle--map {
-    margin-bottom: 9px;
-
-    @media (max-width: $desktop-width - 1) {
+    h2 {
       margin-bottom: 9px;
-    }
 
-    @media (max-width: $tablet-width - 1) {
-      margin-bottom: 16px;
+      @media (max-width: $desktop-width - 1) {
+        margin-bottom: 9px;
+      }
+
+      @media (max-width: $tablet-width - 1) {
+        margin-bottom: 16px;
+      }
     }
   }
 
