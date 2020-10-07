@@ -226,6 +226,12 @@
 </symbol><symbol id="icon-notification" viewBox="0 0 32 32">
 <path d="M13 28C13 28.7956 13.3161 29.5587 13.8787 30.1213C14.4413 30.6839 15.2044 31 16 31C16.7956 31 17.5587 30.6839 18.1213 30.1213C18.6839 29.5587 19 28.7956 19 28" stroke="#E55050" stroke-width="2" stroke-miterlimit="10"/>
 <path d="M29 25C29 25 26 20 26 16V11C26 8.34784 24.9464 5.8043 23.0711 3.92893C21.1957 2.05357 18.6522 1 16 1C13.3478 1 10.8043 2.05357 8.92893 3.92893C7.05357 5.8043 6 8.34784 6 11V16C6 20 3 25 3 25H29Z" stroke="#E55050" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+</symbol><symbol id="icon-pages" viewBox="0 0 32 32">
+<path d="M25.2857 4.85645H3V30.8564H25.2857V4.85645Z" stroke="#2C8ECC" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M7.64258 12.2852H19.714" stroke="#2C8ECC" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M7.64258 17.8564H19.714" stroke="#2C8ECC" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M7.64258 23.4287H12.2854" stroke="#2C8ECC" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
+<path d="M6 1.14258H29V27.8854" stroke="#2C8ECC" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"/>
 </symbol><symbol id="icon-paginator-next" viewBox="0 0 25 16">
 <path d="M24.7071 8.70711C25.0976 8.31658 25.0976 7.68342 24.7071 7.2929L18.3431 0.928934C17.9526 0.538409 17.3195 0.538409 16.9289 0.928934C16.5384 1.31946 16.5384 1.95262 16.9289 2.34315L22.5858 8L16.9289 13.6569C16.5384 14.0474 16.5384 14.6805 16.9289 15.0711C17.3195 15.4616 17.9526 15.4616 18.3431 15.0711L24.7071 8.70711ZM-8.74228e-08 9L24 9L24 7L8.74228e-08 7L-8.74228e-08 9Z" fill="currentColor"/>
 </symbol><symbol id="icon-paginator-prev" viewBox="0 0 25 16">

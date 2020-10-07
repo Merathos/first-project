@@ -55,6 +55,7 @@
 @import 'blocks/proposal-description';
 @import 'blocks/image-uploads';
 @import 'blocks/subtitle';
+@import 'blocks/concurrent-projects';
 
 // main page
 @import "blocks/news-notice";
@@ -62,6 +63,7 @@
 @import "blocks/poll";
 @import "blocks/project";
 @import "blocks/discussion";
+@import "blocks/concurrent-voting";
 @import "blocks/cookie";
 
 // composite poll
