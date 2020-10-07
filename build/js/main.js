@@ -105,6 +105,54 @@
 
 
 (function () {
+    if (document.querySelector('.confirmation-popup')) {
+        var popUp = document.querySelector('.confirmation-popup');
+        var popUpOpenbtn = document.querySelector('#improvement-submit-btn');
+        var popUpClosebtn = popUp.querySelector('.confirmation-popup__close-btn');
+        var popUpBackbtn = popUp.querySelector('.confirmation-popup__back-btn');
+        var form = document.querySelector('#js-improvement-form');
+        var submitFormBtn = form.querySelector('.confirmation-popup__submit-btn');
+        var KeyCodes = {
+            ESC: 27,
+        };
+
+        var isEscEvent = function (evt, action) {
+            if (evt.keyCode === KeyCodes.ESC) {
+                action();
+            }
+        };
+
+        var onPopupEscPress = function (evt) {
+            isEscEvent(evt, closePopup);
+        };
+
+        var openPopup = function () {
+            popUp.classList.add('confirmation-popup--show');
+            document.addEventListener('keydown', onPopupEscPress);
+        };
+
+        var closePopup = function () {
+            popUp.classList.remove('confirmation-popup--show');
+            document.removeEventListener('keydown', onPopupEscPress);
+        };
+
+        popUpOpenbtn.addEventListener('click', function () {
+            if (!form.checkValidity()) {
+                submitFormBtn.click();
+            } else {
+                openPopup();
+            }
+        });
+
+        popUpClosebtn.addEventListener('click', closePopup);
+        popUpBackbtn.addEventListener('click', closePopup);
+    }
+})();
+
+'use strict';
+
+
+(function () {
   var KeyCode = {
     ENTER: 13,
     ESC: 27
