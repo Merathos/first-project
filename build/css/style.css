@@ -5095,6 +5095,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
               justify-content: flex-start; } }
   .proposal-list__item--userless {
     padding-top: 32px; }
+  .proposal-list__item--activity-improvement {
+    border-top: none; }
+    @media (min-width: 768px) and (max-width: 1199px) {
+      .proposal-list__item--activity-improvement {
+        padding-top: 50px; } }
 
 .proposal-list__account {
   display: -webkit-box;
@@ -5456,6 +5461,9 @@ h2 {
   background-color: var(--color-bg-secondary, #f9f9fa);
   border-radius: 5px;
   text-decoration: none; }
+  @media (min-width: 1200px) {
+    .concurrent-projects__link:hover:not(.focus-visible) .concurrent-projects__title {
+      color: var(--color-interactive-default, #116ca6); } }
   @media (max-width: 1119px) {
     .concurrent-projects__link {
       display: -webkit-box;
@@ -5532,7 +5540,9 @@ h2 {
   grid-area: c;
   font-weight: 400;
   font-size: 1rem;
-  line-height: 140%; }
+  line-height: 140%;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s; }
   @media (max-width: 1199px) {
     .concurrent-projects__title {
       margin-bottom: 32px; } }
@@ -11061,6 +11071,8 @@ span.poll-page__hide {
   @media (max-width: 400px) {
     .activity-tabs {
       margin-bottom: 32px; } }
+  .activity-tabs--improvement {
+    margin-bottom: 0; }
 
 .activity-tabs__list {
   margin: 0;

@@ -20,6 +20,14 @@
   &--userless {
     padding-top: 32px;
   }
+
+  &--activity-improvement {
+    border-top: none;
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1){
+      padding-top: 50px;
+    }
+  }
 }
 
 .proposal-list__account {
