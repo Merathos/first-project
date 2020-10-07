@@ -8394,7 +8394,9 @@ span.poll__hide {
   height: 235px;
   padding-top: 20px;
   border-radius: 5px;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 30, 75, 0.2);
+          box-shadow: 0px 4px 8px rgba(0, 30, 75, 0.2); }
 
 .map-popup__top-wrapper {
   position: relative;
@@ -8413,6 +8415,16 @@ span.poll__hide {
     font-size: 0.8125rem;
     line-height: 1.0625rem;
     color: #354052; }
+  .map-popup__top-wrapper::before {
+    content: "";
+    position: absolute;
+    top: 85px;
+    left: -13px;
+    width: 0;
+    height: 0;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    border-right: 13px solid #ffffff; }
 
 .map-popup__bottom-wrapper {
   display: -webkit-box;
@@ -8441,9 +8453,19 @@ span.poll__hide {
   line-height: 1.0625rem;
   color: #707B8C; }
   .map-popup__likes span {
-    margin-right: 14px; }
-  .map-popup__likes svg {
-    margin-top: 5px; }
+    margin-right: 14px;
+    padding-bottom: 3px; }
+  .map-popup__likes button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    display: block;
+    padding-top: 4px;
+    cursor: pointer; }
+    .map-popup__likes button svg {
+      fill: #707B8C; }
+    .map-popup__likes button:hover svg {
+      fill: #2c8ecc; }
 
 .map-popup__close-btn {
   padding: 0;
