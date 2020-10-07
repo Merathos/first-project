@@ -1,5 +1,4 @@
 .proposal {
-
   & iframe {
     border: none;
     width: 100%;
@@ -94,14 +93,6 @@
   }
 }
 
-.proposal__form {
-  margin-top: 80px;
-
-  @media (max-width: $tablet-width - 1) {
-    margin-top: 64px;
-  }
-}
-
 .proposal__uploads-container {
   margin-bottom: 80px;
 
@@ -160,6 +151,28 @@
     order: -1;
     margin-bottom: 15px;
     width: 100%;
+  }
+}
+
+.proposal {
+  .landscaping-form__section--description {
+    @media (max-width: $tablet-width - 1) {
+      margin-bottom: 64px;
+    }
+  }
+
+  .landscaping-form__proposition-name {
+    @media (max-width: $tablet-width - 1) {
+      margin-top: 24px;
+      min-height: 163px;
+    }
+  }
+
+  .landscaping-form__description {
+    @media (max-width: $tablet-width - 1) {
+      margin-top: 16px;
+      min-height: 217px;
+    }
   }
 }
 

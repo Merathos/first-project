@@ -96,36 +96,50 @@
               Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как текст-заполнитель или же текст-наполнитель. Иногда текст-«рыба» также используется композиторами при написании музыки.
             </p>
           </div>
-          <div class="proposal__description proposal-description">
-            <h2 class="subtitle">Название и описание предложения</h2>
-            <p class="proposal-description__content">
-              Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно.
-            </p>
-            <p class="proposal-description__content proposal-description__content--padding">
-              В случае произвольного набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных шрифтов, а также от распределения текста на странице (макет или площадь набора). Поэтому большинство рыбных текстов состоят из более или менее произвольного набора слов и слогов.
-            </p>
-          </div>
-          <form action="#" class="proposal__form" enctype='multipart/form-data'>
-            <div class="proposal__uploads-container image-uploads">
+          <form action="#" class="proposal__form landscaping-form">
+            <div class="landscaping-form__section landscaping-form__section--description">
+              <h2 class="landscaping-form__title">
+                Название и описание предложения
+              </h2>
+              <div class="landscaping-form__textarea-container">
+                <textarea name="proposition" id="proposition" cols="30" rows="10"
+                  class="landscaping-form__textarea landscaping-form__proposition-name"
+                  aria-label="Название предложения" required></textarea>
+                <span class="landscaping-form__textarea-error">Вы превысили лимит на хх символов</span>
+              </div>
+              <div class="landscaping-form__textarea-container">
+                <textarea name="description" id="description" cols="30" rows="10"
+                  class="landscaping-form__textarea landscaping-form__description"
+                  aria-label="Описание предложения"
+                  required></textarea>
+                <span class="landscaping-form__textarea-error">Вы превысили лимит
+                  на хх символов</span>
+              </div>
+            </div>
+            <div class="landscaping-form__section landscaping-form__section--upload image-uploads">
               <h2 class="subtitle">Загрузка изображений</h2>
-              <p>Если необходимо, вы можете загрузить изображения. Максимум 5&nbsp;изображенний, формата JPEG, PNG, GIF.</p>
+              <p>Если необходимо, вы можете загрузить изображения. Максимум 5&nbsp;изображенний, формата JPEG, PNG, GIF.
+              </p>
               <div class="image-uploads__wrapper js-upload-image-container">
-                <input class="visually-hidden" type="file" name="user-images" id="user-images" accept="image/png, image/jpeg, image/jpg, image/gif" multiple>
+                <input class="visually-hidden" type="file" name="user-images" id="user-images"
+                  accept="image/png, image/jpeg, image/jpg, image/gif" multiple>
                 <label for="user-images"><span>Загрузить изображение</span></label>
               </div>
             </div>
-            <div class="map-section">
+            <div class="landscaping-form__section map-section">
               <h2 class="map-section__title">Карта</h2>
               <p class="map-section__tip">
                 Введите адрес проблемной территории или отметьте ее на карте
               </p>
-              <input type="text" name="map-search" id="map-search" class="map-section__address" placeholder="Адрес проблемной территории">
-              <label for="map-search" class="visually-hidden" aria-label="Ввод адреса проблемной территории"></label>
-              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9cb3dfe5638344382497a81fa8472068b0dfbf25654b37a69d276c0dce8d2718&amp;source=constructor" title="Интерактивная карта"></iframe>
+              <input type="text" name="map-search" id="map-search" class="map-section__address"
+                placeholder="Адрес проблемной территории" aria-label="Введите адрес проблемной территории" />
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?um=constructor%3A9cb3dfe5638344382497a81fa8472068b0dfbf25654b37a69d276c0dce8d2718&amp;source=constructor"
+                width="800" height="600" title="Карта"></iframe>
             </div>
-            <div class="proposal__button-wrapper">
+            <div class="landscaping-form__button-wrapper">
               <button class="button button--white">Отменить</button>
-              <button type="submit" class="proposal__submit-btn button button--blue">
+              <button type="submit" class="button button--blue landscaping-form__submit-btn">
                 Отправить на модерацию
               </button>
             </div>
