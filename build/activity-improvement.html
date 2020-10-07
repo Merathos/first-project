@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
+  <head>
   <meta charset="UTF-8">
   <title>Общественное голосование</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,7 +23,7 @@
 </head>
 
 
-<body class="page-body">
+  <body class="page-body">
     <section class="special-popup js-hide">
   <h2 class="visually-hidden">Настройки для слабовидящих</h2>
 
@@ -232,185 +232,64 @@
 </header>
 
 
-    <main>
-        <section class="budgets section">
-            <div class="container">
-                <a class="budgets__back-btn back-btn" href="main-page.html">
-                    <svg width="8" height="14">
-                        <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
-                    </svg>
-                    На главную
-                </a>
-                <div class="budgets__info info-banner info-banner_enough-true">
-                  <svg width="24" height="24" class="info-icon info-banner__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <path fill="currentColor" fill-rule="evenodd" d="M.2 12C.2 5.494 5.492.2 12 .2 18.505.2 23.8 5.494 23.8 12c0 6.506-5.294 11.8-11.8 11.8C5.492 23.8.2 18.506.2 12zm2.152 0c0 5.32 4.328 9.647 9.647 9.647 5.32 0 9.647-4.327 9.647-9.647S17.318 2.354 12 2.354 2.352 6.68 2.352 12z" clip-rule="evenodd"></path>
-                    <rect width="2.5" height="8" x="10.75" y="6" fill="currentColor" rx="1"></rect>
-                    <rect width="2.5" height="3" x="10.75" y="15" fill="currentColor" rx="1"></rect>
-                  </svg>
+    <main class="activity page-content">
 
-                  <p class="info-banner__title">
-                    Данное голосование является открытым
-                  </p>
+      <div class="container">
+        <a class="back-btn" href="main-page.html">
+  <svg width="8" height="14">
+    <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
+  </svg>
+  Назад
+</a>
 
-                  <p class="info-banner__text">
-                    В соответствии с приказом Министерства строительства Российской Федерации № 75895422 от 20.01.2020 персональные данные участников голосования (в составе ФИО, дата рождения, номер паспорта) будут переданы уполномоченным ответственной организации. Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока
-                  </p>
+        <h1 class="page-content__title">Активность</h1>
+      </div>
 
-                  <button class="info-banner__button info-banner-button">
-                    <span class="info-banner-button__text">
-                      Развернуть
-                    </span>
+      <div class="activity-tabs activity-tabs--improvement">
+        <ul class="activity-tabs__list">
+          <li class="activity-tabs__item">
+            <a href="activity-discussions.html" class="activity-tabs__link">Обсуждения</a>
+          </li>
+          <li class="activity-tabs__item">
+            <a href="activity-projects.html" class="activity-tabs__link">Проекты</a>
+          </li>
+          <li class="activity-tabs__item">
+            <a href="activity-surveys.html" class="activity-tabs__link">Опросы</a>
+          </li>
+          <li class="activity-tabs__item activity-tabs__item--active">
+            <a href="activity-improvement.html" class="activity-tabs__link">Благоустройство</a>
+          </li>
+          <li class="activity-tabs__item">
+            <a href="activity-partners.html" class="activity-tabs__link">На сторонних ресурсах</a>
+          </li>
+        </ul>
+        <div class="container activity-tabs__bottom"></div>
+      </div>
 
-                    <svg class="arrow-down info-banner-button__icon" xmlns="http://www.w3.org/2000/svg" fill="none" width="13" height="8" viewBox="0 0 14 8">
-                      <path fill="currentColor" fill-rule="evenodd" d="M11.98 0L7 4.97 2.02 0 .5 1.51 7 8l6.5-6.49L11.98 0z" clip-rule="evenodd"></path>
-                    </svg>
-                  </button>
-                </div>
-                <h1 class="budgets__title page-title">Распределение бюджетов на проекты Московской области в первом квартале 2021 года</h1>
-                <div class="budgets__status status-info">
-                  <div class="status-info__text-group">
-                    <svg width="24" height="24">
-                      <use xlink:href="img/sprite.svg#icon-tick"></use>
-                    </svg>
+      <section class="activity-improvement">
+        <h2 class="visually-hidden">Список ваших предложений</h2>
+        <div class="container">
+          <ul class="activity-improvement__list proposal-list">
+            <li class="proposal-list__item proposal-list__item--activity-improvement">
+              <a href="#" class="proposal-list__account">
+                <svg width="16" height="16">
+                  <use xlink:href="img/sprite.svg#icon-user"></use>
+                </svg>
+                <span>Ваше предложение</span>
+              </a>
+              <div class="proposal-list__address">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.9624 1.64129C10.904 0.582939 9.49678 0 8.00014 0C6.50319 0 5.09625 0.582939 4.0379 1.64129C2.07929 3.59961 1.83588 7.28426 3.51077 9.51666L8.00014 16L12.4828 9.52572C14.1644 7.28426 13.921 3.59961 11.9624 1.64129ZM8.05186 7.5972C6.92426 7.5972 6.00645 6.6794 6.00645 5.5518C6.00645 4.4242 6.92426 3.5064 8.05186 3.5064C9.17946 3.5064 10.0973 4.4242 10.0973 5.5518C10.0973 6.6794 9.17946 7.5972 8.05186 7.5972Z" fill="currentColor"></path>
+                </svg>
+                <span>Константина Симонова, 5к2</span>
+              </div>
+              <p class="proposal-list__title">Рыбным текстом называется для временного</p>
+              <span class="proposal-list__status">Ожидает модерации</span>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-                    <p class="status-info__text">Голосование завершено, победители указаны в&nbsp;соответствующих категориях</p>
-                  </div>
-                  <a class="status-info__file file-item file-item--small file-item--white" href="#" download="">
-                    <svg width="24" height="24">
-                      <use xlink:href="img/sprite.svg#icon-doc-doc"></use>
-                    </svg>
-
-                    <p class="file-item__info">
-                      <span class="file-item__name">Протокол</span>
-                      <span class="file-item__size">3,2 мб</span>
-                    </p>
-                  </a>
-                </div>
-                <div class="budgets__stage-wrapper improvement-stage">
-                  <div class="improvement-stage__wrapper">
-                      <span>Уровень:&nbsp;</span>
-                      <span class="improvement-stage__level">Местный</span>
-                  </div>
-                  <div class="improvement-stage__wrapper">
-                      <span>Статус:</span>
-                      <span class="improvement-stage__status">Подведение итогов</span>
-                  </div>
-                  <div class="improvement-stage__wrapper improvement-stage__wrapper--line-height">
-                      <span>Период голосования:&nbsp;</span>
-                      <span class="improvement-stage__dates">c&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
-                  </div>
-                </div>
-                <div class="budgets__content">
-                  <p>Предлагаем вам принять участие в распределении бюджетов на проекты из представленных ниже категорий. Проголосуйте за  предложенные проекты. Самые популярные будут реализованы.</p>
-                </div>
-                <div class="budgets__list project">
-                  <ul class="project__list js_short_list">
-                    <li class="project__item project__item--library">
-                      <a href="#" class="project__link">
-                        <span class="project__icon">
-                          <svg width="28" height="23" viewBox="0 0 28 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="img/sprite.svg#icon-category-1"></use>
-                          </svg>
-                        </span>
-                        <span class="project__name">Библиотеки</span>
-                        <span class="project__count">15</span>
-                      </a>
-                    </li>
-                    <li class="project__item project__item--park">
-                      <a href="#" class="project__link">
-                        <span class="project__icon">
-                          <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="img/sprite.svg#icon-category-2"></use>
-                          </svg>
-                        </span>
-                        <span class="project__name">Благоустройство</span>
-                        <span class="project__count">100</span>
-                      </a>
-                    </li>
-                    <li class="project__item project__item--home">
-                      <a href="#" class="project__link">
-                        <span class="project__icon">
-                          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="img/sprite.svg#icon-category-3"></use>
-                          </svg>
-                        </span>
-                        <span class="project__name">Бытовое обслуживание</span>
-                        <span class="project__count">22</span>
-                      </a>
-                    </li>
-                    <li class="project__item project__item--water">
-                      <a href="#" class="project__link">
-                        <span class="project__icon">
-                          <svg width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="img/sprite.svg#icon-category-4"></use>
-                          </svg>
-                        </span>
-                        <span class="project__name">Водоснабжение</span>
-                        <span class="project__count">457</span>
-                      </a>
-                    </li>
-                    <li class="project__item project__item--child">
-                      <a href="#" class="project__link">
-                        <span class="project__icon">
-                          <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="img/sprite.svg#icon-category-5"></use>
-                          </svg>
-                        </span>
-                        <span class="project__name">Детские площадки</span>
-                        <span class="project__count">13</span>
-                      </a>
-                    </li>
-                    <li class="project__item project__item--education js_hide">
-                      <a href="#" class="project__link">
-                        <span class="project__icon">
-                          <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="img/sprite.svg#icon-category-12"></use>
-                          </svg>
-                        </span>
-                        <span class="project__name">Муниципальные образовательные организации</span>
-                        <span class="project__count">999</span>
-                      </a>
-                    </li>
-                    <li class="project__item project__item--art js_hide">
-                      <a href="#" class="project__link">
-                        <span class="project__icon">
-                          <svg width="26" height="25" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="img/sprite.svg#icon-category-13"></use>
-                          </svg>
-                        </span>
-                        <span class="project__name">Народное творчество</span>
-                        <span class="project__count">1</span>
-                      </a>
-                    </li>
-                    <li class="project__item project__item--archeology js_hide">
-                      <a href="#" class="project__link">
-                        <span class="project__icon">
-                          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="img/sprite.svg#icon-category-14"></use>
-                          </svg>
-                        </span>
-                        <span class="project__name">Объекты культурного наследия</span>
-                        <span class="project__count">15</span>
-                      </a>
-                    </li>
-                    <li class="project__item project__item--culture js_hide">
-                      <a href="#" class="project__link">
-                        <span class="project__icon">
-                          <svg width="28" height="26" viewBox="0 0 28 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="img/sprite.svg#icon-category-15"></use>
-                          </svg>
-                        </span>
-                        <span class="project__name">Объекты культуры</span>
-                        <span class="project__count">15</span>
-                      </a>
-                    </li>
-                  </ul>
-                  <button class="project__button button button--light-blue js_show_all" type="button">
-                    <span>ПОКАЗАТЬ ЕЩЁ</span>
-                  </button>
-                </div>
-            </div>
-        </section>
     </main>
 
     <footer class="page-footer">
@@ -476,6 +355,5 @@
 
     <script src="js/libs.js"></script>
     <script src="js/main.min.js"></script>
-</body>
-
+  </body>
 </html>

@@ -143,6 +143,26 @@
   }
 }
 
+.proposal__button-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $tablet-width - 1) {
+    flex-direction: column;
+  }
+}
+
+.proposal__submit-btn {
+  width: 274px;
+  padding: 16px 16px;
+
+  @media (max-width: $tablet-width - 1) {
+    order: -1;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+}
+
 .proposal--approved {
 
   @media (min-width: $desktop-width) {
