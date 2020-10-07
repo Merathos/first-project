@@ -107,6 +107,7 @@
 (function () {
     if (document.querySelector('.confirmation-popup')) {
         var popUp = document.querySelector('.confirmation-popup');
+        var popUpBody = popUp.querySelector('.confirmation-popup__body');
         var popUpOpenbtn = document.querySelector('#improvement-submit-btn');
         var popUpClosebtn = popUp.querySelector('.confirmation-popup__close-btn');
         var popUpBackbtn = popUp.querySelector('.confirmation-popup__back-btn');
@@ -128,11 +129,13 @@
 
         var openPopup = function () {
             popUp.classList.add('confirmation-popup--show');
+            document.querySelector("body").style.overflow = 'hidden';
             document.addEventListener('keydown', onPopupEscPress);
         };
 
         var closePopup = function () {
             popUp.classList.remove('confirmation-popup--show');
+            document.querySelector("body").style.overflow = 'visible';
             document.removeEventListener('keydown', onPopupEscPress);
         };
 
@@ -146,6 +149,12 @@
 
         popUpClosebtn.addEventListener('click', closePopup);
         popUpBackbtn.addEventListener('click', closePopup);
+        popUp.addEventListener('click', closePopup);
+        popUpBody.addEventListener('click', function (e) {
+            e.stopPropagation();
+            e.stopImmediatePropagation();
+            return false;
+        });
     }
 })();
 
