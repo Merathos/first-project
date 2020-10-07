@@ -239,6 +239,10 @@
     }
   }
 
+  &--disabled {
+    cursor: auto;
+  }
+
   span {
     margin-right: 12px;
     font-weight: 500;

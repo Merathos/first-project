@@ -1,16 +1,17 @@
 .address-pin {
   display: flex;
   align-items: center;
-  text-decoration: none;
-  color: var(--color-text, $dark-text);
-  font-weight: 400;
-  font-size: rem(16px);
-  line-height: 135%;
+
+  span {
+    color: var(--color-text, $dark-text);
+    font-weight: 400;
+    font-size: rem(16px);
+    line-height: 135%;
+  }
 
   svg {
     margin-right: 5px;
     flex-shrink: 0;
     display: block;
-    transition: color $style-change-duration stroke $style-change-duration;
   }
 }
