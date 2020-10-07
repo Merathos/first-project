@@ -1,0 +1,102 @@
+.confirmation-popup {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 155;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.7);
+
+    &--show {
+        display: block;
+    }
+}
+
+.confirmation-popup__body {
+    position: fixed;
+    top: calc(50% - 220px / 2);
+    left: calc(50% - 550px / 2);
+    max-width: 550px;
+    padding: 28px 16px 24px 24px;
+    background-color: #ffffff;
+    border-radius: 5px;
+
+    p {
+        margin: 0;
+        margin-bottom: 31px;
+        font-size: rem(24px);
+        line-height: rem(28.44px);
+    }
+}
+
+.confirmation-popup__close-btn {
+    @include btn-reset;
+    position: absolute;
+    top: 9px;
+    right: 11px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    
+    &::before,
+    &::after {
+        position: absolute;
+        left: 12px;
+        top: 3px;
+        content: "";
+        height: 24px;
+        width: 2px;
+        background-color: #BFBFBF;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+    }
+
+    &:hover {
+        &::before,
+        &::after {
+            background-color: #7e7e7e;
+        }
+    }
+}
+
+.confirmation-popup__buttons-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.confirmation-popup__back-btn {
+    width: 221px;
+}
+
+.confirmation-popup__submit-btn {
+    width: 231px;
+}
+
+@include mobile {
+    .confirmation-popup__body {
+        width: 300px;
+        top: calc(50% - 220px / 2);
+        left: calc(50% - 300px / 2);
+    }
+
+    .confirmation-popup__buttons-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .confirmation-popup__back-btn {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    
+    .confirmation-popup__submit-btn {
+        width: 100%;
+    }
+}
