@@ -97,7 +97,7 @@
             </p>
           </div>
           <div class="proposal__description proposal-description">
-            <h2 class="proposal-description__title">Название и описание предложения</h2>
+            <h2 class="subtitle">Название и описание предложения</h2>
             <p class="proposal-description__content">
               Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно.
             </p>
@@ -105,14 +105,16 @@
               В случае произвольного набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных шрифтов, а также от распределения текста на странице (макет или площадь набора). Поэтому большинство рыбных текстов состоят из более или менее произвольного набора слов и слогов.
             </p>
           </div>
-          <form action="#" class="proposal__form landscaping-form" enctype='multipart/form-data'>
-            <h2 class="proposal__subtitle">Загрузка изображений</h2>
-            <p>Если необходимо, вы можете загрузить изображения. Максимум 5 изображенний, формата JPEG, PNG, GIF.</p>
-            <div class="proposal__uploads js-upload-image-container">
-              <input class="visually-hidden" type="file" name="user-images" id="user-images" accept="image/png, image/jpeg, image/jpg, image/gif" multiple>
-              <label for="user-images"><span>Загрузить изображение</span></label>
+          <form action="#" class="proposal__form" enctype='multipart/form-data'>
+            <div class="proposal__uploads-container image-uploads">
+              <h2 class="subtitle">Загрузка изображений</h2>
+              <p>Если необходимо, вы можете загрузить изображения. Максимум 5&nbsp;изображенний, формата JPEG, PNG, GIF.</p>
+              <div class="image-uploads__wrapper js-upload-image-container">
+                <input class="visually-hidden" type="file" name="user-images" id="user-images" accept="image/png, image/jpeg, image/jpg, image/gif" multiple>
+                <label for="user-images"><span>Загрузить изображение</span></label>
+              </div>
             </div>
-            <div class="landscaping-form__section map-section">
+            <div class="map-section">
               <h2 class="map-section__title">Карта</h2>
               <p class="map-section__tip">
                 Введите адрес проблемной территории или отметьте ее на карте
