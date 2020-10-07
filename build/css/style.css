@@ -5581,21 +5581,41 @@ h2 {
 .concurrent-projects__dates {
   color: var(--color-text, #354052); }
 
-@media (max-width: 767px) {
-  .budgets {
-    padding: 30px 0 24px; } }
+.budgets {
+  padding: 40px 0 71px; }
+  @media (max-width: 1199px) {
+    .budgets {
+      padding: 40px 0 56px; } }
+  @media (max-width: 767px) {
+    .budgets {
+      padding: 30px 0 24px; } }
 
-@media (max-width: 767px) {
-  .budgets__back-btn {
-    margin-left: 5px; } }
+.budgets__back-btn {
+  margin-left: 2px;
+  margin-bottom: 40px; }
+  @media (max-width: 767px) {
+    .budgets__back-btn {
+      margin-left: 5px;
+      margin-bottom: 24px; } }
 
-@media (max-width: 767px) {
-  .budgets__info {
-    margin-bottom: 39px; } }
+.budgets__info {
+  padding-bottom: 14px;
+  margin-bottom: 40px; }
 
-@media (max-width: 767px) {
-  .budgets__title {
-    margin-bottom: 32px; } }
+.budgets__title {
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 2.9375rem;
+  margin-bottom: 40px; }
+  @media (max-width: 1199px) {
+    .budgets__title {
+      font-size: 1.875rem;
+      line-height: 2.25rem; } }
+  @media (max-width: 767px) {
+    .budgets__title {
+      margin-bottom: 32px;
+      font-size: 1.5rem;
+      line-height: 1.75rem; } }
 
 .budgets__status {
   margin-bottom: 40px; }
@@ -5607,10 +5627,27 @@ h2 {
       margin-bottom: 32px; } }
 
 .budgets__stage-wrapper {
-  margin-bottom: 32px; }
+  margin-bottom: 34px; }
+  @media (min-width: 768px) {
+    .budgets__stage-wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: row wrap;
+              flex-flow: row wrap; } }
   @media (max-width: 767px) {
     .budgets__stage-wrapper {
       margin-bottom: 24px; } }
+  .budgets__stage-wrapper div {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto; }
+    @media (min-width: 768px) and (max-width: 1199px) {
+      .budgets__stage-wrapper div:first-of-type {
+        margin-bottom: 16px;
+        width: 100%; } }
   @media (max-width: 767px) {
     .budgets__stage-wrapper .improvement-stage__wrapper {
       margin-bottom: 21px; } }
