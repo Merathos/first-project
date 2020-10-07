@@ -16,6 +16,10 @@
   @media (max-width: $mobile-max-width) {
     margin-bottom: 32px;
   }
+
+  &--improvement {
+    margin-bottom: 0;
+  }
 }
 
 .activity-tabs__list {

@@ -1,10 +1,12 @@
 .landscaping-form__section {
   margin-bottom: 80px;
 
-  input, 
+  input,
   textarea {
     -webkit-appearance: none;
-    font-size: 16px;
+    font-size: rem(16px);
+    line-height: 180%;
+    color: var(--color-text, $dark-text);
 
     &::placeholder {
       font-size: rem(15px);
@@ -112,7 +114,7 @@
   .landscaping-form__proposition-name {
     height: 110px;
   }
-  
+
   .landscaping-form__description {
     margin-top: 25px;
     height: 180px;
@@ -127,7 +129,7 @@
       margin-bottom: 73px;
     }
 
-    input, 
+    input,
     textarea {
       &::placeholder {
         line-height: rem(21px);
