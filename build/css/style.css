@@ -4266,11 +4266,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         top: 23px;
         left: 23px; } }
   .info-banner--warning {
-    border-color: #ffc989; }
+    border-color: var(--color-icon, #ffc989); }
     .info-banner--warning .info-banner__title {
-      color: #ffc989; }
+      color: var(--color-icon, #ffc989); }
     .info-banner--warning .info-banner__icon {
-      color: #ffc989; }
+      color: var(--color-icon, #ffc989); }
   .info-banner--approved {
     border-color: var(--color-icon, #70bf56); }
     @media (max-width: 1199px) {

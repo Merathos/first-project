@@ -187,14 +187,14 @@
   }
 
   &--warning {
-    border-color: $warning-orange;
+    border-color: var(--color-icon, $warning-orange);
 
     .info-banner__title {
-      color: $warning-orange;
+      color: var(--color-icon, $warning-orange);
     }
 
     .info-banner__icon {
-      color: $warning-orange;
+      color: var(--color-icon, $warning-orange);
     }
   }
 
