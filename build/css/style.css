@@ -4490,12 +4490,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-bottom: 41px; }
   @media (max-width: 1199px) {
     .proposal--approved .proposal__title {
-      margin-bottom: 34px;
+      margin-bottom: 40px;
       margin-left: 24px;
       margin-right: 24px; } }
   @media (max-width: 767px) {
     .proposal--approved .proposal__title {
-      margin-bottom: 25px;
+      margin-bottom: 32px;
       margin-left: 16px;
       margin-right: 16px; } }
   .proposal--approved .proposal__title--declined {
@@ -4549,12 +4549,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 @media (max-width: 1199px) {
   .proposal--approved .project-vote__container {
-    margin-bottom: 73px; } }
+    margin-bottom: 40px; } }
 
 @media (max-width: 767px) {
   .proposal--approved .project-vote__container {
     padding: 24px;
-    margin-bottom: 48px; } }
+    margin-bottom: 32px; } }
 
 .proposal--approved .project-page__text-container p {
   padding-top: 16px;
