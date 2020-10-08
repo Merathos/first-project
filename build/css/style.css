@@ -8674,10 +8674,6 @@ span.poll__hide {
   background-position: left bottom;
   background-repeat: no-repeat;
   background-size: 100% 1px; }
-  .proposal-winners__item--yours a {
-    font-size: 1.125rem;
-    line-height: 1.4625rem;
-    font-weight: 500; }
   .proposal-winners__item:last-child {
     background-image: none; }
 
@@ -8685,6 +8681,10 @@ span.poll__hide {
   width: 82%;
   font-size: 1rem;
   line-height: 21.6px; }
+  .proposal-winners__text-link--yours {
+    font-size: 1.125rem;
+    line-height: 1.4625rem;
+    font-weight: 500; }
 
 .proposal-winners__status {
   margin: 0;
@@ -8705,7 +8705,8 @@ span.poll__hide {
   line-height: 1.1375rem;
   color: #2C8ECC; }
   .proposal-winners_yours svg {
-    margin-right: 5px; }
+    margin-right: 5px;
+    margin-bottom: 2px; }
 
 .proposal-winners__address {
   display: none; }
@@ -8841,7 +8842,33 @@ span.poll__hide {
     .proposal-winners__map--show {
       display: block; }
   .proposal-winners__map-container {
-    height: 100%; } }
+    height: 100%; }
+  .proposal-winners__close-map-btn {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    top: 2px;
+    right: 1px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer; }
+    .proposal-winners__close-map-btn::before, .proposal-winners__close-map-btn::after {
+      position: absolute;
+      left: 12px;
+      top: 3px;
+      content: "";
+      height: 19px;
+      width: 2px;
+      background-color: #BFBFBF; }
+    .proposal-winners__close-map-btn::before {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg); }
+    .proposal-winners__close-map-btn::after {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
+    .proposal-winners__close-map-btn:hover::before, .proposal-winners__close-map-btn:hover::after {
+      background-color: #7e7e7e; } }
 
 .map-popup {
   position: absolute;
