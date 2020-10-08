@@ -23,7 +23,7 @@
           </svg>
           <span>Правила размещения проектов</span>
         </a>
-        <form action="#" class="landscaping-form" id="js-improvement-form">
+        <form action="#" class="landscaping-form" id="js-improvement-form" novalidate>
           <div class="landscaping-form__section landscaping-form__section--description">
             <h2 class="landscaping-form__title">
               Название и описание предложения
@@ -31,14 +31,13 @@
             <div class="landscaping-form__textarea-container">
               <textarea name="proposition" id="proposition" cols="30" rows="10"
                 class="landscaping-form__textarea landscaping-form__proposition-name"
-                placeholder="Название (ограничение 255 символов)" aria-label="Название предложения" required></textarea>
+                placeholder="Название (ограничение 255 символов)" aria-label="Название предложения"></textarea>
               <span class="landscaping-form__textarea-error">Вы превысили лимит на хх символов</span>
             </div>
             <div class="landscaping-form__textarea-container">
               <textarea name="description" id="description" cols="30" rows="10"
                 class="landscaping-form__textarea landscaping-form__description"
-                placeholder="Описание  (ограничение 500 символов)" aria-label="Описание предложения"
-                required></textarea>
+                placeholder="Описание  (ограничение 500 символов)" aria-label="Описание предложения"></textarea>
               <span class="landscaping-form__textarea-error">Вы превысили лимит
                 на хх символов</span>
             </div>

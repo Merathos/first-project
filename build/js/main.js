@@ -140,11 +140,7 @@
         };
 
         popUpOpenbtn.addEventListener('click', function () {
-            if (!form.checkValidity()) {
-                submitFormBtn.click();
-            } else {
-                openPopup();
-            }
+            openPopup();
         });
 
         popUpClosebtn.addEventListener('click', closePopup);
