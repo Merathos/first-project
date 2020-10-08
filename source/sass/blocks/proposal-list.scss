@@ -101,14 +101,20 @@
 
 .proposal-list__title {
   margin: 0;
+  text-decoration: none;
 
   font-weight: 500;
   font-size: rem(18px);
   line-height: 130%;
   color: var(--color-text, $dark-text);
+  transition: color $style-change-duration;
 
   @media (min-width: $desktop-width) {
     width: 80%;
+
+    &:hover:not(.focus-visible) {
+      color: var(--color-interactive-default, $blue-default);
+    }
   }
 
   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1){

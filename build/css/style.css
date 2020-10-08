@@ -5205,13 +5205,18 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .proposal-list__title {
   margin: 0;
+  text-decoration: none;
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 130%;
-  color: var(--color-text, #354052); }
+  color: var(--color-text, #354052);
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
   @media (min-width: 1200px) {
     .proposal-list__title {
-      width: 80%; } }
+      width: 80%; }
+      .proposal-list__title:hover:not(.focus-visible) {
+        color: var(--color-interactive-default, #2c8ecc); } }
   @media (min-width: 768px) and (max-width: 1199px) {
     .proposal-list__title {
       width: 100%;
