@@ -4963,7 +4963,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-bottom: 35px; }
   @media (max-width: 767px) {
     .area-improvement__stage-wrapper {
-      margin-bottom: 33px; } }
+      margin-bottom: 32px; } }
 
 .area-improvement__text {
   font-size: 0.9375rem;
@@ -5075,7 +5075,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     margin-right: 0; }
     @media (max-width: 767px) {
       .improvement-stage__wrapper--line-height {
-        line-height: 150%; } }
+        line-height: 150%;
+        margin-bottom: 0; } }
 
 .improvement-stage__status {
   padding-left: 19px;
@@ -5109,7 +5110,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   list-style: none; }
 
 .proposal-list__item {
-  padding: 41px 0 33px;
+  padding: 41px 0 32px;
   border-top: 1px solid var(--color-stroke, #e3e8ee);
   border-bottom: 1px solid var(--color-stroke, #e3e8ee); }
   @media (min-width: 768px) {
@@ -5188,10 +5189,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   @media (min-width: 768px) {
     .proposal-list__address {
       margin-bottom: 4px;
-      margin-right: 9px; } }
+      margin-right: 9px;
+      min-width: 50%; } }
   @media (max-width: 767px) {
     .proposal-list__address {
-      margin-bottom: 8px; } }
+      margin-bottom: 24px; } }
   .proposal-list__address svg {
     color: var(--color-text, #a6abb3);
     margin-right: 5px;
@@ -5214,7 +5216,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   transition: color 0.2s; }
   @media (min-width: 1200px) {
     .proposal-list__title {
-      width: 80%; }
+      display: inline-block;
+      max-width: 80%; }
       .proposal-list__title:hover:not(.focus-visible) {
         color: var(--color-interactive-default, #2c8ecc); } }
   @media (min-width: 768px) and (max-width: 1199px) {
@@ -5223,6 +5226,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       margin-bottom: 24px; } }
   @media (max-width: 767px) {
     .proposal-list__title {
+      display: block;
       margin-top: 24px;
       margin-bottom: 22px; } }
   @media (min-width: 768px) and (max-width: 1199px) {
