@@ -273,8 +273,10 @@
   .gallery-popup__nav-btn {
     width: 142px;
 
-    &:hover:not(.focus-visible) {
-      color: var(--color-text, $white);
+    @media (min-width: $desktop-width) {
+      &:hover:not(.focus-visible) {
+        color: var(--color-text, $white);
+      }
     }
 
     svg {
@@ -315,9 +317,6 @@
 
       .gallery-popup__nav-btn {
 
-        &:hover:not(.focus-visible) {
-          color: var(--color-text, $white);
-        }
         svg {
           margin-bottom: 0;
         }
