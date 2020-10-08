@@ -9475,7 +9475,8 @@ span.poll__hide {
     margin-right: 12px;
     font-weight: 500;
     font-size: 0.9375rem;
-    line-height: 135%; }
+    line-height: 135%;
+    min-width: 40px; }
   .project-vote__like-counter svg {
     margin-bottom: 5px; }
     .project-vote__like-counter svg .stroked {
