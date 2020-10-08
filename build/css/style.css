@@ -7299,19 +7299,19 @@ span.poll__hide {
 @media (max-width: 767px) {
   .gallery-popup {
     background-color: var(--color-bg-main, #ffffff); }
-  .gallery-popup .popup__container {
+  .gallery-popup:not(.gallery-popup--proposal) .popup__container {
     display: block;
     padding: 60px 16px 92px; }
-  .gallery-popup .popup__overlay {
+  .gallery-popup:not(.gallery-popup--proposal) .popup__overlay {
     display: none; }
-  .gallery-popup .popup__bar {
+  .gallery-popup:not(.gallery-popup--proposal) .popup__bar {
     position: fixed;
     z-index: 2;
     right: 0;
     left: 0; }
-    .gallery-popup .popup__bar--top {
+    .gallery-popup:not(.gallery-popup--proposal) .popup__bar--top {
       top: 0; }
-    .gallery-popup .popup__bar--bottom {
+    .gallery-popup:not(.gallery-popup--proposal) .popup__bar--bottom {
       bottom: 0;
       -webkit-box-pack: start;
           -ms-flex-pack: start;
@@ -7320,6 +7320,70 @@ span.poll__hide {
   .gallery-popup__frame {
     height: 230px;
     margin-bottom: 24px; } }
+
+.gallery-popup--proposal .gallery-popup__content {
+  display: grid;
+  grid-template-areas: "top-bar" "frame" "bottom-bar";
+  grid-template-columns: 1fr;
+  grid-template-rows: 64px auto 98px;
+  background-color: #21252b;
+  height: 658px; }
+
+.gallery-popup--proposal .gallery-popup__photo-description {
+  grid-area: description;
+  display: none; }
+
+.gallery-popup--proposal .gallery-popup__frame {
+  width: 100%; }
+
+.gallery-popup--proposal .popup__bar--bottom {
+  background-color: #21252b;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .gallery-popup--proposal .popup__bar--bottom .gallery-popup__counter {
+    min-width: 55px;
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0; }
+    .gallery-popup--proposal .popup__bar--bottom .gallery-popup__counter .gallery-popup__counter-current,
+    .gallery-popup--proposal .popup__bar--bottom .gallery-popup__counter .gallery-popup__counter-total {
+      min-width: 20px; }
+
+.gallery-popup--proposal .gallery-popup__frame .gallery__item-link,
+.gallery-popup--proposal .gallery-popup__frame .gallery__item,
+.gallery-popup--proposal .gallery-popup__frame .gallery__item-img {
+  width: 100%;
+  height: auto; }
+
+@media (max-width: 1199px) {
+  .gallery-popup--proposal .gallery-popup__content {
+    background-color: var(--color-bg-main, #ffffff);
+    height: 604px;
+    grid-template-rows: 72px auto 132px; }
+  .gallery-popup--proposal .popup__bar--top .popup__close-btn {
+    width: 44px; }
+  .gallery-popup--proposal .gallery-popup__frame {
+    height: 100%;
+    margin-bottom: 0; }
+  .gallery-popup--proposal .popup__bar--bottom {
+    background-color: var(--color-bg-main, #ffffff);
+    padding: 0; }
+    .gallery-popup--proposal .popup__bar--bottom .gallery-popup__nav-btn {
+      width: 118px; } }
+
+@media (max-width: 767px) {
+  .gallery-popup--proposal .gallery-popup__content {
+    height: 406px;
+    grid-template-rows: 60px auto 116px;
+    padding-left: 16px;
+    padding-right: 16px; }
+  .gallery-popup--proposal .gallery-popup__frame .gallery__item-link,
+  .gallery-popup--proposal .gallery-popup__frame .gallery__item,
+  .gallery-popup--proposal .gallery-popup__frame .gallery__item-img {
+    min-height: 230px; }
+  .gallery-popup--proposal .popup__bar--top .popup__close-btn {
+    width: 30px; } }
 
 .page-header {
   width: 100%;
@@ -8608,7 +8672,7 @@ span.poll__hide {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 0.9375rem;
-  line-height: 1.26563rem; }
+  line-height: 1.26562rem; }
   .proposal-winners__status:before {
     display: none; }
 
@@ -8707,7 +8771,7 @@ span.poll__hide {
     display: block;
     padding: 15px 15px;
     font-size: 0.9375rem;
-    line-height: 1.26563rem;
+    line-height: 1.26562rem;
     font-weight: 500;
     color: #2C8ECC;
     text-transform: uppercase; }
@@ -8875,7 +8939,7 @@ span.poll__hide {
           align-items: center;
   padding-top: 4px;
   font-size: 0.9375rem;
-  line-height: 1.26563rem;
+  line-height: 1.26562rem;
   color: #116CA6;
   text-decoration: none; }
   .map-popup__details-btn span {
