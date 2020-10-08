@@ -4495,7 +4495,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       margin-right: 24px; } }
   @media (max-width: 767px) {
     .proposal--approved .proposal__title {
-      margin-bottom: 32px;
+      margin-bottom: 24px;
       margin-left: 16px;
       margin-right: 16px; } }
   .proposal--approved .proposal__title--declined {
@@ -7364,8 +7364,9 @@ span.poll__hide {
 
 .gallery-popup--proposal .gallery-popup__nav-btn {
   width: 142px; }
-  .gallery-popup--proposal .gallery-popup__nav-btn:hover:not(.focus-visible) {
-    color: var(--color-text, #ffffff); }
+  @media (min-width: 1200px) {
+    .gallery-popup--proposal .gallery-popup__nav-btn:hover:not(.focus-visible) {
+      color: var(--color-text, #ffffff); } }
   .gallery-popup--proposal .gallery-popup__nav-btn svg {
     margin-bottom: 2px; }
 
@@ -7385,8 +7386,6 @@ span.poll__hide {
   .gallery-popup--proposal .popup__bar--bottom {
     background-color: var(--color-bg-main, #ffffff);
     padding: 0; }
-    .gallery-popup--proposal .popup__bar--bottom .gallery-popup__nav-btn:hover:not(.focus-visible) {
-      color: var(--color-text, #ffffff); }
     .gallery-popup--proposal .popup__bar--bottom .gallery-popup__nav-btn svg {
       margin-bottom: 0; } }
 
