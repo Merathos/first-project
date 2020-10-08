@@ -254,6 +254,7 @@
     .gallery-popup__counter {
       min-width: 55px;
       flex-grow: 0;
+      color: var(--color-text, $white);
 
       .gallery-popup__counter-current,
       .gallery-popup__counter-total {
@@ -271,6 +272,10 @@
 
   .gallery-popup__nav-btn {
     width: 142px;
+
+    &:hover:not(.focus-visible) {
+      color: var(--color-text, $white);
+    }
 
     svg {
       margin-bottom: 2px;
@@ -296,6 +301,12 @@
     .gallery-popup__frame {
       height: 100%;
       margin-bottom: 0;
+
+      border-radius: 5px;
+    }
+
+    .popup__bar--bottom .gallery-popup__counter {
+      color: var(--color-text, $grey-default);
     }
 
     .popup__bar--bottom {
@@ -303,6 +314,10 @@
       padding: 0;
 
       .gallery-popup__nav-btn {
+
+        &:hover:not(.focus-visible) {
+          color: var(--color-text, $white);
+        }
         svg {
           margin-bottom: 0;
         }
