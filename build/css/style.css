@@ -7301,7 +7301,9 @@ span.poll__hide {
 .gallery-popup--proposal .gallery-popup__frame .gallery__item,
 .gallery-popup--proposal .gallery-popup__frame .gallery__item-img {
   width: 100%;
-  height: auto; }
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain; }
 
 .gallery-popup--proposal .gallery-popup__nav-btn {
   width: 142px; }
