@@ -60,7 +60,7 @@
     }
 
     .improvement-fork__title {
-        margin-bottom: 33px;
+        margin-bottom: 32px;
         font-size: rem(24px);
         line-height: rem(28.44px);
     }
@@ -70,7 +70,7 @@
     }
 
     .improvement-fork__status-container {
-        margin-bottom: 0;
+        margin-bottom: 32px;
     }
 
     .improvement-fork__content {
@@ -92,5 +92,10 @@
         span {
             padding: 0;
         }
+    }
+
+    .improvement-fork__back {
+        margin-left: 4px;
+        margin-bottom: 28px;
     }
 }
