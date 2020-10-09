@@ -28,14 +28,6 @@
     background-repeat: no-repeat;
     background-size: 100% 1px;
 
-    &--yours {
-        a {
-            font-size: rem(18px);
-            line-height: rem(23.4px);
-            font-weight: 500;
-        }
-    }
-
     &:last-child {
         background-image: none;
     }
@@ -45,6 +37,12 @@
     width: 82%;
     font-size: rem(16px);
     line-height: 21.6px;
+
+    &--yours {
+        font-size: rem(18px);
+        line-height: rem(23.4px);
+        font-weight: 500;
+    }
 }
 
 .proposal-winners__status {
@@ -69,6 +67,7 @@
 
     svg {
         margin-right: 5px;
+        margin-bottom: 2px;
     }
 }
 
@@ -259,5 +258,41 @@
 
     .proposal-winners__map-container {
         height: 100%;
+    }
+
+    .proposal-winners__close-map-btn {
+        @include btn-reset;
+        position: absolute;
+        top: 2px;
+        right: 1px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        
+        &::before,
+        &::after {
+            position: absolute;
+            left: 12px;
+            top: 3px;
+            content: "";
+            height: 19px;
+            width: 2px;
+            background-color: #BFBFBF;
+        }
+    
+        &::before {
+            transform: rotate(45deg);
+        }
+    
+        &::after {
+            transform: rotate(-45deg);
+        }
+    
+        &:hover {
+            &::before,
+            &::after {
+                background-color: #7e7e7e;
+            }
+        }
     }
 }
