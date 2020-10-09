@@ -6591,10 +6591,11 @@ span.poll__hide {
   margin-bottom: 10px; }
   @media (max-width: 1199px) {
     .concurrent-voting {
+      padding-top: 79px;
       margin-bottom: 25px; } }
   @media (max-width: 767px) {
     .concurrent-voting {
-      padding: 24px 0 0;
+      padding: 64px 0 0;
       margin-bottom: 0; } }
 
 .concurrent-voting__archive {
