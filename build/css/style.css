@@ -8026,7 +8026,9 @@ span.poll__hide {
 
 @media (max-width: 767px) {
   .projects-2 .paginator {
-    margin-top: 49px; } }
+    margin-top: 49px; }
+  .projects-2 .back-btn {
+    margin-bottom: 26px; } }
 
 .filter-2 .filter__header {
   margin-bottom: 43px; }
@@ -8080,7 +8082,7 @@ span.poll__hide {
 
 .filter-2__checkbox {
   margin: 0;
-  margin-left: 60px; }
+  margin-left: 101px; }
 
 @media (max-width: 1199px) {
   .filter-2 {
@@ -8088,13 +8090,19 @@ span.poll__hide {
   .filter-2__body {
     padding: 23px 23px; }
   .filter-2 .filter__header {
-    max-width: 740px; } }
+    max-width: 740px; }
+  .filter-2__checkbox {
+    margin: 0;
+    margin-left: 60px; } }
 
 @media (max-width: 767px) {
   .filter-2 {
-    margin-top: 40px; }
+    margin-top: 35px;
+    margin-bottom: 30px; }
     .filter-2 .filter__open-btn {
       display: none; }
+    .filter-2 .filter__header {
+      margin-bottom: 35px; }
   .filter-2__body {
     margin-bottom: 31px;
     -webkit-box-orient: vertical;
@@ -8741,7 +8749,7 @@ span.poll__hide {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 0.9375rem;
-  line-height: 1.26562rem; }
+  line-height: 1.26563rem; }
   .proposal-winners__status:before {
     display: none; }
 
@@ -8840,7 +8848,7 @@ span.poll__hide {
     display: block;
     padding: 15px 15px;
     font-size: 0.9375rem;
-    line-height: 1.26562rem;
+    line-height: 1.26563rem;
     font-weight: 500;
     color: #2C8ECC;
     text-transform: uppercase; }
@@ -9034,7 +9042,7 @@ span.poll__hide {
           align-items: center;
   padding-top: 4px;
   font-size: 0.9375rem;
-  line-height: 1.26562rem;
+  line-height: 1.26563rem;
   color: #116CA6;
   text-decoration: none; }
   .map-popup__details-btn span {

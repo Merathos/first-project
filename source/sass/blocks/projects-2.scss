@@ -15,17 +15,15 @@
         .paginator {
             margin-top: 64px;
         }
-
-        // .ss-3371 {
-        //     .ss-content {
-        //         left: 0;
-        //     }
-        // }
     }
 
     @include mobile {
         .paginator {
             margin-top: 49px;
+        }
+
+        .back-btn {
+            margin-bottom: 26px;
         }
     }
 }
