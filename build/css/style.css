@@ -5223,7 +5223,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   line-height: 135%; }
   @media (min-width: 768px) {
     .proposal-list__item--userless .proposal-list__title {
-      width: 80%;
+      max-width: 75%;
       margin-bottom: 0; } }
 
 .image-uploads h2 {
