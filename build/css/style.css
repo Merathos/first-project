@@ -5260,7 +5260,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-weight: normal;
   font-size: 0.8125rem;
   line-height: 130%;
-  color: var(--color-text, #a6abb3); }
+  color: var(--color-text, #a6abb3);
+  cursor: pointer; }
   @media (min-width: 768px) {
     .proposal-list__like-counter {
       margin-top: 5px;
@@ -5275,9 +5276,16 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .proposal-list__like-counter svg {
     width: 20px;
     height: 20px;
-    margin-top: -2px; }
+    margin-top: -5px;
+    -ms-flex-item-align: start;
+        align-self: flex-start; }
   .proposal-list__like-counter .stroked {
-    fill: var(--color-text, #a6abb3); }
+    fill: var(--color-text, #a6abb3);
+    -webkit-transition: fill 0.2s;
+    transition: fill 0.2s; }
+  .proposal-list__like-counter .filled {
+    -webkit-transition: fill 0.2s;
+    transition: fill 0.2s; }
   .proposal-list__like-counter--liked {
     color: var(--color-interactive-accent, #116ca6); }
     .proposal-list__like-counter--liked .stroked {

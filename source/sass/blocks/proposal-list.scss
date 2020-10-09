@@ -160,7 +160,23 @@
   font-size: rem(13px);
   line-height: 130%;
 
+  // min-height: 26px;
+
   color: var(--color-text, $grey-default);
+
+  cursor: pointer;
+
+  // @media (min-width: $desktop-width) {
+  //   &:hover:not(.focus-visible) svg {
+  //     .stroked {
+  //       fill: transparent;
+  //     }
+
+  //     .filled {
+  //       fill: var(--color-interactive-default, $blue-default);
+  //     }
+  //   }
+  // }
 
   @media (min-width: $tablet-width) {
     margin-top: 5px;
@@ -179,22 +195,27 @@
   svg {
     width: 20px;
     height: 20px;
-
-    margin-top: -2px;
+    margin-top: -5px;
+    align-self: flex-start;
   }
 
-  & .stroked {
+  .stroked {
     fill: var(--color-text, $grey-default);
+    transition: fill $style-change-duration;
+  }
+
+  .filled {
+    transition: fill $style-change-duration;
   }
 
   &--liked {
     color: var(--color-interactive-accent, $blue-accent);
 
-    & .stroked {
+    .stroked {
       fill: transparent;
     }
 
-    & .filled {
+    .filled {
       fill: var(--color-interactive-accent, $blue-accent)
     }
   }
