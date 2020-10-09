@@ -273,10 +273,19 @@
     return customSelectInstance;
   };
 
+  var addProposalSelect = function (el) {
+    var customSelectInstance = new window.SlimSelect({
+      select: el,
+      showSearch: false,
+    });
+    return customSelectInstance;
+  };
 
   selects.forEach(function (select) {
     addSelect(select);
   });
+
+  addProposalSelect(document.querySelector('.js-form-select-improvement select'));
 
 
   window.addSelect = addSelect;
