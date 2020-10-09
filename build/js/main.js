@@ -274,19 +274,22 @@
   };
 
   var addProposalSelect = function (el) {
-    var customSelectInstance = new window.SlimSelect({
+    var customProposalSelectInstance = new window.SlimSelect({
       select: el,
       showSearch: false,
     });
-    return customSelectInstance;
+    return customProposalSelectInstance;
   };
 
   selects.forEach(function (select) {
     addSelect(select);
   });
 
-  addProposalSelect(document.querySelector('.js-form-select-improvement select'));
+  var proposalSelects = document.querySelector('.js-form-select-improvement select');
 
+  if (proposalSelects) {
+    addProposalSelect(proposalSelects);
+  }
 
   window.addSelect = addSelect;
 })();
