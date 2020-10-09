@@ -221,7 +221,7 @@
     line-height: 135%;
 
     @media (min-width: $tablet-width ) {
-      width: 80%;
+      max-width: 75%;
       margin-bottom: 0;
     }
   }
