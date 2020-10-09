@@ -1,6 +1,12 @@
+.filter-2 {
+    .filter__header {
+        margin-bottom: 43px;
+    }
+}
+
 .filter-2__body {
     display: flex;
-    padding: 24px 32px;
+    padding: 20px 32px;
     border: 1px solid var(--color-stroke, $light-grey);
     border-radius: $border-radius;
 }
@@ -44,7 +50,23 @@
 
 .filter-2__checkbox {
     margin: 0;
-    margin-left: 102px;
+    margin-left: 60px;
+}
+
+@include tablet {
+    .filter-2 {
+        margin-bottom: 40px;
+    }
+
+    .filter-2__body {
+        padding: 23px 23px;
+    }
+
+    .filter-2 {
+        .filter__header {
+            max-width: 740px;
+        }
+    }
 }
 
 @include mobile {

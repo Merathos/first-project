@@ -1,0 +1,31 @@
+.projects-2 {
+    .info-banner {
+        margin-bottom: 37px;
+    }
+
+    .paginator {
+        margin-top: 49px;
+    }
+
+    @include tablet {
+        .back-btn {
+            margin-bottom: 38px;
+        }
+
+        .paginator {
+            margin-top: 64px;
+        }
+
+        // .ss-3371 {
+        //     .ss-content {
+        //         left: 0;
+        //     }
+        // }
+    }
+
+    @include mobile {
+        .paginator {
+            margin-top: 49px;
+        }
+    }
+}
