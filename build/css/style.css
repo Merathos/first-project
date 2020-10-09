@@ -5255,8 +5255,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-weight: normal;
   font-size: 0.8125rem;
   line-height: 130%;
-  color: var(--color-text, #a6abb3);
-  cursor: pointer; }
+  color: var(--color-text, #a6abb3); }
   @media (min-width: 768px) {
     .proposal-list__like-counter {
       margin-top: 5px;
