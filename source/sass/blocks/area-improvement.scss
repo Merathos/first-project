@@ -27,6 +27,7 @@
 
 .area-improvement__title {
   margin-bottom: 40px;
+  max-width: 1120px;
 
   @media (max-width: $desktop-width - 1) {
     font-size: rem(30px);

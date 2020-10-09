@@ -41,9 +41,6 @@
   font-size: rem(14px);
   line-height: 130%;
 
-  text-decoration: none;
-  transition: color $style-change-duration, opacity $style-change-duration;
-
   @media (min-width: $tablet-width) {
     margin-bottom: 4px;
     margin-right: 9px;
@@ -51,12 +48,6 @@
 
   @media (max-width: $tablet-width - 1) {
     margin-bottom: 8px;
-  }
-
-  @media (min-width: $desktop-width) {
-    &:hover:not(.focus-visible) {
-      opacity: 0.8;
-    }
   }
 
   svg {
