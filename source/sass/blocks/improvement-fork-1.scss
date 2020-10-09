@@ -5,7 +5,7 @@
 
 .improvement-fork__title {
     margin-bottom: 40px;
-    max-width: 1120px;
+    max-width: 1040px;
 }
 
 .improvement-fork__content {
@@ -18,7 +18,7 @@
 }
 
 .improvement-fork__status-container {
-    margin-bottom: 33px;
+    margin-bottom: 35px;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
@@ -31,6 +31,10 @@
     padding-left: 24px;
     padding-top: 24px;
     text-align: start;
+}
+
+.improvement-fork__back {
+    margin-left: 2px;
 }
 
 @include tablet {
