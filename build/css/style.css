@@ -4322,7 +4322,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   -webkit-transition: color 0.15s ease;
   transition: color 0.15s ease; }
   .info-banner-button__text {
-    margin-right: 9px; }
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 9px;
+    min-width: 84px;
+    text-align: left; }
     .info-banner-button__text_opened {
       display: none; }
     .info-banner-button__text_closed {
