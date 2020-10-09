@@ -4989,12 +4989,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   @media (max-width: 1199px) {
     .area-improvement--list .area-improvement__info {
       margin-bottom: 39px; } }
-  @media (max-width: 767px) {
-    .area-improvement--list .area-improvement__info {
-      padding: 24px; }
-      .area-improvement--list .area-improvement__info svg {
-        top: 28px;
-        left: 24px; } }
 
 @media (max-width: 767px) {
   .area-improvement--list .area-improvement__text {
@@ -5012,8 +5006,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center; } }
-  .area-improvement--list .area-improvement__select .ss-main {
-    width: 100%; }
+  @media (max-width: 767px) {
+    .area-improvement--list .area-improvement__select .ss-main {
+      width: 100%; } }
   .area-improvement--list .area-improvement__select .ss-single-selected {
     padding: 15px 16px 15px 23px; }
     @media (max-width: 767px) {
