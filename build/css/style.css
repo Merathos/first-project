@@ -8608,13 +8608,13 @@ span.poll__hide {
     padding: 27px 0;
     padding-bottom: 70px; }
   .improvement-fork__title {
-    margin-bottom: 33px;
+    margin-bottom: 32px;
     font-size: 1.5rem;
     line-height: 1.7775rem; }
   .improvement-fork__back {
     margin-bottom: 30px; }
   .improvement-fork__status-container {
-    margin-bottom: 0; }
+    margin-bottom: 32px; }
   .improvement-fork__content p {
     margin-top: 7px; }
   .improvement-fork__btn {
@@ -8625,7 +8625,10 @@ span.poll__hide {
     .improvement-fork__btn svg {
       display: none; }
     .improvement-fork__btn span {
-      padding: 0; } }
+      padding: 0; }
+  .improvement-fork__back {
+    margin-left: 4px;
+    margin-bottom: 28px; } }
 
 .improvement-fork-4 {
   position: relative; }
@@ -8649,7 +8652,7 @@ span.poll__hide {
 
 @media (max-width: 767px) {
   .improvement-fork-4 .improvement-fork__back {
-    margin-bottom: 23px; }
+    margin-bottom: 28px; }
   .improvement-fork-4 .improvement-fork__title {
     margin-bottom: 32px; } }
 
