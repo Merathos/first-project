@@ -4938,7 +4938,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       margin-bottom: 28px; } }
 
 .area-improvement__title {
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+  max-width: 1120px; }
   @media (max-width: 1199px) {
     .area-improvement__title {
       font-size: 1.875rem;
@@ -8693,7 +8694,7 @@ span.poll__hide {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 0.9375rem;
-  line-height: 1.26563rem; }
+  line-height: 1.26562rem; }
   .proposal-winners__status:before {
     display: none; }
 
@@ -8792,7 +8793,7 @@ span.poll__hide {
     display: block;
     padding: 15px 15px;
     font-size: 0.9375rem;
-    line-height: 1.26563rem;
+    line-height: 1.26562rem;
     font-weight: 500;
     color: #2C8ECC;
     text-transform: uppercase; }
@@ -8986,7 +8987,7 @@ span.poll__hide {
           align-items: center;
   padding-top: 4px;
   font-size: 0.9375rem;
-  line-height: 1.26563rem;
+  line-height: 1.26562rem;
   color: #116CA6;
   text-decoration: none; }
   .map-popup__details-btn span {
