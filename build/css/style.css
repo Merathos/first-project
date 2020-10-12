@@ -5181,7 +5181,13 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-weight: normal;
   font-size: 0.8125rem;
   line-height: 130%;
-  color: var(--color-text, #a6abb3); }
+  color: var(--color-text, #a6abb3);
+  cursor: pointer; }
+  @media (min-width: 1200px) {
+    .proposal-list__like-counter:hover:not(.focus-visible) svg .stroked {
+      fill: var(--color-interactive-accent, #116ca6); }
+    .proposal-list__like-counter:hover:not(.focus-visible) span {
+      color: var(--color-interactive-accent, #116ca6); } }
   @media (min-width: 768px) {
     .proposal-list__like-counter {
       margin-top: 5px;
@@ -5192,11 +5198,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .proposal-list__like-counter {
       margin-top: 27px; } }
   .proposal-list__like-counter span {
-    margin-right: 13px; }
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+    min-width: 35px; }
   .proposal-list__like-counter svg {
     width: 20px;
     height: 20px;
     margin-top: -5px;
+    margin-left: 13px;
     -ms-flex-item-align: start;
         align-self: flex-start; }
   .proposal-list__like-counter .stroked {
@@ -5206,12 +5215,18 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .proposal-list__like-counter .filled {
     -webkit-transition: fill 0.2s;
     transition: fill 0.2s; }
-  .proposal-list__like-counter--liked {
-    color: var(--color-interactive-accent, #116ca6); }
-    .proposal-list__like-counter--liked .stroked {
+
+.liked {
+  color: var(--color-interactive-accent, #116ca6); }
+  @media (min-width: 1200px) {
+    .liked:hover:not(.focus-visible) svg .stroked {
       fill: transparent; }
-    .proposal-list__like-counter--liked .filled {
-      fill: var(--color-interactive-accent, #116ca6); }
+    .liked:hover:not(.focus-visible) span {
+      color: var(--color-interactive-accent, #116ca6); } }
+  .liked .stroked {
+    fill: transparent; }
+  .liked .filled {
+    fill: var(--color-interactive-accent, #116ca6); }
 
 @media (min-width: 768px) {
   .proposal-list__item--userless .proposal-list__address {
