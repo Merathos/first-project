@@ -6,17 +6,17 @@
     infoBanner.forEach(function (banner) {
       var bannerText = banner.querySelector('.info-banner__text');
       var bannerToggleTextButton = banner.querySelector('.info-banner__button');
-      var textSpan = bannerToggleTextButton.querySelector('.info-banner-button__text');
-
-      var changeButtonText = function () {
-        if (bannerToggleTextButton.classList.contains('opened')) {
-          textSpan.textContent = 'Свернуть';
-        } else {
-          textSpan.textContent = 'Развернуть';
-        }
-      };
 
       if (bannerText && bannerToggleTextButton) {
+
+        var textSpan = bannerToggleTextButton.querySelector('.info-banner-button__text');
+        var changeButtonText = function () {
+          if (bannerToggleTextButton.classList.contains('opened')) {
+            textSpan.textContent = 'Свернуть';
+          } else {
+            textSpan.textContent = 'Развернуть';
+          }
+        };
         // Количество строк текста
         var bannerTextHeight = bannerText.getBoundingClientRect().height;
         var bannerTextLineHeight = +getComputedStyle(

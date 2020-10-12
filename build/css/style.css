@@ -4176,20 +4176,20 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       content: ""; }
   .info-banner_enough-lines_true .info-banner__button {
     display: initial; }
-  .info-banner--warning .info-banner__text, .info-banner--approved .info-banner__text {
+  .info-banner--warning .info-banner__text, .info-banner--approved .info-banner__text, .info-banner--declined .info-banner__text {
     margin-bottom: 6px; }
   @media (max-width: 767px) {
-    .info-banner--warning, .info-banner--approved {
+    .info-banner--warning, .info-banner--approved, .info-banner--declined {
       padding: 24px 32px 22px 64px;
       margin: 14px 0 40px; }
-      .info-banner--warning .info-banner__title, .info-banner--approved .info-banner__title {
+      .info-banner--warning .info-banner__title, .info-banner--approved .info-banner__title, .info-banner--declined .info-banner__title {
         margin-top: 0;
         margin-bottom: 7px;
         padding: 0; }
-      .info-banner--warning .info-banner__text, .info-banner--approved .info-banner__text {
+      .info-banner--warning .info-banner__text, .info-banner--approved .info-banner__text, .info-banner--declined .info-banner__text {
         margin: 0;
         font-size: 0.9375rem; }
-      .info-banner--warning .info-banner__icon, .info-banner--approved .info-banner__icon {
+      .info-banner--warning .info-banner__icon, .info-banner--approved .info-banner__icon, .info-banner--declined .info-banner__icon {
         top: 23px;
         left: 23px; } }
   .info-banner--warning {
