@@ -159,7 +159,7 @@
     &:hover:not(.focus-visible) {
       svg {
         .stroked {
-          fill: var(--color-interactive-accent, $blue-accent);
+          fill: var(--color-interactive-default, $blue-default);
         }
       }
 
@@ -225,7 +225,7 @@
   }
 
   .filled {
-    fill: var(--color-interactive-accent, $blue-accent)
+    fill: var(--color-interactive-default, $blue-default)
   }
 }
 

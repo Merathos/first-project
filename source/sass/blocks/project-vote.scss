@@ -228,13 +228,18 @@
   cursor: pointer;
 
   @media (min-width: $desktop-width) {
-    &:hover:not(.focus-visible) svg {
-      .stroked {
-        fill: transparent;
-      }
+    &:hover:not(.focus-visible) {
+      svg {
+        .stroked {
+          fill: transparent;
+        }
 
-      .filled {
-        fill: var(--color-interactive-default, $blue-default);
+        .filled {
+          fill: var(--color-interactive-default, $blue-default);
+        }
+      }
+      span {
+        color: var(--color-interactive-default, $blue-default);
       }
     }
   }
@@ -265,17 +270,21 @@
       transition: fill $style-change-duration;
     }
   }
+}
 
-  &--liked {
-    svg {
-      .filled {
-        fill: var(--color-interactive-default, $blue-default);
-      }
-
-      .stroked {
-        fill: transparent;
-      }
+.project-vote .liked {
+  svg {
+    .filled {
+      fill: var(--color-interactive-default, $blue-default);
     }
+
+    .stroked {
+      fill: transparent;
+    }
+  }
+
+  span {
+    color: var(--color-interactive-default, $blue-default);
   }
 }
 
