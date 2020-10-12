@@ -153,17 +153,21 @@
 
   color: var(--color-text, $grey-default);
 
-  // @media (min-width: $desktop-width) {
-  //   &:hover:not(.focus-visible) svg {
-  //     .stroked {
-  //       fill: transparent;
-  //     }
+  cursor: pointer;
 
-  //     .filled {
-  //       fill: var(--color-interactive-default, $blue-default);
-  //     }
-  //   }
-  // }
+  @media (min-width: $desktop-width) {
+    &:hover:not(.focus-visible) {
+      svg {
+        .stroked {
+          fill: var(--color-interactive-accent, $blue-accent);
+        }
+      }
+
+      span {
+        color: var(--color-interactive-accent, $blue-accent);
+      }
+    }
+  }
 
   @media (min-width: $tablet-width) {
     margin-top: 5px;
@@ -176,13 +180,15 @@
   }
 
   span {
-    margin-right: 13px;
+    transition: color $style-change-duration;
+    min-width: 35px;
   }
 
   svg {
     width: 20px;
     height: 20px;
     margin-top: -5px;
+    margin-left: 13px;
     align-self: flex-start;
   }
 
@@ -194,17 +200,32 @@
   .filled {
     transition: fill $style-change-duration;
   }
+}
 
-  &--liked {
-    color: var(--color-interactive-accent, $blue-accent);
+.liked {
+  color: var(--color-interactive-accent, $blue-accent);
 
-    .stroked {
-      fill: transparent;
+  @media (min-width: $desktop-width) {
+    &:hover:not(.focus-visible) {
+
+      svg {
+        .stroked {
+          fill: transparent;
+        }
+      }
+
+      span {
+        color: var(--color-interactive-accent, $blue-accent);
+      }
     }
+  }
 
-    .filled {
-      fill: var(--color-interactive-accent, $blue-accent)
-    }
+  .stroked {
+    fill: transparent;
+  }
+
+  .filled {
+    fill: var(--color-interactive-accent, $blue-accent)
   }
 }
 

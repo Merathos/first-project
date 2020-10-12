@@ -158,7 +158,8 @@
   }
 
   &--warning,
-  &--approved {
+  &--approved,
+  &--declined {
 
     .info-banner__text {
       margin-bottom: 6px;

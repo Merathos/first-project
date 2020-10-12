@@ -4176,20 +4176,20 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       content: ""; }
   .info-banner_enough-lines_true .info-banner__button {
     display: initial; }
-  .info-banner--warning .info-banner__text, .info-banner--approved .info-banner__text {
+  .info-banner--warning .info-banner__text, .info-banner--approved .info-banner__text, .info-banner--declined .info-banner__text {
     margin-bottom: 6px; }
   @media (max-width: 767px) {
-    .info-banner--warning, .info-banner--approved {
+    .info-banner--warning, .info-banner--approved, .info-banner--declined {
       padding: 24px 32px 22px 64px;
       margin: 14px 0 40px; }
-      .info-banner--warning .info-banner__title, .info-banner--approved .info-banner__title {
+      .info-banner--warning .info-banner__title, .info-banner--approved .info-banner__title, .info-banner--declined .info-banner__title {
         margin-top: 0;
         margin-bottom: 7px;
         padding: 0; }
-      .info-banner--warning .info-banner__text, .info-banner--approved .info-banner__text {
+      .info-banner--warning .info-banner__text, .info-banner--approved .info-banner__text, .info-banner--declined .info-banner__text {
         margin: 0;
         font-size: 0.9375rem; }
-      .info-banner--warning .info-banner__icon, .info-banner--approved .info-banner__icon {
+      .info-banner--warning .info-banner__icon, .info-banner--approved .info-banner__icon, .info-banner--declined .info-banner__icon {
         top: 23px;
         left: 23px; } }
   .info-banner--warning {
@@ -5181,7 +5181,13 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-weight: normal;
   font-size: 0.8125rem;
   line-height: 130%;
-  color: var(--color-text, #a6abb3); }
+  color: var(--color-text, #a6abb3);
+  cursor: pointer; }
+  @media (min-width: 1200px) {
+    .proposal-list__like-counter:hover:not(.focus-visible) svg .stroked {
+      fill: var(--color-interactive-accent, #116ca6); }
+    .proposal-list__like-counter:hover:not(.focus-visible) span {
+      color: var(--color-interactive-accent, #116ca6); } }
   @media (min-width: 768px) {
     .proposal-list__like-counter {
       margin-top: 5px;
@@ -5192,11 +5198,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .proposal-list__like-counter {
       margin-top: 27px; } }
   .proposal-list__like-counter span {
-    margin-right: 13px; }
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+    min-width: 35px; }
   .proposal-list__like-counter svg {
     width: 20px;
     height: 20px;
     margin-top: -5px;
+    margin-left: 13px;
     -ms-flex-item-align: start;
         align-self: flex-start; }
   .proposal-list__like-counter .stroked {
@@ -5206,12 +5215,18 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .proposal-list__like-counter .filled {
     -webkit-transition: fill 0.2s;
     transition: fill 0.2s; }
-  .proposal-list__like-counter--liked {
-    color: var(--color-interactive-accent, #116ca6); }
-    .proposal-list__like-counter--liked .stroked {
+
+.liked {
+  color: var(--color-interactive-accent, #116ca6); }
+  @media (min-width: 1200px) {
+    .liked:hover:not(.focus-visible) svg .stroked {
       fill: transparent; }
-    .proposal-list__like-counter--liked .filled {
-      fill: var(--color-interactive-accent, #116ca6); }
+    .liked:hover:not(.focus-visible) span {
+      color: var(--color-interactive-accent, #116ca6); } }
+  .liked .stroked {
+    fill: transparent; }
+  .liked .filled {
+    fill: var(--color-interactive-accent, #116ca6); }
 
 @media (min-width: 768px) {
   .proposal-list__item--userless .proposal-list__address {
@@ -8749,7 +8764,7 @@ span.poll__hide {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 0.9375rem;
-  line-height: 1.26563rem; }
+  line-height: 1.26562rem; }
   .proposal-winners__status:before {
     display: none; }
 
@@ -8848,7 +8863,7 @@ span.poll__hide {
     display: block;
     padding: 15px 15px;
     font-size: 0.9375rem;
-    line-height: 1.26563rem;
+    line-height: 1.26562rem;
     font-weight: 500;
     color: #2C8ECC;
     text-transform: uppercase; }
@@ -9042,7 +9057,7 @@ span.poll__hide {
           align-items: center;
   padding-top: 4px;
   font-size: 0.9375rem;
-  line-height: 1.26563rem;
+  line-height: 1.26562rem;
   color: #116CA6;
   text-decoration: none; }
   .map-popup__details-btn span {
