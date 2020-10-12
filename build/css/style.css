@@ -5185,7 +5185,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   cursor: pointer; }
   @media (min-width: 1200px) {
     .proposal-list__like-counter:hover:not(.focus-visible) svg .stroked {
-      fill: var(--color-interactive-accent, #116ca6); }
+      fill: var(--color-interactive-default, #2c8ecc); }
     .proposal-list__like-counter:hover:not(.focus-visible) span {
       color: var(--color-interactive-accent, #116ca6); } }
   @media (min-width: 768px) {
@@ -5226,7 +5226,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .liked .stroked {
     fill: transparent; }
   .liked .filled {
-    fill: var(--color-interactive-accent, #116ca6); }
+    fill: var(--color-interactive-default, #2c8ecc); }
 
 @media (min-width: 768px) {
   .proposal-list__item--userless .proposal-list__address {
@@ -9586,7 +9586,9 @@ span.poll__hide {
     .project-vote__like-counter:hover:not(.focus-visible) svg .stroked {
       fill: transparent; }
     .project-vote__like-counter:hover:not(.focus-visible) svg .filled {
-      fill: var(--color-interactive-default, #2c8ecc); } }
+      fill: var(--color-interactive-default, #2c8ecc); }
+    .project-vote__like-counter:hover:not(.focus-visible) span {
+      color: var(--color-interactive-default, #2c8ecc); } }
   .project-vote__like-counter--disabled {
     cursor: auto; }
   .project-vote__like-counter span {
@@ -9605,10 +9607,15 @@ span.poll__hide {
       fill: transparent;
       -webkit-transition: fill 0.2s;
       transition: fill 0.2s; }
-  .project-vote__like-counter--liked svg .filled {
-    fill: var(--color-interactive-default, #2c8ecc); }
-  .project-vote__like-counter--liked svg .stroked {
-    fill: transparent; }
+
+.project-vote .liked svg .filled {
+  fill: var(--color-interactive-default, #2c8ecc); }
+
+.project-vote .liked svg .stroked {
+  fill: transparent; }
+
+.project-vote .liked span {
+  color: var(--color-interactive-default, #2c8ecc); }
 
 @media (max-width: 1199px) {
   .project-vote__container--vote {
