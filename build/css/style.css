@@ -9391,7 +9391,10 @@ span.poll__hide {
   line-height: 1.18125rem; }
   @media (max-width: 767px) {
     .hearings__back-btn {
-      padding: 17px 50px; } }
+      display: block;
+      margin: 0 auto;
+      max-width: 360px;
+      padding: 17px 30px; } }
 
 .project-page__container,
 .project-page__survey {
