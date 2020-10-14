@@ -163,6 +163,9 @@
     line-height: rem(18.9px);
 
     @include mobile {
-        padding: 17px 50px;
+        display: block;
+        margin: 0 auto;
+        max-width: 360px;
+        padding: 17px 30px;
     }
 }
