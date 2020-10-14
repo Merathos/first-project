@@ -61,6 +61,10 @@
     margin-right: 9px;
     fill: none;
   }
+
+  &--address {
+    margin-top: 0;
+  }
 }
 
 .project-vote__results {
@@ -302,6 +306,10 @@
   .project-vote__expire {
     margin-top: 0;
     margin-left: auto;
+
+    &--address {
+      margin-left: 0;
+    }
   }
 
   .project-vote__results {
@@ -366,6 +374,10 @@
   .project-vote__expire {
     margin-top: 16px;
     margin-left: 0;
+
+    &--address {
+      margin-top: 0;
+    }
   }
 
   .project-vote__results,

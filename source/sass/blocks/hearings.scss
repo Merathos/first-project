@@ -1,0 +1,168 @@
+.hearings-page {
+    padding-top: 40px;
+    padding-bottom: 120px;
+
+    @include tablet {
+        padding-bottom: 85px;
+    }
+
+    @include mobile {
+        padding-top: 30px;
+        padding-bottom: 64px;
+    }
+}
+
+.hearings {
+    @media (min-width: $desktop-width) {
+        display: grid;
+        grid-template-columns: minmax(740px, 1fr) 360px;
+        grid-column-gap: 20px;
+        grid-template-areas:
+        "a   a"
+        "b   c"
+        "d   c"
+        "e   c"
+        "f   c"
+        "g   c"
+        "h   c";
+    }
+
+    > * {
+        align-self: start;
+    }
+}
+
+.hearings__title {
+    grid-area: a;
+    margin-bottom: 40px;
+    max-width: 100%;
+
+    @include mobile {
+        margin-bottom: 22px;
+    }
+}
+
+.hearings__status {
+    grid-area: b;
+    margin-bottom: 25px;
+
+    @include tablet {
+        margin-bottom: 40px;
+    }
+
+    @include mobile {
+        margin-bottom: 25px;
+    }
+}
+
+.hearings__time-frame {
+    grid-area: c;
+
+    @media (min-width: $desktop-width) {
+        position: sticky;
+        top: 90px;
+    }
+
+    @include tablet {
+        margin-bottom: 44px;
+    }
+
+    @include mobile {
+        margin-bottom: 28px;
+    }
+
+    .project-vote__expire {
+        svg {
+            color: var(--color-text, #a6abb3)
+        }
+
+        @include tablet {
+            align-self: flex-end;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
+    }
+
+    .hearings__smaller-expire {
+        font-size: rem(13px);
+        line-height: rem(16.9px);
+    }
+}
+
+.hearings__text-container {
+    grid-area: d;
+    font-size: rem(15px);
+    line-height: rem(27px);
+    color: #354052;
+
+    @include tablet {
+        margin-bottom: 40px;
+    }
+
+    @include mobile {
+        margin-bottom: 30px;
+    }
+}
+
+.hearings__files {
+    grid-area: e;
+    margin-bottom: 48px;
+
+    @include tablet {
+        margin-bottom: 45px;
+    }
+
+    @include mobile {
+        margin-bottom: 39px;
+    }
+}
+
+.hearings__gallery {
+    grid-area: f;
+    max-width: 740px;
+    margin-bottom: 47px;
+
+    @include tablet {
+        max-width: 1199px;
+        margin-right: -24px;
+        margin-bottom: 40px;
+
+        .swiper-slide:first-child {
+            padding-left: 0;
+        }
+    }
+
+    @include mobile {
+        margin-right: -16px;
+    }
+}
+
+.hearings__comments {
+    grid-area: g;
+    margin-bottom: 50px;
+    padding-bottom: 47px;
+    border-bottom: 1px solid #E3E8EE;
+    border-radius: 5px;
+
+    @include mobile {
+        margin-bottom: 42px;
+    }
+
+    .all-comments {
+        padding: 0;
+    }
+}
+
+.hearings__back-btn {
+    grid-area: h;
+    max-width: 330px;
+    padding: 17px 26px;
+    font-size: rem(14px);
+    line-height: rem(18.9px);
+
+    @include mobile {
+        padding: 17px 50px;
+    }
+}
