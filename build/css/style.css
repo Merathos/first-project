@@ -5738,7 +5738,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       .commentary-add__textarea textarea {
         height: 160px; } }
   .commentary-add__textarea p {
-    display: block;
+    display: none;
     position: absolute;
     right: 1px;
     bottom: -27px;
