@@ -7,7 +7,7 @@
   }
 
   @media (min-width: $desktop-width) {
-
+    padding-bottom: 8px;
   }
 }
 
@@ -59,6 +59,10 @@
     flex-shrink: 0;
   }
 
+  @media (min-width: $desktop-width) {
+    margin-top: 13px;
+  }
+
   span {
     padding-right: 12px;
   }
@@ -82,10 +86,6 @@
     font-size: rem(15px);
     line-height: rem(20px);
   }
-
-  @media (min-width: $desktop-width) {
-
-  }
 }
 
 .public-debate__list {
@@ -102,6 +102,20 @@
   padding: 24px 0 24px;
 
   border-bottom: 1px solid var(--color-stroke, $light-grey);
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 32px;
+    display: grid;
+    grid-template-areas:
+      "a    c"
+      "b    c";
+    }
+    grid-template-columns: 1fr 211px;
+    grid-column-gap: 56px;
+
+  & > * {
+    align-self: start;
+  }
 }
 
 .public-debate__date-wrapper {
@@ -113,6 +127,8 @@
   font-size: rem(14px);
   line-height: 130%;
   color: var(--color-text, $grey-default);
+
+  grid-area: a;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 16px;
@@ -202,23 +218,49 @@
   color: var(--color-text, $dark-text);
 
   text-decoration: none;
+
+  grid-area: b;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .public-debate__period-wrapper {
   display: flex;
   flex-flow: row wrap;
   align-items: flex-end;
+  grid-area: c;
 
-  .button-star {
-    height: 19px;
-    padding: 0;
-    margin-left: auto;
+  @media (min-width: $desktop-width) {
+    margin-top: 20px;
+
+    display: grid;
+    grid-template-areas:
+    "a    c"
+    "b    c";
+
+    & > * {
+      align-self: start;
+    }
   }
 
   &--favorite {
     .button-star {
       color: var(--color-interactive-accent, $blue-accent);
     }
+  }
+}
+
+.public-debate__period-wrapper .button-star {
+  height: 19px;
+  padding: 0;
+  margin-left: auto;
+
+  @media (min-width: $desktop-width) {
+    margin-left: 24px;
+    margin-top: 12px;
+    grid-area: c;
   }
 }
 
@@ -238,13 +280,17 @@
   }
 
   @media (min-width: $desktop-width) {
-
+    grid-area: a;
+    min-width: 100%;
+    margin-bottom: 2px;
   }
 }
 
 .public-debate__period-dates {
   font-size: rem(13px);
   line-height: 130%;
+
+  grid-area: b;
 }
 
 .public-debate__button {
@@ -275,12 +321,17 @@
   }
 
   @media (min-width: $tablet-width) {
-    max-width: 74.8%;
+    font-size: rem(15px);
+    line-height: rem(20px);
+
+    max-width: 539px;
     margin: 0 auto;
-  }
 
-  @media (min-width: $desktop-width) {
+    justify-content: flex-start;
 
+    span {
+      padding-left: 0;
+    }
   }
 }
 
