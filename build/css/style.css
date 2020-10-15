@@ -5665,6 +5665,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .public-debate {
       padding-top: 87px;
       padding-bottom: 26px; } }
+  @media (min-width: 1200px) {
+    .public-debate {
+      padding-bottom: 8px; } }
 
 .public-debate__head {
   margin-bottom: 8px;
@@ -5713,6 +5716,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
           align-self: flex-start;
       -ms-flex-negative: 0;
           flex-shrink: 0; } }
+  @media (min-width: 1200px) {
+    .public-debate__archive-link {
+      margin-top: 13px; } }
   .public-debate__archive-link span {
     padding-right: 12px; }
 
@@ -5742,7 +5748,17 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .public-debate__item {
   padding: 24px 0 24px;
-  border-bottom: 1px solid var(--color-stroke, #e3e8ee); }
+  border-bottom: 1px solid var(--color-stroke, #e3e8ee);
+  grid-template-columns: 1fr 211px;
+  grid-column-gap: 56px; }
+  @media (min-width: 1200px) {
+    .public-debate__item {
+      padding-bottom: 32px;
+      display: grid;
+      grid-template-areas: "a    c" "b    c"; } }
+  .public-debate__item > * {
+    -ms-flex-item-align: start;
+        align-self: start; }
 
 .public-debate__date-wrapper {
   margin-bottom: 24px;
@@ -5755,7 +5771,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
           flex-flow: row wrap;
   font-size: 0.875rem;
   line-height: 130%;
-  color: var(--color-text, #a6abb3); }
+  color: var(--color-text, #a6abb3);
+  grid-area: a; }
   @media (min-width: 768px) {
     .public-debate__date-wrapper {
       margin-bottom: 16px; } }
@@ -5818,7 +5835,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-size: 1rem;
   line-height: 140%;
   color: var(--color-text, #354052);
-  text-decoration: none; }
+  text-decoration: none;
+  grid-area: b; }
+  @media (min-width: 1200px) {
+    .public-debate__link {
+      margin-bottom: 0; } }
 
 .public-debate__period-wrapper {
   display: -webkit-box;
@@ -5830,13 +5851,28 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
           flex-flow: row wrap;
   -webkit-box-align: end;
       -ms-flex-align: end;
-          align-items: flex-end; }
-  .public-debate__period-wrapper .button-star {
-    height: 19px;
-    padding: 0;
-    margin-left: auto; }
+          align-items: flex-end;
+  grid-area: c; }
+  @media (min-width: 1200px) {
+    .public-debate__period-wrapper {
+      margin-top: 20px;
+      display: grid;
+      grid-template-areas: "a    c" "b    c"; }
+      .public-debate__period-wrapper > * {
+        -ms-flex-item-align: start;
+            align-self: start; } }
   .public-debate__period-wrapper--favorite .button-star {
     color: var(--color-interactive-accent, #116ca6); }
+
+.public-debate__period-wrapper .button-star {
+  height: 19px;
+  padding: 0;
+  margin-left: auto; }
+  @media (min-width: 1200px) {
+    .public-debate__period-wrapper .button-star {
+      margin-left: 24px;
+      margin-top: 12px;
+      grid-area: c; } }
 
 .public-debate__period-text {
   font-size: 0.8125rem;
@@ -5849,10 +5885,16 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   @media (min-width: 768px) {
     .public-debate__period-text {
       margin-right: 5px; } }
+  @media (min-width: 1200px) {
+    .public-debate__period-text {
+      grid-area: a;
+      min-width: 100%;
+      margin-bottom: 2px; } }
 
 .public-debate__period-dates {
   font-size: 0.8125rem;
-  line-height: 130%; }
+  line-height: 130%;
+  grid-area: b; }
 
 .public-debate__button {
   padding-right: 20px;
@@ -5886,8 +5928,15 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       margin-bottom: 32px; } }
   @media (min-width: 768px) {
     .public-debate__button {
-      max-width: 74.8%;
-      margin: 0 auto; } }
+      font-size: 0.9375rem;
+      line-height: 1.25rem;
+      max-width: 539px;
+      margin: 0 auto;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; }
+      .public-debate__button span {
+        padding-left: 0; } }
 
 .public-debate__archive-mobile {
   display: -webkit-box;
