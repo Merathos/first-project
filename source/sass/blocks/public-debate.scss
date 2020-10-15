@@ -106,14 +106,18 @@
   @media (min-width: $desktop-width) {
     padding-bottom: 32px;
     display: grid;
+    grid-template-columns: 1fr 211px;
+    grid-column-gap: 56px;
     grid-template-areas:
       "a    c"
       "b    c";
-    }
-    grid-template-columns: 1fr 211px;
-    grid-column-gap: 56px;
 
-  & > * {
+    &:hover:not(.focus-visible) .button-star {
+      opacity: 1;
+    }
+  }
+
+  &>* {
     align-self: start;
   }
 }
@@ -221,8 +225,15 @@
 
   grid-area: b;
 
+  transition: color $style-change-duration;
+
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
+    justify-self: start;
+
+    &:hover:not(.focus-visible) {
+      color: var(--color-interactive-accent, $blue-accent);
+    }
   }
 }
 
@@ -237,17 +248,11 @@
 
     display: grid;
     grid-template-areas:
-    "a    c"
-    "b    c";
+      "a    c"
+      "b    c";
 
-    & > * {
+    &>* {
       align-self: start;
-    }
-  }
-
-  &--favorite {
-    .button-star {
-      color: var(--color-interactive-accent, $blue-accent);
     }
   }
 }
@@ -256,12 +261,20 @@
   height: 19px;
   padding: 0;
   margin-left: auto;
+  transition: opacity $style-change-duration;
 
   @media (min-width: $desktop-width) {
+    height: 21px;
     margin-left: 24px;
-    margin-top: 12px;
     grid-area: c;
+    align-self: center;
+
+    opacity: 0;
   }
+}
+
+.public-debate__period-wrapper--favorite .button-star {
+  color: var(--color-interactive-accent, $blue-default);
 }
 
 .public-debate__period-text {
@@ -341,5 +354,334 @@
 
   @media (min-width: $tablet-width) {
     display: none;
+  }
+}
+
+.public-debate--all {
+  padding: 24px 0 64px;
+
+  .public-debate__back-btn {
+    margin-left: 2px;
+
+    font-size: rem(18px);
+    line-height: 130%;
+
+    @media (max-width: $tablet-width - 1) {
+
+    }
+
+    @media (min-width: $tablet-width) {
+
+    }
+
+    @media (min-width: $desktop-width) {
+
+    }
+  }
+
+  .public-debate__title {
+    font-size: rem(30px);
+    line-height: rem(36px);
+
+    @media (max-width: $tablet-width - 1) {
+
+    }
+
+    @media (min-width: $tablet-width) {
+      font-size: rem(40px);
+      line-height: rem(47px);
+    }
+
+    @media (min-width: $desktop-width) {
+
+    }}
+
+  .public-debate__description {
+    margin-bottom: 24px;
+
+    @media (max-width: $tablet-width - 1) {
+
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 40px;
+    }
+
+    @media (min-width: $desktop-width) {
+
+    }
+  }
+
+  .public-debate__filters {
+    margin-bottom: 16px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    span {
+      padding: 0;
+    }
+  }
+
+  .public-debate__select {
+
+    @media (max-width: $tablet-width - 1) {
+      display: none;
+    }
+
+    @media (min-width: $tablet-width) {
+
+    }
+
+    @media (min-width: $desktop-width) {
+
+    }}
+
+  .public-debate__list {
+    margin-bottom: 57px;
+
+    @media (max-width: $tablet-width - 1) {
+
+    }
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 48px;
+    }
+
+    @media (min-width: $desktop-width) {
+
+    }}
+
+  .public-debate__item {
+
+    @media (max-width: $tablet-width - 1) {
+
+    }
+
+    @media (min-width: $tablet-width) {
+
+    }
+
+    @media (min-width: $desktop-width) {
+
+    }}
+
+  .public-debate__date-wrapper {
+
+    @media (max-width: $tablet-width - 1) {
+
+    }
+
+    @media (min-width: $tablet-width) {
+
+    }
+
+    @media (min-width: $desktop-width) {
+
+    }}
+
+  .public-debate__date {
+
+    @media (max-width: $tablet-width - 1) {
+
+    }
+
+    @media (min-width: $tablet-width) {
+
+    }
+
+    @media (min-width: $desktop-width) {
+
+    }}
+
+  .public-debate__status {
+
+    @media (max-width: $tablet-width - 1) {
+
+    }
+
+    @media (min-width: $tablet-width) {
+
+    }
+
+    @media (min-width: $desktop-width) {
+
+    }}
+
+  .public-debate__joined {
+
+    @media (max-width: $tablet-width - 1) {
+
+    }
+
+    @media (min-width: $tablet-width) {
+
+    }
+
+    @media (min-width: $desktop-width) {
+
+    }}
+
+  .public-debate__link {
+
+    @media (max-width: $tablet-width - 1) {
+
+    }
+
+    @media (min-width: $tablet-width) {
+
+    }
+
+    @media (min-width: $desktop-width) {
+
+    }}
+
+  .public-debate__period-wrapper {
+
+    @media (max-width: $tablet-width - 1) {
+
+    }
+
+    @media (min-width: $tablet-width) {
+
+    }
+
+    @media (min-width: $desktop-width) {
+
+    }}
+
+  .public-debate__period-text {
+
+    @media (max-width: $tablet-width - 1) {
+
+    }
+
+    @media (min-width: $tablet-width) {
+
+    }
+
+    @media (min-width: $desktop-width) {
+
+    }}
+
+  .public-debate__period-dates {
+
+    @media (max-width: $tablet-width - 1) {
+
+    }
+
+    @media (min-width: $tablet-width) {
+
+    }
+
+    @media (min-width: $desktop-width) {
+
+    }}
+
+  .public-debate__status--orange {
+
+    @media (max-width: $tablet-width - 1) {
+
+    }
+
+    @media (min-width: $tablet-width) {
+
+    }
+
+    @media (min-width: $desktop-width) {
+
+    }}
+
+  .public-debate__period-wrapper--favorite {
+
+    @media (max-width: $tablet-width - 1) {
+
+    }
+
+    @media (min-width: $tablet-width) {
+
+    }
+
+    @media (min-width: $desktop-width) {
+
+    }}
+
+  .public-debate__status--blue {
+
+    @media (max-width: $tablet-width - 1) {
+
+    }
+
+    @media (min-width: $tablet-width) {
+
+    }
+
+    @media (min-width: $desktop-width) {
+
+    }}
+
+  .public-debate__joined--visible {
+
+    @media (max-width: $tablet-width - 1) {
+
+    }
+
+    @media (min-width: $tablet-width) {
+
+    }
+
+    @media (min-width: $desktop-width) {
+
+    }}
+
+  .public-debate__status--green {
+
+    @media (max-width: $tablet-width - 1) {
+
+    }
+
+    @media (min-width: $tablet-width) {
+
+    }
+
+    @media (min-width: $desktop-width) {
+
+    }}
+
+  .public-debate__paginator {
+    margin-top: 0;
+    margin-bottom: 56px;
+
+    @media (max-width: $tablet-width - 1) {
+
+    }
+
+    @media (min-width: $tablet-width) {
+
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 80px;
+    }
+  }
+
+  .public-debate__archive {
+    padding: 24px;
+    @media (max-width: $tablet-width - 1) {
+
+    }
+
+    @media (min-width: $tablet-width) {
+
+    }
+
+    @media (min-width: $desktop-width) {
+
+    }
+
+    .archive-link__btn {
+      min-height: 21px;
+    }
   }
 }
