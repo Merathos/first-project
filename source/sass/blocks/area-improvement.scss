@@ -89,23 +89,9 @@
     @media (max-width: $desktop-width - 1) {
       margin-bottom: 39px;
     }
-
-    // @media (max-width: $tablet-width - 1) {
-    //   padding: 24px;
-
-    //   svg {
-    //     top: 28px;
-    //     left: 24px;
-    //   }
-    // }
   }
 
   .area-improvement__text {
-
-    @media (min-width: $desktop-width) {
-
-    }
-
     @media (max-width: $tablet-width - 1) {
       margin-bottom: 24px;
     }
