@@ -25,6 +25,18 @@
             line-height: rem(28.44px);
         }
     }
+
+    &--edit {
+        h2 {
+            margin-bottom: 24px;
+        }
+
+        .commentary-add__textarea {
+            textarea {
+                height: 402px;
+            }
+        }
+    }
 }
 
 .commentary-add__description {

@@ -472,13 +472,13 @@
                             <div class="your-comment__top-wrapper">
                                 <h2 class="your-comment__title">Ваш комментарий:</h2>
                                 <div class="your-comment__actions">
-                                    <a href="#" class="your-comment__link">
+                                    <a href="#" class="your-comment__link" id="edit-comment">
                                         <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <use xlink:href="img/sprite.svg#icon-pencil"></use>
                                         </svg>
                                         <span>Редактировать</span>
                                     </a>
-                                    <a href="#" class="your-comment__link">
+                                    <a href="#" class="your-comment__link" id="delete-comment">
                                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <use xlink:href="img/sprite.svg#icon-trash"></use>
                                         </svg>
@@ -501,7 +501,7 @@
                                 содержит ряд настоящих латинских слов. Как и большинство других текстов, Lorem ipsum не
                                 имеет смысла, а лишь имитирует ритм большинства европейских языков использующих
                                 латиницу. Латинское происхождение и относительная бессмысленность текста Lorem ipsum
-                                хороши тем, что не привлекают к себе.
+                                хороши тем, что привлекают к себе.
                             </p>
                         </div>
                     </section>
@@ -630,6 +630,7 @@
   <span class="visually-hidden">Наверх</span>
 </button>
 
+
     <div class="gallery-popup gallery-popup--proposal js-gallery-popup popup js-popup">
         <div class="popup__container">
             <div class="popup__overlay js-popup__overlay"></div>
@@ -662,6 +663,21 @@
             </div>
         </div>
     </div>
+
+    <template id="edit-comment-block">
+        <section class="commentary-add commentary-add--edit">
+            <h2>Редактирование комментария</h2>
+            <div class="commentary-add__textarea">
+                <textarea name="commentarytextarea" placeholder="Ограничение 1 000 символов" required="" rows="4" aria-label="Добавить комментарий"></textarea>
+                <p id="textarea-error-field">Осталось символов: 500</p>
+            </div>
+            <div class="commentary-add__bottom-wrapper">
+                <p>Отредактировать или удалить комментарий вы можете только в течение двух часов с момента
+                    публикации.</p>
+                <button type="submit" class="commentary-add__button button button--blue" id="commentary-save">Сохранить</button>
+            </div>
+        </section>
+    </template>
 
     <script src="js/libs.js"></script>
     <script src="js/main.min.js"></script>
