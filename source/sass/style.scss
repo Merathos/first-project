@@ -59,6 +59,9 @@
 @import 'blocks/budgets';
 @import 'blocks/public-debate';
 @import 'blocks/join-indicator';
+@import 'blocks/commentary-add.scss';
+@import 'blocks/hearings-status.scss';
+@import 'blocks/hearings-result.scss';
 
 // main page
 @import "blocks/news-notice";
@@ -108,6 +111,9 @@
 @import "blocks/improvement-fork-4.scss";
 @import "blocks/proposal-winners.scss";
 @import "blocks/map-popup.scss";
+
+// hearings 1-4
+@import "blocks/hearings.scss";
 
 // project page
 @import "blocks/project-page";

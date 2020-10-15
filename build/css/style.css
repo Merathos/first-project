@@ -3135,6 +3135,22 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   border: 0;
   pointer-events: none; }
 
+.button-star__mobile-text {
+  font-size: 1rem;
+  line-height: 1.35rem;
+  color: #A6ABB2; }
+  @media (min-width: 768px) {
+    .button-star__mobile-text {
+      position: absolute;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      border: 0;
+      pointer-events: none; } }
+
 @media (min-width: 1200px) {
   .button-star[data-tooltip][data-flow^="down"]::before, .button-star[data-tooltip][data-flow^="down"]::after {
     -webkit-transform: translate(-50%, 10px);
@@ -5912,6 +5928,266 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       top: calc(100% - 5px); }
     .join-indicator .join-indicator [data-tooltip][data-flow^="down"]::after {
       top: 100%; } }
+
+.commentary-add {
+  margin-bottom: 50px;
+  padding: 40px 32px 32px 32px;
+  background-color: #F9F9FA;
+  border-radius: 5px; }
+  @media (max-width: 1199px) {
+    .commentary-add {
+      margin-bottom: 40px; } }
+  @media (max-width: 767px) {
+    .commentary-add {
+      padding: 16px; } }
+  .commentary-add h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 1.875rem;
+    line-height: 2.22187rem;
+    font-weight: 400; }
+    @media (max-width: 767px) {
+      .commentary-add h2 {
+        margin-bottom: 0px;
+        font-size: 1.5rem;
+        line-height: 1.7775rem; } }
+  .commentary-add--edit h2 {
+    margin-bottom: 24px; }
+  .commentary-add--edit .commentary-add__textarea textarea {
+    height: 402px; }
+
+.commentary-add__description {
+  margin-bottom: 40px; }
+  @media (max-width: 767px) {
+    .commentary-add__description {
+      margin-bottom: 23px;
+      font-size: 0.8125rem;
+      line-height: 1.0625rem; } }
+  @media (max-width: 767px) {
+    .commentary-add__description p:first-child {
+      margin-top: 8px; } }
+
+.commentary-add__textarea {
+  position: relative;
+  margin-bottom: 25px; }
+  @media (max-width: 767px) {
+    .commentary-add__textarea {
+      margin-bottom: 5px; } }
+  .commentary-add__textarea textarea {
+    font-family: inherit;
+    font-size: 0.9375rem;
+    line-height: 1.6875rem;
+    color: inherit;
+    width: 100%;
+    padding: 12px 16px;
+    -webkit-appearance: none;
+    border: 1px solid var(--color-stroke, #e3e8ee);
+    border-radius: 5px;
+    resize: none; }
+    .commentary-add__textarea textarea::-webkit-input-placeholder {
+      font-size: 0.9375rem;
+      line-height: 1.75rem;
+      color: var(--color-text, #a6abb3); }
+    .commentary-add__textarea textarea::-moz-placeholder {
+      font-size: 0.9375rem;
+      line-height: 1.75rem;
+      color: var(--color-text, #a6abb3); }
+    .commentary-add__textarea textarea:-ms-input-placeholder {
+      font-size: 0.9375rem;
+      line-height: 1.75rem;
+      color: var(--color-text, #a6abb3); }
+    .commentary-add__textarea textarea::-ms-input-placeholder {
+      font-size: 0.9375rem;
+      line-height: 1.75rem;
+      color: var(--color-text, #a6abb3); }
+    .commentary-add__textarea textarea::placeholder {
+      font-size: 0.9375rem;
+      line-height: 1.75rem;
+      color: var(--color-text, #a6abb3); }
+    @media (max-width: 767px) {
+      .commentary-add__textarea textarea {
+        height: 160px; } }
+  .commentary-add__textarea p {
+    display: none;
+    position: absolute;
+    right: 1px;
+    bottom: -27px;
+    font-size: 0.8125rem;
+    line-height: 1.05625rem;
+    color: #A6ABB2; }
+    @media (max-width: 767px) {
+      .commentary-add__textarea p {
+        bottom: -22px;
+        font-size: 0.6875rem;
+        line-height: 1.05625rem; } }
+  .commentary-add__textarea--warning p {
+    display: block; }
+  .commentary-add__textarea--error textarea {
+    border: 1px solid #F3A8A8; }
+  .commentary-add__textarea--error p {
+    color: #E55050; }
+
+.commentary-add__bottom-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (max-width: 767px) {
+    .commentary-add__bottom-wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+  .commentary-add__bottom-wrapper p {
+    padding-top: 7px;
+    max-width: 460px;
+    font-size: 0.8125rem;
+    line-height: 1.05625rem;
+    color: #A6ABB2; }
+    @media (max-width: 767px) {
+      .commentary-add__bottom-wrapper p {
+        line-height: 1.0625rem; } }
+    .commentary-add__bottom-wrapper p:first-child {
+      margin: 0; }
+
+.commentary-add__button {
+  display: block;
+  width: 175px;
+  padding: 17px 26px;
+  margin-left: auto; }
+  @media (max-width: 767px) {
+    .commentary-add__button {
+      margin-top: 12px;
+      margin-left: 0;
+      padding: 16px 26px;
+      width: 100%; } }
+
+.hearings-status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 23px;
+  padding-right: 11px;
+  border: 1px solid var(--color-stroke, #e3e8ee);
+  border-radius: 5px; }
+  @media (max-width: 767px) {
+    .hearings-status {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      padding: 0; } }
+  .hearings-status p {
+    margin: 0;
+    margin-right: auto;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    line-height: 135%; }
+    @media (max-width: 767px) {
+      .hearings-status p {
+        width: 100%;
+        padding: 16px;
+        border-bottom: 1px solid #E3E8EE;
+        border-radius: 5px; } }
+    .hearings-status p span {
+      margin-left: 5px;
+      font-weight: 400;
+      color: #70BF56; }
+      @media (max-width: 767px) {
+        .hearings-status p span {
+          display: block;
+          margin-left: 0;
+          margin-top: 10px; } }
+  @media (max-width: 767px) {
+    .hearings-status .button-star {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      padding: 15px 5px; } }
+  .hearings-status .button-star svg {
+    width: 24px;
+    height: 24px; }
+    @media (max-width: 767px) {
+      .hearings-status .button-star svg {
+        margin-right: 12px; } }
+  .hearings-status--blue p span {
+    color: #2C8ECC; }
+
+.hearings-result {
+  margin-bottom: 35px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid #E3E8EE; }
+  @media (max-width: 1199px) {
+    .hearings-result {
+      padding-bottom: 42px;
+      margin-bottom: 40px; } }
+  @media (max-width: 767px) {
+    .hearings-result {
+      padding-bottom: 30px;
+      margin-bottom: 35px; } }
+
+.hearings-result__files {
+  margin-bottom: 47px; }
+  @media (max-width: 1199px) {
+    .hearings-result__files {
+      margin-bottom: 40px; } }
+  @media (max-width: 767px) {
+    .hearings-result__files {
+      margin-bottom: 30px; } }
+
+.hearings-result__gallery {
+  margin-bottom: 49px; }
+  @media (max-width: 1199px) {
+    .hearings-result__gallery {
+      max-width: 1199px;
+      margin-right: -24px;
+      margin-bottom: 40px; }
+      .hearings-result__gallery .gallery__tape .swiper-slide:first-child {
+        padding-left: 0; } }
+  @media (max-width: 767px) {
+    .hearings-result__gallery {
+      margin-right: -16px;
+      margin-bottom: 35px; } }
+
+.hearings-result__survey {
+  width: 740px;
+  padding: 23px 24px;
+  background-color: var(--color-bg-secondary, #f9f9fa);
+  border-radius: 5px; }
+  @media (max-width: 1199px) {
+    .hearings-result__survey {
+      width: 100%; } }
+  @media (max-width: 767px) {
+    .hearings-result__survey {
+      padding: 24px; } }
+
+.hearings-result__survey-container {
+  padding-bottom: 34px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--color-stroke, #e3e8ee); }
+  .hearings-result__survey-container .form-radio:last-child {
+    margin-bottom: 0; }
+
+.hearings-result__survey-btn {
+  width: 230px; }
+  @media (max-width: 767px) {
+    .hearings-result__survey-btn {
+      margin: 0 auto;
+      display: block;
+      width: 240px;
+      margin-top: 30px; } }
+
+.hearings-result .poll-result__section {
+  background-image: none;
+  padding: 0; }
+
+.hearings-result .poll-result__item:last-child {
+  margin-bottom: 0; }
 
 .news-notice {
   -webkit-box-sizing: border-box;
@@ -9334,6 +9610,156 @@ span.poll__hide {
     .map-popup__details-btn:hover svg {
       fill: #2c8ecc; }
 
+.hearings-page {
+  padding-top: 40px;
+  padding-bottom: 120px; }
+  @media (max-width: 1199px) {
+    .hearings-page {
+      padding-bottom: 85px; } }
+  @media (max-width: 767px) {
+    .hearings-page {
+      padding-top: 30px;
+      padding-bottom: 64px; } }
+
+@media (min-width: 1200px) {
+  .hearings {
+    display: grid;
+    grid-template-columns: minmax(740px, 1fr) 360px;
+    grid-column-gap: 20px;
+    grid-template-areas: "a   a" "b   c" "d   c" "e   c" "f   c" "g   c" "h   c"; } }
+
+.hearings > * {
+  -ms-flex-item-align: start;
+      align-self: start; }
+
+.hearings--result {
+  grid-template-areas: "a   a" "b   c" "result c" "d   c" "e   c" "f   c" "g   c" "h   c"; }
+  .hearings--result .hearings__status {
+    margin-bottom: 15px; }
+    @media (max-width: 1199px) {
+      .hearings--result .hearings__status {
+        margin-bottom: 40px; } }
+    @media (max-width: 767px) {
+      .hearings--result .hearings__status {
+        margin-bottom: 46px; } }
+  @media (max-width: 767px) {
+    .hearings--result .hearings__time-frame {
+      margin-bottom: 35px; } }
+
+.hearings__result {
+  grid-area: result; }
+
+.hearings__title {
+  grid-area: a;
+  margin-bottom: 40px;
+  max-width: 100%; }
+  @media (max-width: 767px) {
+    .hearings__title {
+      margin-bottom: 22px; } }
+
+.hearings__status {
+  grid-area: b;
+  margin-bottom: 25px; }
+  @media (max-width: 1199px) {
+    .hearings__status {
+      margin-bottom: 40px; } }
+  @media (max-width: 767px) {
+    .hearings__status {
+      margin-bottom: 25px; } }
+
+.hearings__time-frame {
+  grid-area: c; }
+  @media (min-width: 1200px) {
+    .hearings__time-frame {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 90px; } }
+  @media (max-width: 1199px) {
+    .hearings__time-frame {
+      margin-bottom: 44px; } }
+  @media (max-width: 767px) {
+    .hearings__time-frame {
+      margin-bottom: 28px; } }
+  .hearings__time-frame .project-vote__expire svg {
+    color: var(--color-text, #a6abb3); }
+  @media (max-width: 1199px) {
+    .hearings__time-frame .project-vote__expire {
+      -ms-flex-item-align: end;
+          align-self: flex-end; } }
+  @media (max-width: 767px) {
+    .hearings__time-frame .project-vote__expire {
+      width: 100%; } }
+  .hearings__time-frame .hearings__smaller-expire {
+    font-size: 0.8125rem;
+    line-height: 1.05625rem; }
+
+.hearings__text-container {
+  grid-area: d;
+  font-size: 0.9375rem;
+  line-height: 1.6875rem;
+  color: #354052; }
+  @media (max-width: 1199px) {
+    .hearings__text-container {
+      margin-bottom: 40px; } }
+  @media (max-width: 767px) {
+    .hearings__text-container {
+      margin-bottom: 30px; } }
+
+.hearings__files {
+  grid-area: e;
+  margin-bottom: 48px; }
+  @media (max-width: 1199px) {
+    .hearings__files {
+      margin-bottom: 45px; } }
+  @media (max-width: 767px) {
+    .hearings__files {
+      margin-bottom: 39px; } }
+
+.hearings__gallery {
+  grid-area: f;
+  max-width: 740px;
+  margin-bottom: 47px; }
+  @media (max-width: 1199px) {
+    .hearings__gallery {
+      max-width: 1199px;
+      margin-right: -24px;
+      margin-bottom: 40px; }
+      .hearings__gallery .swiper-slide:first-child {
+        padding-left: 0; } }
+  @media (max-width: 767px) {
+    .hearings__gallery {
+      margin-right: -16px; } }
+
+.hearings__comments {
+  grid-area: g;
+  margin-bottom: 50px;
+  padding-bottom: 47px;
+  border-bottom: 1px solid #E3E8EE;
+  border-radius: 5px; }
+  @media (max-width: 767px) {
+    .hearings__comments {
+      margin-bottom: 42px; } }
+  .hearings__comments .all-comments {
+    padding: 0; }
+  .hearings__comments .your-comment {
+    margin-bottom: 45px;
+    padding: 0; }
+  .hearings__comments .your-comment__content {
+    margin: 0; }
+
+.hearings__back-btn {
+  grid-area: h;
+  max-width: 330px;
+  padding: 17px 26px;
+  font-size: 0.875rem;
+  line-height: 1.18125rem; }
+  @media (max-width: 767px) {
+    .hearings__back-btn {
+      display: block;
+      margin: 0 auto;
+      max-width: 360px;
+      padding: 17px 30px; } }
+
 .project-page__container,
 .project-page__survey {
   width: 740px; }
@@ -9704,6 +10130,8 @@ span.poll__hide {
     height: 16px;
     margin-right: 9px;
     fill: none; }
+  .project-vote__expire--address {
+    margin-top: 0; }
 
 .project-vote__results {
   margin-bottom: 24px; }
@@ -9898,6 +10326,8 @@ span.poll__hide {
   .project-vote__expire {
     margin-top: 0;
     margin-left: auto; }
+    .project-vote__expire--address {
+      margin-left: 0; }
   .project-vote__results {
     width: 50%;
     margin-bottom: 0; }
@@ -9931,6 +10361,8 @@ span.poll__hide {
   .project-vote__expire {
     margin-top: 16px;
     margin-left: 0; }
+    .project-vote__expire--address {
+      margin-top: 0; }
   .project-vote__results,
   .project-vote__submit-form {
     width: 100%; }
@@ -11366,6 +11798,10 @@ span.poll-page__hide {
       padding-left: 24px;
       padding-right: 20px;
       padding-bottom: 20px; } }
+  .your-comment__content--declined .your-comment__status p {
+    color: #E55050; }
+  .your-comment__content--declined .your-comment__text {
+    color: #707B8C; }
 
 .your-comment__top-wrapper {
   display: -webkit-box;
@@ -11405,6 +11841,40 @@ span.poll-page__hide {
               order: 3;
       margin-left: 0;
       margin-bottom: 24px; } }
+
+.your-comment__status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto; }
+  @media (min-width: 1200px) {
+    .your-comment__status {
+      position: relative;
+      top: -6px; } }
+  @media (max-width: 600px) {
+    .your-comment__status {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2; } }
+  @media (max-width: 767px) {
+    .your-comment__status {
+      margin-bottom: 24px;
+      width: 100%; } }
+  .your-comment__status p {
+    margin: 0;
+    padding: 6px 8px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-size: 0.8125rem;
+    line-height: 1.05625rem;
+    color: #2C8ECC; }
+  .your-comment__status--red p {
+    color: #E55050; }
+  .your-comment__status--grey p {
+    color: #707B8C; }
 
 .your-comment__link {
   display: -webkit-box;
@@ -11447,6 +11917,26 @@ span.poll-page__hide {
           -ms-flex-order: 2;
               order: 2;
       margin-bottom: 20px; } }
+
+.your-comment__decline-msg {
+  margin: 0;
+  margin-bottom: 16px;
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #F3A8A8;
+  border-radius: 5px;
+  background-color: #ffffff;
+  font-size: 0.8125rem;
+  line-height: 1.0625rem;
+  color: #354052; }
+  @media (max-width: 600px) {
+    .your-comment__decline-msg {
+      -webkit-box-ordinal-group: 4;
+          -ms-flex-order: 3;
+              order: 3; } }
+  @media (max-width: 767px) {
+    .your-comment__decline-msg {
+      margin-top: -10px; } }
 
 .your-comment__text {
   margin: 0;
