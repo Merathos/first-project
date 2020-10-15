@@ -1,0 +1,38 @@
+.join-indicator {
+  width: 10.5px;
+  height: 16px;
+  color: var(--color-icon, $light-blue-accent);
+
+  svg {
+    fill: currentColor;
+    transition: color $style-change-duration;
+  }
+
+  span {
+    @include visually-hidden;
+
+    pointer-events: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    .join-indicator [data-tooltip][data-flow^="down"] {
+
+      &:hover:not(.focus-visible) {
+        color: var(--color-interactive-accent, $blue-accent);
+      }
+
+      &::before,
+      &::after {
+        transform: translate(-50%, 10px);
+      }
+
+      &::before {
+        top: calc(100% - 5px);
+      }
+
+      &::after {
+        top: 100%;
+      }
+    }
+  }
+}
