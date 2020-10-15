@@ -29,7 +29,7 @@
         span {
             margin-left: 5px;
             font-weight: 400;
-            color: #2C8ECC;
+            color: #70BF56;
 
             @include mobile {
                 display: block;
@@ -53,6 +53,12 @@
             @include mobile {
                 margin-right: 12px;
             }
+        }
+    }
+
+    &--blue {
+        p span {
+            color: #2C8ECC;
         }
     }
 }
