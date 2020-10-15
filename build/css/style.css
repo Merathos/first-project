@@ -5755,11 +5755,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       display: grid;
       grid-template-columns: 1fr 211px;
       grid-column-gap: 56px;
-      grid-template-areas: "a    c" "b    c"; } }
-  .public-debate__item:hover:not(.focus-visible) .button-star {
-    color: var(--color-stroke, #e3e8ee); }
-  .public-debate__item:hover:not(.focus-visible) .public-debate__period-wrapper--favorite .button-star {
-    color: var(--color-interactive-accent, #116ca6); }
+      grid-template-areas: "a    c" "b    c"; }
+      .public-debate__item:hover:not(.focus-visible) .button-star {
+        opacity: 1; } }
   .public-debate__item > * {
     -ms-flex-item-align: start;
         align-self: start; }
@@ -5875,16 +5873,18 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   height: 19px;
   padding: 0;
   margin-left: auto;
-  color: transparent; }
+  -webkit-transition: opacity 0.2s;
+  transition: opacity 0.2s; }
   @media (min-width: 1200px) {
     .public-debate__period-wrapper .button-star {
       height: 21px;
       margin-left: 24px;
-      margin-top: 12px;
-      grid-area: c; } }
-  .public-debate__period-wrapper .button-star svg {
-    -webkit-transition: color 0.2s;
-    transition: color 0.2s; }
+      grid-area: c;
+      align-self: center;
+      opacity: 0; } }
+
+.public-debate__period-wrapper--favorite .button-star {
+  color: var(--color-interactive-accent, #2c8ecc); }
 
 .public-debate__period-text {
   font-size: 0.8125rem;
