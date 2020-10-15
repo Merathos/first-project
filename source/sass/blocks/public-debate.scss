@@ -493,9 +493,6 @@
 
   .public-debate__archive {
     padding: 24px;
-    @media (max-width: $tablet-width - 1) {
-
-    }
 
     @media (min-width: $tablet-width) {
       .archive-link__hidden {
