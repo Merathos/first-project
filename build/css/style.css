@@ -4090,7 +4090,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   background: var(--color-bg-secondary, #f9f9fa);
   border: 1px solid var(--color-interactive-default, #2c8ecc);
   border-radius: 5px; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .info-banner {
       padding-left: 54px; } }
   @media (max-width: 400px) {
@@ -4105,7 +4105,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     top: 23px;
     left: 30px;
     color: var(--color-interactive-default, #2c8ecc); }
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       .info-banner__icon {
         left: 16px; } }
     @media (max-width: 400px) {
@@ -4173,7 +4173,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(var(--color-bg-secondary, #f9f9fa)));
       background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--color-bg-secondary, #f9f9fa) 100%);
       text-align: right;
-      content: ""; }
+      content: ''; }
   .info-banner_enough-lines_true .info-banner__button {
     display: initial; }
   .info-banner--warning .info-banner__text, .info-banner--approved .info-banner__text, .info-banner--declined .info-banner__text {
@@ -4249,11 +4249,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   -webkit-transition: color 0.15s ease;
   transition: color 0.15s ease; }
   .info-banner-button__text {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 9px;
-    min-width: 84px;
-    text-align: left; }
+    margin-right: 9px; }
     .info-banner-button__text_opened {
       display: none; }
     .info-banner-button__text_closed {
@@ -4410,7 +4406,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     display: grid;
     grid-template-columns: 1fr 360px;
     grid-column-gap: 20px;
-    grid-template-areas: "a   a" "k   c" "b   c" "d   c" "e   c" "f   c"; } }
+    grid-template-areas: "a   a"
+ "k   c"
+ "b   c"
+ "d   c"
+ "e   c"
+ "f   c"; } }
 
 .proposal--approved > * {
   -ms-flex-item-align: start;
@@ -4570,7 +4571,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     display: grid;
     grid-template-columns: minmax(740px, 1fr) 360px;
     grid-column-gap: 20px;
-    grid-template-areas: "a   a" "b   c" "d   c" "e   c" "f   c" "g   c" "h   c" "i   c"; } }
+    grid-template-areas: "a   a"
+ "b   c"
+ "d   c"
+ "e   c"
+ "f   c"
+ "g   c"
+ "h   c"
+ "i   c"; } }
 
 .proposal--implemented > * {
   -ms-flex-item-align: start;
@@ -5424,7 +5432,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   padding: 16px 32px 16px 24px;
   display: grid;
   grid-template-columns: 1fr 15.7%;
-  grid-template-areas: "a    b" "c    b";
+  grid-template-areas: "a    b"
+ "c    b";
   background-color: var(--color-bg-secondary, #f9f9fa);
   border-radius: 5px;
   text-decoration: none; }
@@ -7087,7 +7096,9 @@ span.poll__hide {
 
 .gallery-popup__content {
   display: grid;
-  grid-template-areas: "frame top-bar" "frame description" "frame bottom-bar";
+  grid-template-areas: "frame top-bar"
+ "frame description"
+ "frame bottom-bar";
   grid-template-columns: 835px 285px;
   grid-template-rows: 48px auto 68px;
   width: 1120px;
@@ -7284,7 +7295,9 @@ span.poll__hide {
 
 .gallery-popup--proposal .gallery-popup__content {
   display: grid;
-  grid-template-areas: "top-bar" "frame" "bottom-bar";
+  grid-template-areas: "top-bar"
+ "frame"
+ "bottom-bar";
   grid-template-columns: 1fr;
   grid-template-rows: 64px auto 98px;
   background-color: #21252b;
@@ -8764,7 +8777,7 @@ span.poll__hide {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 0.9375rem;
-  line-height: 1.26562rem; }
+  line-height: 1.26563rem; }
   .proposal-winners__status:before {
     display: none; }
 
@@ -8863,7 +8876,7 @@ span.poll__hide {
     display: block;
     padding: 15px 15px;
     font-size: 0.9375rem;
-    line-height: 1.26562rem;
+    line-height: 1.26563rem;
     font-weight: 500;
     color: #2C8ECC;
     text-transform: uppercase; }
@@ -9057,7 +9070,7 @@ span.poll__hide {
           align-items: center;
   padding-top: 4px;
   font-size: 0.9375rem;
-  line-height: 1.26562rem;
+  line-height: 1.26563rem;
   color: #116CA6;
   text-decoration: none; }
   .map-popup__details-btn span {
