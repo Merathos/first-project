@@ -18,11 +18,7 @@
   transition: color 0.15s ease;
 
   &__text {
-    display: inline-block;
-    vertical-align: middle;
     margin-right: 9px;
-    min-width: 84px;
-    text-align: left;
 
     &_opened {
       display: none;

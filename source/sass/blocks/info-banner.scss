@@ -12,7 +12,7 @@
   border: 1px solid var(--color-interactive-default, $blue-default);
   border-radius: 5px;
 
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $tablet-width) {
     padding-left: 54px;
   }
 
@@ -31,7 +31,7 @@
 
     color: var(--color-interactive-default, $blue-default);
 
-    @media (max-width: $tablet-width - 1) {
+    @media (max-width: $tablet-width) {
       left: 16px;
     }
 
@@ -148,7 +148,7 @@
 
         text-align: right;
 
-        content: "";
+        content: '';
       }
     }
 
