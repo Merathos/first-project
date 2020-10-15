@@ -233,146 +233,289 @@
 
 
     <main>
-        <section class="area-improvement area-improvement--list section">
+        <section class="public-debate public-debate--all section">
             <div class="container">
-                <a class="area-improvement__back-btn back-btn" href="main-page.html">
+                <a class="public-debate__back-btn back-btn" href="main-page.html">
                     <svg width="8" height="14">
                         <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
                     </svg>
-                    К списку благоустройств
+                    На главную
                 </a>
-                <div class="area-improvement__info info-banner info-banner_enough-true">
-                  <svg width="24" height="24" class="info-icon info-banner__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <path fill="currentColor" fill-rule="evenodd" d="M.2 12C.2 5.494 5.492.2 12 .2 18.505.2 23.8 5.494 23.8 12c0 6.506-5.294 11.8-11.8 11.8C5.492 23.8.2 18.506.2 12zm2.152 0c0 5.32 4.328 9.647 9.647 9.647 5.32 0 9.647-4.327 9.647-9.647S17.318 2.354 12 2.354 2.352 6.68 2.352 12z" clip-rule="evenodd"></path>
-                    <rect width="2.5" height="8" x="10.75" y="6" fill="currentColor" rx="1"></rect>
-                    <rect width="2.5" height="3" x="10.75" y="15" fill="currentColor" rx="1"></rect>
-                  </svg>
-
-                  <p class="info-banner__title">
-                    Данное голосование является открытым
-                  </p>
-
-                  <p class="info-banner__text">
-                    В соответствии с приказом Министерства строительства Российской Федерации № 75895422 от 20.01.2020 персональные данные участников голосования (в составе ФИО, дата рождения, номер паспорта) будут переданы уполномоченным ответственной организации. Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока
-                  </p>
-
-                  <button class="info-banner__button info-banner-button">
-                    <span class="info-banner-button__text">
-                      Развернуть
-                    </span>
-
-                    <svg class="arrow-down info-banner-button__icon" xmlns="http://www.w3.org/2000/svg" fill="none" width="13" height="8" viewBox="0 0 14 8">
-                      <path fill="currentColor" fill-rule="evenodd" d="M11.98 0L7 4.97 2.02 0 .5 1.51 7 8l6.5-6.49L11.98 0z" clip-rule="evenodd"></path>
-                    </svg>
-                  </button>
-                </div>
-                <h1 class="area-improvement__title page-title">Рыбным текстом называется текст, служащий для временного
-                    наполнения макета в
-                    публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также
-                    известен как текст- заполнитель или же текст-наполнитель. Иногда текст- «рыба» также</h1>
-                <div class="area-improvement__stage-wrapper improvement-stage">
-                  <div class="improvement-stage__wrapper">
-                      <span>Статус:</span>
-                      <span class="improvement-stage__status improvement-stage__status--opened">Голосование открыто</span>
-                  </div>
-                  <div class="improvement-stage__wrapper improvement-stage__wrapper--line-height">
-                      <span>Период голосования:&nbsp;</span>
-                      <span class="improvement-stage__dates"><time datetime="2020-08-20">20.08.2020</time>&nbsp;&mdash;&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
-                  </div>
-                </div>
-                <p class="area-improvement__text main-text">Рыбные тексты также применяются для демонстрации различных
-                    видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей
-                    функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как
-                    человеческое
-                    восприятие имеет особенность, распознавать определенные образцы и повторения. В случае произвольного
-                    набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных шрифтов, а
-                    также от распределения текста на.
+                <h1 class="public-debate__title page-title">Общественные обсуждения и&nbsp;публичные слушания</h1>
+                <p class="public-debate__description">
+                  Общественные обсуждения и публичные слушания - это возможность для граждан узнать о начале общественных обсуждений / публичных слушаний и оставить свое мнение по вопросам, выносящимся на обсуждение.
                 </p>
-                <form class="area-improvement__select form-select js-form-select-improvement">
+                <a href="#" class="public-debate__filters button button--light-blue">
+                  <span>ФИЛЬТРЫ</span>
+                </a>
+                <form class="public-debate__select form-select js-form-select-improvement">
                   <select name="category-select" id="category-select" title="Открыть фильтр">
-                    <option value="Сначала популярные" title="Сначала популярные">Сначала популярные</option>
-                    <option value="Сначала непопулярные" title="Сначала непопулярные">Сначала непопулярные</option>
-                    <option value="Адреса от А до Я" title="Адреса от А до Я">Адреса от А до Я</option>
-                    <option value="Адреса от Я до А" title="Адреса от Я до А">Адреса от Я до А</option>
+                    <option value="Все статусы" title="Все статусы">Все статусы</option>
+                    <option value="Идёт приём мнений" title="Идёт приём мнений">Идёт приём мнений</option>
+                    <option value="Прием мнений завершён" title="Прием мнений завершён">Прием мнений завершён</option>
+                    <option value="Подготовка к проведению слушания" title="Подготовка к проведению слушания">Подготовка к проведению слушания</option>
+                    <option value="Публичное слушание в процессе" title="Публичное слушание в процессе">Публичное слушание в процессе</option>
+                    <option value="Подведение итогов" title="Подведение итогов">Подведение итогов</option>
+                    <option value="Подведены итоги" title="Подведены итоги">Подведены итоги</option>
                   </select>
+                  <div class="form-select__checkbox-wrapper form-checkbox">
+                    <input type="checkbox" name="favorites-checkbox" id="favorites-checkbox">
+                    <label for="favorites-checkbox">Только избранные</label>
+                  </div>
                 </form>
-                <ul class="area-improvement__proposal-list proposal-list">
-                  <li class="proposal-list__item">
-                    <div class="proposal-list__account">
-                      <svg width="16" height="16">
-                        <use xlink:href="img/sprite.svg#icon-user"></use>
-                      </svg>
-                      <span>Ваше предложение</span>
+                <ul class="public-debate__list">
+                  <li class="public-debate__item">
+                    <div class="public-debate__date-wrapper">
+                      <span class="public-debate__date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
+                      <span class="public-debate__status">Подготовка к проведению слушаний</span>
+                      <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
+                        <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                        </svg>
+                        <span class="join-indicator__tooltip">Участие принято</span>
+                      </div>
                     </div>
-                    <div class="proposal-list__address">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.9624 1.64129C10.904 0.582939 9.49678 0 8.00014 0C6.50319 0 5.09625 0.582939 4.0379 1.64129C2.07929 3.59961 1.83588 7.28426 3.51077 9.51666L8.00014 16L12.4828 9.52572C14.1644 7.28426 13.921 3.59961 11.9624 1.64129ZM8.05186 7.5972C6.92426 7.5972 6.00645 6.6794 6.00645 5.5518C6.00645 4.4242 6.92426 3.5064 8.05186 3.5064C9.17946 3.5064 10.0973 4.4242 10.0973 5.5518C10.0973 6.6794 9.17946 7.5972 8.05186 7.5972Z" fill="currentColor"></path>
-                      </svg>
-                      <span>Константина Симонова, 5к2</span>
-                    </div>
-                    <a href="#" class="proposal-list__title proposal-list__title--shorter">Рыбным текстом называется для временного</a>
-                    <div class="proposal-list__like-counter js-like-counter">
-                      <span>1080</span>
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path class="stroked" d="M1.75 24H4.25C5.215 24 6 23.215 6 22.25V21.884C7.512 22.654 10.946 24 16.531 24H18.131C20.449 24 22.417 22.342 22.81 20.058L23.93 13.558C24.168 12.171 23.785 10.761 22.881 9.687C21.978 8.615 20.654 8 19.251 8H14.715C14.998 7.24 15.281 6.132 15.281 4.75C15.281 0.993 13.155 0 12.031 0C9.955 0 9.781 1.936 9.781 3.75C9.781 5.964 7.298 7.804 5.987 8.622C5.92 7.718 5.171 7 4.25 7H1.75C0.785 7 0 7.785 0 8.75V22.25C0 23.215 0.785 24 1.75 24ZM11.281 3.75C11.281 1.5 11.662 1.5 12.031 1.5C12.735 1.5 13.781 2.366 13.781 4.75C13.781 6.966 12.913 8.324 12.907 8.334C12.754 8.564 12.739 8.86 12.87 9.104C13 9.348 13.255 9.5 13.531 9.5H19.251C20.211 9.5 21.116 9.92 21.734 10.653C22.353 11.387 22.615 12.353 22.452 13.302L21.332 19.802C21.063 21.364 19.717 22.499 18.131 22.499H16.531C9.728 22.5 6.32 20.372 6 20.161V10.351C6.833 9.909 11.281 7.379 11.281 3.75ZM1.5 8.75C1.5 8.612 1.612 8.5 1.75 8.5H4.25C4.388 8.5 4.5 8.612 4.5 8.75V22.25C4.5 22.386 4.386 22.5 4.25 22.5H1.75C1.612 22.5 1.5 22.388 1.5 22.25V8.75Z" fill="inherit"></path>
-                        <path class="filled" fill-rule="evenodd" clip-rule="evenodd" d="M7.7602 7.30702C7.41578 7.61371 7.19922 8.0442 7.19922 8.50538V21.407C7.19922 22.021 7.57177 22.5781 8.15411 22.7726C10.0334 23.4003 12.8027 23.9999 16.5302 23.9999H18.1302C20.4481 23.9999 22.4161 22.3419 22.8091 20.0579L23.9291 13.5579C24.1671 12.1709 23.7841 10.7609 22.8801 9.68694C21.9771 8.61495 20.6531 7.99995 19.2501 7.99995H14.7142C14.9972 7.23996 15.2802 6.13196 15.2802 4.74997C15.2802 0.992994 13.1542 0 12.0302 0C9.9542 0 9.7802 1.93599 9.7802 3.74998C9.7802 5.13486 8.80869 6.3734 7.7602 7.30702Z" fill="inherit"></path>
-                        <path class="filled" fill-rule="evenodd" clip-rule="evenodd" d="M4.79997 8.61389C4.79561 8.6166 4.79128 8.6193 4.78697 8.62199C4.71997 7.718 3.97098 7 3.04998 7H1.74999C0.784995 7 0 7.785 0 8.74999V22.2499C0 23.2149 0.784995 23.9999 1.74999 23.9999H3.04998C4.01454 23.9999 4.79926 23.2156 4.79997 22.2512C4.79997 22.2508 4.79997 22.2503 4.79997 22.2499V21.8839L4.79997 8.61389Z" fill="inherit"></path>
-                      </svg>
-                    </div>
-                  </li>
-                  <li class="proposal-list__item proposal-list__item--userless">
-                    <a class="proposal-list__address">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.9624 1.64129C10.904 0.582939 9.49678 0 8.00014 0C6.50319 0 5.09625 0.582939 4.0379 1.64129C2.07929 3.59961 1.83588 7.28426 3.51077 9.51666L8.00014 16L12.4828 9.52572C14.1644 7.28426 13.921 3.59961 11.9624 1.64129ZM8.05186 7.5972C6.92426 7.5972 6.00645 6.6794 6.00645 5.5518C6.00645 4.4242 6.92426 3.5064 8.05186 3.5064C9.17946 3.5064 10.0973 4.4242 10.0973 5.5518C10.0973 6.6794 9.17946 7.5972 8.05186 7.5972Z" fill="currentColor"></path>
-                      </svg>
-                      <span>Константина Симонова, 5к2</span>
-                    </a>
-                    <a href="#" class="proposal-list__title">Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях</a>
-                    <div class="proposal-list__like-counter js-like-counter">
-                      <span>1024</span>
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path class="stroked" d="M1.75 24H4.25C5.215 24 6 23.215 6 22.25V21.884C7.512 22.654 10.946 24 16.531 24H18.131C20.449 24 22.417 22.342 22.81 20.058L23.93 13.558C24.168 12.171 23.785 10.761 22.881 9.687C21.978 8.615 20.654 8 19.251 8H14.715C14.998 7.24 15.281 6.132 15.281 4.75C15.281 0.993 13.155 0 12.031 0C9.955 0 9.781 1.936 9.781 3.75C9.781 5.964 7.298 7.804 5.987 8.622C5.92 7.718 5.171 7 4.25 7H1.75C0.785 7 0 7.785 0 8.75V22.25C0 23.215 0.785 24 1.75 24ZM11.281 3.75C11.281 1.5 11.662 1.5 12.031 1.5C12.735 1.5 13.781 2.366 13.781 4.75C13.781 6.966 12.913 8.324 12.907 8.334C12.754 8.564 12.739 8.86 12.87 9.104C13 9.348 13.255 9.5 13.531 9.5H19.251C20.211 9.5 21.116 9.92 21.734 10.653C22.353 11.387 22.615 12.353 22.452 13.302L21.332 19.802C21.063 21.364 19.717 22.499 18.131 22.499H16.531C9.728 22.5 6.32 20.372 6 20.161V10.351C6.833 9.909 11.281 7.379 11.281 3.75ZM1.5 8.75C1.5 8.612 1.612 8.5 1.75 8.5H4.25C4.388 8.5 4.5 8.612 4.5 8.75V22.25C4.5 22.386 4.386 22.5 4.25 22.5H1.75C1.612 22.5 1.5 22.388 1.5 22.25V8.75Z" fill="inherit"></path>
-                        <path class="filled" fill-rule="evenodd" clip-rule="evenodd" d="M7.7602 7.30702C7.41578 7.61371 7.19922 8.0442 7.19922 8.50538V21.407C7.19922 22.021 7.57177 22.5781 8.15411 22.7726C10.0334 23.4003 12.8027 23.9999 16.5302 23.9999H18.1302C20.4481 23.9999 22.4161 22.3419 22.8091 20.0579L23.9291 13.5579C24.1671 12.1709 23.7841 10.7609 22.8801 9.68694C21.9771 8.61495 20.6531 7.99995 19.2501 7.99995H14.7142C14.9972 7.23996 15.2802 6.13196 15.2802 4.74997C15.2802 0.992994 13.1542 0 12.0302 0C9.9542 0 9.7802 1.93599 9.7802 3.74998C9.7802 5.13486 8.80869 6.3734 7.7602 7.30702Z" fill="inherit"></path>
-                        <path class="filled" fill-rule="evenodd" clip-rule="evenodd" d="M4.79997 8.61389C4.79561 8.6166 4.79128 8.6193 4.78697 8.62199C4.71997 7.718 3.97098 7 3.04998 7H1.74999C0.784995 7 0 7.785 0 8.74999V22.2499C0 23.2149 0.784995 23.9999 1.74999 23.9999H3.04998C4.01454 23.9999 4.79926 23.2156 4.79997 22.2512C4.79997 22.2508 4.79997 22.2503 4.79997 22.2499V21.8839L4.79997 8.61389Z" fill="inherit"></path>
-                      </svg>
+                    <a href="#" class="public-debate__link">Реконструкция моста через р. Дон на км 11+600 автомобильной дороги Новомосковское кольцо в Узловском районе Тульской области</a>
+                    <div class="public-debate__period-wrapper">
+                      <span class="public-debate__period-text">Период приема мнений</span>
+                      <span class="public-debate__period-dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
+                      <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+  <svg width="20" height="20" viewbox="0 0 20 20">
+    <use xlink:href="img/sprite.svg#icon-star"></use>
+  </svg>
+
+  <span class="button-star__text">В избранное</span>
+</button>
+
                     </div>
                   </li>
-                  <li class="proposal-list__item proposal-list__item--userless">
-                    <a class="proposal-list__address">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.9624 1.64129C10.904 0.582939 9.49678 0 8.00014 0C6.50319 0 5.09625 0.582939 4.0379 1.64129C2.07929 3.59961 1.83588 7.28426 3.51077 9.51666L8.00014 16L12.4828 9.52572C14.1644 7.28426 13.921 3.59961 11.9624 1.64129ZM8.05186 7.5972C6.92426 7.5972 6.00645 6.6794 6.00645 5.5518C6.00645 4.4242 6.92426 3.5064 8.05186 3.5064C9.17946 3.5064 10.0973 4.4242 10.0973 5.5518C10.0973 6.6794 9.17946 7.5972 8.05186 7.5972Z" fill="currentColor"></path>
-                      </svg>
-                      <span>Константина Симонова, 5к2</span>
-                    </a>
-                    <a href="#" class="proposal-list__title">Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях</a>
-                    <div class="proposal-list__like-counter js-like-counter">
-                      <span>1024</span>
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path class="stroked" d="M1.75 24H4.25C5.215 24 6 23.215 6 22.25V21.884C7.512 22.654 10.946 24 16.531 24H18.131C20.449 24 22.417 22.342 22.81 20.058L23.93 13.558C24.168 12.171 23.785 10.761 22.881 9.687C21.978 8.615 20.654 8 19.251 8H14.715C14.998 7.24 15.281 6.132 15.281 4.75C15.281 0.993 13.155 0 12.031 0C9.955 0 9.781 1.936 9.781 3.75C9.781 5.964 7.298 7.804 5.987 8.622C5.92 7.718 5.171 7 4.25 7H1.75C0.785 7 0 7.785 0 8.75V22.25C0 23.215 0.785 24 1.75 24ZM11.281 3.75C11.281 1.5 11.662 1.5 12.031 1.5C12.735 1.5 13.781 2.366 13.781 4.75C13.781 6.966 12.913 8.324 12.907 8.334C12.754 8.564 12.739 8.86 12.87 9.104C13 9.348 13.255 9.5 13.531 9.5H19.251C20.211 9.5 21.116 9.92 21.734 10.653C22.353 11.387 22.615 12.353 22.452 13.302L21.332 19.802C21.063 21.364 19.717 22.499 18.131 22.499H16.531C9.728 22.5 6.32 20.372 6 20.161V10.351C6.833 9.909 11.281 7.379 11.281 3.75ZM1.5 8.75C1.5 8.612 1.612 8.5 1.75 8.5H4.25C4.388 8.5 4.5 8.612 4.5 8.75V22.25C4.5 22.386 4.386 22.5 4.25 22.5H1.75C1.612 22.5 1.5 22.388 1.5 22.25V8.75Z" fill="inherit"></path>
-                        <path class="filled" fill-rule="evenodd" clip-rule="evenodd" d="M7.7602 7.30702C7.41578 7.61371 7.19922 8.0442 7.19922 8.50538V21.407C7.19922 22.021 7.57177 22.5781 8.15411 22.7726C10.0334 23.4003 12.8027 23.9999 16.5302 23.9999H18.1302C20.4481 23.9999 22.4161 22.3419 22.8091 20.0579L23.9291 13.5579C24.1671 12.1709 23.7841 10.7609 22.8801 9.68694C21.9771 8.61495 20.6531 7.99995 19.2501 7.99995H14.7142C14.9972 7.23996 15.2802 6.13196 15.2802 4.74997C15.2802 0.992994 13.1542 0 12.0302 0C9.9542 0 9.7802 1.93599 9.7802 3.74998C9.7802 5.13486 8.80869 6.3734 7.7602 7.30702Z" fill="inherit"></path>
-                        <path class="filled" fill-rule="evenodd" clip-rule="evenodd" d="M4.79997 8.61389C4.79561 8.6166 4.79128 8.6193 4.78697 8.62199C4.71997 7.718 3.97098 7 3.04998 7H1.74999C0.784995 7 0 7.785 0 8.74999V22.2499C0 23.2149 0.784995 23.9999 1.74999 23.9999H3.04998C4.01454 23.9999 4.79926 23.2156 4.79997 22.2512C4.79997 22.2508 4.79997 22.2503 4.79997 22.2499V21.8839L4.79997 8.61389Z" fill="inherit"></path>
-                      </svg>
+                  <li class="public-debate__item">
+                    <div class="public-debate__date-wrapper">
+                      <span class="public-debate__date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
+                      <span class="public-debate__status public-debate__status--orange">Подведение итогов</span>
+                      <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
+                        <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                        </svg>
+                        <span class="join-indicator__tooltip">Участие принято</span>
+                      </div>
+                    </div>
+                    <a href="#" class="public-debate__link">Государственное дошкольное образовательное учреждение Тульской области «Узловский детский сад»</a>
+                    <div class="public-debate__period-wrapper public-debate__period-wrapper--favorite">
+                      <span class="public-debate__period-text public-debate__status--blue">Период приема мнений</span>
+                      <span class="public-debate__period-dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
+                      <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+  <svg width="20" height="20" viewbox="0 0 20 20">
+    <use xlink:href="img/sprite.svg#icon-star"></use>
+  </svg>
+
+  <span class="button-star__text">В избранное</span>
+</button>
+
                     </div>
                   </li>
-                  <li class="proposal-list__item proposal-list__item--userless">
-                    <a class="proposal-list__address">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11.9624 1.64129C10.904 0.582939 9.49678 0 8.00014 0C6.50319 0 5.09625 0.582939 4.0379 1.64129C2.07929 3.59961 1.83588 7.28426 3.51077 9.51666L8.00014 16L12.4828 9.52572C14.1644 7.28426 13.921 3.59961 11.9624 1.64129ZM8.05186 7.5972C6.92426 7.5972 6.00645 6.6794 6.00645 5.5518C6.00645 4.4242 6.92426 3.5064 8.05186 3.5064C9.17946 3.5064 10.0973 4.4242 10.0973 5.5518C10.0973 6.6794 9.17946 7.5972 8.05186 7.5972Z" fill="currentColor"></path>
-                      </svg>
-                      <span>Константина Симонова, 5к2</span>
-                    </a>
-                    <a href="#" class="proposal-list__title">Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях</a>
-                    <div class="proposal-list__like-counter js-like-counter">
-                      <span>1024</span>
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path class="stroked" d="M1.75 24H4.25C5.215 24 6 23.215 6 22.25V21.884C7.512 22.654 10.946 24 16.531 24H18.131C20.449 24 22.417 22.342 22.81 20.058L23.93 13.558C24.168 12.171 23.785 10.761 22.881 9.687C21.978 8.615 20.654 8 19.251 8H14.715C14.998 7.24 15.281 6.132 15.281 4.75C15.281 0.993 13.155 0 12.031 0C9.955 0 9.781 1.936 9.781 3.75C9.781 5.964 7.298 7.804 5.987 8.622C5.92 7.718 5.171 7 4.25 7H1.75C0.785 7 0 7.785 0 8.75V22.25C0 23.215 0.785 24 1.75 24ZM11.281 3.75C11.281 1.5 11.662 1.5 12.031 1.5C12.735 1.5 13.781 2.366 13.781 4.75C13.781 6.966 12.913 8.324 12.907 8.334C12.754 8.564 12.739 8.86 12.87 9.104C13 9.348 13.255 9.5 13.531 9.5H19.251C20.211 9.5 21.116 9.92 21.734 10.653C22.353 11.387 22.615 12.353 22.452 13.302L21.332 19.802C21.063 21.364 19.717 22.499 18.131 22.499H16.531C9.728 22.5 6.32 20.372 6 20.161V10.351C6.833 9.909 11.281 7.379 11.281 3.75ZM1.5 8.75C1.5 8.612 1.612 8.5 1.75 8.5H4.25C4.388 8.5 4.5 8.612 4.5 8.75V22.25C4.5 22.386 4.386 22.5 4.25 22.5H1.75C1.612 22.5 1.5 22.388 1.5 22.25V8.75Z" fill="inherit"></path>
-                        <path class="filled" fill-rule="evenodd" clip-rule="evenodd" d="M7.7602 7.30702C7.41578 7.61371 7.19922 8.0442 7.19922 8.50538V21.407C7.19922 22.021 7.57177 22.5781 8.15411 22.7726C10.0334 23.4003 12.8027 23.9999 16.5302 23.9999H18.1302C20.4481 23.9999 22.4161 22.3419 22.8091 20.0579L23.9291 13.5579C24.1671 12.1709 23.7841 10.7609 22.8801 9.68694C21.9771 8.61495 20.6531 7.99995 19.2501 7.99995H14.7142C14.9972 7.23996 15.2802 6.13196 15.2802 4.74997C15.2802 0.992994 13.1542 0 12.0302 0C9.9542 0 9.7802 1.93599 9.7802 3.74998C9.7802 5.13486 8.80869 6.3734 7.7602 7.30702Z" fill="inherit"></path>
-                        <path class="filled" fill-rule="evenodd" clip-rule="evenodd" d="M4.79997 8.61389C4.79561 8.6166 4.79128 8.6193 4.78697 8.62199C4.71997 7.718 3.97098 7 3.04998 7H1.74999C0.784995 7 0 7.785 0 8.74999V22.2499C0 23.2149 0.784995 23.9999 1.74999 23.9999H3.04998C4.01454 23.9999 4.79926 23.2156 4.79997 22.2512C4.79997 22.2508 4.79997 22.2503 4.79997 22.2499V21.8839L4.79997 8.61389Z" fill="inherit"></path>
-                      </svg>
+                  <li class="public-debate__item">
+                    <div class="public-debate__date-wrapper">
+                      <span class="public-debate__date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
+                      <span class="public-debate__status public-debate__status--blue">Идет прием мнений</span>
+                      <div class="public-debate__joined public-debate__joined--visible join-indicator" data-tooltip="Участие принято" data-flow="down">
+                        <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                        </svg>
+                        <span class="join-indicator__tooltip">Участие принято</span>
+                      </div>
+                    </div>
+                    <a href="#" class="public-debate__link">Государственное дшкольное образовательное учреждение «Узловский детский сад»</a>
+                    <div class="public-debate__period-wrapper public-debate__period-wrapper--favorite">
+                      <span class="public-debate__period-text">Период приема мнений</span>
+                      <span class="public-debate__period-dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
+                      <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+  <svg width="20" height="20" viewbox="0 0 20 20">
+    <use xlink:href="img/sprite.svg#icon-star"></use>
+  </svg>
+
+  <span class="button-star__text">В избранное</span>
+</button>
+
+                    </div>
+                  </li>
+                  <li class="public-debate__item">
+                    <div class="public-debate__date-wrapper">
+                      <span class="public-debate__date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
+                      <span class="public-debate__status public-debate__status--green">Подготовка к проведению слушаний</span>
+                      <div class="public-debate__joined public-debate__joined--visible join-indicator" data-tooltip="Участие принято" data-flow="down">
+                        <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                        </svg>
+                        <span class="join-indicator__tooltip">Участие принято</span>
+                      </div>
+                    </div>
+                    <a href="#" class="public-debate__link">Реконструкция моста через р. Дон на км 11+600 автомобильной дороги Новомосковское кольцо в Узловском районе Тульской области</a>
+                    <div class="public-debate__period-wrapper">
+                      <span class="public-debate__period-text">Период приема мнений</span>
+                      <span class="public-debate__period-dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
+                      <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+  <svg width="20" height="20" viewbox="0 0 20 20">
+    <use xlink:href="img/sprite.svg#icon-star"></use>
+  </svg>
+
+  <span class="button-star__text">В избранное</span>
+</button>
+
+                    </div>
+                  </li>
+                  <li class="public-debate__item">
+                    <div class="public-debate__date-wrapper">
+                      <span class="public-debate__date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
+                      <span class="public-debate__status">Подготовка к проведению слушаний</span>
+                      <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
+                        <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                        </svg>
+                        <span class="join-indicator__tooltip">Участие принято</span>
+                      </div>
+                    </div>
+                    <a href="#" class="public-debate__link">Государственное дшкольное образовательное учреждение «Узловский детский сад»</a>
+                    <div class="public-debate__period-wrapper">
+                      <span class="public-debate__period-text">Период приема мнений</span>
+                      <span class="public-debate__period-dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
+                      <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+  <svg width="20" height="20" viewbox="0 0 20 20">
+    <use xlink:href="img/sprite.svg#icon-star"></use>
+  </svg>
+
+  <span class="button-star__text">В избранное</span>
+</button>
+
+                    </div>
+                  </li>
+                  <li class="public-debate__item">
+                    <div class="public-debate__date-wrapper">
+                      <span class="public-debate__date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
+                      <span class="public-debate__status">Подготовка к проведению слушаний</span>
+                      <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
+                        <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                        </svg>
+                        <span class="join-indicator__tooltip">Участие принято</span>
+                      </div>
+                    </div>
+                    <a href="#" class="public-debate__link">Реконструкция моста через р. Дон на км 11+600 автомобильной дороги Новомосковское кольцо в Узловском районе Тульской области</a>
+                    <div class="public-debate__period-wrapper">
+                      <span class="public-debate__period-text">Период приема мнений</span>
+                      <span class="public-debate__period-dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
+                      <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+  <svg width="20" height="20" viewbox="0 0 20 20">
+    <use xlink:href="img/sprite.svg#icon-star"></use>
+  </svg>
+
+  <span class="button-star__text">В избранное</span>
+</button>
+
+                    </div>
+                  </li>
+                  <li class="public-debate__item">
+                    <div class="public-debate__date-wrapper">
+                      <span class="public-debate__date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
+                      <span class="public-debate__status public-debate__status--orange">Подведение итогов</span>
+                      <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
+                        <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                        </svg>
+                        <span class="join-indicator__tooltip">Участие принято</span>
+                      </div>
+                    </div>
+                    <a href="#" class="public-debate__link">Государственное дошкольное образовательное учреждение Тульской области «Узловский детский сад»</a>
+                    <div class="public-debate__period-wrapper public-debate__period-wrapper--favorite">
+                      <span class="public-debate__period-text public-debate__status--blue">Период приема мнений</span>
+                      <span class="public-debate__period-dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
+                      <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+  <svg width="20" height="20" viewbox="0 0 20 20">
+    <use xlink:href="img/sprite.svg#icon-star"></use>
+  </svg>
+
+  <span class="button-star__text">В избранное</span>
+</button>
+
+                    </div>
+                  </li>
+                  <li class="public-debate__item">
+                    <div class="public-debate__date-wrapper">
+                      <span class="public-debate__date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
+                      <span class="public-debate__status public-debate__status--blue">Идет прием мнений</span>
+                      <div class="public-debate__joined public-debate__joined--visible join-indicator" data-tooltip="Участие принято" data-flow="down">
+                        <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                        </svg>
+                        <span class="join-indicator__tooltip">Участие принято</span>
+                      </div>
+                    </div>
+                    <a href="#" class="public-debate__link">Государственное дшкольное образовательное учреждение «Узловский детский сад»</a>
+                    <div class="public-debate__period-wrapper public-debate__period-wrapper--favorite">
+                      <span class="public-debate__period-text">Период приема мнений</span>
+                      <span class="public-debate__period-dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
+                      <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+  <svg width="20" height="20" viewbox="0 0 20 20">
+    <use xlink:href="img/sprite.svg#icon-star"></use>
+  </svg>
+
+  <span class="button-star__text">В избранное</span>
+</button>
+
+                    </div>
+                  </li>
+                  <li class="public-debate__item">
+                    <div class="public-debate__date-wrapper">
+                      <span class="public-debate__date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
+                      <span class="public-debate__status public-debate__status--green">Подготовка к проведению слушаний</span>
+                      <div class="public-debate__joined public-debate__joined--visible join-indicator" data-tooltip="Участие принято" data-flow="down">
+                        <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                        </svg>
+                        <span class="join-indicator__tooltip">Участие принято</span>
+                      </div>
+                    </div>
+                    <a href="#" class="public-debate__link">Реконструкция моста через р. Дон на км 11+600 автомобильной дороги Новомосковское кольцо в Узловском районе Тульской области</a>
+                    <div class="public-debate__period-wrapper">
+                      <span class="public-debate__period-text">Период приема мнений</span>
+                      <span class="public-debate__period-dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
+                      <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+  <svg width="20" height="20" viewbox="0 0 20 20">
+    <use xlink:href="img/sprite.svg#icon-star"></use>
+  </svg>
+
+  <span class="button-star__text">В избранное</span>
+</button>
+
+                    </div>
+                  </li>
+                  <li class="public-debate__item">
+                    <div class="public-debate__date-wrapper">
+                      <span class="public-debate__date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
+                      <span class="public-debate__status">Подготовка к проведению слушаний</span>
+                      <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
+                        <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                        </svg>
+                        <span class="join-indicator__tooltip">Участие принято</span>
+                      </div>
+                    </div>
+                    <a href="#" class="public-debate__link">Государственное дшкольное образовательное учреждение «Узловский детский сад»</a>
+                    <div class="public-debate__period-wrapper">
+                      <span class="public-debate__period-text">Период приема мнений</span>
+                      <span class="public-debate__period-dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
+                      <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+  <svg width="20" height="20" viewbox="0 0 20 20">
+    <use xlink:href="img/sprite.svg#icon-star"></use>
+  </svg>
+
+  <span class="button-star__text">В избранное</span>
+</button>
+
                     </div>
                   </li>
                 </ul>
-                <div class="area-improvement__paginator paginator">
+                <div class="public-debate__paginator paginator">
                   <a class="paginator__item paginator__item--prev paginator__item--disabled" aria-label="предыдущий">
                       <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use xlink:href="img/sprite.svg#icon-paginator-prev"></use>
@@ -388,6 +531,15 @@
                   <a class="paginator__item paginator__item--next" href="#next" aria-label="следующий">
                     <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <use xlink:href="img/sprite.svg#icon-paginator-next"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="public-debate__archive archive-link">
+                  <p class="archive-link__description">Также вы&nbsp;можете ознакомиться со&nbsp;всеми записями, перейдя в&nbsp;архив</p>
+                  <a href="#" class="link-arrow archive-link__btn">
+                    <span>Архив <span class="archive-link__hidden">обсуждений</span></span>
+                    <svg width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-arrow"></use>
                     </svg>
                   </a>
                 </div>
