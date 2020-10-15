@@ -106,12 +106,20 @@
   @media (min-width: $desktop-width) {
     padding-bottom: 32px;
     display: grid;
+    grid-template-columns: 1fr 211px;
+    grid-column-gap: 56px;
     grid-template-areas:
       "a    c"
       "b    c";
     }
-    grid-template-columns: 1fr 211px;
-    grid-column-gap: 56px;
+
+  &:hover:not(.focus-visible) .button-star {
+    color: var(--color-stroke, $light-grey)
+  }
+
+  &:hover:not(.focus-visible) .public-debate__period-wrapper--favorite .button-star {
+    color: var(--color-interactive-accent, $blue-accent);
+  }
 
   & > * {
     align-self: start;
@@ -221,8 +229,15 @@
 
   grid-area: b;
 
+  transition: color $style-change-duration;
+
   @media (min-width: $desktop-width) {
     margin-bottom: 0;
+    justify-self: start;
+
+    &:hover:not(.focus-visible) {
+      color: var(--color-interactive-accent, $blue-accent);
+    }
   }
 }
 
@@ -244,23 +259,23 @@
       align-self: start;
     }
   }
-
-  &--favorite {
-    .button-star {
-      color: var(--color-interactive-accent, $blue-accent);
-    }
-  }
 }
 
 .public-debate__period-wrapper .button-star {
   height: 19px;
   padding: 0;
   margin-left: auto;
+  color: transparent;
 
   @media (min-width: $desktop-width) {
+    height: 21px;
     margin-left: 24px;
     margin-top: 12px;
     grid-area: c;
+  }
+
+  svg {
+    transition: color $style-change-duration;
   }
 }
 
