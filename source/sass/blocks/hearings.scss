@@ -30,6 +30,40 @@
     > * {
         align-self: start;
     }
+
+    &--result {
+        grid-template-areas:
+        "a   a"
+        "b   c"
+        "result c"
+        "d   c"
+        "e   c"
+        "f   c"
+        "g   c"
+        "h   c";
+
+        .hearings__status {
+            margin-bottom: 15px;
+
+            @include tablet {
+                margin-bottom: 40px;
+            }
+
+            @include mobile {
+                margin-bottom: 46px;
+            }
+        }
+
+        .hearings__time-frame {
+            @include mobile {
+                margin-bottom: 35px;
+            }
+        }
+    }
+}
+
+.hearings__result {
+    grid-area: result;
 }
 
 .hearings__title {
@@ -152,6 +186,15 @@
 
     .all-comments {
         padding: 0;
+    }
+
+    .your-comment {
+        margin-bottom: 45px;
+        padding: 0;
+    }
+
+    .your-comment__content {
+        margin: 0;
     }
 }
 

@@ -60,6 +60,45 @@
   }
 }
 
+.your-comment__status {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    top: -6px;
+}
+
+  @include mobile {
+    order: 3;
+    margin-bottom: 24px;
+    width: 100%;
+  }
+
+  p {
+    margin: 0;
+    padding: 6px 8px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    font-size: rem(13px);
+    line-height: rem(16.9px);
+    color: #2C8ECC;
+  }
+
+  &--red {
+    p {
+      color: #E55050;
+    }
+  }
+
+  &--grey {
+    p {
+      color: #707B8C;
+    }
+  }
+}
+
 .your-comment__link {
   display: flex;
   align-items: baseline;
