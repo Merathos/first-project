@@ -18,7 +18,6 @@
             evt.preventDefault();
             yourComment.classList.add('visually-hidden');
             var clone = editTemplate.content.firstElementChild.cloneNode(true);
-            var commentEditContainer = clone.querySelector('.commentary-add--edit');
             var textareaContainer = clone.querySelector('.commentary-add__textarea');
             var textarea = textareaContainer.querySelector('textarea');
             var errorField = textareaContainer.querySelector('#textarea-error-field');

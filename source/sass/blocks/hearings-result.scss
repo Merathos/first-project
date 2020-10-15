@@ -80,3 +80,14 @@
         margin-top: 30px;
     }
 }
+
+.hearings-result {
+    .poll-result__section {
+        background-image: none;
+        padding: 0;
+    }
+
+    .poll-result__item:last-child {
+        margin-bottom: 0;
+    }
+}
