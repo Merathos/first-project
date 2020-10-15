@@ -5681,6 +5681,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         margin-bottom: 0px;
         font-size: 1.5rem;
         line-height: 1.7775rem; } }
+  .commentary-add--edit h2 {
+    margin-bottom: 24px; }
+  .commentary-add--edit .commentary-add__textarea textarea {
+    height: 402px; }
 
 .commentary-add__description {
   margin-bottom: 40px; }
