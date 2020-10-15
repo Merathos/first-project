@@ -448,8 +448,8 @@
   });
 })();
 
-'use strict';
-(function () {
+'use strict'
+;(function () {
   var infoBanner = document.querySelectorAll('.info-banner');
 
   if (infoBanner.length > 0) {
@@ -458,23 +458,12 @@
       var bannerToggleTextButton = banner.querySelector('.info-banner__button');
 
       if (bannerText && bannerToggleTextButton) {
-
-        var textSpan = bannerToggleTextButton.querySelector('.info-banner-button__text');
-        var changeButtonText = function () {
-          if (bannerToggleTextButton.classList.contains('opened')) {
-            textSpan.textContent = 'Свернуть';
-          } else {
-            textSpan.textContent = 'Развернуть';
-          }
-        };
         // Количество строк текста
         var bannerTextHeight = bannerText.getBoundingClientRect().height;
         var bannerTextLineHeight = +getComputedStyle(
             bannerText
         ).lineHeight.replace('px', '');
-        var bannerTextLines = Math.ceil(
-            bannerTextHeight / bannerTextLineHeight
-        );
+        var bannerTextLines = Math.ceil(bannerTextHeight / bannerTextLineHeight);
 
         // Максимально допустимое количество строк
         var maxLinesAmount = 3;
@@ -490,11 +479,9 @@
           bannerToggleTextButton.addEventListener('click', function (e) {
             e.currentTarget.classList.toggle('opened');
             bannerText.classList.toggle('opened');
-            changeButtonText();
           });
         } else {
           banner.classList.add('info-banner_enough-lines_false');
-          changeButtonText();
         }
       }
     });

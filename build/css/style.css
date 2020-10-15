@@ -4106,7 +4106,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   background: var(--color-bg-secondary, #f9f9fa);
   border: 1px solid var(--color-interactive-default, #2c8ecc);
   border-radius: 5px; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .info-banner {
       padding-left: 54px; } }
   @media (max-width: 400px) {
@@ -4121,7 +4121,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     top: 23px;
     left: 30px;
     color: var(--color-interactive-default, #2c8ecc); }
-    @media (max-width: 767px) {
+    @media (max-width: 768px) {
       .info-banner__icon {
         left: 16px; } }
     @media (max-width: 400px) {
@@ -4189,7 +4189,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(var(--color-bg-secondary, #f9f9fa)));
       background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--color-bg-secondary, #f9f9fa) 100%);
       text-align: right;
-      content: ""; }
+      content: ''; }
   .info-banner_enough-lines_true .info-banner__button {
     display: initial; }
   .info-banner--warning .info-banner__text, .info-banner--approved .info-banner__text, .info-banner--declined .info-banner__text {
@@ -4265,11 +4265,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   -webkit-transition: color 0.15s ease;
   transition: color 0.15s ease; }
   .info-banner-button__text {
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 9px;
-    min-width: 84px;
-    text-align: left; }
+    margin-right: 9px; }
     .info-banner-button__text_opened {
       display: none; }
     .info-banner-button__text_closed {
