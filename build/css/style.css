@@ -6039,6 +6039,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       width: auto;
       font-size: 0.9375rem;
       line-height: 135%; }
+      @media (max-width: 767px) {
+        .public-debate--all .public-debate__select .placeholder {
+          -ms-flex-negative: 1;
+              flex-shrink: 1; } }
     .public-debate--all .public-debate__select .ss-content {
       top: 41px;
       left: 0;
