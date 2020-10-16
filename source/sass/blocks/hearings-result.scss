@@ -12,6 +12,20 @@
         padding-bottom: 30px;
         margin-bottom: 35px;
     }
+
+    .poll-result__section {
+        background-image: none;
+        padding: 0;
+    }
+
+    .poll-result__item:last-child {
+        margin-bottom: 0;
+    }
+
+    .poll-result__description {
+        position: relative;
+        z-index: 2;
+    }
 }
 
 .hearings-result__files {
@@ -81,13 +95,18 @@
     }
 }
 
-.hearings-result {
-    .poll-result__section {
-        background-image: none;
-        padding: 0;
+.hearings-result__status-info {
+    @include tablet {
+        padding: 25px 33px;
     }
 
-    .poll-result__item:last-child {
-        margin-bottom: 0;
+    @include mobile {
+        padding: 25px 24px;
+    }
+
+    svg {
+        @include mobile {
+            margin-right: 16px;
+        }
     }
 }
