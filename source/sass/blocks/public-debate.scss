@@ -440,6 +440,10 @@
 
       font-size: rem(15px);
       line-height: 135%;
+
+      @media (max-width: $tablet-width - 1) {
+        flex-shrink: 1;
+      }
     }
 
     .ss-content {
