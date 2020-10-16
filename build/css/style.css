@@ -5998,14 +5998,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     @media (min-width: 768px) {
       .public-debate--all .public-debate__description {
         margin-bottom: 40px; } }
-  .public-debate--all .public-debate__filters {
-    width: 100%;
-    margin-bottom: 16px; }
-    @media (min-width: 768px) {
-      .public-debate--all .public-debate__filters {
-        display: none; } }
-    .public-debate--all .public-debate__filters span {
-      padding: 0; }
   .public-debate--all .public-debate__select {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6021,7 +6013,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     border-radius: 5px; }
     @media (max-width: 767px) {
       .public-debate--all .public-debate__select {
-        display: none; } }
+        margin-bottom: 16px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-flow: column wrap;
+                flex-flow: column wrap;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start; } }
     @media (min-width: 768px) {
       .public-debate--all .public-debate__select {
         margin-bottom: 16px; } }
@@ -6057,6 +6056,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       line-height: 135%; }
       .public-debate--all .public-debate__select .form-select__checkbox-wrapper label {
         position: relative; }
+      @media (max-width: 767px) {
+        .public-debate--all .public-debate__select .form-select__checkbox-wrapper {
+          padding: 15px 16px;
+          margin-left: 0; } }
   .public-debate--all .public-debate__list {
     margin-bottom: 57px; }
     @media (min-width: 768px) {
