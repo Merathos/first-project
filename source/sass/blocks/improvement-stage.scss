@@ -52,6 +52,14 @@
   &--complete {
     color: var(--color-interactive-default, $green)
   }
+
+  &--declined {
+    color: var(--color-icon, $red)
+  }
+
+  &--neutral {
+    color: var(--color-text, $grey-default)
+  }
 }
 
 .improvement-stage__dates {

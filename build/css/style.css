@@ -5036,6 +5036,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     color: var(--color-interactive-default, #2c8ecc); }
   .improvement-stage__status--complete {
     color: var(--color-interactive-default, #70bf56); }
+  .improvement-stage__status--declined {
+    color: var(--color-icon, #e55050); }
+  .improvement-stage__status--neutral {
+    color: var(--color-text, #a6abb3); }
 
 .improvement-stage__dates {
   color: var(--color-text, #354052); }
@@ -5825,6 +5829,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     color: var(--color-interactive-default, #2c8ecc); }
   .public-debate__status--green {
     color: var(--color-interactive-default, #70bf56); }
+  .public-debate__status--red {
+    color: var(--color-icon, #e55050); }
+  .public-debate__status--grey {
+    color: var(--color-text, #a6abb3); }
 
 .public-debate__joined {
   display: none; }

@@ -203,6 +203,14 @@
   &--green {
     color: var(--color-interactive-default, $green)
   }
+
+  &--red {
+    color: var(--color-icon, $red)
+  }
+
+  &--grey {
+    color: var(--color-text, $grey-default)
+  }
 }
 
 .public-debate__joined {
