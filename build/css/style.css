@@ -5036,6 +5036,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     color: var(--color-interactive-default, #2c8ecc); }
   .improvement-stage__status--complete {
     color: var(--color-interactive-default, #70bf56); }
+  .improvement-stage__status--declined {
+    color: var(--color-icon, #e55050); }
+  .improvement-stage__status--neutral {
+    color: var(--color-text, #a6abb3); }
 
 .improvement-stage__dates {
   color: var(--color-text, #354052); }
@@ -5825,6 +5829,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     color: var(--color-interactive-default, #2c8ecc); }
   .public-debate__status--green {
     color: var(--color-interactive-default, #70bf56); }
+  .public-debate__status--red {
+    color: var(--color-icon, #e55050); }
+  .public-debate__status--grey {
+    color: var(--color-text, #a6abb3); }
 
 .public-debate__joined {
   display: none; }
@@ -9606,7 +9614,7 @@ span.poll__hide {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 0.9375rem;
-  line-height: 1.26563rem; }
+  line-height: 1.26562rem; }
   .proposal-winners__status:before {
     display: none; }
 
@@ -9705,7 +9713,7 @@ span.poll__hide {
     display: block;
     padding: 15px 15px;
     font-size: 0.9375rem;
-    line-height: 1.26563rem;
+    line-height: 1.26562rem;
     font-weight: 500;
     color: #2C8ECC;
     text-transform: uppercase; }
@@ -9899,7 +9907,7 @@ span.poll__hide {
           align-items: center;
   padding-top: 4px;
   font-size: 0.9375rem;
-  line-height: 1.26563rem;
+  line-height: 1.26562rem;
   color: #116CA6;
   text-decoration: none; }
   .map-popup__details-btn span {
@@ -9927,14 +9935,14 @@ span.poll__hide {
     display: grid;
     grid-template-columns: minmax(740px, 1fr) 360px;
     grid-column-gap: 20px;
-    grid-template-areas: "a   a" "b   c" "d   c" "e   c" "f   c" "g   c" "h   c"; } }
+    grid-template-areas: "a   a" "b   c" "d   c" "e   c" "f   c" "g   c" "h   c"; } }
 
 .hearings > * {
   -ms-flex-item-align: start;
       align-self: start; }
 
 .hearings--result {
-  grid-template-areas: "a   a" "b   c" "result c" "d   c" "e   c" "f   c" "g   c" "h   c"; }
+  grid-template-areas: "a   a" "b   c" "result c" "d   c" "e   c" "f   c" "g   c" "h   c"; }
   .hearings--result .hearings__status {
     margin-bottom: 15px; }
     @media (max-width: 1199px) {
