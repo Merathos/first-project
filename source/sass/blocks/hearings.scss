@@ -178,7 +178,6 @@
     margin-bottom: 50px;
     padding-bottom: 47px;
     border-bottom: 1px solid #E3E8EE;
-    border-radius: 5px;
 
     @include mobile {
         margin-bottom: 42px;
@@ -191,10 +190,36 @@
     .your-comment {
         margin-bottom: 45px;
         padding: 0;
+        background-image: none;
     }
 
     .your-comment__content {
-        margin: 0;
+        @include mobile {
+            padding: 24px 16px 16px 16px;
+            margin: 0;
+        }
+    }
+
+    .your-comment__description {
+        @include mobile {
+            margin-bottom: 25px;
+            font-size: rem(13px);
+            line-height: rem(17px);
+        }
+    }
+
+    .your-comment__actions {
+        @include mobile {
+            margin-bottom: 13px;
+        }
+    }
+
+    .your-comment__text {
+        @include mobile {
+            margin-bottom: 0;
+            font-size: rem(13px);
+            line-height: rem(20px);
+        }
     }
 }
 
