@@ -2558,7 +2558,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   background-color: var(--color-bg-main, #f5f6f7); }
 
 .form-select .ss-main .ss-content {
-  z-index: 10;
+  z-index: 200;
   top: calc(100% + 8px);
   right: 0;
   width: 343px;
@@ -6032,6 +6032,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
           -webkit-box-pack: center;
               -ms-flex-pack: center;
                   justify-content: center; } }
+      .public-debate--all .public-debate__select .ss-single-selected .placeholder .ss-disabled {
+        font-size: 0.9375rem;
+        line-height: 135%; }
     .public-debate--all .public-debate__select .placeholder {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 auto;
@@ -9621,7 +9624,7 @@ span.poll__hide {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 0.9375rem;
-  line-height: 1.26563rem; }
+  line-height: 1.26562rem; }
   .proposal-winners__status:before {
     display: none; }
 
@@ -9720,7 +9723,7 @@ span.poll__hide {
     display: block;
     padding: 15px 15px;
     font-size: 0.9375rem;
-    line-height: 1.26563rem;
+    line-height: 1.26562rem;
     font-weight: 500;
     color: #2C8ECC;
     text-transform: uppercase; }
@@ -9914,7 +9917,7 @@ span.poll__hide {
           align-items: center;
   padding-top: 4px;
   font-size: 0.9375rem;
-  line-height: 1.26563rem;
+  line-height: 1.26562rem;
   color: #116CA6;
   text-decoration: none; }
   .map-popup__details-btn span {
@@ -9942,14 +9945,14 @@ span.poll__hide {
     display: grid;
     grid-template-columns: minmax(740px, 1fr) 360px;
     grid-column-gap: 20px;
-    grid-template-areas: "a   a" "b   c" "d   c" "e   c" "f   c" "g   c" "h   c"; } }
+    grid-template-areas: "a   a" "b   c" "d   c" "e   c" "f   c" "g   c" "h   c"; } }
 
 .hearings > * {
   -ms-flex-item-align: start;
       align-self: start; }
 
 .hearings--result {
-  grid-template-areas: "a   a" "b   c" "result c" "d   c" "e   c" "f   c" "g   c" "h   c"; }
+  grid-template-areas: "a   a" "b   c" "result c" "d   c" "e   c" "f   c" "g   c" "h   c"; }
   .hearings--result .hearings__status {
     margin-bottom: 15px; }
     @media (max-width: 1199px) {

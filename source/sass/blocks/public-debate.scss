@@ -432,6 +432,13 @@
         padding: 15px 16px;
         justify-content: center;
       }
+
+      .placeholder {
+        .ss-disabled {
+          font-size: rem(15px);
+          line-height: 135%;
+        }
+      }
     }
 
     .placeholder {
