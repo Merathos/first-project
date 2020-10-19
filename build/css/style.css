@@ -4406,12 +4406,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     display: grid;
     grid-template-columns: 1fr 360px;
     grid-column-gap: 20px;
-    grid-template-areas: "a   a"
- "k   c"
- "b   c"
- "d   c"
- "e   c"
- "f   c"; } }
+    grid-template-areas: "a   a" "k   c" "b   c" "d   c" "e   c" "f   c"; } }
 
 .proposal--approved > * {
   -ms-flex-item-align: start;
@@ -4571,14 +4566,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     display: grid;
     grid-template-columns: minmax(740px, 1fr) 360px;
     grid-column-gap: 20px;
-    grid-template-areas: "a   a"
- "b   c"
- "d   c"
- "e   c"
- "f   c"
- "g   c"
- "h   c"
- "i   c"; } }
+    grid-template-areas: "a   a" "b   c" "d   c" "e   c" "f   c" "g   c" "h   c" "i   c"; } }
 
 .proposal--implemented > * {
   -ms-flex-item-align: start;
@@ -5432,8 +5420,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   padding: 16px 32px 16px 24px;
   display: grid;
   grid-template-columns: 1fr 15.7%;
-  grid-template-areas: "a    b"
- "c    b";
+  grid-template-areas: "a    b" "c    b";
   background-color: var(--color-bg-secondary, #f9f9fa);
   border-radius: 5px;
   text-decoration: none; }
@@ -7096,9 +7083,7 @@ span.poll__hide {
 
 .gallery-popup__content {
   display: grid;
-  grid-template-areas: "frame top-bar"
- "frame description"
- "frame bottom-bar";
+  grid-template-areas: "frame top-bar" "frame description" "frame bottom-bar";
   grid-template-columns: 835px 285px;
   grid-template-rows: 48px auto 68px;
   width: 1120px;
@@ -7295,9 +7280,7 @@ span.poll__hide {
 
 .gallery-popup--proposal .gallery-popup__content {
   display: grid;
-  grid-template-areas: "top-bar"
- "frame"
- "bottom-bar";
+  grid-template-areas: "top-bar" "frame" "bottom-bar";
   grid-template-columns: 1fr;
   grid-template-rows: 64px auto 98px;
   background-color: #21252b;
