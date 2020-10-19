@@ -6032,6 +6032,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
           -webkit-box-pack: center;
               -ms-flex-pack: center;
                   justify-content: center; } }
+      .public-debate--all .public-debate__select .ss-single-selected .placeholder .ss-disabled {
+        font-size: 0.9375rem;
+        line-height: 135%; }
     .public-debate--all .public-debate__select .placeholder {
       -webkit-box-flex: 0;
           -ms-flex: 0 0 auto;
