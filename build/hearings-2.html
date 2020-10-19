@@ -667,15 +667,17 @@
     <template id="edit-comment-block">
         <section class="commentary-add commentary-add--edit">
             <h2>Редактирование комментария</h2>
-            <div class="commentary-add__textarea">
-                <textarea name="commentarytextarea" placeholder="Ограничение 1 000 символов" required="" rows="4" aria-label="Добавить комментарий"></textarea>
-                <p id="textarea-error-field">Осталось символов: 500</p>
-            </div>
-            <div class="commentary-add__bottom-wrapper">
-                <p>Отредактировать или удалить комментарий вы можете только в течение двух часов с момента
-                    публикации.</p>
-                <button type="submit" class="commentary-add__button button button--blue" id="commentary-save">Сохранить</button>
-            </div>
+            <form action="#" novalidate="">
+                <div class="commentary-add__textarea">
+                    <textarea name="commentarytextarea" placeholder="Ограничение 1 000 символов" required="" rows="4" aria-label="Добавить комментарий"></textarea>
+                    <p id="textarea-error-field">Осталось символов: 500</p>
+                </div>
+                <div class="commentary-add__bottom-wrapper">
+                    <p>Отредактировать или удалить комментарий вы можете только в течение двух часов с момента
+                        публикации.</p>
+                    <button type="submit" class="commentary-add__button button button--blue" id="commentary-save">Сохранить</button>
+                </div>
+            </form>
         </section>
     </template>
 
