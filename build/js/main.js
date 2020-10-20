@@ -521,8 +521,8 @@
 
     }
 })();
-'use strict'
-;(function () {
+'use strict';
+(function () {
   var infoBanner = document.querySelectorAll('.info-banner');
 
   if (infoBanner.length > 0) {
@@ -545,7 +545,9 @@
         var bannerTextLineHeight = +getComputedStyle(
             bannerText
         ).lineHeight.replace('px', '');
-        var bannerTextLines = Math.ceil(bannerTextHeight / bannerTextLineHeight);
+        var bannerTextLines = Math.ceil(
+            bannerTextHeight / bannerTextLineHeight
+        );
 
         // Максимально допустимое количество строк
         var maxLinesAmount = 3;
@@ -561,9 +563,11 @@
           bannerToggleTextButton.addEventListener('click', function (e) {
             e.currentTarget.classList.toggle('opened');
             bannerText.classList.toggle('opened');
+            changeButtonText();
           });
         } else {
           banner.classList.add('info-banner_enough-lines_false');
+          changeButtonText();
         }
       }
     });
@@ -1749,7 +1753,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
     });
   }
 
-
+  
   var mySwiper = new Swiper('.swiper-container', {
     speed: 400,
     autoplay: {
@@ -1777,7 +1781,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
             onPageClick: function(pageNumber, event) {
               mySwiper.slideTo(pageNumber - 1,400,false);
             },
-          });
+          });   
         if(i === widgetPaginationEl){
           i = 1;
         }
@@ -1785,7 +1789,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
     },
   });
 
-
+  
   var mySwiper = document.querySelector('.swiper-container').swiper;
 
 
@@ -1838,7 +1842,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
                   mySwiper.slideTo(pageNumber - 1,400,false);
                 },
               });
-
+             
               if(i === widgetPaginationEl){
                 i = 1;
               }
@@ -1850,7 +1854,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
       } else {
         this.parentElement.append(error);
         this.style.border = '1px solid #F3A8A8';
-        error.innerHTML = "Количество элементов на странице не может быть 0";}
+        error.innerHTML = "Количество элементов на странице не может быть 0";} 
 
     });
   }
@@ -1900,7 +1904,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
                   mySwiper.slideTo(pageNumber - 1,400,false);
                 },
               });
-
+             
               if(i === widgetPaginationEl){
                 i = 1;
               }
@@ -1912,7 +1916,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
         this.parentElement.append(error);
         this.style.border = '1px solid #F3A8A8';
         error.innerHTML = "Общее количество элементов не может быть 0";
-      }
+      } 
     });
   }
 
@@ -1958,7 +1962,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
                   mySwiper.slideTo(pageNumber - 1,400,false);
                 },
               });
-
+             
               if(i === widgetPaginationEl){
                 i = 1;
               }
@@ -1969,7 +1973,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
       } else {
         this.parentElement.append(error);
         this.style.border = '1px solid #F3A8A8';
-        error.innerHTML = "Время не может быть пустым";}
+        error.innerHTML = "Время не может быть пустым";} 
     });
   }
 
@@ -2016,7 +2020,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
                   mySwiper.slideTo(pageNumber - 1,400,false);
                 },
               });
-
+             
               if(i === widgetPaginationEl){
                 i = 1;
               }
@@ -2040,7 +2044,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
 (function () {
   var WidgetGetCode = document.querySelector('.js-widget-open');
   var WidgetPopup = document.querySelector('.widget-popup');
-
+  
   if(WidgetGetCode){
     WidgetGetCode.addEventListener('click',function(){
       WidgetPopup.classList.add('popup--shown');
@@ -2147,5 +2151,5 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
   if (widgetSelectPreview) {
     addSelectPreview(widgetSelectPreview);
   }
-
+  
 })();
