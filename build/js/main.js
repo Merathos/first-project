@@ -59,6 +59,87 @@
 'use strict';
 
 (function () {
+    if (document.querySelector('.commentary-add')) {
+        var textareaContainer = document.querySelector('.commentary-add__textarea');
+        var textarea = textareaContainer.querySelector('textarea');
+        var errorField = textareaContainer.querySelector('#textarea-error-field');
+
+        textarea.addEventListener('input', function () {
+            if (textarea.value.length >= 500) {
+                textareaContainer.classList.add('commentary-add__textarea--warning');
+                errorField.textContent = 'Осталось символов: ' + Math.abs(1000 - textarea.value.length);
+            } else {
+                textareaContainer.classList.remove('commentary-add__textarea--warning');
+            }
+
+            if (textarea.value.length >= 1000) {
+                textareaContainer.classList.add('commentary-add__textarea--error');
+                errorField.textContent = 'Вы превысили лимит символов на ' + Math.abs(1000 - textarea.value.length);
+            } else {
+                textareaContainer.classList.remove('commentary-add__textarea--error');
+            }
+        });
+    }
+})();
+'use strict';
+
+(function () {
+    if (document.querySelector('#edit-comment')) {
+        var commentsContainer = document.querySelector('.hearings__comments');
+        var yourComment = document.querySelector('.your-comment');
+        var editTemplate = document.querySelector('#edit-comment-block');
+        var editBtn = yourComment.querySelector('#edit-comment');
+        var deleteBtn = yourComment.querySelector('#delete-comment');
+        var yourText = yourComment.querySelector('.your-comment__text');
+
+        deleteBtn.addEventListener('click', function (evt) {
+            evt.preventDefault();
+            yourComment.remove();
+        });
+
+        editBtn.addEventListener('click', function (evt) {
+            evt.preventDefault();
+            yourComment.classList.add('visually-hidden');
+            var clone = editTemplate.content.firstElementChild.cloneNode(true);
+            var textareaContainer = clone.querySelector('.commentary-add__textarea');
+            var textarea = textareaContainer.querySelector('textarea');
+            var errorField = textareaContainer.querySelector('#textarea-error-field');
+            var saveBtn = clone.querySelector('#commentary-save');
+
+            clone.querySelector('textarea').value = yourText.innerText;
+
+            textarea.addEventListener('input', function () {
+                if (textarea.value.length >= 500) {
+                    textareaContainer.classList.add('commentary-add__textarea--warning');
+                    errorField.textContent = 'Осталось символов: ' + Math.abs(1000 - textarea.value.length);
+                } else {
+                    textareaContainer.classList.remove('commentary-add__textarea--warning');
+                }
+
+                if (textarea.value.length >= 1000) {
+                    textareaContainer.classList.add('commentary-add__textarea--error');
+                    errorField.textContent = 'Вы превысили лимит символов на ' + Math.abs(1000 - textarea.value.length);
+                } else {
+                    textareaContainer.classList.remove('commentary-add__textarea--error');
+                }
+            });
+
+            saveBtn.addEventListener('click', function () {
+                evt.preventDefault();
+                if (textarea.value.length > 0 && textarea.value.length < 1000) {
+                    yourText.innerText = textarea.value;
+                    clone.remove();
+                    yourComment.classList.remove('visually-hidden');
+                }
+            });
+
+            commentsContainer.prepend(clone);
+        });
+    }
+})();
+'use strict';
+
+(function () {
   var form = document.querySelector('.js-answers__form');
   if (!form) {
     return;
@@ -424,7 +505,24 @@
 })();
 
 'use strict';
+
 (function () {
+    if (document.querySelector('.hearings-result__status-info')) {
+        var resultContainer = document.querySelector('.hearings__result');
+        var statusInfo = resultContainer.querySelector('.hearings-result__status-info');
+        var pollResultTemplate = document.querySelector('#poll-result');
+
+        statusInfo.addEventListener('click', function (evt) {
+            evt.preventDefault();
+            statusInfo.remove();
+            var clone = pollResultTemplate.content.firstElementChild.cloneNode(true);
+            resultContainer.append(clone);
+        });
+
+    }
+})();
+'use strict'
+;(function () {
   var infoBanner = document.querySelectorAll('.info-banner');
 
   if (infoBanner.length > 0) {
@@ -447,9 +545,7 @@
         var bannerTextLineHeight = +getComputedStyle(
             bannerText
         ).lineHeight.replace('px', '');
-        var bannerTextLines = Math.ceil(
-            bannerTextHeight / bannerTextLineHeight
-        );
+        var bannerTextLines = Math.ceil(bannerTextHeight / bannerTextLineHeight);
 
         // Максимально допустимое количество строк
         var maxLinesAmount = 3;
@@ -465,11 +561,9 @@
           bannerToggleTextButton.addEventListener('click', function (e) {
             e.currentTarget.classList.toggle('opened');
             bannerText.classList.toggle('opened');
-            changeButtonText();
           });
         } else {
           banner.classList.add('info-banner_enough-lines_false');
-          changeButtonText();
         }
       }
     });
@@ -1655,7 +1749,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
     });
   }
 
-  
+
   var mySwiper = new Swiper('.swiper-container', {
     speed: 400,
     autoplay: {
@@ -1683,7 +1777,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
             onPageClick: function(pageNumber, event) {
               mySwiper.slideTo(pageNumber - 1,400,false);
             },
-          });   
+          });
         if(i === widgetPaginationEl){
           i = 1;
         }
@@ -1691,7 +1785,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
     },
   });
 
-  
+
   var mySwiper = document.querySelector('.swiper-container').swiper;
 
 
@@ -1744,7 +1838,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
                   mySwiper.slideTo(pageNumber - 1,400,false);
                 },
               });
-             
+
               if(i === widgetPaginationEl){
                 i = 1;
               }
@@ -1756,7 +1850,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
       } else {
         this.parentElement.append(error);
         this.style.border = '1px solid #F3A8A8';
-        error.innerHTML = "Количество элементов на странице не может быть 0";} 
+        error.innerHTML = "Количество элементов на странице не может быть 0";}
 
     });
   }
@@ -1806,7 +1900,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
                   mySwiper.slideTo(pageNumber - 1,400,false);
                 },
               });
-             
+
               if(i === widgetPaginationEl){
                 i = 1;
               }
@@ -1818,7 +1912,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
         this.parentElement.append(error);
         this.style.border = '1px solid #F3A8A8';
         error.innerHTML = "Общее количество элементов не может быть 0";
-      } 
+      }
     });
   }
 
@@ -1864,7 +1958,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
                   mySwiper.slideTo(pageNumber - 1,400,false);
                 },
               });
-             
+
               if(i === widgetPaginationEl){
                 i = 1;
               }
@@ -1875,7 +1969,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
       } else {
         this.parentElement.append(error);
         this.style.border = '1px solid #F3A8A8';
-        error.innerHTML = "Время не может быть пустым";} 
+        error.innerHTML = "Время не может быть пустым";}
     });
   }
 
@@ -1922,7 +2016,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
                   mySwiper.slideTo(pageNumber - 1,400,false);
                 },
               });
-             
+
               if(i === widgetPaginationEl){
                 i = 1;
               }
@@ -1946,7 +2040,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
 (function () {
   var WidgetGetCode = document.querySelector('.js-widget-open');
   var WidgetPopup = document.querySelector('.widget-popup');
-  
+
   if(WidgetGetCode){
     WidgetGetCode.addEventListener('click',function(){
       WidgetPopup.classList.add('popup--shown');
@@ -2053,5 +2147,5 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
   if (widgetSelectPreview) {
     addSelectPreview(widgetSelectPreview);
   }
-  
+
 })();

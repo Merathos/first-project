@@ -39,6 +39,17 @@
   pointer-events: none;
 }
 
+.button-star__mobile-text {
+  font-size: rem(16px);
+  line-height: rem(21.6px);
+  color: #A6ABB2;
+
+  @media (min-width: $tablet-width) {
+    @include visually-hidden;
+    pointer-events: none;
+  }
+}
+
 
 @media (min-width: $desktop-width) {
   .button-star[data-tooltip][data-flow^="down"] {

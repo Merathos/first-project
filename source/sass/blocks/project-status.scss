@@ -1,0 +1,43 @@
+.project-status {
+  position: relative;
+  padding-left: 9px;
+
+  font-weight: normal;
+  font-size: rem(14px);
+  line-height: 130%;
+
+  color: var(--color-text, $grey-default);
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    width: 5px;
+    height: 5px;
+
+    top: 50%;
+    left: 0;
+
+    background-color: currentColor;
+
+    border-radius: 50%;
+
+    transform: translateY(-50%);
+  }
+
+  &--orange {
+    color: var(--color-text, $orange)
+  }
+
+  &--blue {
+    color: var(--color-interactive-default, $blue-default);
+  }
+
+  &--green {
+    color: var(--color-interactive-default, $green)
+  }
+
+  &--red {
+    color: var(--color-icon, $red)
+  }
+}
