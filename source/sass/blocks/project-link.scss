@@ -1,0 +1,17 @@
+.project-link {
+  display: block;
+
+  font-size: rem(16px);
+  line-height: 140%;
+  color: var(--color-text, $dark-text);
+
+  text-decoration: none;
+
+  transition: color $style-change-duration;
+
+  @media (min-width: $desktop-width) {
+    &:hover:not(.focus-visible) {
+      color: var(--color-interactive-accent, $blue-accent);
+    }
+  }
+}
