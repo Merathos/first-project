@@ -41,10 +41,14 @@
   line-height: rem(17px);
   color: var(--color-text, $grey-default);
 
-
   @media (max-width: $tablet-width - 1) {
     min-width: 100%;
     margin-bottom: 2px;
+
+    &--completed {
+      margin-right: 0;
+      text-align: left;
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -55,6 +59,13 @@
     grid-area: a;
     min-width: 100%;
     margin-bottom: 2px;
+
+    &--completed {
+      align-self: flex-end;
+      text-align: right;
+      margin-top: 16px;
+      margin-bottom: 0;
+    }
   }
 }
 

@@ -1,0 +1,122 @@
+.rating-list {
+  margin: 0;
+  padding: 0;
+
+  margin-bottom: 50px;
+
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+
+.rating-list__item {
+  padding: 30px 0 34px;
+  width: 100%;
+
+  border-top: 1px solid var(--color-stroke, $light-grey);
+  border-bottom: 1px solid var(--color-stroke, $light-grey);
+
+  &:first-child {
+    padding-top: 0;
+    padding-bottom: 30px;
+    border-top: none;
+
+    .rating-list__total {
+      margin-bottom: -13px;
+    }
+  }
+
+  &--my-progect .rating-list__title {
+    font-size: rem(18px);
+    font-weight: 500;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+}
+
+.rating-list__content {
+  margin-right: auto;
+  max-width: 80%;
+}
+
+.rating-list__my-project {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  color: var(--color-interactive-default, $blue-default);
+  font-weight: normal;
+  font-size: rem(14px);
+  line-height: 130%;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 4px;
+    margin-right: 9px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    margin-bottom: 8px;
+  }
+
+  svg {
+    margin-right: 5px;
+    margin-bottom: 3px;
+    margin-left: 1px;
+    width: 10px;
+    height: 12px;
+    fill: var(--color-interactive-default, $blue-default);
+  }
+}
+
+.rating-list__title {
+  margin: 0;
+  text-decoration: none;
+
+  font-weight: 400;
+  font-size: rem(16px);
+  line-height: 130%;
+  color: var(--color-text, $dark-text);
+  transition: color $style-change-duration;
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+
+    &:hover:not(.focus-visible) {
+      color: var(--color-interactive-default, $blue-default);
+    }
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    display: block;
+    margin-top: 24px;
+    margin-bottom: 22px;
+  }
+}
+
+.rating-list__total {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.rating-list__winner {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: $blue-default;
+}
