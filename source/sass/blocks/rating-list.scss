@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
 
+  margin-bottom: 50px;
+
   list-style: none;
 
   @media (min-width: $tablet-width) {
@@ -92,7 +94,7 @@
     }
   }
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1){
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     width: 100%;
     margin-bottom: 24px;
   }
