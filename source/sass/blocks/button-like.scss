@@ -1,0 +1,60 @@
+.button-like {
+  @include btn-reset;
+  display: flex;
+  align-items: flex-end;
+  margin-right: 20px;
+  cursor: pointer;
+
+  span {
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0;
+    color: $grey-lighter;
+    margin-right: 8px;
+    transition: color $style-change-duration;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  svg path.stroked {
+    fill: $grey-lighter;
+    transition: fill $style-change-duration;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.is-selected {
+    span {
+      color: $blue-default;
+    }
+
+    svg {
+      transform: rotateX(180deg) translateY(-4px);;
+      transform-origin: center;
+    }
+
+    svg path,
+    svg path.stroked {
+      fill: $blue-default;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    outline: none;
+    span {
+      color: $blue-accent;
+    }
+
+    svg path.stroked {
+      fill: $blue-accent;
+    }
+  }
+}
