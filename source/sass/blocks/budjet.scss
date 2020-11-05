@@ -1,0 +1,81 @@
+.budjet__title {
+  margin: 0 0 8px;
+}
+
+.budjet__tip {
+  margin: 0 0 32px;
+}
+
+.budjet__wrapper {
+  position: relative;
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 53px;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    margin-bottom: 24px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 12px;
+  }
+
+  &::before {
+    content: '';
+
+    width: 13px;
+    height: 23px;
+
+    position: absolute;
+    top: 50%;
+    right: 16px;
+
+    background-image: url(../img/icon-ruble.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+
+    transform: translateY(-50%);
+
+    pointer-events: none;
+  }
+
+  &--invalid {
+    .budjet__input {
+      border: 1px solid #f3a8a8;
+    }
+
+    .budjet__error-text {
+      display: block;
+    }
+  }
+}
+
+.budjet__input {
+  padding: 11px 32px 11px 16px;
+  width: 100%;
+}
+
+.budjet__error-text {
+  display: none;
+
+  position: absolute;
+  left: 0;
+  bottom: -21px;
+
+  font-weight: 400;
+  font-size: rem(13px);
+  line-height: 130%;
+
+  color: var(--color-interactive-default, $red);
+}
+
+.budjet__field-info {
+  display: block;
+
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 131%;
+
+  color: #A6ABB3;
+}

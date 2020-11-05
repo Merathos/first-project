@@ -1,1 +1,49 @@
+.proposal-description__title {
+  margin: 0 0 32px;
+}
 
+.proposal-description__wrapper {
+  position: relative;
+  margin-bottom: 32px;
+
+  @media (max-width: $tablet-width - 1) {
+    margin-bottom: 24px;
+  }
+
+  &--invalid {
+    .proposal-description__title-area,
+    .proposal-description__description-area {
+      border: 1px solid #f3a8a8;
+    }
+
+    .proposal-description__error-text {
+      display: block;
+    }
+  }
+}
+
+.proposal-description__title-area {
+  width: 100%;
+  min-height: 110px;
+  resize: none;
+}
+
+.proposal-description__description-area {
+  resize: vertical;
+  width: 100%;
+  min-height: 180px;
+}
+
+.proposal-description__error-text {
+  display: none;
+
+  position: absolute;
+  left: 0;
+  bottom: -21px;
+
+  font-weight: 400;
+  font-size: rem(13px);
+  line-height: 130%;
+
+  color: var(--color-interactive-default, $red);
+}

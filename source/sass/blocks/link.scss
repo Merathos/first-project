@@ -101,6 +101,21 @@
       }
     }
   }
+
+  &--underline {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: var(--color-interactive-default, $light-blue-accent);
+      transition: background-color $style-change-duration;
+    }
+  }
 }
 
 
@@ -126,6 +141,12 @@
 
     &--rules {
       &:hover:not(.focus-visible) span::before {
+        background-color: var(--color-interactive-default, $blue-default);
+      }
+    }
+
+    &--underline {
+      &:hover:not(.focus-visible)::before {
         background-color: var(--color-interactive-default, $blue-default);
       }
     }

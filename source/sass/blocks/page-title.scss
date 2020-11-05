@@ -21,4 +21,14 @@
       @include font-h2;
     }
   }
+
+  &--project {
+    font-size: rem(40px);
+    line-height: rem(47px);
+
+    @media (max-width: $tablet-width - 1) {
+      font-size: rem(30px);
+      line-height: rem(36px);
+    }
+  }
 }
