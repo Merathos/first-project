@@ -1,0 +1,40 @@
+.address__title {
+  margin: 0 0 8px;
+}
+
+.address__tip {
+  margin: 0 0 32px;
+}
+
+.address__wrapper {
+  position: relative;
+
+  &--invalid {
+    .address__input {
+      border: 1px solid #f3a8a8;
+    }
+
+    .address__error-text {
+      display: block;
+    }
+  }
+}
+
+.address__input {
+  padding: 11px 16px;
+  width: 100%;
+}
+
+.address__error-text {
+  display: none;
+
+  position: absolute;
+  left: 0;
+  bottom: -21px;
+
+  font-weight: 400;
+  font-size: rem(13px);
+  line-height: 130%;
+
+  color: var(--color-interactive-default, $red);
+}
