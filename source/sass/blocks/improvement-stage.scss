@@ -46,19 +46,19 @@
   }
 
   &--opened {
-    color: var(--color-interactive-default, $blue-default);
+    color: var(--color-text, $blue-default);
   }
 
   &--complete {
-    color: var(--color-interactive-default, $green)
+    color: var(--color-text, $green);
   }
 
   &--declined {
-    color: var(--color-icon, $red)
+    color: var(--color-text, $red);
   }
 
   &--neutral {
-    color: var(--color-text, $grey-default)
+    color: var(--color-text, $grey-default);
   }
 }
 

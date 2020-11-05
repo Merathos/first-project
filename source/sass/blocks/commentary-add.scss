@@ -1,159 +1,161 @@
 .commentary-add {
-    margin-bottom: 50px;
-    padding: 40px 32px 32px 32px;
-    background-color: #F9F9FA;
-    border-radius: $border-radius;
+  margin-bottom: 50px;
+  padding: 40px 32px 32px 32px;
+  background-color: var(--color-bg-main, #f9f9fa);
+  border: 1px solid var(--color-stroke, #f9f9fa);
+  border-radius: $border-radius;
 
-    @include tablet {
-        margin-bottom: 40px;
-    }
+  @include tablet {
+    margin-bottom: 40px;
+  }
+
+  @include mobile {
+    padding: 16px;
+  }
+
+  h2 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: rem(30px);
+    line-height: rem(35.55px);
+    font-weight: 400;
 
     @include mobile {
-        padding: 16px;
+      margin-bottom: 0px;
+      font-size: rem(24px);
+      line-height: rem(28.44px);
     }
+  }
 
+  &--edit {
     h2 {
-        margin-top: 0;
-        margin-bottom: 16px;
-        font-size: rem(30px);
-        line-height: rem(35.55px);
-        font-weight: 400;
-
-        @include mobile {
-            margin-bottom: 0px;
-            font-size: rem(24px);
-            line-height: rem(28.44px);
-        }
+      margin-bottom: 24px;
     }
 
-    &--edit {
-        h2 {
-            margin-bottom: 24px;
-        }
-
-        .commentary-add__textarea {
-            textarea {
-                height: 402px;
-            }
-        }
+    .commentary-add__textarea {
+      textarea {
+        height: 402px;
+      }
     }
+  }
 }
 
 .commentary-add__description {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 
+  @include mobile {
+    margin-bottom: 23px;
+    font-size: rem(13px);
+    line-height: rem(17px);
+  }
+
+  p:first-child {
     @include mobile {
-        margin-bottom: 23px;
-        font-size: rem(13px);
-        line-height: rem(17px);
+      margin-top: 8px;
     }
-
-    p:first-child {
-        @include mobile {
-            margin-top: 8px;
-        }
-    }
+  }
 }
 
 .commentary-add__textarea {
-    position: relative;
-    margin-bottom: 25px;
+  position: relative;
+  margin-bottom: 25px;
 
-    @include mobile {
-        margin-bottom: 5px;
+  @include mobile {
+    margin-bottom: 5px;
+  }
+
+  & textarea {
+    font-family: inherit;
+    font-size: rem(15px);
+    line-height: rem(27px);
+    color: var(--color-text, #354052);
+    background-color: var(--color-bg-secondary, #ffffff);
+    width: 100%;
+    padding: 12px 16px;
+    -webkit-appearance: none;
+    border: 1px solid var(--color-stroke, $light-grey);
+    border-radius: 5px;
+    resize: none;
+
+    &::placeholder {
+      font-size: rem(15px);
+      line-height: rem(28px);
+      color: var(--color-text, $grey-default);
     }
 
-    & textarea {
-        font-family: inherit;
-        font-size: rem(15px);
-        line-height: rem(27px);
-        color: inherit;
-        width: 100%;
-        padding: 12px 16px;
-        -webkit-appearance: none;
-        border: 1px solid var(--color-stroke, $light-grey);
-        border-radius: 5px;
-        resize: none;
-    
-        &::placeholder {
-            font-size: rem(15px);
-            line-height: rem(28px);
-            color: var(--color-text, $grey-default);
-        }
+    @include mobile {
+      height: 160px;
+      font-size: rem(16px);
+    }
+  }
 
-        @include mobile {
-            height: 160px;
-            font-size: rem(16px);
-        }
+  p {
+    display: none;
+    position: absolute;
+    right: 1px;
+    bottom: -27px;
+    font-size: rem(13px);
+    line-height: rem(16.9px);
+    color: #a6abb2;
+
+    @include mobile {
+      bottom: -22px;
+      font-size: rem(11px);
+      line-height: rem(16.9px);
+    }
+  }
+
+  &--warning {
+    p {
+      display: block;
+    }
+  }
+
+  &--error {
+    & textarea {
+      border: 1px solid #f3a8a8;
     }
 
     p {
-        display: none;
-        position: absolute;
-        right: 1px;
-        bottom: -27px;
-        font-size: rem(13px);
-        line-height: rem(16.9px);
-        color: #A6ABB2;
-
-        @include mobile {
-            bottom: -22px;
-            font-size: rem(11px);
-            line-height: rem(16.9px);
-        }
+      color: #e55050;
     }
-
-    &--warning {
-        p {
-            display: block;
-        }
-    }
-
-    &--error {
-        & textarea {
-            border: 1px solid #F3A8A8;
-        }
-
-        p {
-            color: #E55050;
-        }
-    }
+  }
 }
 
 .commentary-add__bottom-wrapper {
-    display: flex;
+  display: flex;
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  p {
+    padding-top: 7px;
+    max-width: 460px;
+    font-size: rem(13px);
+    line-height: rem(16.9px);
+    color: var(--color-text, #a6abb2);
 
     @include mobile {
-        flex-direction: column;
+      line-height: rem(17px);
     }
 
-    p {
-        padding-top: 7px;
-        max-width: 460px;
-        font-size: rem(13px);
-        line-height: rem(16.9px);
-        color: #A6ABB2;
-        
-        @include mobile {
-            line-height: rem(17px);
-        }
-
-        &:first-child {
-            margin: 0;
-        }
+    &:first-child {
+      margin: 0;
     }
+  }
 }
 
 .commentary-add__button {
-    display: block;
-    width: 175px;
-    padding: 17px 26px;
-    margin-left: auto;
+  display: block;
+  width: 175px;
+  padding: 17px 26px;
+  margin-left: auto;
 
-    @include mobile {
-        margin-top: 12px;
-        margin-left: 0;
-        padding: 16px 26px;
-        width: 100%;
-    }
+  @include mobile {
+    margin-top: 12px;
+    margin-left: 0;
+    padding: 16px 26px;
+    width: 100%;
+  }
 }
