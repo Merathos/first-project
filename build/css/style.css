@@ -5219,16 +5219,13 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   border-bottom: 1px solid var(--color-stroke, #e3e8ee); }
   @media (min-width: 768px) {
     .proposal-list__item {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-          -ms-flex-flow: row wrap;
-              flex-flow: row wrap;
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start; } }
+      display: grid;
+      grid-template-columns: 1fr 15%;
+      grid-template-areas: "a  a" "b  c" "d  d"; }
+      .proposal-list__item > * {
+        -ms-flex-item-align: start;
+            align-self: start;
+        justify-self: start; } }
   .proposal-list__item--userless {
     padding-top: 32px; }
   .proposal-list__item--activity-improvement {
@@ -5236,6 +5233,26 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     @media (min-width: 768px) and (max-width: 1199px) {
       .proposal-list__item--activity-improvement {
         padding-top: 50px; } }
+
+.proposal-list__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%; }
+  @media (min-width: 768px) {
+    .proposal-list__wrapper {
+      grid-area: a;
+      margin-bottom: 4px; } }
+  @media (max-width: 767px) {
+    .proposal-list__wrapper {
+      margin-bottom: 24px; } }
 
 .proposal-list__account {
   display: -webkit-box;
@@ -5257,7 +5274,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   line-height: 130%; }
   @media (min-width: 768px) {
     .proposal-list__account {
-      margin-bottom: 4px;
       margin-right: 9px; } }
   @media (max-width: 767px) {
     .proposal-list__account {
@@ -5286,12 +5302,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
           align-items: center; }
   @media (min-width: 768px) {
     .proposal-list__address {
-      margin-bottom: 4px;
-      margin-right: 9px;
-      min-width: 50%; } }
-  @media (max-width: 767px) {
-    .proposal-list__address {
-      margin-bottom: 24px; } }
+      margin-right: 9px; } }
   .proposal-list__address svg {
     color: var(--color-text, #a6abb3);
     margin-right: 5px;
@@ -5304,6 +5315,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     line-height: 130%; }
 
 .proposal-list__title {
+  grid-area: b;
   margin: 0;
   text-decoration: none;
   font-weight: 500;
@@ -5313,35 +5325,32 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   -webkit-transition: color 0.2s;
   transition: color 0.2s; }
   @media (min-width: 1200px) {
-    .proposal-list__title {
-      display: inline-block;
-      max-width: 80%; }
-      .proposal-list__title:hover:not(.focus-visible) {
-        color: var(--color-interactive-default, #2c8ecc); } }
+    .proposal-list__title:hover:not(.focus-visible) {
+      color: var(--color-interactive-default, #2c8ecc); } }
   @media (min-width: 768px) and (max-width: 1199px) {
     .proposal-list__title {
-      width: 100%;
       margin-bottom: 24px; } }
   @media (max-width: 767px) {
     .proposal-list__title {
       display: block;
-      margin-top: 24px;
       margin-bottom: 22px; } }
   @media (min-width: 768px) and (max-width: 1199px) {
     .proposal-list__title--shorter {
-      width: 80%;
       margin-bottom: 0; } }
 
 .proposal-list__status {
+  grid-area: d;
   font-weight: 400;
   font-size: 0.9375rem;
   line-height: 135%;
   color: var(--color-interactive-default, #2c8ecc); }
   @media (min-width: 1200px) {
     .proposal-list__status {
+      grid-area: c;
       margin-left: auto; } }
 
 .proposal-list__like-counter {
+  grid-area: c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5405,17 +5414,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .liked .filled {
     fill: var(--color-interactive-default, #2c8ecc); }
 
-@media (min-width: 768px) {
-  .proposal-list__item--userless .proposal-list__address {
-    width: 100%; } }
-
 .proposal-list__item--userless .proposal-list__title {
   font-weight: normal;
   font-size: 1rem;
   line-height: 135%; }
   @media (min-width: 768px) {
     .proposal-list__item--userless .proposal-list__title {
-      max-width: 75%;
       margin-bottom: 0; } }
 
 .proposal-description__title {
