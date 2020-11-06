@@ -129,7 +129,7 @@
     span {
       margin-left: 5px;
       font-weight: 400;
-      color: var(--color-interactive-default, $green);
+      color: var(--color-text, $green);
     }
   }
 }
@@ -177,20 +177,18 @@
 }
 
 .proposal--approved {
-
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 1fr 360px;
     grid-column-gap: 20px;
     grid-template-areas:
-    "a   a"
-    "k   c"
-    "b   c"
-    "d   c"
-    "e   c"
-    "f   c";
+      "a   a"
+      "k   c"
+      "b   c"
+      "d   c"
+      "e   c"
+      "f   c";
   }
-
 
   > * {
     align-self: start;
@@ -270,7 +268,6 @@
       margin-left: $mobile-padding;
       margin-right: $mobile-padding;
     }
-
   }
 
   .project-vote__container {
@@ -394,14 +391,14 @@
     grid-template-columns: minmax(740px, 1fr) 360px;
     grid-column-gap: 20px;
     grid-template-areas:
-    "a   a"
-    "b   c"
-    "d   c"
-    "e   c"
-    "f   c"
-    "g   c"
-    "h   c"
-    "i   c";
+      "a   a"
+      "b   c"
+      "d   c"
+      "e   c"
+      "f   c"
+      "g   c"
+      "h   c"
+      "i   c";
   }
 
   > * {
@@ -469,7 +466,6 @@
   }
 
   .project-vote__like-counter {
-
     span {
       font-weight: 400;
 

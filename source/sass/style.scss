@@ -59,6 +59,7 @@
 @import 'blocks/proposal-list';
 @import 'blocks/proposal-description';
 @import 'blocks/image-uploads';
+@import 'blocks/file-uploads';
 @import 'blocks/subtitle';
 @import 'blocks/concurrent-projects';
 @import 'blocks/budgets';
@@ -72,6 +73,11 @@
 @import 'blocks/rating';
 @import 'blocks/rating-list';
 @import 'blocks/button-like';
+@import 'blocks/text-input';
+@import 'blocks/address';
+@import 'blocks/budjet';
+@import 'blocks/contacts-inputs';
+@import 'blocks/site-tip';
 
 // main page
 @import "blocks/news-notice";
@@ -160,3 +166,7 @@
 
 // widget
 @import "blocks/widget";
+
+// new-project
+@import "blocks/new-project.scss";
+
