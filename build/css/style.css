@@ -13979,3 +13979,28 @@ span.poll-page__hide {
     .new-project__image-upload {
       padding-bottom: 40px;
       margin-bottom: 40px; } }
+
+.new-project__button-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  @media (max-width: 767px) {
+    .new-project__button-wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
+.new-project__submit-btn {
+  width: 274px;
+  padding: 16px 16px; }
+  @media (max-width: 767px) {
+    .new-project__submit-btn {
+      -webkit-box-ordinal-group: 0;
+          -ms-flex-order: -1;
+              order: -1;
+      margin-bottom: 15px;
+      width: 100%; } }

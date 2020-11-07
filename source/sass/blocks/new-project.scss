@@ -135,3 +135,23 @@
     margin-bottom: 40px;
   }
 }
+
+.new-project__button-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $tablet-width - 1) {
+    flex-direction: column;
+  }
+}
+
+.new-project__submit-btn {
+  width: 274px;
+  padding: 16px 16px;
+
+  @media (max-width: $tablet-width - 1) {
+    order: -1;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+}
