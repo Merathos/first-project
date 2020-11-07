@@ -5730,23 +5730,23 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         -ms-flex-positive: 1;
             flex-grow: 1; } }
 
-.file-uploads__preview-container div {
+.file-uploads__preview-container .file-wrapper {
   position: relative;
   padding: 16px 32px 16px 36px;
   margin-bottom: 8px;
-  background: #F9F9FA;
+  background-color: var(--color-bg-secondary, #f9f9fa);
   border-radius: 5px;
   -webkit-transition: -webkit-box-shadow 0.2s;
   transition: -webkit-box-shadow 0.2s;
   transition: box-shadow 0.2s;
   transition: box-shadow 0.2s, -webkit-box-shadow 0.2s; }
   @media (min-width: 768px) {
-    .file-uploads__preview-container div {
+    .file-uploads__preview-container .file-wrapper {
       padding-left: 48px; } }
-  .file-uploads__preview-container div:hover:not(.focus-visible) {
+  .file-uploads__preview-container .file-wrapper:hover:not(.focus-visible) {
     -webkit-box-shadow: 0px 2px 4px rgba(0, 30, 75, 0.15);
             box-shadow: 0px 2px 4px rgba(0, 30, 75, 0.15); }
-  .file-uploads__preview-container div::before {
+  .file-uploads__preview-container .file-wrapper::before {
     content: '';
     width: 13px;
     height: 16px;
@@ -5755,15 +5755,15 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     left: 14px;
     background: url(../img/icon-docs.svg) no-repeat center; }
     @media (min-width: 768px) {
-      .file-uploads__preview-container div::before {
+      .file-uploads__preview-container .file-wrapper::before {
         left: 22px; } }
-  .file-uploads__preview-container div span {
+  .file-uploads__preview-container .file-wrapper span {
     display: block;
     font-weight: 400;
     font-size: 0.8125rem;
     line-height: 1.0625rem;
-    color: #354052; }
-  .file-uploads__preview-container div button[type="button"] {
+    color: var(--color-text, #354052); }
+  .file-uploads__preview-container .file-wrapper button[type="button"] {
     position: absolute;
     top: 50%;
     right: 12.5px;
@@ -5778,11 +5778,22 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
             transform: translateY(-50%);
     -webkit-transition: background-image 0.2s;
     transition: background-image 0.2s; }
-    .file-uploads__preview-container div button[type="button"]:hover:not(.focus-visible) {
+    .file-uploads__preview-container .file-wrapper button[type="button"]:hover:not(.focus-visible) {
       background-image: url(../img/icon-close-red.svg); }
     @media (min-width: 1200px) {
-      .file-uploads__preview-container div button[type="button"] {
+      .file-uploads__preview-container .file-wrapper button[type="button"] {
         right: 16.5px; } }
+
+.file-uploads__preview-container .file-wrapper--loading {
+  pointer-events: none; }
+  .file-uploads__preview-container .file-wrapper--loading::before {
+    width: 16px;
+    background: url(../img/icon-loading.svg) no-repeat center; }
+  .file-uploads__preview-container .file-wrapper--loading span {
+    color: var(--color-text, #a6abb3); }
+  .file-uploads__preview-container .file-wrapper--loading button {
+    display: none;
+    pointer-events: none; }
 
 .subtitle {
   font-weight: 400;
