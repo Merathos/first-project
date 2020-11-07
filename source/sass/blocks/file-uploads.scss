@@ -11,10 +11,6 @@
     margin: 0 0 32px;
     line-height: 180%;
 
-    @media (max-width: $desktop-width - 1) {
-      margin-bottom: 40px;
-    }
-
     @media (max-width: $tablet-width - 1) {
       padding-right: 8px;
       margin-bottom: 16px;
@@ -27,8 +23,102 @@
   flex-flow: row wrap;
   justify-content: flex-start;
 
-  @media (max-width: $tablet-width - 1) {
+  @media (min-width: $desktop-width) {
+    flex-flow: row-reverse;
+    justify-content: flex-end;
+  }
+
+  @media (max-width: $desktop-width - 1) {
     flex-flow: column wrap;
+  }
+
+  & label {
+
+    display: flex;
+    align-items: center;
+
+    width: 205px;
+    height: 205px;
+
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+
+    text-align: center;
+    color: var(--color-text, $grey-default);
+
+    border: 2px dashed var(--color-stroke, $light-grey);
+    border-radius: 5px;
+
+    cursor: pointer;
+    transition: opacity $style-change-duration;
+
+    &:hover:not(.focus-visible) {
+      opacity: 0.8;
+    }
+
+    @media (min-width: $tablet-width) {
+      justify-content: center;
+      height: 88px;
+      width: 100%;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 265px;
+      height: 277px;
+
+      margin-right: 20px;
+    }
+
+    @media (max-width: $desktop-width - 1) {
+      margin-top: 16px;
+    }
+
+    @media (max-width: $tablet-width - 1) {
+      width: 100%;
+      height: calc(100vw / 2);
+      margin-left: 0;
+      margin-top: 8px;
+
+      justify-content: center;
+    }
+
+    & span {
+      position: relative;
+
+      padding-top: 34px;
+      max-width: 40%;
+
+      @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+        padding-top: 0;
+        padding-left: 40px;
+        max-width: unset;
+      }
+
+      &::before {
+        content: '+';
+        position: absolute;
+        top: 1px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        font-size: 2.5rem;
+        color: var(--color-text, $grey-default);
+        font-weight: 200;
+
+        @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+          top: -3px;
+          left: 0;
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+}
+
+.file-uploads__preview-container {
+  @media (min-width: $desktop-width) {
+    flex-grow: 1;
   }
 
   div {
@@ -40,6 +130,10 @@
     border-radius: 5px;
 
     transition: box-shadow $style-change-duration;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 48px;
+    }
 
     &:hover:not(.focus-visible) {
       box-shadow: 0px 2px 4px rgba(0, 30, 75, 0.15);
@@ -56,6 +150,10 @@
       left: 14px;
 
       background: url(../img/icon-docs.svg) no-repeat center;
+
+      @media (min-width: $tablet-width) {
+        left: 22px;
+      }
     }
 
     span {
@@ -87,65 +185,9 @@
       &:hover:not(.focus-visible) {
         background-image: url(../img/icon-close-red.svg);
       }
-    }
-  }
 
-  & label {
-
-    display: flex;
-    align-items: center;
-
-    width: 205px;
-    height: 205px;
-
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 130%;
-
-    text-align: center;
-    color: var(--color-text, $grey-default);
-
-    border: 2px dashed var(--color-stroke, $light-grey);
-    border-radius: 5px;
-
-    cursor: pointer;
-    transition: opacity $style-change-duration;
-
-    &:hover:not(.focus-visible) {
-      opacity: 0.8;
-    }
-
-    @media (max-width: $desktop-width - 1) {
-      margin-top: 16px;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      width: 100%;
-      height: calc(100vw / 2);
-      margin-left: 0;
-      margin-top: 8px;
-
-      justify-content: center;
-    }
-
-    & span {
-      padding-top: 34px;
-      position: relative;
-
-      @media (max-width: $tablet-width - 1) {
-        max-width: 40%;
-      }
-
-      &::before {
-        content: '+';
-        position: absolute;
-        top: 1px;
-        left: 50%;
-        transform: translateX(-50%);
-
-        font-size: 2.5rem;
-        color: var(--color-text, $grey-default);
-        font-weight: 200;
+      @media (min-width: $desktop-width) {
+        right: 16.5px;
       }
     }
   }

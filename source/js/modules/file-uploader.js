@@ -5,6 +5,7 @@
   if (container) {
     var input = container.querySelector('input[name="user-files"]');
     var label = container.querySelector('label[for="user-files"]');
+    var previewContainer = container.querySelector('.file-uploads__preview-container');
     var files = [];
     var MAX_FILES_NUMBER = 5;
 
@@ -55,7 +56,7 @@
       fileTitle.textContent = file.name;
       fileContainer.appendChild(fileTitle);
       renderCloseBtn(fileContainer, file);
-      container.insertBefore(fileContainer, container.querySelector('label'));
+      previewContainer.appendChild(fileContainer);
     };
 
     input.addEventListener('change', function () {

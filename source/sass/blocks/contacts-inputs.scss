@@ -1,18 +1,33 @@
+.contacts-inputs {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-template-areas:
+    "a  a"
+    "b  b"
+    "c  d"
+    "e  f";
+
+    > * {
+      align-self: start;
+    }
+  }
+}
+
 .contacts-inputs__title {
+  grid-area: a;
   margin: 0 0 8px;
 }
 
 .contacts-inputs__tip {
+  grid-area: b;
   margin: 0 0 32px;
 }
 
 .contacts-inputs__wrapper {
   position: relative;
   margin-bottom: 32px;
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
 
   &--invalid {
     .contacts-inputs__input {
@@ -22,6 +37,18 @@
     .contacts-inputs__error-text {
       display: block;
     }
+  }
+
+  &--name {
+    grid-area: c;
+  }
+
+  &--email {
+    grid-area: e;
+  }
+
+  &--phone {
+    grid-area: f;
   }
 }
 

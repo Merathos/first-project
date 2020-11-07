@@ -1,13 +1,31 @@
+.budjet {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+}
+
 .budjet__title {
   margin: 0 0 8px;
+
+  @media (min-width: $desktop-width) {
+    min-width: 100%;
+  }
 }
 
 .budjet__tip {
   margin: 0 0 32px;
+
+  @media (min-width: $desktop-width) {
+    min-width: 100%;
+  }
 }
 
-.budjet__wrapper {
-  position: relative;
+.budjet__field-container {
+  @media (min-width: $desktop-width) {
+    width: calc((100% - 20px) / 2);
+  }
 
   @media (max-width: $desktop-width - 1) {
     margin-bottom: 53px;
@@ -16,10 +34,10 @@
   @media (max-width: $tablet-width - 1) {
     margin-bottom: 24px;
   }
+}
 
-  &:last-of-type {
-    margin-bottom: 12px;
-  }
+.budjet__wrapper {
+  position: relative;
 
   &::before {
     content: '';
@@ -71,6 +89,7 @@
 }
 
 .budjet__field-info {
+  margin-top: 12px;
   display: block;
 
   font-weight: normal;
@@ -78,4 +97,13 @@
   line-height: 131%;
 
   color: #A6ABB3;
+
+  @media (min-width: $tablet-width) {
+    max-width: 60%;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 70%;
+  }
+
 }
