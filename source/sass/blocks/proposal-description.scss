@@ -26,12 +26,20 @@
   width: 100%;
   min-height: 110px;
   resize: none;
+
+  @media (min-width: $tablet-width) {
+    min-height: 78px;
+  }
 }
 
 .proposal-description__description-area {
   resize: vertical;
   width: 100%;
   min-height: 180px;
+
+  @media (min-width: $tablet-width) {
+    min-height: 132px;
+  }
 }
 
 .proposal-description__error-text {

@@ -11,10 +11,6 @@
     margin: 0 0 32px;
     line-height: 180%;
 
-    @media (max-width: $desktop-width - 1) {
-      margin-bottom: 40px;
-    }
-
     @media (max-width: $tablet-width - 1) {
       padding-right: 8px;
       margin-bottom: 16px;
@@ -27,67 +23,13 @@
   flex-flow: row wrap;
   justify-content: flex-start;
 
-  @media (max-width: $tablet-width - 1) {
-    flex-flow: column wrap;
+  @media (min-width: $desktop-width) {
+    flex-flow: row-reverse;
+    justify-content: flex-end;
   }
 
-  div {
-    position: relative;
-    padding: 16px 32px 16px 36px;
-    margin-bottom: 8px;
-
-    background: #F9F9FA;
-    border-radius: 5px;
-
-    transition: box-shadow $style-change-duration;
-
-    &:hover:not(.focus-visible) {
-      box-shadow: 0px 2px 4px rgba(0, 30, 75, 0.15);
-    }
-
-    &::before {
-      content: '';
-
-      width: 13px;
-      height: 16px;
-
-      position: absolute;
-      top: 16px;
-      left: 14px;
-
-      background: url(../img/icon-docs.svg) no-repeat center;
-    }
-
-    span {
-      display: block;
-      font-weight: 400;
-      font-size: rem(13px);
-      line-height: rem(17px);
-      color: #354052;
-    }
-
-    button[type="button"] {
-      position: absolute;
-      top: 50%;
-      right: 12.5px;
-      width: 12px;
-      height: 12px;
-
-      background-color: transparent;
-      border: none;
-      outline: none;
-
-      background: url(../img/icon-close.svg) no-repeat center;
-
-      cursor: pointer;
-
-      transform: translateY(-50%);
-      transition: background-image $style-change-duration;
-
-      &:hover:not(.focus-visible) {
-        background-image: url(../img/icon-close-red.svg);
-      }
-    }
+  @media (max-width: $desktop-width - 1) {
+    flex-flow: column wrap;
   }
 
   & label {
@@ -115,6 +57,19 @@
       opacity: 0.8;
     }
 
+    @media (min-width: $tablet-width) {
+      justify-content: center;
+      height: 88px;
+      width: 100%;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 265px;
+      height: 277px;
+
+      margin-right: 20px;
+    }
+
     @media (max-width: $desktop-width - 1) {
       margin-top: 16px;
     }
@@ -129,11 +84,15 @@
     }
 
     & span {
-      padding-top: 34px;
       position: relative;
 
-      @media (max-width: $tablet-width - 1) {
-        max-width: 40%;
+      padding-top: 34px;
+      max-width: 40%;
+
+      @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+        padding-top: 0;
+        padding-left: 40px;
+        max-width: unset;
       }
 
       &::before {
@@ -146,7 +105,107 @@
         font-size: 2.5rem;
         color: var(--color-text, $grey-default);
         font-weight: 200;
+
+        @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+          top: -3px;
+          left: 0;
+          transform: translateX(0);
+        }
       }
+    }
+  }
+}
+
+.file-uploads__preview-container {
+  @media (min-width: $desktop-width) {
+    flex-grow: 1;
+  }
+
+  .file-wrapper {
+    position: relative;
+    padding: 16px 32px 16px 36px;
+    margin-bottom: 8px;
+
+    background-color: var(--color-bg-secondary, $color-bg);
+    border-radius: 5px;
+
+    transition: box-shadow $style-change-duration;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 48px;
+    }
+
+    &:hover:not(.focus-visible) {
+      box-shadow: 0px 2px 4px rgba(0, 30, 75, 0.15);
+    }
+
+    &::before {
+      content: '';
+
+      width: 13px;
+      height: 16px;
+
+      position: absolute;
+      top: 16px;
+      left: 14px;
+
+      background: url(../img/icon-docs.svg) no-repeat center;
+
+      @media (min-width: $tablet-width) {
+        left: 22px;
+      }
+    }
+
+    span {
+      display: block;
+      font-weight: 400;
+      font-size: rem(13px);
+      line-height: rem(17px);
+      color: var(--color-text, $dark-text);
+    }
+
+    button[type="button"] {
+      position: absolute;
+      top: 50%;
+      right: 12.5px;
+      width: 12px;
+      height: 12px;
+
+      background-color: transparent;
+      border: none;
+      outline: none;
+
+      background: url(../img/icon-close.svg) no-repeat center;
+
+      cursor: pointer;
+
+      transform: translateY(-50%);
+      transition: background-image $style-change-duration;
+
+      &:hover:not(.focus-visible) {
+        background-image: url(../img/icon-close-red.svg);
+      }
+
+      @media (min-width: $desktop-width) {
+        right: 16.5px;
+      }
+    }
+  }
+
+  .file-wrapper--loading {
+    pointer-events: none;
+
+    &::before {
+      width: 16px;
+      background: url(../img/icon-loading.svg) no-repeat center;
+    }
+
+    span {
+      color: var(--color-text, $grey-default);
+    }
+    button {
+      display: none;
+      pointer-events: none;
     }
   }
 }
