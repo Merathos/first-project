@@ -3622,6 +3622,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     color: var(--color-interactive-default, #2c8ecc); }
   .article-link:hover:not(.focus-visible) {
     color: var(--color-interactive-accent, #116ca6); }
+  .article-link--no-chain {
+    display: block; }
+    .article-link--no-chain::before {
+      display: none; }
 
 @media (max-width: 1199px) {
   .article-link:hover:not(.focus-visible) {
@@ -14050,3 +14054,74 @@ span.poll-page__hide {
               order: -1;
       margin-bottom: 15px;
       width: 100%; } }
+
+.unavailable {
+  padding-top: 32px; }
+
+@media (min-width: 1200px) {
+  .unavailable__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; } }
+
+@media (min-width: 1200px) {
+  .unavailable__content-wrapper {
+    margin-top: 108px;
+    width: calc(100% / 2); } }
+
+.unavailable__title {
+  margin-bottom: 16px; }
+
+.unavailable__text {
+  margin: 0 0 24px;
+  font-weight: normal;
+  font-size: 1rem;
+  line-height: 1.375rem;
+  color: #707B8C; }
+  @media (min-width: 1200px) {
+    .unavailable__text {
+      max-width: 80%; } }
+
+.unavailable__refresh-link {
+  margin-bottom: 32px;
+  font-weight: 500; }
+  @media (min-width: 1200px) {
+    .unavailable__refresh-link {
+      margin-bottom: 40px; } }
+
+.unavailable__button {
+  margin-bottom: 24px; }
+  @media (min-width: 1200px) {
+    .unavailable__button {
+      padding: 16px 26px;
+      width: 236px; } }
+
+.unavailable__image-wrapper {
+  width: 100%;
+  margin-bottom: 48px; }
+  @media (min-width: 1200px) {
+    .unavailable__image-wrapper {
+      width: calc(100% / 2);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
+  .unavailable__image-wrapper svg {
+    display: block;
+    width: 100%;
+    height: auto; }
+    @media (min-width: 1200px) {
+      .unavailable__image-wrapper svg {
+        margin-bottom: 20px; } }
