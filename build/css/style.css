@@ -10201,10 +10201,12 @@ span.poll__hide {
 
 .map-section {
   margin-bottom: 43px; }
-  .map-section iframe {
+  .map-section iframe, .map-section #map {
     border: none;
     border-radius: 5px;
     width: 100%; }
+  .map-section #map {
+    height: 600px; }
   .map-section input {
     -webkit-appearance: none;
     font-size: 16px; }
@@ -10269,7 +10271,7 @@ span.poll__hide {
       color: #354052; }
 
 @media (max-width: 1199px) {
-  .map-section iframe {
+  .map-section iframe, .map-section #map {
     height: 460px; }
   .map-section__tip {
     margin-top: 12px;
@@ -10278,7 +10280,7 @@ span.poll__hide {
 @media (max-width: 767px) {
   .map-section {
     margin-bottom: 18px; }
-    .map-section iframe {
+    .map-section iframe, .map-section #map {
       height: 288px; }
   .map-section__title {
     font-size: 1.5rem;
