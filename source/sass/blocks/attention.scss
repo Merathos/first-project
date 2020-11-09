@@ -1,0 +1,33 @@
+.attention {
+  position: relative;
+
+  padding: 8px 8px 8px 32px;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 8px;
+    left: 0;
+
+    width: 24px;
+    height: 24px;
+
+    background: url(../../img/icon-exclamation.svg) no-repeat center;
+  }
+}
+
+.attention p {
+  margin: 0;
+
+  font-style: normal;
+  font-weight: normal;
+  font-size: rem(13px);
+  line-height: rem(17px);
+
+  color: var(--color-text, $grey);
+}
+
+.attention__middle-weight {
+  font-weight: 500;
+}
