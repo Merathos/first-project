@@ -36,21 +36,22 @@
 
 .new-project__select {
   margin-bottom: 80px;
-
-  @media (min-width: $tablet-width) {
-    display: block;
-  }
+  display: block;
 
   @media (max-width: $tablet-width - 1) {
     margin-bottom: 72px;
   }
 
-  .ss-main:last-child {
-    width: 100%;
+  .ss-main {
     display: block;
+    width: 100%;
 
     &:last-child {
       margin-left: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 550px;
     }
   }
 
@@ -59,8 +60,12 @@
     min-height: 51px;
     background-color: var(--color-bg-secondary, $color-bg);
 
+    @media (max-width: $desktop-width - 1) {
+      width: 100%;
+    }
+
     @media (min-width: $desktop-width) {
-      width: 550px;
+      // width: 550px;
     }
   }
 
