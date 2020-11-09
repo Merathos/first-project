@@ -14218,6 +14218,7 @@ span.poll-page__hide {
   margin-bottom: 24px; }
   @media (min-width: 1200px) {
     .unavailable__button {
+      margin-bottom: 120px;
       padding: 16px 26px;
       width: 236px; } }
 
