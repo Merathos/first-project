@@ -2325,6 +2325,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
   var Scrollbar = window.Scrollbar;
   var widgetSelectType = document.querySelector('#widget-select-type');
   var widgetSelectLevel = document.querySelector('#widget-select-level');
+  var widgetSelectProjectCategory = document.querySelector('#widget-select-project-category');
   var widgetSelectPreview = document.querySelector('#widget_block-preview-select');
   var widgetClassAdd = document.querySelector('.widget_block__selected_preview');
 
@@ -2418,5 +2419,9 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
   if (widgetSelectPreview) {
     addSelectPreview(widgetSelectPreview);
   }
-  
+
+  if (widgetSelectProjectCategory) {
+    addSelectLevel(widgetSelectProjectCategory);
+  }
+
 })();

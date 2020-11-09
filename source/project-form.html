@@ -24,9 +24,9 @@
           <span>Правила размещения проектов</span>
         </a>
         <form action="#" class="new-project__form widget_block" id="js-improvement-form" novalidate>
-          <div class="new-project__select widget_block__select form-select js-form-select">
+          <div class="new-project__select widget_block__select form-select">
             <h2 class="new-project__select-title subtitle">Категория проекта</h2>
-            <select>
+            <select id="widget-select-project-category">
                 <option data-placeholder="true" value="Тип виджета">Выберите категорию</option>
                 <option value="Обсуждения">Сбор бытовых отходов</option>
                 <option value="Опросы">Опросы</option>
@@ -47,7 +47,7 @@
             <div class="proposal-description__wrapper">
               <textarea name="description" id="description" cols="30" rows="1"
                 class="proposal-description__description-area text-input"
-                placeholder="Описание  (ограничение 500 символов)" aria-label="Описание предложения"></textarea>
+                placeholder="Описание  (ограничение 1000 символов)" aria-label="Описание предложения"></textarea>
               <span class="proposal-description__error-text">Вы превысили лимит
                 на хх символов</span>
             </div>
@@ -67,7 +67,7 @@
           <div class="new-project__budjet budjet">
             <h2 class="budjet__title subtitle">Бюджет проекта</h2>
             <p class="budjet__tip site-tip">
-              Максимальный бюджет на проект в&nbsp;данной категории 1 000 000 ₽
+              Максимальный бюджет на проект в&nbsp;данной категории <span class="budjet__middle-weight">1 000 000 &#8381;</span>
             </p>
             <div class="budjet__field-container">
               <div class="budjet__wrapper budjet__wrapper--invalid">
