@@ -57,11 +57,9 @@
             <p class="map-section__tip">
               Введите адрес проблемной территории или отметьте ее на карте
             </p>
-            <input type="text" name="map-search" id="map-search" class="map-section__address"
-              placeholder="Адрес проблемной территории" aria-label="Введите адрес проблемной территории" />
-            <iframe
-              src="https://yandex.ru/map-widget/v1/?um=constructor%3A9cb3dfe5638344382497a81fa8472068b0dfbf25654b37a69d276c0dce8d2718&amp;source=constructor"
-              width="800" height="600" title="Карта"></iframe>
+            <input type="text" name="map-search" id="map-search" class="map-section__address" placeholder="Адрес проблемной территории" aria-label="Введите адрес проблемной территории" />
+            <input type="hidden" id="map-hidden" name="">
+            <div id="map"></div>
           </div>
           <div class="landscaping-form__button-wrapper">
             <button type="button" class="button button--white">Отменить</button>
@@ -97,6 +95,7 @@
     <button type="button" class="landscaping__general-pin">4</button>
   </template>
 
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a3b13bbc-c623-4647-90d4-48210288fe0d" type="text/javascript"></script>
   <script src="js/libs.js"></script>
   <script src="js/main.min.js"></script>
 </body>
