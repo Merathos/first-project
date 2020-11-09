@@ -4490,25 +4490,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       margin-bottom: 16px; } }
 
 .proposal__last-comment {
-  margin-bottom: 63px;
-  padding: 13px 16px 15px;
-  border: 1px solid var(--color-interactive-default, #2c8ecc);
-  border-radius: 5px; }
-  @media (max-width: 767px) {
-    .proposal__last-comment {
-      margin-bottom: 56px; } }
-  .proposal__last-comment p:first-child {
-    margin: 0 0 16px;
-    font-weight: 500;
-    font-size: 0.94rem;
-    line-height: 135%;
-    color: var(--color-text, #354052); }
-  .proposal__last-comment p:last-child {
-    margin: 0;
-    font-weight: 400;
-    font-size: 0.94rem;
-    line-height: 180%;
-    color: var(--color-text, #354052); }
+  margin-bottom: 63px; }
 
 .proposal__description {
   margin-bottom: 32px; }
@@ -7523,6 +7505,26 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .steps-list__lighter-text {
   color: var(--color-text, #707b8c); }
+
+.last-comment {
+  padding: 13px 16px 15px;
+  border: 1px solid var(--color-interactive-default, #2c8ecc);
+  border-radius: 5px; }
+  @media (max-width: 767px) {
+    .last-comment {
+      margin-bottom: 56px; } }
+  .last-comment p:first-child {
+    margin: 0 0 16px;
+    font-weight: 500;
+    font-size: 0.94rem;
+    line-height: 135%;
+    color: var(--color-text, #354052); }
+  .last-comment p:last-child {
+    margin: 0;
+    font-weight: 400;
+    font-size: 0.94rem;
+    line-height: 180%;
+    color: var(--color-text, #354052); }
 
 .news-notice {
   -webkit-box-sizing: border-box;
@@ -14039,6 +14041,9 @@ span.poll-page__hide {
     .new-project {
       padding-bottom: 14px; } }
 
+.new-project__info-banner {
+  margin: 0 0 40px; }
+
 .new-project__title {
   margin-bottom: 24px; }
   @media (max-width: 1199px) {
@@ -14053,6 +14058,15 @@ span.poll-page__hide {
   @media (max-width: 767px) {
     .new-project__rules {
       margin-bottom: 20px; } }
+
+.new-project__comments {
+  margin: 28px 0 12px; }
+
+.new-project__last-comment {
+  margin: 0 0 20px; }
+  @media (min-width: 768px) {
+    .new-project__last-comment {
+      margin-bottom: 27px; } }
 
 .new-project__form {
   padding-top: 29px;
@@ -14077,6 +14091,9 @@ span.poll-page__hide {
     min-height: 51px;
     background-color: var(--color-bg-secondary, #f9f9fa); }
     @media (max-width: 1199px) {
+      .new-project__select .ss-main .ss-single-selected {
+        width: 100%; } }
+    @media (min-width: 1200px) {
       .new-project__select .ss-main .ss-single-selected {
         width: 100%; } }
   .new-project__select .ss-main .ss-single-selected .ss-arrow {

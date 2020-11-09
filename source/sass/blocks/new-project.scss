@@ -10,6 +10,10 @@
   }
 }
 
+.new-project__info-banner {
+  margin: 0 0 40px;
+}
+
 .new-project__title {
   margin-bottom: 24px;
   @media (max-width: $desktop-width - 1) {
@@ -26,6 +30,18 @@
 
   @media (max-width: $tablet-width - 1) {
     margin-bottom: 20px;
+  }
+}
+
+.new-project__comments {
+  margin: 28px 0 12px;
+}
+
+.new-project__last-comment {
+  margin: 0 0 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 27px;
   }
 }
 
@@ -65,7 +81,7 @@
     }
 
     @media (min-width: $desktop-width) {
-      // width: 550px;
+      width: 100%;
     }
   }
 

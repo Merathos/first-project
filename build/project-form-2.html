@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
   <meta charset="UTF-8">
   <title>Общественное голосование</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,8 +23,8 @@
 </head>
 
 
-  <body class="page-body">
-    <section class="special-popup js-hide">
+<body class="page-body">
+  <section class="special-popup js-hide">
   <h2 class="visually-hidden">Настройки для слабовидящих</h2>
 
   <div class="special-popup__wrap">
@@ -128,7 +128,7 @@
 </section>
 
 
-    <header class="page-header js-page-header">
+  <header class="page-header js-page-header">
   <div class="page-header__bar js-page-header__bar">
     <div class="page-header__container container">
       <a class="page-header__roi-logo logo-link" href="#">
@@ -232,10 +232,10 @@
 </header>
 
 
-    <main class="project-page page-content page-content--proposal">
-
+  <main class="page-content page-content--project">
+    <section class="new-project">
       <div class="container">
-        <div class="info-banner info-banner--warning">
+        <div class="new-project__info-banner info-banner info-banner--warning">
           <svg width="24" height="24" class="info-icon info-banner__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
             <path fill="currentColor" fill-rule="evenodd" d="M.2 12C.2 5.494 5.492.2 12 .2 18.505.2 23.8 5.494 23.8 12c0 6.506-5.294 11.8-11.8 11.8C5.492 23.8.2 18.506.2 12zm2.152 0c0 5.32 4.328 9.647 9.647 9.647 5.32 0 9.647-4.327 9.647-9.647S17.318 2.354 12 2.354 2.352 6.68 2.352 12z" clip-rule="evenodd"></path>
             <rect width="2.5" height="8" x="10.75" y="6" fill="currentColor" rx="1"></rect>
@@ -250,102 +250,165 @@
             Внесите измнения согласно комментариям модератора.
           </p>
         </div>
-        <section class="proposal">
-          <h1 class="proposal__title proposal__title--big page-title">Форма предложения по благоустройству территории</h1>
-          <a class="proposal__link link link--blue link--rules" href="#">
-            <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-              <path fill="currentColor" fill-rule="evenodd" d="M.2 12C.2 5.494 5.492.2 12 .2 18.505.2 23.8 5.494 23.8 12c0 6.506-5.294 11.8-11.8 11.8C5.492 23.8.2 18.506.2 12zm2.152 0c0 5.32 4.328 9.647 9.647 9.647 5.32 0 9.647-4.327 9.647-9.647S17.318 2.354 12 2.354 2.352 6.68 2.352 12z" clip-rule="evenodd"></path>
-              <rect width="2.5" height="8" x="10.75" y="6" fill="currentColor" rx="1"></rect>
-              <rect width="2.5" height="3" x="10.75" y="15" fill="currentColor" rx="1"></rect>
+        <h1 class="new-project__title page-title page-title--project">
+          Форма добавления проекта
+        </h1>
+        <a class="new-project__rules link link--blue link--rules" href="#">
+          <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <path fill="currentColor" fill-rule="evenodd" d="M.2 12C.2 5.494 5.492.2 12 .2 18.505.2 23.8 5.494 23.8 12c0 6.506-5.294 11.8-11.8 11.8C5.492 23.8.2 18.506.2 12zm2.152 0c0 5.32 4.328 9.647 9.647 9.647 5.32 0 9.647-4.327 9.647-9.647S17.318 2.354 12 2.354 2.352 6.68 2.352 12z" clip-rule="evenodd"></path>
+            <rect width="2.5" height="8" x="10.75" y="6" fill="currentColor" rx="1"></rect>
+            <rect width="2.5" height="3" x="10.75" y="15" fill="currentColor" rx="1"></rect>
+          </svg>
+          <span>Правила размещения проектов</span>
+        </a>
+        <div class="new-project__comments comments-tab">
+          <button type="button" class="js-moderator-comments">
+            <span>Предыдущие комментарии модератора</span>
+            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite.svg#icon-arrow-big"></use>
             </svg>
-            <span>Правила размещения проектов</span>
-          </a>
-          <div class="proposal__comments comments-tab">
-            <button type="button" class="js-moderator-comments">
-              <span>Предыдущие комментарии модератора</span>
-              <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/sprite.svg#icon-arrow-big"></use>
-              </svg>
-            </button>
-            <div class="comments-tab__content">
-              <p class="comments-tab__heading">
-                Комментарий модератора от <time datetime="2020-09-08">08.09.2020</time>
-              </p>
-              <p class="comments-tab__text">
-                Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как текст-заполнитель или же текст-наполнитель. Иногда текст-«рыба» также используется композиторами при написании музыки.
-              </p>
-            </div>
-            <div class="comments-tab__content">
-              <p class="comments-tab__heading">
-                Комментарий модератора от <time datetime="2020-09-08">08.09.2020</time>
-              </p>
-              <p class="comments-tab__text">
-                Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как текст-заполнитель или же текст-наполнитель. Иногда текст-«рыба» также используется композиторами при написании музыки.
-              </p>
-            </div>
-          </div>
-          <div class="proposal__last-comment last-comment">
-            <p>
-              Последний комментарий модератора от <time datetime="2020-09-11">11.09.2020</time>
+          </button>
+          <div class="comments-tab__content">
+            <p class="comments-tab__heading">
+              Комментарий модератора от <time datetime="2020-09-08">08.09.2020</time>
             </p>
-            <p>
+            <p class="comments-tab__text">
               Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как текст-заполнитель или же текст-наполнитель. Иногда текст-«рыба» также используется композиторами при написании музыки.
             </p>
           </div>
-          <form action="#" class="proposal__form landscaping-form" id="js-improvement-form">
-            <div class="landscaping-form__section landscaping-form__section--description">
-              <h2 class="landscaping-form__title">
-                Название и описание предложения
-              </h2>
-              <div class="landscaping-form__textarea-container">
-                <textarea name="proposition" id="proposition" cols="30" rows="10" class="landscaping-form__textarea landscaping-form__proposition-name" aria-label="Название предложения" required=""></textarea>
-                <span class="landscaping-form__textarea-error">Вы превысили лимит на хх символов</span>
-              </div>
-              <div class="landscaping-form__textarea-container">
-                <textarea name="description" id="description" cols="30" rows="10" class="landscaping-form__textarea landscaping-form__description" aria-label="Описание предложения" required=""></textarea>
-                <span class="landscaping-form__textarea-error">Вы превысили лимит
+          <div class="comments-tab__content">
+            <p class="comments-tab__heading">
+              Комментарий модератора от <time datetime="2020-09-08">08.09.2020</time>
+            </p>
+            <p class="comments-tab__text">
+              Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как текст-заполнитель или же текст-наполнитель. Иногда текст-«рыба» также используется композиторами при написании музыки.
+            </p>
+          </div>
+        </div>
+        <div class="new-project__last-comment last-comment">
+          <p>
+            Последний комментарий модератора от <time datetime="2020-09-11">11.09.2020</time>
+          </p>
+          <p>
+            Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как текст-заполнитель или же текст-наполнитель. Иногда текст-«рыба» также используется композиторами при написании музыки.
+          </p>
+        </div>
+        <form action="#" class="new-project__form widget_block" id="js-improvement-form" novalidate="">
+          <div class="new-project__select widget_block__select form-select">
+            <h2 class="new-project__select-title subtitle">Категория проекта</h2>
+            <select id="widget-select-project-category">
+                <option data-placeholder="true" value="Тип виджета">Выберите категорию</option>
+                <option value="Обсуждения">Сбор бытовых отходов</option>
+                <option value="Опросы">Опросы</option>
+                <option value="Новости">Новости</option>
+                <option value="Проекты">Проекты</option>
+            </select>
+          </div>
+          <div class="new-project__description proposal-description">
+            <h2 class="proposal-description__title subtitle">
+              Название и описание проекта
+            </h2>
+            <div class="proposal-description__wrapper">
+              <textarea name="project-title" id="project-title" cols="30" rows="1" class="proposal-description__title-area text-input" placeholder="Название (ограничение 255 символов)" aria-label="Название предложения"></textarea>
+              <span class="proposal-description__error-text">Вы превысили лимит на хх символов</span>
+            </div>
+            <div class="proposal-description__wrapper">
+              <textarea name="description" id="description" cols="30" rows="1" class="proposal-description__description-area text-input" placeholder="Описание  (ограничение 1000 символов)" aria-label="Описание предложения"></textarea>
+              <span class="proposal-description__error-text">Вы превысили лимит
+                на хх символов</span>
+            </div>
+          </div>
+          <div class="new-project__address address">
+            <h2 class="address__title subtitle">Адрес</h2>
+            <p class="address__tip site-tip">
+              Если ваш проект связан с объектом на&nbsp;карте укажите его адрес в данном поле
+            </p>
+            <div class="address__wrapper">
+              <input type="text" name="project-address" id="project-address" class="address__input text-input" placeholder="Адрес проблемной территории" aria-label="Введите адрес">
+                <span class="address__error-text">Вы превысили лимит
                   на хх символов</span>
+            </div>
+          </div>
+          <div class="new-project__budjet budjet">
+            <h2 class="budjet__title subtitle">Бюджет проекта</h2>
+            <p class="budjet__tip site-tip">
+              Максимальный бюджет на проект в&nbsp;данной категории <span class="budjet__middle-weight">1 000 000 &#8381;</span>
+            </p>
+            <div class="budjet__field-container">
+              <div class="budjet__wrapper budjet__wrapper--invalid">
+                  <input type="text" name="project-budjet" id="project-budjet" class="budjet__input text-input" placeholder="Сумма бюджета" aria-label="Введите адрес">
+                  <span class="budjet__error-text">Введите только числа</span>
               </div>
             </div>
-            <div class="landscaping-form__section landscaping-form__section--upload image-uploads">
-              <h2 class="subtitle">Загрузка изображений</h2>
-              <p>Если необходимо, вы можете загрузить изображения. Максимум 5&nbsp;изображенний, формата JPEG, PNG, GIF.
-              </p>
-              <div class="image-uploads__wrapper js-upload-image-container">
-                <input class="visually-hidden" type="file" name="user-images" id="user-images" accept="image/png, image/jpeg, image/jpg, image/gif" multiple="">
-                <label for="user-images"><span>Загрузить изображение</span></label>
+            <div class="budjet__field-container">
+              <div class="budjet__wrapper">
+                <input type="text" name="project-co-financing" id="project-co-financing" class="budjet__input text-input" placeholder="Сумма софинансирования" aria-label="Введите сумму софинансирования">
+                  <span class="budjet__error-text">Введите только числа</span>
+              </div>
+              <span class="budjet__field-info">
+                Если часть проекта готовы софинансировать сограждане, то&nbsp;введите сумму в данное поле
+              </span>
+            </div>
+          </div>
+          <div class="new-project__contacts contacts-inputs">
+            <h2 class="contacts-inputs__title subtitle">Контактная информация</h2>
+            <p class="contacts-inputs__tip site-tip">
+              В случае победы проекта по данным контактам будет продолжена коммуникация с автором
+            </p>
+            <div class="contacts-inputs__wrapper contacts-inputs__wrapper--name">
+                <input type="text" name="full-name" id="full-name" class="contacts-inputs__input text-input" placeholder="ФИО" aria-label="Введите ФИО">
+                <span class="contacts-inputs__error-text">Введите только числа</span>
+            </div>
+            <div class="contacts-inputs__wrapper contacts-inputs__wrapper--email">
+                <input type="email" name="email" id="email" class="contacts-inputs__input text-input" placeholder="E-mail" aria-label="Введите адрес электронной почты">
+                <span class="contacts-inputs__error-text">Введите только числа</span>
+            </div>
+            <div class="contacts-inputs__wrapper contacts-inputs__wrapper--phone">
+                <input type="tel" name="phone" id="phone" class="contacts-inputs__input text-input" placeholder="Телефон" aria-label="Введите телефон">
+                <span class="contacts-inputs__error-text">Введите только числа</span>
+            </div>
+          </div>
+          <div class="new-project__file-upload file-uploads">
+            <h2 class="subtitle">Загрузка файлов</h2>
+            <p>Если необходимо, вы можете загрузить файлы. Максимум 5 файлов, формата DOCX, DOC, ODT, XODT, ODX, XODX.
+            </p>
+            <div class="file-uploads__wrapper js-upload-file-container">
+              <div class="file-uploads__preview-container"></div>
+              <input class="visually-hidden" type="file" name="user-files" id="user-files" accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" multiple="">
+              <label for="user-files"><span>Загрузить файл</span></label>
+            </div>
+          </div>
+          <div class="new-project__image-upload image-uploads">
+            <h2 class="subtitle">Загрузка изображений</h2>
+            <p>Если необходимо, вы можете загрузить изображения. Максимум 5&nbsp;изображенний, формата JPEG, PNG, GIF.
+            </p>
+            <div class="image-uploads__wrapper js-upload-image-container">
+              <input class="visually-hidden" type="file" name="user-images" id="user-images" accept="image/png, image/jpeg, image/jpg, image/gif" multiple="">
+              <label for="user-images"><span>Загрузить изображение</span></label>
+            </div>
+          </div>
+          <div class="new-project__button-wrapper">
+            <button type="button" class="button button--white">Отменить</button>
+            <button type="button" class="button button--blue new-project__submit-btn" id="improvement-submit-btn">
+              Отправить на модерацию
+            </button>
+          </div>
+          <div class="confirmation-popup">
+            <div class="confirmation-popup__body">
+              <button type="button" class="confirmation-popup__close-btn" aria-label="Отмена"></button>
+              <p>После отправки предложения на модерацию внести изменения будет нельзя</p>
+              <div class="confirmation-popup__buttons-wrap">
+                <button type="button" class="confirmation-popup__back-btn button button--white">Вернуться</button>
+                <button type="submit" class="confirmation-popup__submit-btn button button--blue">Отправить</button>
               </div>
             </div>
-            <div class="landscaping-form__section map-section">
-              <h2 class="map-section__title">Карта</h2>
-              <p class="map-section__tip">
-                Введите адрес проблемной территории или отметьте ее на карте
-              </p>
-              <input type="text" name="map-search" id="map-search" class="map-section__address" placeholder="Адрес проблемной территории" aria-label="Введите адрес проблемной территории">
-              <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A9cb3dfe5638344382497a81fa8472068b0dfbf25654b37a69d276c0dce8d2718&amp;source=constructor" width="800" height="600" title="Карта"></iframe>
-            </div>
-            <div class="landscaping-form__button-wrapper">
-              <button class="button button--white">Отменить</button>
-              <button type="submit" class="button button--blue landscaping-form__submit-btn" id="improvement-submit-btn">
-                Отправить на модерацию
-              </button>
-            </div>
-            <div class="confirmation-popup">
-              <div class="confirmation-popup__body">
-                <button type="button" class="confirmation-popup__close-btn" aria-label="Отмена"></button>
-                <p>После отправки предложения на модерацию внести изменения будет нельзя</p>
-                <div class="confirmation-popup__buttons-wrap">
-                  <button type="button" class="confirmation-popup__back-btn button button--white">Вернуться</button>
-                  <button type="submit" class="confirmation-popup__submit-btn button button--blue">Отправить</button>
-                </div>
-              </div>
-            </div>
-          </form>
-        </section>
+          </div>
+        </form>
       </div>
-    </main>
+    </section>
+  </main>
 
-    <footer class="page-footer">
+  <footer class="page-footer">
   <div class="container">
     <div class="page-footer__top">
       <ul class="page-footer__list">
@@ -383,7 +446,7 @@
   </div>
 </footer>
 
-    <div class="cookie js_cookie">
+  <div class="cookie js_cookie">
   <div class="cookie__wrap container">
     <div class="cookie__main">
       <p class="cookie__title">
@@ -398,71 +461,37 @@
   </div>
 </div>
 
-    <button class="page-body__up-btn js-page-body__up-btn" type="button">
+  <button class="page-body__up-btn js-page-body__up-btn" type="button">
   <svg width="20" height="12" viewbox="0 0 33 12">
     <use xlink:href="img/sprite.svg#icon-arrow"></use>
   </svg>
   <span class="visually-hidden">Наверх</span>
 </button>
 
-
-    <div class="gallery-popup js-gallery-popup popup js-popup">
-      <div class="popup__container">
-        <div class="popup__overlay js-popup__overlay"></div>
-
-        <div class="gallery-popup__content popup__content">
-          <div class="popup__bar popup__bar--top">
-            <button class="popup__close-btn js-popup__close-btn" type="button">
-              <span class="visually-hidden">Закрыть</span>
-              <svg width="16" height="16">
-                <use xlink:href="img/sprite.svg#icon-cross"></use>
-              </svg>
-            </button>
-          </div>
-
-          <div class="gallery-popup__frame js-gallery-popup__frame swiper-container"></div>
-
-          <p class="gallery-popup__photo-description js-gallery-popup__photo-description"></p>
-
-          <div class="popup__bar popup__bar--bottom">
-            <button class="gallery-popup__nav-btn gallery-popup__nav-btn--prev js-gallery-popup__nav-btn--prev" type="button">
-              <svg width="24" height="24">
-                <use xlink:href="img/sprite.svg#icon-paginator-prev"></use>
-              </svg>
-            </button>
-
-            <p class="gallery-popup__counter">
-              <span class="gallery-popup__counter-current js-gallery-popup__counter-current"></span>/<span class="gallery-popup__counter-total js-gallery-popup__counter-total"></span>
-            </p>
-
-            <button class="gallery-popup__nav-btn gallery-popup__nav-btn--next js-gallery-popup__nav-btn--next" type="button">
-              <svg width="24" height="24">
-                <use xlink:href="img/sprite.svg#icon-paginator-next"></use>
-              </svg>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="vote-popup js-vote-popup">
-      <p class="vote-popup__text">
-        <svg class="vote-popup__icon" width="20" height="20">
-          <use xlink:href="img/sprite.svg#icon-attention"></use>
+  <div class="warning">
+  <div class="container">
+    <div class="warning__body">
+      <div class="warning__icon-wrapper">
+        <svg width="20" height="20" viewbox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <use xlink:href="img/sprite.svg#icon-cancel"></use>
         </svg>
-
-        Вы&nbsp;проголосовали за&nbsp;проект. Отозвать голос можно только один
-        раз в&nbsp;течение 2&nbsp;часов с&nbsp;момента голосования.
-      </p>
-
-      <form action="#" method="post">
-        <button class="vote-popup__revoke-btn js-vote-popup__revoke-btn" type="submit" name="revoke-vote">
-          Отозвать
-        </button>
-      </form>
+      </div>
+      <span>Файл <span class="warning__middle">Logo.svg</span> неправильного формата. Разрешенные форматы: <span class="warning__middle">JPEG, PNG, GIF</span></span>
     </div>
+  </div>
+</div>
 
-    <script src="js/libs.js"></script>
-    <script src="js/main.min.js"></script>
-  </body>
+
+  <template id="pin">
+    <button type="button" class="landscaping__pin"><img src="img/pin.png" width="36" height="54" draggable="false" alt="Метка"></button>
+  </template>
+
+  <template id="general-pin">
+    <button type="button" class="landscaping__general-pin">4</button>
+  </template>
+
+  <script src="js/libs.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
 </html>
