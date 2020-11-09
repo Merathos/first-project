@@ -1,0 +1,97 @@
+.error-page {
+  padding-top: 32px;
+  padding-bottom: 64px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 80px;
+    padding-bottom: 120px;
+  }
+}
+
+.error-page__container {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 24px;
+    grid-template-areas:
+      "a  a"
+      "b  c"
+      "d  c"
+      "f  c"
+      "e  e";
+    > * {
+      align-self: start;
+    }
+  }
+}
+
+.error-page__title {
+  grid-area: a;
+
+  margin-bottom: 16px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 56px;
+  }
+}
+
+.error-page__content {
+  grid-area: b;
+
+  margin-bottom: 24px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 8px;
+    margin-bottom: 32px;
+  }
+
+  p {
+    margin: 0 0 5px;
+
+    font-weight: normal;
+    font-size: rem(16px);
+    line-height: rem(22px);
+    color: var(--color-text, $dark-text);
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 16px;
+
+      font-size: rem(18px);
+      line-height: rem(23px);
+    }
+  }
+}
+
+.error-page__attention {
+  grid-area: d;
+
+  margin-bottom: 32px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.error-page__steps {
+  grid-area: c;
+
+  margin-bottom: 24px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.error-page__button {
+  grid-area: e;
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    width: 360px;
+    justify-self: center;
+  }
+}

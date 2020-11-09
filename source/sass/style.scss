@@ -79,6 +79,8 @@
 @import 'blocks/contacts-inputs';
 @import 'blocks/site-tip';
 @import 'blocks/warning';
+@import 'blocks/attention';
+@import 'blocks/steps-list';
 
 // main page
 @import "blocks/news-notice";
@@ -173,4 +175,7 @@
 
 // service-unavalable
 @import "blocks/unavailable";
+
+// error-page
+@import "blocks/error-page";
 
