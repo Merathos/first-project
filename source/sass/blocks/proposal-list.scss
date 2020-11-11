@@ -1,14 +1,10 @@
 .proposal-list {
-  margin: 0;
-  padding: 0;
-
   list-style: none;
 }
 
 .proposal-list__item {
-  padding: 41px 0 32px;
+  padding: 32px 0;
 
-  border-top: 1px solid var(--color-stroke, $light-grey);
   border-bottom: 1px solid var(--color-stroke, $light-grey);
 
   @media (min-width: $tablet-width) {
@@ -25,17 +21,18 @@
     }
   }
 
-  &--userless {
+  &--border-top {
     padding-top: 32px;
+    border-top: 1px solid var(--color-stroke, $light-grey);
   }
 
-  &--activity-improvement {
-    border-top: none;
+  // &--activity-improvement {
+  //   border-top: none;
 
-    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1){
-      padding-top: 50px;
-    }
-  }
+  //   @media (min-width: $tablet-width) and (max-width: $desktop-width - 1){
+  //     padding-top: 50px;
+  //   }
+  // }
 }
 
 .proposal-list__wrapper {

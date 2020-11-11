@@ -1,3 +1,21 @@
+.improvement-stage {
+  padding: 0 0 40px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 40px;
+  }
+}
+
+.improvement-stage__container {
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+}
+
 .improvement-stage__wrapper {
   display: flex;
   flex-flow: row wrap;
@@ -68,4 +86,8 @@
 
 .improvement-stage__level {
   color: var(--color-text, $dark-text);
+}
+
+.improvement-stage__text {
+  margin: 0;
 }
