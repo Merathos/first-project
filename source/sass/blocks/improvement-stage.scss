@@ -45,7 +45,7 @@
 .improvement-stage__status {
   padding-left: 19px;
   position: relative;
-  color: var(--color-text, $orange);
+  color: var(--color-text, $grey-default);
 
   &::before {
     content: "";
@@ -63,20 +63,20 @@
     transform: translateY(-50%);
   }
 
-  &--opened {
+  &--blue {
     color: var(--color-text, $blue-default);
   }
 
-  &--complete {
+  &--green {
     color: var(--color-text, $green);
   }
 
-  &--declined {
+  &--red {
     color: var(--color-text, $red);
   }
 
-  &--neutral {
-    color: var(--color-text, $grey-default);
+  &--orange {
+    color: var(--color-text, $orange);
   }
 }
 

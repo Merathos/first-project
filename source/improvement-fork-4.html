@@ -10,7 +10,7 @@
     <main>
         <section class="area-improvement section">
             <div class="container">
-                <a class="area-improvement__back back-btn" href="main-page.html">
+                <a class="area-improvement__back-btn back-btn" href="main-page.html">
                     <svg width="8" height="14">
                         <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
                     </svg>
@@ -24,7 +24,7 @@
                     <div class="improvement-stage__container">
                       <div class="improvement-stage__wrapper">
                           <span>Статус:</span>
-                          <span class="improvement-stage__status improvement-stage__status--complete">Подведены
+                          <span class="improvement-stage__status improvement-stage__status--green">Подведены
                               итоги</span>
                       </div>
                       <div class="improvement-stage__wrapper improvement-stage__wrapper--line-height">
@@ -50,64 +50,56 @@
             <section class="proposal-winners">
               <div class="container">
                   <h2 class="proposal-winners__title">Предложения-победители</h2>
-                  <ul class="proposal-winners__list">
-                      <li class="proposal-winners__item">
-                          <a class="proposal-winners__text-link link link--black" href="#">
-                              Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях
-                          </a>
-                          <p class="proposal-winners__status improvement-status">Реализовано</p>
-                      </li>
-                      <li class="proposal-winners__item">
-                          <a class="proposal-winners__text-link link link--black" href="#">
-                              Они напевают его перед тем, как сочинены соответствующие слова
-                          </a>
-                      </li>
-                      <li class="proposal-winners__item proposal-winners__item--yours">
-                          <p class="proposal-winners_yours">
-                              <svg width="10" height="12" viewBox="0 0 10 12" fill="none"
-                                  xmlns="http://www.w3.org/2000/svg">
-                                  <use xlink:href="img/sprite.svg#proposal-user"></use>
-                              </svg>Ваше предложение</p>
-                          <p class="proposal-winners__address"><svg width="10" height="12" viewBox="0 0 10 12" fill="none"
-                                  xmlns="http://www.w3.org/2000/svg">
-                                  <use xlink:href="img/sprite.svg#proposal-pin"></use>
-                              </svg>Константина Симонова, 5к2</p>
-                          <a class="proposal-winners__text-link proposal-winners__text-link--yours link link--black"
-                              href="#">
-                              Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях
-                          </a>
-                          <p class="proposal-winners__status improvement-status">Реализовано</p>
-                      </li>
-                      <li class="proposal-winners__item">
-                          <a class="proposal-winners__text-link link link--black" href="#">
-                              Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или
-                              производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как
-                              текст-заполнитель или же текст-наполнитель. Иногда текст-«рыба» также
-                          </a>
-                          <p class="proposal-winners__status improvement-status">Реализовано</p>
-                      </li>
-                      <li class=" proposal-winners__item">
-                          <a class="proposal-winners__text-link link link--black" href="#">
-                              Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях
-                          </a>
-                      </li>
-                      <li class="proposal-winners__item">
-                          <a class="proposal-winners__text-link link link--black" href="#">
-                              Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке
-                          </a>
-                      </li>
-                      <li class="proposal-winners__item">
-                          <a class="proposal-winners__text-link link link--black" href="#">
-                              Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или
-                              производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как
-                              текст-заполнитель или же текст-наполнитель. Иногда текст-«рыба» также
-                          </a>
-                      </li>
-                      <li class="proposal-winners__item">
-                          <a class="proposal-winners__text-link link link--black" href="#">
-                              Они напевают его перед тем, как сочинены соответствующие слова
-                          </a>
-                      </li>
+                  <ul class="proposal-winners__proposal proposal-list">
+                    <li class="proposal-list__item">
+                      <a href="#" class="proposal-list__title proposal-list__title--regular">Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях</a>
+                      <span class="proposal-list__status proposal-list__status--green">Реализовано</span>
+                    </li>
+                    <li class="proposal-list__item">
+                      <a href="#" class="proposal-list__title proposal-list__title--regular">Они напевают его перед тем, как сочинены соответствующие слова</a>
+                    </li>
+                    <li class="proposal-list__item">
+                      <div class="proposal-list__wrapper">
+                        <div class="proposal-list__account">
+                          <svg width="16" height="16">
+                            <use xlink:href="img/sprite.svg#icon-user"></use>
+                          </svg>
+                          <span>Ваше предложение</span>
+                        </div>
+                      </div>
+                      <a href="#" class="proposal-list__title">Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях</a>
+                      <span class="proposal-list__status proposal-list__status--green">Реализовано</span>
+                    </li>
+                    <li class="proposal-list__item">
+                      <a href="#" class="proposal-list__title proposal-list__title--regular">
+                        Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или
+                        производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как
+                        текст-заполнитель или же текст-наполнитель. Иногда текст-«рыба» также
+                      </a>
+                      <span class="proposal-list__status proposal-list__status--green">Реализовано</span>
+                    </li>
+                    <li class="proposal-list__item">
+                      <a href="#" class="proposal-list__title proposal-list__title--regular">
+                        Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях
+                      </a>
+                    </li>
+                    <li class="proposal-list__item">
+                      <a href="#" class="proposal-list__title proposal-list__title--regular">
+                        Самый известный текст-«рыба», называемый Lorem ipsum, имеет свои корни в 16-том веке
+                      </a>
+                    </li>
+                    <li class="proposal-list__item">
+                      <a href="#" class="proposal-list__title proposal-list__title--regular">
+                        Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или
+                        производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также известен как
+                        текст-заполнитель или же текст-наполнитель. Иногда текст-«рыба» также
+                      </a>
+                    </li>
+                    <li class="proposal-list__item">
+                      <a href="#" class="proposal-list__title proposal-list__title--regular">
+                        Они напевают его перед тем, как сочинены соответствующие слова
+                      </a>
+                    </li>
                   </ul>
                   <div class="proposal-winners__paginator paginator">
                       <a class="paginator__item paginator__item--prev paginator__item--disabled" aria-label="предыдущий">

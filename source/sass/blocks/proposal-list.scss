@@ -109,6 +109,14 @@
   color: var(--color-text, $dark-text);
   transition: color $style-change-duration;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--regular {
+    font-weight: 400;
+  }
+
   @media (min-width: $desktop-width) {
     &:hover:not(.focus-visible) {
       color: var(--color-interactive-default, $blue-default);
@@ -137,7 +145,23 @@
   font-weight: 400;
   font-size: rem(15px);
   line-height: 135%;
-  color: var(--color-interactive-default, $blue-default);
+  color: var(--color-text, $grey-default);
+
+  &--blue {
+    color: var(--color-text, $blue-default);
+  }
+
+  &--green {
+    color: var(--color-text, $green);
+  }
+
+  &--red {
+    color: var(--color-text, $red);
+  }
+
+  &--orange {
+    color: var(--color-text, $orange);
+  }
 
   @media (min-width: $desktop-width) {
     grid-area: c;
