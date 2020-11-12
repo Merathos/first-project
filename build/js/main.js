@@ -1366,8 +1366,28 @@
   if (container) {
     var input = container.querySelector('input[name="user-images"]');
     var label = container.querySelector('label[for="user-images"]');
+    var existingPreviews = container.querySelectorAll('.image-uploads__image-wrapper');
     var images = [];
     var MAX_IMAGES = 5;
+
+    // обрабатывает существующие изображения, добавляет их в filelist и рендерит кнопку удаления //
+    var addExistingImages = function () {
+      existingPreviews.forEach(function (preview) {
+        if (preview) {
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', preview.querySelector('img').src);
+          xhr.responseType = 'blob';
+          xhr.onload = function () {
+            var file = new File([xhr.response], preview.querySelector('img').src, {
+              type: xhr.response.type,
+            });
+            images.push(file);
+            renderCloseBtn(preview, file);
+          };
+          xhr.send();
+        }
+      });
+    };
 
     // прячет инпут когда загружено максимальное количество файлов //
     var checkInputVisible = function () {
@@ -1416,6 +1436,7 @@
     // отрисовывает превью и добавляет его в контейнер //
     var renderPreview = function (imageUrl, file) {
       var imgContainer = document.createElement('div');
+      imgContainer.classList.add('image-uploads__image-wrapper');
       var preview = document.createElement('img');
       renderCloseBtn(imgContainer, file);
       imgContainer.appendChild(preview);
@@ -1424,6 +1445,8 @@
     };
 
     // работа приложения //
+    addExistingImages();
+    checkFilesList();
     input.addEventListener('change', function () {
       if (input.files.length) {
 
