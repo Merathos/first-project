@@ -3,10 +3,35 @@
     margin-bottom: 40px;
   }
 
+  &--vote {
+    .rating-main__state-info {
+      margin-bottom: 25px;
+    }
+
+    .rating-main__description {
+      max-width: 65%;
+      margin-bottom: 50px;
+    }
+  }
+
   @media(max-width: $tablet-width) {
     .page-content__title {
       font-size: 30px;
       line-height: 36px;
+    }
+
+    &--vote {
+      .rating-main__state-info {
+        margin-bottom: 12px;
+      }
+
+      .rating-main__state-info-wrap {
+        margin-bottom: 27px;
+      }
+
+      .rating-main__description {
+        max-width: 100%;
+      }
     }
   }
 
@@ -151,6 +176,10 @@
   border-top: 1px solid var(--color-stroke, $light-grey);
   border-bottom: 1px solid var(--color-stroke, $light-grey);
 
+  &--vote {
+    border-bottom: none;
+  }
+
   @media(max-width: $tablet-width) {
     padding-top: 25px;
     padding-bottom: 16px;
@@ -200,8 +229,16 @@
 .rating-main__categories-descr {
   margin-bottom: 15px;
 
+  &--vote {
+    margin-bottom: 30px;
+  }
+
   @media(max-width: $mobile-max-width) {
     margin-top: -7px;
+  }
+
+  @media(max-width: $tablet-width) {
+    margin-bottom: 55px;
   }
 }
 
@@ -236,6 +273,65 @@
 
   list-style: none;
   text-align: left;
+
+  &--vote {
+    justify-content: flex-start;
+
+    li {
+      max-width: calc(100% / 3 - 8px);
+      margin-right: 8px;
+
+      &:nth-child(3n+3) {
+        margin-right: 0;
+      }
+    }
+
+    .rating-main__item:hover {
+      .rating-main__count-wrap {
+        opacity: 1;
+      }
+    }
+
+    .rating-main__name {
+      padding-left: 13px;
+      font-size: 15px;
+      flex-wrap: wrap;
+    }
+
+    .rating-main__link {
+      padding: 20px 10px 10px 15px;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    li {
+      max-width: calc(100% / 2 - 8px);
+    }
+
+    .rating-main__link {
+      padding: 29px 10px 6px 46px;
+    }
+
+    .rating-main__icon {
+      top: 30px;
+      left: 16px;
+    }
+
+    .rating-main__count-wrap {
+      padding-right: 7px;
+    }
+
+    .rating-main__categories {
+      margin-bottom: 33px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    li {
+      max-width: 100%;
+      margin-right: 0;
+    }
+  }
 }
 
 .rating-main__button-all {

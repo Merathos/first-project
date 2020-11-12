@@ -1,19 +1,19 @@
-.your-projects__list,
-.your-projects__inner-list {
+.your-projects-list,
+.your-projects-list__inner-list {
   @include list-reset;
 }
 
-.your-projects__inner-list {
+.your-projects-list__inner-list {
   @media(max-width: $tablet-width) {
     margin-bottom: 26px;
 
-    .your-projects__inner-item:last-child {
+    .your-projects-list__inner-item:last-child {
       border-bottom: none;
     }
   }
 }
 
-.your-projects__title {
+.your-projects-list__title {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
@@ -24,7 +24,7 @@
   }
 }
 
-.your-projects__name {
+.your-projects-list__name {
   margin: 0;
   padding: 0;
   margin-left: 8px;
@@ -43,7 +43,7 @@
   }
 }
 
-.your-projects__inner-item {
+.your-projects-list__inner-item {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -56,7 +56,7 @@
   }
 }
 
-.your-projects__inner-link {
+.your-projects-list__inner-link {
   padding: 30px 0;
 
   &:last-child {
@@ -74,7 +74,7 @@
   }
 }
 
-.your-projects__inner-status {
+.your-projects-list__inner-status {
   margin-left: auto;
   padding-left: 10px;
 
