@@ -1370,7 +1370,7 @@
     var images = [];
     var MAX_IMAGES = 5;
 
-    // обрабатывает существующие изображения, добавляет их в filelist и рендерит кнопку удаления //
+    // обрабатывает существующие изображения, добавляет их в images и рендерит кнопку удаления //
     var addExistingImages = function () {
       existingPreviews.forEach(function (preview) {
         if (preview) {
@@ -1399,22 +1399,22 @@
     };
 
     // ограничивает возможность выбора более 5ти файлов за один раз //
-    var limitFilesNumber = function () {
-      var tempList = new DataTransfer();
-      for (var i = 0; i < MAX_IMAGES; i++) {
-        tempList.items.add(input.files[i]);
-      }
-      input.files = tempList.files;
-    };
+    // var limitFilesNumber = function () {
+    //   var tempList = new DataTransfer();
+    //   for (var i = 0; i < MAX_IMAGES; i++) {
+    //     tempList.items.add(input.files[i]);
+    //   }
+    //   input.files = tempList.files;
+    // };
 
     // перезаписывает список файлов //
-    var checkFilesList = function () {
-      var list = new DataTransfer();
-      images.forEach(function (image) {
-        list.items.add(image);
-      });
-      input.files = list.files;
-    };
+    // var checkFilesList = function () {
+    //   var list = new DataTransfer();
+    //   images.forEach(function (image) {
+    //     list.items.add(image);
+    //   });
+    //   input.files = list.files;
+    // };
 
     // рендерит кнопку закрытия и добавляет её в контейнер //
     var renderCloseBtn = function (btnContainer, file) {
@@ -1428,7 +1428,7 @@
         if (index > -1) {
           images.splice(index, 1);
           checkInputVisible();
-          checkFilesList();
+          // checkFilesList();
         }
       });
     };
@@ -1446,18 +1446,19 @@
 
     // работа приложения //
     addExistingImages();
-    checkFilesList();
     input.addEventListener('change', function () {
       if (input.files.length) {
 
-        if (input.files.length > MAX_IMAGES) {
-          limitFilesNumber();
+        if (input.files.length + images.length > MAX_IMAGES) {
+          alert('Нельзя добавлять более 5 файлов');
+          return;
+          // limitFilesNumber();
         }
 
         input.files.forEach(function (file) {
-          if (images.length > MAX_IMAGES - 1) {
-            return;
-          }
+          // if (images.length > MAX_IMAGES - 1) {
+          //   return;
+          // }
           images.push(file);
           checkInputVisible();
           var reader = new FileReader();
@@ -1467,7 +1468,7 @@
           reader.readAsDataURL(file);
         });
       }
-      checkFilesList();
+      // checkFilesList();
     });
   }
 })();
