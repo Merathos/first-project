@@ -1,0 +1,28 @@
+.last-comment {
+  padding: 13px 16px 15px;
+
+  border: 1px solid var(--color-interactive-default, $blue-default);
+  border-radius: 5px;
+
+  @media (max-width: $tablet-width - 1) {
+    margin-bottom: 56px;
+  }
+
+  & p:first-child {
+    margin: 0 0 16px;
+    font-weight: 500;
+    font-size: 0.94rem;
+    line-height: 135%;
+
+    color: var(--color-text, $dark-text);
+  }
+
+  & p:last-child {
+    margin: 0;
+    font-weight: 400;
+    font-size: 0.94rem;
+    line-height: 180%;
+
+    color: var(--color-text, $dark-text);
+  }
+}

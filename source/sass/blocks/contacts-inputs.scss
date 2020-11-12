@@ -1,0 +1,82 @@
+.contacts-inputs {
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+    grid-template-areas:
+    "a  a"
+    "b  b"
+    "c  d"
+    "e  f";
+
+    > * {
+      align-self: start;
+    }
+  }
+}
+
+.contacts-inputs__title {
+  grid-area: a;
+  margin: 0 0 8px;
+}
+
+.contacts-inputs__tip {
+  grid-area: b;
+  margin: 0 0 32px;
+}
+
+.contacts-inputs__wrapper {
+  position: relative;
+  margin-bottom: 32px;
+
+  &--invalid {
+    .contacts-inputs__input {
+      border: 1px solid #f3a8a8;
+    }
+
+    .contacts-inputs__error-text {
+      display: block;
+    }
+  }
+
+  &--name {
+    grid-area: c;
+  }
+
+  &--email {
+    grid-area: e;
+  }
+
+  &--phone {
+    grid-area: f;
+  }
+}
+
+.contacts-inputs__input {
+  padding: 11px 16px;
+  width: 100%;
+}
+
+.contacts-inputs__error-text {
+  display: none;
+
+  position: absolute;
+  left: 0;
+  bottom: -21px;
+
+  font-weight: 400;
+  font-size: rem(13px);
+  line-height: 130%;
+
+  color: var(--color-interactive-default, $red);
+}
+
+.contacts-inputs__field-info {
+  display: block;
+
+  font-weight: normal;
+  font-size: 13px;
+  line-height: 131%;
+
+  color: #A6ABB3;
+}

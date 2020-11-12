@@ -1,11 +1,15 @@
 
 .map-section {
     margin-bottom: 43px;
-    
-    iframe {
+
+    iframe, #map {
         border: none;
         border-radius: 5px;
         width: 100%;
+    }
+
+    #map {
+      height: 600px;
     }
 
     input {
@@ -40,14 +44,14 @@
     background: #f9f9fa;
     border: 1px solid #e3e8ee;
     border-radius: 5px;
-    
+
     &::placeholder {
         color: #a6abb2;
     }
-    
+
     &:focus {
         outline: none;
-    
+
         &::placeholder {
         color: #354052;
         }
@@ -56,11 +60,11 @@
 
 @include tablet {
     .map-section {
-        iframe {
+        iframe, #map {
             height: 460px;
         }
     }
-    
+
     .map-section__tip {
         margin-top: 12px;
         margin-bottom: 35px;
@@ -70,8 +74,8 @@
 @include mobile {
     .map-section {
         margin-bottom: 18px;
-    
-        iframe {
+
+        iframe,#map {
             height: 288px;
         }
     }
@@ -80,7 +84,7 @@
         font-size: rem(24px);
         line-height: rem(28.44px);
     }
-    
+
     .map-section__tip {
         margin-top: 18px;
         margin-bottom: 25px;

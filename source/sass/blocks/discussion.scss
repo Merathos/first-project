@@ -1,12 +1,7 @@
 .discussion {
   box-sizing: border-box;
-  padding: 88px 40px 97px;
+  padding: 79px 24px 24px;
 
-  text-align: center;
-
-  @media (max-width: $desktop-width - 81) {
-    padding: 79px 24px 24px;
-  }
 
   @media (max-width: $tablet-width - 1) {
     padding: 64px 16px 7px;

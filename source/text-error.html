@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <include src="source/components/head.html"></include>
+
+  <body class="page-body">
+    <include src="source/components/special-popup.html"></include>
+
+    <include src="source/components/header.html"></include>
+
+    <main>
+      <section class="error-page">
+        <div class="error-page__container container">
+          <h1 class="error-page__title page-title page-title--project">Некорректная дата рождения</h1>
+          <div class="error-page__content">
+            <p>Участвовать в Общественном голосовании могут только граждане Российской Федерации старше 18 лет.</p>
+            <p>Проверьте корректность вашей даты рождения в профиле ЕСИА на&nbsp;портале Госуслуги.</p>
+          </div>
+          <div class="error-page__attention attention">
+            <p>
+              Обращаем ваше внимание, что&nbsp;обновление данных может занять время: <span class="attention__middle-weight">от нескольких минут до пяти суток</span>. Попробуйте авторизоваться позже.
+            </p>
+          </div>
+          <ol class="error-page__steps steps-list">
+            <li class="steps-list__item"><span>Авторизуйтесь на Едином портале</span> <a href="#" class="steps-list__link">Госуслуг</a></li>
+            <li class="steps-list__item"><span>Перейдите на страницу</span> <a href="#" class="steps-list__link">личного профиля</a></li>
+            <li class="steps-list__item"><span>Укажите в графе «Дата рождения» заново, даже если оно отображается корректно</span></li>
+            <li class="steps-list__item"><span>Нажмите «Сохранить»</span></li>
+            <li class="steps-list__item"><span>Выйдите из личного кабинета <span class="steps-list__lighter-text">(иконка выхода в правом верхнем углу)</span></span></li>
+            <li class="steps-list__item"><span>Откройте главную страницу <a href="#" class="steps-list__link">Общественного голосования</a> и&nbsp;авторизуйтесь повторно</span></li>
+          </ol>
+          <a href="main.html" class="error-page__button button button--blue page-404__button">АВТОРИЗОВАТЬСЯ ПОВТОРНО</a>
+        </div>
+      </section>
+    </main>
+
+    <include src="source/components/footer.html"></include>
+    <include src="source/components/cookie.html"></include>
+    <include src="source/components/up-btn.html"></include>
+
+    <script src="js/libs.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

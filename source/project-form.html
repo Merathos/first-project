@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ru">
+<include src="source/components/head.html"></include>
+
+<body class="page-body">
+  <include src="source/components/special-popup.html"></include>
+
+  <include src="source/components/header.html"></include>
+
+  <main class="page-content page-content--project">
+    <section class="new-project">
+      <div class="container">
+        <h1 class="new-project__title page-title page-title--project">
+          Форма добавления проекта
+        </h1>
+        <a class="new-project__rules link link--blue link--rules" href="#">
+          <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <path fill="currentColor" fill-rule="evenodd"
+              d="M.2 12C.2 5.494 5.492.2 12 .2 18.505.2 23.8 5.494 23.8 12c0 6.506-5.294 11.8-11.8 11.8C5.492 23.8.2 18.506.2 12zm2.152 0c0 5.32 4.328 9.647 9.647 9.647 5.32 0 9.647-4.327 9.647-9.647S17.318 2.354 12 2.354 2.352 6.68 2.352 12z"
+              clip-rule="evenodd" />
+            <rect width="2.5" height="8" x="10.75" y="6" fill="currentColor" rx="1" />
+            <rect width="2.5" height="3" x="10.75" y="15" fill="currentColor" rx="1" />
+          </svg>
+          <span>Правила размещения проектов</span>
+        </a>
+        <form action="#" class="new-project__form widget_block" id="js-improvement-form" novalidate>
+          <div class="new-project__select widget_block__select form-select">
+            <h2 class="new-project__select-title subtitle">Категория проекта</h2>
+            <select id="widget-select-project-category">
+                <option data-placeholder="true" value="Тип виджета">Выберите категорию</option>
+                <option value="Обсуждения">Сбор бытовых отходов</option>
+                <option value="Опросы">Опросы</option>
+                <option value="Новости">Новости</option>
+                <option value="Проекты">Проекты</option>
+            </select>
+          </div>
+          <div class="new-project__description proposal-description">
+            <h2 class="proposal-description__title subtitle">
+              Название и описание проекта
+            </h2>
+            <div class="proposal-description__wrapper">
+              <textarea name="project-title" id="project-title" cols="30" rows="1"
+                class="proposal-description__title-area text-input"
+                placeholder="Название (ограничение 255 символов)" aria-label="Название предложения"></textarea>
+              <span class="proposal-description__error-text">Вы превысили лимит на хх символов</span>
+            </div>
+            <div class="proposal-description__wrapper">
+              <textarea name="description" id="description" cols="30" rows="1"
+                class="proposal-description__description-area text-input"
+                placeholder="Описание  (ограничение 1000 символов)" aria-label="Описание предложения"></textarea>
+              <span class="proposal-description__error-text">Вы превысили лимит
+                на хх символов</span>
+            </div>
+          </div>
+          <div class="new-project__address address">
+            <h2 class="address__title subtitle">Адрес</h2>
+            <p class="address__tip site-tip">
+              Если ваш проект связан с объектом на&nbsp;карте укажите его адрес в данном поле
+            </p>
+            <div class="address__wrapper">
+              <input type="text" name="project-address" id="project-address" class="address__input text-input"
+                placeholder="Адрес проблемной территории" aria-label="Введите адрес" />
+                <span class="address__error-text">Вы превысили лимит
+                  на хх символов</span>
+            </div>
+          </div>
+          <div class="new-project__budjet budjet">
+            <h2 class="budjet__title subtitle">Бюджет проекта</h2>
+            <p class="budjet__tip site-tip">
+              Максимальный бюджет на проект в&nbsp;данной категории <span class="budjet__middle-weight">1 000 000 <span class="budjet__bold">&#8381;</span></span>
+            </p>
+            <div class="budjet__field-container">
+              <div class="budjet__wrapper budjet__wrapper--invalid">
+                  <input type="text" name="project-budjet" id="project-budjet" class="budjet__input text-input"
+                    placeholder="Сумма бюджета" aria-label="Введите адрес" />
+                  <span class="budjet__error-text">Введите только числа</span>
+              </div>
+            </div>
+            <div class="budjet__field-container">
+              <div class="budjet__wrapper">
+                <input type="text" name="project-co-financing" id="project-co-financing" class="budjet__input text-input"
+                  placeholder="Сумма софинансирования" aria-label="Введите сумму софинансирования" />
+                  <span class="budjet__error-text">Введите только числа</span>
+              </div>
+              <span class="budjet__field-info">
+                Если часть проекта готовы софинансировать сограждане, то&nbsp;введите сумму в данное поле
+              </span>
+            </div>
+          </div>
+          <div class="new-project__contacts contacts-inputs">
+            <h2 class="contacts-inputs__title subtitle">Контактная информация</h2>
+            <p class="contacts-inputs__tip site-tip">
+              В случае победы проекта по данным контактам будет продолжена коммуникация с автором
+            </p>
+            <div class="contacts-inputs__wrapper contacts-inputs__wrapper--name">
+                <input type="text" name="full-name" id="full-name" class="contacts-inputs__input text-input"
+                  placeholder="ФИО" aria-label="Введите ФИО" />
+                <span class="contacts-inputs__error-text">Введите только числа</span>
+            </div>
+            <div class="contacts-inputs__wrapper contacts-inputs__wrapper--email">
+                <input type="email" name="email" id="email" class="contacts-inputs__input text-input"
+                  placeholder="E-mail" aria-label="Введите адрес электронной почты" />
+                <span class="contacts-inputs__error-text">Введите только числа</span>
+            </div>
+            <div class="contacts-inputs__wrapper contacts-inputs__wrapper--phone">
+                <input type="tel" name="phone" id="phone" class="contacts-inputs__input text-input"
+                  placeholder="Телефон" aria-label="Введите телефон" />
+                <span class="contacts-inputs__error-text">Введите только числа</span>
+            </div>
+          </div>
+          <div class="new-project__file-upload file-uploads">
+            <h2 class="subtitle">Загрузка файлов</h2>
+            <p>Если необходимо, вы можете загрузить файлы. Максимум 5 файлов, формата DOCX, DOC, ODT, XODT, ODX, XODX.
+            </p>
+            <div class="file-uploads__wrapper js-upload-file-container">
+              <div class="file-uploads__preview-container"></div>
+              <input class="visually-hidden" type="file" name="user-files" id="user-files"
+                accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" multiple>
+              <label for="user-files"><span>Загрузить файл</span></label>
+            </div>
+          </div>
+          <div class="new-project__image-upload image-uploads">
+            <h2 class="subtitle">Загрузка изображений</h2>
+            <p>Если необходимо, вы можете загрузить изображения. Максимум 5&nbsp;изображенний, формата JPEG, PNG, GIF.
+            </p>
+            <div class="image-uploads__wrapper js-upload-image-container">
+              <input class="visually-hidden" type="file" name="user-images" id="user-images"
+                accept="image/png, image/jpeg, image/jpg, image/gif" multiple>
+              <label for="user-images"><span>Загрузить изображение</span></label>
+            </div>
+          </div>
+          <div class="new-project__button-wrapper">
+            <button type="button" class="button button--white">Отменить</button>
+            <button type="button" class="button button--blue new-project__submit-btn" id="improvement-submit-btn">
+              Отправить на модерацию
+            </button>
+          </div>
+          <div class="confirmation-popup">
+            <div class="confirmation-popup__body">
+              <button type="button" class="confirmation-popup__close-btn" aria-label="Отмена"></button>
+              <p>После отправки предложения на модерацию внести изменения будет нельзя</p>
+              <div class="confirmation-popup__buttons-wrap">
+                <button type="button" class="confirmation-popup__back-btn button button--white">Вернуться</button>
+                <button type="submit" class="confirmation-popup__submit-btn button button--blue">Отправить</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <include src="source/components/footer.html"></include>
+  <include src="source/components/cookie.html"></include>
+  <include src="source/components/up-btn.html"></include>
+  <include src="source/components/file-format.html"></include>
+
+  <template id="pin">
+    <button type="button" class="landscaping__pin"><img src="img/pin.png" width="36" height="54" draggable="false"
+        alt="Метка"></button>
+  </template>
+
+  <template id="general-pin">
+    <button type="button" class="landscaping__general-pin">4</button>
+  </template>
+
+  <script src="js/libs.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

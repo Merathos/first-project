@@ -59,6 +59,7 @@
 @import 'blocks/proposal-list';
 @import 'blocks/proposal-description';
 @import 'blocks/image-uploads';
+@import 'blocks/file-uploads';
 @import 'blocks/subtitle';
 @import 'blocks/concurrent-projects';
 @import 'blocks/budgets';
@@ -72,6 +73,16 @@
 @import 'blocks/rating';
 @import 'blocks/rating-list';
 @import 'blocks/button-like';
+@import 'blocks/your-projects__list';
+@import 'blocks/text-input';
+@import 'blocks/address';
+@import 'blocks/budjet';
+@import 'blocks/contacts-inputs';
+@import 'blocks/site-tip';
+@import 'blocks/warning';
+@import 'blocks/attention';
+@import 'blocks/steps-list';
+@import 'blocks/last-comment';
 
 // main page
 @import "blocks/news-notice";
@@ -158,5 +169,18 @@
 @import "blocks/partners-list";
 @import "blocks/activity-tabs";
 
+// rating
+@import "blocks/rating-main";
+
 // widget
 @import "blocks/widget";
+
+// new-project
+@import "blocks/new-project.scss";
+
+// service-unavalable
+@import "blocks/unavailable";
+
+// error-page
+@import "blocks/error-page";
+

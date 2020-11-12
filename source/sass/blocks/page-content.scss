@@ -10,6 +10,12 @@
   &--approved {
     padding-bottom: 120px;
   }
+
+  &--project {
+    @media (min-width: $desktop-width) {
+      padding-bottom: 65px;
+    }
+  }
 }
 
 .page-content__title {

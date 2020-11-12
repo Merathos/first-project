@@ -1,0 +1,211 @@
+.file-uploads {
+  h2 {
+    margin-bottom: 8px;
+
+    @media (max-width: $desktop-width - 1) {
+      margin-bottom: 16px;
+    }
+  }
+
+  p {
+    margin: 0 0 32px;
+    line-height: 180%;
+
+    @media (max-width: $tablet-width - 1) {
+      padding-right: 8px;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.file-uploads__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+
+  @media (min-width: $desktop-width) {
+    flex-flow: row-reverse;
+    justify-content: flex-end;
+  }
+
+  @media (max-width: $desktop-width - 1) {
+    flex-flow: column wrap;
+  }
+
+  & label {
+
+    display: flex;
+    align-items: center;
+
+    width: 205px;
+    height: 205px;
+
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+
+    text-align: center;
+    color: var(--color-text, $grey-default);
+
+    border: 2px dashed var(--color-stroke, $light-grey);
+    border-radius: 5px;
+
+    cursor: pointer;
+    transition: opacity $style-change-duration;
+
+    &:hover:not(.focus-visible) {
+      opacity: 0.8;
+    }
+
+    @media (min-width: $tablet-width) {
+      justify-content: center;
+      height: 88px;
+      width: 100%;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 265px;
+      height: 277px;
+
+      margin-right: 20px;
+    }
+
+    @media (max-width: $desktop-width - 1) {
+      margin-top: 16px;
+    }
+
+    @media (max-width: $tablet-width - 1) {
+      width: 100%;
+      height: calc(100vw / 2);
+      margin-left: 0;
+      margin-top: 8px;
+
+      justify-content: center;
+    }
+
+    & span {
+      position: relative;
+
+      padding-top: 34px;
+      max-width: 40%;
+
+      @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+        padding-top: 0;
+        padding-left: 40px;
+        max-width: unset;
+      }
+
+      &::before {
+        content: '+';
+        position: absolute;
+        top: 1px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        font-size: 2.5rem;
+        color: var(--color-text, $grey-default);
+        font-weight: 200;
+
+        @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+          top: -3px;
+          left: 0;
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+}
+
+.file-uploads__preview-container {
+  @media (min-width: $desktop-width) {
+    flex-grow: 1;
+  }
+
+  .file-wrapper {
+    position: relative;
+    padding: 16px 32px 16px 36px;
+    margin-bottom: 8px;
+
+    background-color: var(--color-bg-secondary, $color-bg);
+    border-radius: 5px;
+
+    transition: box-shadow $style-change-duration;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 48px;
+    }
+
+    &:hover:not(.focus-visible) {
+      box-shadow: 0px 2px 4px rgba(0, 30, 75, 0.15);
+    }
+
+    &::before {
+      content: '';
+
+      width: 13px;
+      height: 16px;
+
+      position: absolute;
+      top: 16px;
+      left: 14px;
+
+      background: url(../img/icon-docs.svg) no-repeat center;
+
+      @media (min-width: $tablet-width) {
+        left: 22px;
+      }
+    }
+
+    span {
+      display: block;
+      font-weight: 400;
+      font-size: rem(13px);
+      line-height: rem(17px);
+      color: var(--color-text, $dark-text);
+    }
+
+    button[type="button"] {
+      position: absolute;
+      top: 50%;
+      right: 12.5px;
+      width: 12px;
+      height: 12px;
+
+      background-color: transparent;
+      border: none;
+      outline: none;
+
+      background: url(../img/icon-close.svg) no-repeat center;
+
+      cursor: pointer;
+
+      transform: translateY(-50%);
+      transition: background-image $style-change-duration;
+
+      &:hover:not(.focus-visible) {
+        background-image: url(../img/icon-close-red.svg);
+      }
+
+      @media (min-width: $desktop-width) {
+        right: 16.5px;
+      }
+    }
+  }
+
+  .file-wrapper--loading {
+    pointer-events: none;
+
+    &::before {
+      width: 16px;
+      background: url(../img/icon-loading.svg) no-repeat center;
+    }
+
+    span {
+      color: var(--color-text, $grey-default);
+    }
+    button {
+      display: none;
+      pointer-events: none;
+    }
+  }
+}

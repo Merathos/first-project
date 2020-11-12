@@ -26,18 +26,18 @@
   }
 
   &--orange {
-    color: var(--color-text, $orange)
+    color: var(--color-text, $orange);
   }
 
   &--blue {
-    color: var(--color-interactive-default, $blue-default);
+    color: var(--color-text, $blue-default);
   }
 
   &--green {
-    color: var(--color-interactive-default, $green)
+    color: var(--color-text, $green);
   }
 
   &--red {
-    color: var(--color-icon, $red)
+    color: var(--color-text, $red);
   }
 }

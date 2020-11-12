@@ -97,6 +97,31 @@
       color: $light-grey;
     }
   }
+
+  &--show-all {
+    text-transform: inherit;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: $blue-default;
+    display: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+      border: none;
+      background-color: transparent;
+      color: $blue-accent;
+    }
+
+    @media (max-width: $tablet-width) {
+      display: block;
+    }
+  }
 }
 
 @media print {
