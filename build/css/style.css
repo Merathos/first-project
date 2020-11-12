@@ -10567,15 +10567,14 @@ span.poll__hide {
     .proposal-winners__map-container {
       padding: 0; } }
 
-.proposal-winners__map {
-  margin-bottom: 73px; }
-  .proposal-winners__map button {
-    display: none; }
-  .proposal-winners__map iframe {
-    width: 100%;
-    max-width: 1120px;
-    border: none;
-    border-radius: 5px; }
+.proposal-winners__map button {
+  display: none; }
+
+.proposal-winners__map iframe {
+  width: 100%;
+  max-width: 1120px;
+  border: none;
+  border-radius: 5px; }
 
 @media (max-width: 1199px) {
   .proposal-winners__item {
@@ -10593,10 +10592,8 @@ span.poll__hide {
   .proposal-winners__paginator {
     margin-left: 0;
     margin-bottom: 81px; }
-  .proposal-winners__map {
-    margin-bottom: 65px; }
-    .proposal-winners__map iframe {
-      height: 460px; } }
+  .proposal-winners__map iframe {
+    height: 460px; } }
 
 @media (max-width: 767px) {
   .proposal-winners__title {
@@ -10626,9 +10623,7 @@ span.poll__hide {
     background-color: transparent;
     border: none;
     margin: 0 auto;
-    margin-bottom: 42px;
     display: block;
-    padding: 15px 15px;
     font-size: 0.9375rem;
     line-height: 1.26562rem;
     font-weight: 500;

@@ -88,18 +88,18 @@
     max-width: $desktop-width;
     padding: 0 40px;
     margin: 0 auto;
-    
+
     @include tablet {
         padding: 0;
     }
-    
+
     @include mobile {
         padding: 0;
     }
 }
 
 .proposal-winners__map {
-    margin-bottom: 73px;
+    // margin-bottom: 73px;
 
     button {
         display: none;
@@ -137,7 +137,7 @@
     }
 
     .proposal-winners__map {
-        margin-bottom: 65px;
+        // margin-bottom: 65px;
 
         iframe {
             height: 460px;
@@ -185,9 +185,9 @@
     .proposal-winners__show-map-btn {
         @include btn-reset;
         margin: 0 auto;
-        margin-bottom: 42px;
+        // margin-bottom: 42px;
         display: block;
-        padding: 15px 15px;
+        // padding: 15px 15px;
         font-size: rem(15px);
         line-height: rem(20.25px);
         font-weight: 500;
@@ -225,7 +225,7 @@
             display: block;
             width: 26px;
             height: 26px;
-            
+
             &::before,
             &::after {
                 position: absolute;
@@ -267,7 +267,7 @@
         width: 26px;
         height: 26px;
         cursor: pointer;
-        
+
         &::before,
         &::after {
             position: absolute;
@@ -278,15 +278,15 @@
             width: 2px;
             background-color: #BFBFBF;
         }
-    
+
         &::before {
             transform: rotate(45deg);
         }
-    
+
         &::after {
             transform: rotate(-45deg);
         }
-    
+
         &:hover {
             &::before,
             &::after {
