@@ -73,6 +73,7 @@
 @import 'blocks/rating';
 @import 'blocks/rating-list';
 @import 'blocks/button-like';
+@import 'blocks/your-projects-list';
 @import 'blocks/text-input';
 @import 'blocks/address';
 @import 'blocks/budjet';
@@ -167,6 +168,9 @@
 @import "blocks/activity";
 @import "blocks/partners-list";
 @import "blocks/activity-tabs";
+
+// rating
+@import "blocks/rating-main";
 
 // widget
 @import "blocks/widget";

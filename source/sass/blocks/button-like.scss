@@ -30,14 +30,16 @@
     margin-right: 0;
   }
 
-  &.is-selected {
-    span {
-      color: $blue-default;
-    }
-
+  &--dislike {
     svg {
       transform: rotateX(180deg) translateY(-4px);;
       transform-origin: center;
+    }
+  }
+
+  &.is-selected {
+    span {
+      color: $blue-default;
     }
 
     svg path,
