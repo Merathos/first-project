@@ -13226,6 +13226,10 @@ span.poll-page__hide {
 .activity .poll__list {
   padding-top: 0; }
 
+.activity__proposal-list {
+  padding: 0;
+  margin: 0; }
+
 @media (max-width: 1199px) {
   .activity .discussion__list,
   .activity .poll__list {
