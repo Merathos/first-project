@@ -45,7 +45,8 @@
 .improvement-stage__status {
   padding-left: 19px;
   position: relative;
-  color: var(--color-text, $grey-default);
+
+  @include status-colors;
 
   &::before {
     content: "";
@@ -61,22 +62,6 @@
     border-radius: 50%;
 
     transform: translateY(-50%);
-  }
-
-  &--blue {
-    color: var(--color-text, $blue-default);
-  }
-
-  &--green {
-    color: var(--color-text, $green);
-  }
-
-  &--red {
-    color: var(--color-text, $red);
-  }
-
-  &--orange {
-    color: var(--color-text, $orange);
   }
 }
 

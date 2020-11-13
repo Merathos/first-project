@@ -147,23 +147,8 @@
   font-weight: 400;
   font-size: rem(15px);
   line-height: 135%;
-  color: var(--color-text, $grey-default);
 
-  &--blue {
-    color: var(--color-text, $blue-default);
-  }
-
-  &--green {
-    color: var(--color-text, $green);
-  }
-
-  &--red {
-    color: var(--color-text, $red);
-  }
-
-  &--orange {
-    color: var(--color-text, $orange);
-  }
+  @include status-colors;
 
   @media (min-width: $desktop-width) {
     grid-area: c;

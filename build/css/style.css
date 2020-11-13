@@ -4125,8 +4125,17 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   padding-left: 9px;
   font-weight: normal;
   font-size: 0.875rem;
-  line-height: 130%;
-  color: var(--color-text, #a6abb3); }
+  line-height: 130%; }
+  .project-status {
+    color: var(--color-text, #a6abb3); }
+  .project-status.status-color--blue {
+    color: var(--color-text, #2c8ecc); }
+  .project-status.status-color--green {
+    color: var(--color-text, #70bf56); }
+  .project-status.status-color--red {
+    color: var(--color-text, #e55050); }
+  .project-status.status-color--orange {
+    color: var(--color-text, #fca844); }
   .project-status::before {
     content: "";
     position: absolute;
@@ -4138,14 +4147,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     border-radius: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%); }
-  .project-status--orange {
-    color: var(--color-text, #fca844); }
-  .project-status--blue {
-    color: var(--color-text, #2c8ecc); }
-  .project-status--green {
-    color: var(--color-text, #70bf56); }
-  .project-status--red {
-    color: var(--color-text, #e55050); }
 
 .public-debate__description {
   margin: 0;
@@ -5077,8 +5078,17 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .improvement-stage__status {
   padding-left: 19px;
-  position: relative;
-  color: var(--color-text, #a6abb3); }
+  position: relative; }
+  .improvement-stage__status {
+    color: var(--color-text, #a6abb3); }
+  .improvement-stage__status.status-color--blue {
+    color: var(--color-text, #2c8ecc); }
+  .improvement-stage__status.status-color--green {
+    color: var(--color-text, #70bf56); }
+  .improvement-stage__status.status-color--red {
+    color: var(--color-text, #e55050); }
+  .improvement-stage__status.status-color--orange {
+    color: var(--color-text, #fca844); }
   .improvement-stage__status::before {
     content: "";
     position: absolute;
@@ -5090,14 +5100,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     border-radius: 50%;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%); }
-  .improvement-stage__status--blue {
-    color: var(--color-text, #2c8ecc); }
-  .improvement-stage__status--green {
-    color: var(--color-text, #70bf56); }
-  .improvement-stage__status--red {
-    color: var(--color-text, #e55050); }
-  .improvement-stage__status--orange {
-    color: var(--color-text, #fca844); }
 
 .improvement-stage__dates {
   color: var(--color-text, #354052); }
@@ -5241,15 +5243,16 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   grid-area: d;
   font-weight: 400;
   font-size: 0.9375rem;
-  line-height: 135%;
-  color: var(--color-text, #a6abb3); }
-  .proposal-list__status--blue {
+  line-height: 135%; }
+  .proposal-list__status {
+    color: var(--color-text, #a6abb3); }
+  .proposal-list__status.status-color--blue {
     color: var(--color-text, #2c8ecc); }
-  .proposal-list__status--green {
+  .proposal-list__status.status-color--green {
     color: var(--color-text, #70bf56); }
-  .proposal-list__status--red {
+  .proposal-list__status.status-color--red {
     color: var(--color-text, #e55050); }
-  .proposal-list__status--orange {
+  .proposal-list__status.status-color--orange {
     color: var(--color-text, #fca844); }
   @media (min-width: 1200px) {
     .proposal-list__status {
@@ -10493,16 +10496,17 @@ span.poll__hide {
   position: relative;
   padding-left: 9px;
   font-size: 0.875rem;
-  line-height: 1.1375rem;
-  color: var(--color-text, #70bf56); }
-  .improvement-status--orange {
-    color: var(--color-text, #fca844); }
-  .improvement-status--blue {
+  line-height: 1.1375rem; }
+  .improvement-status {
+    color: var(--color-text, #a6abb3); }
+  .improvement-status.status-color--blue {
     color: var(--color-text, #2c8ecc); }
-  .improvement-status--red {
+  .improvement-status.status-color--green {
+    color: var(--color-text, #70bf56); }
+  .improvement-status.status-color--red {
     color: var(--color-text, #e55050); }
-  .improvement-status--grey {
-    color: var(--color-text, #a6abb2); }
+  .improvement-status.status-color--orange {
+    color: var(--color-text, #fca844); }
   .improvement-status::before {
     content: "\25CF";
     position: absolute;
