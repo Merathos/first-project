@@ -89,7 +89,7 @@
       if (input.files.length) {
 
         if (input.files.length + images.length > MAX_IMAGES) {
-          alert('Нельзя добавлять более 5 файлов');
+          // alert('Нельзя добавлять более 5 файлов');
           return;
           // limitFilesNumber();
         }
