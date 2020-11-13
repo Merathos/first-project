@@ -54,7 +54,6 @@
 @import 'blocks/proposal';
 @import 'blocks/comments-tab';
 @import 'blocks/address-pin';
-@import 'blocks/area-improvement';
 @import 'blocks/improvement-stage';
 @import 'blocks/proposal-list';
 @import 'blocks/proposal-description';
@@ -131,6 +130,9 @@
 @import "blocks/improvement-fork-4.scss";
 @import "blocks/proposal-winners.scss";
 @import "blocks/map-popup.scss";
+
+// area-improvement
+@import 'blocks/area-improvement';
 
 // hearings 1-4
 @import "blocks/hearings.scss";

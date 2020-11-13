@@ -5009,100 +5009,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         flex-shrink: 0;
     display: block; }
 
-.area-improvement {
-  padding: 24px 0 56px; }
-  @media (min-width: 768px) {
-    .area-improvement {
-      padding: 40px 0 80px; } }
-
-.area-improvement__back-btn {
-  margin-bottom: 24px; }
-  @media (min-width: 768px) {
-    .area-improvement__back-btn {
-      margin-bottom: 40px; } }
-
-.area-improvement__info {
-  margin-bottom: 40px; }
-
-.area-improvement__title {
-  margin-bottom: 32px; }
-  @media (min-width: 768px) {
-    .area-improvement__title {
-      margin-bottom: 40px; } }
-
-.area-improvement__text {
-  margin: 0; }
-
-.area-improvement__proposal {
-  padding: 0;
-  margin: 0 0 40px; }
-  .area-improvement__proposal:last-child {
-    margin-bottom: 0; }
-
-.area-improvement__btn {
-  min-height: 59px;
-  text-align: center;
-  padding: 19px 5px; }
-  @media (max-width: 767px) {
-    .area-improvement__btn svg {
-      display: none; }
-    .area-improvement__btn span {
-      padding: 0; } }
-  @media (min-width: 768px) {
-    .area-improvement__btn {
-      width: 100%;
-      min-height: 69px;
-      padding-left: 24px;
-      padding-top: 24px;
-      text-align: start; } }
-
-.area-improvement .area-improvement__select {
-  margin-bottom: 8px;
-  background-color: var(--color-bg-secondary, #f5f6f7);
-  border: 1px solid var(--color-stroke, #e3e8ee);
-  border-radius: 5px; }
-  @media (max-width: 767px) {
-    .area-improvement .area-improvement__select {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center; } }
-  @media (max-width: 767px) {
-    .area-improvement .area-improvement__select .ss-main {
-      width: 100%; } }
-  .area-improvement .area-improvement__select .ss-single-selected {
-    padding: 15px 16px 15px 23px; }
-    @media (max-width: 767px) {
-      .area-improvement .area-improvement__select .ss-single-selected {
-        padding: 15px 16px;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center; } }
-  .area-improvement .area-improvement__select .placeholder {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
-    width: auto;
-    font-size: 0.9375rem;
-    line-height: 135%; }
-  .area-improvement .area-improvement__select .ss-content {
-    top: 41px;
-    left: 0;
-    width: 219px; }
-    @media (max-width: 767px) {
-      .area-improvement .area-improvement__select .ss-content {
-        width: 100%; } }
-  .area-improvement .area-improvement__select .ss-main .ss-single-selected .ss-arrow {
-    margin-left: 12px; }
-  .area-improvement .area-improvement__select .ss-main .ss-single-selected .ss-arrow span {
-    width: 8px;
-    height: 8px; }
-
-.area-improvement__paginator {
-  margin-top: 0; }
-
 .improvement-stage {
   padding: 0 0 40px; }
   @media (min-width: 768px) {
@@ -5185,6 +5091,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin: 0; }
 
 .proposal-list {
+  margin: 0;
+  padding: 0;
   list-style: none; }
 
 .proposal-list__item {
@@ -10501,8 +10409,7 @@ span.poll__hide {
   background-size: 100% 1px; }
 
 .proposal-winners__proposal {
-  padding: 0;
-  margin: 0 0 31px; }
+  margin-bottom: 31px; }
 
 .proposal-winners__paginator {
   margin: 0 0 56px 10px; }
@@ -10761,6 +10668,99 @@ span.poll__hide {
     color: #2c8ecc; }
     .map-popup__details-btn:hover svg {
       fill: #2c8ecc; }
+
+.area-improvement {
+  padding: 24px 0 56px; }
+  @media (min-width: 768px) {
+    .area-improvement {
+      padding: 40px 0 80px; } }
+
+.area-improvement__back-btn {
+  margin-bottom: 24px; }
+  @media (min-width: 768px) {
+    .area-improvement__back-btn {
+      margin-bottom: 40px; } }
+
+.area-improvement__info {
+  margin-bottom: 40px; }
+
+.area-improvement__title {
+  margin-bottom: 32px; }
+  @media (min-width: 768px) {
+    .area-improvement__title {
+      margin-bottom: 40px; } }
+
+.area-improvement__text {
+  margin: 0; }
+
+.area-improvement__proposal {
+  margin-bottom: 40px; }
+  .area-improvement__proposal:last-child {
+    margin-bottom: 0; }
+
+.area-improvement__btn {
+  min-height: 59px;
+  text-align: center;
+  padding: 19px 5px; }
+  @media (max-width: 767px) {
+    .area-improvement__btn svg {
+      display: none; }
+    .area-improvement__btn span {
+      padding: 0; } }
+  @media (min-width: 768px) {
+    .area-improvement__btn {
+      width: 100%;
+      min-height: 69px;
+      padding-left: 24px;
+      padding-top: 24px;
+      text-align: start; } }
+
+.area-improvement .area-improvement__select {
+  margin-bottom: 8px;
+  background-color: var(--color-bg-secondary, #f5f6f7);
+  border: 1px solid var(--color-stroke, #e3e8ee);
+  border-radius: 5px; }
+  @media (max-width: 767px) {
+    .area-improvement .area-improvement__select {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center; } }
+  @media (max-width: 767px) {
+    .area-improvement .area-improvement__select .ss-main {
+      width: 100%; } }
+  .area-improvement .area-improvement__select .ss-single-selected {
+    padding: 15px 16px 15px 23px; }
+    @media (max-width: 767px) {
+      .area-improvement .area-improvement__select .ss-single-selected {
+        padding: 15px 16px;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center; } }
+  .area-improvement .area-improvement__select .placeholder {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+    width: auto;
+    font-size: 0.9375rem;
+    line-height: 135%; }
+  .area-improvement .area-improvement__select .ss-content {
+    top: 41px;
+    left: 0;
+    width: 219px; }
+    @media (max-width: 767px) {
+      .area-improvement .area-improvement__select .ss-content {
+        width: 100%; } }
+  .area-improvement .area-improvement__select .ss-main .ss-single-selected .ss-arrow {
+    margin-left: 12px; }
+  .area-improvement .area-improvement__select .ss-main .ss-single-selected .ss-arrow span {
+    width: 8px;
+    height: 8px; }
+
+.area-improvement__paginator {
+  margin-top: 0; }
 
 .hearings-page {
   padding-top: 40px;
