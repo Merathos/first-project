@@ -11,23 +11,40 @@
       border-bottom: none;
     }
   }
+
+  @media (max-width:$mobile-max-width ) {
+    margin-bottom: 22px;
+  }
+}
+
+.your-projects-list__item {
+  padding: 10px 0;
+
+  @media(max-width: $tablet-width) {
+    padding: 0;
+
+    &:first-child {
+      padding-top: 25px;
+    }
+  }
+
+  @media (max-width:$mobile-max-width ) {
+    &:first-child {
+      padding-top: 27px;
+    }
+  }
 }
 
 .your-projects-list__title {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
-
-  @media(max-width: $tablet-width) {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
+  margin: 0;
 }
 
 .your-projects-list__name {
   margin: 0;
   padding: 0;
-  margin-left: 8px;
+  padding-left: 12px;
 
   font-family: inherit;
   font-size: 24px;
@@ -37,7 +54,6 @@
   color: $dark-text;
 
   @media(max-width: $mobile-max-width) {
-    margin-left: 11px;
     font-size: 18px;
     line-height: 24px;
   }
@@ -49,6 +65,11 @@
   justify-content: flex-start;
   border-bottom: 1px solid var(--color-stroke, $light-grey);
 
+
+  &:last-child {
+    border-bottom: none;
+  }
+
   @media(max-width: $tablet-width) {
     flex-direction: column;
     align-items: flex-start;
@@ -57,18 +78,14 @@
 }
 
 .your-projects-list__inner-link {
-  padding: 30px 0;
-
-  &:last-child {
-    border-bottom: none;
-  }
+  padding: 31px 0;
 
   @media(max-width: $tablet-width) {
     padding-bottom: 14px;
   }
 
   @media(max-width: $mobile-max-width) {
-    padding: 27px 0;
+    padding: 29px 0;
     padding-bottom: 16px;
     line-height: 22px;
   }
@@ -77,6 +94,7 @@
 .your-projects-list__inner-status {
   margin-left: auto;
   padding-left: 10px;
+  font-size: 15px;
 
   &::before {
     display: none;
