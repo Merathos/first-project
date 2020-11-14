@@ -4,7 +4,7 @@
 }
 
 .your-projects-list__inner-list {
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     margin-bottom: 26px;
 
     .your-projects-list__inner-item:last-child {
@@ -12,7 +12,7 @@
     }
   }
 
-  @media (max-width:$mobile-max-width ) {
+  @media (max-width: $mobile-max-width) {
     margin-bottom: 22px;
   }
 }
@@ -20,7 +20,7 @@
 .your-projects-list__item {
   padding: 10px 0;
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     padding: 0;
 
     &:first-child {
@@ -28,7 +28,7 @@
     }
   }
 
-  @media (max-width:$mobile-max-width ) {
+  @media (max-width: $mobile-max-width) {
     &:first-child {
       padding-top: 27px;
     }
@@ -53,7 +53,7 @@
   letter-spacing: 0;
   color: $dark-text;
 
-  @media(max-width: $mobile-max-width) {
+  @media (max-width: $mobile-max-width) {
     font-size: 18px;
     line-height: 24px;
   }
@@ -70,7 +70,7 @@
     border-bottom: none;
   }
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     flex-direction: column;
     align-items: flex-start;
     padding-bottom: 25px;
@@ -80,11 +80,11 @@
 .your-projects-list__inner-link {
   padding: 31px 0;
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     padding-bottom: 14px;
   }
 
-  @media(max-width: $mobile-max-width) {
+  @media (max-width: $mobile-max-width) {
     padding: 29px 0;
     padding-bottom: 16px;
     line-height: 22px;
@@ -100,11 +100,11 @@
     display: none;
   }
 
-  @media(min-width: $tablet-width) {
+  @media (min-width: $tablet-width) {
     flex-shrink: 0;
   }
 
-  @media(max-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     padding-left: 0;
     margin-right: auto;
     margin-left: 0;

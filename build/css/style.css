@@ -13709,6 +13709,9 @@ span.poll-page__hide {
         .rating-main__state-info-wrap .rating-main__name--status {
           margin-right: 18px;
           font-size: 15px; } }
+  @media (max-width: 768px) {
+    .rating-main__state-info-wrap .rating-main__name--status {
+      margin-bottom: 0; } }
   @media (max-width: 400px) {
     .rating-main__state-info-wrap {
       margin-bottom: 24px; } }
@@ -13785,12 +13788,16 @@ span.poll-page__hide {
   @media (max-width: 768px) {
     .rating-main__categories {
       padding-top: 25px;
-      padding-bottom: 16px; } }
+      padding-bottom: 16px; }
+      .rating-main__categories--vote {
+        padding-bottom: 33px; } }
   @media (max-width: 400px) {
     .rating-main__categories {
       padding-top: 20px; }
       .rating-main__categories .rating-main__name {
-        padding-top: 32px; } }
+        padding-top: 32px; }
+      .rating-main__categories--vote {
+        padding-bottom: 20px; } }
 
 .rating-main__headline {
   margin-bottom: 8px;
@@ -13818,15 +13825,18 @@ span.poll-page__hide {
 .rating-main__categories-descr {
   margin-bottom: 15px; }
   .rating-main__categories-descr--vote {
-    margin-bottom: 30px; }
-  @media (max-width: 400px) {
-    .rating-main__categories-descr {
-      margin-top: -7px; } }
+    margin-bottom: 34px; }
   @media (max-width: 768px) {
     .rating-main__categories-descr {
       margin-bottom: 16px; }
       .rating-main__categories-descr--vote {
-        margin-bottom: 49px; } }
+        max-width: 90%;
+        margin-bottom: 33px; } }
+  @media (max-width: 400px) {
+    .rating-main__categories-descr {
+      margin-top: -7px; }
+      .rating-main__categories-descr--vote {
+        margin-bottom: 14px; } }
 
 .rating-main__categories-info {
   padding: 15px 20px;
@@ -13859,6 +13869,85 @@ span.poll-page__hide {
   padding: 0;
   list-style: none;
   text-align: left; }
+  .rating-main__list--vote .rating-main__item {
+    max-width: calc(100% / 3 - 6px); }
+    .rating-main__list--vote .rating-main__item:nth-child(2n + 2) {
+      margin-right: 8px; }
+    .rating-main__list--vote .rating-main__item:nth-child(3n + 3) {
+      margin-right: 0; }
+    .rating-main__list--vote .rating-main__item:hover .rating-main__count-wrap {
+      opacity: 1; }
+  .rating-main__list--vote .rating-main__link {
+    width: 100%;
+    padding: 14px 12px 14px 18px; }
+  .rating-main__list--vote .rating-main__title {
+    padding-left: 12px;
+    font-size: 15px; }
+  .rating-main__list--vote .rating-main__count-wrap {
+    margin-left: auto; }
+  @media (max-width: 768px) {
+    .rating-main__list--vote .rating-main__item {
+      max-width: calc(100% / 2 - 12px);
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      .rating-main__list--vote .rating-main__item:nth-child(2n + 2) {
+        margin-right: 0; }
+      .rating-main__list--vote .rating-main__item:nth-child(3n + 3) {
+        margin-right: 8px; }
+    .rating-main__list--vote .rating-main__link {
+      width: 100%;
+      height: 100%;
+      padding: 16px 12px 16px 60px;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .rating-main__list--vote .rating-main__icon {
+      left: 17px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+              transform: translateY(-50%); }
+    .rating-main__list--vote .rating-main__title {
+      max-width: 75%;
+      line-height: 20px;
+      padding: 0; }
+    .rating-main__list--vote .rating-main__count-wrap {
+      padding-right: 0;
+      margin-left: 0; }
+    .rating-main__list--vote .rating-main__count-wrap span {
+      font-size: 16px;
+      line-height: 22px; } }
+  @media (max-width: 500px) {
+    .rating-main__list--vote .rating-main__item {
+      max-width: 100%;
+      margin-right: 0; }
+    .rating-main__list--vote .rating-main__link {
+      padding-top: 32px;
+      padding-bottom: 22px;
+      padding-left: 16px;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; }
+    .rating-main__list--vote .rating-main__icon {
+      -webkit-transform: translateY(-19%);
+              transform: translateY(-19%);
+      width: 100%; }
+    .rating-main__list--vote .rating-main__icon svg {
+      margin-right: auto; }
+    .rating-main__list--vote .rating-main__title {
+      font-size: 18px;
+      line-height: 24px; }
+    .rating-main__list--vote .rating-main__count-wrap {
+      position: static; } }
 
 .rating-main__item {
   -ms-flex-negative: 0;
@@ -13888,6 +13977,8 @@ span.poll-page__hide {
   .rating-main__item--is-done .rating-main__hover-text, .rating-main__item--is-done:hover .rating-main__hover-text {
     opacity: 1;
     color: #a6abb2; }
+  .rating-main__item--no-vote .rating-main__count {
+    background-color: #ffffff; }
   @media (max-width: 1119px) {
     .rating-main__item {
       width: 100%; } }
@@ -14102,6 +14193,45 @@ span.poll-page__hide {
       margin-bottom: 7px; }
     .rating-main__your-projects .rating-main__categories-info {
       margin-bottom: 0; } }
+
+.rating-main__project-list .rating-list__item:last-child {
+  border-bottom: none; }
+
+@media (max-width: 768px) {
+  .rating-main__project-list .rating-list__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+  .rating-main__project-list .rating-list__content {
+    max-width: 61%;
+    margin-right: 10px; }
+  .rating-main__project-list .rating-list__my-project {
+    margin-bottom: 5px; }
+  .rating-main__project-list .rating-list__title {
+    margin: 0; }
+  .rating-main__project-list .rating-list__total {
+    width: auto;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: 16px; } }
+
+@media (max-width: 500px) {
+  .rating-main__project-list .rating-list {
+    margin-bottom: -18px; }
+  .rating-main__project-list .rating-list__item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-bottom: 40px; }
+  .rating-main__project-list .rating-list__content {
+    max-width: 100%;
+    margin-bottom: 24px; }
+  .rating-main__project-list .rating-list__my-project {
+    margin-bottom: 8px; }
+  .rating-main__project-list .rating-list__total {
+    width: 100%; } }
 
 .container_overflow {
   overflow: auto; }
