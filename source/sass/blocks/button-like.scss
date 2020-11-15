@@ -32,8 +32,38 @@
 
   &--dislike {
     svg {
-      transform: rotateX(180deg) translateY(-4px);;
+      transform: rotateX(180deg) translateY(-4px);
       transform-origin: center;
+    }
+  }
+
+  &--bordered {
+    max-width: calc(100% / 2 - 5px);
+    width: 100%;
+    margin-right: 0;
+    padding: 12px 43px 16px 43px;
+    border: 1px solid $light-grey;
+    border-radius: 5px;
+    transition: border-color $style-change-duration;
+
+    span {
+      margin-right: 6px;
+      font-size: 15px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    svg {
+      flex-shrink: 0;
+    }
+
+    &.is-selected {
+      border-color: $blue-accent;
+    }
+
+    &:hover,
+    &:focus {
+      border-color: $blue-accent;
     }
   }
 
@@ -51,6 +81,7 @@
   &:hover,
   &:focus {
     outline: none;
+
     span {
       color: $blue-accent;
     }
