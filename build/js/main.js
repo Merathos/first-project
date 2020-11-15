@@ -183,56 +183,71 @@
 })();
 
 'use strict';
-
-
 (function () {
-    if (document.querySelector('.confirmation-popup')) {
-        var popUp = document.querySelector('.confirmation-popup');
-        var popUpBody = popUp.querySelector('.confirmation-popup__body');
-        var popUpOpenbtn = document.querySelector('#improvement-submit-btn');
-        var popUpClosebtn = popUp.querySelector('.confirmation-popup__close-btn');
-        var popUpBackbtn = popUp.querySelector('.confirmation-popup__back-btn');
-        var form = document.querySelector('#js-improvement-form');
-        var submitFormBtn = form.querySelector('.confirmation-popup__submit-btn');
-        var KeyCodes = {
-            ESC: 27,
-        };
+  if (document.querySelector('.confirmation-popup')) {
+    var popUp = document.querySelector('.confirmation-popup');
+    var popUpBody = popUp.querySelector('.confirmation-popup__body');
+    var popUpOpenbtn = document.querySelector('#improvement-submit-btn');
+    var popUpClosebtn = popUp.querySelector('.confirmation-popup__close-btn');
+    var popUpBackbtn = popUp.querySelector('.confirmation-popup__back-btn');
+    var form = document.querySelector('#js-improvement-form');
+    var submitFormBtn = form.querySelector('.confirmation-popup__submit-btn');
+    var KeyCodes = {
+      ESC: 27,
+    };
 
-        var isEscEvent = function (evt, action) {
-            if (evt.keyCode === KeyCodes.ESC) {
-                action();
-            }
-        };
+    var isEscEvent = function (evt, action) {
+      if (evt.keyCode === KeyCodes.ESC) {
+        action();
+      }
+    };
 
-        var onPopupEscPress = function (evt) {
-            isEscEvent(evt, closePopup);
-        };
+    var onPopupEscPress = function (evt) {
+      isEscEvent(evt, closePopup);
+    };
 
-        var openPopup = function () {
-            popUp.classList.add('confirmation-popup--show');
-            document.querySelector("body").style.overflow = 'hidden';
-            document.addEventListener('keydown', onPopupEscPress);
-        };
+    var openPopup = function () {
+      popUp.classList.add('confirmation-popup--show');
+      document.querySelector('body').style.overflow = 'hidden';
+      document.addEventListener('keydown', onPopupEscPress);
+    };
 
-        var closePopup = function () {
-            popUp.classList.remove('confirmation-popup--show');
-            document.querySelector("body").style.overflow = 'visible';
-            document.removeEventListener('keydown', onPopupEscPress);
-        };
+    var closePopup = function () {
+      popUp.classList.remove('confirmation-popup--show');
+      document.querySelector('body').style.overflow = 'visible';
+      document.removeEventListener('keydown', onPopupEscPress);
+    };
 
-        popUpOpenbtn.addEventListener('click', function () {
-            openPopup();
+    var onSubmitUpdateUserImages = function () {
+      var formData = new FormData(form);
+      var userImages = window.formDataImages;
+      if (userImages.length) {
+        formData.delete('user-images');
+        userImages.forEach(function (image) {
+          formData.append('user-images', image, image.name);
         });
+        console.log(formData.getAll('user-images'));
+      }
+    };
 
-        popUpClosebtn.addEventListener('click', closePopup);
-        popUpBackbtn.addEventListener('click', closePopup);
-        popUp.addEventListener('click', closePopup);
-        popUpBody.addEventListener('click', function (e) {
-            e.stopPropagation();
-            e.stopImmediatePropagation();
-            return false;
-        });
-    }
+    popUpOpenbtn.addEventListener('click', function () {
+      openPopup();
+    });
+
+    form.addEventListener('submit', function (evt) {
+      evt.preventDefault();
+      onSubmitUpdateUserImages();
+    });
+
+    popUpClosebtn.addEventListener('click', closePopup);
+    popUpBackbtn.addEventListener('click', closePopup);
+    popUp.addEventListener('click', closePopup);
+    popUpBody.addEventListener('click', function (e) {
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+      return false;
+    });
+  }
 })();
 
 'use strict';
@@ -1368,6 +1383,7 @@
     var label = container.querySelector('label[for="user-images"]');
     var existingPreviews = container.querySelectorAll('.image-uploads__image-wrapper');
     var images = [];
+    var formDataImages = [];
     var MAX_IMAGES = 5;
 
     // обрабатывает существующие изображения, добавляет их в images и рендерит кнопку удаления //
@@ -1398,23 +1414,12 @@
       }
     };
 
-    // ограничивает возможность выбора более 5ти файлов за один раз //
-    // var limitFilesNumber = function () {
-    //   var tempList = new DataTransfer();
-    //   for (var i = 0; i < MAX_IMAGES; i++) {
-    //     tempList.items.add(input.files[i]);
-    //   }
-    //   input.files = tempList.files;
-    // };
-
-    // перезаписывает список файлов //
-    // var checkFilesList = function () {
-    //   var list = new DataTransfer();
-    //   images.forEach(function (image) {
-    //     list.items.add(image);
-    //   });
-    //   input.files = list.files;
-    // };
+    var removeImagesFromArr = function (array, file) {
+      var index = array.indexOf(file);
+      if (index > -1) {
+        array.splice(index, 1);
+      }
+    };
 
     // рендерит кнопку закрытия и добавляет её в контейнер //
     var renderCloseBtn = function (btnContainer, file) {
@@ -1424,12 +1429,9 @@
       btnContainer.appendChild(button);
       button.addEventListener('click', function () {
         btnContainer.remove();
-        var index = images.indexOf(file);
-        if (index > -1) {
-          images.splice(index, 1);
-          checkInputVisible();
-          // checkFilesList();
-        }
+        removeImagesFromArr(images, file);
+        removeImagesFromArr(formDataImages, file);
+        checkInputVisible();
       });
     };
 
@@ -1446,20 +1448,17 @@
 
     // работа приложения //
     addExistingImages();
+    window.formDataImages = formDataImages;
     input.addEventListener('change', function () {
       if (input.files.length) {
 
         if (input.files.length + images.length > MAX_IMAGES) {
-          // alert('Нельзя добавлять более 5 файлов');
           return;
-          // limitFilesNumber();
         }
 
         input.files.forEach(function (file) {
-          // if (images.length > MAX_IMAGES - 1) {
-          //   return;
-          // }
           images.push(file);
+          formDataImages.push(file);
           checkInputVisible();
           var reader = new FileReader();
           reader.addEventListener('load', function () {
@@ -1468,7 +1467,6 @@
           reader.readAsDataURL(file);
         });
       }
-      // checkFilesList();
     });
   }
 })();
