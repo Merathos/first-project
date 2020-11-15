@@ -226,7 +226,6 @@
         userImages.forEach(function (image) {
           formData.append('user-images', image, image.name);
         });
-        console.log(formData.getAll('user-images'));
       }
     };
 
