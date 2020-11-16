@@ -5149,6 +5149,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       margin-bottom: 4px; } }
   @media (max-width: 767px) {
     .proposal-list__wrapper {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-flow: column wrap;
+              flex-flow: column wrap;
       margin-bottom: 24px; } }
 
 .proposal-list__account {
