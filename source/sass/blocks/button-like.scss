@@ -19,6 +19,10 @@
   svg {
     width: 20px;
     height: 20px;
+
+    path {
+      transition: fill $style-change-duration;
+    }
   }
 
   svg path.stroked {
@@ -72,9 +76,23 @@
       color: $blue-default;
     }
 
-    svg path,
-    svg path.stroked {
+    svg .stroked {
+      fill: none;
+    }
+
+    svg .filled {
       fill: $blue-default;
+    }
+
+    &:hover,
+    &:focus {
+      svg .stroked {
+        fill: none;
+      }
+
+      svg .filled {
+        fill: $blue-accent;
+      }
     }
   }
 
@@ -86,7 +104,7 @@
       color: $blue-accent;
     }
 
-    svg path.stroked {
+    svg .stroked {
       fill: $blue-accent;
     }
   }
