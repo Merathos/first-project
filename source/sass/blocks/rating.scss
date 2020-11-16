@@ -1,17 +1,20 @@
 .rating {
-  padding: 79px 24px 24px;
-
-  @media (max-width: $mobile-width) {
-    padding: 64px 16px 7px;
-
-    .container {
-      padding: 0;
-    }
-  }
+  padding-top: 79px;
+  padding-bottom: 24px;
 
   @media (max-width: $tablet-width) {
     padding-bottom: 64px;
     padding-top: 64px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-bottom: 0;
+
+    .container {
+      padding: 0;
+    }
   }
 }
 
@@ -96,7 +99,7 @@
     font-weight: 500;
   }
 
-  @media (min-width: $mobile-width) {
+  @media (max-width: $mobile-max-width) {
     font-size: 13px;
     line-height: 17px;
   }
