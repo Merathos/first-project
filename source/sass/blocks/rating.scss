@@ -1,15 +1,17 @@
 .rating {
   padding-top: 79px;
   padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
 
   @media (max-width: $tablet-width) {
     padding-bottom: 64px;
     padding-top: 64px;
+    padding-right: 16px;
+    padding-left: 16px;
   }
 
   @media (max-width: $mobile-width) {
-    padding-right: 16px;
-    padding-left: 16px;
     padding-bottom: 0;
 
     .container {
@@ -106,7 +108,7 @@
 }
 
 .rating__description-link {
-  @media (min-width: $mobile-width) {
+  @media (max-width: $tablet-width) {
     display: table;
 
     &::before {
