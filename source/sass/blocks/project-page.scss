@@ -53,7 +53,7 @@
 
 .project-page__contacts {
   padding: 23px 25px;
-  border-top: 1px solid $light-grey;
+  border-top: 1px solid var(--color-stroke, $light-grey);
 }
 
 .project-page__contacts-title {
@@ -108,7 +108,7 @@
 
 .project-page__result {
   padding: 24px;
-  border-top: 1px solid $light-grey;
+  border-top: 1px solid var(--color-stroke, $light-grey);
 }
 
 .project-page__result-button-wrap {
@@ -234,6 +234,15 @@
     width: 100%;
     margin-right: 0;
     margin-left: 0;
+  }
+
+  .project-page__contacts-name {
+    margin-top: 4px;
+  }
+
+  .project-page__contacts-info {
+    margin-top: 0;
+    margin-bottom: 2px;
   }
 }
 
@@ -399,7 +408,7 @@
   .project-page__gallery {
     margin-top: 25px;
     padding-bottom: 48px;
-    border-bottom: 1px solid $light-grey;
+    border-bottom: 1px solid var(--color-stroke, $light-grey);
   }
 
   .project-page__text {
@@ -420,7 +429,7 @@
     }
 
     .content h1:not([class]) {
-      margin-bottom: 44px;
+      margin-bottom: 40px;
     }
 
     .project-meta__category-link {
@@ -496,11 +505,8 @@
 
     .project-page__files {
       width: 100%;
-      column-count: 2;
       padding: 0 24px;
       margin: 0;
-      column-gap: 12px;
-      break-inside: avoid-column;
       display: flex;
       flex-wrap: wrap;
     }
@@ -526,7 +532,7 @@
         left: 24px;
         height: 1px;
         width: 94vw;
-        background-color: $light-grey;
+        background-color: var(--color-stroke, $light-grey);
       }
     }
 
@@ -650,6 +656,10 @@
 
     .project-page__gallery {
       margin-top: 18px;
+
+      &::before {
+        width: 84vw;
+      }
     }
 
     .project-page__back-btn {
