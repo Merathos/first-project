@@ -1,0 +1,28 @@
+.numbered-list {
+  max-width: 66%;
+  margin-bottom: 75px;
+
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 27px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--color-text, $dark-text);
+
+  ol {
+    margin: 0;
+    padding: 0;
+    padding-left: 25px;
+  }
+
+  li {
+    position: relative;
+    margin-bottom: 18px;
+    padding-left: 5px;
+
+    &::marker {
+      color: var(--color-interactive-accent, $blue-accent);
+      font-weight: 600;
+    }
+  }
+}

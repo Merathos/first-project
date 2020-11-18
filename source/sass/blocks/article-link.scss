@@ -9,6 +9,11 @@
   outline: none;
   transition: color $style-change-duration;
 
+  &--content {
+    max-width: 65%;
+    margin-bottom: 48px;
+  }
+
   &::before {
     content: "";
     display: block;
