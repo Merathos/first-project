@@ -368,7 +368,7 @@
     }
   }
 
-  @media (max-width: $tablet-width + 1) {
+  @media (max-width: $tablet-width - 1) {
     &--vote {
       .rating-main__item {
         max-width: calc(100% / 2 - 12px);
@@ -582,7 +582,7 @@
     left: 21px;
   }
 
-  @media (max-width: $mobile-max-width) {
+  @media (max-width: $mobile-max-width + 100px) {
     position: static;
   }
 }
