@@ -132,6 +132,10 @@
     padding-bottom: 24px;
     font-size: 15px;
     text-align: left;
+
+    @include tablet {
+      max-width: 100%;
+    }
   }
 }
 

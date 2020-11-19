@@ -1,6 +1,6 @@
 .numbered-list {
   max-width: 66%;
-  margin-bottom: 75px;
+  margin-bottom: 48px;
 
   font-family: inherit;
   font-size: 15px;
@@ -24,5 +24,9 @@
       color: var(--color-interactive-accent, $blue-accent);
       font-weight: 600;
     }
+  }
+
+  @include tablet {
+    max-width: 100%;
   }
 }

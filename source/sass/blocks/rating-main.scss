@@ -425,7 +425,6 @@
       .rating-main__link {
         padding-top: 32px;
         padding-bottom: 22px;
-        padding-left: 16px;
         align-items: flex-start;
         flex-wrap: wrap;
         flex-direction: row;
@@ -582,7 +581,7 @@
     left: 21px;
   }
 
-  @media (max-width: $mobile-max-width + 100px) {
+  @media (max-width: 400px) {
     position: static;
   }
 }
@@ -794,6 +793,27 @@
 }
 
 .rating-main__project-list {
+  .rating-list__content {
+    max-width: 100%;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .rating-list__title {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+  }
+
+  .rating-list__total {
+    margin-left: auto;
+    transform: translate(1px, -3px);
+  }
+
+  .button-like:not(:last-child) {
+    margin-right: 23px;
+  }
+
   .rating-list__item:last-child {
     border-bottom: none;
   }
@@ -804,23 +824,28 @@
       align-items: center;
     }
 
-    .rating-list__content {
-      max-width: 61%;
-      margin-right: 10px;
-    }
-
     .rating-list__my-project {
       margin-bottom: 5px;
     }
 
     .rating-list__title {
       margin: 0;
+      align-items: center;
+
+      span {
+        max-width: 66%;
+      }
     }
 
     .rating-list__total {
       width: auto;
       margin-bottom: 0;
       margin-left: auto;
+      transform: translate(-15px,-10px);
+    }
+
+    .button-like:not(:last-child) {
+      margin-right: 19px;
     }
   }
 
@@ -831,20 +856,33 @@
 
     .rating-list__item {
       flex-wrap: wrap;
-      padding-bottom: 40px;
+      padding-bottom: 28px;
     }
 
     .rating-list__content {
       max-width: 100%;
-      margin-bottom: 24px;
+      margin-bottom: 0;
     }
 
     .rating-list__my-project {
       margin-bottom: 8px;
     }
 
-    .rating-list__total {
+    .rating-list__title {
+      flex-direction: column;
+      align-items: flex-start;
+
+      span {
+        max-width: 100%;
+      }
+    }
+
+    .rating-list__total,
+    .rating-list__item:first-child .rating-list__total {
       width: 100%;
+      transform: none;
+      margin-top: 23px;
+      margin-bottom: 0;
     }
   }
 }

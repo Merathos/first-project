@@ -44,4 +44,8 @@
       background-color: var(--color-text, $grey);
     }
   }
+
+  @include mobile {
+    max-width: 100%;
+  }
 }
