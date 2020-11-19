@@ -4,7 +4,8 @@
 (function () {
     var map = document.querySelector('.landscaping-form__section.map-section'),
         mapHidden = document.querySelector('#map-hidden'),
-        mapSearch = document.querySelector('#map-search');
+        mapSearch = document.querySelector('#map-search'),
+        userCoords = document.querySelector('#user-coords');
 
     if (!map) {
         return;
@@ -12,17 +13,66 @@
 
     ymaps.ready(init);
 
-
     function init() {
         var myMap,
             suggestView = new ymaps.SuggestView('map-search'),
             myPlacemark,
             firstGeoObject,
             oldAddress;
+        if(userCoords.value){
+            ymaps.geocode(userCoords.value, {}).then(function (res){
+                var firstGeoObject = res.geoObjects.get(0),
+                    coordSearch = firstGeoObject.geometry.getCoordinates();
 
-        console.log(mapSearch.value)
-        if(mapHidden.name !== '') {
-            var coordHidden = mapHidden.name.split(',').map(function(item) {
+                myMap = new ymaps.Map('map', {
+                    center: coordSearch,
+                    zoom: 9,
+                    controls: ['zoomControl']
+                }, {
+                    searchControlProvider: 'yandex#search'
+                });
+                myPlacemark = new ymaps.GeoObject({
+                    geometry: {
+                        type: "Point",
+                        coordinates: coordSearch
+                    },
+                }, {
+                    preset: 'islands#blackStretchyIcon',
+                    draggable: true
+                });
+
+                mapHidden.value = coordSearch;
+                //добавляем метку на карту
+                myMap.geoObjects
+                    .add(myPlacemark);
+
+                //при перетаскивании метки меняем координаты
+                myMap.geoObjects.events.add([
+                    'dragend'
+                ], function (e) {
+                    var placemarkPosition = myMap.options.get('projection').fromGlobalPixels(
+                        myMap.converter.pageToGlobal(e.get('position')),
+                        myMap.getZoom()
+                    );
+                    mapHidden.value = placemarkPosition;
+                    getAddress(placemarkPosition);
+                    ymaps.geocode(placemarkPosition).then(function (res) {
+                        document.querySelector('#map-search').value = res.geoObjects.get(0).getAddressLine();
+                        $(mapSearch).trigger('keyup');
+                    })
+                });
+                // Слушаем клик на карте.
+                myMap.events.add('click', function (e) {
+                    var coords = e.get('coords');
+                    ymaps.geocode(coords).then(function (res) {
+                        document.querySelector('#map-search').value = res.geoObjects.get(0).getAddressLine();
+                        $(mapSearch).trigger('keyup');
+                    })
+                    addMark(coords)
+                });
+            })
+        } else if(mapHidden.value) {
+            var coordHidden = mapHidden.value.split(',').map(function(item) {
                 return Number(item)
             })
             myMap = new ymaps.Map('map', {
@@ -41,8 +91,40 @@
                 preset: 'islands#blackStretchyIcon',
                 draggable: true
             });
-        } else if (mapSearch.value !== ''){
-            console.log(mapSearch.value)
+
+            ymaps.geocode(coordHidden).then(function (res) {
+                document.querySelector('#map-search').value = res.geoObjects.get(0).getAddressLine();
+                $(mapSearch).trigger('keyup');
+            })
+            //добавляем метку на карту
+            myMap.geoObjects
+                .add(myPlacemark);
+
+            //при перетаскивании метки меняем координаты
+            myMap.geoObjects.events.add([
+                'dragend'
+            ], function (e) {
+                var placemarkPosition = myMap.options.get('projection').fromGlobalPixels(
+                    myMap.converter.pageToGlobal(e.get('position')),
+                    myMap.getZoom()
+                );
+                mapHidden.value = placemarkPosition;
+                getAddress(placemarkPosition);
+                ymaps.geocode(placemarkPosition).then(function (res) {
+                    document.querySelector('#map-search').value = res.geoObjects.get(0).getAddressLine();
+                    $(mapSearch).trigger('keyup');
+                })
+            });
+            // Слушаем клик на карте.
+            myMap.events.add('click', function (e) {
+                var coords = e.get('coords');
+                ymaps.geocode(coords).then(function (res) {
+                    document.querySelector('#map-search').value = res.geoObjects.get(0).getAddressLine();
+                    $(mapSearch).trigger('keyup');
+                })
+                addMark(coords)
+            });
+        } else if (mapSearch.value){
             ymaps.geocode(mapSearch.value, {}).then(function (res){
                 var firstGeoObject = res.geoObjects.get(0),
                     coordSearch = firstGeoObject.geometry.getCoordinates();
@@ -63,6 +145,36 @@
                     preset: 'islands#blackStretchyIcon',
                     draggable: true
                 });
+
+                mapHidden.value = coordSearch;
+                //добавляем метку на карту
+                myMap.geoObjects
+                    .add(myPlacemark);
+
+                //при перетаскивании метки меняем координаты
+                myMap.geoObjects.events.add([
+                    'dragend'
+                ], function (e) {
+                    var placemarkPosition = myMap.options.get('projection').fromGlobalPixels(
+                        myMap.converter.pageToGlobal(e.get('position')),
+                        myMap.getZoom()
+                    );
+                    mapHidden.value = placemarkPosition;
+                    getAddress(placemarkPosition);
+                    ymaps.geocode(placemarkPosition).then(function (res) {
+                        document.querySelector('#map-search').value = res.geoObjects.get(0).getAddressLine();
+                        $(mapSearch).trigger('keyup');
+                    })
+                });
+                // Слушаем клик на карте.
+                myMap.events.add('click', function (e) {
+                    var coords = e.get('coords');
+                    ymaps.geocode(coords).then(function (res) {
+                        document.querySelector('#map-search').value = res.geoObjects.get(0).getAddressLine();
+                        $(mapSearch).trigger('keyup');
+                    })
+                    addMark(coords)
+                });
             })
         } else {
             myMap = new ymaps.Map('map', {
@@ -81,26 +193,36 @@
                 preset: 'islands#blackStretchyIcon',
                 draggable: true
             });
+            //добавляем метку на карту
+            myMap.geoObjects
+                .add(myPlacemark);
+
+            //при перетаскивании метки меняем координаты
+            myMap.geoObjects.events.add([
+                'dragend'
+            ], function (e) {
+                var placemarkPosition = myMap.options.get('projection').fromGlobalPixels(
+                    myMap.converter.pageToGlobal(e.get('position')),
+                    myMap.getZoom()
+                );
+                mapHidden.value = placemarkPosition;
+                getAddress(placemarkPosition);
+                ymaps.geocode(placemarkPosition).then(function (res) {
+                    document.querySelector('#map-search').value = res.geoObjects.get(0).getAddressLine();
+                    $(mapSearch).trigger('keyup');
+                })
+            });
+            // Слушаем клик на карте.
+            myMap.events.add('click', function (e) {
+                var coords = e.get('coords');
+                ymaps.geocode(coords).then(function (res) {
+                    document.querySelector('#map-search').value = res.geoObjects.get(0).getAddressLine();
+                    $(mapSearch).trigger('keyup');
+                })
+                addMark(coords)
+            });
         }
 
-
-        //добавляем метку на карту
-        myMap.geoObjects
-            .add(myPlacemark);
-
-        //при перетаскивании метки меняем координаты
-        myMap.geoObjects.events.add([
-            'dragend'
-        ], function (e) {
-            var placemarkPosition = myMap.options.get('projection').fromGlobalPixels(
-                myMap.converter.pageToGlobal(e.get('position')),
-                myMap.getZoom()
-            );
-            getAddress(placemarkPosition);
-            ymaps.geocode(placemarkPosition).then(function (res) {
-                document.querySelector('#map-search').value = res.geoObjects.get(0).getAddressLine();
-            })
-        });
 
         suggestView.events.add("select", function(e){
             ymaps.geocode(e.get('item').value, {}).then(function (res){
@@ -118,18 +240,9 @@
             })
         })
 
-        // Слушаем клик на карте.
-        myMap.events.add('click', function (e) {
-            var coords = e.get('coords');
-            ymaps.geocode(coords).then(function (res) {
-                document.querySelector('#map-search').value = res.geoObjects.get(0).getAddressLine();
-            })
-            addMark(coords)
-        });
-
         //Добавление метки
         function addMark(coords) {
-            mapHidden.name = coords;
+            mapHidden.value = coords;
             // Если метка уже создана – просто передвигаем ее.
             if (myPlacemark) {
                 myPlacemark.geometry.setCoordinates(coords);
