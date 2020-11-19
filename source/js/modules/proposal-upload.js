@@ -42,11 +42,11 @@
     return $inputsContainer.querySelectorAll('.image-uploads__image-wrapper').length === 5;
   }
 
-  function getFileInput() {
+  function getFileInput(inputName) {
     var $fileInput = document.createElement('input');
     $fileInput.classList.add('visually-hidden');
     $fileInput.setAttribute('type', 'file');
-    $fileInput.setAttribute('name', 'user-images');
+    $fileInput.setAttribute('name', inputName);
     $fileInput.setAttribute('accept', 'image/png, image/jpeg, image/jpg, image/gif');
     $fileInput.setAttribute('accept', 'image/png, image/jpeg, image/jpg, image/gif');
     $fileInput.setAttribute('aria-label', 'user-images');
@@ -65,11 +65,11 @@
     return $uploadEl;
   }
 
-  function addBlankUploadEl($inputsContainer) {
+  function addBlankUploadEl($inputsContainer, inputName) {
     var $uploadEl = getUploadEl();
 
-    var $fileInput = getFileInput();
-    addFunctionailtyToFileInput($fileInput, $uploadEl);
+    var $fileInput = getFileInput(inputName);
+    addFunctionailtyToFileInput($fileInput, $uploadEl, inputName);
 
     var $caption = getCaption();
 
@@ -78,7 +78,7 @@
     $inputsContainer.append($uploadEl);
   }
 
-  function addFunctionailtyToFileInput($fileInput, $imgUploadEl) {
+  function addFunctionailtyToFileInput($fileInput, $imgUploadEl, inputName) {
     $fileInput.addEventListener('change', function (e) {
       var $target = e.target;
       var file = $target.files[0];
@@ -89,7 +89,7 @@
         makeElLoaded($inputsContainer, $imgUploadEl, $previewImg);
 
         if (!isBlankUploadElExist($inputsContainer) && !isMaxAmountOfImagesAchieved($inputsContainer)) {
-          addBlankUploadEl($inputsContainer);
+          addBlankUploadEl($inputsContainer, inputName);
         }
       });
 
@@ -103,6 +103,23 @@
   if ($inputsContainer) {
     var $imgUploadEls = document.querySelectorAll('.image-uploads__image-wrapper');
 
+    var inputName = ' ';
+
+    if ($imgUploadEls.length > 0) {
+      for (var i = 0; i < $imgUploadEls.length; i++) {
+        var $input = $imgUploadEls[i].querySelector('input[type="file"]');
+
+        if ($input) {
+          var attr = $input.getAttribute('name');
+
+          if (attr) {
+            inputName = attr;
+            break;
+          }
+        }
+      }
+    }
+
     $imgUploadEls.forEach(function ($imgUploadEl) {
       var $loadedImg = $imgUploadEl.querySelector('img');
 
@@ -110,7 +127,7 @@
         makeElLoaded($inputsContainer, $imgUploadEl);
       } else {
         var $fileInput = $imgUploadEl.querySelector('input[type="file"]');
-        addFunctionailtyToFileInput($fileInput, $imgUploadEl);
+        addFunctionailtyToFileInput($fileInput, $imgUploadEl, inputName);
       }
     });
   }
