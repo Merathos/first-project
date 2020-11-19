@@ -93,6 +93,7 @@
 }
 
 .page-content__text a {
+  position: relative;
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -104,6 +105,16 @@
   transition: color $style-change-duration;
 
   color: var(--color-interactive-default, $blue-default);
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-interactive-default, $blue-default);
+  }
 
   &:focus {
     color: var(--color-interactive-accent, $blue-accent);
@@ -117,8 +128,12 @@
     color: var(--color-interactive-accent, $blue-accent);
   }
 
-  &:hover:not(.focus-visible) {
+  &:hover:not(.focus-visible), {
     color: var(--color-interactive-accent, $blue-accent);
+
+    &::before {
+      background-color: var(--color-interactive-accent, $blue-accent);
+    }
   }
 }
 

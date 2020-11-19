@@ -12,6 +12,18 @@
   border: 1px solid var(--color-interactive-default, $blue-default);
   border-radius: 5px;
 
+  &--reject {
+    border: 1px solid var(--color-interactive-default, $red);
+
+    .info-banner__title {
+      color: var(--color-interactive-default, $red);
+    }
+
+    .info-banner__icon {
+      color: var(--color-interactive-default, $red);
+    }
+  }
+
   @media (max-width: $tablet-width) {
     padding-left: 54px;
   }
