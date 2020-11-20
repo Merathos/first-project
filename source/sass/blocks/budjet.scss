@@ -96,7 +96,7 @@
   font-size: 13px;
   line-height: 131%;
 
-  color: #A6ABB3;
+  color: var(--color-text, $grey-default);
 
   @media (min-width: $tablet-width) {
     max-width: 60%;

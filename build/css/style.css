@@ -7503,7 +7503,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-weight: normal;
   font-size: 13px;
   line-height: 131%;
-  color: #A6ABB3; }
+  color: var(--color-text, #a6abb3); }
   @media (min-width: 768px) {
     .budjet__field-info {
       max-width: 60%; } }
