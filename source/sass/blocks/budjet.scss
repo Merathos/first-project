@@ -85,7 +85,7 @@
   font-size: rem(13px);
   line-height: 130%;
 
-  color: var(--color-interactive-default, $red);
+  color: $red;
 }
 
 .budjet__field-info {
@@ -96,7 +96,7 @@
   font-size: 13px;
   line-height: 131%;
 
-  color: #A6ABB3;
+  color: var(--color-text, $grey-default);
 
   @media (min-width: $tablet-width) {
     max-width: 60%;

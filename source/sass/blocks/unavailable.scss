@@ -27,16 +27,19 @@
   font-weight: normal;
   font-size: rem(16px);
   line-height: rem(22px);
-  color: #707B8C;
+  color: var(--color-text, $grey);
 
   @media (min-width: $desktop-width) {
     max-width: 80%;
   }
 }
 
-.unavailable__refresh-link {
+.unavailable__refresh {
   margin-bottom: 32px;
   font-weight: 500;
+  color: var(--color-text, $blue-default);
+
+  pointer-events: none;
 
   @media (min-width: $desktop-width) {
     margin-bottom: 40px;

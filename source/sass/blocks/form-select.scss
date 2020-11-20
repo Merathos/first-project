@@ -7,7 +7,7 @@
   & .ss-main .ss-single-selected .ss-arrow span {
     width: 12px;
     height: 12px;
-    border-color: var(--color-interactive-default, $blue-default);
+    border-color: var(--color-text, $blue-default);
 
     &:focus {
       outline: none;
