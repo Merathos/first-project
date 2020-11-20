@@ -2660,7 +2660,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .form-select .ss-main .ss-single-selected .ss-arrow span {
   width: 12px;
   height: 12px;
-  border-color: var(--color-interactive-default, #2c8ecc); }
+  border-color: var(--color-text, #2c8ecc); }
   .form-select .ss-main .ss-single-selected .ss-arrow span:focus {
     outline: none; }
 
@@ -7177,7 +7177,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0;
-  color: #2c8ecc; }
+  color: var(--color-text, #2c8ecc); }
 
 .button-like {
   padding: 0;
@@ -7495,7 +7495,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-weight: 400;
   font-size: 0.8125rem;
   line-height: 130%;
-  color: var(--color-interactive-default, #e55050); }
+  color: #e55050; }
 
 .budjet__field-info {
   margin-top: 12px;
@@ -15494,16 +15494,18 @@ span.poll-page__hide {
   font-weight: normal;
   font-size: 1rem;
   line-height: 1.375rem;
-  color: #707B8C; }
+  color: var(--color-text, #707b8c); }
   @media (min-width: 1200px) {
     .unavailable__text {
       max-width: 80%; } }
 
-.unavailable__refresh-link {
+.unavailable__refresh {
   margin-bottom: 32px;
-  font-weight: 500; }
+  font-weight: 500;
+  color: var(--color-text, #2c8ecc);
+  pointer-events: none; }
   @media (min-width: 1200px) {
-    .unavailable__refresh-link {
+    .unavailable__refresh {
       margin-bottom: 40px; } }
 
 .unavailable__button {
