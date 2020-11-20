@@ -113,7 +113,8 @@
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: var(--color-interactive-default, $blue-default);
+    background-color: var(--color-interactive-default, $light-blue-accent);
+    transition: background-color $style-change-duration;
   }
 
   &:focus {

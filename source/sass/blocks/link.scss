@@ -116,6 +116,60 @@
       transition: background-color $style-change-duration;
     }
   }
+
+  &--time {
+    position: relative;
+    width: 100%;
+    margin-left: 28px;
+    font-size: 18px;
+
+    span {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: var(--color-interactive-default, $light-blue-accent);
+        transition: background-color $style-change-duration;
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 0;
+      left: -27px;
+      width: 20px;
+      height: 20px;
+      transform: rotate(-180deg);
+    }
+
+    &:focus {
+      color: var(--color-interactive-accent, $blue-accent);
+    }
+
+    &:focus:not(.focus-visible) {
+      color: var(--color-interactive-default, $blue-default);
+    }
+
+    &:active:not(.focus-visible) {
+      color: var(--color-interactive-accent, $blue-accent);
+    }
+
+    &:hover:not(.focus-visible) {
+      color: var(--color-interactive-accent, $blue-accent);
+      span::before {
+        background-color: var(--color-interactive-accent, $blue-accent);
+      }
+    }
+
+    @include mobile {
+      font-size: 15px;
+    }
+  }
 }
 
 

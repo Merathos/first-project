@@ -159,7 +159,7 @@
     stroke: var(--color-icon, $green);
   }
 
-  &--reject svg {
+  &--rejected svg {
     stroke: var(--color-icon, $red);
   }
 }
@@ -387,12 +387,6 @@
   .project-page--single-page-rating .project-vote__container {
     padding: 17px;
     padding-bottom: 19px;
-  }
-
-  .project-page--single-page-rating .project-vote__expire {
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 17px;
   }
 
   .project-vote__expire {
