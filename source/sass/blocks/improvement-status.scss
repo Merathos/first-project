@@ -5,23 +5,8 @@
   padding-left: 9px;
   font-size: rem(14px);
   line-height: rem(18.2px);
-  color: var(--color-text, #70bf56);
 
-  &--orange {
-    color: var(--color-text, #fca844);
-  }
-
-  &--blue {
-    color: var(--color-text, #2c8ecc);
-  }
-
-  &--red {
-    color: var(--color-text, #e55050);
-  }
-
-  &--grey {
-    color: var(--color-text, #a6abb2);
-  }
+  @include status-colors;
 
   &::before {
     content: "\25CF";

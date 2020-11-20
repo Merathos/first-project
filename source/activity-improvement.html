@@ -1,71 +1,72 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <include src="source/components/head.html"></include>
+<include src="source/components/head.html"></include>
 
-  <body class="page-body">
-    <include src="source/components/special-popup.html"></include>
+<body class="page-body">
+  <include src="source/components/special-popup.html"></include>
 
-    <include src="source/components/header.html"></include>
+  <include src="source/components/header.html"></include>
 
-    <main class="activity page-content">
+  <main class="activity page-content">
 
-      <div class="container">
-        <include src="source/components/back-btn.html"></include>
-        <h1 class="page-content__title">Активность</h1>
-      </div>
+    <div class="container">
+      <include src="source/components/back-btn.html"></include>
+      <h1 class="page-content__title">Активность</h1>
+    </div>
 
-      <div class="activity-tabs activity-tabs--improvement">
-        <ul class="activity-tabs__list">
-          <li class="activity-tabs__item">
-            <a href="activity-discussions.html" class="activity-tabs__link">Обсуждения</a>
-          </li>
-          <li class="activity-tabs__item">
-            <a href="activity-projects.html" class="activity-tabs__link">Проекты</a>
-          </li>
-          <li class="activity-tabs__item">
-            <a href="activity-surveys.html" class="activity-tabs__link">Опросы</a>
-          </li>
-          <li class="activity-tabs__item activity-tabs__item--active">
-            <a href="activity-improvement.html" class="activity-tabs__link">Благоустройство</a>
-          </li>
-          <li class="activity-tabs__item">
-            <a href="activity-partners.html" class="activity-tabs__link">На сторонних ресурсах</a>
-          </li>
-        </ul>
-        <div class="container activity-tabs__bottom"></div>
-      </div>
+    <div class="activity-tabs activity-tabs--improvement">
+      <ul class="activity-tabs__list">
+        <li class="activity-tabs__item">
+          <a href="activity-discussions.html" class="activity-tabs__link">Обсуждения</a>
+        </li>
+        <li class="activity-tabs__item">
+          <a href="activity-projects.html" class="activity-tabs__link">Проекты</a>
+        </li>
+        <li class="activity-tabs__item">
+          <a href="activity-surveys.html" class="activity-tabs__link">Опросы</a>
+        </li>
+        <li class="activity-tabs__item activity-tabs__item--active">
+          <a href="area-improvement.html" class="activity-tabs__link">Благоустройство</a>
+        </li>
+        <li class="activity-tabs__item">
+          <a href="activity-partners.html" class="activity-tabs__link">На сторонних ресурсах</a>
+        </li>
+      </ul>
+      <div class="container activity-tabs__bottom"></div>
+    </div>
+    <div class="container">
+      <ul class="activity__proposal-list proposal-list">
+        <li class="proposal-list__item">
+          <div class="proposal-list__wrapper">
+            <div class="proposal-list__account">
+              <svg width="16" height="16">
+                <use xlink:href="img/sprite.svg#icon-user"></use>
+              </svg>
+              <span>Ваше предложение</span>
+            </div>
+            <div class="proposal-list__address">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M11.9624 1.64129C10.904 0.582939 9.49678 0 8.00014 0C6.50319 0 5.09625 0.582939 4.0379 1.64129C2.07929 3.59961 1.83588 7.28426 3.51077 9.51666L8.00014 16L12.4828 9.52572C14.1644 7.28426 13.921 3.59961 11.9624 1.64129ZM8.05186 7.5972C6.92426 7.5972 6.00645 6.6794 6.00645 5.5518C6.00645 4.4242 6.92426 3.5064 8.05186 3.5064C9.17946 3.5064 10.0973 4.4242 10.0973 5.5518C10.0973 6.6794 9.17946 7.5972 8.05186 7.5972Z"
+                  fill="currentColor"></path>
+              </svg>
+              <span>Константина Симонова, 5к2</span>
+            </div>
+          </div>
+          <a href="#" class="proposal-list__title">Рыбным текстом называется для временного</a>
+          <span class="proposal-list__status">Ожидает модерации</span>
+        </li>
+      </ul>
+    </div>
 
-      <section class="activity-improvement">
-        <h2 class="visually-hidden">Список ваших предложений</h2>
-        <div class="container">
-          <ul class="activity-improvement__list proposal-list">
-            <li class="proposal-list__item proposal-list__item--activity-improvement">
-              <div class="proposal-list__account">
-                <svg width="16" height="16">
-                  <use xlink:href="img/sprite.svg#icon-user"></use>
-                </svg>
-                <span>Ваше предложение</span>
-              </div>
-              <div class="proposal-list__address">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11.9624 1.64129C10.904 0.582939 9.49678 0 8.00014 0C6.50319 0 5.09625 0.582939 4.0379 1.64129C2.07929 3.59961 1.83588 7.28426 3.51077 9.51666L8.00014 16L12.4828 9.52572C14.1644 7.28426 13.921 3.59961 11.9624 1.64129ZM8.05186 7.5972C6.92426 7.5972 6.00645 6.6794 6.00645 5.5518C6.00645 4.4242 6.92426 3.5064 8.05186 3.5064C9.17946 3.5064 10.0973 4.4242 10.0973 5.5518C10.0973 6.6794 9.17946 7.5972 8.05186 7.5972Z" fill="currentColor"></path>
-                </svg>
-                <span>Константина Симонова, 5к2</span>
-              </div>
-              <a href="#" class="proposal-list__title">Рыбным текстом называется для временного</a>
-              <span class="proposal-list__status">Ожидает модерации</span>
-            </li>
-          </ul>
-        </div>
-      </section>
+  </main>
 
-    </main>
+  <include src="source/components/footer.html"></include>
+  <include src="source/components/cookie.html"></include>
+  <include src="source/components/up-btn.html"></include>
 
-    <include src="source/components/footer.html"></include>
-    <include src="source/components/cookie.html"></include>
-    <include src="source/components/up-btn.html"></include>
+  <script src="js/libs.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
 
-    <script src="js/libs.js"></script>
-    <script src="js/main.min.js"></script>
-  </body>
 </html>

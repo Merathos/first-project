@@ -47,9 +47,17 @@
             <p>Если необходимо, вы можете загрузить изображения. Максимум 5&nbsp;изображенний, формата JPEG, PNG, GIF.
             </p>
             <div class="image-uploads__wrapper js-upload-image-container">
-              <input class="visually-hidden" type="file" name="user-images" id="user-images"
-                accept="image/png, image/jpeg, image/jpg, image/gif" multiple>
-              <label for="user-images"><span>Загрузить изображение</span></label>
+              <div class="image-uploads__image-wrapper">
+                <img src="img/img-project/1.jpg" alt="Мое загруженное изображение">
+              </div>
+              <div class="image-uploads__image-wrapper">
+                <img src="img/img-project/1.jpg" alt="Мое загруженное изображение">
+              </div>
+              <div class="image-uploads__image-wrapper">
+                <input class="visually-hidden" type="file" name="user-images"
+                  accept="image/png, image/jpeg, image/jpg, image/gif" aria-label="user-images">
+                <span>Загрузить изображение</span>
+              </div>
             </div>
           </div>
           <div class="landscaping-form__section map-section">
@@ -57,8 +65,10 @@
             <p class="map-section__tip">
               Введите адрес проблемной территории или отметьте ее на карте
             </p>
-            <input type="text" name="map-search" id="map-search" class="map-section__address" placeholder="Адрес проблемной территории" aria-label="Введите адрес проблемной территории" />
-            <input type="hidden" id="map-hidden" name="">
+            <input type="text" name="map-search" id="map-search" class="map-section__address"
+              placeholder="Адрес проблемной территории" aria-label="Введите адрес проблемной территории" />
+              <input type="hidden" id="map-hidden" name="">
+              <input type="hidden" id="user-coords" name="" value="Россия,Ярославль">
             <div id="map"></div>
           </div>
           <div class="landscaping-form__button-wrapper">

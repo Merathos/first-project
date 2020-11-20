@@ -121,9 +121,17 @@
               <p>Если необходимо, вы можете загрузить изображения. Максимум 5&nbsp;изображенний, формата JPEG, PNG, GIF.
               </p>
               <div class="image-uploads__wrapper js-upload-image-container">
-                <input class="visually-hidden" type="file" name="user-images" id="user-images"
-                  accept="image/png, image/jpeg, image/jpg, image/gif" multiple>
-                <label for="user-images"><span>Загрузить изображение</span></label>
+                <div class="image-uploads__image-wrapper">
+                  <img src="img/img-project/1.jpg" alt="Мое загруженное изображение">
+                </div>
+                <div class="image-uploads__image-wrapper">
+                  <img src="img/img-project/1.jpg" alt="Мое загруженное изображение">
+                </div>
+                <div class="image-uploads__image-wrapper">
+                  <input class="visually-hidden" type="file" name="user-images"
+                    accept="image/png, image/jpeg, image/jpg, image/gif" aria-label="user-images">
+                  <span>Загрузить изображение</span>
+                </div>
               </div>
             </div>
             <div class="landscaping-form__section map-section">
@@ -139,7 +147,7 @@
             </div>
             <div class="landscaping-form__button-wrapper">
               <button class="button button--white">Отменить</button>
-              <button type="submit" class="button button--blue landscaping-form__submit-btn" id="improvement-submit-btn">
+              <button type="button" class="button button--blue landscaping-form__submit-btn" id="improvement-submit-btn">
                 Отправить на модерацию
               </button>
             </div>
@@ -237,6 +245,7 @@
       </form>
     </div>
 
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a3b13bbc-c623-4647-90d4-48210288fe0d" type="text/javascript"></script>
     <script src="js/libs.js"></script>
     <script src="js/main.min.js"></script>
   </body>

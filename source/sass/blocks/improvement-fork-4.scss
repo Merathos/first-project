@@ -1,38 +1,38 @@
-.improvement-fork-4 {
-    position: relative;
-    
-    .improvement-fork {
-        padding-bottom: 24px;
-    }
+// .improvement-fork-4 {
+//     position: relative;
 
-    @include tablet {
-        .improvement-fork__title {
-            margin-bottom: 40px;
-        }
-    }
-}
+//     .improvement-fork {
+//         padding-bottom: 24px;
+//     }
 
-#general-pin {
-    button {
-        @include btn-reset;
-        width: 49px;
-        height: 49px;
-        font-size: rem(18px);
-        line-height: rem(23.4px);
-        color: #ffffff;
-        border-radius: 50%;
-        background-color: #2C8ECC;
-    }
-}
+//     @include tablet {
+//         .improvement-fork__title {
+//             margin-bottom: 40px;
+//         }
+//     }
+// }
 
-@include mobile {
-    .improvement-fork-4 {
-        .improvement-fork__back {
-            margin-bottom: 28px;
-        }
+// #general-pin {
+//     button {
+//         @include btn-reset;
+//         width: 49px;
+//         height: 49px;
+//         font-size: rem(18px);
+//         line-height: rem(23.4px);
+//         color: #ffffff;
+//         border-radius: 50%;
+//         background-color: #2C8ECC;
+//     }
+// }
 
-        .improvement-fork__title {
-            margin-bottom: 32px;
-        }
-    }
-}
+// @include mobile {
+//     .improvement-fork-4 {
+//         .improvement-fork__back {
+//             margin-bottom: 28px;
+//         }
+
+//         .improvement-fork__title {
+//             margin-bottom: 32px;
+//         }
+//     }
+// }

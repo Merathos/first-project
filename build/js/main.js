@@ -183,56 +183,52 @@
 })();
 
 'use strict';
-
-
 (function () {
-    if (document.querySelector('.confirmation-popup')) {
-        var popUp = document.querySelector('.confirmation-popup');
-        var popUpBody = popUp.querySelector('.confirmation-popup__body');
-        var popUpOpenbtn = document.querySelector('#improvement-submit-btn');
-        var popUpClosebtn = popUp.querySelector('.confirmation-popup__close-btn');
-        var popUpBackbtn = popUp.querySelector('.confirmation-popup__back-btn');
-        var form = document.querySelector('#js-improvement-form');
-        var submitFormBtn = form.querySelector('.confirmation-popup__submit-btn');
-        var KeyCodes = {
-            ESC: 27,
-        };
+  if (document.querySelector('.confirmation-popup')) {
+    var popUp = document.querySelector('.confirmation-popup');
+    var popUpBody = popUp.querySelector('.confirmation-popup__body');
+    var popUpOpenbtn = document.querySelector('#improvement-submit-btn');
+    var popUpClosebtn = popUp.querySelector('.confirmation-popup__close-btn');
+    var popUpBackbtn = popUp.querySelector('.confirmation-popup__back-btn');
+    var KeyCodes = {
+      ESC: 27,
+    };
 
-        var isEscEvent = function (evt, action) {
-            if (evt.keyCode === KeyCodes.ESC) {
-                action();
-            }
-        };
+    var isEscEvent = function (evt, action) {
+      if (evt.keyCode === KeyCodes.ESC) {
+        action();
+      }
+    };
 
-        var onPopupEscPress = function (evt) {
-            isEscEvent(evt, closePopup);
-        };
+    var onPopupEscPress = function (evt) {
+      isEscEvent(evt, closePopup);
+    };
 
-        var openPopup = function () {
-            popUp.classList.add('confirmation-popup--show');
-            document.querySelector("body").style.overflow = 'hidden';
-            document.addEventListener('keydown', onPopupEscPress);
-        };
+    var openPopup = function () {
+      popUp.classList.add('confirmation-popup--show');
+      document.querySelector('body').style.overflow = 'hidden';
+      document.addEventListener('keydown', onPopupEscPress);
+    };
 
-        var closePopup = function () {
-            popUp.classList.remove('confirmation-popup--show');
-            document.querySelector("body").style.overflow = 'visible';
-            document.removeEventListener('keydown', onPopupEscPress);
-        };
+    var closePopup = function () {
+      popUp.classList.remove('confirmation-popup--show');
+      document.querySelector('body').style.overflow = 'visible';
+      document.removeEventListener('keydown', onPopupEscPress);
+    };
 
-        popUpOpenbtn.addEventListener('click', function () {
-            openPopup();
-        });
+    popUpOpenbtn.addEventListener('click', function () {
+      openPopup();
+    });
 
-        popUpClosebtn.addEventListener('click', closePopup);
-        popUpBackbtn.addEventListener('click', closePopup);
-        popUp.addEventListener('click', closePopup);
-        popUpBody.addEventListener('click', function (e) {
-            e.stopPropagation();
-            e.stopImmediatePropagation();
-            return false;
-        });
-    }
+    popUpClosebtn.addEventListener('click', closePopup);
+    popUpBackbtn.addEventListener('click', closePopup);
+    popUp.addEventListener('click', closePopup);
+    popUpBody.addEventListener('click', function (e) {
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+      return false;
+    });
+  }
 })();
 
 'use strict';
@@ -605,55 +601,61 @@
 })();
 'use strict';
 (function () {
+  var initInfoBannerToggle = function (banner) {
+    var bannerText = banner.querySelector('.info-banner__text');
+    var bannerToggleTextButton = banner.querySelector('.info-banner__button');
+
+    if (bannerText && bannerToggleTextButton && !banner.classList.contains('info-banner_enough-lines_true') && !banner.classList.contains('info-banner_enough-lines_false')) {
+
+      var textSpan = bannerToggleTextButton.querySelector('.info-banner-button__text');
+      var changeButtonText = function () {
+        if (bannerToggleTextButton.classList.contains('opened')) {
+          textSpan.textContent = 'Свернуть';
+        } else {
+          textSpan.textContent = 'Развернуть';
+        }
+      };
+      // Количество строк текста
+      var bannerTextHeight = bannerText.getBoundingClientRect().height;
+      var bannerTextLineHeight = +getComputedStyle(
+          bannerText
+      ).lineHeight.replace('px', '');
+      var bannerTextLines = Math.ceil(
+          bannerTextHeight / bannerTextLineHeight
+      );
+
+      // Максимально допустимое количество строк
+      var maxLinesAmount = 3;
+
+      // Если в блоке есть заголовок, то максимальное количество строк отличается по макету, но в ТЗ речь про 3 при любых условиях
+      if (banner.querySelector('.info-banner__title')) {
+        maxLinesAmount = 2;
+      }
+
+      if (bannerTextLines > maxLinesAmount) {
+        banner.classList.add('info-banner_enough-lines_true');
+
+        bannerToggleTextButton.addEventListener('click', function (e) {
+          e.currentTarget.classList.toggle('opened');
+          bannerText.classList.toggle('opened');
+          changeButtonText();
+        });
+      } else {
+        banner.classList.add('info-banner_enough-lines_false');
+        changeButtonText();
+      }
+    }
+  };
+
   var infoBanner = document.querySelectorAll('.info-banner');
 
   if (infoBanner.length > 0) {
     infoBanner.forEach(function (banner) {
-      var bannerText = banner.querySelector('.info-banner__text');
-      var bannerToggleTextButton = banner.querySelector('.info-banner__button');
-
-      if (bannerText && bannerToggleTextButton) {
-
-        var textSpan = bannerToggleTextButton.querySelector('.info-banner-button__text');
-        var changeButtonText = function () {
-          if (bannerToggleTextButton.classList.contains('opened')) {
-            textSpan.textContent = 'Свернуть';
-          } else {
-            textSpan.textContent = 'Развернуть';
-          }
-        };
-        // Количество строк текста
-        var bannerTextHeight = bannerText.getBoundingClientRect().height;
-        var bannerTextLineHeight = +getComputedStyle(
-            bannerText
-        ).lineHeight.replace('px', '');
-        var bannerTextLines = Math.ceil(
-            bannerTextHeight / bannerTextLineHeight
-        );
-
-        // Максимально допустимое количество строк
-        var maxLinesAmount = 3;
-
-        // Если в блоке есть заголовок, то максимальное количество строк отличается по макету, но в ТЗ речь про 3 при любых условиях
-        if (banner.querySelector('.info-banner__title')) {
-          maxLinesAmount = 2;
-        }
-
-        if (bannerTextLines > maxLinesAmount) {
-          banner.classList.add('info-banner_enough-lines_true');
-
-          bannerToggleTextButton.addEventListener('click', function (e) {
-            e.currentTarget.classList.toggle('opened');
-            bannerText.classList.toggle('opened');
-            changeButtonText();
-          });
-        } else {
-          banner.classList.add('info-banner_enough-lines_false');
-          changeButtonText();
-        }
-      }
+      initInfoBannerToggle(banner);
     });
   }
+
+  window.initInfoBannerToggle = initInfoBannerToggle;
 })();
 
 'use strict';
@@ -723,7 +725,8 @@
 (function () {
     var map = document.querySelector('.landscaping-form__section.map-section'),
         mapHidden = document.querySelector('#map-hidden'),
-        mapSearch = document.querySelector('#map-search');
+        mapSearch = document.querySelector('#map-search'),
+        userCoords = document.querySelector('#user-coords');
 
     if (!map) {
         return;
@@ -731,17 +734,66 @@
 
     ymaps.ready(init);
 
-
     function init() {
         var myMap,
             suggestView = new ymaps.SuggestView('map-search'),
             myPlacemark,
             firstGeoObject,
             oldAddress;
+        if(userCoords.value){
+            ymaps.geocode(userCoords.value, {}).then(function (res){
+                var firstGeoObject = res.geoObjects.get(0),
+                    coordSearch = firstGeoObject.geometry.getCoordinates();
 
-        console.log(mapSearch.value)
-        if(mapHidden.name !== '') {
-            var coordHidden = mapHidden.name.split(',').map(function(item) {
+                myMap = new ymaps.Map('map', {
+                    center: coordSearch,
+                    zoom: 9,
+                    controls: ['zoomControl']
+                }, {
+                    searchControlProvider: 'yandex#search'
+                });
+                myPlacemark = new ymaps.GeoObject({
+                    geometry: {
+                        type: "Point",
+                        coordinates: coordSearch
+                    },
+                }, {
+                    preset: 'islands#blackStretchyIcon',
+                    draggable: true
+                });
+
+                mapHidden.value = coordSearch;
+                //добавляем метку на карту
+                myMap.geoObjects
+                    .add(myPlacemark);
+
+                //при перетаскивании метки меняем координаты
+                myMap.geoObjects.events.add([
+                    'dragend'
+                ], function (e) {
+                    var placemarkPosition = myMap.options.get('projection').fromGlobalPixels(
+                        myMap.converter.pageToGlobal(e.get('position')),
+                        myMap.getZoom()
+                    );
+                    mapHidden.value = placemarkPosition;
+                    getAddress(placemarkPosition);
+                    ymaps.geocode(placemarkPosition).then(function (res) {
+                        document.querySelector('#map-search').value = res.geoObjects.get(0).getAddressLine();
+                        $(mapSearch).trigger('keyup');
+                    })
+                });
+                // Слушаем клик на карте.
+                myMap.events.add('click', function (e) {
+                    var coords = e.get('coords');
+                    ymaps.geocode(coords).then(function (res) {
+                        document.querySelector('#map-search').value = res.geoObjects.get(0).getAddressLine();
+                        $(mapSearch).trigger('keyup');
+                    })
+                    addMark(coords)
+                });
+            })
+        } else if(mapHidden.value) {
+            var coordHidden = mapHidden.value.split(',').map(function(item) {
                 return Number(item)
             })
             myMap = new ymaps.Map('map', {
@@ -760,8 +812,40 @@
                 preset: 'islands#blackStretchyIcon',
                 draggable: true
             });
-        } else if (mapSearch.value !== ''){
-            console.log(mapSearch.value)
+
+            ymaps.geocode(coordHidden).then(function (res) {
+                document.querySelector('#map-search').value = res.geoObjects.get(0).getAddressLine();
+                $(mapSearch).trigger('keyup');
+            })
+            //добавляем метку на карту
+            myMap.geoObjects
+                .add(myPlacemark);
+
+            //при перетаскивании метки меняем координаты
+            myMap.geoObjects.events.add([
+                'dragend'
+            ], function (e) {
+                var placemarkPosition = myMap.options.get('projection').fromGlobalPixels(
+                    myMap.converter.pageToGlobal(e.get('position')),
+                    myMap.getZoom()
+                );
+                mapHidden.value = placemarkPosition;
+                getAddress(placemarkPosition);
+                ymaps.geocode(placemarkPosition).then(function (res) {
+                    document.querySelector('#map-search').value = res.geoObjects.get(0).getAddressLine();
+                    $(mapSearch).trigger('keyup');
+                })
+            });
+            // Слушаем клик на карте.
+            myMap.events.add('click', function (e) {
+                var coords = e.get('coords');
+                ymaps.geocode(coords).then(function (res) {
+                    document.querySelector('#map-search').value = res.geoObjects.get(0).getAddressLine();
+                    $(mapSearch).trigger('keyup');
+                })
+                addMark(coords)
+            });
+        } else if (mapSearch.value){
             ymaps.geocode(mapSearch.value, {}).then(function (res){
                 var firstGeoObject = res.geoObjects.get(0),
                     coordSearch = firstGeoObject.geometry.getCoordinates();
@@ -782,6 +866,36 @@
                     preset: 'islands#blackStretchyIcon',
                     draggable: true
                 });
+
+                mapHidden.value = coordSearch;
+                //добавляем метку на карту
+                myMap.geoObjects
+                    .add(myPlacemark);
+
+                //при перетаскивании метки меняем координаты
+                myMap.geoObjects.events.add([
+                    'dragend'
+                ], function (e) {
+                    var placemarkPosition = myMap.options.get('projection').fromGlobalPixels(
+                        myMap.converter.pageToGlobal(e.get('position')),
+                        myMap.getZoom()
+                    );
+                    mapHidden.value = placemarkPosition;
+                    getAddress(placemarkPosition);
+                    ymaps.geocode(placemarkPosition).then(function (res) {
+                        document.querySelector('#map-search').value = res.geoObjects.get(0).getAddressLine();
+                        $(mapSearch).trigger('keyup');
+                    })
+                });
+                // Слушаем клик на карте.
+                myMap.events.add('click', function (e) {
+                    var coords = e.get('coords');
+                    ymaps.geocode(coords).then(function (res) {
+                        document.querySelector('#map-search').value = res.geoObjects.get(0).getAddressLine();
+                        $(mapSearch).trigger('keyup');
+                    })
+                    addMark(coords)
+                });
             })
         } else {
             myMap = new ymaps.Map('map', {
@@ -800,26 +914,36 @@
                 preset: 'islands#blackStretchyIcon',
                 draggable: true
             });
+            //добавляем метку на карту
+            myMap.geoObjects
+                .add(myPlacemark);
+
+            //при перетаскивании метки меняем координаты
+            myMap.geoObjects.events.add([
+                'dragend'
+            ], function (e) {
+                var placemarkPosition = myMap.options.get('projection').fromGlobalPixels(
+                    myMap.converter.pageToGlobal(e.get('position')),
+                    myMap.getZoom()
+                );
+                mapHidden.value = placemarkPosition;
+                getAddress(placemarkPosition);
+                ymaps.geocode(placemarkPosition).then(function (res) {
+                    document.querySelector('#map-search').value = res.geoObjects.get(0).getAddressLine();
+                    $(mapSearch).trigger('keyup');
+                })
+            });
+            // Слушаем клик на карте.
+            myMap.events.add('click', function (e) {
+                var coords = e.get('coords');
+                ymaps.geocode(coords).then(function (res) {
+                    document.querySelector('#map-search').value = res.geoObjects.get(0).getAddressLine();
+                    $(mapSearch).trigger('keyup');
+                })
+                addMark(coords)
+            });
         }
 
-
-        //добавляем метку на карту
-        myMap.geoObjects
-            .add(myPlacemark);
-
-        //при перетаскивании метки меняем координаты
-        myMap.geoObjects.events.add([
-            'dragend'
-        ], function (e) {
-            var placemarkPosition = myMap.options.get('projection').fromGlobalPixels(
-                myMap.converter.pageToGlobal(e.get('position')),
-                myMap.getZoom()
-            );
-            getAddress(placemarkPosition);
-            ymaps.geocode(placemarkPosition).then(function (res) {
-                document.querySelector('#map-search').value = res.geoObjects.get(0).getAddressLine();
-            })
-        });
 
         suggestView.events.add("select", function(e){
             ymaps.geocode(e.get('item').value, {}).then(function (res){
@@ -837,18 +961,9 @@
             })
         })
 
-        // Слушаем клик на карте.
-        myMap.events.add('click', function (e) {
-            var coords = e.get('coords');
-            ymaps.geocode(coords).then(function (res) {
-                document.querySelector('#map-search').value = res.geoObjects.get(0).getAddressLine();
-            })
-            addMark(coords)
-        });
-
         //Добавление метки
         function addMark(coords) {
-            mapHidden.name = coords;
+            mapHidden.value = coords;
             // Если метка уже создана – просто передвигаем ее.
             if (myPlacemark) {
                 myPlacemark.geometry.setCoordinates(coords);
@@ -1361,90 +1476,135 @@
 })();
 'use strict';
 (function () {
-  var container = document.querySelector('.js-upload-image-container');
+  function getCloseBtn() {
+    var $btn = document.createElement('button');
+    $btn.setAttribute('type', 'button');
+    $btn.setAttribute('aria-label', 'удалить загруженное изображение');
+    return $btn;
+  }
 
-  if (container) {
-    var input = container.querySelector('input[name="user-images"]');
-    var label = container.querySelector('label[for="user-images"]');
-    var images = [];
-    var MAX_IMAGES = 5;
+  function addFunctionailtyToCloseBtn($closeBtn, $elToDelete, $inputsContainer) {
+    $closeBtn.addEventListener('click', function () {
+      $elToDelete.remove();
 
-    // прячет инпут когда загружено максимальное количество файлов //
-    var checkInputVisible = function () {
-      if (images.length === MAX_IMAGES) {
-        label.classList.add('visually-hidden');
-      } else {
-        label.classList.remove('visually-hidden');
+      if (!isBlankUploadElExist($inputsContainer) && !isMaxAmountOfImagesAchieved($inputsContainer)) {
+        addBlankUploadEl($inputsContainer);
       }
-    };
+    }, {once: true});
+  }
 
-    // ограничивает возможность выбора более 5ти файлов за один раз //
-    var limitFilesNumber = function () {
-      var tempList = new DataTransfer();
-      for (var i = 0; i < MAX_IMAGES; i++) {
-        tempList.items.add(input.files[i]);
-      }
-      input.files = tempList.files;
-    };
+  function getPreviewImg(imageUrl) {
+    var $previewImg = document.createElement('img');
+    $previewImg.setAttribute('src', imageUrl);
+    return $previewImg;
+  }
 
-    // перезаписывает список файлов //
-    var checkFilesList = function () {
-      var list = new DataTransfer();
-      images.forEach(function (image) {
-        list.items.add(image);
-      });
-      input.files = list.files;
-    };
+  function makeElLoaded($inputsContainer, $imgUploadEl, $previewImg) {
+    $imgUploadEl.classList.add('image-loaded');
+    var $closeBtn = getCloseBtn();
+    addFunctionailtyToCloseBtn($closeBtn, $imgUploadEl, $inputsContainer);
+    $imgUploadEl.appendChild($closeBtn);
 
-    // рендерит кнопку закрытия и добавляет её в контейнер //
-    var renderCloseBtn = function (btnContainer, file) {
-      var button = document.createElement('button');
-      button.setAttribute('type', 'button');
-      button.setAttribute('aria-label', 'удалить загруженное изображение');
-      btnContainer.appendChild(button);
-      button.addEventListener('click', function () {
-        btnContainer.remove();
-        var index = images.indexOf(file);
-        if (index > -1) {
-          images.splice(index, 1);
-          checkInputVisible();
-          checkFilesList();
+    if ($previewImg) {
+      $imgUploadEl.append($previewImg);
+    }
+  }
+
+  function isBlankUploadElExist($inputsContainer) {
+    return !!$inputsContainer.querySelector('.image-uploads__image-wrapper:not(.image-loaded)');
+  }
+
+  function isMaxAmountOfImagesAchieved($inputsContainer) {
+    return $inputsContainer.querySelectorAll('.image-uploads__image-wrapper').length === 5;
+  }
+
+  function getFileInput(inputName) {
+    var $fileInput = document.createElement('input');
+    $fileInput.classList.add('visually-hidden');
+    $fileInput.setAttribute('type', 'file');
+    $fileInput.setAttribute('name', inputName);
+    $fileInput.setAttribute('accept', 'image/png, image/jpeg, image/jpg, image/gif');
+    $fileInput.setAttribute('accept', 'image/png, image/jpeg, image/jpg, image/gif');
+    $fileInput.setAttribute('aria-label', 'user-images');
+    return $fileInput;
+  }
+
+  function getCaption() {
+    var $caption = document.createElement('span');
+    $caption.innerHTML = 'Загрузить изображение';
+    return $caption;
+  }
+
+  function getUploadEl() {
+    var $uploadEl = document.createElement('div');
+    $uploadEl.classList.add('image-uploads__image-wrapper');
+    return $uploadEl;
+  }
+
+  function addBlankUploadEl($inputsContainer, inputName) {
+    var $uploadEl = getUploadEl();
+
+    var $fileInput = getFileInput(inputName);
+    addFunctionailtyToFileInput($fileInput, $uploadEl, inputName);
+
+    var $caption = getCaption();
+
+    $uploadEl.append($fileInput, $caption);
+
+    $inputsContainer.append($uploadEl);
+  }
+
+  function addFunctionailtyToFileInput($fileInput, $imgUploadEl, inputName) {
+    $fileInput.addEventListener('change', function (e) {
+      var $target = e.target;
+      var file = $target.files[0];
+      var reader = new FileReader();
+
+      reader.addEventListener('load', function () {
+        var $previewImg = getPreviewImg(reader.result);
+        makeElLoaded($inputsContainer, $imgUploadEl, $previewImg);
+
+        if (!isBlankUploadElExist($inputsContainer) && !isMaxAmountOfImagesAchieved($inputsContainer)) {
+          addBlankUploadEl($inputsContainer, inputName);
         }
       });
-    };
 
-    // отрисовывает превью и добавляет его в контейнер //
-    var renderPreview = function (imageUrl, file) {
-      var imgContainer = document.createElement('div');
-      var preview = document.createElement('img');
-      renderCloseBtn(imgContainer, file);
-      imgContainer.appendChild(preview);
-      preview.setAttribute('src', imageUrl);
-      container.insertBefore(imgContainer, container.querySelector('label'));
-    };
+      reader.readAsDataURL(file);
+    });
+  }
 
-    // работа приложения //
-    input.addEventListener('change', function () {
-      if (input.files.length) {
 
-        if (input.files.length > MAX_IMAGES) {
-          limitFilesNumber();
-        }
+  var $inputsContainer = document.querySelector('.js-upload-image-container');
 
-        input.files.forEach(function (file) {
-          if (images.length > MAX_IMAGES - 1) {
-            return;
+  if ($inputsContainer) {
+    var $imgUploadEls = document.querySelectorAll('.image-uploads__image-wrapper');
+
+    var inputName = ' ';
+
+    if ($imgUploadEls.length > 0) {
+      for (var i = 0; i < $imgUploadEls.length; i++) {
+        var $input = $imgUploadEls[i].querySelector('input[type="file"]');
+
+        if ($input) {
+          var attr = $input.getAttribute('name');
+
+          if (attr) {
+            inputName = attr;
+            break;
           }
-          images.push(file);
-          checkInputVisible();
-          var reader = new FileReader();
-          reader.addEventListener('load', function () {
-            renderPreview(reader.result, file);
-          });
-          reader.readAsDataURL(file);
-        });
+        }
       }
-      checkFilesList();
+    }
+
+    $imgUploadEls.forEach(function ($imgUploadEl) {
+      var $loadedImg = $imgUploadEl.querySelector('img');
+
+      if ($loadedImg) {
+        makeElLoaded($inputsContainer, $imgUploadEl);
+      } else {
+        var $fileInput = $imgUploadEl.querySelector('input[type="file"]');
+        addFunctionailtyToFileInput($fileInput, $imgUploadEl, inputName);
+      }
     });
   }
 })();
