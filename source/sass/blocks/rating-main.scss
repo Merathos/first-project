@@ -62,7 +62,7 @@
     line-height: 22px;
     letter-spacing: 0;
     font-weight: 400;
-    color: $grey-lighter;
+    color: var(--color-text, $grey-default);
     padding-left: 0;
 
     &--status {
@@ -448,6 +448,15 @@
       }
     }
   }
+
+  @media (max-width: $mobile-max-width) {
+    &--vote {
+      .rating-main__link {
+        padding-left: 12px;
+      }
+    }
+  }
+
 }
 
 .rating-main__item {

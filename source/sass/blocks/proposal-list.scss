@@ -1,14 +1,12 @@
 .proposal-list {
   margin: 0;
   padding: 0;
-
   list-style: none;
 }
 
 .proposal-list__item {
-  padding: 41px 0 32px;
+  padding: 32px 0;
 
-  border-top: 1px solid var(--color-stroke, $light-grey);
   border-bottom: 1px solid var(--color-stroke, $light-grey);
 
   @media (min-width: $tablet-width) {
@@ -25,16 +23,9 @@
     }
   }
 
-  &--userless {
+  &--border-top {
     padding-top: 32px;
-  }
-
-  &--activity-improvement {
-    border-top: none;
-
-    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1){
-      padding-top: 50px;
-    }
+    border-top: 1px solid var(--color-stroke, $light-grey);
   }
 }
 
@@ -51,6 +42,7 @@
   }
 
   @media (max-width: $tablet-width - 1) {
+    flex-flow: column wrap;
     margin-bottom: 24px;
   }
 }
@@ -120,6 +112,14 @@
   color: var(--color-text, $dark-text);
   transition: color $style-change-duration;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--regular {
+    font-weight: 400;
+  }
+
   @media (min-width: $desktop-width) {
     &:hover:not(.focus-visible) {
       color: var(--color-interactive-default, $blue-default);
@@ -148,7 +148,8 @@
   font-weight: 400;
   font-size: rem(15px);
   line-height: 135%;
-  color: var(--color-interactive-default, $blue-default);
+
+  @include status-colors;
 
   @media (min-width: $desktop-width) {
     grid-area: c;

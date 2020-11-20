@@ -1,89 +1,134 @@
 'use strict';
 (function () {
-  var container = document.querySelector('.js-upload-image-container');
+  function getCloseBtn() {
+    var $btn = document.createElement('button');
+    $btn.setAttribute('type', 'button');
+    $btn.setAttribute('aria-label', 'удалить загруженное изображение');
+    return $btn;
+  }
 
-  if (container) {
-    var input = container.querySelector('input[name="user-images"]');
-    var label = container.querySelector('label[for="user-images"]');
-    var images = [];
-    var MAX_IMAGES = 5;
+  function addFunctionailtyToCloseBtn($closeBtn, $elToDelete, $inputsContainer) {
+    $closeBtn.addEventListener('click', function () {
+      $elToDelete.remove();
 
-    // прячет инпут когда загружено максимальное количество файлов //
-    var checkInputVisible = function () {
-      if (images.length === MAX_IMAGES) {
-        label.classList.add('visually-hidden');
-      } else {
-        label.classList.remove('visually-hidden');
+      if (!isBlankUploadElExist($inputsContainer) && !isMaxAmountOfImagesAchieved($inputsContainer)) {
+        addBlankUploadEl($inputsContainer);
       }
-    };
+    }, {once: true});
+  }
 
-    // ограничивает возможность выбора более 5ти файлов за один раз //
-    var limitFilesNumber = function () {
-      var tempList = new DataTransfer();
-      for (var i = 0; i < MAX_IMAGES; i++) {
-        tempList.items.add(input.files[i]);
-      }
-      input.files = tempList.files;
-    };
+  function getPreviewImg(imageUrl) {
+    var $previewImg = document.createElement('img');
+    $previewImg.setAttribute('src', imageUrl);
+    return $previewImg;
+  }
 
-    // перезаписывает список файлов //
-    var checkFilesList = function () {
-      var list = new DataTransfer();
-      images.forEach(function (image) {
-        list.items.add(image);
-      });
-      input.files = list.files;
-    };
+  function makeElLoaded($inputsContainer, $imgUploadEl, $previewImg) {
+    $imgUploadEl.classList.add('image-loaded');
+    var $closeBtn = getCloseBtn();
+    addFunctionailtyToCloseBtn($closeBtn, $imgUploadEl, $inputsContainer);
+    $imgUploadEl.appendChild($closeBtn);
 
-    // рендерит кнопку закрытия и добавляет её в контейнер //
-    var renderCloseBtn = function (btnContainer, file) {
-      var button = document.createElement('button');
-      button.setAttribute('type', 'button');
-      button.setAttribute('aria-label', 'удалить загруженное изображение');
-      btnContainer.appendChild(button);
-      button.addEventListener('click', function () {
-        btnContainer.remove();
-        var index = images.indexOf(file);
-        if (index > -1) {
-          images.splice(index, 1);
-          checkInputVisible();
-          checkFilesList();
+    if ($previewImg) {
+      $imgUploadEl.append($previewImg);
+    }
+  }
+
+  function isBlankUploadElExist($inputsContainer) {
+    return !!$inputsContainer.querySelector('.image-uploads__image-wrapper:not(.image-loaded)');
+  }
+
+  function isMaxAmountOfImagesAchieved($inputsContainer) {
+    return $inputsContainer.querySelectorAll('.image-uploads__image-wrapper').length === 5;
+  }
+
+  function getFileInput(inputName) {
+    var $fileInput = document.createElement('input');
+    $fileInput.classList.add('visually-hidden');
+    $fileInput.setAttribute('type', 'file');
+    $fileInput.setAttribute('name', inputName);
+    $fileInput.setAttribute('accept', 'image/png, image/jpeg, image/jpg, image/gif');
+    $fileInput.setAttribute('accept', 'image/png, image/jpeg, image/jpg, image/gif');
+    $fileInput.setAttribute('aria-label', 'user-images');
+    return $fileInput;
+  }
+
+  function getCaption() {
+    var $caption = document.createElement('span');
+    $caption.innerHTML = 'Загрузить изображение';
+    return $caption;
+  }
+
+  function getUploadEl() {
+    var $uploadEl = document.createElement('div');
+    $uploadEl.classList.add('image-uploads__image-wrapper');
+    return $uploadEl;
+  }
+
+  function addBlankUploadEl($inputsContainer, inputName) {
+    var $uploadEl = getUploadEl();
+
+    var $fileInput = getFileInput(inputName);
+    addFunctionailtyToFileInput($fileInput, $uploadEl, inputName);
+
+    var $caption = getCaption();
+
+    $uploadEl.append($fileInput, $caption);
+
+    $inputsContainer.append($uploadEl);
+  }
+
+  function addFunctionailtyToFileInput($fileInput, $imgUploadEl, inputName) {
+    $fileInput.addEventListener('change', function (e) {
+      var $target = e.target;
+      var file = $target.files[0];
+      var reader = new FileReader();
+
+      reader.addEventListener('load', function () {
+        var $previewImg = getPreviewImg(reader.result);
+        makeElLoaded($inputsContainer, $imgUploadEl, $previewImg);
+
+        if (!isBlankUploadElExist($inputsContainer) && !isMaxAmountOfImagesAchieved($inputsContainer)) {
+          addBlankUploadEl($inputsContainer, inputName);
         }
       });
-    };
 
-    // отрисовывает превью и добавляет его в контейнер //
-    var renderPreview = function (imageUrl, file) {
-      var imgContainer = document.createElement('div');
-      var preview = document.createElement('img');
-      renderCloseBtn(imgContainer, file);
-      imgContainer.appendChild(preview);
-      preview.setAttribute('src', imageUrl);
-      container.insertBefore(imgContainer, container.querySelector('label'));
-    };
+      reader.readAsDataURL(file);
+    });
+  }
 
-    // работа приложения //
-    input.addEventListener('change', function () {
-      if (input.files.length) {
 
-        if (input.files.length > MAX_IMAGES) {
-          limitFilesNumber();
-        }
+  var $inputsContainer = document.querySelector('.js-upload-image-container');
 
-        input.files.forEach(function (file) {
-          if (images.length > MAX_IMAGES - 1) {
-            return;
+  if ($inputsContainer) {
+    var $imgUploadEls = document.querySelectorAll('.image-uploads__image-wrapper');
+
+    var inputName = ' ';
+
+    if ($imgUploadEls.length > 0) {
+      for (var i = 0; i < $imgUploadEls.length; i++) {
+        var $input = $imgUploadEls[i].querySelector('input[type="file"]');
+
+        if ($input) {
+          var attr = $input.getAttribute('name');
+
+          if (attr) {
+            inputName = attr;
+            break;
           }
-          images.push(file);
-          checkInputVisible();
-          var reader = new FileReader();
-          reader.addEventListener('load', function () {
-            renderPreview(reader.result, file);
-          });
-          reader.readAsDataURL(file);
-        });
+        }
       }
-      checkFilesList();
+    }
+
+    $imgUploadEls.forEach(function ($imgUploadEl) {
+      var $loadedImg = $imgUploadEl.querySelector('img');
+
+      if ($loadedImg) {
+        makeElLoaded($inputsContainer, $imgUploadEl);
+      } else {
+        var $fileInput = $imgUploadEl.querySelector('input[type="file"]');
+        addFunctionailtyToFileInput($fileInput, $imgUploadEl, inputName);
+      }
     });
   }
 })();

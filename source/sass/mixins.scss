@@ -96,3 +96,25 @@
   margin: -1px;
   border: 0;
 }
+
+@mixin status-colors {
+  & {
+    color: var(--color-text, $grey-default);
+  }
+
+  &.status-color--blue {
+    color: var(--color-text, $blue-default);
+  }
+
+  &.status-color--green {
+    color: var(--color-text, $green);
+  }
+
+  &.status-color--red {
+    color: var(--color-text, $red);
+  }
+
+  &.status-color--orange {
+    color: var(--color-text, $orange);
+  }
+}

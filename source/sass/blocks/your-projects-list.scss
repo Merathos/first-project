@@ -65,6 +65,11 @@
   justify-content: flex-start;
   border-bottom: 1px solid var(--color-stroke, $light-grey);
 
+  &:first-child {
+    .your-projects-list__inner-link {
+      padding-top: 12px;
+    }
+  }
 
   &:last-child {
     border-bottom: none;
