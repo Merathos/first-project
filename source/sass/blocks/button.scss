@@ -122,6 +122,21 @@
       display: block;
     }
   }
+
+  &--white-content {
+    max-width: 66%;
+    width: 100%;
+    margin-bottom: 48px;
+    padding-left: 23px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font-size: 15px;
+    text-align: left;
+
+    @include tablet {
+      max-width: 100%;
+    }
+  }
 }
 
 @media print {

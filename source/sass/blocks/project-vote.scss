@@ -65,6 +65,17 @@
   &--address {
     margin-top: 0;
   }
+
+  &--single-page-rating {
+    font-size: 13px;
+
+    strong:not([class]) {
+      margin-right: -3px;
+      font-size: 15px;
+      font-weight: 400;
+      font-style: normal;
+    }
+  }
 }
 
 .project-vote__results {
@@ -242,6 +253,7 @@
           fill: var(--color-interactive-default, $blue-default);
         }
       }
+
       span {
         color: var(--color-interactive-default, $blue-default);
       }
@@ -370,6 +382,17 @@
     &--vote {
       display: block;
     }
+  }
+
+  .project-page--single-page-rating .project-vote__container {
+    padding: 17px;
+    padding-bottom: 19px;
+  }
+
+  .project-page--single-page-rating .project-vote__expire {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 17px;
   }
 
   .project-vote__expire {

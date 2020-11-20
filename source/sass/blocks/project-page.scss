@@ -19,6 +19,17 @@
   color: var(--color-text, $grey);
 }
 
+.project-page__budget-all .project-page__budget-value {
+  margin-bottom: 17px;
+}
+
+.project-page__budget-co-financing .project-page__budget-value {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28px;
+  color: var(--color-text, $grey);
+}
+
 .project-page__budget-value {
   display: block;
   margin-top: 8px;
@@ -38,6 +49,81 @@
 
 .project-page__text-btn {
   display: none;
+}
+
+.project-page__contacts {
+  padding: 23px 25px;
+  border-top: 1px solid var(--color-stroke, $light-grey);
+}
+
+.project-page__contacts-title {
+  margin: 0;
+  margin-bottom: 16px;
+  padding: 0;
+
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--color-text, $dark-text);
+}
+
+.project-page__contacts-info {
+  margin: 0;
+  margin-top: 3px;
+  padding: 0;
+}
+
+.project-page__contacts-item {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.project-page__contacts-label,
+.project-page__contacts-info {
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--color-text, $grey-lighter);
+}
+
+.project-page__contacts-name {
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  padding: 0;
+  text-decoration: none;
+
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--color-text,  $dark-text);
+}
+
+.project-page__result {
+  padding: 24px;
+  border-top: 1px solid var(--color-stroke, $light-grey);
+}
+
+.project-page__result-button-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.project-page__result-info {
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--color-text,  $grey-lighter);
 }
 
 .project-page__gallery {
@@ -96,6 +182,13 @@
   }
 }
 
+.project-page--single-page-rating .project-page__back-btn {
+  width: auto;
+  padding-left: 45px;
+  padding-right: 45px;
+  margin-top: 0;
+  font-size: 15px;
+}
 
 @include desktop-only {
   .project-page__container {
@@ -141,6 +234,15 @@
     width: 100%;
     margin-right: 0;
     margin-left: 0;
+  }
+
+  .project-page__contacts-name {
+    margin-top: 4px;
+  }
+
+  .project-page__contacts-info {
+    margin-top: 0;
+    margin-bottom: 2px;
   }
 }
 
@@ -257,5 +359,331 @@
   .project-page__survey-btn,
   .project-page__back-btn {
     display: none;
+  }
+}
+
+.project-page__address {
+  margin-top: -13px;
+  margin-bottom: 48px;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--color-text,  $dark-text);
+
+  svg {
+    fill: var(--color-text,  $grey);
+  }
+}
+
+.project-page--single-page-rating {
+  .info-banner {
+    padding-bottom: 12px;
+  }
+
+  .project-meta__category-link {
+    margin-top: 0;
+    margin-left: 14px;
+  }
+
+  .project-meta__category-link svg {
+    display: block;
+  }
+
+
+  .project-meta__category {
+    border-bottom: none;
+  }
+
+  .content h2:not([class]) {
+    margin-bottom: 20px;
+  }
+
+  .project-page__files {
+    margin-top: 24px;
+  }
+
+  .project-page__gallery {
+    margin-top: 25px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--color-stroke, $light-grey);
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .project-page__text {
+    margin-bottom: 50px;
+  }
+
+  @include tablet {
+    .info-banner {
+      padding-left: 66px;
+    }
+
+    .info-banner__icon {
+      left: 29px;
+    }
+
+    .project-page__container {
+      margin-bottom: 40px;
+    }
+
+    .content h1:not([class]) {
+      margin-bottom: 40px;
+    }
+
+    .project-meta__category-link {
+      margin-left: 20px;
+    }
+
+    .project-vote__container {
+      padding: 24px 22px;
+    }
+
+    .project-vote__date:first-of-type {
+      margin-right: 30px;
+    }
+
+    .project-vote__expire {
+      margin-left: auto;
+      margin-right: 0;
+      margin-top: 24px;
+    }
+
+    .project-meta {
+      margin-bottom: 39px;
+    }
+
+    .project-meta__category {
+      font-size: 18px;
+      padding-left: 21px;
+      padding-bottom: 15px;
+    }
+
+    .project-page__budget {
+      padding-right: 24px;
+      padding-bottom: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+
+    .project-page__budget-value {
+      padding-right: 25px;
+    }
+
+    .project-page__result-button-wrap {
+      margin-bottom: 0;
+    }
+
+    .project-page__panel {
+      margin-bottom: 43px;
+    }
+
+    .project-page__result {
+      padding-bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .project-page__result-info {
+      margin-left: 15px;
+    }
+
+    .project-page__address {
+      display: flex;
+      align-items: center;
+      padding-left: 23px;
+      margin-bottom: 0;
+    }
+
+    .project-page__address svg {
+      margin-right: 5px;
+    }
+
+    .content h2:not([class]) {
+      margin-bottom: 23px;
+    }
+
+    .project-page__files {
+      width: 100%;
+      padding: 0 24px;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .file-item {
+      max-width: calc(100% / 2 - 30px);
+      width: 100%;
+    }
+
+    .file-item:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    .project-page__gallery {
+      padding-bottom: 40px;
+      margin-bottom: 40px;
+      border-bottom: none;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 24px;
+        height: 1px;
+        width: 94vw;
+        background-color: var(--color-stroke, $light-grey);
+      }
+    }
+
+    .project-page__back-btn {
+      position: relative;
+      margin-left: 24px;
+      max-width: 280px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: -40px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: var(--color-stroke, $light-grey);
+      }
+    }
+
+    .project-page__mobile-hidden {
+      display: block;
+    }
+
+    .project-page__text {
+      margin-bottom: 40px;
+    }
+  }
+
+  @include mobile {
+    padding-top: 42px;
+
+    .info-banner {
+      padding: 21px 40px 10px 61px;
+      margin-bottom: 33px;
+
+      svg {
+        top: 22px;
+        left: 22px;
+      }
+    }
+
+    .info-banner__title {
+      margin-bottom: 0;
+      padding-left: 0;
+      line-height: 23px;
+    }
+
+    .info-banner__text {
+      font-size: 15px;
+      line-height: 20px;
+    }
+
+    .content h1:not([class]) {
+      margin-bottom: 25px;
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    .project-meta {
+      margin-bottom: 17px;
+    }
+
+    .project-meta__category {
+      padding-left: 15px;
+      font-size: 16px;
+    }
+
+    .project-meta__category-link {
+      margin-top: 10px;
+      margin-left: 0;
+    }
+
+    .project-meta__category-link svg {
+      display: none;
+    }
+
+    .project-page__budget {
+      padding-top: 21px;
+      padding-left: 16px;
+      padding-bottom: 19px;
+    }
+
+    .project-page__contacts {
+      padding-top: 21px;
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-bottom: 18px;
+    }
+
+    .project-page__result {
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-top: 21px;
+      padding-bottom: 15px;
+    }
+
+    .project-page__result-button-wrap {
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 3px;
+    }
+
+    .button-like--bordered {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      max-width: 100%;
+      margin-bottom: 8px;
+    }
+
+    .project-page__result-info {
+      margin-left: 0;
+    }
+
+    .content h2:not([class]) {
+      margin-top: 35px;
+      margin-bottom: 18px;
+      font-size: 24px;
+    }
+
+    .project-page__address {
+      padding-left: 17px;
+    }
+
+    .project-page__files {
+      padding: 0 16px;
+    }
+
+    .file-item {
+      max-width: 100%;
+    }
+
+    .project-page__gallery {
+      margin-top: 18px;
+
+      &::before {
+        width: 84vw;
+      }
+    }
+
+    .project-page__back-btn {
+      max-width: 290px;
+      margin: 0 auto;
+    }
   }
 }

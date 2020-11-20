@@ -1,21 +1,22 @@
 .rating {
-  padding: 79px 24px 24px;
+  padding-top: 79px;
+  padding-bottom: 24px;
+  padding-left: 24px;
+  padding-right: 24px;
 
-  @media (min-width: $mobile-width) {
-    padding: 64px 16px 7px;
+  @media (max-width: $tablet-width) {
+    padding-bottom: 64px;
+    padding-top: 64px;
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 0;
 
     .container {
       padding: 0;
     }
-  }
-
-  @media (min-width: $tablet-width) {
-    padding-bottom: 26px;
-    padding-top: 64px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-bottom: 95px;
   }
 }
 
@@ -100,14 +101,14 @@
     font-weight: 500;
   }
 
-  @media (min-width: $mobile-width) {
+  @media (max-width: $mobile-max-width) {
     font-size: 13px;
     line-height: 17px;
   }
 }
 
 .rating__description-link {
-  @media (min-width: $mobile-width) {
+  @media (max-width: $tablet-width) {
     display: table;
 
     &::before {
@@ -184,7 +185,7 @@
   margin-right: 12px;
 
   &::before {
-    left: -3px;
+    left: 0;
   }
 
   @media (min-width: $tablet-width) {
