@@ -7318,6 +7318,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       -ms-flex-pack: start;
           justify-content: flex-start;
   border-bottom: 1px solid var(--color-stroke, #e3e8ee); }
+  .your-projects-list__inner-item:first-child .your-projects-list__inner-link {
+    padding-top: 12px; }
   .your-projects-list__inner-item:last-child {
     border-bottom: none; }
   @media (max-width: 768px) {
@@ -10902,7 +10904,7 @@ span.poll__hide {
     margin: 0 auto;
     display: block;
     font-size: 0.9375rem;
-    line-height: 1.26562rem;
+    line-height: 1.26563rem;
     font-weight: 500;
     color: #2C8ECC;
     text-transform: uppercase; }
@@ -11096,7 +11098,7 @@ span.poll__hide {
           align-items: center;
   padding-top: 4px;
   font-size: 0.9375rem;
-  line-height: 1.26562rem;
+  line-height: 1.26563rem;
   color: #116CA6;
   text-decoration: none; }
   .map-popup__details-btn span {
@@ -14170,7 +14172,7 @@ span.poll-page__hide {
     line-height: 22px;
     letter-spacing: 0;
     font-weight: 400;
-    color: #a6abb2;
+    color: var(--color-text, #a6abb3);
     padding-left: 0; }
     .rating-main__state-info-wrap .rating-main__name--status {
       margin-right: 15px; }
@@ -14448,6 +14450,9 @@ span.poll-page__hide {
       line-height: 24px; }
     .rating-main__list--vote .rating-main__count-wrap {
       position: static; } }
+  @media (max-width: 400px) {
+    .rating-main__list--vote .rating-main__link {
+      padding-left: 12px; } }
 
 .rating-main__item {
   -ms-flex-negative: 0;
