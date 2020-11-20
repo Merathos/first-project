@@ -133,7 +133,7 @@
     font-size: 15px;
     text-align: left;
 
-    @include tablet {
+    @include mobile {
       max-width: 100%;
     }
   }

@@ -247,7 +247,7 @@
   line-height: 20px;
   font-weight: 400;
   letter-spacing: 0;
-  color: $grey;
+  color: var(--color-text, $grey);
 }
 
 .rating-main__categories-descr {
@@ -277,7 +277,6 @@
 .rating-main__categories-info {
   padding: 15px 20px;
   margin-bottom: 30px;
-  color: var(--color-text, $grey);
 
   background-color: var(--color-bg-secondary, $color-bg);
   border: 1px solid var(--color-stroke, $light-grey);
@@ -368,7 +367,7 @@
     }
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $tablet-width) {
     &--vote {
       .rating-main__item {
         max-width: calc(100% / 2 - 12px);
@@ -584,7 +583,7 @@
   align-items: center;
   width: 32px;
 
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $tablet-width) {
     position: absolute;
     top: 27px;
     left: 21px;
@@ -631,7 +630,7 @@
 
   transition: color $style-change-duration linear;
 
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $tablet-width) {
     padding: 8px 0 10px 54px;
   }
 

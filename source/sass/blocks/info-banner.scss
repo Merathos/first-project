@@ -12,7 +12,7 @@
   border: 1px solid var(--color-interactive-default, $blue-default);
   border-radius: 5px;
 
-  &--reject {
+  &--rejected {
     border: 1px solid var(--color-interactive-default, $red);
 
     .info-banner__title {

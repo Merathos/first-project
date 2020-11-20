@@ -21,12 +21,12 @@
     padding-left: 5px;
 
     &::marker {
-      color: var(--color-interactive-accent, $blue-accent);
+      color: var(--color-interactive-accent, $blue-default);
       font-weight: 600;
     }
   }
 
-  @include tablet {
+  @include mobile {
     max-width: 100%;
   }
 }
