@@ -21,7 +21,7 @@
     padding-left: 5px;
 
     &::marker {
-      color: var(--color-interactive-accent, $blue-default);
+      color: var(--color-text, $blue-default);
       font-weight: 600;
     }
   }

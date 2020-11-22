@@ -353,6 +353,10 @@
     .rating-main__count-wrap {
       margin-left: auto;
     }
+
+    .js_hide {
+      display: none;
+    }
   }
 
   &--active {
@@ -814,7 +818,7 @@
   }
 
   .rating-list__total {
-    margin-left: auto;
+    margin-left: 25px;
     transform: translate(1px, -3px);
   }
 
@@ -839,16 +843,12 @@
     .rating-list__title {
       margin: 0;
       align-items: center;
-
-      span {
-        max-width: 66%;
-      }
     }
 
     .rating-list__total {
       width: auto;
       margin-bottom: 0;
-      margin-left: auto;
+      margin-left: 25px;
       transform: translate(-15px,-10px);
     }
 
@@ -876,10 +876,12 @@
       margin-bottom: 8px;
     }
 
-    .rating-list__title {
+    .rating-list__link-wrap {
       flex-direction: column;
       align-items: flex-start;
+    }
 
+    .rating-list__title {
       span {
         max-width: 100%;
       }
@@ -891,6 +893,7 @@
       transform: none;
       margin-top: 23px;
       margin-bottom: 0;
+      margin-left: 0;
     }
   }
 }

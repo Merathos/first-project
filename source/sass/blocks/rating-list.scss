@@ -23,10 +23,6 @@
     padding-top: 0;
     padding-bottom: 30px;
     border-top: none;
-
-    .rating-list__total {
-      margin-bottom: -13px;
-    }
   }
 
   &--my-progect .rating-list__title {
@@ -42,8 +38,7 @@
 }
 
 .rating-list__content {
-  margin-right: auto;
-  max-width: 80%;
+  width: 100%;
 }
 
 .rating-list__my-project {
@@ -76,6 +71,21 @@
   }
 }
 
+.rating-list__link-wrap {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 .rating-list__title {
   margin: 0;
   text-decoration: none;
@@ -94,11 +104,6 @@
     }
   }
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-    width: 100%;
-    margin-bottom: 24px;
-  }
-
   @media (max-width: $tablet-width - 1) {
     display: block;
     margin-top: 24px;
@@ -110,6 +115,11 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin-left: 25px;
+
+  @media (max-width: $mobile-max-width) {
+    margin-left: 0;
+  }
 }
 
 .rating-list__winner {
