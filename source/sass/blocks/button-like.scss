@@ -61,7 +61,7 @@
       flex-shrink: 0;
     }
 
-    &.is-selected {
+    &.liked {
       border-color: var(--color-interactive-default, $blue-accent);
     }
 
@@ -71,7 +71,7 @@
     }
   }
 
-  &.is-selected {
+  &.liked {
     span {
       color: var(--color-interactive-default, $blue-default);
     }
