@@ -1496,6 +1496,7 @@
         });
     }
 })();
+
 'use strict';
 (function () {
   function getCloseBtn() {
