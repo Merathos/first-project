@@ -11961,9 +11961,12 @@ span.poll__hide {
     .project-page--single-page-rating .project-page__address {
       padding-left: 17px; }
     .project-page--single-page-rating .project-page__files {
-      padding: 0 16px; }
+      padding: 0 16px;
+      grid-gap: 0; }
     .project-page--single-page-rating .file-item {
       max-width: 100%; }
+      .project-page--single-page-rating .file-item:not(:last-child) {
+        margin-bottom: 12px; }
     .project-page--single-page-rating .project-page__gallery {
       margin-top: 18px; }
       .project-page--single-page-rating .project-page__gallery::before {
@@ -14494,13 +14497,17 @@ span.poll-page__hide {
     .rating-main__list--vote .rating-main__title {
       max-width: 75%;
       line-height: 20px;
-      padding: 0; }
+      padding: 0;
+      margin: 0; }
     .rating-main__list--vote .rating-main__count-wrap {
       padding-right: 0;
       margin-left: 0; }
     .rating-main__list--vote .rating-main__count-wrap span {
       font-size: 16px;
       line-height: 22px; } }
+  @media (max-width: 600px) and (min-width: 400px) {
+    .rating-main__list--vote .rating-main__title {
+      font-size: 14px; } }
   @media (max-width: 500px) {
     .rating-main__list--vote .rating-main__item {
       max-width: 100%;

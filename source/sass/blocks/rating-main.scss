@@ -404,6 +404,7 @@
         max-width: 75%;
         line-height: 20px;
         padding: 0;
+        margin: 0;
       }
 
       .rating-main__count-wrap {
@@ -414,6 +415,14 @@
       .rating-main__count-wrap span {
         font-size: 16px;
         line-height: 22px;
+      }
+    }
+  }
+
+  @media (max-width: 600px) and (min-width: $mobile-max-width) {
+    &--vote {
+      .rating-main__title {
+        font-size: 14px;
       }
     }
   }
@@ -460,7 +469,6 @@
       }
     }
   }
-
 }
 
 .rating-main__item {
@@ -862,7 +870,7 @@
       width: auto;
       margin-bottom: 0;
       margin-left: 25px;
-      transform: translate(-15px,-10px);
+      transform: translate(-15px, -10px);
     }
 
     .button-like:not(:last-child) {
