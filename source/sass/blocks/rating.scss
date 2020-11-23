@@ -49,16 +49,16 @@
   max-width: 80%;
 
   @media (min-width: $mobile-width) {
-    margin-bottom: 20px;
+    margin-bottom: 32px;
   }
 
   @media (min-width: $tablet-width) {
     max-width: 65%;
-    margin-bottom: 23px;
+    margin-bottom: 40px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 9px;
+    margin-bottom: 24px;
   }
 }
 
@@ -83,27 +83,9 @@
 
 .rating__description {
   min-width: 100%;
-  padding: 16px;
-  margin-bottom: 0;
-
-  font-family: inherit;
-  font-size: 15px;
-  line-height: 20px;
-  letter-spacing: 0;
-  font-weight: 400;
-  color: var(--color-text, $grey);
-
-  border-radius: 5px;
-  background-color: var(--color-bg-secondary, $color-bg);
-  border: 1px solid var(--color-stroke, $light-grey);
 
   b {
     font-weight: 500;
-  }
-
-  @media (max-width: $mobile-max-width) {
-    font-size: 13px;
-    line-height: 17px;
   }
 }
 

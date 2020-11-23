@@ -4304,7 +4304,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%); }
 
-.public-debate__description {
+.description {
   margin: 0;
   padding: 15px;
   font-size: 0.8125rem;
@@ -4315,7 +4315,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   border: 1px solid var(--color-stroke, #e3e8ee);
   border-radius: 5px; }
   @media (min-width: 768px) {
-    .public-debate__description {
+    .description {
       font-size: 0.9375rem;
       line-height: 1.25rem; } }
 
@@ -6923,14 +6923,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   max-width: 80%; }
   @media (min-width: 320px) {
     .rating__title {
-      margin-bottom: 20px; } }
+      margin-bottom: 32px; } }
   @media (min-width: 768px) {
     .rating__title {
       max-width: 65%;
-      margin-bottom: 23px; } }
+      margin-bottom: 40px; } }
   @media (min-width: 1200px) {
     .rating__title {
-      margin-bottom: 9px; } }
+      margin-bottom: 24px; } }
 
 .rating__archive-link {
   display: none; }
@@ -6951,24 +6951,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     padding-right: 12px; }
 
 .rating__description {
-  min-width: 100%;
-  padding: 16px;
-  margin-bottom: 0;
-  font-family: inherit;
-  font-size: 15px;
-  line-height: 20px;
-  letter-spacing: 0;
-  font-weight: 400;
-  color: var(--color-text, #707b8c);
-  border-radius: 5px;
-  background-color: var(--color-bg-secondary, #f9f9fa);
-  border: 1px solid var(--color-stroke, #e3e8ee); }
+  min-width: 100%; }
   .rating__description b {
     font-weight: 500; }
-  @media (max-width: 400px) {
-    .rating__description {
-      font-size: 13px;
-      line-height: 17px; } }
 
 @media (max-width: 768px) {
   .rating__description-link {
