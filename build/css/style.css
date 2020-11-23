@@ -5270,6 +5270,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   color: var(--color-text, #354052); }
 
 .improvement-stage__text {
+  font-size: 0.9375rem;
+  line-height: 1.6875rem;
+  max-width: 740px;
   margin: 0; }
 
 .proposal-list {
@@ -14787,6 +14790,8 @@ span.poll-page__hide {
   opacity: 0;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s; }
+  .rating-main__hover-text--is-done {
+    color: var(--color-text, #a6abb3); }
 
 .rating-main__button-all {
   display: none; }
