@@ -182,6 +182,12 @@
       padding-top: 46px;
       padding-bottom: 72px;
     }
+
+    &--content {
+      .line {
+        max-width: 100%;
+      }
+    }
   }
 
   .page-content__title {

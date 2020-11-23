@@ -2073,6 +2073,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .page-content--implemented {
       padding-top: 46px;
       padding-bottom: 72px; }
+    .page-content--content .line {
+      max-width: 100%; }
   .page-content__title {
     margin-bottom: 32px;
     font-size: 1.875rem;
@@ -10966,7 +10968,7 @@ span.poll__hide {
     margin: 0 auto;
     display: block;
     font-size: 0.9375rem;
-    line-height: 1.26562rem;
+    line-height: 1.26563rem;
     font-weight: 500;
     color: #2C8ECC;
     text-transform: uppercase; }
@@ -11160,7 +11162,7 @@ span.poll__hide {
           align-items: center;
   padding-top: 4px;
   font-size: 0.9375rem;
-  line-height: 1.26562rem;
+  line-height: 1.26563rem;
   color: #116CA6;
   text-decoration: none; }
   .map-popup__details-btn span {
@@ -14219,7 +14221,7 @@ span.poll-page__hide {
       .rating-main .status-info {
         padding-left: 24px;
         margin-bottom: 33px; }
-      .rating-main .status-i nfo__text-groupsvg {
+      .rating-main .status-info__text-groupsvg {
         margin-right: 15px; }
       .rating-main .status-info--blue {
         margin-bottom: 30px;
@@ -14551,11 +14553,8 @@ span.poll-page__hide {
       opacity: 0; }
     .rating-main__item:hover .rating-main__hover-text {
       opacity: 1; }
-  .rating-main__item--is-done .rating-main__count-wrap, .rating-main__item--is-done:hover .rating-main__count-wrap {
-    opacity: 0; }
   .rating-main__item--is-done .rating-main__hover-text, .rating-main__item--is-done:hover .rating-main__hover-text {
-    opacity: 1;
-    color: #a6abb2; }
+    color: var(--color-text, #a6abb2); }
   .rating-main__item--no-vote .rating-main__count {
     background-color: var(--color-interactive-default, #ffffff); }
   .rating-main__item--is-active {
@@ -14572,9 +14571,16 @@ span.poll-page__hide {
   @media (max-width: 1119px) {
     .rating-main__item {
       width: 100%; } }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .rating-main__item.js_hide {
-      display: none; } }
+      display: none; }
+    .rating-main__item--is-done .rating-main__hover-text, .rating-main__item--is-done:hover .rating-main__hover-text {
+      opacity: 1;
+      top: 58px;
+      right: 36px; }
+    .rating-main__item--is-done .rating-main__count-wrap, .rating-main__item--is-done:hover .rating-main__count-wrap {
+      margin-top: -27px;
+      opacity: 1; } }
   @media (max-width: 640px) {
     .rating-main__item--is-done .rating-main__link {
       padding-top: 23px;
@@ -14591,7 +14597,7 @@ span.poll-page__hide {
           -ms-flex-align: start;
               align-items: flex-start; }
     .rating-main__item--is-done .rating-main__count-wrap {
-      display: none; }
+      margin-left: auto; }
     .rating-main__item--is-done .rating-main__hover-text {
       position: static;
       width: 100%;
