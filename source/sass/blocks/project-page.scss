@@ -677,11 +677,17 @@
 
     .project-page__files {
       padding: 0 16px;
+      grid-gap: 0;
     }
 
     .file-item {
       max-width: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
     }
+
 
     .project-page__gallery {
       margin-top: 18px;
