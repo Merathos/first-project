@@ -723,7 +723,7 @@
     display: none;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $tablet-width) {
     display: block;
     margin: 0 auto;
     margin-top: 7px;

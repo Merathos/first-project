@@ -14747,7 +14747,7 @@ span.poll-page__hide {
   margin-top: 24px; }
   .rating-main__button.js_hide {
     display: none; }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .rating-main__button {
       display: block;
       margin: 0 auto;
