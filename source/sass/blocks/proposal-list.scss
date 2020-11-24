@@ -196,6 +196,10 @@
     margin-top: 27px;
   }
 
+  &--disabled {
+    pointer-events: none;
+  }
+
   span {
     transition: color $style-change-duration;
     min-width: 35px;

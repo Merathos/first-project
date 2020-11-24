@@ -5464,6 +5464,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   @media (max-width: 767px) {
     .proposal-list__like-counter {
       margin-top: 27px; } }
+  .proposal-list__like-counter--disabled {
+    pointer-events: none; }
   .proposal-list__like-counter span {
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
@@ -10968,7 +10970,7 @@ span.poll__hide {
     margin: 0 auto;
     display: block;
     font-size: 0.9375rem;
-    line-height: 1.26563rem;
+    line-height: 1.26562rem;
     font-weight: 500;
     color: #2C8ECC;
     text-transform: uppercase; }
@@ -11162,7 +11164,7 @@ span.poll__hide {
           align-items: center;
   padding-top: 4px;
   font-size: 0.9375rem;
-  line-height: 1.26563rem;
+  line-height: 1.26562rem;
   color: #116CA6;
   text-decoration: none; }
   .map-popup__details-btn span {
