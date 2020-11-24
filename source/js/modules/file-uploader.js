@@ -3,7 +3,7 @@
   var container = document.querySelector('.js-upload-file-container');
 
   if (container) {
-    var input = container.querySelector('input[name="user-files"]');
+    var input = container.querySelector('input[id="user-files"]');
     var initialInput = input.cloneNode(true);
     var label = container.querySelector('label[for="user-files"]');
     var previewContainer = container.querySelector('.file-uploads__preview-container');

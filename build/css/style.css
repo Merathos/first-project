@@ -2073,6 +2073,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .page-content--implemented {
       padding-top: 46px;
       padding-bottom: 72px; }
+    .page-content--content .line {
+      max-width: 100%; }
   .page-content__title {
     margin-bottom: 32px;
     font-size: 1.875rem;
@@ -5462,6 +5464,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   @media (max-width: 767px) {
     .proposal-list__like-counter {
       margin-top: 27px; } }
+  .proposal-list__like-counter--disabled {
+    pointer-events: none; }
   .proposal-list__like-counter span {
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
@@ -11959,9 +11963,12 @@ span.poll__hide {
     .project-page--single-page-rating .project-page__address {
       padding-left: 17px; }
     .project-page--single-page-rating .project-page__files {
-      padding: 0 16px; }
+      padding: 0 16px;
+      grid-gap: 0; }
     .project-page--single-page-rating .file-item {
       max-width: 100%; }
+      .project-page--single-page-rating .file-item:not(:last-child) {
+        margin-bottom: 12px; }
     .project-page--single-page-rating .project-page__gallery {
       margin-top: 18px; }
       .project-page--single-page-rating .project-page__gallery::before {
@@ -12225,7 +12232,7 @@ span.poll__hide {
     fill: none; }
   .project-vote__vote-btn--approve svg {
     stroke: var(--color-icon, #70bf56); }
-  .project-vote__vote-btn--rejected svg {
+  .project-vote__vote-btn--reject svg {
     stroke: var(--color-icon, #e55050); }
 
 .project-vote--voted .project-vote__vote-btn {
@@ -12416,6 +12423,9 @@ span.poll__hide {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0;
   font-size: 1.125rem;
   line-height: 1.4375rem; }
@@ -14219,7 +14229,7 @@ span.poll-page__hide {
       .rating-main .status-info {
         padding-left: 24px;
         margin-bottom: 33px; }
-      .rating-main .status-i nfo__text-groupsvg {
+      .rating-main .status-info__text-groupsvg {
         margin-right: 15px; }
       .rating-main .status-info--blue {
         margin-bottom: 30px;
@@ -14492,13 +14502,17 @@ span.poll-page__hide {
     .rating-main__list--vote .rating-main__title {
       max-width: 75%;
       line-height: 20px;
-      padding: 0; }
+      padding: 0;
+      margin: 0; }
     .rating-main__list--vote .rating-main__count-wrap {
       padding-right: 0;
       margin-left: 0; }
     .rating-main__list--vote .rating-main__count-wrap span {
       font-size: 16px;
       line-height: 22px; } }
+  @media (max-width: 600px) and (min-width: 400px) {
+    .rating-main__list--vote .rating-main__title {
+      font-size: 14px; } }
   @media (max-width: 500px) {
     .rating-main__list--vote .rating-main__item {
       max-width: 100%;
@@ -14551,11 +14565,8 @@ span.poll-page__hide {
       opacity: 0; }
     .rating-main__item:hover .rating-main__hover-text {
       opacity: 1; }
-  .rating-main__item--is-done .rating-main__count-wrap, .rating-main__item--is-done:hover .rating-main__count-wrap {
-    opacity: 0; }
   .rating-main__item--is-done .rating-main__hover-text, .rating-main__item--is-done:hover .rating-main__hover-text {
-    opacity: 1;
-    color: #a6abb2; }
+    color: var(--color-text, #a6abb2); }
   .rating-main__item--no-vote .rating-main__count {
     background-color: var(--color-interactive-default, #ffffff); }
   .rating-main__item--is-active {
@@ -14572,9 +14583,16 @@ span.poll-page__hide {
   @media (max-width: 1119px) {
     .rating-main__item {
       width: 100%; } }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
     .rating-main__item.js_hide {
-      display: none; } }
+      display: none; }
+    .rating-main__item--is-done .rating-main__hover-text, .rating-main__item--is-done:hover .rating-main__hover-text {
+      opacity: 1;
+      top: 58px;
+      right: 36px; }
+    .rating-main__item--is-done .rating-main__count-wrap, .rating-main__item--is-done:hover .rating-main__count-wrap {
+      margin-top: -27px;
+      opacity: 1; } }
   @media (max-width: 640px) {
     .rating-main__item--is-done .rating-main__link {
       padding-top: 23px;
@@ -14591,7 +14609,7 @@ span.poll-page__hide {
           -ms-flex-align: start;
               align-items: flex-start; }
     .rating-main__item--is-done .rating-main__count-wrap {
-      display: none; }
+      margin-left: auto; }
     .rating-main__item--is-done .rating-main__hover-text {
       position: static;
       width: 100%;
