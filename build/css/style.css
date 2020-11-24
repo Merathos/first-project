@@ -3789,23 +3789,25 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .article-link--content:hover:not(.focus-visible) {
       color: var(--color-text, #116ca6); }
 
+.mod-theme-inverse .article-link--content::before,
+.mod-theme-blue .article-link--content::before,
+.mod-theme-comfort .article-link--content::before,
+.mod-theme-brown .article-link--content::before {
+  opacity: 0; }
+
+.mod-theme-inverse .article-link--content:hover,
+.mod-theme-blue .article-link--content:hover,
+.mod-theme-comfort .article-link--content:hover,
+.mod-theme-brown .article-link--content:hover {
+  text-decoration: underline; }
+
 @media (max-width: 1199px) {
   .article-link:hover:not(.focus-visible) {
     color: var(--color-interactive-default, #2c8ecc); }
   .article-link:active:not(.focus-visible) {
     color: var(--color-interactive-accent, #116ca6); }
   .article-link--content:hover:not(.focus-visible) {
-    color: var(--color-text, #116ca6); }
-  .mod-theme-inverse .article-link--content::before,
-  .mod-theme-blue .article-link--content::before,
-  .mod-theme-comfort .article-link--content::before,
-  .mod-theme-brown .article-link--content::before {
-    opacity: 0; }
-  .mod-theme-inverse .article-link--content:hover,
-  .mod-theme-blue .article-link--content:hover,
-  .mod-theme-comfort .article-link--content:hover,
-  .mod-theme-brown .article-link--content:hover {
-    text-decoration: underline; } }
+    color: var(--color-text, #116ca6); } }
 
 @media (max-width: 767px) {
   .article-link {
@@ -4316,6 +4318,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   background-color: var(--color-bg-secondary, #f9f9fa);
   border: 1px solid var(--color-stroke, #e3e8ee);
   border-radius: 5px; }
+  .description b {
+    font-weight: 500; }
   @media (min-width: 768px) {
     .description {
       font-size: 0.9375rem;
@@ -6884,20 +6888,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .rating {
   padding-top: 79px;
-  padding-bottom: 24px;
-  padding-left: 24px;
-  padding-right: 24px; }
+  padding-bottom: 24px; }
   @media (max-width: 768px) {
     .rating {
       padding-bottom: 64px;
-      padding-top: 64px;
-      padding-right: 16px;
-      padding-left: 16px; } }
+      padding-top: 64px; } }
   @media (max-width: 320px) {
     .rating {
-      padding-bottom: 0; }
-      .rating .container {
-        padding: 0; } }
+      padding-bottom: 0; } }
 
 .rating__head {
   margin-bottom: 8px;
@@ -6957,8 +6955,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .rating__description {
   min-width: 100%; }
-  .rating__description b {
-    font-weight: 500; }
 
 @media (max-width: 768px) {
   .rating__description-link {
@@ -8610,10 +8606,12 @@ span.poll__hide {
 .discussion {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  padding: 79px 24px 24px; }
+  padding-top: 79px;
+  padding-bottom: 24px; }
   @media (max-width: 767px) {
     .discussion {
-      padding: 64px 16px 7px; } }
+      padding-top: 64px;
+      padding-bottom: 7px; } }
 
 @media (max-width: 767px) {
   .discussion__archive-link {
@@ -10808,13 +10806,16 @@ span.poll__hide {
     width: 100%; } }
 
 .improvement {
-  padding: 79px 24px 24px; }
+  padding-top: 79px;
+  padding-bottom: 120px; }
   @media (max-width: 1119px) {
     .improvement {
-      padding: 79px 24px 104px; } }
+      padding-top: 79px;
+      padding-bottom: 104px; } }
   @media (max-width: 767px) {
     .improvement {
-      padding: 64px 16px 65px; } }
+      padding-top: 64px;
+      padding-bottom: 65px; } }
 
 .improvement__list {
   margin-bottom: 47px;
@@ -14578,9 +14579,7 @@ span.poll-page__hide {
   @media (max-width: 1119px) {
     .rating-main__item {
       width: 100%; } }
-  @media (max-width: 768px) {
-    .rating-main__item.js_hide {
-      display: none; }
+  @media (max-width: 1024px) {
     .rating-main__item--is-done .rating-main__hover-text, .rating-main__item--is-done:hover .rating-main__hover-text {
       opacity: 1;
       top: 58px;
@@ -14588,6 +14587,9 @@ span.poll-page__hide {
     .rating-main__item--is-done .rating-main__count-wrap, .rating-main__item--is-done:hover .rating-main__count-wrap {
       margin-top: -27px;
       opacity: 1; } }
+  @media (max-width: 768px) {
+    .rating-main__item.js_hide {
+      display: none; } }
   @media (max-width: 640px) {
     .rating-main__item--is-done .rating-main__link {
       padding-top: 23px;

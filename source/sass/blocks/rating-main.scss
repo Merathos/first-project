@@ -539,11 +539,7 @@
     width: 100%;
   }
 
-  @media (max-width: $tablet-width) {
-    &.js_hide {
-      display: none;
-    }
-
+  @media (max-width: 1024px) {
     &--is-done,
     &--is-done:hover {
       .rating-main__hover-text {
@@ -556,6 +552,12 @@
         margin-top: -27px;
         opacity: 1;
       }
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    &.js_hide {
+      display: none;
     }
   }
 

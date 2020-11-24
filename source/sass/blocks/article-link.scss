@@ -50,6 +50,18 @@
   }
 }
 
+.mod-theme-inverse .article-link--content,
+.mod-theme-blue .article-link--content,
+.mod-theme-comfort .article-link--content,
+.mod-theme-brown .article-link--content {
+  &::before {
+    opacity: 0;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
 @include tablet {
   .article-link {
@@ -65,19 +77,6 @@
       &:hover:not(.focus-visible) {
         color: var(--color-text, $blue-accent);
       }
-    }
-  }
-
-  .mod-theme-inverse .article-link--content,
-  .mod-theme-blue .article-link--content,
-  .mod-theme-comfort .article-link--content,
-  .mod-theme-brown .article-link--content {
-    &::before {
-      opacity: 0;
-    }
-
-    &:hover {
-      text-decoration: underline;
     }
   }
 }
