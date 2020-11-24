@@ -5464,6 +5464,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   @media (max-width: 767px) {
     .proposal-list__like-counter {
       margin-top: 27px; } }
+  .proposal-list__like-counter--disabled {
+    pointer-events: none; }
   .proposal-list__like-counter span {
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
