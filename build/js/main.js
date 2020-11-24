@@ -275,7 +275,7 @@
   var container = document.querySelector('.js-upload-file-container');
 
   if (container) {
-    var input = container.querySelector('input[name="user-files"]');
+    var input = container.querySelector('input[id="user-files"]');
     var initialInput = input.cloneNode(true);
     var label = container.querySelector('label[for="user-files"]');
     var previewContainer = container.querySelector('.file-uploads__preview-container');
@@ -1685,6 +1685,33 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
     initRangeSlider(item);
 });
 
+
+'use strict';
+(function () {
+  var $ajaxWrappers = document.querySelectorAll('.js-ajax-wrapper');
+
+  var callback = function (mutationsList) {
+    Object.values(mutationsList).forEach(function (mutation) {
+      if (mutation.type === 'attributes' || mutation.type === 'childList') {
+        var $infoBanners = document.querySelectorAll('.info-banner');
+
+        if ($infoBanners.length > 0) {
+          $infoBanners.forEach(function ($infoBanner) {
+            window.initInfoBannerToggle($infoBanner);
+          });
+        }
+      }
+    });
+  };
+
+  var observer = new MutationObserver(callback);
+
+  if ($ajaxWrappers.length > 0) {
+    $ajaxWrappers.forEach(function ($ajaxWrapper) {
+      observer.observe($ajaxWrapper, {attributes: true, childList: true, subtree: true});
+    });
+  }
+})();
 
 'use strict';
 
