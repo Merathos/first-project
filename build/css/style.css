@@ -12232,7 +12232,7 @@ span.poll__hide {
     fill: none; }
   .project-vote__vote-btn--approve svg {
     stroke: var(--color-icon, #70bf56); }
-  .project-vote__vote-btn--rejected svg {
+  .project-vote__vote-btn--reject svg {
     stroke: var(--color-icon, #e55050); }
 
 .project-vote--voted .project-vote__vote-btn {
@@ -12423,6 +12423,9 @@ span.poll__hide {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0;
   font-size: 1.125rem;
   line-height: 1.4375rem; }

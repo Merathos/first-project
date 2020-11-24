@@ -159,7 +159,7 @@
     stroke: var(--color-icon, $green);
   }
 
-  &--rejected svg {
+  &--reject svg {
     stroke: var(--color-icon, $red);
   }
 }
