@@ -54,12 +54,14 @@
 .mod-theme-blue .article-link--content,
 .mod-theme-comfort .article-link--content,
 .mod-theme-brown .article-link--content {
+  text-decoration: underline;
+
   &::before {
     opacity: 0;
   }
 
   &:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
 }
 
