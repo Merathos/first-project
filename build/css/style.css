@@ -13864,6 +13864,8 @@ span.poll-page__hide {
     color: #e55050; }
   .your-comment__content--declined .your-comment__text {
     color: var(--color-text, #707b8c); }
+  .your-comment__content--moderation .your-comment__status p {
+    color: var(--color-text, #707b8c); }
 
 .your-comment__top-wrapper {
   display: -webkit-box;
