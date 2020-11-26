@@ -28,7 +28,7 @@
     span {
       margin-left: 5px;
       font-weight: 400;
-      color: var(--color-text, #70bf56);
+      color: var(--color-text, $grey-default);
 
       @include mobile {
         display: block;
@@ -58,6 +58,21 @@
   &--blue {
     p span {
       color: var(--color-text, #2c8ecc);
+    }
+  }
+  &--red {
+    p span {
+      color: var(--color-text, $red);
+    }
+  }
+  &--orange {
+    p span {
+      color: var(--color-text, $orange);
+    }
+  }
+  &--green {
+    p span {
+      color: var(--color-text, $green);
     }
   }
 }
