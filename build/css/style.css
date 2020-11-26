@@ -6748,7 +6748,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .hearings-status p span {
       margin-left: 5px;
       font-weight: 400;
-      color: var(--color-text, #70bf56); }
+      color: var(--color-text, #a6abb3); }
       @media (max-width: 767px) {
         .hearings-status p span {
           display: block;
@@ -6771,6 +6771,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         margin-right: 12px; } }
   .hearings-status--blue p span {
     color: var(--color-text, #2c8ecc); }
+  .hearings-status--red p span {
+    color: var(--color-text, #e55050); }
+  .hearings-status--orange p span {
+    color: var(--color-text, #fca844); }
+  .hearings-status--green p span {
+    color: var(--color-text, #70bf56); }
 
 .hearings-result {
   margin-bottom: 35px;
@@ -10994,7 +11000,7 @@ span.poll__hide {
     margin: 0 auto;
     display: block;
     font-size: 0.9375rem;
-    line-height: 1.26563rem;
+    line-height: 1.26562rem;
     font-weight: 500;
     color: #2C8ECC;
     text-transform: uppercase; }
@@ -11188,7 +11194,7 @@ span.poll__hide {
           align-items: center;
   padding-top: 4px;
   font-size: 0.9375rem;
-  line-height: 1.26563rem;
+  line-height: 1.26562rem;
   color: #116CA6;
   text-decoration: none; }
   .map-popup__details-btn span {
