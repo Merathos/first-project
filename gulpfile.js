@@ -79,7 +79,17 @@ gulp.task('sprite', () => gulp.src('source/img/sprite/*.svg')
 gulp.task('copy', () => gulp.src([
     'source/fonts/**/*.{ttf,woff,woff2}',
     'source/img/**',
+    'source/json/**',
     'source/favicon/*'
+  ],
+  {
+    base: 'source'
+  })
+    .pipe(gulp.dest('build'))
+);
+
+gulp.task('copyJson', () => gulp.src([
+    'source/json/**',
   ],
   {
     base: 'source'
@@ -105,6 +115,7 @@ gulp.task('serve', () => {
   gulp.watch('source/sass/**/*.scss', gulp.series('style'));
   gulp.watch('source/**/*.html', gulp.series('html')).on('change', server.reload);
   gulp.watch('source/js/**/*.js', gulp.series('jsPlugins', 'js')).on('change', server.reload);
+  gulp.watch('source/json/**', gulp.series('copyJson')).on('change', server.reload);
 });
 
 gulp.task('build', gulp.series('clean', 'images', 'webp', 'sprite', 'copy', 'style', 'html', 'js', 'jsPlugins'));

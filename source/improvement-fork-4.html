@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru">
 <include src="source/components/head.html"></include>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a365638f-7d25-460e-a080-fc0614786457" type="text/javascript"></script>
 
 <body class="page-body">
     <include src="source/components/special-popup.html"></include>
@@ -133,9 +134,12 @@
             <div class="proposal-winners__map">
                 <div class="proposal-winners__map-container">
                     <button type="button" aria-label="Закрыть карту" class="proposal-winners__close-map-btn"></button>
-                    <iframe
-                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A9cb3dfe5638344382497a81fa8472068b0dfbf25654b37a69d276c0dce8d2718&amp;source=constructor"
-                        width="800" height="600" title="Карта"></iframe>
+<!--                    <iframe-->
+<!--                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A9cb3dfe5638344382497a81fa8472068b0dfbf25654b37a69d276c0dce8d2718&amp;source=constructor"-->
+<!--                        width="800" height="600" title="Карта"></iframe>-->
+                  <div class="landscaping-form__section map-section">
+                    <div id="map" class="map"></div>
+                  </div>
                 </div>
             </div>
         </section>
