@@ -7954,6 +7954,76 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .numbered-list {
       max-width: 100%; } }
 
+.personal-news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.personal-news__wrap {
+  position: relative;
+  margin-left: 16px;
+  margin-top: 2px;
+  cursor: pointer; }
+  .personal-news__wrap:hover .personal-news__text {
+    display: block; }
+  .personal-news__wrap svg {
+    fill: var(--color-icon, #9bd2f4); }
+
+.personal-news__text {
+  position: absolute;
+  bottom: -31px;
+  left: -12px;
+  z-index: 10;
+  display: none;
+  margin: 0;
+  padding: 4px 8px;
+  font-size: 0.8125rem;
+  line-height: 1.3;
+  color: var(--color-text, #354052);
+  white-space: nowrap;
+  background-color: var(--color-bg-secondary, #eaf4fa);
+  border-radius: 2px;
+  -webkit-transform: translateX(-40%);
+          transform: translateX(-40%); }
+  .personal-news__text::after {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: calc(50% - 6px);
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-bg-secondary, #eaf4fa);
+    border-radius: 1px;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+
+.personal-poll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .personal-poll--page-info .personal-poll__text {
+    margin: 0;
+    margin-bottom: 13px;
+    margin-left: 8px;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--color-text, #354052); }
+
+.personal-poll__text {
+  margin-right: 5px;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--color-text, #a6abb2); }
+
 .news-notice {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -8318,6 +8388,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
             transform: matrix(1, 0, 0, -1, 0, 0);
     -webkit-transition: bottom 0.2s linear;
     transition: bottom 0.2s linear; }
+  .poll__item--personal {
+    padding-top: 5px; }
   .poll__item:hover {
     -webkit-box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
             box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15); }
@@ -11000,7 +11072,7 @@ span.poll__hide {
     margin: 0 auto;
     display: block;
     font-size: 0.9375rem;
-    line-height: 1.26562rem;
+    line-height: 1.26563rem;
     font-weight: 500;
     color: #2C8ECC;
     text-transform: uppercase; }
@@ -11194,7 +11266,7 @@ span.poll__hide {
           align-items: center;
   padding-top: 4px;
   font-size: 0.9375rem;
-  line-height: 1.26562rem;
+  line-height: 1.26563rem;
   color: #116CA6;
   text-decoration: none; }
   .map-popup__details-btn span {
