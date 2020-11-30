@@ -7,13 +7,13 @@
 
   <include src="source/components/header.html"></include>
 
-  <main class="landscaping-page page-content">
-    <section class="landscaping">
+  <main>
+    <section class="proposal">
       <div class="container">
-        <h1 class="page-title landscaping__title">
+        <h1 class="proposal__form-title page-title page-title--large">
           Форма предложения по благоустройству территории
         </h1>
-        <a class="landscaping__rules-link link link--blue link--rules" href="#">
+        <a class="proposal__rules link link--blue link--rules" href="#">
           <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
             <path fill="currentColor" fill-rule="evenodd"
               d="M.2 12C.2 5.494 5.492.2 12 .2 18.505.2 23.8 5.494 23.8 12c0 6.506-5.294 11.8-11.8 11.8C5.492 23.8.2 18.506.2 12zm2.152 0c0 5.32 4.328 9.647 9.647 9.647 5.32 0 9.647-4.327 9.647-9.647S17.318 2.354 12 2.354 2.352 6.68 2.352 12z"
@@ -23,26 +23,26 @@
           </svg>
           <span>Правила размещения проектов</span>
         </a>
-        <form action="#" class="landscaping-form" id="js-improvement-form" novalidate>
-          <div class="landscaping-form__section landscaping-form__section--description">
-            <h2 class="landscaping-form__title">
+        <form action="#" class="proposal__form" id="js-improvement-form" novalidate>
+          <div class="proposal__description description-block">
+            <h2 class="description-block__title">
               Название и описание предложения
             </h2>
-            <div class="landscaping-form__textarea-container">
+            <div class="description-block__textarea-container">
               <textarea name="proposition" id="proposition" cols="30" rows="10"
-                class="landscaping-form__textarea landscaping-form__proposition-name"
+                class="description-block__textarea description-block__proposition-name"
                 placeholder="Название (ограничение 255 символов)" aria-label="Название предложения"></textarea>
-              <span class="landscaping-form__textarea-error">Вы превысили лимит на хх символов</span>
+              <span class="description-block__textarea-error">Вы превысили лимит на хх символов</span>
             </div>
-            <div class="landscaping-form__textarea-container">
+            <div class="description-block__textarea-container">
               <textarea name="description" id="description" cols="30" rows="10"
-                class="landscaping-form__textarea landscaping-form__description"
+                class="description-block__textarea description-block__description"
                 placeholder="Описание  (ограничение 500 символов)" aria-label="Описание предложения"></textarea>
-              <span class="landscaping-form__textarea-error">Вы превысили лимит
+              <span class="description-block__textarea-error">Вы превысили лимит
                 на хх символов</span>
             </div>
           </div>
-          <div class="landscaping-form__section landscaping-form__section--upload image-uploads">
+          <div class="proposal__image-uploads image-uploads">
             <h2 class="subtitle">Загрузка изображений</h2>
             <p>Если необходимо, вы можете загрузить изображения. Максимум 5&nbsp;изображенний, формата JPEG, PNG, GIF.
             </p>
@@ -60,7 +60,7 @@
               </div>
             </div>
           </div>
-          <div class="landscaping-form__section map-section">
+          <div class="proposal__map map-section">
             <h2 class="map-section__title">Карта</h2>
             <p class="map-section__tip">
               Введите адрес проблемной территории или отметьте ее на карте
@@ -71,9 +71,9 @@
               <input type="hidden" id="user-coords" name="" value="Россия,Ярославль">
             <div id="map"></div>
           </div>
-          <div class="landscaping-form__button-wrapper">
+          <div class="proposal__buttons buttons-wrapper">
             <button type="button" class="button button--white">Отменить</button>
-            <button type="button" class="button button--blue landscaping-form__submit-btn" id="improvement-submit-btn">
+            <button type="button" class="buttons-wrapper__submit-btn button button--blue" id="improvement-submit-btn">
               Отправить на модерацию
             </button>
           </div>
