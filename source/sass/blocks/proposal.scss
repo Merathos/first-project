@@ -1,77 +1,203 @@
 .proposal {
-  & iframe {
-    border: none;
-    width: 100%;
-    height: 600px;
+  padding-top: 40px;
+  padding-bottom: 72px;
 
-    @media (max-width: $tablet-width - 1) {
-      width: 100%;
-      height: 288px;
+  @media (min-width: $tablet-width) {
+    padding-bottom: 104px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 80px;
+  }
+
+  &--aside {
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: minmax(740px, 1fr) 360px;
+      grid-column-gap: 20px;
+      grid-template-areas:
+        "a   a"
+        "b   b"
+        "c   e"
+        "d   e";
+
+      >* {
+        align-self: start;
+      }
     }
   }
 }
 
-.proposal__title {
-  margin-bottom: 26px;
-  max-width: 100%;
+.proposal__info {
 
-  @media (max-width: $desktop-width - 1) {
-    margin-bottom: 33px;
+  margin: 0 0 32px;
+
+  &:last-child {
+    margin-bottom: 0;
   }
 
-  @media (max-width: $tablet-width - 1) {
-    margin-bottom: 34px;
-  }
-
-  &--big {
-    @media (max-width: $tablet-width - 1) {
-      font-size: rem(30px);
-      line-height: rem(36px);
-    }
-  }
-}
-
-.proposal__link {
-  margin-bottom: 59px;
-
-  @media (max-width: $desktop-width - 1) {
-    margin-bottom: 57px;
-  }
-
-  @media (max-width: $tablet-width - 1) {
-    margin-bottom: 46px;
+  @media (min-width: $desktop-width) {
+    grid-area: a;
+    margin: 0 0 40px;
   }
 }
 
 .proposal__comments {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 
-  @media (max-width: $desktop-width - 1) {
-    margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0;
   }
 
-  @media (max-width: $tablet-width - 1) {
-    margin-bottom: 16px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 12px;
+  }
+}
+
+.proposal__title {
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: b;
+  }
+}
+
+.proposal__vote {
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: sticky;
+    top: 115px;
+    grid-area: e;
+  }
+}
+
+.proposal__text-container {
+  margin-bottom: 48px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 64px;
+  }
+}
+
+.proposal__text-container p {
+  margin: 0;
+  line-height: 180%;
+}
+
+.proposal__wrapper {
+  @media (min-width: $desktop-width) {
+    grid-area: d;
   }
 }
 
 .proposal__last-comment {
-  margin-bottom: 63px;
-}
+  margin-bottom: 56px;
 
-.proposal__description {
-  margin-bottom: 32px;
+  &:last-child {
+    margin-bottom: 0;
+  }
 
-  @media (max-width: $tablet-width - 1) {
-    margin-bottom: 16px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 64px;
   }
 }
 
-.proposal__uploads-container {
-  margin-bottom: 80px;
+.proposal__rules {
+  margin-bottom: 48px;
 
-  @media (max-width: $tablet-width - 1) {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 56px;
+  }
+}
+
+.proposal__form-title {
+  margin-bottom: 32px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 24px;
+  }
+}
+
+.proposal__description {
+  margin-bottom: 72px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.proposal__image-uploads {
+  margin-bottom: 72px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 80px;
+  }
+}
+
+.proposal__map {
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 48px;
+  }
+}
+
+.proposal__slider {
+  margin-bottom: 56px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 48px;
+  }
+
+  @media (min-width: $tablet-width) {
     margin-bottom: 72px;
+  }
+
+  h2 {
+    margin: 0 0 24px;
+  }
+}
+
+.proposal__gallery {
+  max-width: 740px;
+
+  @media (max-width: $desktop-width - 1) {
+    max-width: unset;
+  }
+
+  &--bordered {
+    margin-bottom: 40px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--color-stroke, $light-grey);
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 48px;
+    }
   }
 }
 
@@ -80,6 +206,7 @@
 }
 
 .proposal__status {
+  grid-area: c;
   padding: 15px 24px;
   border: 1px solid var(--color-stroke, $light-grey);
   border-radius: $border-radius;
@@ -108,505 +235,10 @@
   }
 }
 
-.proposal__button-wrapper {
-  display: flex;
-  justify-content: space-between;
-
-  @media (max-width: $tablet-width - 1) {
-    flex-direction: column;
-  }
-}
-
-.proposal__submit-btn {
-  width: 274px;
-  padding: 16px 16px;
-
-  @media (max-width: $tablet-width - 1) {
-    order: -1;
-    margin-bottom: 15px;
-    width: 100%;
-  }
-}
-
-.proposal {
-  .landscaping-form__section--description {
-    @media (max-width: $tablet-width - 1) {
-      margin-bottom: 64px;
-    }
-  }
-
-  .landscaping-form__proposition-name {
-    @media (max-width: $tablet-width - 1) {
-      margin-top: 24px;
-      min-height: 163px;
-    }
-  }
-
-  .landscaping-form__description {
-    @media (max-width: $tablet-width - 1) {
-      margin-top: 16px;
-      min-height: 217px;
-    }
-  }
-}
-
-.proposal--approved {
-  @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: 1fr 360px;
-    grid-column-gap: 20px;
-    grid-template-areas:
-      "a   a"
-      "k   c"
-      "b   c"
-      "d   c"
-      "e   c"
-      "f   c";
-  }
-
-  > * {
-    align-self: start;
-  }
-
-  .proposal__title {
-    grid-area: a;
-    margin-bottom: 41px;
-
-    @media (max-width: $desktop-width - 1) {
-      margin-bottom: 40px;
-      margin-left: $tablet-padding;
-      margin-right: $tablet-padding;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      margin-bottom: 24px;
-      margin-left: $mobile-padding;
-      margin-right: $mobile-padding;
-    }
-
-    &--declined {
-      margin-bottom: 24px;
-    }
-  }
-
-  .proposal__link {
-    grid-area: k;
-    margin-bottom: 40px;
-
-    @media (max-width: $desktop-width - 1) {
-      padding-left: $tablet-padding;
-      padding-right: $tablet-padding;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      padding-left: $mobile-padding;
-      padding-right: $mobile-padding;
-    }
-  }
-
-  .proposal__text-container {
-    grid-area: b;
-    margin-bottom: 25px;
-
-    @media (max-width: $desktop-width - 1) {
-      margin-bottom: 40px;
-      margin-left: $tablet-padding;
-      margin-right: $tablet-padding;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      margin-bottom: 32px;
-      margin-left: $mobile-padding;
-      margin-right: $mobile-padding;
-    }
-  }
-
-  .proposal__text-container p {
-    line-height: 180%;
-  }
-
-  .proposal__vote {
-    @media (min-width: $desktop-width) {
-      position: sticky;
-      top: 115px;
-
-      grid-area: c;
-    }
-
-    @media (max-width: $desktop-width - 1) {
-      margin-left: $tablet-padding;
-      margin-right: $tablet-padding;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      margin-left: $mobile-padding;
-      margin-right: $mobile-padding;
-    }
-  }
-
-  .project-vote__container {
-    @media (max-width: $desktop-width - 1) {
-      margin-bottom: 40px;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      padding: 24px;
-      margin-bottom: 32px;
-    }
-  }
-
-  .project-page__text-container p {
-    padding-top: 16px;
-    padding-right: 2px;
-    font-size: rem(15px);
-    line-height: 180%;
-  }
-
-  .proposal__slider {
-    margin-bottom: 48px;
-    grid-area: d;
-
-    @media (max-width: $desktop-width - 1) {
-      margin-bottom: 73px;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      margin-bottom: 58px;
-    }
-
-    h2 {
-      margin-bottom: 22px;
-
-      @media (max-width: $desktop-width - 1) {
-        margin-left: $tablet-padding;
-        margin-right: $tablet-padding;
-      }
-
-      @media (max-width: $tablet-width - 1) {
-        margin-left: $mobile-padding;
-        margin-right: $mobile-padding;
-      }
-    }
-  }
-
-  .proposal__gallery {
-    max-width: 740px;
-
-    @media (max-width: $desktop-width - 1) {
-      max-width: unset;
-    }
-  }
-
-  .proposal__map {
-    grid-area: e;
-    margin-bottom: 46px;
-
-    @media (max-width: $desktop-width - 1) {
-      margin-bottom: 41px;
-      margin-left: $tablet-padding;
-      margin-right: $tablet-padding;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      margin-bottom: 34px;
-      margin-left: $mobile-padding;
-      margin-right: $mobile-padding;
-    }
-
-    h2 {
-      margin-bottom: 9px;
-
-      @media (max-width: $desktop-width - 1) {
-        margin-bottom: 9px;
-      }
-
-      @media (max-width: $tablet-width - 1) {
-        margin-bottom: 16px;
-      }
-    }
-  }
-
-  iframe {
-    height: 400px;
-
-    @media (max-width: $tablet-width - 1) {
-      height: 288px;
-    }
-  }
-
-  .proposal__button-wrapper {
-    justify-self: start;
-    grid-area: f;
-
-    @media (max-width: $desktop-width - 1) {
-      margin-left: $tablet-padding;
-      margin-right: $tablet-padding;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      margin-left: $mobile-padding;
-      margin-right: $mobile-padding;
-    }
-  }
-
-  .button {
-    padding: 17px 46px 15px;
-
-    span {
-      font-size: rem(14px);
-      padding: 0;
-    }
-  }
-}
-
-.proposal--implemented {
-  @media (min-width: $desktop-width) {
-    display: grid;
-    grid-template-columns: minmax(740px, 1fr) 360px;
-    grid-column-gap: 20px;
-    grid-template-areas:
-      "a   a"
-      "b   c"
-      "d   c"
-      "e   c"
-      "f   c"
-      "g   c"
-      "h   c"
-      "i   c";
-  }
-
-  > * {
-    align-self: start;
-  }
-
-  .proposal__title {
-    grid-area: a;
-    margin-bottom: 41px;
-
-    @media (max-width: $desktop-width - 1) {
-      margin-left: $tablet-padding;
-      margin-right: $tablet-padding;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      font-size: rem(24px);
-      line-height: rem(28px);
-      margin-bottom: 32px;
-      margin-left: $mobile-padding;
-      margin-right: $mobile-padding;
-    }
-  }
-
-  .proposal__status {
-    grid-area: b;
-
-    @media (max-width: $desktop-width - 1) {
-      margin-left: $tablet-padding;
-      margin-right: $tablet-padding;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      margin-left: $mobile-padding;
-      margin-right: $mobile-padding;
-    }
-  }
-
-  .proposal__vote {
-    grid-area: c;
-
-    @media (min-width: $desktop-width) {
-      position: sticky;
-      top: 90px;
-    }
-
-    @media (max-width: $desktop-width - 1) {
-      margin-bottom: 48px;
-      margin-left: $tablet-padding;
-      margin-right: $tablet-padding;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      margin-bottom: 55px;
-      margin-left: $mobile-padding;
-      margin-right: $mobile-padding;
-    }
-  }
-
-  .project-vote__container {
-    @media (max-width: $tablet-width - 1) {
-      padding: 24px;
-      margin-bottom: 48px;
-    }
-  }
-
-  .project-vote__like-counter {
-    span {
-      font-weight: 400;
-
-      @media (max-width: $tablet-width - 1) {
-        margin-right: 0;
-        font-size: rem(15px);
-        line-height: 135%;
-      }
-    }
-
-    .project-vote__value {
-      font-weight: 500;
-    }
-  }
-
-  .proposal__files {
-    grid-area: d;
-    margin-bottom: 48px;
-
-    @media (max-width: $desktop-width - 1) {
-      padding-left: $tablet-padding;
-      padding-right: $tablet-padding;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      padding-left: $mobile-padding;
-      padding-right: $mobile-padding;
-      margin-bottom: 40px;
-    }
-
-    h2 {
-      margin-bottom: 25px;
-    }
-  }
-
-  .proposal__gallery {
-    max-width: 740px;
-
-    @media (max-width: $desktop-width - 1) {
-      max-width: unset;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      padding-bottom: 55px;
-    }
-
-    &--bordered {
-      grid-area: e;
-      padding-bottom: 48px;
-      border-bottom: 1px solid var(--color-stroke, $light-grey);
-
-      @media (max-width: $tablet-width - 1) {
-        padding-bottom: 47px;
-      }
-    }
-
-    &--grid {
-      padding-bottom: 48px;
-
-      @media (max-width: $desktop-width - 1) {
-        padding-bottom: 72px;
-      }
-
-      @media (max-width: $tablet-width - 1) {
-        padding-bottom: 55px;
-      }
-    }
-  }
-
-  .proposal__text-container {
-    grid-area: f;
-    padding-top: 34px;
-    margin-bottom: 25px;
-
-    @media (max-width: $desktop-width - 1) {
-      padding-top: 26px;
-      margin-bottom: 62px;
-      margin-left: $tablet-padding;
-      margin-right: $tablet-padding;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      margin-top: 0;
-      margin-bottom: 55px;
-      margin-left: $mobile-padding;
-      margin-right: $mobile-padding;
-    }
-
-    p {
-      font-size: rem(15px);
-      line-height: 180%;
-    }
-  }
-
-  .proposal__slider {
-    grid-area: g;
-
-    h2 {
-      margin-bottom: 24px;
-
-      @media (max-width: $desktop-width - 1) {
-        margin-left: $tablet-padding;
-        margin-right: $tablet-padding;
-      }
-
-      @media (max-width: $tablet-width - 1) {
-        margin-left: $mobile-padding;
-        margin-right: $mobile-padding;
-      }
-    }
-  }
-
-  .proposal__map {
-    grid-area: h;
-    margin-bottom: 40px;
-
-    @media (max-width: $desktop-width - 1) {
-      margin-bottom: 44px;
-      margin-left: $tablet-padding;
-      margin-right: $tablet-padding;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      margin-bottom: 34px;
-      margin-left: $mobile-padding;
-      margin-right: $mobile-padding;
-    }
-
-    h2 {
-      margin-bottom: 8px;
-
-      @media (max-width: $tablet-width - 1) {
-        margin-bottom: 16px;
-      }
-    }
-  }
-
-  iframe {
-    width: 100%;
-    height: 400px;
-
-    @media (max-width: $tablet-width - 1) {
-      height: 288px;
-    }
-  }
-
-  .proposal__button-wrapper {
-    grid-area: i;
-    justify-self: start;
-
-    @media (max-width: $desktop-width - 1) {
-      margin-left: $tablet-padding;
-      margin-right: $tablet-padding;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      margin-left: $mobile-padding;
-      margin-right: $mobile-padding;
-    }
-  }
-
-  .button {
-    padding: 17px 46px 15px;
-
-    span {
-      font-size: rem(14px);
-      padding: 0;
-    }
+.proposal__files {
+  margin-bottom: 48px;
+
+  h2 {
+    margin: 0 0 25px;
   }
 }

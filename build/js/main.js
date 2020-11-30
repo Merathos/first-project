@@ -717,7 +717,7 @@
 
 
 (function () {
-    var map = document.querySelector('.landscaping-form__section.map-section'),
+    var map = document.querySelector('.proposal__map.map-section'),
         mapHidden = document.querySelector('#map-hidden'),
         mapSearch = document.querySelector('#map-search'),
         userCoords = document.querySelector('#user-coords');
@@ -1714,6 +1714,14 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
         if ($infoBanners.length > 0) {
           $infoBanners.forEach(function ($infoBanner) {
             window.initInfoBannerToggle($infoBanner);
+          });
+        }
+
+        var $selects = document.querySelectorAll('.js-ajax-wrapper select');
+
+        if ($selects.length > 0) {
+          $selects.forEach(function ($select) {
+            window.addSelect($select);
           });
         }
       }
