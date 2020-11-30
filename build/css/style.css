@@ -7287,6 +7287,80 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       -ms-flex-pack: center;
           justify-content: center; }
 
+.map-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 120px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 4px 15px rgba(51, 51, 51, 0.15);
+          box-shadow: 0px 4px 15px rgba(51, 51, 51, 0.15); }
+
+#zoom-in {
+  width: 32px;
+  height: 32px;
+  background-color: #ffffff;
+  background-image: url("../img/cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  position: relative; }
+  #zoom-in:hover {
+    background-color: #f9f9fa; }
+  #zoom-in:active {
+    background-color: #a6abb2; }
+  #zoom-in:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 20px;
+    background: #F6F6F6;
+    left: 6px;
+    bottom: -1px; }
+
+#zoom-out {
+  width: 32px;
+  height: 32px;
+  background-color: #ffffff;
+  background-image: url("../img/minus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+  #zoom-out:hover {
+    background-color: #f9f9fa; }
+  #zoom-out:active {
+    background-color: #a6abb2; }
+
+#user-location {
+  -webkit-box-shadow: 0px 4px 15px rgba(51, 51, 51, 0.15);
+          box-shadow: 0px 4px 15px rgba(51, 51, 51, 0.15);
+  width: 32px;
+  height: 32px;
+  background-color: #ffffff;
+  background-image: url("../img/user-location.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+  #user-location:hover {
+    background-color: #f9f9fa; }
+  #user-location:active {
+    background-color: #a6abb2; }
+
 .news-notice {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -10065,7 +10139,7 @@ span.poll__hide {
   .map-section {
     margin-bottom: 18px; }
   .map {
-    height: 288px; }
+    height: 512px; }
   .map-section__title {
     font-size: 1.5rem;
     line-height: 1.7775rem; }
@@ -10600,12 +10674,7 @@ ymaps p {
   position: relative;
   padding-right: 10px;
   padding-left: 4px;
-  padding-bottom: 16px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(var(--color-stroke, #e3e8ee)), to(var(--color-stroke, #e3e8ee)));
-  background-image: linear-gradient(var(--color-stroke, #e3e8ee), var(--color-stroke, #e3e8ee));
-  background-position: left bottom;
-  background-repeat: no-repeat;
-  background-size: 100% 1px; }
+  padding-bottom: 16px; }
   .map-popup__top-wrapper button {
     display: block;
     font-weight: normal;
@@ -10638,9 +10707,10 @@ ymaps p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 3px;
-  padding-left: 0;
-  padding-right: 0; }
+  padding-top: 11px;
+  padding-left: 4px;
+  padding-right: 0;
+  border-top: 1px solid #e3e8ee; }
 
 .map-popup__likes {
   margin: 0;
@@ -10654,9 +10724,12 @@ ymaps p {
   font-size: 0.8125rem;
   line-height: 1.0625rem;
   color: #707B8C; }
+  .map-popup__likes svg {
+    fill: #707B8C; }
   .map-popup__likes span {
-    margin-right: 14px;
+    margin-right: 10px;
     font-weight: normal;
+    margin-top: 3px;
     font-family: "Rubik", "Arial", sans-serif; }
   .map-popup__likes button {
     padding: 0;
@@ -10706,20 +10779,21 @@ ymaps p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-top: 4px;
+  padding-top: 0;
   font-size: 0.9375rem;
   line-height: 1.26563rem;
-  color: #116CA6;
   text-decoration: none;
-  position: relative; }
+  position: relative;
+  color: #2c8ecc; }
   .map-popup__details-btn span {
     margin-right: 5px; }
   .map-popup__details-btn svg {
-    fill: #116CA6; }
+    fill: #2c8ecc; }
   .map-popup__details-btn:hover {
-    color: #2c8ecc; }
+    color: #116CA6;
+    text-decoration: none; }
     .map-popup__details-btn:hover svg {
-      fill: #2c8ecc; }
+      fill: #116CA6; }
 
 .hearings-page {
   padding-top: 40px;
