@@ -10591,6 +10591,11 @@ span.poll__hide {
   padding-top: 10px;
   background-color: #ffffff; }
 
+ymaps h3,
+ymaps p {
+  margin: 0;
+  padding: 0; }
+
 .map-popup__top-wrapper {
   position: relative;
   padding-right: 10px;
