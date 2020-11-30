@@ -1,0 +1,21 @@
+.buttons-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons-wrapper__submit-btn {
+  width: 274px;
+  padding: 16px 16px;
+}
+
+@include mobile {
+  .buttons-wrapper {
+    flex-direction: column;
+  }
+
+  .buttons-wrapper__submit-btn {
+    order: -1;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+}

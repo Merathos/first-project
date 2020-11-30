@@ -45,6 +45,8 @@
 @import "blocks/info-tooltip";
 @import "blocks/project-status";
 @import "blocks/description";
+@import "blocks/description-block";
+@import "blocks/buttons-wrapper";
 @import "blocks/date";
 @import "blocks/application-period";
 @import "blocks/project-link";
@@ -121,8 +123,6 @@
 @import "blocks/filter-2.scss";
 
 // landscaping-form
-@import "blocks/landscaping.scss";
-@import "blocks/landscaping-form.scss";
 @import "blocks/map-section.scss";
 @import "blocks/confirmation-popup.scss";
 
