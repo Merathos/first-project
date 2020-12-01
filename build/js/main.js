@@ -836,7 +836,7 @@
 'use strict';
 
 (function () {
-  var $mapBlock = $('#map');
+  var $mapBlock = $('#improvement-map');
 
   if (!$mapBlock) return;
 
