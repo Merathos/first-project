@@ -69,6 +69,10 @@
     transition: bottom $style-change-duration linear;
   }
 
+  &--personal {
+    padding-top: 5px;
+  }
+
   &:hover {
     box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
 

@@ -20,6 +20,15 @@
       }
     }
   }
+
+  &.js-other-textarea {
+    margin-top: 25px;
+    margin-bottom: 0;
+  }
+
+  &.hide {
+    display: none;
+  }
 }
 
 .description-block__textarea-container {

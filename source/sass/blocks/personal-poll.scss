@@ -1,0 +1,37 @@
+.personal-poll {
+  display: flex;
+  align-items: center;
+
+  &--page-info {
+    margin-bottom: 13px;
+
+    .personal-poll__text {
+      margin: 0;
+      margin-left: 8px;
+      font-size: 16px;
+      line-height: 22px;
+      color: var(--color-text, $dark-text);
+    }
+  }
+
+  @media (max-width: 585px) {
+    &--page-info {
+      align-items: baseline;
+
+      svg {
+        flex-shrink: 0;
+        transform: translateY(2px);
+      }
+    }
+  }
+}
+
+.personal-poll__text {
+  margin-left: 5px;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 17px;
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--color-text, $grey-lighter);
+}
