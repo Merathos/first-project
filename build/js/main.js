@@ -1291,9 +1291,25 @@
 
   panel.classList.add('project-page__panel--js');
 
+  var checkPanelHeight = function() {
+    var mainContent =  document.querySelector('.container--desktop-only');
+    var mainContentHeight = mainContent.getBoundingClientRect().height;
+    var panelHeight = panel.getBoundingClientRect().height;
+
+    var panelOffsetBottom = 50;
+
+    if (mainContentHeight && panelHeight && mainContentHeight <= panelHeight) {
+      mainContent.style.minHeight = panelHeight + panelOffsetBottom + 'px';
+    }
+  }
+
+  checkPanelHeight();
+
   (function () {
     return new window.Sticky('.js-project-page__panel');
   })();
+
+
 })();
 
 'use strict';
@@ -1629,60 +1645,62 @@
 'use strict';
 
 function initRangeSlider(rangeSlider) {
-    if (!rangeSlider) {
-        return;
-    }
+  if (!rangeSlider) {
+    return;
+  }
 
-    var input = document.getElementById(rangeSlider.dataset.input);
+  var input = document.getElementById(rangeSlider.dataset.input);
 
+  if (input) {
     var min = parseInt(rangeSlider.dataset.min);
     var max = parseInt(rangeSlider.dataset.max);
     var start = input.value ? input.value : max / 2;
     window.noUiSlider.create(rangeSlider, {
-        start: start,
-        behaviour: 'snap',
-        connect: 'lower',
-        step: parseInt(rangeSlider.dataset.step),
-        range: {
-            'min': [min],
-            'max': [max]
-        },
-        pips: {
-            mode: 'steps',
-            stepped: true,
-            density: 4
-        },
-        tooltips: true,
-        format: window.wNumb({
-            decimals: 0,
-        })
+      start: start,
+      behaviour: 'snap',
+      connect: 'lower',
+      step: parseInt(rangeSlider.dataset.step),
+      range: {
+        'min': [min],
+        'max': [max]
+      },
+      pips: {
+        mode: 'steps',
+        stepped: true,
+        density: 4
+      },
+      tooltips: true,
+      format: window.wNumb({
+        decimals: 0,
+      })
     });
 
     rangeSlider.noUiSlider.on('update', function (values, handle) {
 
-        var value = values[handle];
-        var maxPos = Math.max(values);
-        var pips = rangeSlider.querySelectorAll('.noUi-marker-horizontal.noUi-marker-sub');
+      var value = values[handle];
+      var maxPos = Math.max(values);
+      var pips = rangeSlider.querySelectorAll('.noUi-marker-horizontal.noUi-marker-sub');
 
-        input.value = value;
+      input.value = value;
 
-        if (!pips) {
-            return;
+      if (!pips) {
+        return;
+      }
+
+      for (var i = 0; i < pips.length; i++) {
+
+        if (i <= maxPos - 2) {
+          pips[i].classList.add('form-range__accent');
+        } else {
+          pips[i].classList.remove('form-range__accent');
         }
-
-        for (var i = 0; i < pips.length; i++) {
-
-            if (i <= maxPos - 2) {
-                pips[i].classList.add('form-range__accent');
-            } else {
-                pips[i].classList.remove('form-range__accent');
-            }
-        }
+      }
 
     });
+  }
 }
 document.querySelectorAll('.js-poll-range').forEach(function (item) {
-    initRangeSlider(item);
+  initRangeSlider(item);
 });
 
 
@@ -1758,6 +1776,28 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
         button.classList.add(hideClass);
       });
     });
+  }
+})();
+
+'use strict';
+
+(function() {
+  var otherChecboxes = document.querySelectorAll('[data-id="other-checkbox"]');
+  var hideClass = 'hide';
+
+  if (otherChecboxes) {
+    otherChecboxes.forEach(function(el) {
+      el.addEventListener('change', function(evt) {
+        var textarea = evt.target.parentElement.querySelector('.js-other-textarea');
+        var target = evt.target;
+
+        if (target.checked) {
+          textarea.classList.remove(hideClass);
+        } else {
+          textarea.classList.add(hideClass);
+        }
+      });
+    } );
   }
 })();
 
