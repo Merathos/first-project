@@ -3,7 +3,7 @@
 (function () {
   var $mapBlock = $('#improvement-map');
 
-  if (!$mapBlock) return;
+  if (!$mapBlock.length>0) return;
 
   ymaps.ready(init);
 
