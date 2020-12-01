@@ -4840,13 +4840,24 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .proposal {
   padding-top: 40px;
-  padding-bottom: 72px; }
+  padding-bottom: 72px;
+  padding-left: 16px; }
   @media (min-width: 768px) {
     .proposal {
-      padding-bottom: 104px; } }
+      padding-bottom: 104px;
+      padding-left: 24px; } }
   @media (min-width: 1200px) {
     .proposal {
-      padding-bottom: 80px; } }
+      padding-bottom: 80px;
+      padding-left: 0; } }
+  .proposal > *:not(.proposal__wrapper) {
+    margin-right: 16px; }
+    @media (min-width: 768px) {
+      .proposal > *:not(.proposal__wrapper) {
+        margin-right: 24px; } }
+    @media (min-width: 1200px) {
+      .proposal > *:not(.proposal__wrapper) {
+        margin-right: 0; } }
   @media (min-width: 1200px) {
     .proposal--aside {
       display: grid;
@@ -4858,13 +4869,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
             align-self: start; } }
 
 .proposal__info {
-  margin: 0 0 32px; }
+  margin-top: 0;
+  margin-bottom: 32px; }
   .proposal__info:last-child {
     margin-bottom: 0; }
   @media (min-width: 1200px) {
     .proposal__info {
       grid-area: a;
-      margin: 0 0 40px; } }
+      margin-bottom: 40px; } }
 
 .proposal__comments {
   margin-bottom: 16px; }
@@ -4914,6 +4926,15 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .proposal__wrapper {
     grid-area: d; } }
 
+.proposal__wrapper > *:not(.proposal__slider) {
+  margin-right: 16px; }
+  @media (min-width: 768px) {
+    .proposal__wrapper > *:not(.proposal__slider) {
+      margin-right: 24px; } }
+  @media (min-width: 1200px) {
+    .proposal__wrapper > *:not(.proposal__slider) {
+      margin-right: 0; } }
+
 .proposal__last-comment {
   margin-bottom: 56px; }
   .proposal__last-comment:last-child {
@@ -4951,10 +4972,13 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       margin-bottom: 80px; } }
 
 .proposal__map {
-  margin-bottom: 24px; }
+  margin-bottom: 24px;
+  overflow: hidden; }
   @media (min-width: 768px) {
     .proposal__map {
       margin-bottom: 48px; } }
+  .proposal__map .map-section__address {
+    display: none; }
 
 .proposal__slider {
   margin-bottom: 56px; }
@@ -4979,6 +5003,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     @media (min-width: 1200px) {
       .proposal__gallery--bordered {
         margin-bottom: 48px; } }
+  .proposal__gallery .gallery__tape .swiper-slide:first-child {
+    padding-left: 0; }
 
 .proposal__address {
   margin-bottom: 34px; }
