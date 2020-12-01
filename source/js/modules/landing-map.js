@@ -2,7 +2,7 @@
 
 
 (function () {
-    var map = document.querySelector('.landscaping-form__section.map-section'),
+    var map = document.querySelector('.proposal__map.map-section'),
         mapHidden = document.querySelector('#map-hidden'),
         mapSearch = document.querySelector('#map-search'),
         userCoords = document.querySelector('#user-coords');

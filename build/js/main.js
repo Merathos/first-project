@@ -717,7 +717,7 @@
 
 
 (function () {
-    var map = document.querySelector('.landscaping-form__section.map-section'),
+    var map = document.querySelector('.proposal__map.map-section'),
         mapHidden = document.querySelector('#map-hidden'),
         mapSearch = document.querySelector('#map-search'),
         userCoords = document.querySelector('#user-coords');
@@ -1291,9 +1291,25 @@
 
   panel.classList.add('project-page__panel--js');
 
+  var checkPanelHeight = function() {
+    var mainContent =  document.querySelector('.container--desktop-only');
+    var mainContentHeight = mainContent.getBoundingClientRect().height;
+    var panelHeight = panel.getBoundingClientRect().height;
+
+    var panelOffsetBottom = 50;
+
+    if (mainContentHeight && panelHeight && mainContentHeight <= panelHeight) {
+      mainContent.style.minHeight = panelHeight + panelOffsetBottom + 'px';
+    }
+  }
+
+  checkPanelHeight();
+
   (function () {
     return new window.Sticky('.js-project-page__panel');
   })();
+
+
 })();
 
 'use strict';
@@ -1700,6 +1716,14 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
             window.initInfoBannerToggle($infoBanner);
           });
         }
+
+        var $selects = document.querySelectorAll('.js-ajax-wrapper select');
+
+        if ($selects.length > 0) {
+          $selects.forEach(function ($select) {
+            window.addSelect($select);
+          });
+        }
       }
     });
   };
@@ -1750,6 +1774,28 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
         button.classList.add(hideClass);
       });
     });
+  }
+})();
+
+'use strict';
+
+(function() {
+  var otherChecboxes = document.querySelectorAll('[data-id="other-checkbox"]');
+  var hideClass = 'hide';
+
+  if (otherChecboxes) {
+    otherChecboxes.forEach(function(el) {
+      el.addEventListener('change', function(evt) {
+        var textarea = evt.target.parentElement.querySelector('.js-other-textarea');
+        var target = evt.target;
+
+        if (target.checked) {
+          textarea.classList.remove(hideClass);
+        } else {
+          textarea.classList.add(hideClass);
+        }
+      });
+    } );
   }
 })();
 

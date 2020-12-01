@@ -327,8 +327,16 @@
               <label for="interaction-6">Ничего этого не знаю</label>
             </div>
             <div class="form-checkbox">
-              <input type="checkbox" name="interaction-7" id="interaction-7" value="Другое">
+              <input data-id="other-checkbox" type="checkbox" name="interaction-7" id="interaction-7" value="Другое">
               <label for="interaction-7">Другое</label>
+
+              <div class="description-block js-other-textarea hide">
+                <div class="description-block__textarea-container">
+                  <textarea name="proposition" id="proposition" cols="30" rows="10" placeholder="Ваш вариант ответа" class="description-block__textarea description-block__proposition-name" aria-label="Ваш вариант ответа"></textarea>
+                  <span class="description-block__textarea-error">Вы превысили
+                    лимит на хх символов</span>
+                </div>
+              </div>
             </div>
           </div>
           <div class="form__section">
@@ -439,8 +447,16 @@
                 органов</label>
             </div>
             <div class="form-checkbox">
-              <input type="checkbox" name="social-8" id="social-8" value="Другое">
+              <input data-id="other-checkbox" type="checkbox" name="social-8" id="social-8" value="Другое">
               <label for="social-8">Другое</label>
+
+              <div class="description-block js-other-textarea hide">
+                <div class="description-block__textarea-container">
+                  <textarea name="proposition" id="proposition" cols="30" rows="10" placeholder="Ваш вариант ответа" class="description-block__textarea description-block__proposition-name" aria-label="Ваш вариант ответа"></textarea>
+                  <span class="description-block__textarea-error">Вы превысили
+                    лимит на хх символов</span>
+                </div>
+              </div>
             </div>
           </div>
           <div class="form__button-wrapper form__button-wrapper--composite-poll">
