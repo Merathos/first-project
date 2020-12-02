@@ -26,6 +26,10 @@
     color: var(--color-interactive-accent, $blue-accent);
   }
 
+  &.is-favorite:not(.focus-visible) {
+    color: var(--color-interactive-accent, $blue-default);
+  }
+
   svg {
     width: 20px;
     height: 20px;

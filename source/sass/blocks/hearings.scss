@@ -131,6 +131,10 @@
   line-height: rem(27px);
   color: var(--color-text, #354052);
 
+  p {
+    margin-top: 0;
+  }
+
   @include tablet {
     margin-bottom: 40px;
   }
