@@ -1,11 +1,11 @@
 .map-section {
-    iframe, #map {
+    iframe, #map, #improvement-map {
         border: none;
         border-radius: 5px;
         width: 100%;
     }
 
-    #map {
+    #map, #improvement-map {
       height: 600px;
     }
 
@@ -56,7 +56,7 @@
 
 @include tablet {
     .map-section {
-        iframe, #map {
+        iframe, #map, #improvement-map {
             height: 460px;
         }
     }
@@ -70,7 +70,7 @@
 @include mobile {
     .map-section {
 
-        iframe,#map {
+        iframe,#map, #improvement-map {
             height: 288px;
         }
     }
@@ -90,6 +90,7 @@
 
 .map-section--height {
   #map,
+  #improvement-map,
   iframe {
     @media (min-width: $tablet-width) {
       height: 400px;
