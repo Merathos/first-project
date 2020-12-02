@@ -117,6 +117,10 @@
   justify-content: flex-start;
   margin-left: 25px;
 
+  @media (min-width: $desktop-width) {
+    margin-left: auto;
+  }
+
   @media (max-width: $mobile-max-width) {
     margin-left: 0;
   }

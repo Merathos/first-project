@@ -7,16 +7,16 @@
 }
 
 .section__head {
-  margin-bottom: 8px;
+  // margin-bottom: 8px;
   display: flex;
   flex-flow: row wrap;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 16px;
+    // margin-bottom: 16px;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 24px;
+    // margin-bottom: 24px;
   }
 }
 
@@ -27,7 +27,7 @@
 
   max-width: 70%;
   width: 100%;
-  margin: 0 0 25px;
+  margin: 0 auto 25px 0;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 42px;
