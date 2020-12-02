@@ -2,12 +2,13 @@
     //position: absolute;
     //top: 120px;
     //left: 40%;
-    width: 258px;
+    width: 300px;
     //height: 235px;
-    padding-top: 10px;
-    //border-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 12px;
+    border-radius: 5px;
     background-color: #ffffff;
-    //box-shadow: 0px 4px 8px rgba(0, 30, 75, 0.2);
+    box-shadow: 0px 4px 8px rgba(0, 30, 75, 0.2);
 }
 
 ymaps h3,
@@ -18,9 +19,9 @@ ymaps p {
 
 .map-popup__top-wrapper {
     position: relative;
-    padding-right: 10px;
-    padding-left: 4px;
-    padding-bottom: 16px;
+    padding-right: 40px;
+    padding-left: 16px;
+    padding-bottom: 17px;
     //background-image: linear-gradient(var(--color-stroke, $light-grey), var(--color-stroke, $light-grey));
     //background-position: left bottom;
     //background-repeat: no-repeat;
@@ -59,8 +60,8 @@ ymaps p {
     align-items: center;
     justify-content: space-between;
     padding-top: 11px;
-    padding-left: 4px;
-    padding-right: 0;
+    padding-left: 15px;
+    padding-right: 15px;
     border-top: 1px solid $light-grey;
 }
 
