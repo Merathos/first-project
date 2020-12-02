@@ -2244,7 +2244,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   position: relative;
   margin: 0;
   padding: 0;
-  text-decoration: none;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -3352,6 +3351,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     color: var(--color-interactive-default, #2c8ecc); }
   .button-star--active:hover:not(.focus-visible) {
     color: var(--color-interactive-accent, #116ca6); }
+  .button-star.is-favorite:not(.focus-visible) {
+    color: var(--color-interactive-accent, #2c8ecc); }
   .button-star svg {
     width: 20px;
     height: 20px;
@@ -4598,9 +4599,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       grid-area: c;
       align-self: center;
       opacity: 0; } }
-
-.application-period--favorite .button-star {
-  color: var(--color-interactive-accent, #2c8ecc); }
 
 .application-period__text {
   font-size: 0.8125rem;
@@ -7097,6 +7095,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .rating-list__title {
   margin: 0;
   text-decoration: none;
+  width: 100%;
   font-weight: 400;
   font-size: 1rem;
   line-height: 130%;
@@ -8781,11 +8780,7 @@ span.poll__hide {
   .discussion__item--used .discussion__used {
     display: block; }
   .discussion__item--sign .button-star {
-    display: block;
-    color: var(--color-interactive-default, #2c8ecc); }
-    .discussion__item--sign .button-star:hover, .discussion__item--sign .button-star:focus {
-      color: var(--color-interactive-accent, #116ca6);
-      outline: none; }
+    display: block; }
   .discussion__item:hover .button-star {
     display: block; }
 
@@ -11308,6 +11303,8 @@ ymaps p {
   font-size: 0.9375rem;
   line-height: 1.6875rem;
   color: var(--color-text, #354052); }
+  .hearings__text-container p {
+    margin-top: 0; }
   @media (max-width: 1199px) {
     .hearings__text-container {
       margin-bottom: 40px; } }
