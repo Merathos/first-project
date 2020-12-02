@@ -10,6 +10,18 @@
   @media (max-width: $mobile-width) {
     padding-bottom: 0;
   }
+
+  .section__head {
+    margin-bottom: 8px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-bottom: 24px;
+    }
+  }
 }
 
 .rating .rating__list {
@@ -41,7 +53,7 @@
     }
   }
 
-  & > * {
+  &>* {
     align-self: start;
   }
 }
