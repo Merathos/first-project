@@ -67,9 +67,19 @@
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
   transform: translateY(-50%) rotate(-45deg);
   //margin-top: -11px;
+
+  @include mobile-max {
+    display: none;
+  }
 }
 
 .popover-inner {
   position: relative;
   z-index: 2;
+}
+
+.ymaps-2-1-77-balloon-overlay {
+  @include mobile-max {
+    transform: translateX(-24px);
+  }
 }

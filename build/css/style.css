@@ -8062,10 +8062,18 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
           box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   -webkit-transform: translateY(-50%) rotate(-45deg);
           transform: translateY(-50%) rotate(-45deg); }
+  @media (max-width: 399px) {
+    .popover .arrow {
+      display: none; } }
 
 .popover-inner {
   position: relative;
   z-index: 2; }
+
+@media (max-width: 399px) {
+  .ymaps-2-1-77-balloon-overlay {
+    -webkit-transform: translateX(-24px);
+            transform: translateX(-24px); } }
 
 .news-notice {
   -webkit-box-sizing: border-box;
@@ -10640,8 +10648,10 @@ span.poll__hide {
     margin-bottom: 35px; } }
 
 @media (max-width: 767px) {
-  .map-section iframe, .map-section #map, .map-section #improvement-map {
+  .map-section iframe, .map-section #map {
     height: 288px; }
+  .map-section #improvement-map {
+    height: 512px; }
   .map-section__title {
     margin-bottom: 16px;
     font-size: 1.5rem;
@@ -10653,7 +10663,6 @@ span.poll__hide {
 
 @media (min-width: 768px) {
   .map-section--height #map,
-  .map-section--height #improvement-map,
   .map-section--height iframe {
     height: 400px; } }
 
