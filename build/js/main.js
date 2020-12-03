@@ -739,14 +739,16 @@
 
 
 (function () {
-    var map = document.querySelector('.proposal__map.map-section'),
+    var map = document.querySelector('.landscaping-form__section.map-section'),
         mapHidden = document.querySelector('#map-hidden'),
         mapSearch = document.querySelector('#map-search'),
+        mapBlock = document.querySelector('#map'),
         userCoords = document.querySelector('#user-coords');
 
-    if (!map) {
+    if (!mapBlock) {
         return;
     }
+    var imagePin = mapBlock.getAttribute('data-icon');
 
     ymaps.ready(init);
 
@@ -763,7 +765,7 @@
 
                 myMap = new ymaps.Map('map', {
                     center: coordSearch,
-                    zoom: 9,
+                    zoom: 15,
                     controls: ['zoomControl']
                 }, {
                     searchControlProvider: 'yandex#search'
@@ -774,7 +776,9 @@
                         coordinates: coordSearch
                     },
                 }, {
-                    preset: 'islands#blackStretchyIcon',
+                    iconLayout: 'default#image',
+                    iconImageHref: imagePin,
+                    iconImageSize: [36, 54],
                     draggable: true
                 });
 
@@ -814,7 +818,7 @@
             })
             myMap = new ymaps.Map('map', {
                 center: coordHidden,
-                zoom: 9,
+                zoom: 15,
                 controls: ['zoomControl']
             }, {
                 searchControlProvider: 'yandex#search'
@@ -825,7 +829,9 @@
                     coordinates: coordHidden
                 },
             }, {
-                preset: 'islands#blackStretchyIcon',
+                iconLayout: 'default#image',
+                iconImageHref: imagePin,
+                iconImageSize: [36, 54],
                 draggable: true
             });
 
@@ -868,7 +874,7 @@
 
                 myMap = new ymaps.Map('map', {
                     center: coordSearch,
-                    zoom: 9,
+                    zoom: 15,
                     controls: ['zoomControl']
                 }, {
                     searchControlProvider: 'yandex#search'
@@ -879,7 +885,9 @@
                         coordinates: coordSearch
                     },
                 }, {
-                    preset: 'islands#blackStretchyIcon',
+                    iconLayout: 'default#image',
+                    iconImageHref: imagePin,
+                    iconImageSize: [36, 54],
                     draggable: true
                 });
 
@@ -916,7 +924,7 @@
         } else {
             myMap = new ymaps.Map('map', {
                 center: [55.753994, 37.622093],
-                zoom: 9,
+                zoom: 15,
                 controls: ['zoomControl']
             }, {
                 searchControlProvider: 'yandex#search'
@@ -927,7 +935,9 @@
                     coordinates: [55.753994, 37.622093]
                 },
             }, {
-                preset: 'islands#blackStretchyIcon',
+                iconLayout: 'default#image',
+                iconImageHref: imagePin,
+                iconImageSize: [36, 54],
                 draggable: true
             });
             //добавляем метку на карту
@@ -1004,7 +1014,9 @@
                     coordinates: coords
                 },
             }, {
-                preset: 'islands#blackStretchyIcon',
+                iconLayout: 'default#image',
+                iconImageHref: imagePin,
+                iconImageSize: [36, 54],
                 draggable: true
             });
         }
@@ -1185,7 +1197,7 @@
     var myMap = new ymaps.Map($mapBlock[0], {
         center: [55.76, 37.64],
         controls: [],
-        zoom: 3
+        zoom: 15
       }, {
         searchControlProvider: 'yandex#search',
       }),
@@ -1280,29 +1292,31 @@
     });
     var locationControl = new ymaps.control.GeolocationControl({options: {layout: UserLocationLayout}});
 
-    myMap.controls.add(zoomControl, {
-      float: 'none',
-      position: {
-        right: '8px',
-        top: '244px',
-      }
-    });
+    if(window.innerWidth >= 400) {
+      myMap.controls.add(zoomControl, {
+        float: 'none',
+        position: {
+          right: '8px',
+          top: '244px',
+        }
+      });
 
-    myMap.controls.add(locationControl, {
-      float: 'none',
-      position: {
-        right: '8px',
-        top: '324px',
-      }
-    });
+      myMap.controls.add(locationControl, {
+        float: 'none',
+        position: {
+          right: '8px',
+          top: '324px',
+        }
+      });
+    }
 
-    // var iconSize = [];
-    //
-    // if(window.innerWidth < 768) {
-    //   iconSize = [38, 54]
-    // } else {
-    //   iconSize = [28, 40]
-    // }
+    var balloonOffset = [];
+
+    if(window.innerWidth < 400) {
+      balloonOffset = [-5, 32]
+    } else {
+      balloonOffset = [43, -27]
+    }
 
     var clusterer = new ymaps.Clusterer({
         // Зададим массив, описывающий иконки кластеров разного размера.
@@ -1391,9 +1405,15 @@
          * @name applyElementOffset
          */
         applyElementOffset: function () {
-          this._$element.css({
-            top: -(this._$element[0].offsetHeight/2)
-          });
+          if(window.innerWidth < 400) {
+            this._$element.css({
+              top: 0
+            });
+          } else {
+            this._$element.css({
+              top: -(this._$element[0].offsetHeight/2)
+            });
+          }
         },
 
         /**
@@ -1424,7 +1444,7 @@
 
           return new ymaps.shape.Rectangle(new ymaps.geometry.pixel.Rectangle([
             [position.left, position.top], [
-              position.left + this._$element[0].offsetWidth,
+              position.left + this._$element[0].offsetWidth + 200,
               position.top + this._$element[0].offsetHeight + this._$element.find('.arrow')[0].offsetHeight
             ]
           ]));
@@ -1447,12 +1467,14 @@
     //   '<h3 class="popover-title">$[properties.balloonHeader]</h3>' +
     //   '<div class="popover-content">$[properties.balloonContent]</div>'
     // );
-
     var dataLink = $mapBlock.data('link');
 
     ymaps.geoXml.load(dataLink)
       .then(function (res) {
         var myObjects = res.geoObjects.toArray();
+        if(myObjects.length > 0) {
+          myMap.setCenter([myObjects[0].geometry._coordinates[0], myObjects[0].geometry._coordinates[1]])
+        }
         for (var i=0; i< myObjects.length; i++) {
           if(!myObjects[i].geometry._coordPath) {
             myObjects[i].options.set({
@@ -1463,7 +1485,7 @@
               iconImageSize: [28, 40],
               hideIconOnBalloonOpen: false,
               balloonPanelMaxMapArea: 0,
-              balloonOffset: [43, -27]
+              balloonOffset: balloonOffset
             })
             clusterer.add(myObjects[i]);
           } else {
