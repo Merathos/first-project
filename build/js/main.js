@@ -739,14 +739,16 @@
 
 
 (function () {
-    var map = document.querySelector('.proposal__map.map-section'),
+    var map = document.querySelector('.landscaping-form__section.map-section'),
         mapHidden = document.querySelector('#map-hidden'),
         mapSearch = document.querySelector('#map-search'),
+        mapBlock = document.querySelector('#map'),
         userCoords = document.querySelector('#user-coords');
 
-    if (!map) {
+    if (!mapBlock) {
         return;
     }
+    var imagePin = mapBlock.getAttribute('data-icon');
 
     ymaps.ready(init);
 
@@ -763,7 +765,7 @@
 
                 myMap = new ymaps.Map('map', {
                     center: coordSearch,
-                    zoom: 9,
+                    zoom: 15,
                     controls: ['zoomControl']
                 }, {
                     searchControlProvider: 'yandex#search'
@@ -774,7 +776,9 @@
                         coordinates: coordSearch
                     },
                 }, {
-                    preset: 'islands#blackStretchyIcon',
+                    iconLayout: 'default#image',
+                    iconImageHref: imagePin,
+                    iconImageSize: [36, 54],
                     draggable: true
                 });
 
@@ -814,7 +818,7 @@
             })
             myMap = new ymaps.Map('map', {
                 center: coordHidden,
-                zoom: 9,
+                zoom: 15,
                 controls: ['zoomControl']
             }, {
                 searchControlProvider: 'yandex#search'
@@ -825,7 +829,9 @@
                     coordinates: coordHidden
                 },
             }, {
-                preset: 'islands#blackStretchyIcon',
+                iconLayout: 'default#image',
+                iconImageHref: imagePin,
+                iconImageSize: [36, 54],
                 draggable: true
             });
 
@@ -868,7 +874,7 @@
 
                 myMap = new ymaps.Map('map', {
                     center: coordSearch,
-                    zoom: 9,
+                    zoom: 15,
                     controls: ['zoomControl']
                 }, {
                     searchControlProvider: 'yandex#search'
@@ -879,7 +885,9 @@
                         coordinates: coordSearch
                     },
                 }, {
-                    preset: 'islands#blackStretchyIcon',
+                    iconLayout: 'default#image',
+                    iconImageHref: imagePin,
+                    iconImageSize: [36, 54],
                     draggable: true
                 });
 
@@ -916,7 +924,7 @@
         } else {
             myMap = new ymaps.Map('map', {
                 center: [55.753994, 37.622093],
-                zoom: 9,
+                zoom: 15,
                 controls: ['zoomControl']
             }, {
                 searchControlProvider: 'yandex#search'
@@ -927,7 +935,9 @@
                     coordinates: [55.753994, 37.622093]
                 },
             }, {
-                preset: 'islands#blackStretchyIcon',
+                iconLayout: 'default#image',
+                iconImageHref: imagePin,
+                iconImageSize: [36, 54],
                 draggable: true
             });
             //добавляем метку на карту
@@ -1004,7 +1014,9 @@
                     coordinates: coords
                 },
             }, {
-                preset: 'islands#blackStretchyIcon',
+                iconLayout: 'default#image',
+                iconImageHref: imagePin,
+                iconImageSize: [36, 54],
                 draggable: true
             });
         }
