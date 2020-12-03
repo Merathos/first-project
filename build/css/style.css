@@ -3352,6 +3352,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .button-star--active:hover:not(.focus-visible) {
     color: var(--color-interactive-accent, #116ca6); }
   .button-star.is-favorite:not(.focus-visible) {
+    opacity: 1;
     color: var(--color-interactive-accent, #2c8ecc); }
   .button-star svg {
     width: 20px;
@@ -10915,7 +10916,7 @@ span.poll__hide {
     margin: 0 auto;
     display: block;
     font-size: 0.9375rem;
-    line-height: 1.26563rem;
+    line-height: 1.26562rem;
     font-weight: 500;
     color: #2C8ECC;
     text-transform: uppercase; }
@@ -11117,7 +11118,7 @@ ymaps p {
           align-items: center;
   padding-top: 0;
   font-size: 0.9375rem;
-  line-height: 1.26563rem;
+  line-height: 1.26562rem;
   text-decoration: none;
   position: relative;
   color: #2c8ecc; }

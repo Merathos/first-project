@@ -27,6 +27,7 @@
   }
 
   &.is-favorite:not(.focus-visible) {
+    opacity: 1;
     color: var(--color-interactive-accent, $blue-default);
   }
 
