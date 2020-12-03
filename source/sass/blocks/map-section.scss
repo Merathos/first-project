@@ -70,9 +70,13 @@
 @include mobile {
     .map-section {
 
-        iframe,#map, #improvement-map {
+        iframe,#map {
             height: 288px;
         }
+
+      #improvement-map {
+        height: 512px;
+      }
     }
 
     .map-section__title {
@@ -90,7 +94,6 @@
 
 .map-section--height {
   #map,
-  #improvement-map,
   iframe {
     @media (min-width: $tablet-width) {
       height: 400px;
