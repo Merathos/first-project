@@ -2051,7 +2051,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap; }
 
-.section__tille-wrap {
+.section__title-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2065,10 +2065,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   width: 100%;
   margin: 0 auto 25px 0; }
   @media (max-width: 768px) {
-    .section__tille-wrap {
+    .section__title-wrap {
       margin-bottom: 42px; } }
   @media (max-width: 400px) {
-    .section__tille-wrap {
+    .section__title-wrap {
       max-width: 100%;
       margin-bottom: 30px; } }
 
@@ -3340,7 +3340,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   padding: 5px;
   color: #e3e8ee;
   cursor: pointer;
-  outline: none; }
+  outline: none;
+  display: none; }
   .button-star:focus {
     color: var(--color-interactive-accent, #116ca6); }
   .button-star:focus:not(.focus-visible) {
@@ -3354,6 +3355,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .button-star.is-favorite:not(.focus-visible) {
     opacity: 1;
     color: var(--color-interactive-accent, #2c8ecc); }
+  .button-star--active {
+    display: block; }
   .button-star svg {
     width: 20px;
     height: 20px;
@@ -4579,29 +4582,24 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       -ms-flex-align: end;
           align-items: flex-end;
   grid-area: c; }
+  .application-period .button-star {
+    height: 19px;
+    padding: 0;
+    margin-left: auto;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s; }
   @media (min-width: 1200px) {
     .application-period {
       display: grid;
       grid-template-areas: "a    c" "b    c"; }
       .application-period > * {
         -ms-flex-item-align: start;
-            align-self: start; } }
-
-.application-period .button-star {
-  height: 19px;
-  padding: 0;
-  margin-left: auto;
-  -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s; }
-  @media (min-width: 1200px) {
-    .application-period .button-star {
-      height: 21px;
-      margin-left: 24px;
-      grid-area: c;
-      align-self: center;
-      opacity: 1; }
-      .application-period .button-star:hover:not(.focus-visible) {
-        opacity: 1; } }
+            align-self: start; }
+      .application-period .button-star {
+        height: 21px;
+        margin-left: 24px;
+        grid-area: c;
+        align-self: center; } }
 
 .application-period__text {
   font-size: 0.8125rem;
@@ -6178,7 +6176,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       display: grid;
       grid-template-columns: 1fr 211px;
       grid-column-gap: 56px;
-      grid-template-areas: "a    c" "b    c"; } }
+      grid-template-areas: "a    c" "b    c"; }
+      .public-debate__item:hover:not(.focus-visible) .button-star {
+        opacity: 1;
+        display: block; } }
   .public-debate__item > * {
     -ms-flex-item-align: start;
         align-self: start; }
@@ -7124,7 +7125,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin-left: 25px; }
+  margin-left: 25px;
+  white-space: nowrap; }
   @media (min-width: 1200px) {
     .rating-list__total {
       margin-left: auto; } }
@@ -8789,7 +8791,11 @@ span.poll__hide {
   .discussion__item--used .discussion__used {
     display: block; }
   .discussion__item--sign .button-star {
-    display: block; }
+    display: block;
+    color: var(--color-interactive-default, #2c8ecc); }
+    .discussion__item--sign .button-star:hover, .discussion__item--sign .button-star:focus {
+      color: var(--color-interactive-accent, #116ca6);
+      outline: none; }
   .discussion__item:hover .button-star {
     display: block; }
 
@@ -8942,8 +8948,6 @@ span.poll__hide {
     -webkit-column-break-inside: avoid;
        -moz-column-break-inside: avoid;
             break-inside: avoid; }
-    .discussion__item .button-star {
-      display: none; }
     .discussion__item .discussion__used {
       display: none; } }
 
