@@ -179,7 +179,7 @@
   top: 50%;
   transform: translateY(-50%);
 
-  display: none;
+  // display: none;
   padding: 0;
 
   @media (max-width: $desktop-width - 1) {
@@ -191,18 +191,18 @@
   }
 }
 
-.discussion__button {
-  // padding: 16px 24px 15px;
-  display: block;
-  max-width: 420px;
-  width: 100%;
-  margin: 0 auto;
-  width: auto;
+// .discussion__button {
+//   // padding: 16px 24px 15px;
+//   display: block;
+//   max-width: 420px;
+//   width: 100%;
+//   margin: 0 auto;
+//   width: auto;
 
-  .discussion__hide {
-    padding: 0;
-  }
-}
+//   .discussion__hide {
+//     padding: 0;
+//   }
+// }
 
 .discussion__hide {
   @media (max-width: $tablet-width - 1) {

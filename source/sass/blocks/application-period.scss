@@ -28,7 +28,11 @@
     grid-area: c;
     align-self: center;
 
-    opacity: 0;
+    opacity: 1;
+
+    &:hover:not(.focus-visible) {
+      opacity: 1;
+    }
   }
 }
 

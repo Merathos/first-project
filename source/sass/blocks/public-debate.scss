@@ -100,9 +100,9 @@
       "a    c"
       "b    c";
 
-    &:hover:not(.focus-visible) .button-star {
-      opacity: 1;
-    }
+    // &:hover:not(.focus-visible) .button-star {
+    //   opacity: 1;
+    // }
   }
 
   &>* {
