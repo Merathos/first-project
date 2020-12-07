@@ -4,6 +4,7 @@
   color: $light-grey;
   cursor: pointer;
   outline: none;
+  display: none;
 
   &:focus {
     color: var(--color-interactive-accent, $blue-accent);
@@ -29,6 +30,10 @@
   &.is-favorite:not(.focus-visible) {
     opacity: 1;
     color: var(--color-interactive-accent, $blue-default);
+  }
+
+  &--active {
+    display: block;
   }
 
   svg {

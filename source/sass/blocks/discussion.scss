@@ -51,13 +51,13 @@
     .button-star {
       display: block;
 
-      // color: var(--color-interactive-default, $blue-default);
+      color: var(--color-interactive-default, $blue-default);
 
-      // &:hover,
-      // &:focus {
-      //   color: var(--color-interactive-accent, $blue-accent);
-      //   outline: none;
-      // }
+      &:hover,
+      &:focus {
+        color: var(--color-interactive-accent, $blue-accent);
+        outline: none;
+      }
     }
   }
 
@@ -260,7 +260,7 @@
     break-inside: avoid;
 
     & .button-star {
-      display: none;
+      // display: none;
     }
 
     & .discussion__used {

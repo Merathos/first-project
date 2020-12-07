@@ -277,6 +277,17 @@
               <input type="radio" name="quality" id="quality-no" value="нет" checked="">
               <label for="quality-no">Нет, не удовлетворен</label>
             </div>
+            <div class="form-radio">
+              <input data-id="other-input" type="radio" name="quality" id="quality-other" value="нет">
+              <label for="quality-other">Другое</label>
+              <div class="description-block js-other-textarea hide">
+                <div class="description-block__textarea-container">
+                  <textarea name="proposition" id="proposition" cols="30" rows="10" placeholder="Ваш вариант ответа" class="description-block__textarea description-block__proposition-name" aria-label="Ваш вариант ответа"></textarea>
+                  <span class="description-block__textarea-error">Вы превысили
+                    лимит на хх символов</span>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="form__section">
             <p class="form__question">Знаете ли Вы о возможности получения
