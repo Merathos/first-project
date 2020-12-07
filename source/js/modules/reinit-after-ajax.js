@@ -4,7 +4,7 @@
 
   var callback = function (mutationsList) {
     Object.values(mutationsList).forEach(function (mutation) {
-      if (mutation.type === 'attributes' || mutation.type === 'childList') {
+      if (mutation.type === 'attributes') {
         var $infoBanners = document.querySelectorAll('.info-banner');
 
         if ($infoBanners.length > 0) {
