@@ -12,6 +12,16 @@
             window.initInfoBannerToggle($infoBanner);
           });
         }
+
+        var $selects = document.querySelectorAll('.js-ajax-wrapper select');
+
+        if ($selects.length > 0) {
+          $selects.forEach(function ($select) {
+            if (!$select.getAttribute('data-ssid')) {
+              window.addSelect($select);
+            }
+          });
+        }
       }
     });
   };
