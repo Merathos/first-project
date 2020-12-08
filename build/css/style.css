@@ -14750,6 +14750,7 @@ span.poll-page__hide {
 
 .rating-main__hover-text {
   position: absolute;
+  max-width: 35%;
   top: 50%;
   right: 17px;
   -webkit-transform: translateY(-50%);
