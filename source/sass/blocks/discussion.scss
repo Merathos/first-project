@@ -47,23 +47,15 @@
     }
   }
 
-  &--sign {
-    .button-star {
-      display: block;
-
-      color: var(--color-interactive-default, $blue-default);
+  &:hover {
+    .button-star:not(.button-star--active) {
+      color: $light-grey;
+      opacity: 1;
 
       &:hover,
       &:focus {
         color: var(--color-interactive-accent, $blue-accent);
-        outline: none;
       }
-    }
-  }
-
-  &:hover {
-    .button-star {
-      display: block;
     }
   }
 }
@@ -179,30 +171,26 @@
   top: 50%;
   transform: translateY(-50%);
 
-  // display: none;
+  display: block;
   padding: 0;
-
-  @media (max-width: $desktop-width - 1) {
-    display: block;
-  }
 
   @media (max-width: $desktop-width - 81) {
     bottom: 0;
   }
 }
 
-// .discussion__button {
-//   // padding: 16px 24px 15px;
-//   display: block;
-//   max-width: 420px;
-//   width: 100%;
-//   margin: 0 auto;
-//   width: auto;
+.discussion__button {
+  // padding: 16px 24px 15px;
+  display: block;
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+  width: auto;
 
-//   .discussion__hide {
-//     padding: 0;
-//   }
-// }
+  .discussion__hide {
+    padding: 0;
+  }
+}
 
 .discussion__hide {
   @media (max-width: $tablet-width - 1) {
@@ -250,7 +238,6 @@
 @media print {
   .discussion__archive-link,
   .discussion__archive-mobile,
-  .discussion .button-star,
   .discussion__used {
     display: none;
   }
@@ -258,10 +245,6 @@
   .discussion__item {
     page-break-inside: avoid;
     break-inside: avoid;
-
-    & .button-star {
-      // display: none;
-    }
 
     & .discussion__used {
       display: none;

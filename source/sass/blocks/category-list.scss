@@ -32,6 +32,10 @@
 
   &--is-done,
   &--is-done:hover {
+    .category-list__link {
+      cursor: initial;
+    }
+
     .category-list__hover-text {
       color: var(--color-text, $grey-lighter);
     }

@@ -4,35 +4,33 @@
   color: $light-grey;
   cursor: pointer;
   outline: none;
-  display: none;
+  display: block;
+  opacity: 0;
 
   &:focus {
     color: var(--color-interactive-accent, $blue-accent);
   }
 
-  &:focus:not(.focus-visible) {
-    color: $light-grey;
-  }
-
-  &:hover:not(.focus-visible) {
+  &:hover {
     color: var(--color-interactive-accent, $blue-accent);
   }
 
-  &--active:not(.focus-visible),
-  &--active:focus:not(.focus-visible) {
+  &--active,
+  &--active:focus {
     color: var(--color-interactive-default, $blue-default);
   }
 
-  &--active:hover:not(.focus-visible) {
+  &--active:hover {
     color: var(--color-interactive-accent, $blue-accent);
   }
 
-  &.is-favorite:not(.focus-visible) {
+  &.is-favorite {
     opacity: 1;
     color: var(--color-interactive-accent, $blue-default);
   }
 
   &--active {
+    opacity: 1;
     display: block;
   }
 
@@ -40,6 +38,11 @@
     width: 20px;
     height: 20px;
     pointer-events: none;
+  }
+
+  @media (max-width: $desktop-width) {
+    display: block;
+    opacity: 1;
   }
 }
 
@@ -78,9 +81,37 @@
   }
 }
 
-
 @media print {
   .button-star {
     display: none;
   }
 }
+
+/*
+// Если надо сделать появление кнопки при наведении
+// на ссылку/карточку - добавить ссылке/карточке эти стили
+
+&:hover {
+  .button-star:not(.button-star--active) {
+    color: $light-grey;
+    opacity: 1;
+
+    &:hover,
+    &:focus {
+      color: var(--color-interactive-accent, $blue-accent);
+    }
+  }
+}
+*/
+
+/*
+// Если надо сделать кнопку всегда видимой
+// добавить данные стили в комментарии внутри блока с кнопкой
+// Если нужна постоянная видимость кнопки при
+// разрешении < 1200px данные стили добавлять не надо
+
+.example-block .button-star {
+  display: block;
+  opacity: 1;
+}
+*/
