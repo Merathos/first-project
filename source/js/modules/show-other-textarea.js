@@ -1,42 +1,51 @@
 'use strict';
 
-(function() {
-  var otherInputs = document.querySelectorAll('[data-id="other-input"]');
+(function () {
+  var otherChecboxes = document.querySelectorAll('[data-id="other-checkbox"]');
+  var otherRadios = document.querySelectorAll('[data-id="other-radio"]');
   var hideClass = 'hide';
 
-  var radioArr = [];
+  if (otherChecboxes) {
+    otherChecboxes.forEach(function (el) {
+      el.addEventListener('change', function (evt) {
+        var textarea = evt.target.parentElement.querySelector('.js-other-textarea');
+        var target = evt.target;
 
-  function onChangeToggleTextareaVisibility(evt) {
-    var textarea = evt.target.parentElement.querySelector('.js-other-textarea');
-    var target = evt.target;
-
-    if (target) {
-      textarea.classList.toggle(hideClass);
-    }
+        if (target.checked) {
+          textarea.classList.remove(hideClass);
+        } else {
+          textarea.classList.add(hideClass);
+        }
+      });
+    });
   }
 
-  function onClickToggleTextareaVisibility(evt) {
-    var target = evt.target;
-    var textarea = evt.target.parentElement.parentElement.querySelector('.js-other-textarea');
+  if (otherRadios) {
+    var selectedRadio = null;
 
-    if (target.nodeName === 'TEXTAREA') { return; }
-
-    if (target.dataset.id === 'other-input') {
-      textarea.classList.toggle(hideClass);
-    }
-  }
-
-  if (otherInputs) {
-    otherInputs.forEach(function(el) {
-
-      if (el.getAttribute("type") == 'radio') {
-        radioArr.push(el);
-      } else {
-        el.addEventListener('change', onChangeToggleTextareaVisibility);
+    var showOtherField = function (el) {
+      var textarea = el.parentElement.querySelector('.js-other-textarea');
+      if (textarea) {
+        // eslint-disable-next-line no-unused-expressions
+        el === selectedRadio ? textarea.classList.remove(hideClass) : textarea.classList.add(hideClass);
       }
+    };
 
-      radioArr.forEach(function(el) {
-        el.parentElement.parentElement.addEventListener('click', onClickToggleTextareaVisibility);
+    var hideAllOtherFields = function (radioButtons) {
+      radioButtons.forEach(function (button) {
+        showOtherField(button);
+      });
+    };
+
+    otherRadios.forEach(function (el) {
+      var radioName = el.getAttribute('name');
+      var radios = document.querySelectorAll('[name="' + radioName + '"]');
+      radios.forEach(function (radio) {
+        radio.addEventListener('change', function () {
+          selectedRadio = radio;
+          showOtherField(radio);
+          hideAllOtherFields(radios);
+        });
       });
     });
   }

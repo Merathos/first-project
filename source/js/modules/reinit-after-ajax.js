@@ -17,7 +17,9 @@
 
         if ($selects.length > 0) {
           $selects.forEach(function ($select) {
-            window.addSelect($select);
+            if (!$select.getAttribute('data-ssid')) {
+              window.addSelect($select);
+            }
           });
         }
       }
