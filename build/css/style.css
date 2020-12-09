@@ -9223,6 +9223,15 @@ span.poll__hide {
     .discussion .button-star {
       bottom: 0; } }
 
+.discussion__button {
+  display: block;
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+  width: auto; }
+  .discussion__button .discussion__hide {
+    padding: 0; }
+
 @media (max-width: 767px) {
   .discussion__hide {
     display: none; } }
