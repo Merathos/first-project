@@ -39,6 +39,9 @@
   }
 
   .button-star {
+    display: block;
+    opacity: 1;
+
     @include mobile {
       display: flex;
       align-items: center;
