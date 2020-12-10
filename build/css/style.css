@@ -13087,7 +13087,8 @@ span.poll-page__hide {
     font-weight: 400; }
 
 .news-item .button-star {
-  margin-bottom: 12px; }
+  margin-bottom: 12px;
+  opacity: 1; }
   .news-item .button-star svg {
     width: 24px;
     height: 24px; }
