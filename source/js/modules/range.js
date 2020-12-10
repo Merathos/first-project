@@ -6,7 +6,6 @@ function initRangeSlider(rangeSlider) {
   }
 
   var input = document.getElementById(rangeSlider.dataset.input);
-
   if (input) {
     var min = parseInt(rangeSlider.dataset.min);
     var max = parseInt(rangeSlider.dataset.max);
