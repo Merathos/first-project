@@ -8156,7 +8156,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .category-list__item:hover .category-list__link {
       padding-bottom: 50px; }
     .category-list__item:hover .category-list__hover-text {
-      bottom: 26px; } }
+      bottom: 26px; }
+    .category-list__item:hover .category-list__count-wrap {
+      opacity: 1; } }
 
 .category-list__link {
   position: relative;
@@ -8216,6 +8218,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       max-width: 65%; } }
 
 .category-list__hover-text {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   font-family: inherit;
   font-weight: 400;
   font-size: 13px;
@@ -8226,8 +8233,33 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
   white-space: nowrap; }
+  .category-list__hover-text::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-bg-secondary, #f9f9fa);
+    z-index: -1;
+    -webkit-box-shadow: 0 0 10px 17px var(--color-bg-secondary, #f9f9fa);
+            box-shadow: 0 0 10px 17px var(--color-bg-secondary, #f9f9fa); }
   .category-list__hover-text--is-done {
     color: var(--color-text, #a6abb3); }
+  @media (max-width: 768px) {
+    .category-list__hover-text {
+      position: static;
+      top: auto;
+      bottom: auto;
+      right: auto;
+      left: auto;
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      margin-left: auto; }
+      .category-list__hover-text::after {
+        display: none; } }
   @media (max-width: 400px) {
     .category-list__hover-text {
       position: absolute;
@@ -8268,7 +8300,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     opacity: 0; }
   @media (max-width: 400px) {
     .category-list__count-wrap {
-      position: static; } }
+      position: static;
+      -ms-flex-item-align: start;
+          align-self: flex-start; } }
 
 .category-list__count {
   display: -webkit-box;
@@ -11732,8 +11766,9 @@ ymaps p {
   line-height: 1.0625rem;
   color: var(--color-text, #707b8c); }
 
-.project-page__budget-all .project-page__budget-value {
-  margin-bottom: 17px; }
+.project-page__budget-co-financing {
+  display: block;
+  margin-top: 17px; }
 
 .project-page__budget-co-financing .project-page__budget-value {
   font-size: 24px;
@@ -15385,6 +15420,7 @@ span.poll-page__hide {
 @media (min-width: 1200px) {
   .unavailable__content-wrapper {
     margin-top: 108px;
+    margin-bottom: auto;
     width: calc(100% / 2); } }
 
 .unavailable__title {
