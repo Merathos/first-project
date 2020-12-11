@@ -19,8 +19,9 @@
   color: var(--color-text, $grey);
 }
 
-.project-page__budget-all .project-page__budget-value {
-  margin-bottom: 17px;
+.project-page__budget-co-financing {
+  display: block;
+  margin-top: 17px;
 }
 
 .project-page__budget-co-financing .project-page__budget-value {

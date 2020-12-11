@@ -6,15 +6,16 @@ function initRangeSlider(rangeSlider) {
   }
 
   var input = document.getElementById(rangeSlider.dataset.input);
+
   if (input) {
-    var min = parseInt(rangeSlider.dataset.min);
-    var max = parseInt(rangeSlider.dataset.max);
+    var min = parseInt(rangeSlider.dataset.min, 10);
+    var max = parseInt(rangeSlider.dataset.max, 10);
     var start = input.value ? input.value : max / 2;
     window.noUiSlider.create(rangeSlider, {
       start: start,
       behaviour: 'snap',
       connect: 'lower',
-      step: parseInt(rangeSlider.dataset.step),
+      step: parseInt(rangeSlider.dataset.step, 10),
       range: {
         'min': [min],
         'max': [max]
