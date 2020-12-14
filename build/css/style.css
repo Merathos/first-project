@@ -3342,15 +3342,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   cursor: pointer;
   outline: none;
   display: block;
-  opacity: 0; }
-  .button-star:focus {
-    color: var(--color-interactive-accent, #116ca6); }
-  .button-star:hover {
-    color: var(--color-interactive-accent, #116ca6); }
-  .button-star--active, .button-star--active:focus {
+  opacity: 0;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
+  .button-star--active {
     color: var(--color-interactive-default, #2c8ecc); }
-  .button-star--active:hover {
-    color: var(--color-interactive-accent, #116ca6); }
   .button-star.is-favorite {
     opacity: 1;
     color: var(--color-interactive-accent, #2c8ecc); }
@@ -3415,8 +3411,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     color: $light-grey;
     opacity: 1;
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: var(--color-interactive-accent, $blue-accent);
     }
   }
@@ -4619,6 +4614,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     margin-left: auto;
     -webkit-transition: opacity 0.2s;
     transition: opacity 0.2s; }
+    .application-period .button-star:hover {
+      color: var(--color-interactive-accent, #116ca6); }
   @media (min-width: 1200px) {
     .application-period {
       display: grid;
@@ -4936,7 +4933,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       margin-bottom: 40px; } }
   @media (min-width: 1200px) {
     .proposal__vote {
-      position: -webkit-sticky;
       position: sticky;
       top: 115px;
       grid-area: e; } }
@@ -6210,7 +6206,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       grid-template-areas: "a    c" "b    c"; }
       .public-debate__item:hover:not(.focus-visible) .button-star {
         opacity: 1;
-        display: block; } }
+        display: block; }
+        .public-debate__item:hover:not(.focus-visible) .button-star:hover {
+          color: var(--color-interactive-accent, #116ca6); } }
   .public-debate__item > * {
     -ms-flex-item-align: start;
         align-self: start; }
@@ -6651,6 +6649,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .hearings-status .button-star {
     display: block;
     opacity: 1; }
+    .hearings-status .button-star:hover {
+      color: var(--color-interactive-accent, #116ca6); }
     @media (max-width: 767px) {
       .hearings-status .button-star {
         display: -webkit-box;
@@ -6913,7 +6913,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       grid-column-gap: 56px;
       grid-template-areas: "a    c" "b    c"; }
       .rating__item:hover:not(.focus-visible) .button-star {
-        opacity: 1; } }
+        opacity: 1;
+        color: var(--color-interactive-accent, #116ca6); } }
   .rating__item > * {
     -ms-flex-item-align: start;
         align-self: start; }
@@ -8328,8 +8329,13 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .category-list__button {
   display: none;
+  margin-top: 24px;
   width: 100%;
-  margin-top: 24px; }
+  max-width: 200px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto; }
   .category-list__button.js_hide {
     display: none; }
   @media (max-width: 768px) {
@@ -9154,7 +9160,7 @@ span.poll__hide {
   .discussion__item:hover .button-star:not(.button-star--active) {
     color: #e3e8ee;
     opacity: 1; }
-    .discussion__item:hover .button-star:not(.button-star--active):hover, .discussion__item:hover .button-star:not(.button-star--active):focus {
+    .discussion__item:hover .button-star:not(.button-star--active):hover {
       color: var(--color-interactive-accent, #116ca6); }
 
 .discussion__item-top {
@@ -9254,6 +9260,8 @@ span.poll__hide {
           transform: translateY(-50%);
   display: block;
   padding: 0; }
+  .discussion .button-star:hover {
+    color: var(--color-interactive-accent, #116ca6); }
   @media (max-width: 1119px) {
     .discussion .button-star {
       bottom: 0; } }
@@ -10728,18 +10736,20 @@ span.poll__hide {
   color: var(--color-text, #a6abb3);
   border-top: 1px solid var(--color-stroke, #e3e8ee); }
 
-.project-item .button-star {
-  position: absolute;
-  right: 18px;
-  bottom: 6px;
-  opacity: 0; }
-
 .project-item .button-star--active,
 .project-item .button-star:focus,
 .project-item .button-star:hover,
 .project-item__link:focus + .button-star,
 .project-item__link:hover + .button-star {
   opacity: 1; }
+
+.project-item .button-star {
+  position: absolute;
+  right: 18px;
+  bottom: 6px;
+  opacity: 0; }
+  .project-item .button-star:hover {
+    color: var(--color-interactive-accent, #116ca6); }
 
 @media (max-width: 1199px) {
   .project-item {
@@ -11274,7 +11284,7 @@ span.poll__hide {
     margin: 0 auto;
     display: block;
     font-size: 0.9375rem;
-    line-height: 1.26562rem;
+    line-height: 1.26563rem;
     font-weight: 500;
     color: #2C8ECC;
     text-transform: uppercase; }
@@ -11476,7 +11486,7 @@ ymaps p {
           align-items: center;
   padding-top: 0;
   font-size: 0.9375rem;
-  line-height: 1.26562rem;
+  line-height: 1.26563rem;
   text-decoration: none;
   position: relative;
   color: #2c8ecc; }
@@ -11645,7 +11655,6 @@ ymaps p {
   grid-area: c; }
   @media (min-width: 1200px) {
     .hearings__time-frame {
-      position: -webkit-sticky;
       position: sticky;
       top: 90px; } }
   @media (max-width: 1199px) {
@@ -12364,6 +12373,8 @@ ymaps p {
   .project-meta .button-star svg {
     width: 24px;
     height: 24px; }
+  .project-meta .button-star:hover {
+    color: var(--color-interactive-accent, #116ca6); }
 
 @media (max-width: 767px) {
   .project-meta__category {
@@ -12917,6 +12928,8 @@ ymaps p {
   margin-bottom: 10px;
   display: block;
   opacity: 1; }
+  .poll-page__dates .button-star:hover {
+    color: var(--color-interactive-accent, #116ca6); }
   .poll-page__dates .button-star svg {
     width: 24px;
     height: 24px; }
@@ -13126,6 +13139,8 @@ span.poll-page__hide {
 .news-item .button-star {
   margin-bottom: 12px;
   opacity: 1; }
+  .news-item .button-star:hover {
+    color: var(--color-interactive-accent, #116ca6); }
   .news-item .button-star svg {
     width: 24px;
     height: 24px; }
@@ -13905,7 +13920,6 @@ span.poll-page__hide {
     background-repeat: no-repeat;
     background-size: 100% 1px; }
   .table-fixed table tr:first-child {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 10;

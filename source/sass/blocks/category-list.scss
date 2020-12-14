@@ -257,8 +257,13 @@
 
 .category-list__button {
   display: none;
-  width: 100%;
   margin-top: 24px;
+  width: 100%;
+  max-width: 200px;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
 
   &.js_hide {
     display: none;

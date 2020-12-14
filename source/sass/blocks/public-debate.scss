@@ -103,6 +103,10 @@
     &:hover:not(.focus-visible) .button-star {
       opacity: 1;
       display: block;
+
+      &:hover {
+        color: var(--color-interactive-accent, $blue-accent);
+      }
     }
   }
 

@@ -7,21 +7,10 @@
   display: block;
   opacity: 0;
 
-  &:focus {
-    color: var(--color-interactive-accent, $blue-accent);
-  }
+  transition: color $style-change-duration;
 
-  &:hover {
-    color: var(--color-interactive-accent, $blue-accent);
-  }
-
-  &--active,
-  &--active:focus {
+  &--active {
     color: var(--color-interactive-default, $blue-default);
-  }
-
-  &--active:hover {
-    color: var(--color-interactive-accent, $blue-accent);
   }
 
   &.is-favorite {
@@ -96,8 +85,7 @@
     color: $light-grey;
     opacity: 1;
 
-    &:hover,
-    &:focus {
+    &:hover {
       color: var(--color-interactive-accent, $blue-accent);
     }
   }
