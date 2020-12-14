@@ -50,6 +50,7 @@
 
     &:hover:not(.focus-visible) .button-star {
       opacity: 1;
+      color: var(--color-interactive-accent, $blue-accent);
     }
   }
 

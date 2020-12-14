@@ -40,6 +40,10 @@
   margin-bottom: 12px;
   opacity: 1;
 
+  &:hover {
+    color: var(--color-interactive-accent, $blue-accent);
+  }
+
   svg {
     width: 24px;
     height: 24px;

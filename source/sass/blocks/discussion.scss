@@ -52,8 +52,7 @@
       color: $light-grey;
       opacity: 1;
 
-      &:hover,
-      &:focus {
+      &:hover {
         color: var(--color-interactive-accent, $blue-accent);
       }
     }
@@ -173,6 +172,10 @@
 
   display: block;
   padding: 0;
+
+  &:hover {
+    color: var(--color-interactive-accent, $blue-accent);
+  }
 
   @media (max-width: $desktop-width - 81) {
     bottom: 0;
