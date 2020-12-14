@@ -4936,6 +4936,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       margin-bottom: 40px; } }
   @media (min-width: 1200px) {
     .proposal__vote {
+      position: -webkit-sticky;
       position: sticky;
       top: 115px;
       grid-area: e; } }
@@ -8291,7 +8292,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     color: var(--color-text, #a6abb2); }
   .category-list__count-wrap .category-list__count {
     font-size: 16px;
-    line-height: 22;
+    line-height: 22px;
     color: var(--color-text, #707b8c);
     background-color: var(--color-bg-main, #e3e8ee); }
   .category-list__count-wrap .category-list__quantity {
@@ -11273,7 +11274,7 @@ span.poll__hide {
     margin: 0 auto;
     display: block;
     font-size: 0.9375rem;
-    line-height: 1.26563rem;
+    line-height: 1.26562rem;
     font-weight: 500;
     color: #2C8ECC;
     text-transform: uppercase; }
@@ -11475,7 +11476,7 @@ ymaps p {
           align-items: center;
   padding-top: 0;
   font-size: 0.9375rem;
-  line-height: 1.26563rem;
+  line-height: 1.26562rem;
   text-decoration: none;
   position: relative;
   color: #2c8ecc; }
@@ -11644,6 +11645,7 @@ ymaps p {
   grid-area: c; }
   @media (min-width: 1200px) {
     .hearings__time-frame {
+      position: -webkit-sticky;
       position: sticky;
       top: 90px; } }
   @media (max-width: 1199px) {
@@ -13903,6 +13905,7 @@ span.poll-page__hide {
     background-repeat: no-repeat;
     background-size: 100% 1px; }
   .table-fixed table tr:first-child {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 10;
