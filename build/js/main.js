@@ -768,7 +768,8 @@
                     zoom: 15,
                     controls: ['zoomControl']
                 }, {
-                    searchControlProvider: 'yandex#search'
+                    searchControlProvider: 'yandex#search',
+                    suppressMapOpenBlock:true
                 });
                 myPlacemark = new ymaps.GeoObject({
                     geometry: {
@@ -821,7 +822,8 @@
                 zoom: 15,
                 controls: ['zoomControl']
             }, {
-                searchControlProvider: 'yandex#search'
+                searchControlProvider: 'yandex#search',
+                suppressMapOpenBlock:true
             });
             myPlacemark = new ymaps.GeoObject({
                 geometry: {
@@ -877,7 +879,8 @@
                     zoom: 15,
                     controls: ['zoomControl']
                 }, {
-                    searchControlProvider: 'yandex#search'
+                    searchControlProvider: 'yandex#search',
+                    suppressMapOpenBlock:true
                 });
                 myPlacemark = new ymaps.GeoObject({
                     geometry: {
@@ -927,7 +930,8 @@
                 zoom: 15,
                 controls: ['zoomControl']
             }, {
-                searchControlProvider: 'yandex#search'
+                searchControlProvider: 'yandex#search',
+                suppressMapOpenBlock:true
             });
             myPlacemark = new ymaps.GeoObject({
                 geometry: {
