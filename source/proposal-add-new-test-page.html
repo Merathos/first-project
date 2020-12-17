@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<include src="source/components/head.html"></include>
+
+<body class="page-body">
+  <include src="source/components/special-popup.html"></include>
+  <include src="source/components/header.html"></include>
+  <main>
+    <div class="container container--desktop-only">
+      <section class="proposal proposal--aside">
+        <h1 class="proposal__title page-title">Предложение 2
+        </h1>
+        <div class="proposal__vote project-vote">
+          <div class="project-vote__container project-vote__container--meta">
+            <h2 class="project-vote__title">Голосование</h2>
+            <p class="project-vote__date">
+              Дата начала
+              <time datetime="2019-08-07">20.08.2020</time>
+            </p>
+            <p class="project-vote__date">
+              Дата завершения
+              <time datetime="2019-11-25">20.11.2020</time>
+            </p>
+            <p class="project-vote__expire">
+              <svg width="16" height="16">
+                <use xlink:href="img/sprite.svg#icon-clock"></use>
+              </svg>
+              <span class="project-vote__expire-value">12 дней</span>&nbsp;до
+              начала
+            </p>
+          </div>
+        </div>
+        <div class="proposal__wrapper">
+          <div class="proposal__text-container">
+            <p>
+              Предложение 2Предложение 2Предложение 2Предложение 2
+            </p>
+          </div>
+          <div
+            class="proposal__map proposal__map--no-address map-section map-section--height">
+            <h2 class="map-section__title subtitle subtitle--large">Карта
+              проблемной территории</h2>
+          </div>
+          <div class="proposal__buttons buttons-wrapper">
+            <a class="button button--light-blue" href="#">
+              <span>к списку предложений</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <include src="source/components/footer.html"></include>
+  <include src="source/components/cookie.html"></include>
+  <include src="source/components/up-btn.html"></include>
+  <div
+    class="gallery-popup gallery-popup--proposal js-gallery-popup popup js-popup">
+    <div class="popup__container">
+      <div class="popup__overlay js-popup__overlay"></div>
+      <div class="gallery-popup__content popup__content">
+        <div class="popup__bar popup__bar--top">
+          <button class="popup__close-btn js-popup__close-btn" type="button">
+            <span class="visually-hidden">Закрыть</span>
+            <svg width="16" height="16">
+              <use xlink:href="img/sprite.svg#icon-cross"></use>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="gallery-popup__frame js-gallery-popup__frame swiper-container">
+        </div>
+        <p
+          class="gallery-popup__photo-description js-gallery-popup__photo-description">
+        </p>
+        <div class="popup__bar popup__bar--bottom">
+          <button
+            class="gallery-popup__nav-btn gallery-popup__nav-btn--prev js-gallery-popup__nav-btn--prev"
+            type="button">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#icon-paginator-prev"></use>
+            </svg>
+          </button>
+          <p class="gallery-popup__counter">
+            <span
+              class="gallery-popup__counter-current js-gallery-popup__counter-current"></span>/<span
+              class="gallery-popup__counter-total js-gallery-popup__counter-total"></span>
+          </p>
+          <button
+            class="gallery-popup__nav-btn gallery-popup__nav-btn--next js-gallery-popup__nav-btn--next"
+            type="button">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#icon-paginator-next"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="vote-popup js-vote-popup">
+    <p class="vote-popup__text">
+      <svg class="vote-popup__icon" width="20" height="20">
+        <use xlink:href="img/sprite.svg#icon-attention"></use>
+      </svg>
+      Вы&nbsp;проголосовали за&nbsp;проект. Отозвать голос можно только один
+      раз в&nbsp;течение 2&nbsp;часов с&nbsp;момента голосования.
+    </p>
+    <form action="#" method="post">
+      <button class="vote-popup__revoke-btn js-vote-popup__revoke-btn"
+        type="submit" name="revoke-vote">
+        Отозвать
+      </button>
+    </form>
+  </div>
+  <script
+    src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a3b13bbc-c623-4647-90d4-48210288fe0d"
+    type="text/javascript"></script>
+  <script src="js/libs.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
