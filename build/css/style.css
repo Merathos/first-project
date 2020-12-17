@@ -11019,7 +11019,7 @@ span.poll__hide {
   .map-section iframe, .map-section #map {
     height: 288px; }
   .map-section #improvement-map {
-    height: 512px; }
+    height: calc(100vh - 64px); }
   .map-section__title {
     margin-bottom: 16px;
     font-size: 1.5rem;
