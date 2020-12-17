@@ -31,10 +31,14 @@
       grid-template-columns: minmax(740px, 1fr) 360px;
       grid-column-gap: 20px;
       grid-template-areas:
-        "a   a"
-        "b   b"
-        "c   e"
-        "d   e";
+        // "a   a"
+        // "b   b"
+        // "c   e"
+        // "d   e";
+        "a a"
+        "b b"
+        "c c"
+        "d e";
 
       >* {
         align-self: start;
