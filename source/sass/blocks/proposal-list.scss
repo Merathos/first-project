@@ -77,10 +77,11 @@
 }
 
 .proposal-list__address {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: center;
+  // display: flex;
+  // flex-flow: row wrap;
+  // justify-content: flex-start;
+  // align-items: center;
+  display: inline-block;
 
   @media (min-width: $tablet-width) {
     margin-right: 9px;

@@ -17,9 +17,10 @@
 }
 
 .improvement-stage__wrapper {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
+  // display: flex;
+  // flex-flow: row wrap;
+  // justify-content: flex-start;
+  display: inline-block;
 
   font-weight: normal;
   font-size: 16px;
@@ -52,7 +53,7 @@
     content: "";
     position: absolute;
 
-    top: 50%;
+    top: 10px;
     left: 7px;
 
     width: 6px;

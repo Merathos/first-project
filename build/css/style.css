@@ -4769,7 +4769,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     margin-bottom: 14px; }
     @media (max-width: 400px) {
       .info-banner_enough-lines_true .info-banner__title + .info-banner__text {
-        height: 8em;
+        height: 6em;
         margin-bottom: 9px; } }
     .info-banner_enough-lines_true .info-banner__title + .info-banner__text:after {
       bottom: -0.1rem; }
@@ -4933,7 +4933,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       margin-bottom: 40px; } }
   @media (min-width: 1200px) {
     .proposal__vote {
-      position: -webkit-sticky;
       position: sticky;
       top: 115px;
       grid-area: e; } }
@@ -5182,16 +5181,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
               justify-content: flex-start; } }
 
 .improvement-stage__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  display: inline-block;
   font-weight: normal;
   font-size: 16px;
   line-height: 135%;
@@ -5224,7 +5214,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .improvement-stage__status::before {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 10px;
     left: 7px;
     width: 6px;
     height: 6px;
@@ -5323,19 +5313,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     fill: var(--color-interactive-default, #2c8ecc); }
 
 .proposal-list__address {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
+  display: inline-block; }
   @media (min-width: 768px) {
     .proposal-list__address {
       margin-right: 9px; } }
@@ -6442,6 +6420,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .public-debate--all .public-debate__archive .archive-link__btn {
       min-height: 21px; }
 
+.join-indicator-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
 .join-indicator {
   width: 10.5px;
   height: 16px;
@@ -7148,7 +7134,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   @media (max-width: 767px) {
     .rating-list__title {
       display: block;
-      margin-top: 24px;
       margin-bottom: 22px; } }
 
 .rating-list__total {
@@ -8482,7 +8467,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .category-list--vote .category-list__count--zero {
     background-color: var(--color-bg-main, #ffffff); }
   .category-list--vote .category-list__icon {
-    position: static; }
+    position: static;
+    height: 0; }
   .category-list--vote .js_hide {
     display: none; }
   @media (max-width: 1024px) {
@@ -8492,7 +8478,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         padding: 18px 11px 17px 16px; }
       .category-list--vote .category-list__icon {
         -webkit-transform: translate(3px, 3px);
-                transform: translate(3px, 3px); }
+                transform: translate(3px, 3px);
+        height: 32px; }
       .category-list--vote .category-list__title {
         max-width: 75%; } }
   @media (max-width: 767px) {
@@ -8507,6 +8494,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         width: 100%;
         -webkit-transform: translate(14px, 0);
                 transform: translate(14px, 0); }
+        .category-list--vote .category-list__icon svg {
+          margin-right: auto; }
       .category-list--vote .category-list__title {
         font-size: 18px; } }
 
@@ -10812,8 +10801,7 @@ span.poll__hide {
 .project-item .button-star {
   position: absolute;
   right: 18px;
-  bottom: 6px;
-  opacity: 0; }
+  bottom: 6px; }
   .project-item .button-star:hover {
     color: var(--color-interactive-accent, #116ca6); }
 
@@ -11721,7 +11709,6 @@ ymaps p {
   grid-area: c; }
   @media (min-width: 1200px) {
     .hearings__time-frame {
-      position: -webkit-sticky;
       position: sticky;
       top: 90px; } }
   @media (max-width: 1199px) {
@@ -13987,7 +13974,6 @@ span.poll-page__hide {
     background-repeat: no-repeat;
     background-size: 100% 1px; }
   .table-fixed table tr:first-child {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 10;

@@ -460,6 +460,7 @@
 
   .category-list__icon {
     position: static;
+    height: 0;
   }
 
   .js_hide {
@@ -475,6 +476,7 @@
 
     .category-list__icon {
       transform: translate(3px, 3px);
+      height: 32px;
     }
 
     .category-list__title {
@@ -496,6 +498,10 @@
     .category-list__icon {
       width: 100%;
       transform: translate(14px, 0);
+
+      svg {
+        margin-right: auto;
+      }
     }
 
     .category-list__title {
