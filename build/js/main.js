@@ -640,6 +640,8 @@
           bannerTextHeight / bannerTextLineHeight
       );
 
+      console.log(bannerTextLines);
+
       // Максимально допустимое количество строк
       var maxLinesAmount = 3;
 
