@@ -9404,18 +9404,6 @@ span.poll__hide {
   .concurrent-voting__archive-hidden {
     display: none; } }
 
-.concurrent-voting__head {
-  margin-bottom: 20px; }
-  @media (max-width: 767px) {
-    .concurrent-voting__head {
-      margin-bottom: 12px; } }
-  @media (max-width: 767px) {
-    .concurrent-voting__head svg {
-      width: 48px;
-      height: 48px;
-      -ms-flex-item-align: start;
-          align-self: flex-start; } }
-
 .concurrent-voting__title {
   margin: 0; }
 
