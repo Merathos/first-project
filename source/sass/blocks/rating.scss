@@ -3,7 +3,6 @@
   padding-bottom: 24px;
 
   @media (max-width: $tablet-width) {
-    padding-bottom: 64px;
     padding-top: 64px;
   }
 
@@ -12,6 +11,7 @@
   }
 
   .section__head {
+    flex-wrap: wrap;
     margin-bottom: 8px;
 
     @media (min-width: $tablet-width) {

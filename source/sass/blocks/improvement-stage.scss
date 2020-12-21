@@ -8,18 +8,9 @@
 
 .improvement-stage__container {
   margin-bottom: 32px;
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-  }
 }
 
 .improvement-stage__wrapper {
-  // display: flex;
-  // flex-flow: row wrap;
-  // justify-content: flex-start;
   display: inline-block;
 
   font-weight: normal;
