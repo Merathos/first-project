@@ -54,7 +54,7 @@
       color: var(--color-text, $grey-lighter);
     }
 
-    @media (max-width: $tablet-width) {
+    @media (max-width: $tablet-max-width) {
       box-shadow: unset;
 
       .category-list__count-wrap {
