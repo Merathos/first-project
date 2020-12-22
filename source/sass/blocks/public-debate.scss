@@ -142,6 +142,9 @@
 }
 
 .public-debate__status {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   margin-right: 12px;
 
   @media (min-width: $tablet-width) {
