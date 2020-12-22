@@ -43,7 +43,6 @@
     }
   }
 
-
   &--is-done,
   &--is-done:hover {
     .category-list__link {
@@ -56,6 +55,7 @@
 
     @media (max-width: $tablet-max-width) {
       box-shadow: unset;
+      top: 70%;
 
       .category-list__count-wrap {
         opacity: 1;
@@ -67,12 +67,11 @@
 
       .category-list__count-wrap {
         top: 20px;
-
-        transform: unset;
+        position: static;
       }
     }
 
-    @media (max-width: $mobile-max-width) {
+    @media (max-width: $tablet-min-width) {
       .category-list__hover-text {
         position: static;
         right: unset;
@@ -84,11 +83,18 @@
 
       .category-list__count-wrap {
         position: absolute;
-        top: 62px;
+        top: 33%;
       }
 
       .category-list__title {
         margin-bottom: 8px;
+      }
+    }
+
+    @media (max-width: $mobile-max-width) {
+      .category-list__count-wrap {
+        top: unset;
+        bottom: 40px;
       }
     }
   }
@@ -125,12 +131,11 @@
 
   @media (max-width: $mobile-max-width) {
     &:hover {
-      .category-list__link {
-        padding-bottom: 50px;
-      }
 
       .category-list__hover-text {
-        bottom: 26px;
+        top: auto;
+        bottom: -30px;
+        box-shadow: 0 -20px 41px 14px var(--color-bg-secondary, $color-bg);
       }
 
       .category-list__count-wrap {
@@ -209,13 +214,9 @@
 
   transition: color $style-change-duration linear;
 
-  @media (max-width: $tablet-width ) {
+  @media (max-width: $mobile-max-width ) {
     max-width: 65%;
   }
-
-  // @media (max-width: $mobile-max-width ) {
-  //   max-width: 65%;
-  // }
 }
 
 .category-list__hover-text {
@@ -256,26 +257,17 @@
   &--is-done {
     color: var(--color-text, $grey-default);
 
-    @media (max-width: $tablet-width) {
+    @media (max-width: $tablet-max-width) {
       right: 36px;
-    }
-  }
+      top: unset;
+      bottom: 16px;
+      height: auto;
+      transform: unset;
+      margin-left: auto;
 
-  @media (max-width: $tablet-width) {
-    // position: static;
-    top: unset;
-    bottom: 16px;
-    // right: auto;
-    // left: auto;
-
-    height: auto;
-
-    // transform: translateY(100%);
-    transform: unset;
-    margin-left: auto;
-
-    &::after {
-      display: none;
+      &::after {
+        display: none;
+      }
     }
   }
 
