@@ -34,7 +34,11 @@
   }
 
   &--status {
-    display: initial;
+    // display: block;
+  }
+
+  @include mobile {
+    width: 100%;
   }
 }
 

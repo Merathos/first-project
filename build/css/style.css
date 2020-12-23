@@ -5181,8 +5181,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       .improvement-stage__wrapper--line-height {
         line-height: 150%;
         margin-bottom: 0; } }
-  .improvement-stage__wrapper--status {
-    display: initial; }
+  @media (max-width: 767px) {
+    .improvement-stage__wrapper {
+      width: 100%; } }
 
 .improvement-stage__status {
   padding-left: 19px;
@@ -8102,7 +8103,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 8px; }
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     .category-list {
       grid-template-columns: repeat(1, 1fr); } }
 
@@ -8131,7 +8132,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     cursor: initial; }
   .category-list__item--is-done .category-list__hover-text, .category-list__item--is-done:hover .category-list__hover-text {
     color: var(--color-text, #a6abb2); }
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     .category-list__item--is-done, .category-list__item--is-done:hover {
       -webkit-box-shadow: unset;
               box-shadow: unset;
@@ -8302,7 +8303,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
             box-shadow: 0 0 10px 17px var(--color-bg-secondary, #f9f9fa); }
   .category-list__hover-text--is-done {
     color: var(--color-text, #a6abb3); }
-    @media (max-width: 1024px) {
+    @media (max-width: 1023px) {
       .category-list__hover-text--is-done {
         right: 36px;
         top: unset;
@@ -8335,6 +8336,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   opacity: 1;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
+  -webkit-box-shadow: 0 0 10px 17px var(--color-bg-secondary, #f9f9fa);
+          box-shadow: 0 0 10px 17px var(--color-bg-secondary, #f9f9fa);
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%); }
   .category-list__count-wrap span {
@@ -8471,7 +8474,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     height: 0; }
   .category-list--vote .js_hide {
     display: none; }
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     .category-list--vote {
       grid-template-columns: repeat(2, 1fr); }
       .category-list--vote .category-list__link {
