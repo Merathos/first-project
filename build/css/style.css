@@ -5162,6 +5162,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       padding: 0 0 40px; } }
 
 .improvement-stage__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-bottom: 32px; }
 
 .improvement-stage__wrapper {
