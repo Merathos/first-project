@@ -21,8 +21,18 @@
   margin-right: 32px;
   margin-bottom: 0;
 
+
+
+  &--status {
+    @media (max-width: $tablet-max-width - 1px) and (min-width: $tablet-min-width) {
+      white-space: nowrap;
+    }
+  }
+
   @media (max-width: $tablet-width - 1) {
     margin-bottom: 25px;
+    margin-right: 0;
+
   }
 
   &--line-height {
@@ -31,10 +41,6 @@
       line-height: 150%;
       margin-bottom: 0;
     }
-  }
-
-  &--status {
-    // display: block;
   }
 
   @include mobile {
