@@ -5178,7 +5178,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   color: var(--color-text, #a6abb3);
   margin-right: 32px;
   margin-bottom: 0; }
-  @media (max-width: 1023px) and (min-width: 500px) {
+  @media (max-width: 1124px) and (min-width: 500px) {
     .improvement-stage__wrapper--status {
       white-space: nowrap; } }
   @media (max-width: 767px) {
