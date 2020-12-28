@@ -47,8 +47,16 @@
     }
   }
 
-  @media (hover: none) {
-    &--is-done {
+  &--is-done {
+    .category-list__link {
+      cursor: initial;
+    }
+
+    .category-list__hover-text {
+      color: var(--color-text, $grey-lighter);
+    }
+
+    @media (hover: none) {
       box-shadow: unset;
       top: 70%;
 
@@ -67,16 +75,58 @@
     }
   }
 
+  @media (hover: none) {
+    &--is-done {
+      @media (max-width: $tablet-max-width - 1px) {
+        box-shadow: unset;
+        top: 70%;
+
+        .category-list__count-wrap {
+          opacity: 1;
+        }
+
+        .category-list__hover-text {
+          opacity: 1;
+        }
+
+        .category-list__count-wrap {
+          top: 20px;
+          position: static;
+        }
+      }
+
+      @media (max-width: $tablet-min-width) {
+        .category-list__hover-text {
+          position: static;
+          right: unset;
+          bottom: unset;
+          left: unset;
+
+          margin-left: 0;
+          width: 100%;
+        }
+
+        .category-list__count-wrap {
+          position: absolute;
+          top: 33%;
+        }
+
+        .category-list__title {
+          margin-bottom: 8px;
+        }
+      }
+
+      @media (max-width: $tablet-min-width) {
+        .category-list__count-wrap {
+          top: unset;
+          bottom: 40px;
+        }
+      }
+    }
+  }
+
   @media (hover: hover) {
     &--is-done:hover {
-      .category-list__link {
-        cursor: initial;
-      }
-
-      .category-list__hover-text {
-        color: var(--color-text, $grey-lighter);
-      }
-
       @media (max-width: $tablet-max-width - 1px) {
         box-shadow: unset;
         top: 70%;
@@ -162,9 +212,9 @@
     }
   }
 
-  @media (hover: hover) {
-    &:hover {
-      @media (max-width: $tablet-min-width) {
+  @media (max-width: $tablet-min-width) {
+    @media (hover: hover) {
+      &:hover {
         .category-list__hover-text {
           top: auto;
           bottom: -30px;

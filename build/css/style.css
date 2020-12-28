@@ -8145,6 +8145,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       bottom: 24px;
       -webkit-transform: unset;
               transform: unset; } }
+  .category-list__item--is-done .category-list__link {
+    cursor: initial; }
+  .category-list__item--is-done .category-list__hover-text {
+    color: var(--color-text, #a6abb2); }
   @media (hover: none) {
     .category-list__item--is-done {
       -webkit-box-shadow: unset;
@@ -8157,11 +8161,38 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       .category-list__item--is-done .category-list__count-wrap {
         top: 20px;
         position: static; } }
-  @media (hover: hover) {
-    .category-list__item--is-done:hover .category-list__link {
-      cursor: initial; }
-    .category-list__item--is-done:hover .category-list__hover-text {
-      color: var(--color-text, #a6abb2); } }
+
+@media (hover: none) and (max-width: 1023px) {
+  .category-list__item--is-done {
+    -webkit-box-shadow: unset;
+            box-shadow: unset;
+    top: 70%; }
+    .category-list__item--is-done .category-list__count-wrap {
+      opacity: 1; }
+    .category-list__item--is-done .category-list__hover-text {
+      opacity: 1; }
+    .category-list__item--is-done .category-list__count-wrap {
+      top: 20px;
+      position: static; } }
+
+@media (hover: none) and (max-width: 500px) {
+  .category-list__item--is-done .category-list__hover-text {
+    position: static;
+    right: unset;
+    bottom: unset;
+    left: unset;
+    margin-left: 0;
+    width: 100%; }
+  .category-list__item--is-done .category-list__count-wrap {
+    position: absolute;
+    top: 33%; }
+  .category-list__item--is-done .category-list__title {
+    margin-bottom: 8px; } }
+
+@media (hover: none) and (max-width: 500px) {
+  .category-list__item--is-done .category-list__count-wrap {
+    top: unset;
+    bottom: 40px; } }
 
 @media (hover: hover) and (max-width: 1023px) {
   .category-list__item--is-done:hover {
@@ -8211,7 +8242,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .category-list__item--is-active:focus .category-list__title {
       color: var(--color-interactive-accent, #116ca6); }
 
-@media (hover: hover) and (max-width: 500px) {
+@media (max-width: 500px) and (hover: hover) {
   .category-list__item:hover .category-list__hover-text {
     top: auto;
     bottom: -30px;
