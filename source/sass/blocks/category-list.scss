@@ -22,15 +22,17 @@
 
   transition: box-shadow $style-change-duration linear;
 
-  &:hover {
-    box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
 
-    .category-list__count-wrap {
-      opacity: 0;
-    }
+      .category-list__count-wrap {
+        opacity: 0;
+      }
 
-    .category-list__hover-text {
-      opacity: 1;
+      .category-list__hover-text {
+        opacity: 1;
+      }
     }
   }
 
@@ -45,17 +47,8 @@
     }
   }
 
-  &--is-done,
-  &--is-done:hover {
-    .category-list__link {
-      cursor: initial;
-    }
-
-    .category-list__hover-text {
-      color: var(--color-text, $grey-lighter);
-    }
-
-    @media (max-width: $tablet-max-width - 1px) {
+  @media (hover: none) {
+    &--is-done {
       box-shadow: unset;
       top: 70%;
 
@@ -72,50 +65,62 @@
         position: static;
       }
     }
+  }
 
-    @media (hover: none) {
-      box-shadow: unset;
-      top: 70%;
-
-      .category-list__count-wrap {
-        opacity: 1;
+  @media (hover: hover) {
+    &--is-done:hover {
+      .category-list__link {
+        cursor: initial;
       }
 
       .category-list__hover-text {
-        opacity: 1;
+        color: var(--color-text, $grey-lighter);
       }
 
-      .category-list__count-wrap {
-        top: 20px;
-        position: static;
-      }
-    }
+      @media (max-width: $tablet-max-width - 1px) {
+        box-shadow: unset;
+        top: 70%;
 
-    @media (max-width: $tablet-min-width) {
-      .category-list__hover-text {
-        position: static;
-        right: unset;
-        bottom: unset;
-        left: unset;
+        .category-list__count-wrap {
+          opacity: 1;
+        }
 
-        margin-left: 0;
-        width: 100%;
-      }
+        .category-list__hover-text {
+          opacity: 1;
+        }
 
-      .category-list__count-wrap {
-        position: absolute;
-        top: 33%;
+        .category-list__count-wrap {
+          top: 20px;
+          position: static;
+        }
       }
 
-      .category-list__title {
-        margin-bottom: 8px;
-      }
-    }
+      @media (max-width: $tablet-min-width) {
+        .category-list__hover-text {
+          position: static;
+          right: unset;
+          bottom: unset;
+          left: unset;
 
-    @media (max-width: $tablet-min-width) {
-      .category-list__count-wrap {
-        top: unset;
-        bottom: 40px;
+          margin-left: 0;
+          width: 100%;
+        }
+
+        .category-list__count-wrap {
+          position: absolute;
+          top: 33%;
+        }
+
+        .category-list__title {
+          margin-bottom: 8px;
+        }
+      }
+
+      @media (max-width: $tablet-min-width) {
+        .category-list__count-wrap {
+          top: unset;
+          bottom: 40px;
+        }
       }
     }
   }
@@ -142,7 +147,14 @@
       color: var(--color-interactive-default, $blue-default);
     }
 
-    &:hover,
+    @media (hover: hover) {
+      &:hover {
+        .category-list__title {
+          color: var(--color-interactive-accent, $blue-accent);
+        }
+      }
+    }
+
     &:focus {
       .category-list__title {
         color: var(--color-interactive-accent, $blue-accent);
@@ -150,17 +162,18 @@
     }
   }
 
-  @media (max-width: $tablet-min-width) {
+  @media (hover: hover) {
     &:hover {
+      @media (max-width: $tablet-min-width) {
+        .category-list__hover-text {
+          top: auto;
+          bottom: -30px;
+          box-shadow: 0 -20px 41px 14px var(--color-bg-secondary, $color-bg);
+        }
 
-      .category-list__hover-text {
-        top: auto;
-        bottom: -30px;
-        box-shadow: 0 -20px 41px 14px var(--color-bg-secondary, $color-bg);
-      }
-
-      .category-list__count-wrap {
-        opacity: 1;
+        .category-list__count-wrap {
+          opacity: 1;
+        }
       }
     }
   }
@@ -345,8 +358,10 @@
     margin-left: 4px;
   }
 
-  &:hover {
-    opacity: 0;
+  @media (hover: hover) {
+    &:hover {
+      opacity: 0;
+    }
   }
 
   @media (max-width: $tablet-min-width) {
@@ -448,15 +463,17 @@
     display: flex;
     align-items: center;
 
-    &:hover {
-      color: $blue-accent;
+    @media (hover: hover) {
+      &:hover {
+        color: $blue-accent;
 
-      svg {
-        stroke: var(--color-interactive-accent, $blue-accent);
-      }
+        svg {
+          stroke: var(--color-interactive-accent, $blue-accent);
+        }
 
-      .category-list__count-wrap {
-        opacity: 1;
+        .category-list__count-wrap {
+          opacity: 1;
+        }
       }
     }
   }
