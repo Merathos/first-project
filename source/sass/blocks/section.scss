@@ -65,9 +65,11 @@
   }
 }
 
-.section__description-link {
-  @media (max-width: $tablet-width) {
+a.section__description-link {
+  @media (max-width: $tablet-max-width) {
     display: table;
+    margin-right: auto;
+    margin-left: 0;
 
     &::before {
       bottom: 0;

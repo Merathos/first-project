@@ -2099,10 +2099,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .section__archive-link {
       display: none; } }
 
-@media (max-width: 768px) {
-  .section__description-link {
-    display: table; }
-    .section__description-link::before {
+@media (max-width: 1024px) {
+  a.section__description-link {
+    display: table;
+    margin-right: auto;
+    margin-left: 0; }
+    a.section__description-link::before {
       bottom: 0; } }
 
 .section .description {
