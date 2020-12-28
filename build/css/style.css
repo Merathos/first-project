@@ -6439,7 +6439,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .join-indicator {
   width: 10.5px;
   height: 16px;
-  padding-left: 12px;
+  padding-left: 8px;
   color: var(--color-icon, #9bd2f4);
   cursor: pointer; }
   .join-indicator svg {
