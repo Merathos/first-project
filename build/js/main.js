@@ -1654,9 +1654,15 @@
     var mainContent = document.querySelector('.container--desktop-only');
     var mainContentHeight = mainContent.getBoundingClientRect().height;
     var panelHeight = panel.getBoundingClientRect().height;
+    var infoBanner = mainContent.querySelector('.info-banner')
+    var infoBannerHeight = 0
 
-    if (mainContentHeight && panelHeight && mainContentHeight <= panelHeight) {
-      mainContent.style.minHeight = panelHeight + panelOffsetBottom + 'px';
+    if (infoBanner) {
+      infoBannerHeight = infoBanner.getBoundingClientRect().height;
+    }
+
+    if (mainContentHeight && panelHeight) {
+      mainContent.style.minHeight = panelHeight + panelOffsetBottom + infoBannerHeight + 'px';
     }
   };
 
