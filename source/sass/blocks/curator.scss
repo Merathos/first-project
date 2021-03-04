@@ -21,6 +21,12 @@
     @media (min-width: 720px) {
       padding: 20px 24px 6px;
     }
+
+    @media (min-width: $tablet-max-width) {
+      display: flex;
+      flex-flow: row nowrap;
+      padding-bottom: 3px;
+    }
   }
 
   .curator__left-side {
@@ -30,6 +36,12 @@
 
     @media (min-width: 720px) {
       margin-bottom: 33px;
+    }
+
+    @media (min-width: $tablet-max-width) {
+      width: 44%;
+      flex: 0 0 auto;
+      margin-bottom: 0;
     }
   }
 
@@ -43,6 +55,10 @@
       width: 64px;
       height: 64px;
       margin-right: 16px;
+    }
+
+    @media (min-width: $tablet-max-width) {
+      margin-right: 15px;
     }
 
     border-radius: 50%;
@@ -62,6 +78,10 @@
     align-self: center;
     display: flex;
     flex-flow: column;
+
+    @media (min-width: $tablet-max-width) {
+      padding-bottom: 8px;
+    }
   }
 
   .curator__name {
@@ -83,7 +103,10 @@
     font-size: rem(13px);
     font-weight: 400;
     line-height: rem(17px);
-    letter-spacing: 0em;
+
+    @media (min-width: $tablet-max-width) {
+      max-width: 34ch;
+    }
   }
 
   .curator__right-side {
@@ -91,15 +114,15 @@
     padding: 0;
     list-style: none;
 
-    @media (min-width: 720px) {
-      flex-grow: 1;
-      margin-bottom: 0;
-    }
-
     @media (min-width: 420px) {
       display: flex;
       flex-flow: row wrap;
       align-items: center;
+    }
+
+    @media (min-width: 720px) {
+      flex-grow: 1;
+      margin-bottom: 0;
     }
 
     li {
@@ -116,6 +139,7 @@
       }
 
       @media (min-width: 420px) {
+        padding-right: 24px;
         width: calc(100% / 2);
         min-width: max-content;
 
