@@ -3,7 +3,7 @@
     font-size: 13px;
     font-weight: 400;
     line-height: 17px;
-    margin: 0 0 10px;
+    margin: 0 0 8px;
     color: var(--color-text, $grey);
 
     @media (min-width: 720px) {
@@ -26,17 +26,24 @@
       padding: 20px 24px;
       display: flex;
       flex-flow: row nowrap;
+      align-items: flex-start;
     }
   }
 
   .curator__left-side {
+    position: relative;
+    padding-left: 60px;
+    min-height: 48px;
+
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     margin-bottom: 24px;
+    justify-content: center;
 
     @media (min-width: 720px) {
-      align-items: center;
       margin-bottom: 33px;
+      padding-left: 79px;
+      min-height: 64px;
     }
 
     @media (min-width: $tablet-max-width) {
@@ -61,16 +68,17 @@
   }
 
   .curator__avatar {
-    position: relative;
+    position: absolute;
+    left: 0;
+    top: 0;
+
     width: 48px;
     height: 48px;
     flex-shrink: 0;
-    margin-right: 12px;
 
     @media (min-width: 720px) {
       width: 64px;
       height: 64px;
-      margin-right: 16px;
     }
 
     @media (min-width: $tablet-max-width) {
@@ -93,12 +101,6 @@
       object-fit: cover;
       object-position: center;
     }
-  }
-
-  .curator__details {
-    align-self: center;
-    display: flex;
-    flex-flow: column;
   }
 
   .curator__name {

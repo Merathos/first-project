@@ -8615,7 +8615,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-size: 13px;
   font-weight: 400;
   line-height: 17px;
-  margin: 0 0 10px;
+  margin: 0 0 8px;
   color: var(--color-text, #707b8c); }
   @media (min-width: 720px) {
     .curator h3 {
@@ -8639,23 +8639,31 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-flow: row nowrap;
-              flex-flow: row nowrap; } }
+              flex-flow: row nowrap;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; } }
 
 .curator .curator__left-side {
+  position: relative;
+  padding-left: 60px;
+  min-height: 48px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
-  margin-bottom: 24px; }
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  margin-bottom: 24px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   @media (min-width: 720px) {
     .curator .curator__left-side {
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
-      margin-bottom: 33px; } }
+      margin-bottom: 33px;
+      padding-left: 79px;
+      min-height: 64px; } }
   @media (min-width: 1024px) {
     .curator .curator__left-side {
       width: 44%;
@@ -8681,20 +8689,20 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   background-color: #f9f9fa; }
 
 .curator .curator__avatar {
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 48px;
   height: 48px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  margin-right: 12px;
   border-radius: 50%;
   border: 1px solid var(--color-stroke, #e3e8ee);
   overflow: hidden; }
   @media (min-width: 720px) {
     .curator .curator__avatar {
       width: 64px;
-      height: 64px;
-      margin-right: 16px; } }
+      height: 64px; } }
   @media (min-width: 1024px) {
     .curator .curator__avatar {
       margin-right: 15px; } }
@@ -8709,17 +8717,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
        object-fit: cover;
     -o-object-position: center;
        object-position: center; }
-
-.curator .curator__details {
-  -ms-flex-item-align: center;
-      align-self: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column; }
 
 .curator .curator__name {
   font-size: 1rem;
