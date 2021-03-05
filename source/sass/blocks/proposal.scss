@@ -31,13 +31,10 @@
       grid-template-columns: minmax(740px, 1fr) 360px;
       grid-column-gap: 20px;
       grid-template-areas:
-        // "a   a"
-        // "b   b"
-        // "c   e"
-        // "d   e";
         "a a"
         "b b"
         "c c"
+        "curator curator"
         "d e";
 
       >* {
@@ -86,6 +83,22 @@
 
   @media (min-width: $desktop-width) {
     grid-area: b;
+  }
+}
+
+.proposal__curator {
+  margin-bottom: 24px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: curator;
   }
 }
 

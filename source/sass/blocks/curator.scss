@@ -1,0 +1,220 @@
+.curator {
+  h3 {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 17px;
+    margin: 0 0 8px;
+    color: var(--color-text, $grey);
+
+    @media (min-width: 720px) {
+      font-size: rem(16px);
+      line-height: 135%;
+      margin: 0 0 12px;
+    }
+  }
+
+  .curator__container {
+    padding: 16px;
+    border: 1px solid var(--color-stroke, $light-grey);
+    border-radius: 5px;
+
+    @media (min-width: 720px) {
+      padding: 20px 24px 24px;
+    }
+
+    @media (min-width: $tablet-max-width) {
+      padding: 20px 24px;
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: flex-start;
+    }
+  }
+
+  .curator__left-side {
+    position: relative;
+    padding-left: 60px;
+    min-height: 48px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    margin-bottom: 24px;
+    justify-content: center;
+
+    @media (min-width: 720px) {
+      margin-bottom: 33px;
+      padding-left: 79px;
+      min-height: 64px;
+    }
+
+    @media (min-width: $tablet-max-width) {
+      width: 44%;
+      flex: 0 0 auto;
+      margin-bottom: 0;
+    }
+  }
+
+  .curator__placeholder {
+    width: 100%;
+    height: 100%;
+
+    font-size: rem(32px);
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: $color-bg;
+  }
+
+  .curator__avatar {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+
+    @media (min-width: 720px) {
+      width: 64px;
+      height: 64px;
+    }
+
+    @media (min-width: $tablet-max-width) {
+      margin-right: 15px;
+    }
+
+    border-radius: 50%;
+    border: 1px solid var(--color-stroke, $light-grey);
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  .curator__name {
+    font-size: rem(16px);
+    font-weight: 400;
+    line-height: rem(22px);
+
+    color: var(--color-text, $dark-text);
+
+    @media (min-width: 720px) {
+      font-size: rem(18px);
+      line-height: rem(23px);
+      margin-bottom: 4px;
+    }
+  }
+
+  .curator__position {
+    color: var(--color-text, $grey);
+    font-size: rem(13px);
+    font-weight: 400;
+    line-height: rem(17px);
+
+    @media (min-width: $tablet-max-width) {
+      max-width: 34ch;
+    }
+  }
+
+  .curator__right-side {
+    margin: 0 0 28px;
+    padding: 0;
+    list-style: none;
+    flex-grow: 1;
+    height: var(--height);
+
+    overflow: hidden;
+
+    transition: height $style-change-duration;
+
+    @media (min-width: 420px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-row-gap: 18px;
+    }
+
+    @media (min-width: 720px) {
+      grid-template-columns: 1fr 1fr 1.05fr;
+      margin-bottom: 0;
+      height: auto;
+    }
+
+    @media (min-width: $tablet-max-width) {
+      grid-template-columns: 1.39fr 1.39fr 1fr;
+    }
+
+    li {
+      margin-bottom: 18px;
+      display: flex;
+      flex-flow: column nowrap;
+
+      &:first-child {
+        grid-column-start: span 2;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (min-width: 420px) {
+        margin-bottom: 0;
+      }
+    }
+
+    span {
+      color: var(--color-text, $grey-lighter);
+      font-size: rem(13px);
+      font-weight: 400;
+      line-height: rem(17px);
+      letter-spacing: 0;
+
+      &:last-child {
+        color: var(--color-text, $dark);
+      }
+    }
+
+    a {
+      font-size: rem(13px);
+      font-weight: 400;
+      line-height: rem(17px);
+      letter-spacing: 0;
+      color: var(--color-text, $dark);
+      text-decoration: none;
+    }
+  }
+
+  .curator__button {
+    @media (min-width: 720px) {
+      display: none;
+    }
+
+    svg {
+      transition: transform $style-change-duration;
+    }
+  }
+
+  .collapsed {
+    svg {
+      transform: rotate(-180deg);
+    }
+  }
+
+  ul[data-collapsed = 'true'] {
+    @media (max-width: 719px) {
+      margin: 0;
+      height: 0;
+    }
+  }
+}
