@@ -4890,7 +4890,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       display: grid;
       grid-template-columns: minmax(740px, 1fr) 360px;
       grid-column-gap: 20px;
-      grid-template-areas: "a a" "b b" "curator curator" "c c" "d e"; }
+      grid-template-areas: "a a" "b b" "c c" "curator curator" "d e"; }
       .proposal--aside > * {
         -ms-flex-item-align: start;
             align-self: start; } }
