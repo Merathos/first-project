@@ -21,17 +21,17 @@
   }
 }
 
-.new-project__rules {
-  margin-bottom: 30px;
+// .new-project__rules {
+//   margin-bottom: 30px;
 
-  @media (min-width: $desktop-width) {
-    min-height: 23px;
-  }
+//   @media (min-width: $desktop-width) {
+//     min-height: 23px;
+//   }
 
-  @media (max-width: $tablet-width - 1) {
-    margin-bottom: 20px;
-  }
-}
+//   @media (max-width: $tablet-width - 1) {
+//     margin-bottom: 20px;
+//   }
+// }
 
 .new-project__comments {
   margin: 28px 0 12px;
@@ -174,5 +174,11 @@
     order: -1;
     margin-bottom: 15px;
     width: 100%;
+  }
+}
+
+.new-project .project-rules {
+  &:not(:last-child) {
+    margin-bottom: 11px;
   }
 }

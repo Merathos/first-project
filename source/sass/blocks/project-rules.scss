@@ -1,0 +1,29 @@
+.project-rules {
+  position: relative;
+  padding: 20px 24px 20px 44px;
+  border: 1px solid var(--color-stroke, $light-grey);
+  border-radius: $border-radius;
+
+  @include font;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 135%;
+
+  color: var(--color-text, $dark-text);
+
+  em {
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  a {
+    color: var(--color-interactive-default, $blue-default);
+    text-underline-offset: 2px;
+  }
+
+  svg {
+    position: absolute;
+    top: 22px;
+    left: 20px;
+  }
+}

@@ -4890,7 +4890,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       display: grid;
       grid-template-columns: minmax(740px, 1fr) 360px;
       grid-column-gap: 20px;
-      grid-template-areas: "a a" "b b" "c c" "curator curator" "d e"; }
+      grid-template-areas: "a a" "b b" "c c" "curator curator" "rules rules" "d e"; }
       .proposal--aside > * {
         -ms-flex-item-align: start;
             align-self: start; } }
@@ -4980,12 +4980,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .proposal__last-comment {
       margin-bottom: 64px; } }
 
-.proposal__rules {
-  margin-bottom: 48px; }
-  @media (min-width: 768px) {
-    .proposal__rules {
-      margin-bottom: 56px; } }
-
 .proposal__form-title {
   margin-bottom: 32px; }
   @media (min-width: 1200px) {
@@ -5072,6 +5066,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-bottom: 48px; }
   .proposal__files h2 {
     margin: 0 0 25px; }
+
+.proposal .project-rules {
+  grid-area: rules; }
+  .proposal .project-rules:not(:last-child) {
+    margin-bottom: 40px; }
 
 .comments-tab {
   height: 46px;
@@ -8829,6 +8828,27 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .curator ul[data-collapsed='true'] {
     margin: 0;
     height: 0; } }
+
+.project-rules {
+  position: relative;
+  padding: 20px 24px 20px 44px;
+  border: 1px solid var(--color-stroke, #e3e8ee);
+  border-radius: 5px;
+  font-family: "Rubik", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 135%;
+  color: var(--color-text, #354052); }
+  .project-rules em {
+    font-weight: 500;
+    font-style: normal; }
+  .project-rules a {
+    color: var(--color-interactive-default, #2c8ecc);
+    text-underline-offset: 2px; }
+  .project-rules svg {
+    position: absolute;
+    top: 22px;
+    left: 20px; }
 
 .news-notice {
   -webkit-box-sizing: border-box;
@@ -15670,15 +15690,6 @@ span.poll-page__hide {
     .new-project__title {
       margin-bottom: 32px; } }
 
-.new-project__rules {
-  margin-bottom: 30px; }
-  @media (min-width: 1200px) {
-    .new-project__rules {
-      min-height: 23px; } }
-  @media (max-width: 767px) {
-    .new-project__rules {
-      margin-bottom: 20px; } }
-
 .new-project__comments {
   margin: 28px 0 12px; }
 
@@ -15792,6 +15803,9 @@ span.poll-page__hide {
               order: -1;
       margin-bottom: 15px;
       width: 100%; } }
+
+.new-project .project-rules:not(:last-child) {
+  margin-bottom: 11px; }
 
 .unavailable {
   padding-top: 32px; }
