@@ -8844,7 +8844,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     font-style: normal; }
   .project-rules a {
     color: var(--color-interactive-default, #2c8ecc);
-    text-underline-offset: 2px; }
+    text-underline-offset: 2px;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s; }
+    .project-rules a:hover:not(.focus-visible) {
+      color: var(--color-interactive-accent, #116ca6); }
   .project-rules svg {
     position: absolute;
     top: 22px;

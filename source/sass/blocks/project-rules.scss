@@ -19,6 +19,11 @@
   a {
     color: var(--color-interactive-default, $blue-default);
     text-underline-offset: 2px;
+    transition: color $style-change-duration;
+
+    &:hover:not(.focus-visible) {
+      color: var(--color-interactive-accent, $blue-accent);
+    }
   }
 
   svg {
