@@ -3426,6 +3426,38 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   opacity: 1;
 }
 */
+.button-remove {
+  padding: 17px 26px;
+  border: none;
+  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 135%;
+  text-transform: uppercase;
+  color: var(--color-interactive-default, #2c8ecc);
+  cursor: pointer;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
+  .button-remove:hover:not(.focus-visible) {
+    color: var(--color-interactive-accent, #116ca6); }
+  .button-remove svg {
+    margin-right: 8px;
+    -webkit-transition: fill 0.2s;
+    transition: fill 0.2s; }
+
 .page-404 {
   padding-top: 16vh;
   padding-bottom: 14vh; }
@@ -4563,6 +4595,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   width: 274px;
   padding: 16px 16px; }
 
+.button-remove {
+  margin-left: auto;
+  margin-right: 22px; }
+
+@media (max-width: 780px) {
+  .button-remove {
+    margin-right: auto; } }
+
 @media (max-width: 767px) {
   .buttons-wrapper {
     -webkit-box-orient: vertical;
@@ -4574,7 +4614,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         -ms-flex-order: -1;
             order: -1;
     margin-bottom: 15px;
-    width: 100%; } }
+    width: 100%; }
+  .button--white:not(:last-child) {
+    margin-bottom: 15px; }
+  .button-remove {
+    margin: 0; } }
 
 .date {
   position: relative;
@@ -15795,7 +15839,18 @@ span.poll-page__hide {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
-              flex-direction: column; } }
+              flex-direction: column; }
+      .new-project__button-wrapper .button--white:not(:last-child) {
+        margin-bottom: 15px; } }
+  .new-project__button-wrapper .button-remove {
+    margin-left: auto;
+    margin-right: 22px; }
+    @media (max-width: 780px) {
+      .new-project__button-wrapper .button-remove {
+        margin-right: auto; } }
+    @media (max-width: 767px) {
+      .new-project__button-wrapper .button-remove {
+        margin: 0; } }
 
 .new-project__submit-btn {
   width: 274px;
@@ -15809,7 +15864,10 @@ span.poll-page__hide {
       width: 100%; } }
 
 .new-project .project-rules:not(:last-child) {
-  margin-bottom: 11px; }
+  margin-bottom: 40px; }
+
+.project-rules + .new-project__form {
+  padding-top: 0; }
 
 .unavailable {
   padding-top: 32px; }
