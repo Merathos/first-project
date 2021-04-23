@@ -12055,8 +12055,13 @@ ymaps p {
 .area-improvement .activity-tabs {
   padding: 0;
   margin-bottom: 40px; }
+  @media (max-width: 767px) {
+    .area-improvement .activity-tabs {
+      margin-bottom: 24px; } }
   .area-improvement .activity-tabs .activity-tabs__list {
     padding: 0; }
+  .area-improvement .activity-tabs .activity-tabs__bottom {
+    width: 100%; }
 
 .activity-tabs + .area-improvement__proposal > .proposal-list__item {
   padding-top: 0; }
