@@ -4599,9 +4599,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-left: auto;
   margin-right: 22px; }
 
-@media (max-width: 780px) {
+@media (max-width: 1199px) {
   .button-remove {
-    margin-right: auto; } }
+    margin-right: 6px; } }
 
 @media (max-width: 767px) {
   .buttons-wrapper {
@@ -4615,10 +4615,16 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
             order: -1;
     margin-bottom: 15px;
     width: 100%; }
-  .button--white:not(:last-child) {
-    margin-bottom: 15px; }
+  .button--white {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3; }
+    .button--white:not(:last-child) {
+      margin-bottom: 15px; }
   .button-remove {
-    margin: 0; } }
+    margin: 0; }
+    .button-remove:not(:last-child) {
+      margin-bottom: 15px; } }
 
 .date {
   position: relative;
