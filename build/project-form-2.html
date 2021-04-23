@@ -253,14 +253,18 @@
         <h1 class="new-project__title page-title page-title--project">
           Форма добавления проекта
         </h1>
-        <a class="new-project__rules link link--blue link--rules" href="#">
-          <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-            <path fill="currentColor" fill-rule="evenodd" d="M.2 12C.2 5.494 5.492.2 12 .2 18.505.2 23.8 5.494 23.8 12c0 6.506-5.294 11.8-11.8 11.8C5.492 23.8.2 18.506.2 12zm2.152 0c0 5.32 4.328 9.647 9.647 9.647 5.32 0 9.647-4.327 9.647-9.647S17.318 2.354 12 2.354 2.352 6.68 2.352 12z" clip-rule="evenodd"></path>
-            <rect width="2.5" height="8" x="10.75" y="6" fill="currentColor" rx="1"></rect>
-            <rect width="2.5" height="3" x="10.75" y="15" fill="currentColor" rx="1"></rect>
-          </svg>
-          <span>Правила размещения проектов</span>
-        </a>
+        <div class="project-rules">
+  <span>Указанная Вами <em>информация сохраняется в&nbsp;автоматическим режиме</em> при изменении данных объекта или каждые
+    30&nbsp;секунд. При потере доступа к&nbsp;сети Интернет, Вы&nbsp;всегда сможете открыть черновик объекта
+    в&nbsp;разделе Моя активность. Если вы&nbsp;не&nbsp;отправите ваш объект на&nbsp;модерацию в&nbsp;период приема
+    объектов, черновик будет автоматически удален.</span>
+  <a href="#">Правила&nbsp;размещения&nbsp;объекта</a>
+  <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="8" cy="8" r="8" fill="#70BF56"></circle>
+    <path d="M4 8l2.5 2.5L12 5" stroke="#fff" stroke-width="1.75"></path>
+  </svg>
+</div>
+
         <div class="new-project__comments comments-tab">
           <button type="button" class="js-moderator-comments">
             <span>Предыдущие комментарии модератора</span>
@@ -391,6 +395,12 @@
           </div>
           <div class="new-project__button-wrapper">
             <button type="button" class="button button--white">Отменить</button>
+            <button type="button" class="button-remove">
+              <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 1c0-.6-.4-1-1-1H5c-.6 0-1 .4-1 1v2H0v2h1v10c0 .6.4 1 1 1h12c.6 0 1-.4 1-1V5h1V3h-4V1zM6 2h4v1H6V2zm7 3v9H3V5h10z" fill="currentColor"></path>
+              </svg>
+              <span>Удалить черновик</span>
+            </button>
             <button type="button" class="button button--blue new-project__submit-btn" id="improvement-submit-btn">
               Отправить на модерацию
             </button>
