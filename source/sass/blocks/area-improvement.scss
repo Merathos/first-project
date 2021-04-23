@@ -127,8 +127,16 @@
   padding: 0;
   margin-bottom: 40px;
 
+  @media (max-width: $tablet-width - 1) {
+    margin-bottom: 24px;
+  }
+
   .activity-tabs__list {
     padding: 0;
+  }
+
+  .activity-tabs__bottom {
+    width: 100%;
   }
 }
 
