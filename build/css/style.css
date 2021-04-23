@@ -4599,9 +4599,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-left: auto;
   margin-right: 22px; }
 
-@media (max-width: 780px) {
+@media (max-width: 1199px) {
   .button-remove {
-    margin-right: auto; } }
+    margin-right: 6px; } }
 
 @media (max-width: 767px) {
   .buttons-wrapper {
@@ -4615,10 +4615,16 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
             order: -1;
     margin-bottom: 15px;
     width: 100%; }
-  .button--white:not(:last-child) {
-    margin-bottom: 15px; }
+  .button--white {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3; }
+    .button--white:not(:last-child) {
+      margin-bottom: 15px; }
   .button-remove {
-    margin: 0; } }
+    margin: 0; }
+    .button-remove:not(:last-child) {
+      margin-bottom: 15px; } }
 
 .date {
   position: relative;
@@ -5026,9 +5032,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .proposal__form-title {
   margin-bottom: 32px; }
-  @media (min-width: 1200px) {
+  @media (min-width: 768px) {
     .proposal__form-title {
-      margin-bottom: 24px; } }
+      margin-bottom: 40px; } }
 
 .proposal__description {
   margin-bottom: 72px; }
@@ -8875,14 +8881,19 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .project-rules {
   position: relative;
-  padding: 20px 24px 20px 44px;
+  padding: 15px 15px 15px 35px;
   border: 1px solid var(--color-stroke, #e3e8ee);
   border-radius: 5px;
   font-family: "Rubik", "Arial", sans-serif;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 135%;
+  font-size: 13px;
+  line-height: 17px;
   color: var(--color-text, #354052); }
+  @media (min-width: 768px) {
+    .project-rules {
+      padding: 19px 24px 19px 44px;
+      font-size: 15px;
+      line-height: 135%; } }
   .project-rules em {
     font-weight: 500;
     font-style: normal; }
@@ -8895,8 +8906,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       color: var(--color-interactive-accent, #116ca6); }
   .project-rules svg {
     position: absolute;
-    top: 22px;
-    left: 20px; }
+    top: 17px;
+    left: 11px; }
+    @media (min-width: 768px) {
+      .project-rules svg {
+        top: 22px;
+        left: 20px; } }
 
 .news-notice {
   -webkit-box-sizing: border-box;
