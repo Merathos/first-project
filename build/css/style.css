@@ -12037,6 +12037,15 @@ ymaps p {
 .area-improvement__paginator {
   margin-top: 0; }
 
+.area-improvement .activity-tabs {
+  padding: 0;
+  margin-bottom: 40px; }
+  .area-improvement .activity-tabs .activity-tabs__list {
+    padding: 0; }
+
+.activity-tabs + .area-improvement__proposal > .proposal-list__item {
+  padding-top: 0; }
+
 .hearings-page {
   padding-top: 40px;
   padding-bottom: 120px; }
@@ -15211,6 +15220,15 @@ span.poll-page__hide {
       padding-right: 20px;
       font-size: 13px;
       line-height: 17px; } }
+
+.rating-main .activity-tabs {
+  padding: 0;
+  margin-bottom: 48px; }
+  .rating-main .activity-tabs .activity-tabs__list {
+    padding: 0; }
+  .rating-main .activity-tabs + .rating-main__categories {
+    border-top: none;
+    padding-top: 0; }
 
 .container_overflow {
   overflow: auto; }

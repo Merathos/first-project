@@ -297,3 +297,17 @@
     line-height: 17px;
   }
 }
+
+.rating-main .activity-tabs {
+  padding: 0;
+  margin-bottom: 48px;
+
+  .activity-tabs__list {
+    padding: 0;
+  }
+
+  + .rating-main__categories {
+    border-top: none;
+    padding-top: 0;
+  }
+}
