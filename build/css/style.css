@@ -15246,6 +15246,8 @@ span.poll-page__hide {
   margin-bottom: 48px; }
   .rating-main .activity-tabs .activity-tabs__list {
     padding: 0; }
+  .rating-main .activity-tabs .activity-tabs__bottom {
+    width: 100%; }
   .rating-main .activity-tabs + .rating-main__categories {
     border-top: none;
     padding-top: 0; }
