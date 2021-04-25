@@ -466,7 +466,7 @@
 
 
 (function () {
-  var selects = document.querySelectorAll('.js-form-select select');
+  var selects = document.querySelectorAll('.js-form-select');
 
 
   var deselectLabel = '<button type="button"><span class="visually-hidden">Сбросить фильтр по голосам</span><svg width="12" height="12" viewBox="0 0 12 12"><path d="M1 1L11 11M11 1L1 11" stroke-width="2"/></svg></button>';
@@ -1606,6 +1606,83 @@
 
 
 (function () {
+  var selects = document.querySelectorAll('.js-multiple-select');
+
+  var addSelect = function (el) {
+    var multipleSelectInstance = new window.SlimSelect({
+      select: el,
+      showSearch: false,
+      showContent: 'down',
+      allowDeselectOption: true,
+      closeOnSelect: false,
+      placeholder: el.dataset.placeholderText ? el.dataset.placeholderText : '',
+
+      allowDeselect: el.dataset.deselect ? true : false,
+
+      onChange: function () {
+        selectChangeHandler();
+      }
+    });
+
+    var selectContainer = multipleSelectInstance.slim.container;
+
+    var selectChangeHandler = function () {
+      toggleDeselectAllButton();
+      updateCounter();
+    };
+
+    var createDeselectAllButton = function () {
+      var button = document.createElement('button');
+      button.classList.add('ss-deselect-all');
+      button.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        evt.stopPropagation();
+        multipleSelectInstance.set([]);
+      });
+      return button;
+    };
+
+    var toggleDeselectAllButton = function () {
+      if (multipleSelectInstance.selected().length) {
+        selectContainer.querySelector('.ss-add').classList.remove('ss-empty');
+      } else {
+        selectContainer.querySelector('.ss-add').classList.add('ss-empty');
+      }
+    };
+
+    var updateCounter = function () {
+      if (multipleSelectInstance.selected().length) {
+        selectContainer.querySelector('.ss-plus').textContent = 'Категорий выбрано: ' + multipleSelectInstance.selected().length;
+      } else {
+        selectContainer.querySelector('.ss-plus').textContent = el.dataset.placeholderText;
+      }
+    };
+
+    var createArrow = function () {
+      var parent = document.createElement('div');
+      parent.innerHTML = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.9833 12L8 7.02703L3.01667 12L1.5 10.4865L8 4L14.5 10.4865L12.9833 12Z" fill="#2C8ECC"/></svg>';
+      return parent.children[0];
+    };
+
+    selectContainer.querySelector('.ss-add').classList.add('ss-empty');
+    selectContainer.querySelector('.ss-add').prepend(createDeselectAllButton());
+    selectContainer.querySelector('.ss-add').appendChild(createArrow());
+    selectContainer.querySelector('.ss-plus').textContent = el.dataset.placeholderText;
+
+    return multipleSelectInstance;
+  };
+
+  selects.forEach(function (select) {
+    addSelect(select);
+  });
+
+  window.addSelect = addSelect;
+})();
+
+'use strict';
+
+
+(function () {
   var header = document.querySelector('.js-page-header');
 
   if (!header) {
@@ -2160,6 +2237,45 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
   if ($ajaxWrappers.length > 0) {
     $ajaxWrappers.forEach(function ($ajaxWrapper) {
       observer.observe($ajaxWrapper, {attributes: true, childList: true, subtree: true});
+    });
+  }
+})();
+
+'use strict';
+
+(function () {
+  var targets = document.querySelectorAll('.ss-main.js-multiple-select');
+
+  if (targets.length) {
+    targets.forEach(function (target) {
+      var elementsList = target.querySelector('.ss-list');
+
+      var mutationObserverConfig = {
+        attributes: false,
+        childList: true,
+        subtree: false
+      };
+
+      var removeClasses = function () {
+        target.classList.remove('two-column', 'three-column');
+      };
+
+      var changeElementsNumberHandler = function () {
+        var number = elementsList.children.length;
+        removeClasses();
+
+        if (number > 8 && number <= 15) {
+          target.classList.add('two-column');
+        }
+        if (number > 14) {
+          target.classList.add('three-column');
+        }
+      };
+
+      var observer = new MutationObserver(changeElementsNumberHandler);
+      observer.observe(elementsList, mutationObserverConfig);
+      changeElementsNumberHandler();
+
     });
   }
 })();

@@ -1,0 +1,50 @@
+.categories-filter {
+  padding: 18px 24px 18px 20px;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  border: 1px solid var(--color-stroke, $light-grey);
+  border-radius: 5px;
+
+  @media (max-width: $tablet-width - 1) {
+    flex-flow: column wrap;
+    align-items: flex-start;
+  }
+
+  &>div:not(:last-child):not(:nth-last-child(2)) {
+    border-right: 1px solid var(--color-stroke, $light-grey);
+  }
+}
+
+.categories-filter__select {
+  // padding-right: 32px; фиксированная ширина
+  padding-right: 25px;
+  margin-right: 33px;
+
+  .ss-single-selected {
+    padding: 0;
+
+    .ss-arrow {
+      margin-left: 13px;
+
+      span {
+        width: 9px;
+        height: 9px;
+      }
+
+      span.arrow-up {
+        margin-top: 5px;
+      }
+      span.arrow-down {
+        margin-top: -5px;
+      }
+
+    }
+  }
+}
+
+.categories-filter__checkbox {
+  margin-bottom: 0;
+  margin-left: auto;
+}

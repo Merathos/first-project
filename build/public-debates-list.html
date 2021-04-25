@@ -249,8 +249,32 @@
           обсуждений / публичных слушаний и оставить свое мнение по вопросам,
           выносящимся на обсуждение.
         </p>
-        <form class="public-debate__select form-select js-form-select">
-          <select name="category-select" id="category-select" title="Открыть фильтр" data-placeholder-text="Все статусы" data-deselect="true">
+        <form class="public-debate__filter categories-filter">
+          <select name="categories" id="categories" title="Открыть фильтр" data-deselect="true" class="categories-filter__select multiple-select js-multiple-select" data-placeholder-text="Все категории" multiple="">
+            <option data-placeholder="true"></option>
+            <option value="Библиотеки" title="Библиотеки">Библиотеки</option>
+            <option value="Муниципальные образовательные организации" title="Муниципальные образовательные организации">Муниципальные образовательные организации</option>
+            <option value="Благоустройство" title="Благоустройство">Благоустройство</option>
+            <option value="Народное творчество" title="Народное творчество">Народное творчество</option>
+            <option value="Бытовое обслуживание" title="Бытовое обслуживание">Бытовое обслуживание</option>
+            <option value="Объекты культурного наследия" title="Объекты культурного наследия">Объекты культурного наследия</option>
+            <option value="Водоснабжение" title="Водоснабжение">Водоснабжение</option>
+            <option value="Объекты культуры" title="Объекты культуры">Объекты культуры</option>
+            <option value="Детские площадки" title="Детские площадки">Детские площадки</option>
+            <option value="Пожарная безопасность" title="Пожарная безопасность">Пожарная безопасность</option>
+            <option value="Дороги" title="Дороги">Дороги</option>
+            <option value="Сбор бытовых отходов" title="Сбор бытовых отходов">Сбор бытовых отходов</option>
+            <option value="Доходогенерирующие проекты" title="Доходогенерирующие проекты">Доходогенерирующие проекты</option>
+            <option value="Связь" title="Связь">Связь</option>
+            <option value="ЖКХ" title="ЖКХ">ЖКХ</option>
+            <option value="Спорт" title="Спорт">Спорт</option>
+            <option value="Массовое мероприятиеТуризм" title="Массовое мероприятиеТуризм">Массовое мероприятиеТуризм</option>
+            <option value="Туризм" title="Туризм">Туризм</option>
+            <option value="Места захоронения" title="Места захоронения">Места захоронения</option>
+            <option value="Фельдшерско-акушерские пункты" title="Фельдшерско-акушерские пункты">Фельдшерско-акушерские пункты</option>
+            <option value="Места массового пользования" title="Места массового пользования">Места массового пользования</option>
+          </select>
+          <select name="category-select" id="category-select" class="categories-filter__select single-select single-select--small js-form-select" title="Открыть фильтр" data-placeholder-text="Все статусы" data-deselect="true">
             <option data-placeholder="true"></option>
             <option value="Идёт приём мнений" title="Идёт приём мнений">Идёт
               приём мнений</option>
@@ -265,7 +289,7 @@
             <option value="Подведены итоги" title="Подведены итоги">Подведены
               итоги</option>
           </select>
-          <div class="form-select__checkbox-wrapper form-checkbox">
+          <div class="categories-filter__checkbox form-checkbox">
             <input type="checkbox" name="favorites-checkbox" id="favorites-checkbox">
             <label for="favorites-checkbox">Только избранные</label>
           </div>
