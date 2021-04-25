@@ -12,14 +12,49 @@
     align-items: flex-start;
   }
 
-  &>div:not(:last-child):not(:nth-last-child(2)) {
+  &>.categories-filter__select:not(:last-child):not(:nth-last-child(2)) {
     border-right: 1px solid var(--color-stroke, $light-grey);
+  }
+
+  &>.categories-filter__voices-counter:not(:last-child):not(:nth-last-child(2)) {
+    border-right: 1px solid var(--color-stroke, $light-grey);
+  }
+
+  &>.categories-filter__level-toggler:not(:last-child):not(:nth-last-child(2)) {
+    border-right: 1px solid var(--color-stroke, $light-grey);
+
+    @include tablet {
+      border-right: none;
+    }
+  }
+}
+
+.categories-filter__level-toggler {
+  padding: 0;
+  margin: 0 29px 0 0;
+  width: auto;
+  background-color: transparent;
+  border-radius: 0;
+
+  li {
+    margin: 0 26px 0 0;
+
+    &:last-child {
+      margin-right: 32px;
+    }
+  }
+
+  @include tablet {
+    width: 100%;
+    padding-bottom: 20px;
+    margin-bottom: 21px;
+    border-bottom: 1px solid var(--color-stroke, $light-grey);
   }
 }
 
 .categories-filter__select {
-  // padding-right: 32px; фиксированная ширина
-  padding-right: 25px;
+  padding-right: 32px;
+  // padding-right: 25px; //фиксированная ширина
   margin-right: 33px;
 
   .ss-single-selected {

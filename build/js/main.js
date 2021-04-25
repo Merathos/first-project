@@ -1619,6 +1619,14 @@
 
       allowDeselect: el.dataset.deselect ? true : false,
 
+      beforeOpen: function () {
+        calcWidthBasedOnPosition();
+      },
+
+      afterClose: function () {
+        removeCalculatedWidth();
+      },
+
       onChange: function () {
         selectChangeHandler();
       }
@@ -1629,6 +1637,34 @@
     var selectChangeHandler = function () {
       toggleDeselectAllButton();
       updateCounter();
+    };
+
+    var calcWidthBasedOnPosition = function () {
+      var COL_WIDTH = 312;
+      var menu = selectContainer.querySelector('.ss-content');
+      var {x, width} = menu.getBoundingClientRect();
+      var viewportWidth = window.innerWidth;
+
+      var currentColNumber = width / COL_WIDTH;
+      var offsetRight = viewportWidth - (x + width);
+
+      if (offsetRight >= 30) {
+        return;
+      }
+
+      if (!offsetRight - COL_WIDTH) {
+        selectContainer.setAttribute('style', '--colNum:' + (currentColNumber - 1));
+        return;
+      }
+
+      if (!offsetRight - COL_WIDTH * 2) {
+        selectContainer.setAttribute('style', '--colNum:' + (currentColNumber - 2));
+        return;
+      }
+    };
+
+    var removeCalculatedWidth = function () {
+      selectContainer.removeAttribute('style');
     };
 
     var createDeselectAllButton = function () {

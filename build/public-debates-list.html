@@ -250,6 +250,17 @@
           выносящимся на обсуждение.
         </p>
         <form class="public-debate__filter categories-filter">
+          <ul class="categories-filter__level-toggler page-nav">
+            <li class="page-nav__item">
+              <a href="#" class="page-nav__link page-nav__link--active">Федеральные</a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#" class="page-nav__link">Региональные</a>
+            </li>
+            <li class="page-nav__item">
+              <a href="#" class="page-nav__link">Местные</a>
+            </li>
+          </ul>
           <select name="categories" id="categories" title="Открыть фильтр" data-deselect="true" class="categories-filter__select multiple-select js-multiple-select" data-placeholder-text="Все категории" multiple="">
             <option data-placeholder="true"></option>
             <option value="Библиотеки" title="Библиотеки">Библиотеки</option>
@@ -289,6 +300,11 @@
             <option value="Подведены итоги" title="Подведены итоги">Подведены
               итоги</option>
           </select>
+          <!-- <div class="categories-filter__voices voices-counter">
+            <p class="voices-counter__caption">У вас осталось голосов</p>
+            <span class="voices-counter__counter-avaliable">1</span>&nbsp;из&nbsp;<span
+                class="voices-counter__counter-total">2</span>
+          </div> -->
           <div class="categories-filter__checkbox form-checkbox">
             <input type="checkbox" name="favorites-checkbox" id="favorites-checkbox">
             <label for="favorites-checkbox">Только избранные</label>

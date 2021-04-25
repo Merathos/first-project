@@ -3,6 +3,7 @@
   --colWidth: 264px;
   --columnGap: 48px;
   --varmaxHeight: 324px;
+
   width: auto;
   max-width: 100%;
 
@@ -46,6 +47,10 @@
       column-count: var(--colNum);
       column-width: var(--colWidth);
       column-gap: var(--columnGap);
+
+      @include mobile {
+        width: 100%;
+      }
 
       .ss-option {
         position: relative;
@@ -106,7 +111,7 @@
     }
 
     .ss-add {
-      min-width: 212px; //фиксированная ширина
+      // min-width: 212px; //фиксированная ширина
       position: relative;
       display: flex;
       flex-flow: row nowrap;
@@ -118,9 +123,9 @@
       .ss-plus {
         all: revert;
 
-        min-width: 165px; //фиксированная ширина
-        // margin-right: 8px; фиксированная ширина
-        margin-right: 2px;
+        // min-width: 165px; //фиксированная ширина
+        margin-right: 8px;
+        // margin-right: 2px; //фиксированная ширина
         @include font;
         font-size: 15px;
         line-height: 20px;
@@ -185,7 +190,7 @@
       }
 
       .ss-plus {
-        min-width: unset; //фиксированная ширина
+        // min-width: unset; //фиксированная ширина
       }
     }
   }
