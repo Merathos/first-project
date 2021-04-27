@@ -50,6 +50,10 @@
     box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
     border-radius: 5px;
 
+    @include tablet {
+      left: -15px;
+    }
+
     @media (max-width: $tablet-width - 1) {
       left: 0;
       width: 288px;
@@ -187,67 +191,4 @@
     pointer-events: none;
     transition: stroke $style-change-duration;
   }
-
-//   &--small {
-//     .ss-single-selected {
-//       padding: 15px 16px 15px 23px;
-
-//       @media (max-width: $tablet-width - 1) {
-//         padding: 15px 16px;
-//         justify-content: center;
-//       }
-
-//       .placeholder {
-//         .ss-disabled {
-//           font-size: rem(15px);
-//           line-height: 135%;
-//         }
-//       }
-//     }
-
-//     .placeholder {
-//       flex: 0 0 auto;
-//       width: auto;
-
-//       font-size: rem(15px);
-//       line-height: 135%;
-
-//       @media (max-width: $tablet-width - 1) {
-//         flex-shrink: 1;
-//       }
-//     }
-
-//     .ss-content {
-//       top: 41px;
-//       left: 0;
-//       width: 219px;
-
-//       background-color: #ffffff;
-//     }
-
-//     .ss-main .ss-single-selected .ss-arrow {
-//       margin-left: 12px;
-//     }
-
-//     .ss-main .ss-single-selected .ss-arrow span {
-//       width: 8px;
-//       height: 8px;
-//     }
-
-//     .form-select__checkbox-wrapper {
-//       padding: 23px;
-//       margin: 0 0 0 auto;
-//       font-size: rem(15px);
-//       line-height: 135%;
-
-//       label {
-//         position: relative;
-//       }
-
-//       @media (max-width: $tablet-width - 1) {
-//         padding: 15px 16px;
-//         margin-left: 0;
-//       }
-//     }
-//   }
 }

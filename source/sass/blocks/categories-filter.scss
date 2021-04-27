@@ -1,4 +1,6 @@
 .categories-filter {
+  --paddingLeft: 20px;
+  --paddingRight: 24px;
   width: 100%;
   padding: 18px 24px 18px 20px;
 
@@ -10,6 +12,10 @@
   align-items: center;
   justify-content: flex-start;
 
+  @include tablet {
+    padding: 18px var(--paddingRight) 18px var(--paddingLeft);
+  }
+
   @media (max-width: $tablet-width - 1) {
     flex-flow: column wrap;
     align-items: flex-start;
@@ -17,6 +23,16 @@
 
   &>*:not(:last-child):not(:nth-last-child(2)) {
     border-right: 1px solid var(--color-stroke, $light-grey);
+
+    @include tablet {
+      &.page-nav {
+        border-right: none;
+      }
+    }
+
+    @include mobile {
+      border-right: none;
+    }
   }
 
   .page-nav {
@@ -30,24 +46,100 @@
 
     li {
       margin: 0 26px 0 0;
+
+      @include tablet {
+        margin-right: 24px;
+      }
     }
 
     @include tablet {
-      padding-bottom: 20px;
+      max-width: 100%;
+
+      padding-bottom: 21px;
+      margin-right: -26px;
       margin-bottom: 21px;
+
+      justify-content: flex-start;
+
       border-bottom: 1px solid var(--color-stroke, $light-grey);
+    }
+
+    @include mobile {
+      flex-flow: column nowrap;
+      padding-bottom: 0;
+
+      li {
+        margin: 0 0 20px 0;
+      }
     }
   }
   .multiple-select {
     padding-right: 33px;
     margin-right: 33px;
+
+    @include tablet {
+      padding-right: 16px;
+      margin-right: 16px;
+    }
+
+    @include mobile {
+      width: 100%;
+      padding: 0;
+      margin: 0 0 20px 0;
+
+      .ss-content {
+        width: calc(100% + var(--paddingLeft) + var(--paddingRight));
+        left: calc(var(--paddingLeft) * -1);
+        padding-left: 0;
+
+        .ss-option {
+          padding-left: var(--paddingLeft);
+        }
+      }
+    }
   }
   .single-select {
     padding-right: 32px;
     max-width: 200px;
+
+    @include tablet {
+      max-width: 218px;
+      padding-right: 16px;
+      margin-right: 16px;
+    }
+
+    @include mobile {
+      padding: 0;
+      margin: 0 0 20px 0;
+      max-width: unset;
+      width: 100%;
+
+      .ss-content {
+        width: calc(100% + var(--paddingLeft) + var(--paddingRight));
+        left: calc(var(--paddingLeft) * -1);
+        padding-left: 0;
+
+        .ss-option {
+          padding-left: var(--paddingLeft);
+        }
+      }
+    }
   }
   .form-checkbox {
     margin-left: auto;
     margin-bottom: 0;
+
+    @include mobile {
+      margin-left: 0;
+    }
+  }
+  .voices-counter {
+    margin-right: 33px;
+
+    @include tablet {
+      width: auto;
+      margin-right: 16px;
+      padding-right: 16px;
+    }
   }
 }
