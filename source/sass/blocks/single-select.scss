@@ -119,7 +119,19 @@
   }
 
   .ss-single-selected .ss-arrow {
-    margin-left: 9px;
+    margin-left: 13px;
+
+      span {
+        width: 9px;
+        height: 9px;
+      }
+
+      span.arrow-up {
+        margin-top: 5px;
+      }
+      span.arrow-down {
+        margin-top: -5px;
+      }
   }
 
   .ss-single-selected .ss-deselect {
