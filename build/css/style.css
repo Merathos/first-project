@@ -2931,8 +2931,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .single-select .ss-content {
     z-index: 10;
     top: calc(100% + 8px);
-    right: 0;
-    width: 343px;
+    left: -25px;
+    width: 304px;
     padding-top: 8px;
     padding-bottom: 8px;
     -webkit-box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
@@ -2940,7 +2940,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     border-radius: 5px; }
     @media (max-width: 767px) {
       .single-select .ss-content {
-        right: auto;
         left: 0;
         width: 288px; } }
   .single-select .ss-content .ss-list {
@@ -2962,9 +2961,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .single-select .ss-single-selected,
   .single-select .ss-single-selected .placeholder .ss-disabled {
     height: auto;
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    font-weight: 400;
+    font-size: 0.9375rem;
+    line-height: 135%;
     color: var(--color-interactive-default, #2c8ecc);
     border: none;
     background-color: transparent;
@@ -2975,6 +2973,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .single-select .ss-single-selected .placeholder .ss-disabled:hover {
       color: var(--color-interactive-accent, #116ca6); }
   .single-select .ss-single-selected .placeholder {
+    line-height: 135%;
     display: inline-block;
     border-bottom: 2px dashed var(--color-interactive-default, #2c8ecc); }
     @media (max-width: 767px) {
@@ -2982,12 +2981,13 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         white-space: nowrap;
         text-overflow: ellipsis; } }
   .single-select .ss-single-selected {
+    max-width: 330px;
     padding: 0; }
   .single-select .ss-content .ss-list .ss-option {
     padding: 8px 24px; }
   .single-select .ss-single-selected .ss-arrow {
     margin-left: 9px; }
-  .single-select .ss-deselect {
+  .single-select .ss-single-selected .ss-deselect {
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
@@ -3032,49 +3032,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     pointer-events: none;
     -webkit-transition: stroke 0.2s;
     transition: stroke 0.2s; }
-  .single-select--small .ss-single-selected {
-    padding: 15px 16px 15px 23px; }
-    @media (max-width: 767px) {
-      .single-select--small .ss-single-selected {
-        padding: 15px 16px;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center; } }
-    .single-select--small .ss-single-selected .placeholder .ss-disabled {
-      font-size: 0.9375rem;
-      line-height: 135%; }
-  .single-select--small .placeholder {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 auto;
-            flex: 0 0 auto;
-    width: auto;
-    font-size: 0.9375rem;
-    line-height: 135%; }
-    @media (max-width: 767px) {
-      .single-select--small .placeholder {
-        -ms-flex-negative: 1;
-            flex-shrink: 1; } }
-  .single-select--small .ss-content {
-    top: 41px;
-    left: 0;
-    width: 219px;
-    background-color: #ffffff; }
-  .single-select--small .ss-main .ss-single-selected .ss-arrow {
-    margin-left: 12px; }
-  .single-select--small .ss-main .ss-single-selected .ss-arrow span {
-    width: 8px;
-    height: 8px; }
-  .single-select--small .form-select__checkbox-wrapper {
-    padding: 23px;
-    margin: 0 0 0 auto;
-    font-size: 0.9375rem;
-    line-height: 135%; }
-    .single-select--small .form-select__checkbox-wrapper label {
-      position: relative; }
-    @media (max-width: 767px) {
-      .single-select--small .form-select__checkbox-wrapper {
-        padding: 15px 16px;
-        margin-left: 0; } }
 
 .multiple-select {
   --colNum: 1;
@@ -3219,7 +3176,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
           position: absolute;
           top: calc(50% - 1px);
           left: 0;
-          width: 100%;
+          width: 14px;
           height: 2px;
           background-color: var(--color-interactive-default, #e55050); }
         .multiple-select .ss-multi-selected .ss-add .ss-deselect-all::after {

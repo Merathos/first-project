@@ -25,7 +25,7 @@
           выносящимся на обсуждение.
         </p>
         <form class="public-debate__filter categories-filter">
-          <ul class="categories-filter__level-toggler page-nav">
+          <!-- <ul class="categories-filter__level-toggler page-nav">
             <li class="page-nav__item">
               <a href="#" class="page-nav__link page-nav__link--active">Федеральные</a>
             </li>
@@ -35,7 +35,7 @@
             <li class="page-nav__item">
               <a href="#" class="page-nav__link">Местные</a>
             </li>
-          </ul>
+          </ul> -->
           <select name="categories" id="categories" title="Открыть фильтр" data-deselect="true" class="categories-filter__select multiple-select js-multiple-select" data-placeholder-text="Все категории" multiple>
             <option data-placeholder="true"></option>
             <option value="Библиотеки" title="Библиотеки">Библиотеки</option>
@@ -60,24 +60,15 @@
             <option value="Фельдшерско-акушерские пункты" title="Фельдшерско-акушерские пункты">Фельдшерско-акушерские пункты</option>
             <option value="Места массового пользования" title="Места массового пользования">Места массового пользования</option>
           </select>
-          <select name="category-select" id="category-select" class="categories-filter__select single-select single-select--small js-form-select"
+          <select name="category-select" id="category-select" class="categories-filter__select single-select js-form-select"
             title="Открыть фильтр" data-placeholder-text="Все статусы"
             data-deselect="true">
             <option data-placeholder="true"></option>
-            <option value="Идёт приём мнений" title="Идёт приём мнений">Идёт
-              приём мнений</option>
-            <option value="Прием мнений завершён" title="Прием мнений завершён">
-              Прием мнений завершён</option>
-            <option value="Подготовка к проведению слушания"
-              title="Подготовка к проведению слушания">Подготовка к
-              проведению слушания</option>
-            <option value="Публичное слушание в процессе"
-              title="Публичное слушание в процессе">Публичное слушание в
-              процессе</option>
-            <option value="Подведение итогов" title="Подведение итогов">
-              Подведение итогов</option>
-            <option value="Подведены итоги" title="Подведены итоги">Подведены
-              итоги</option>
+            <option value="В процессе приема Комментариев" title="В процессе приема Комментариев">В процессе приема Комментариев</option>
+            <option value="Прием комментариев завершён" title="Прием комментариев завершён">Прием Комментариев завершён. Идёт подготовка к проведению.</option>
+            <option value="В процессе" title="В процессе">В процессе</option>
+            <option value="Подводятся итоги" title="Подводятся итоги">Подводятся итоги</option>
+            <option value="Итоги подведены" title="Итоги подведены">Итоги подведены</option>
           </select>
           <!-- <div class="categories-filter__voices voices-counter">
             <p class="voices-counter__caption">У вас осталось голосов</p>
