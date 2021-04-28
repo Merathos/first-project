@@ -103,6 +103,8 @@
   }
 
   .ss-single-selected .placeholder {
+    width: max-content;
+    max-width: 100%;
     flex: 0 0 auto;
     line-height: 135%;
     display: inline-block;
@@ -111,7 +113,6 @@
     text-overflow: ellipsis;
 
     @include mobile {
-      width: auto;
       max-width: 80%;
     }
   }

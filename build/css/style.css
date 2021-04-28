@@ -2976,6 +2976,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .single-select .ss-single-selected .placeholder .ss-disabled:hover {
       color: var(--color-interactive-accent, #116ca6); }
   .single-select .ss-single-selected .placeholder {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    max-width: 100%;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
@@ -2986,7 +2990,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     text-overflow: ellipsis; }
     @media (max-width: 767px) {
       .single-select .ss-single-selected .placeholder {
-        width: auto;
         max-width: 80%; } }
   .single-select .ss-single-selected {
     max-width: 330px;
