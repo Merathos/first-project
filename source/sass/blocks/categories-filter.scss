@@ -83,6 +83,9 @@
     @include tablet {
       padding-right: 16px;
       margin-right: 16px;
+      &:nth-last-child(2) {
+        margin-right: auto;
+      }
     }
 
     @include mobile {
@@ -91,8 +94,8 @@
       margin: 0 0 20px 0;
 
       .ss-content {
-        width: calc(100% + var(--paddingLeft) + var(--paddingRight));
-        left: calc(var(--paddingLeft) * -1);
+        width: calc(100% + var(--paddingLeft) + var(--paddingRight) + 2px);
+        left: calc((var(--paddingLeft) + 1px) * -1);
         padding-left: 16px;
 
         .ss-option {
@@ -122,8 +125,8 @@
       width: 100%;
 
       .ss-content {
-        width: calc(100% + var(--paddingLeft) + var(--paddingRight));
-        left: calc(var(--paddingLeft) * -1);
+        width: calc(100% + var(--paddingLeft) + var(--paddingRight) + 2px);
+        left: calc((var(--paddingLeft) + 1px) * -1);
         padding-left: 0;
 
         .ss-option {
@@ -135,6 +138,21 @@
   .form-checkbox {
     margin-left: auto;
     margin-bottom: 0;
+
+    label {
+      color: var(--color-text, $grey);
+
+      &:focus,
+      &:focus:not(.focus-visible),
+      &:active:not(.focus-visible),
+      &:hover:not(.focus-visible) {
+        color: var(--color-text, $dark-text);
+      }
+    }
+
+    input[type="checkbox"]:checked+label {
+      color: var(--color-text, $dark-text)
+    }
 
     @include mobile {
       margin-left: 0;
