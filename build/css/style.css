@@ -4151,6 +4151,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .categories-filter .form-checkbox {
     margin-left: auto;
     margin-bottom: 0; }
+    .categories-filter .form-checkbox label {
+      color: var(--color-text, #707b8c); }
     @media (max-width: 767px) {
       .categories-filter .form-checkbox {
         margin-left: 0; } }
