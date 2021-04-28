@@ -83,6 +83,9 @@
     @include tablet {
       padding-right: 16px;
       margin-right: 16px;
+      &:nth-last-child(2) {
+        margin-right: auto;
+      }
     }
 
     @include mobile {
@@ -138,6 +141,17 @@
 
     label {
       color: var(--color-text, $grey);
+
+      &:focus,
+      &:focus:not(.focus-visible),
+      &:active:not(.focus-visible),
+      &:hover:not(.focus-visible) {
+        color: var(--color-text, $dark-text);
+      }
+    }
+
+    input[type="checkbox"]:checked+label {
+      color: var(--color-text, $dark-text)
     }
 
     @include mobile {
