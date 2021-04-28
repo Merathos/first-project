@@ -19,6 +19,8 @@
   @media (max-width: $tablet-width - 1) {
     flex-flow: column wrap;
     align-items: flex-start;
+    --paddingRight: 19px;
+    --paddingLeft: 19px;
   }
 
   &>*:not(:last-child):not(:nth-last-child(2)) {
@@ -73,6 +75,7 @@
       }
     }
   }
+
   .multiple-select {
     padding-right: 33px;
     margin-right: 33px;
@@ -90,10 +93,14 @@
       .ss-content {
         width: calc(100% + var(--paddingLeft) + var(--paddingRight));
         left: calc(var(--paddingLeft) * -1);
-        padding-left: 0;
+        padding-left: 16px;
 
         .ss-option {
           padding-left: var(--paddingLeft);
+
+          &:after {
+            left: -6px;
+          }
         }
       }
     }
@@ -140,6 +147,17 @@
       width: auto;
       margin-right: 16px;
       padding-right: 16px;
+    }
+
+    @include mobile {
+      width: 100%;
+      margin: 0 0 20px 0;
+      padding: 0 0 20px 0;
+      border-bottom: 1px solid var(--color-stroke, $light-grey);
+
+      .voices-counter__caption {
+        margin-right: 6px;
+      }
     }
   }
 }

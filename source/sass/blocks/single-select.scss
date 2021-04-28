@@ -103,19 +103,23 @@
   }
 
   .ss-single-selected .placeholder {
+    flex: 0 0 auto;
     line-height: 135%;
     display: inline-block;
     border-bottom: 2px dashed var(--color-interactive-default, $blue-default);
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
-    @media (max-width: $tablet-width - 1) {
-      white-space: nowrap;
-      text-overflow: ellipsis;
+    @include mobile {
+      width: auto;
+      max-width: 80%;
     }
   }
 
   .ss-single-selected {
     max-width: 330px;
     padding: 0;
+    justify-content: flex-start;
   }
 
   .ss-content .ss-list .ss-option {
