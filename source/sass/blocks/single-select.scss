@@ -13,7 +13,7 @@
   }
 
   .ss-content .ss-list .ss-option.ss-disabled {
-    color: var(--color-interactive-default, $blue-default);
+    color: var(--color-text, $blue-accent);
     cursor: default;
   }
 
@@ -36,7 +36,7 @@
   .ss-content .ss-list .ss-optgroup-label-selectable:hover,
   .ss-content .ss-list .ss-option.ss-highlighted,
   .ss-content .ss-list .ss-option:hover {
-    color: var(--color-text, $blue-accent);
+    color: var(--color-interactive-default, $blue-default);;
     background-color: var(--color-bg-main, #f5f6f7);
   }
 

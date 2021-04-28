@@ -2909,7 +2909,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .single-select .ss-single-selected .ss-arrow span:focus {
       outline: none; }
   .single-select .ss-content .ss-list .ss-option.ss-disabled {
-    color: var(--color-interactive-default, #2c8ecc);
+    color: var(--color-text, #116ca6);
     cursor: default; }
   .single-select .ss-content,
   .single-select .ss-content .ss-list .ss-option.ss-disabled,
@@ -2926,7 +2926,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .single-select .ss-content .ss-list .ss-optgroup-label-selectable:hover,
   .single-select .ss-content .ss-list .ss-option.ss-highlighted,
   .single-select .ss-content .ss-list .ss-option:hover {
-    color: var(--color-text, #116ca6);
+    color: var(--color-interactive-default, #2c8ecc);
     background-color: var(--color-bg-main, #f5f6f7); }
   .single-select .ss-content {
     z-index: 10;
@@ -3133,7 +3133,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
           transition: opacity 0.2s; }
         .multiple-select .ss-content .ss-list .ss-option:focus, .multiple-select .ss-content .ss-list .ss-option:focus:not(.focus-visible), .multiple-select .ss-content .ss-list .ss-option:active:not(.focus-visible), .multiple-select .ss-content .ss-list .ss-option:hover:not(.focus-visible) {
           background-color: var(--color-bg-secondary, #eff1f4);
-          color: var(--color-interactive-accent, #116ca6); }
+          color: var(--color-text, #2c8ecc); }
       .multiple-select .ss-content .ss-list .ss-option:not(.ss-disabled).ss-option-selected {
         color: var(--color-interactive-accent, #116ca6);
         background-color: transparent; }
@@ -3157,6 +3157,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       -webkit-box-align: center;
           -ms-flex-align: center;
               align-items: center;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
       -webkit-box-flex: initial;
           -ms-flex: initial;
               flex: initial;
@@ -3189,6 +3192,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         width: 12px;
         height: 12px;
         margin-right: 10px;
+        padding: 0;
         border: none;
         outline: none;
         background-color: transparent;
@@ -4124,8 +4128,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         padding: 0;
         margin: 0 0 20px 0; }
         .categories-filter .multiple-select .ss-content {
-          width: calc(100% + var(--paddingLeft) + var(--paddingRight));
-          left: calc(var(--paddingLeft) * -1);
+          width: calc(100% + var(--paddingLeft) + var(--paddingRight) + 2px);
+          left: calc((var(--paddingLeft) + 1px) * -1);
           padding-left: 16px; }
           .categories-filter .multiple-select .ss-content .ss-option {
             padding-left: var(--paddingLeft); }
@@ -4146,8 +4150,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         max-width: unset;
         width: 100%; }
         .categories-filter .single-select .ss-content {
-          width: calc(100% + var(--paddingLeft) + var(--paddingRight));
-          left: calc(var(--paddingLeft) * -1);
+          width: calc(100% + var(--paddingLeft) + var(--paddingRight) + 2px);
+          left: calc((var(--paddingLeft) + 1px) * -1);
           padding-left: 0; }
           .categories-filter .single-select .ss-content .ss-option {
             padding-left: var(--paddingLeft); } }

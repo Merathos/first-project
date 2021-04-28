@@ -88,7 +88,7 @@
         &:active:not(.focus-visible),
         &:hover:not(.focus-visible) {
           background-color: var(--color-bg-secondary, #eff1f4);
-          color: var(--color-interactive-accent, $blue-accent);
+          color: var(--color-text, $blue-default);
         }
       }
 
@@ -112,11 +112,11 @@
     }
 
     .ss-add {
-      // min-width: 212px; //фиксированная ширина
       position: relative;
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
+      justify-content: flex-start;
 
       flex: initial;
       margin: 0;
@@ -124,9 +124,7 @@
       .ss-plus {
         all: revert;
 
-        // min-width: 165px; //фиксированная ширина
         margin-right: 8px;
-        // margin-right: 2px; //фиксированная ширина
         @include font;
         font-size: 15px;
         line-height: 20px;
@@ -135,7 +133,6 @@
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
-
 
         &:after {
           all: revert;
@@ -157,6 +154,7 @@
         height: 12px;
         margin-right: 10px;
 
+        padding: 0;
         border: none;
         outline: none;
         background-color: transparent;
@@ -188,10 +186,6 @@
     .ss-add.ss-empty {
       .ss-deselect-all {
         display: none;
-      }
-
-      .ss-plus {
-        // min-width: unset; //фиксированная ширина
       }
     }
   }
