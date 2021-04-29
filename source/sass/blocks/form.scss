@@ -20,6 +20,14 @@
   .description-block {
     margin-bottom: 25px;
   }
+
+  .cards-list {
+    margin-bottom: -5px;
+
+    @include mobile {
+      margin-bottom: 10px;
+    }
+  }
 }
 
 .form__range-wrapper {
