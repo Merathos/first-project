@@ -15,23 +15,11 @@
 }
 
 .new-project__title {
-  margin-bottom: 24px;
+  margin-bottom: 40px;
   @media (max-width: $desktop-width - 1) {
     margin-bottom: 32px;
   }
 }
-
-// .new-project__rules {
-//   margin-bottom: 30px;
-
-//   @media (min-width: $desktop-width) {
-//     min-height: 23px;
-//   }
-
-//   @media (max-width: $tablet-width - 1) {
-//     margin-bottom: 20px;
-//   }
-// }
 
 .new-project__comments {
   margin: 28px 0 12px;
@@ -154,45 +142,6 @@
   @media (max-width: $tablet-width - 1) {
     padding-bottom: 40px;
     margin-bottom: 40px;
-  }
-}
-
-.new-project__button-wrapper {
-  display: flex;
-  justify-content: space-between;
-
-  @media (max-width: $tablet-width - 1) {
-    flex-direction: column;
-
-    .button--white {
-      &:not(:last-child) {
-        margin-bottom: 15px;
-      }
-    }
-  }
-
-  .button-remove {
-    margin-left: auto;
-    margin-right: 22px;
-
-    @media (max-width: 780px) {
-      margin-right: auto;
-    }
-
-    @media (max-width: $tablet-width - 1) {
-      margin: 0;
-    }
-  }
-}
-
-.new-project__submit-btn {
-  width: 274px;
-  padding: 16px 16px;
-
-  @media (max-width: $tablet-width - 1) {
-    order: -1;
-    margin-bottom: 15px;
-    width: 100%;
   }
 }
 
