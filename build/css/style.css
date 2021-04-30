@@ -5393,7 +5393,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .preview-input input[type="checkbox"]:checked + label > svg .grey {
     color: transparent; }
   .preview-input:hover .preview-input__description {
-    color: var(--color-interactive-default, #2c8ecc); }
+    color: var(--color-interactive-accent, #116ca6); }
   .preview-input--no-content {
     border: none;
     min-height: unset; }
