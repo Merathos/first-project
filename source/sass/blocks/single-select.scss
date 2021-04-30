@@ -104,13 +104,17 @@
 
   .ss-single-selected .placeholder {
     width: max-content;
-    max-width: 100%;
+    max-width: 85%;
     flex: 0 0 auto;
     line-height: 135%;
     display: inline-block;
     border-bottom: 2px dashed var(--color-interactive-default, $blue-default);
     white-space: nowrap;
     text-overflow: ellipsis;
+
+    @include tablet {
+      max-width: 100%;
+    }
 
     @include mobile {
       max-width: 80%;
