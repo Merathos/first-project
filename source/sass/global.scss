@@ -130,7 +130,9 @@ img {
 
 .visually-hidden,
 .form-radio input[type="radio"],
-.form-checkbox input[type="checkbox"] {
+.preview-input input[type="radio"],
+.form-checkbox input[type="checkbox"],
+.preview-input input[type="checkbox"] {
   position: absolute;
   width: 1px;
   height: 1px;

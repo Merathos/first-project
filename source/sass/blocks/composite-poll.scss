@@ -1,3 +1,16 @@
+.composite-poll {
+  .info-block {
+    margin-bottom: 40px;
+
+    @include mobile {
+      margin-bottom: 32px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
 .composite-poll__title {
   margin-bottom: 38px;
 
