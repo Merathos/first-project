@@ -2981,7 +2981,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    max-width: 100%;
+    max-width: 85%;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
             flex: 0 0 auto;
@@ -2990,6 +2990,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     border-bottom: 2px dashed var(--color-interactive-default, #2c8ecc);
     white-space: nowrap;
     text-overflow: ellipsis; }
+    @media (max-width: 1199px) {
+      .single-select .ss-single-selected .placeholder {
+        max-width: 100%; } }
     @media (max-width: 767px) {
       .single-select .ss-single-selected .placeholder {
         max-width: 80%; } }
