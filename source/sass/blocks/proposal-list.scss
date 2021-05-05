@@ -1,6 +1,7 @@
 .proposal-list {
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
@@ -9,22 +10,28 @@
 
   border-bottom: 1px solid var(--color-stroke, $light-grey);
 
+  &:first-child {
+    padding-top: 0;
+  }
+
   @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 15%;
-    grid-template-areas:
-    "a  a"
+    grid-template-areas: "a  a"
     "b  c"
     "d  d";
+    grid-template-columns: 1fr 15%;
+
+    display: grid;
 
     > * {
-      align-self: start;
       justify-self: start;
+
+      align-self: start;
     }
   }
 
   &--border-top {
     padding-top: 32px;
+
     border-top: 1px solid var(--color-stroke, $light-grey);
   }
 }
@@ -33,11 +40,11 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-
   width: 100%;
 
   @media (min-width: $tablet-width) {
     grid-area: a;
+
     margin-bottom: 4px;
   }
 
@@ -53,10 +60,10 @@
   justify-content: flex-start;
   align-items: center;
 
-  color: var(--color-interactive-default, $blue-default);
   font-weight: normal;
   font-size: rem(14px);
   line-height: 130%;
+  color: var(--color-interactive-default, $blue-default);
 
   @media (min-width: $tablet-width) {
     margin-right: 9px;
@@ -67,12 +74,13 @@
   }
 
   svg {
+    fill: var(--color-interactive-default, $blue-default);
+
+    width: 10px;
+    height: 12px;
     margin-right: 5px;
     margin-bottom: 3px;
     margin-left: 1px;
-    width: 10px;
-    height: 12px;
-    fill: var(--color-interactive-default, $blue-default);
   }
 }
 
@@ -88,29 +96,32 @@
   }
 
   svg {
-    color: var(--color-text, $grey-default);
-    margin-right: 5px;
     width: 12px;
     height: 12px;
+    margin-right: 5px;
+
+    color: var(--color-text, $grey-default);
   }
 
   span {
-    color: var(--color-text, $grey-default);
     font-weight: normal;
     font-size: rem(14px);
     line-height: 130%;
+    color: var(--color-text, $grey-default);
   }
 }
 
 .proposal-list__title {
   grid-area: b;
+
   margin: 0;
-  text-decoration: none;
 
   font-weight: 500;
   font-size: rem(18px);
   line-height: 130%;
   color: var(--color-text, $dark-text);
+  text-decoration: none;
+
   transition: color $style-change-duration;
 
   &:last-child {
@@ -127,7 +138,7 @@
     }
   }
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1){
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     margin-bottom: 24px;
   }
 
@@ -138,7 +149,7 @@
   }
 
   &--shorter {
-    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1){
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       margin-bottom: 0;
     }
   }
@@ -146,6 +157,7 @@
 
 .proposal-list__status {
   grid-area: d;
+
   font-weight: 400;
   font-size: rem(15px);
   line-height: 135%;
@@ -154,12 +166,14 @@
 
   @media (min-width: $desktop-width) {
     grid-area: c;
+
     margin-left: auto;
   }
 }
 
 .proposal-list__like-counter {
   grid-area: c;
+
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -168,7 +182,6 @@
   font-weight: normal;
   font-size: rem(13px);
   line-height: 130%;
-
   color: var(--color-text, $grey-default);
 
   cursor: pointer;
@@ -188,9 +201,9 @@
   }
 
   @media (min-width: $tablet-width) {
+    align-self: flex-start;
     margin-top: 5px;
     margin-left: auto;
-    align-self: flex-start;
   }
 
   @media (max-width: $tablet-width - 1) {
@@ -202,20 +215,22 @@
   }
 
   span {
-    transition: color $style-change-duration;
     min-width: 35px;
+
+    transition: color $style-change-duration;
   }
 
   svg {
+    align-self: flex-start;
     width: 20px;
     height: 20px;
     margin-top: -5px;
     margin-left: 13px;
-    align-self: flex-start;
   }
 
   .stroked {
     fill: var(--color-text, $grey-default);
+
     transition: fill $style-change-duration;
   }
 
@@ -229,7 +244,6 @@
 
   @media (min-width: $desktop-width) {
     &:hover:not(.focus-visible) {
-
       svg {
         .stroked {
           fill: transparent;
@@ -247,7 +261,7 @@
   }
 
   .filled {
-    fill: var(--color-interactive-default, $blue-default)
+    fill: var(--color-interactive-default, $blue-default);
   }
 }
 
