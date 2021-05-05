@@ -1,29 +1,31 @@
 .categories-filter {
   --paddingLeft: 20px;
   --paddingRight: 24px;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
   width: 100%;
+  margin-bottom: 40px;
   padding: 18px 24px 18px 20px;
 
   border: 1px solid var(--color-stroke, $light-grey);
   border-radius: 5px;
 
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: flex-start;
-
   @include tablet {
     padding: 18px var(--paddingRight) 18px var(--paddingLeft);
   }
+  @include mobile {
+    --paddingLeft: 19px;
+    --paddingRight: 19px;
 
-  @media (max-width: $tablet-width - 1) {
     flex-flow: column wrap;
     align-items: flex-start;
-    --paddingRight: 19px;
-    --paddingLeft: 19px;
+    margin-bottom: 32px;
   }
 
-  &>*:not(:last-child):not(:nth-last-child(2)) {
+  & > *:not(:last-child):not(:nth-last-child(2)) {
     border-right: 1px solid var(--color-stroke, $light-grey);
 
     @include tablet {
@@ -31,7 +33,6 @@
         border-right: none;
       }
     }
-
     @include mobile {
       border-right: none;
     }
@@ -40,32 +41,21 @@
   .page-nav {
     width: calc(100% + 26px);
     max-width: max-content;
-    padding: 0 6px 0 0;
     margin: 0 29px 0 0;
+    padding: 0 6px 0 0;
 
     background-color: transparent;
     border-radius: 0;
 
-    li {
-      margin: 0 26px 0 0;
-
-      @include tablet {
-        margin-right: 24px;
-      }
-    }
-
     @include tablet {
+      justify-content: flex-start;
       max-width: 100%;
-
-      padding-bottom: 21px;
       margin-right: -26px;
       margin-bottom: 21px;
-
-      justify-content: flex-start;
+      padding-bottom: 21px;
 
       border-bottom: 1px solid var(--color-stroke, $light-grey);
     }
-
     @include mobile {
       flex-flow: column nowrap;
       padding-bottom: 0;
@@ -74,28 +64,37 @@
         margin: 0 0 20px 0;
       }
     }
+
+    li {
+      margin: 0 26px 0 0;
+
+      @include tablet {
+        margin-right: 24px;
+      }
+    }
   }
 
   .multiple-select {
-    padding-right: 33px;
     margin-right: 33px;
+    padding-right: 33px;
 
     @include tablet {
-      padding-right: 16px;
       margin-right: 16px;
+      padding-right: 16px;
+
       &:nth-last-child(2) {
         margin-right: auto;
       }
     }
-
     @include mobile {
       width: 100%;
-      padding: 0;
       margin: 0 0 20px 0;
+      padding: 0;
 
       .ss-content {
-        width: calc(100% + var(--paddingLeft) + var(--paddingRight) + 2px);
         left: calc((var(--paddingLeft) + 1px) * -1);
+
+        width: calc(100% + var(--paddingLeft) + var(--paddingRight) + 2px);
         padding-left: 16px;
 
         .ss-option {
@@ -108,25 +107,26 @@
       }
     }
   }
+
   .single-select {
-    padding-right: 32px;
     max-width: 200px;
+    padding-right: 32px;
 
     @include tablet {
       max-width: 218px;
-      padding-right: 16px;
       margin-right: 16px;
+      padding-right: 16px;
     }
-
     @include mobile {
-      padding: 0;
-      margin: 0 0 20px 0;
-      max-width: unset;
       width: 100%;
+      max-width: unset;
+      margin: 0 0 20px 0;
+      padding: 0;
 
       .ss-content {
-        width: calc(100% + var(--paddingLeft) + var(--paddingRight) + 2px);
         left: calc((var(--paddingLeft) + 1px) * -1);
+
+        width: calc(100% + var(--paddingLeft) + var(--paddingRight) + 2px);
         padding-left: 0;
 
         .ss-option {
@@ -135,9 +135,14 @@
       }
     }
   }
+
   .form-checkbox {
-    margin-left: auto;
     margin-bottom: 0;
+    margin-left: auto;
+
+    @include mobile {
+      margin-left: 0;
+    }
 
     label {
       color: var(--color-text, $grey);
@@ -150,14 +155,11 @@
       }
     }
 
-    input[type="checkbox"]:checked+label {
-      color: var(--color-text, $dark-text)
-    }
-
-    @include mobile {
-      margin-left: 0;
+    input[type="checkbox"]:checked + label {
+      color: var(--color-text, $dark-text);
     }
   }
+
   .voices-counter {
     margin-right: 33px;
 
@@ -166,11 +168,11 @@
       margin-right: 16px;
       padding-right: 16px;
     }
-
     @include mobile {
       width: 100%;
       margin: 0 0 20px 0;
       padding: 0 0 20px 0;
+
       border-bottom: 1px solid var(--color-stroke, $light-grey);
 
       .voices-counter__caption {

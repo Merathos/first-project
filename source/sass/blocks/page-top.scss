@@ -5,21 +5,24 @@
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
-    align-items: flex-start;
     justify-content: flex-start;
+    align-items: flex-start;
   }
 
   &--wrapper {
+    margin-bottom: rem(28px);
+
     @media (max-width: 900px) {
       flex-direction: column;
-      align-items: flex-start;
       justify-content: flex-start;
+      align-items: flex-start;
     }
   }
 }
 
 .page-top__form-wrapper {
   padding: 25px 40px;
+
   background-color: var(--color-bg-secondary, $color-bg);
   border-radius: 5px;
 
@@ -48,8 +51,8 @@
 
   @media (max-width: 900px) {
     width: 100%;
-    margin-left: 0;
     margin-top: 24px;
+    margin-left: 0;
 
     & .page-top__nav {
       flex-grow: 1;
@@ -69,8 +72,8 @@
   }
 
   @media (max-width: 540px) {
-    width: 100%;
     flex-direction: column;
+    width: 100%;
 
     & .page-top__nav {
       margin-top: 0;
