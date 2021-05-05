@@ -2,7 +2,7 @@
 
 
 (function () {
-  var selects = document.querySelectorAll('.js-form-select');
+  var selects = document.querySelectorAll('.js-form-select select:not([multiple])');
 
 
   var deselectLabel = '<button type="button"><span class="visually-hidden">Сбросить фильтр по голосам</span><svg width="12" height="12" viewBox="0 0 12 12"><path d="M1 1L11 11M11 1L1 11" stroke-width="2"/></svg></button>';
@@ -20,11 +20,11 @@
       deselectLabel: deselectLabel,
 
       afterClose: function () {
-        window.Scrollbar.destroy(document.querySelector('.form-select .ss-list'));
+        window.Scrollbar.destroy(customSelectElement.querySelector('.ss-list'));
       },
 
       afterOpen: function () {
-        window.Scrollbar.init(document.querySelector('.form-select .ss-list'), {
+        window.Scrollbar.init(customSelectElement.querySelector('.ss-list'), {
           continuousScrolling: false
         });
       },
