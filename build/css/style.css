@@ -112,6 +112,13 @@ body {
   background-color: var(--color-bg-main, #ffffff);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
+  body *::-webkit-scrollbar {
+    width: 6px; }
+  body *::-webkit-scrollbar-track {
+    background: transparent; }
+  body *::-webkit-scrollbar-thumb {
+    background-color: #e3e8ee;
+    border-radius: 5px; }
 
 a {
   color: inherit; }
@@ -3063,27 +3070,34 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   --colNum: 1;
   --colWidth: 264px;
   --columnGap: 48px;
-  --varmaxHeight: 324px;
+  --maxHeight: auto;
   width: auto;
   max-width: 100%; }
   .multiple-select.two-column {
+    --maxHeight: 324px;
     --colNum: 2; }
     @media (max-width: 767px) {
       .multiple-select.two-column {
+        --maxHeight: 400px;
         --colNum: 1; } }
   .multiple-select.three-column {
     --colNum: 3; }
     @media (max-width: 1199px) {
       .multiple-select.three-column {
+        --maxHeight: 324px;
         --colNum: 2; } }
     @media (max-width: 767px) {
       .multiple-select.three-column {
+        --maxHeight: 400px;
         --colNum: 1; } }
+  .multiple-select.fixed-height {
+    --maxHeight: 324px; }
   .multiple-select .ss-content {
     left: -21px;
     top: 31px;
+    z-index: 10;
     width: unset;
-    max-height: var(--varmaxHeight);
+    max-height: var(--maxHeight);
     padding: 16px 24px 24px;
     border: none;
     background-color: var(--color-bg-secondary, #f9f9fa);
