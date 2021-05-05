@@ -9,27 +9,25 @@
   }
 
   @media (max-width: 800px) {
-    padding: 0;
     margin-bottom: 40px;
+    padding: 0;
   }
 
   @media (max-width: $mobile-max-width) {
     margin-bottom: 32px;
   }
-
-  &--improvement {
-    margin-bottom: 0;
-  }
 }
 
 .activity-tabs__list {
-  @include list-reset;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
   display: flex;
   flex-wrap: nowrap;
   width: 100%;
   overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+
+  @include list-reset;
 
   &:-webkit-scrollbar {
     width: 0;
@@ -47,9 +45,10 @@
 .activity-tabs__bottom {
   height: 1px;
   margin-top: -1px;
+
   background-image: linear-gradient(var(--color-stroke, $light-grey), var(--color-stroke, $light-grey));
-  background-position: center bottom;
   background-repeat: no-repeat;
+  background-position: center bottom;
   background-size: 100% 1px;
 
   @media (max-width: 800px) {
@@ -74,14 +73,17 @@
   display: block;
   padding-bottom: 13px;
 
-  @include font-h3;
   color: var(--color-text, $grey);
   text-decoration: none;
+
   transition: color $style-change-duration;
 
+  @include font-h3;
+
   @media (max-width: $mobile-max-width) {
-    @include font-h4;
     padding-bottom: 18px;
+
+    @include font-h4;
   }
 
   &:hover {
@@ -90,18 +92,20 @@
 
   &:focus {
     color: var(--color-interactive-default, $blue-default);
+
     background-image: linear-gradient(var(--color-interactive-default, $blue-default), var(--color-interactive-default, $blue-default));
-    background-position: center bottom;
     background-repeat: no-repeat;
+    background-position: center bottom;
     background-size: 100% 2px;
   }
 }
 
 .activity-tabs__item--active .activity-tabs__link {
   color: var(--color-interactive-default, $blue-default);
+
   background-image: linear-gradient(var(--color-interactive-default, $blue-default), var(--color-interactive-default, $blue-default));
-  background-position: center bottom;
   background-repeat: no-repeat;
+  background-position: center bottom;
   background-size: 100% 2px;
 }
 

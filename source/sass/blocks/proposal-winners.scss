@@ -1,13 +1,15 @@
 .proposal-winners__title {
   margin-top: 0;
-  margin-bottom: 34px;
+  margin-bottom: 66px;
   padding-top: 40px;
+
+  font-weight: 400;
   font-size: rem(30px);
   line-height: rem(35.55px);
-  font-weight: 400;
+
   background-image: linear-gradient(var(--color-stroke, $light-grey), var(--color-stroke, $light-grey));
-  background-position: left top;
   background-repeat: no-repeat;
+  background-position: left top;
   background-size: 100% 1px;
 }
 
@@ -25,20 +27,18 @@
 
 .proposal-winners__map-container {
   max-width: $desktop-width;
-  padding: 0 40px;
   margin: 0 auto;
+  padding: 0 40px;
 
   @include tablet {
     padding: 0;
   }
-
   @include mobile {
     padding: 0;
   }
 }
 
 .proposal-winners__map {
-
   button {
     display: none;
   }
@@ -46,6 +46,7 @@
   iframe {
     width: 100%;
     max-width: 1120px;
+
     border: none;
     border-radius: 5px;
   }
@@ -57,8 +58,8 @@
   }
 
   .proposal-winners__paginator {
-    margin-left: 0;
     margin-bottom: 81px;
+    margin-left: 0;
   }
 
   .proposal-winners__map {
@@ -70,8 +71,9 @@
 
 @include mobile {
   .proposal-winners__title {
-    margin-bottom: 0px;
+    margin-bottom: 28px;
     padding-top: 35px;
+
     font-size: rem(24px);
     line-height: rem(28.44px);
   }
@@ -85,14 +87,16 @@
   }
 
   .proposal-winners__show-map-btn {
-    @include btn-reset;
-    margin: 0 auto;
     display: block;
+    margin: 0 auto;
+
+    font-weight: 500;
     font-size: rem(15px);
     line-height: rem(20.25px);
-    font-weight: 500;
-    color: #2C8ECC;
+    color: #2c8ecc;
     text-transform: uppercase;
+
+    @include btn-reset;
 
     &:hover,
     &:focus {
@@ -105,36 +109,42 @@
   }
 
   .proposal-winners__map {
-    display: none;
     position: fixed;
-    z-index: 222;
     top: 0;
     left: 0;
+    z-index: 222;
+
+    display: none;
     width: 100%;
     height: 100vh;
     padding: 0;
+
     background-color: #ffffff;
 
     button {
-      @include btn-reset;
       position: relative;
-      margin-left: auto;
-      margin-top: 16px;
-      margin-bottom: 20px;
-      margin-right: 16px;
+
       display: block;
       width: 26px;
       height: 26px;
+      margin-top: 16px;
+      margin-right: 16px;
+      margin-bottom: 20px;
+      margin-left: auto;
+
+      @include btn-reset;
 
       &::before,
       &::after {
-        position: absolute;
-        left: 10px;
-        top: 0;
         content: "";
-        height: 26px;
+        position: absolute;
+        top: 0;
+        left: 10px;
+
         width: 2px;
-        background-color: #A6ABB3;
+        height: 26px;
+
+        background-color: #a6abb3;
       }
 
       &::before {
@@ -160,23 +170,28 @@
   }
 
   .proposal-winners__close-map-btn {
-    @include btn-reset;
     position: absolute;
     top: 2px;
     right: 1px;
+
     width: 26px;
     height: 26px;
+
     cursor: pointer;
+
+    @include btn-reset;
 
     &::before,
     &::after {
-      position: absolute;
-      left: 12px;
-      top: 3px;
       content: "";
-      height: 19px;
+      position: absolute;
+      top: 3px;
+      left: 12px;
+
       width: 2px;
-      background-color: #BFBFBF;
+      height: 19px;
+
+      background-color: #bfbfbf;
     }
 
     &::before {
@@ -188,7 +203,6 @@
     }
 
     &:hover {
-
       &::before,
       &::after {
         background-color: #7e7e7e;

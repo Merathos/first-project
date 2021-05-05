@@ -1,7 +1,8 @@
 html {
+  box-sizing: border-box;
+
   font-size: ($base-font-size / 16px) * 100%;
   font-family: "Rubik", "Arial", sans-serif;
-  box-sizing: border-box;
 
   &.mod-font-family-arial {
     font-family: "Arial", sans-serif;
@@ -22,73 +23,57 @@ html {
 
   &.mod-theme-inverse {
     --color-bg-main: #{$dark};
-    --color-bg-secondary: #{$dark-main};
-
     --color-bg-main-transparent: #{rgba($dark, 0)};
+    --color-bg-secondary: #{$dark-main};
     --color-bg-secondary-transparent: #{rgba($dark-main, 0)};
-
+    --color-icon: #{$white};
+    --color-interactive-accent: #{$blue-accent};
+    --color-interactive-default: #{$blue-default};
     --color-stroke: #{$light-grey};
     --color-tag: #{$grey};
-    --color-icon: #{$white};
-
     --color-text: #{$white};
-
-    --color-interactive-default: #{$blue-default};
-    --color-interactive-accent: #{$blue-accent};
   }
 
 
   &.mod-theme-blue {
     --color-bg-main: #{$light-blue-accent};
-    --color-bg-secondary: #{$light-blue};
-
     --color-bg-main-transparent: #{rgba($light-blue-accent, 0)};
+    --color-bg-secondary: #{$light-blue};
     --color-bg-secondary-transparent: #{rgba($light-blue, 0)};
-
+    --color-icon: #{$dark-text};
+    --color-interactive-accent: #{$blue-accent};
+    --color-interactive-default: #{$blue-default};
     --color-stroke: #{$blue-default};
     --color-tag: #{$light-grey};
-    --color-icon: #{$dark-text};
-
     --color-text: #{$dark-text};
-
-    --color-interactive-default: #{$blue-default};
-    --color-interactive-accent: #{$blue-accent};
   }
 
 
   &.mod-theme-comfort {
     --color-bg-main: #{$light-yellow};
-    --color-bg-secondary: #{#f7e4d8};
-
     --color-bg-main-transparent: #{rgba($light-yellow, 0)};
+    --color-bg-secondary: #{#f7e4d8};
     --color-bg-secondary-transparent: #{rgba(#f7e4d8, 0)};
-
+    --color-icon: #{$comfort};
+    --color-interactive-accent: #{$blue-accent};
+    --color-interactive-default: #{$blue-default};
     --color-stroke: #{$comfort};
     --color-tag: #{$light-grey};
-    --color-icon: #{$comfort};
-
     --color-text: #{$comfort};
-
-    --color-interactive-default: #{$blue-default};
-    --color-interactive-accent: #{$blue-accent};
   }
 
 
   &.mod-theme-brown {
     --color-bg-main: #{$brown};
-    --color-bg-secondary: #{$dark-main};
-
     --color-bg-main-transparent: #{rgba($brown, 0)};
+    --color-bg-secondary: #{$dark-main};
     --color-bg-secondary-transparent: #{rgba($dark-main, 0)};
-
+    --color-icon: #{$light-green};
+    --color-interactive-accent: #{$orange};
+    --color-interactive-default: #{$red};
     --color-stroke: #{$light-green};
     --color-tag: #{$grey};
-    --color-icon: #{$light-green};
-
     --color-text: #{$light-green};
-
-    --color-interactive-default: #{$red};
-    --color-interactive-accent: #{$orange};
   }
 }
 
@@ -100,34 +85,38 @@ html {
 }
 
 body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
   position: relative;
+
   display: flex;
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
   margin: 0;
   padding: 0;
-  font-weight: 400;
+
   font-style: normal;
+  font-weight: 400;
   font-size: rem(15px);
   line-height: rem(20px);
   color: var(--color-text, $dark-text);
+
   background-color: var(--color-bg-main, $white);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 
-  *::-webkit-scrollbar {
-    width: 6px;
-  }
+  // *::-webkit-scrollbar {
+  //   width: 6px;
+  // }
 
-  *::-webkit-scrollbar-track {
-    background: transparent;
-  }
+  // *::-webkit-scrollbar-track {
+  //   background: transparent;
+  // }
 
-  *::-webkit-scrollbar-thumb {
-    background-color: #e3e8ee;
-    border-radius: 5px;
-  }
+  // *::-webkit-scrollbar-thumb {
+  //   background-color: #e3e8ee;
+  //   border-radius: 5px;
+  // }
 }
 
 a {
@@ -145,15 +134,19 @@ img {
 .form-checkbox input[type="checkbox"],
 .preview-input input[type="checkbox"] {
   position: absolute;
+
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
   overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
 }
 
 .main-page {
@@ -172,6 +165,7 @@ img {
 @media print {
   @page {
     size: auto;
+
     margin: 11mm 17mm 17mm 17mm;
   }
 }

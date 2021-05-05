@@ -39,10 +39,11 @@
 }
 
 .area-improvement__btn {
-  min-height: 59px;
   max-width: 740px;
-  text-align: center;
+  min-height: 59px;
   padding: 19px 5px;
+
+  text-align: center;
 
   @media (max-width: $tablet-width - 1) {
     svg {
@@ -57,14 +58,15 @@
   @media (min-width: $tablet-width) {
     width: 100%;
     min-height: 69px;
-    padding-left: 24px;
     padding-top: 24px;
+    padding-left: 24px;
+
     text-align: start;
   }
 }
 
 .area-improvement .area-improvement__select {
-  margin-bottom: 8px;
+  margin-bottom: 40px;
 
   background-color: var(--color-bg-secondary, $select-grey);
   border: 1px solid var(--color-stroke, $light-grey);
@@ -85,8 +87,8 @@
     padding: 15px 16px 15px 23px;
 
     @media (max-width: $tablet-width - 1) {
-      padding: 15px 16px;
       justify-content: center;
+      padding: 15px 16px;
     }
   }
 
@@ -124,8 +126,8 @@
 }
 
 .area-improvement .activity-tabs {
-  padding: 0;
   margin-bottom: 40px;
+  padding: 0;
 
   @media (max-width: $tablet-width - 1) {
     margin-bottom: 24px;
@@ -140,6 +142,10 @@
   }
 }
 
-.activity-tabs + .area-improvement__proposal > .proposal-list__item {
-  padding-top: 0;
+.area-improvement .description {
+  margin: 0 0 40px;
+
+  @include mobile {
+    margin-bottom: 28px;
+  }
 }
