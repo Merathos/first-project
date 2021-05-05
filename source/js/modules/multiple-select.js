@@ -39,21 +39,24 @@
       var COL_WIDTH = 312;
       var menu = selectContainer.querySelector('.ss-content');
       var {x, width} = menu.getBoundingClientRect();
+      console.log(width);
       var viewportWidth = window.innerWidth;
 
-      var currentColNumber = width / COL_WIDTH;
-      var offsetRight = viewportWidth - (x + width);
+      var currentColNumber = getComputedStyle(selectContainer).getPropertyValue('--colNum');
+      console.log(currentColNumber);
+      var rightGapWidth = viewportWidth - (x + width);
+      console.log(rightGapWidth);
 
-      if (offsetRight >= 30) {
+      if (rightGapWidth >= 16) {
         return;
       }
 
-      if (!offsetRight - COL_WIDTH) {
+      if (!rightGapWidth - COL_WIDTH) {
         selectContainer.setAttribute('style', '--colNum:' + (currentColNumber - 1));
         return;
       }
 
-      if (!offsetRight - COL_WIDTH * 2) {
+      if (!rightGapWidth - COL_WIDTH * 2) {
         selectContainer.setAttribute('style', '--colNum:' + (currentColNumber - 2));
         return;
       }

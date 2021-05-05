@@ -18,14 +18,18 @@
       };
 
       var changeElementsNumberHandler = function () {
-        var number = elementsList.children.length;
+        var number = elementsList.querySelectorAll('.ss-option:not(.ss-hide)').length;
         removeClasses();
 
         if (number > 8 && number <= 15) {
           target.classList.add('two-column');
         }
-        if (number > 14) {
+        if (number > 14 && number <= 21) {
           target.classList.add('three-column');
+        }
+        if (number > 21) {
+          target.classList.add('three-column');
+          target.classList.add('fixed-height');
         }
       };
 

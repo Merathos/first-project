@@ -3,7 +3,6 @@ html {
   font-family: "Rubik", "Arial", sans-serif;
   box-sizing: border-box;
 
-
   &.mod-font-family-arial {
     font-family: "Arial", sans-serif;
   }
@@ -20,7 +19,6 @@ html {
   &.mod-font-size-largest {
     font-size: 20px;
   }
-
 
   &.mod-theme-inverse {
     --color-bg-main: #{$dark};
@@ -117,6 +115,19 @@ body {
   background-color: var(--color-bg-main, $white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #e3e8ee;
+    border-radius: 5px;
+  }
 }
 
 a {

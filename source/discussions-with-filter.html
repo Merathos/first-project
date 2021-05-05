@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+<include src="source/components/head.html"></include>
+
+<body class="page-body">
+  <include src="source/components/special-popup.html"></include>
+
+  <include src="source/components/header.html"></include>
+
+  <main class="page-content">
+    <div class="container">
+      <include src="source/components/back-btn.html"></include>
+    </div>
+    <div class="container page-top page-top--wrapper">
+      <h1 class="page-title page-title--large">Обсуждения</h1>
+    </div>
+    <section class="discussion discussion--page">
+      <div class="container">
+        <form class="categories-filter">
+          <select name="categories" id="categories" title="Открыть фильтр" data-deselect="true" class="multiple-select js-multiple-select" data-placeholder-text="Все категории" multiple>
+            <option data-placeholder="true"></option>
+            <option value="Библиотеки" title="Библиотеки">Библиотеки</option>
+            <option value="Муниципальные образовательные организации" title="Муниципальные образовательные организации">Муниципальные образовательные организации</option>
+            <option value="Благоустройство" title="Благоустройство">Благоустройство</option>
+            <option value="Народное творчество" title="Народное творчество">Народное творчество</option>
+            <option value="Бытовое обслуживание" title="Бытовое обслуживание">Бытовое обслуживание</option>
+            <option value="Объекты культурного наследия" title="Объекты культурного наследия">Объекты культурного наследия</option>
+            <option value="Водоснабжение" title="Водоснабжение">Водоснабжение</option>
+            <option value="Объекты культуры" title="Объекты культуры">Объекты культуры</option>
+            <option value="Детские площадки" title="Детские площадки">Детские площадки</option>
+            <option value="Пожарная безопасность" title="Пожарная безопасность">Пожарная безопасность</option>
+            <option value="Дороги" title="Дороги">Дороги</option>
+            <option value="Сбор бытовых отходов" title="Сбор бытовых отходов">Сбор бытовых отходов</option>
+            <option value="Доходогенерирующие проекты" title="Доходогенерирующие проекты">Доходогенерирующие проекты</option>
+            <option value="Связь" title="Связь">Связь</option>
+            <option value="ЖКХ" title="ЖКХ">ЖКХ</option>
+            <option value="Спорт" title="Спорт">Спорт</option>
+            <option value="Массовое мероприятиеТуризм" title="Массовое мероприятиеТуризм">Массовое мероприятиеТуризм</option>
+            <option value="Туризм" title="Туризм">Туризм</option>
+            <option value="Места захоронения" title="Места захоронения">Места захоронения</option>
+            <option value="Фельдшерско-акушерские пункты" title="Фельдшерско-акушерские пункты">Фельдшерско-акушерские пункты</option>
+            <option value="Места массового пользования" title="Места массового пользования">Места массового пользования</option>
+          </select>
+          <select name="category-select" id="category-select" class="single-select js-form-select"
+            title="Открыть фильтр" data-placeholder-text="Все статусы"
+            data-deselect="true">
+            <option data-placeholder="true"></option>
+            <option value="В процессе приема Комментариев" title="В процессе приема Комментариев">В процессе приема Комментариев</option>
+            <option value="Прием комментариев завершён" title="Прием комментариев завершён">Прием Комментариев завершён. Идёт подготовка к проведению.</option>
+            <option value="В процессе" title="В процессе">В процессе</option>
+            <option value="Подводятся итоги" title="Подводятся итоги">Подводятся итоги</option>
+            <option value="Итоги подведены" title="Итоги подведены">Итоги подведены</option>
+          </select>
+          <div class="form-checkbox">
+            <input type="checkbox" name="favorites-checkbox"
+              id="favorites-checkbox">
+            <label for="favorites-checkbox">Только избранные</label>
+          </div>
+        </form>
+        <h2 class="visually-hidden">Обсуждения</h2>
+        <div class="discussion__list">
+          <div class="discussion__item discussion__item--sign">
+            <div class="discussion__item-top">
+              <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+              <div class="discussion__used">
+                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                </svg>
+                <p class="discussion__help">Участие принято</p>
+              </div>
+            </div>
+            <div class="discussion__content">
+              <a class="discussion__text link link--black" href="#">
+                Оценка качества услуг учреждений сферы государственной молодежной политики
+              </a>
+              <include src="source/components/button-star.html"></include>
+            </div>
+          </div>
+          <div class="discussion__item discussion__item--used">
+            <div class="discussion__item-top">
+              <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+              <div class="discussion__used">
+                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                </svg>
+                <p class="discussion__help">Участие принято</p>
+              </div>
+            </div>
+            <div class="discussion__content">
+              <a class="discussion__text link link--black" href="#">
+                Развитие животноводства в Тульской области Развитие животноводства в Тульской области Развитие
+                животноводства в Тульской области Развитие животноводства в Тульской области Развитие животноводства в
+                Тульской области Развитие животноводства в Тульской области Развитие животноводства в Тульской области
+                Развитие животноводства в Тульской области Развитие животноводства в Тульской области Развитие
+                животноводства в Тульской области
+              </a>
+              <include src="source/components/button-star.html"></include>
+            </div>
+          </div>
+          <div class="discussion__item">
+            <div class="discussion__item-top">
+              <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+              <div class="discussion__used">
+                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                </svg>
+                <p class="discussion__help">Участие принято</p>
+              </div>
+            </div>
+            <div class="discussion__content">
+              <a class="discussion__text link link--black" href="#">
+                Реконструкция моста через р. Дон на км 11+600 автомобильной дороги Новомосковское кольцо в Узловском
+                районе Тульской области
+              </a>
+              <include src="source/components/button-star.html"></include>
+            </div>
+          </div>
+          <div class="discussion__item discussion__item--used discussion__item--sign">
+            <div class="discussion__item-top">
+              <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+              <div class="discussion__used">
+                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                </svg>
+                <p class="discussion__help">Участие принято</p>
+              </div>
+            </div>
+            <div class="discussion__content">
+              <a class="discussion__text link link--black" href="#">
+                Государственное дошкольное образовательное учреждение Тульской области «Узловский детский сад»
+                Государственное дошкольное образовательное учреждение Тульской области «Узловский детский сад»
+                Государственное дошкольное образовательное учреждение Тульской области «Узловский детский сад»
+                Государственное дошкольное образовательное учреждение Тульской области «Узловский детский сад»
+                Государственное дошкольное образовательное учреждение Тульской области «Узловский детский сад»
+                Государственное дошкольное образовательное учреждение Тульской области «Узловский детский сад»
+                Государственное дошкольное образовательное учреждение Тульской области «Узловский детский сад»
+                Государственное дошкольное образовательное учреждение Тульской области «Узловский детский сад»
+                Государственное дошкольное образовательное учреждение Тульской области «Узловский детский сад»
+                Государственное дошкольное образовательное учреждение Тульской области «Узловский детский сад»
+              </a>
+              <include src="source/components/button-star.html"></include>
+            </div>
+          </div>
+          <div class="discussion__item">
+            <div class="discussion__item-top">
+              <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+              <div class="discussion__used">
+                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                </svg>
+                <p class="discussion__help">Участие принято</p>
+              </div>
+            </div>
+            <div class="discussion__content">
+              <a class="discussion__text link link--black" href="#">
+                Оказание услуг по организации питания пациентов ГУЗ "ТОКПБ №1 им. Н.П. Каменева"
+              </a>
+              <include src="source/components/button-star.html"></include>
+            </div>
+          </div>
+          <div class="discussion__item discussion__item--sign">
+            <div class="discussion__item-top">
+              <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+              <div class="discussion__used">
+                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                </svg>
+                <p class="discussion__help">Участие принято</p>
+              </div>
+            </div>
+            <div class="discussion__content">
+              <a class="discussion__text link link--black" href="#">
+                Оценка качества услуг учреждений сферы государственной молодежной политики
+              </a>
+              <include src="source/components/button-star.html"></include>
+            </div>
+          </div>
+          <div class="discussion__item discussion__item--used">
+            <div class="discussion__item-top">
+              <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+              <div class="discussion__used">
+                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                </svg>
+                <p class="discussion__help">Участие принято</p>
+              </div>
+            </div>
+            <div class="discussion__content">
+              <a class="discussion__text link link--black" href="#">
+                Развитие животноводства в Тульской области
+              </a>
+              <include src="source/components/button-star.html"></include>
+            </div>
+          </div>
+          <div class="discussion__item">
+            <div class="discussion__item-top">
+              <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+              <div class="discussion__used">
+                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                </svg>
+                <p class="discussion__help">Участие принято</p>
+              </div>
+            </div>
+            <div class="discussion__content">
+              <a class="discussion__text link link--black" href="#">
+                Реконструкция моста через р. Дон на км 11+600 автомобильной дороги Новомосковское кольцо в Узловском
+                районе Тульской области
+              </a>
+              <include src="source/components/button-star.html"></include>
+            </div>
+          </div>
+          <div class="discussion__item discussion__item--used discussion__item--sign">
+            <div class="discussion__item-top">
+              <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+              <div class="discussion__used">
+                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                </svg>
+                <p class="discussion__help">Участие принято</p>
+              </div>
+            </div>
+            <div class="discussion__content">
+              <a class="discussion__text link link--black" href="#">
+                Государственное дошкольное образовательное учреждение Тульской области «Узловский детский сад»
+              </a>
+              <include src="source/components/button-star.html"></include>
+            </div>
+          </div>
+          <div class="discussion__item">
+            <div class="discussion__item-top">
+              <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+              <div class="discussion__used">
+                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                </svg>
+                <p class="discussion__help">Участие принято</p>
+              </div>
+            </div>
+            <div class="discussion__content">
+              <a class="discussion__text link link--black" href="#">
+                Оказание услуг по организации питания пациентов ГУЗ "ТОКПБ №1 им. Н.П. Каменева"
+              </a>
+              <include src="source/components/button-star.html"></include>
+            </div>
+          </div>
+          <div class="discussion__item discussion__item--sign">
+            <div class="discussion__item-top">
+              <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+              <div class="discussion__used">
+                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                </svg>
+                <p class="discussion__help">Участие принято</p>
+              </div>
+            </div>
+            <div class="discussion__content">
+              <a class="discussion__text link link--black" href="#">
+                Оценка качества услуг учреждений сферы государственной молодежной политики
+              </a>
+              <include src="source/components/button-star.html"></include>
+            </div>
+          </div>
+          <div class="discussion__item discussion__item--used">
+            <div class="discussion__item-top">
+              <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+              <div class="discussion__used">
+                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                </svg>
+                <p class="discussion__help">Участие принято</p>
+              </div>
+            </div>
+            <div class="discussion__content">
+              <a class="discussion__text link link--black" href="#">
+                Развитие животноводства в Тульской области
+              </a>
+              <include src="source/components/button-star.html"></include>
+            </div>
+          </div>
+          <div class="discussion__item">
+            <div class="discussion__item-top">
+              <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+              <div class="discussion__used">
+                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                </svg>
+                <p class="discussion__help">Участие принято</p>
+              </div>
+            </div>
+            <div class="discussion__content">
+              <a class="discussion__text link link--black" href="#">
+                Реконструкция моста через р. Дон на км 11+600 автомобильной дороги Новомосковское кольцо в Узловском
+                районе Тульской области
+              </a>
+              <include src="source/components/button-star.html"></include>
+            </div>
+          </div>
+          <div class="discussion__item discussion__item--used discussion__item--sign">
+            <div class="discussion__item-top">
+              <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+              <div class="discussion__used">
+                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                </svg>
+                <p class="discussion__help">Участие принято</p>
+              </div>
+            </div>
+            <div class="discussion__content">
+              <a class="discussion__text link link--black" href="#">
+                Государственное дошкольное образовательное учреждение Тульской области «Узловский детский сад»
+              </a>
+              <include src="source/components/button-star.html"></include>
+            </div>
+          </div>
+          <div class="discussion__item">
+            <div class="discussion__item-top">
+              <time class="discussion__date" datetime="2019-04-04">04.04.2019</time>
+              <div class="discussion__used">
+                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                </svg>
+                <p class="discussion__help">Участие принято</p>
+              </div>
+            </div>
+            <div class="discussion__content">
+              <a class="discussion__text link link--black" href="#">
+                Оказание услуг по организации питания пациентов ГУЗ "ТОКПБ №1 им. Н.П. Каменева"
+              </a>
+              <include src="source/components/button-star.html"></include>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="discussion__button button button--light-blue">
+          ПОКАЗАТЬ ЕЩЁ
+        </a>
+      </div>
+    </section>
+
+    <include src="source/components/paginator.html"></include>
+    </div>
+
+    <div class="container">
+      <div class="page-content__archive-link archive-link">
+        <p class="archive-link__description">Также вы&nbsp;можете ознакомиться со&nbsp;всеми записями, перейдя
+          в&nbsp;архив</p>
+        <a href="#" class="link-arrow archive-link__btn">
+          <span>Архив обсуждений</span>
+          <svg width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#icon-arrow"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <include src="source/components/footer.html"></include>
+  <include src="source/components/cookie.html"></include>
+  <include src="source/components/up-btn.html"></include>
+
+  <script src="js/libs.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
