@@ -6017,6 +6017,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .proposal-list__item--border-top {
     padding-top: 32px;
     border-top: 1px solid var(--color-stroke, #e3e8ee); }
+  .proposal-list__item--without-counter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap; }
 
 .proposal-list__wrapper {
   display: -webkit-box;
@@ -12902,6 +12910,12 @@ ymaps p {
     padding: 0; }
   .area-improvement .activity-tabs .activity-tabs__bottom {
     width: 100%; }
+
+.area-improvement .description {
+  margin: 0 0 40px; }
+  @media (max-width: 767px) {
+    .area-improvement .description {
+      margin-bottom: 28px; } }
 
 .hearings-page {
   padding-top: 40px;

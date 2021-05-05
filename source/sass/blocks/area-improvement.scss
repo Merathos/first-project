@@ -141,3 +141,11 @@
     width: 100%;
   }
 }
+
+.area-improvement .description {
+  margin: 0 0 40px;
+
+  @include mobile {
+    margin-bottom: 28px;
+  }
+}
