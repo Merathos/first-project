@@ -15,11 +15,18 @@
 
       allowDeselect: el.dataset.deselect ? true : false,
 
+      afterOpen: function () {
+        window.Scrollbar.init(selectContainer.querySelector('.ss-content'), {
+          continuousScrolling: false
+        });
+      },
+
       beforeOpen: function () {
         calcWidthBasedOnPosition();
       },
 
       afterClose: function () {
+        window.Scrollbar.destroy(selectContainer.querySelector('.ss-content'));
         removeCalculatedWidth();
       },
 

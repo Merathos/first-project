@@ -3063,59 +3063,76 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   --colNum: 1;
   --colWidth: 264px;
   --columnGap: 48px;
+  --listPadding: 24px;
   --maxHeight: auto;
   width: auto;
   max-width: 100%; }
+  @media (max-width: 767px) {
+    .multiple-select {
+      --listPadding: 16px; } }
   .multiple-select.two-column {
-    --maxHeight: 324px;
-    --colNum: 2; }
+    --colNum: 2;
+    --maxHeight: 324px; }
     @media (max-width: 767px) {
       .multiple-select.two-column {
-        --maxHeight: 400px;
-        --colNum: 1; } }
+        --colNum: 1;
+        --maxHeight: 400px; } }
   .multiple-select.three-column {
     --colNum: 3; }
     @media (max-width: 1199px) {
       .multiple-select.three-column {
-        --maxHeight: 324px;
-        --colNum: 2; } }
+        --colNum: 2;
+        --maxHeight: 324px; } }
     @media (max-width: 767px) {
       .multiple-select.three-column {
-        --maxHeight: 400px;
-        --colNum: 1; } }
+        --colNum: 1;
+        --maxHeight: 400px; } }
   .multiple-select.fixed-height {
     --maxHeight: 324px; }
+  .multiple-select .scrollbar-track {
+    width: 10px;
+    background-color: transparent; }
+  .multiple-select .scrollbar-thumb {
+    width: 6px;
+    background-color: #e3e8ee;
+    border-radius: 5px; }
   .multiple-select .ss-content {
-    left: -21px;
     top: 31px;
+    left: -21px;
     z-index: 10;
-    width: unset;
+    width: calc(var(--colWidth) * var(--colNum) + var(--columnGap) * (var(--colNum) - 1) + (var(--listPadding) * 2));
     max-height: var(--maxHeight);
-    padding: 16px 24px 24px;
-    border: none;
+    padding: 0;
+    overflow-x: hidden;
     background-color: var(--color-bg-secondary, #f9f9fa);
-    -webkit-box-shadow: 0px 2px 4px rgba(0, 30, 75, 0.15);
-            box-shadow: 0px 2px 4px rgba(0, 30, 75, 0.15);
+    border: none;
     border-radius: 5px;
-    overflow-y: auto; }
+    -webkit-box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
+            box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15); }
+    .multiple-select .ss-content .ss-search {
+      display: none; }
     .multiple-select .ss-content .ss-list {
       position: static;
-      width: calc(var(--colWidth) * var(--colNum) + var(--columnGap) * (var(--colNum) - 1));
+      width: calc(var(--colWidth) * var(--colNum) + var(--columnGap) * (var(--colNum) - 1) + (var(--listPadding) * 2));
       max-width: 936px;
       max-height: initial;
+      padding: 16px var(--listPadding) 24px;
       -webkit-column-count: var(--colNum);
          -moz-column-count: var(--colNum);
               column-count: var(--colNum);
-      -webkit-column-width: var(--colWidth);
-         -moz-column-width: var(--colWidth);
-              column-width: var(--colWidth);
       -webkit-column-gap: var(--columnGap);
          -moz-column-gap: var(--columnGap);
-              column-gap: var(--columnGap); }
+              column-gap: var(--columnGap);
+      -webkit-column-width: var(--colWidth);
+         -moz-column-width: var(--colWidth);
+              column-width: var(--colWidth); }
       @media (max-width: 767px) {
         .multiple-select .ss-content .ss-list {
-          width: 100%; } }
+          width: 288px; } }
       .multiple-select .ss-content .ss-list .ss-option {
+        -webkit-column-break-inside: avoid;
+           -moz-column-break-inside: avoid;
+                break-inside: avoid;
         position: relative;
         padding: 8px 10px 8px 28px;
         font-size: 15px;
@@ -3123,16 +3140,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         color: var(--color-text, #354052);
         border-radius: 5px;
         -webkit-transition: background-color 0.2s color 0.2s;
-        transition: background-color 0.2s color 0.2s;
-        -webkit-column-break-inside: avoid;
-           -moz-column-break-inside: avoid;
-                break-inside: avoid; }
+        transition: background-color 0.2s color 0.2s; }
         .multiple-select .ss-content .ss-list .ss-option::after {
-          content: '';
+          content: "";
           position: absolute;
-          opacity: 0;
-          left: 0;
           top: 50%;
+          left: 0;
           width: 12px;
           height: 12px;
           background-image: url(../img/icon-tick.svg);
@@ -3141,20 +3154,21 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
           background-size: cover;
           -webkit-transform: translateY(-50%) translateX(50%);
                   transform: translateY(-50%) translateX(50%);
+          opacity: 0;
           -webkit-transition: opacity 0.2s;
           transition: opacity 0.2s; }
         .multiple-select .ss-content .ss-list .ss-option:focus, .multiple-select .ss-content .ss-list .ss-option:focus:not(.focus-visible), .multiple-select .ss-content .ss-list .ss-option:active:not(.focus-visible), .multiple-select .ss-content .ss-list .ss-option:hover:not(.focus-visible) {
-          background-color: var(--color-bg-secondary, #eff1f4);
-          color: var(--color-text, #2c8ecc); }
+          color: var(--color-text, #2c8ecc);
+          background-color: var(--color-bg-secondary, #eff1f4); }
       .multiple-select .ss-content .ss-list .ss-option:not(.ss-disabled).ss-option-selected {
         color: var(--color-interactive-accent, #116ca6);
         background-color: transparent; }
         .multiple-select .ss-content .ss-list .ss-option:not(.ss-disabled).ss-option-selected:after {
           opacity: 1; }
   .multiple-select .ss-multi-selected {
-    border: none;
     min-height: initial;
-    padding: 0; }
+    padding: 0;
+    border: none; }
     .multiple-select .ss-multi-selected .ss-values {
       display: none; }
     .multiple-select .ss-multi-selected .ss-add {
@@ -3162,40 +3176,40 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
+      -webkit-box-flex: initial;
+          -ms-flex: initial;
+              flex: initial;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-flow: row nowrap;
               flex-flow: row nowrap;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start;
-      -webkit-box-flex: initial;
-          -ms-flex: initial;
-              flex: initial;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
       margin: 0; }
       .multiple-select .ss-multi-selected .ss-add .ss-plus {
         all: revert;
         margin-right: 8px;
-        font-family: "Rubik", "Arial", sans-serif;
+        overflow: hidden;
         font-size: 15px;
         line-height: 20px;
         color: var(--color-interactive-default, #2c8ecc);
-        border-bottom: 2px dashed var(--color-interactive-default, #2c8ecc);
-        overflow: hidden;
+        white-space: nowrap;
         text-overflow: ellipsis;
-        white-space: nowrap; }
+        border-bottom: 2px dashed var(--color-interactive-default, #2c8ecc);
+        font-family: "Rubik", "Arial", sans-serif; }
         .multiple-select .ss-multi-selected .ss-add .ss-plus:after {
           all: revert; }
       .multiple-select .ss-multi-selected .ss-add svg {
+        -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
         -webkit-transition: -webkit-transform 0.2s;
         transition: -webkit-transform 0.2s;
         transition: transform 0.2s;
-        transition: transform 0.2s, -webkit-transform 0.2s;
-        -webkit-transform: rotate(180deg);
-                transform: rotate(180deg); }
+        transition: transform 0.2s, -webkit-transform 0.2s; }
       .multiple-select .ss-multi-selected .ss-add .ss-plus.ss-cross {
         -webkit-transform: rotate(0);
                 transform: rotate(0); }
@@ -3205,12 +3219,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         height: 12px;
         margin-right: 10px;
         padding: 0;
+        background-color: transparent;
         border: none;
         outline: none;
-        background-color: transparent;
         cursor: pointer; }
         .multiple-select .ss-multi-selected .ss-add .ss-deselect-all::after, .multiple-select .ss-multi-selected .ss-add .ss-deselect-all::before {
-          content: '';
+          content: "";
           position: absolute;
           top: calc(50% - 1px);
           left: 0;
@@ -4150,8 +4164,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         padding: 0; }
         .categories-filter .multiple-select .ss-content {
           left: calc((var(--paddingLeft) + 1px) * -1);
-          width: calc(100% + var(--paddingLeft) + var(--paddingRight) + 2px);
-          padding-left: 16px; }
+          width: calc(100% + var(--paddingLeft) + var(--paddingRight) + 2px); }
           .categories-filter .multiple-select .ss-content .ss-option {
             padding-left: var(--paddingLeft); }
             .categories-filter .multiple-select .ss-content .ss-option:after {
