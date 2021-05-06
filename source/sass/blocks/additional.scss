@@ -42,7 +42,6 @@
 }
 
 .additional__link {
-  display: initial;
-
+  color: var(--color-interactive-default, $blue-default);
   @include font-h5;
 }
