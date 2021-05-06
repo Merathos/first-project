@@ -2,7 +2,6 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-
   margin-bottom: 24px;
 
   @include mobile {
@@ -15,28 +14,35 @@
 }
 
 .additional__wrapper {
+  margin-right: rem(32px);
   margin-bottom: rem(16px);
-  &:not(:last-child) {
-    margin-right: rem(32px);
+
+  @include mobile {
+    margin-right: 0;
   }
 
-  @include tablet {
+  &:last-child {
     margin-right: 0;
   }
 }
 
 .additional__text {
   padding-right: 8px;
-  @include font-h5;
+
   color: var(--color-text, $grey-default);
+
+  @include font-h5;
 }
 
 .additional__datetime {
-  @include font-h5;
-  color: var(--color-text, $dark-text);
   font-weight: 400;
+  color: var(--color-text, $dark-text);
+
+  @include font-h5;
 }
 
 .additional__link {
+  display: initial;
+
   @include font-h5;
 }
