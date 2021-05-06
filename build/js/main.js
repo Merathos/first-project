@@ -209,7 +209,7 @@
   if (document.querySelector('.confirmation-popup')) {
     var popUp = document.querySelector('.confirmation-popup');
     var popUpBody = popUp.querySelector('.confirmation-popup__body');
-    var popUpOpenbtn = document.querySelector('#improvement-submit-btn');
+    var popUpOpenbtn = document.querySelectorAll('[data-modal="confirmation"]');
     var popUpClosebtn = popUp.querySelector('.confirmation-popup__close-btn');
     var popUpBackbtn = popUp.querySelector('.confirmation-popup__back-btn');
     var KeyCodes = {
@@ -238,8 +238,10 @@
       document.removeEventListener('keydown', onPopupEscPress);
     };
 
-    popUpOpenbtn.addEventListener('click', function () {
-      openPopup();
+    popUpOpenbtn.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        openPopup();
+      });
     });
 
     popUpClosebtn.addEventListener('click', closePopup);
