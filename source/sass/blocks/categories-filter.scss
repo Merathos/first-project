@@ -95,7 +95,6 @@
         left: calc((var(--paddingLeft) + 1px) * -1);
 
         width: calc(100% + var(--paddingLeft) + var(--paddingRight) + 2px);
-        padding-left: 16px;
 
         .ss-option {
           padding-left: var(--paddingLeft);
