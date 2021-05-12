@@ -129,7 +129,17 @@
               <div id="map"></div>
             </div>
             <include src="source/components/buttons-wrapper.html"></include>
-            <div class="confirmation-popup">
+            <div class="confirmation-popup" data-modal="confirm">
+              <div class="confirmation-popup__body">
+                <button type="button" class="confirmation-popup__close-btn" aria-label="Отмена"></button>
+                <p>После отправки предложения на модерацию внести изменения будет нельзя</p>
+                <div class="confirmation-popup__buttons-wrap">
+                  <button type="button" class="confirmation-popup__back-btn button button--white">Вернуться</button>
+                  <button type="submit" class="confirmation-popup__submit-btn button button--blue">Отправить</button>
+                </div>
+              </div>
+            </div>
+            <div class="confirmation-popup" data-modal="remove">
               <div class="confirmation-popup__body">
                 <button type="button" class="confirmation-popup__close-btn" aria-label="Отмена"></button>
                 <p>После отправки предложения на модерацию внести изменения будет нельзя</p>
