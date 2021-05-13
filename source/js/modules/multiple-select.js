@@ -45,14 +45,12 @@
     var calcWidthBasedOnPosition = function () {
       var COL_WIDTH = 312;
       var menu = selectContainer.querySelector('.ss-content');
-      var {x, width} = menu.getBoundingClientRect();
-      console.log(width);
+      var x = menu.getBoundingClientRect().x;
+      var width = menu.getBoundingClientRect().width;
       var viewportWidth = window.innerWidth;
 
       var currentColNumber = getComputedStyle(selectContainer).getPropertyValue('--colNum');
-      console.log(currentColNumber);
       var rightGapWidth = viewportWidth - (x + width);
-      console.log(rightGapWidth);
 
       if (rightGapWidth >= 16) {
         return;
