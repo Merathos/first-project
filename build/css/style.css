@@ -12447,9 +12447,10 @@ span.poll__hide {
         -ms-flex-direction: column;
             flex-direction: column; }
   .confirmation-popup__back-btn {
-    margin-bottom: 20px;
+    margin-bottom: 0;
     width: 100%; }
   .confirmation-popup__submit-btn {
+    margin-bottom: 20px;
     width: 100%; } }
 
 .improvement {
