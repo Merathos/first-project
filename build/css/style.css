@@ -8937,7 +8937,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       opacity: 1; }
     .category-list__item--is-done:hover .category-list__count-wrap {
       top: 20px;
-      position: static; } }
+      -webkit-transform: translateY(0);
+              transform: translateY(0); } }
 
 @media (hover: hover) and (max-width: 500px) {
   .category-list__item--is-done:hover .category-list__hover-text {
@@ -8948,6 +8949,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     margin-left: 0;
     width: 100%; }
   .category-list__item--is-done:hover .category-list__count-wrap {
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
     position: absolute;
     top: 33%; }
   .category-list__item--is-done:hover .category-list__title {
@@ -9111,7 +9114,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     color: var(--color-text, #a6abb3); }
     @media (max-width: 1023px) {
       .category-list__hover-text--is-done {
-        right: 36px;
+        right: 20px;
         top: unset;
         bottom: 16px;
         height: auto;

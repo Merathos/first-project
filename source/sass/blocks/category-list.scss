@@ -141,7 +141,8 @@
 
         .category-list__count-wrap {
           top: 20px;
-          position: static;
+          transform: translateY(0);
+          // position: static;
         }
       }
 
@@ -157,6 +158,7 @@
         }
 
         .category-list__count-wrap {
+          transform: translateY(-50%);
           position: absolute;
           top: 33%;
         }
@@ -345,7 +347,8 @@
     color: var(--color-text, $grey-default);
 
     @media (max-width: $tablet-max-width - 1px) {
-      right: 36px;
+      // right: 36px;
+      right: 20px;
       top: unset;
       bottom: 16px;
       height: auto;
