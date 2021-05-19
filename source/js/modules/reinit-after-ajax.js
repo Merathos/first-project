@@ -13,12 +13,22 @@
           });
         }
 
-        var $selects = document.querySelectorAll('.js-ajax-wrapper select');
+        var $selects = document.querySelectorAll('.js-ajax-wrapper select:not([multiple])');
 
         if ($selects.length > 0) {
           $selects.forEach(function ($select) {
             if (!$select.getAttribute('data-ssid')) {
               window.addSelect($select);
+            }
+          });
+        }
+
+        var $multipleSelects = document.querySelectorAll('.js-ajax-wrapper select[multiple]');
+
+        if ($multipleSelects.length > 0) {
+          $multipleSelects.forEach(function ($multiSelect) {
+            if (!$multiSelect.getAttribute('data-ssid')) {
+              window.addMultipleSelect($multiSelect);
             }
           });
         }
