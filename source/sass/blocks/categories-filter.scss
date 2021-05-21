@@ -47,6 +47,14 @@
     background-color: transparent;
     border-radius: 0;
 
+    li {
+      margin: 0 26px 0 0;
+
+      @include tablet {
+        margin-right: 24px;
+      }
+    }
+
     @include tablet {
       justify-content: flex-start;
       max-width: 100%;
@@ -62,14 +70,6 @@
 
       li {
         margin: 0 0 20px 0;
-      }
-    }
-
-    li {
-      margin: 0 26px 0 0;
-
-      @include tablet {
-        margin-right: 24px;
       }
     }
   }
