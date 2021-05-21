@@ -283,6 +283,14 @@
       <section class="proposal-winners">
         <div class="container">
           <h2 class="proposal-winners__title">Предложения-победители</h2>
+          <form class="area-improvement__select form-select js-form-select">
+            <select name="category-select" id="category-select" title="Открыть фильтр" data-placeholder-text="Статус" data-deselect="true">
+              <option data-placeholder="true"></option>
+              <option value="Все" title="Все">Все</option>
+              <option value="Реализованные" title="Реализованные">Реализованные</option>
+              <option value="На реализации" title="На реализации">На реализации</option>
+            </select>
+          </form>
           <ul class="proposal-winners__proposal proposal-list">
             <li class="proposal-list__item">
               <a href="#" class="proposal-list__title proposal-list__title--regular">Рыбным
