@@ -12578,7 +12578,7 @@ span.poll__hide {
 
 .proposal-winners__title {
   margin-top: 0;
-  margin-bottom: 66px;
+  margin-bottom: 40px;
   padding-top: 40px;
   font-weight: 400;
   font-size: 1.875rem;
@@ -12950,6 +12950,9 @@ ymaps p {
   .area-improvement .area-improvement__select .ss-main .ss-single-selected .ss-arrow span {
     width: 8px;
     height: 8px; }
+  .area-improvement .area-improvement__select .ss-main .ss-single-selected .placeholder .ss-disabled {
+    font-size: 0.9375rem;
+    line-height: 135%; }
 
 .area-improvement__paginator {
   margin-top: 0; }
