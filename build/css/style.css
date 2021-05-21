@@ -4043,6 +4043,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       padding: 16px 8px; } }
 
 .page-nav__item {
+  position: relative;
   margin: 0 24px; }
   @media (max-width: 767px) {
     .page-nav__item {
@@ -4070,6 +4071,27 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 @media print {
   .page-nav {
     display: none; } }
+
+.page-nav__radio-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%); }
+
+.page-nav__radio-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
 
 .categories-filter {
   --paddingLeft: 20px;
