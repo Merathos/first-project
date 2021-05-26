@@ -1,96 +1,184 @@
 .map-section {
-    iframe, #map, #improvement-map {
-        border: none;
-        border-radius: 5px;
-        width: 100%;
-    }
+  iframe, #map, #improvement-map {
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+  }
 
-    #map, #improvement-map {
-      height: 600px;
-    }
+  #map, #improvement-map {
+    height: 600px;
+  }
 
-    input {
-        -webkit-appearance: none;
-        font-size: 16px;
+  input {
+    -webkit-appearance: none;
+    font-size: 16px;
 
-        &::placeholder {
-            font-size: rem(15px);
-            line-height: rem(27px);
-        }
+    &::placeholder {
+      font-size: rem(15px);
+      line-height: rem(27px);
     }
+  }
 }
 
 .map-section__title {
-    margin: 0 0 8px;
-    @include font-h2;
+  margin: 0 0 8px;
+  @include font-h2;
 }
 
 .map-section__tip {
-    margin: 0;
-    margin-bottom: 32px;
+  margin: 0;
+  margin-bottom: 32px;
 }
 
 .map-section__address {
-    margin-bottom: 25px;
-    width: 100%;
-    height: 51px;
-    padding: 15px 15px;
-    font-size: rem(15px);
-    line-height: rem(27px);
-    background: #f9f9fa;
-    border: 1px solid #e3e8ee;
-    border-radius: 5px;
+  margin-bottom: 25px;
+  width: 100%;
+  height: 51px;
+  padding: 15px 15px;
+  font-size: rem(15px);
+  line-height: rem(27px);
+  background: #f9f9fa;
+  border: 1px solid #e3e8ee;
+  border-radius: 5px;
+
+  &::placeholder {
+    color: #a6abb2;
+  }
+
+  &:focus {
+    outline: none;
 
     &::placeholder {
-        color: #a6abb2;
+      color: #354052;
+    }
+  }
+}
+
+.map_container {
+  position:relative;
+}
+.mapMenu {
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 46px;
+  background-color: #fff;
+  border-radius: 24px;
+  -webkit-box-shadow: 0 2px 8px 0 rgba(0,0,0,.25);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,.25);
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  &.hidden {
+    display: none;
+  }
+}
+
+.mapMenu .title {
+  padding: 0 10px;
+  font-size: 14px;
+  line-height: 1.57;
+  color: #505152;
+}
+
+.mapMenu .mapMenuIcon {
+  padding: 5px;
+  width: 40px;
+  height: 35px;
+  cursor: pointer;
+  color: #7b7b7b;
+  background: 0 0;
+  border: 0;
+  outline-style: none;
+  &.hidden {
+    display: none;
+  }
+
+  .svgMapPolygon {
+    .st1{fill:#F9FBFF;stroke:#D0D6DE;stroke-width:2;}
+    .st1:hover{stroke:black;}
+  }
+
+  &.active {
+    svg {
+      fill:#2C8ECC;
     }
 
-    &:focus {
-        outline: none;
-
-        &::placeholder {
-        color: #354052;
-        }
+    .svgMapPolygon {
+      .st1{fill:#F9FBFF;stroke:#2C8ECC;stroke-width:2;}
+      .st1:hover{stroke:black;}
     }
+  }
+
+  svg {
+    fill:#D0D6DE;
+    &:hover {
+      fill:black;
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+  }
+}
+
+.mapMenu .mapMenuIcon:hover {
+  color: #000
+}
+
+.mapMenu .mapMenuIcon.active, .mapMenu .mapMenuIcon.active:hover {
+  color: #147de8
 }
 
 @include tablet {
-    .map-section {
-        iframe, #map, #improvement-map {
-            height: 460px;
-        }
+  .map-section {
+    iframe, #map, #improvement-map {
+      height: 460px;
     }
+  }
 
-    .map-section__tip {
-        margin-top: 12px;
-        margin-bottom: 35px;
-    }
+  .map-section__tip {
+    margin-top: 12px;
+    margin-bottom: 35px;
+  }
 }
 
 @include mobile {
-    .map-section {
+  .map-section {
 
-        iframe,#map {
-            height: 288px;
-        }
-
-      #improvement-map {
-        height: calc(100vh - 64px);
-      }
+    iframe,#map {
+      height: 288px;
     }
 
-
-    .map-section__title {
-        margin-bottom: 16px;
-        font-size: rem(24px);
-        line-height: rem(28.44px);
+    #improvement-map {
+      height: calc(100vh - 64px);
     }
+  }
 
-    .map-section__tip {
-        margin-bottom: 25px;
-        font-size: rem(15px);
-        line-height: rem(27px);
-    }
+
+  .map-section__title {
+    margin-bottom: 16px;
+    font-size: rem(24px);
+    line-height: rem(28.44px);
+  }
+
+  .map-section__tip {
+    margin-bottom: 25px;
+    font-size: rem(15px);
+    line-height: rem(27px);
+  }
 }
 
 .map-section--height {
