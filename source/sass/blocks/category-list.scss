@@ -81,6 +81,10 @@
         box-shadow: unset;
         top: 70%;
 
+        .category-list__link {
+          padding-right: 20px;
+        }
+
         .category-list__count-wrap {
           opacity: 1;
         }
@@ -347,7 +351,6 @@
     color: var(--color-text, $grey-default);
 
     @media (max-width: $tablet-max-width - 1px) {
-      // right: 36px;
       right: 20px;
       top: unset;
       bottom: 16px;
@@ -361,7 +364,7 @@
     }
 
     @media (hover: none) {
-      right: 36px;
+      right: 20px;
       top: unset;
       bottom: 16px;
       height: auto;

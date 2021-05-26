@@ -8921,6 +8921,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     -webkit-box-shadow: unset;
             box-shadow: unset;
     top: 70%; }
+    .category-list__item--is-done .category-list__link {
+      padding-right: 20px; }
     .category-list__item--is-done .category-list__count-wrap {
       opacity: 1; }
     .category-list__item--is-done .category-list__hover-text {
@@ -9147,7 +9149,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
           display: none; } }
     @media (hover: none) {
       .category-list__hover-text--is-done {
-        right: 36px;
+        right: 20px;
         top: unset;
         bottom: 16px;
         height: auto;
