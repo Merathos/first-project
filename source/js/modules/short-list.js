@@ -10,15 +10,14 @@
     var items = list.querySelectorAll('li') || listCat.querySelectorAll('li');
 
     items.forEach(function (item, index) {
-      if (index > 4 && window.innerWidth < 400) {
+      if (index > 4 && window.innerWidth < 768) {
         item.classList.add(hideClass);
-      } else if ((index > 7 && window.innerWidth < 768 && window.innerWidth >= 400)) {
+      } else if ((index > 7 && window.innerWidth < 1024 && window.innerWidth >= 768)) {
         item.classList.add(hideClass);
       }
     });
 
     if (listCat && items.length > 8) {
-      console.log(items.length)
       button.style.display = 'block';
 
       items.forEach(function (item, index) {

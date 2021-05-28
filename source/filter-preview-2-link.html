@@ -27,16 +27,13 @@
         <form class="public-debate__filter categories-filter js-form-select">
           <ul class="page-nav">
             <li class="page-nav__item">
-              <input class="page-nav__radio-input" type="radio" name="status" id="federal-status" checked>
-              <label class="page-nav__radio-label" for="federal-status" aria-label="Федеральные">Федеральные</label>
+              <a href="#" class="page-nav__link page-nav__link--active" data-radio="federal-status">Федеральные</a>
             </li>
             <li class="page-nav__item">
-              <input class="page-nav__radio-input" type="radio" name="status" id="regional-status">
-              <label class="page-nav__radio-label" for="regional-status" aria-label="Региональные">Региональные</label>
+              <a href="#" class="page-nav__link" data-radio="regional-status">Региональные</a>
             </li>
             <li class="page-nav__item">
-              <input class="page-nav__radio-input" type="radio" name="status" id="local-status">
-              <label class="page-nav__radio-label" for="local-status" aria-label="Местные">Местные</label>
+              <a href="#" class="page-nav__link" data-radio="local-status">Местные</a>
             </li>
           </ul>
           <select name="categories" id="categories" title="Открыть фильтр" data-deselect="true" class="multiple-select js-multiple-select" data-placeholder-text="Все категории" multiple>

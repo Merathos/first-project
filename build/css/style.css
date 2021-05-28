@@ -4052,7 +4052,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .page-nav__item {
       margin: 0 8px; } }
 
-.page-nav__link {
+.page-nav__link,
+.page-nav__radio-label {
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-weight: 400;
@@ -4061,10 +4062,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   text-transform: uppercase;
   color: var(--color-text, #a6abb3);
   -webkit-transition: color 0.2s;
-  transition: color 0.2s; }
-  .page-nav__link:hover, .page-nav__link:focus {
+  transition: color 0.2s;
+  cursor: pointer; }
+  .page-nav__link:hover, .page-nav__link:focus,
+  .page-nav__radio-label:hover,
+  .page-nav__radio-label:focus {
     color: var(--color-interactive-default, #2c8ecc); }
-  .page-nav__link--active {
+  .page-nav__link--active,
+  .page-nav__radio-label--active {
     color: var(--color-interactive-default, #2c8ecc);
     border-bottom: 2px dashed var(--color-interactive-default, #2c8ecc); }
 
@@ -4084,14 +4089,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(100%);
           clip-path: inset(100%); }
-
-.page-nav__radio-label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1; }
+  .page-nav__radio-input:checked + .page-nav__radio-label {
+    color: var(--color-interactive-default, #2c8ecc);
+    border-bottom: 2px dashed var(--color-interactive-default, #2c8ecc); }
 
 .categories-filter {
   --paddingLeft: 20px;
