@@ -144,3 +144,23 @@
     display: none;
   }
 }
+
+.button-more-text {
+  display: inline;
+
+  .is-shown & {
+    display: none;
+  }
+}
+
+.button-less-text {
+  display: none;
+
+  .is-shown & {
+    display: inline;
+  }
+}
+
+.button.is-shown svg {
+  transform: rotate(180deg);
+}

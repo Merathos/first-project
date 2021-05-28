@@ -2627,6 +2627,20 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .button {
     display: none; } }
 
+.button-more-text {
+  display: inline; }
+  .is-shown .button-more-text {
+    display: none; }
+
+.button-less-text {
+  display: none; }
+  .is-shown .button-less-text {
+    display: inline; }
+
+.button.is-shown svg {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
 .form-checkbox {
   position: relative;
   display: -webkit-box;

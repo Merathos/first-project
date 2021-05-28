@@ -8,6 +8,9 @@
 
     var insertImageSrc = function (source, target) {
       var sourceSrc = source.getAttribute('src');
+      if(source.dataset.thumbnail) {
+        sourceSrc = source.dataset.thumbnail;
+      }
       if (sourceSrc) {
         target.setAttribute('src', sourceSrc);
       } else {

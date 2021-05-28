@@ -812,6 +812,9 @@
 
     var insertImageSrc = function (source, target) {
       var sourceSrc = source.getAttribute('src');
+      if(source.dataset.thumbnail) {
+        sourceSrc = source.dataset.thumbnail;
+      }
       if (sourceSrc) {
         target.setAttribute('src', sourceSrc);
       } else {
@@ -2584,36 +2587,52 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
   var list = document.querySelector('.js_short_list');
   var listCat = document.querySelector('.js_short_list-category');
   var button = document.querySelector('.js_short_list + .js_show_all');
+  var isHidden = false;
+
   if (list && button || listCat && button) {
     // var showedItems = 5;
     var items = list.querySelectorAll('li') || listCat.querySelectorAll('li');
 
-    items.forEach(function (item, index) {
-      if (index > 4 && window.innerWidth < 768) {
-        item.classList.add(hideClass);
-      } else if ((index > 7 && window.innerWidth < 1024 && window.innerWidth >= 768)) {
-        item.classList.add(hideClass);
-      }
-    });
-
-    if (listCat && items.length > 8) {
-      button.style.display = 'block';
-
+    var hideItems = function () {
       items.forEach(function (item, index) {
-        if (index > 8) {
+        if (index > 4 && window.innerWidth < 768) {
           item.classList.add(hideClass);
-        } else {
-          item.classList.remove(hideClass);
+        } else if ((index > 7 && window.innerWidth < 1024 && window.innerWidth >= 768)) {
+          item.classList.add(hideClass);
         }
       });
-    }
+
+      if (listCat && items.length > 8) {
+        button.style.display = 'block';
+
+        items.forEach(function (item, index) {
+          if (index > 8) {
+            item.classList.add(hideClass);
+            isHidden = true;
+          } else {
+            item.classList.remove(hideClass);
+            isHidden = false;
+          }
+        });
+      }
+
+      isHidden = true;
+    };
+
+    hideItems();
 
     button.addEventListener('click', function () {
       button.style.display = '';
-      items.forEach(function (item) {
-        item.classList.remove(hideClass);
-        button.classList.add(hideClass);
-      });
+      if(isHidden) {
+        items.forEach(function (item) {
+          item.classList.remove(hideClass);
+        });
+        isHidden = false;
+        button.classList.add('is-shown')
+      } else {
+        hideItems();
+        button.classList.remove('is-shown')
+      }
     });
   }
 })();
