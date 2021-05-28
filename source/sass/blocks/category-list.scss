@@ -245,6 +245,10 @@
       }
     }
   }
+
+  &.js_hide {
+    display: none;
+  }
 }
 
 .category-list__link {

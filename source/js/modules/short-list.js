@@ -5,18 +5,20 @@
   var list = document.querySelector('.js_short_list');
   var listCat = document.querySelector('.js_short_list-category');
   var button = document.querySelector('.js_short_list + .js_show_all');
-
   if (list && button || listCat && button) {
     // var showedItems = 5;
-    var items = list.querySelectorAll('li');
+    var items = list.querySelectorAll('li') || listCat.querySelectorAll('li');
 
     items.forEach(function (item, index) {
-      if (index > 4) {
+      if (index > 4 && window.innerWidth < 400) {
+        item.classList.add(hideClass);
+      } else if ((index > 7 && window.innerWidth < 768 && window.innerWidth >= 400)) {
         item.classList.add(hideClass);
       }
     });
 
     if (listCat && items.length > 8) {
+      console.log(items.length)
       button.style.display = 'block';
 
       items.forEach(function (item, index) {

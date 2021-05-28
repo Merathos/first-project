@@ -9017,6 +9017,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
             box-shadow: 0 -20px 41px 14px var(--color-bg-secondary, #f9f9fa); }
   .category-list__item:hover .category-list__count-wrap {
     opacity: 1; } }
+  .category-list__item.js_hide {
+    display: none; }
 
 .category-list__link {
   position: relative;
