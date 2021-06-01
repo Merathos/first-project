@@ -5414,13 +5414,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   position: relative;
   overflow: hidden;
   height: 100%;
-  min-height: 293px;
   background-color: var(--color-bg-secondary, #f9f9fa);
   border: 1px solid var(--color-stroke, #e3e8ee);
   border-radius: 4px; }
-  @media (max-width: 1199px) {
-    .preview-input {
-      min-height: 276px; } }
   @media (max-width: 767px) {
     .preview-input {
       min-height: auto; } }

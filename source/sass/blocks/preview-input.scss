@@ -2,17 +2,17 @@
   position: relative;
   overflow: hidden;
   height: 100%;
-  min-height: 293px;
+  //min-height: 293px; as requested by client
 
   background-color: var(--color-bg-secondary, $color-bg);
 
   border: 1px solid var(--color-stroke, $light-grey);
   border-radius: 4px;
 
-  @include tablet {
-    min-height: 276px;
-  }
-
+  //@include tablet {
+  //  min-height: 276px;
+  //}
+  //
   @include mobile {
     min-height: auto;
   }
