@@ -249,7 +249,7 @@
           обсуждений / публичных слушаний и оставить свое мнение по вопросам,
           выносящимся на обсуждение.
         </p>
-        <form class="public-debate__filter categories-filter js-form-select">
+        <form class="public-debate__filter categories-filter js-form-select" method="post">
           <ul class="page-nav">
             <li class="page-nav__item">
               <input class="page-nav__radio-input" type="radio" name="status" id="federal-status" checked="">
@@ -268,7 +268,7 @@
             <option data-placeholder="true"></option>
             <option value="Библиотеки" title="Библиотеки">Библиотеки</option>
             <option value="Муниципальные образовательные организации" title="Муниципальные образовательные организации">Муниципальные образовательные организации</option>
-            <option value="Благоустройство" title="Благоустройство">Благоустройство</option>
+            <option value="Благоустройство" title="Благоустройство" selected="">Благоустройство</option>
             <option value="Народное творчество" title="Народное творчество">Народное творчество</option>
             <option value="Бытовое обслуживание" title="Бытовое обслуживание">Бытовое обслуживание</option>
             <option value="Объекты культурного наследия" title="Объекты культурного наследия">Объекты культурного наследия</option>
@@ -277,7 +277,7 @@
             <option value="Детские площадки" title="Детские площадки">Детские площадки</option>
             <option value="Пожарная безопасность" title="Пожарная безопасность">Пожарная безопасность</option>
             <option value="Дороги" title="Дороги">Дороги</option>
-            <option value="Сбор бытовых отходов" title="Сбор бытовых отходов">Сбор бытовых отходов</option>
+            <option value="Сбор бытовых отходов" title="Сбор бытовых отходов" selected="">Сбор бытовых отходов</option>
             <option value="Доходогенерирующие проекты" title="Доходогенерирующие проекты">Доходогенерирующие проекты</option>
             <option value="Связь" title="Связь">Связь</option>
             <option value="ЖКХ" title="ЖКХ">ЖКХ</option>
@@ -292,7 +292,7 @@
             <option data-placeholder="true"></option>
             <option value="В процессе приема Комментариев" title="В процессе приема Комментариев">В процессе приема Комментариев</option>
             <option value="Прием комментариев завершён" title="Прием комментариев завершён">Прием Комментариев завершён. Идёт подготовка к проведению.</option>
-            <option value="В процессе" title="В процессе">В процессе</option>
+            <option value="В процессе" title="В процессе" selected="">В процессе</option>
             <option value="Подводятся итоги" title="Подводятся итоги">Подводятся итоги</option>
             <option value="Итоги подведены" title="Итоги подведены">Итоги подведены</option>
           </select>

@@ -5,6 +5,18 @@
   var selects = document.querySelectorAll('.js-multiple-select');
 
   var addMultipleSelect = function (el) {
+    document.querySelector('.js-form-select').addEventListener('change', function (e) {
+      console.log(e)
+    })
+
+    document.querySelector('.single-select').addEventListener('change', function (e) {
+      console.log(e)
+    })
+
+    document.querySelector('.js-form-select').addEventListener('submit', function (e) {
+      e.preventDefault();
+    })
+
     var multipleSelectInstance = new window.SlimSelect({
       select: el,
       showSearch: false,
@@ -108,6 +120,8 @@
     selectContainer.querySelector('.ss-add').prepend(createDeselectAllButton());
     selectContainer.querySelector('.ss-add').appendChild(createArrow());
     selectContainer.querySelector('.ss-plus').textContent = el.dataset.placeholderText;
+
+    selectChangeHandler();
 
     return multipleSelectInstance;
   };
