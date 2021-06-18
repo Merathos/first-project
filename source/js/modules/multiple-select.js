@@ -5,17 +5,6 @@
   var selects = document.querySelectorAll('.js-multiple-select');
 
   var addMultipleSelect = function (el) {
-    document.querySelector('.js-form-select').addEventListener('change', function (e) {
-      console.log(e)
-    })
-
-    document.querySelector('.single-select').addEventListener('change', function (e) {
-      console.log(e)
-    })
-
-    document.querySelector('.js-form-select').addEventListener('submit', function (e) {
-      e.preventDefault();
-    })
 
     var multipleSelectInstance = new window.SlimSelect({
       select: el,
