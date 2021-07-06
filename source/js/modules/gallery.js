@@ -30,6 +30,7 @@
 
     previews.forEach(function (preview, i) {
       preview.dataset.index = i;
+      console.log(preview.dataset)
     });
 
     sliderSwiper(gallery);

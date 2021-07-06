@@ -571,7 +571,10 @@
 
         Array.prototype.forEach.call(items, function (item) {
             var itemPhoto = item.querySelector('.gallery__item');
+            var bigPhotoSrc = item.querySelector('.gallery__item-link').href;
+            // console.log(photoSrc);
             var element = itemPhoto.cloneNode(true);
+            element.querySelector('img').src = bigPhotoSrc;
             element.classList.add('swiper-slide');
 
             sliderTape.appendChild(element);
@@ -657,6 +660,7 @@
 
     previews.forEach(function (preview, i) {
       preview.dataset.index = i;
+      console.log(preview.dataset)
     });
 
     sliderSwiper(gallery);
@@ -1848,12 +1852,28 @@
       },
 
       beforeOpen: function () {
+        var target = multipleSelectInstance.slim.container;
+        var number = multipleSelectInstance.slim.content.querySelectorAll('.ss-option:not(.ss-hide)').length;
+        target.classList.remove('two-column', 'three-column');
+
+        if (number > 8 && number <= 15) {
+          target.classList.add('two-column');
+        }
+        if (number > 14 && number <= 21) {
+          target.classList.add('three-column');
+        }
+        if (number > 21) {
+          target.classList.add('three-column');
+          target.classList.add('fixed-height');
+        }
+
         calcWidthBasedOnPosition();
       },
 
       afterClose: function () {
         window.Scrollbar.destroy(selectContainer.querySelector('.ss-content'));
         removeCalculatedWidth();
+        multipleSelectInstance.select.element.closest('form').submit();
       },
 
       onChange: function () {
@@ -2540,48 +2560,50 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
   }
 })();
 
-'use strict';
-
-(function () {
-  var targets = document.querySelectorAll('.ss-main.js-multiple-select');
-
-  if (targets.length) {
-    targets.forEach(function (target) {
-      var elementsList = target.querySelector('.ss-list');
-
-      var mutationObserverConfig = {
-        attributes: false,
-        childList: true,
-        subtree: false
-      };
-
-      var removeClasses = function () {
-        target.classList.remove('two-column', 'three-column');
-      };
-
-      var changeElementsNumberHandler = function () {
-        var number = elementsList.querySelectorAll('.ss-option:not(.ss-hide)').length;
-        removeClasses();
-
-        if (number > 8 && number <= 15) {
-          target.classList.add('two-column');
-        }
-        if (number > 14 && number <= 21) {
-          target.classList.add('three-column');
-        }
-        if (number > 21) {
-          target.classList.add('three-column');
-          target.classList.add('fixed-height');
-        }
-      };
-
-      var observer = new MutationObserver(changeElementsNumberHandler);
-      observer.observe(elementsList, mutationObserverConfig);
-      changeElementsNumberHandler();
-
-    });
-  }
-})();
+// 'use strict';
+//
+// (function () {
+//   var targets = document.querySelectorAll('.ss-main.js-multiple-select');
+//   console.log(targets)
+//
+//   if (targets.length) {
+//     targets.forEach(function (target) {
+//       var elementsList = target.querySelector('.ss-list');
+//
+//       var mutationObserverConfig = {
+//         attributes: false,
+//         childList: true,
+//         subtree: false
+//       };
+//
+//       var removeClasses = function () {
+//         target.classList.remove('two-column', 'three-column');
+//       };
+//
+//       var changeElementsNumberHandler = function () {
+//         var number = elementsList.querySelectorAll('.ss-option:not(.ss-hide)').length;
+//         removeClasses();
+//         console.log(number)
+//
+//         if (number > 8 && number <= 15) {
+//           target.classList.add('two-column');
+//         }
+//         if (number > 14 && number <= 21) {
+//           target.classList.add('three-column');
+//         }
+//         if (number > 21) {
+//           target.classList.add('three-column');
+//           target.classList.add('fixed-height');
+//         }
+//       };
+//
+//       var observer = new MutationObserver(changeElementsNumberHandler);
+//       observer.observe(elementsList, mutationObserverConfig);
+//       changeElementsNumberHandler();
+//
+//     });
+//   }
+// })();
 
 'use strict';
 

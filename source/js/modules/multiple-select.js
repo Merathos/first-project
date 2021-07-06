@@ -23,12 +23,28 @@
       },
 
       beforeOpen: function () {
+        var target = multipleSelectInstance.slim.container;
+        var number = multipleSelectInstance.slim.content.querySelectorAll('.ss-option:not(.ss-hide)').length;
+        target.classList.remove('two-column', 'three-column');
+
+        if (number > 8 && number <= 15) {
+          target.classList.add('two-column');
+        }
+        if (number > 14 && number <= 21) {
+          target.classList.add('three-column');
+        }
+        if (number > 21) {
+          target.classList.add('three-column');
+          target.classList.add('fixed-height');
+        }
+
         calcWidthBasedOnPosition();
       },
 
       afterClose: function () {
         window.Scrollbar.destroy(selectContainer.querySelector('.ss-content'));
         removeCalculatedWidth();
+        multipleSelectInstance.select.element.closest('form').submit();
       },
 
       onChange: function () {
