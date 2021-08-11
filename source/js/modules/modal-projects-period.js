@@ -20,7 +20,6 @@
       if (text.length > maxSymbols) {
         block.textContent = text.slice(0, maxSymbols) + '...';
       }
-      // console.log(block, block.textContent.length);
     });
   }
 
