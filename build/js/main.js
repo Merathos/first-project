@@ -379,7 +379,7 @@
     };
 
     var checkInputVisible = function () {
-      if (files.length === MAX_FILES_NUMBER) {
+      if (files.length >= MAX_FILES_NUMBER) {
         label.classList.add('visually-hidden');
       } else {
         label.classList.remove('visually-hidden');
@@ -420,6 +420,7 @@
     };
 
     checkPreviousFiles();
+    checkInputVisible();
     input.addEventListener('change', function () {
       if (input.files.length) {
         input.files.forEach(function (file) {
@@ -572,7 +573,6 @@
         Array.prototype.forEach.call(items, function (item) {
             var itemPhoto = item.querySelector('.gallery__item');
             var bigPhotoSrc = item.querySelector('.gallery__item-link').href;
-            // console.log(photoSrc);
             var element = itemPhoto.cloneNode(true);
             element.querySelector('img').src = bigPhotoSrc;
             element.classList.add('swiper-slide');
@@ -660,7 +660,6 @@
 
     previews.forEach(function (preview, i) {
       preview.dataset.index = i;
-      console.log(preview.dataset)
     });
 
     sliderSwiper(gallery);
@@ -2318,6 +2317,18 @@
 
 'use strict';
 (function () {
+
+  function hideImgInput($inputsContainer) {
+    var $imgUploadInputs = document.querySelectorAll('.image-uploads__image-wrapper input[type="file"]');
+    if ($imgUploadInputs.length > 0) {
+      $imgUploadInputs.forEach(function (el) {
+        if(isMaxAmountOfImagesAchieved($inputsContainer)) {
+          el.parentNode.remove()
+        }
+      })
+    }
+  }
+
   function getCloseBtn() {
     var $btn = document.createElement('button');
     $btn.setAttribute('type', 'button');
@@ -2357,7 +2368,7 @@
   }
 
   function isMaxAmountOfImagesAchieved($inputsContainer) {
-    return $inputsContainer.querySelectorAll('.image-uploads__image-wrapper').length === 5;
+    return $inputsContainer.querySelectorAll('.image-uploads__image-wrapper').length >= 5;
   }
 
   function getFileInput(inputName) {
@@ -2402,9 +2413,11 @@
       var file = $target.files[0];
       var reader = new FileReader();
 
+
       reader.addEventListener('load', function () {
         var $previewImg = getPreviewImg(reader.result);
         makeElLoaded($inputsContainer, $imgUploadEl, $previewImg);
+        console.log('1')
 
         if (!isBlankUploadElExist($inputsContainer) && !isMaxAmountOfImagesAchieved($inputsContainer)) {
           addBlankUploadEl($inputsContainer, inputName);
@@ -2437,6 +2450,8 @@
         }
       }
     }
+
+    hideImgInput($inputsContainer);
 
     $imgUploadEls.forEach(function ($imgUploadEl) {
       var $loadedImg = $imgUploadEl.querySelector('img');

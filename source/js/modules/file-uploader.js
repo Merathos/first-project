@@ -20,7 +20,7 @@
     };
 
     var checkInputVisible = function () {
-      if (files.length === MAX_FILES_NUMBER) {
+      if (files.length >= MAX_FILES_NUMBER) {
         label.classList.add('visually-hidden');
       } else {
         label.classList.remove('visually-hidden');
@@ -61,6 +61,7 @@
     };
 
     checkPreviousFiles();
+    checkInputVisible();
     input.addEventListener('change', function () {
       if (input.files.length) {
         input.files.forEach(function (file) {

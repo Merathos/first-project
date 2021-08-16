@@ -1,5 +1,17 @@
 'use strict';
 (function () {
+
+  function hideImgInput($inputsContainer) {
+    var $imgUploadInputs = document.querySelectorAll('.image-uploads__image-wrapper input[type="file"]');
+    if ($imgUploadInputs.length > 0) {
+      $imgUploadInputs.forEach(function (el) {
+        if(isMaxAmountOfImagesAchieved($inputsContainer)) {
+          el.parentNode.remove()
+        }
+      })
+    }
+  }
+
   function getCloseBtn() {
     var $btn = document.createElement('button');
     $btn.setAttribute('type', 'button');
@@ -39,7 +51,7 @@
   }
 
   function isMaxAmountOfImagesAchieved($inputsContainer) {
-    return $inputsContainer.querySelectorAll('.image-uploads__image-wrapper').length === 5;
+    return $inputsContainer.querySelectorAll('.image-uploads__image-wrapper').length >= 5;
   }
 
   function getFileInput(inputName) {
@@ -84,9 +96,11 @@
       var file = $target.files[0];
       var reader = new FileReader();
 
+
       reader.addEventListener('load', function () {
         var $previewImg = getPreviewImg(reader.result);
         makeElLoaded($inputsContainer, $imgUploadEl, $previewImg);
+        console.log('1')
 
         if (!isBlankUploadElExist($inputsContainer) && !isMaxAmountOfImagesAchieved($inputsContainer)) {
           addBlankUploadEl($inputsContainer, inputName);
@@ -119,6 +133,8 @@
         }
       }
     }
+
+    hideImgInput($inputsContainer);
 
     $imgUploadEls.forEach(function ($imgUploadEl) {
       var $loadedImg = $imgUploadEl.querySelector('img');
