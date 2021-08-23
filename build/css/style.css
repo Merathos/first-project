@@ -152,6 +152,9 @@ img {
     size: auto;
     margin: 11mm 17mm 17mm 17mm; } }
 
+.error-field {
+  color: #e55050; }
+
 /* Плагины */
 /* stylelint-disable */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -3350,6 +3353,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   line-height: 1.0625rem;
   font-weight: 400;
   color: var(--color-text, #a6abb3); }
+
+[disabled] .noUi-connect {
+  background-color: #B8B8B8; }
+
+.form-range [disabled] .noUi-handle {
+  border-color: #B8B8B8; }
+  .form-range [disabled] .noUi-handle:hover {
+    border-color: #B8B8B8; }
 
 .form__section {
   padding-top: 32px;

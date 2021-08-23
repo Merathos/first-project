@@ -116,3 +116,15 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   @include caption-text;
   color: var(--color-text, $grey-default);
 }
+
+[disabled] .noUi-connect {
+  background-color: #B8B8B8;
+}
+
+.form-range [disabled]  .noUi-handle {
+  border-color: #B8B8B8;
+
+  &:hover {
+    border-color: #B8B8B8;
+  }
+}
