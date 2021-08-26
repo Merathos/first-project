@@ -8,7 +8,6 @@ function initRangeSlider(rangeSlider) {
   var input = document.getElementById(rangeSlider.dataset.input);
 
   if (input) {
-    console.log(input)
     var min = parseInt(rangeSlider.dataset.min, 10);
     var max = parseInt(rangeSlider.dataset.max, 10);
     var start = input.value ? input.value : max / 2;
