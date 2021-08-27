@@ -34,16 +34,17 @@ function initRangeSlider(rangeSlider) {
       })
     });
 
-    rangeSlider.noUiSlider.on('update', function (values, handle) {
+    rangeSlider.noUiSlider.on('start', function (values, handle) {
+      rangeSlider.classList.remove('slide-disabled');
+    });
+
+    rangeSlider.noUiSlider.on('change', function (values, handle) {
       var value = values[handle];
       var maxPos = Math.max(values);
       var pips = rangeSlider.querySelectorAll('.noUi-marker-horizontal.noUi-marker-sub');
 
-      if (!errorField.classList.contains('visually-hidden')) {
-        errorField.classList.add('visually-hidden');
-      }
-
       input.value = value;
+      input.dispatchEvent(new Event("change"));
 
       if (!pips) {
         return;
@@ -57,25 +58,12 @@ function initRangeSlider(rangeSlider) {
           pips[i].classList.remove('form-range__accent');
         }
       }
+
     });
 
-    rangeSlider.noUiSlider.on('change', function (e) {
-      inputValueChanged = true;
-    })
-
-    var form = input.closest('.form');
-
-    input.addEventListener('click', function (e) {
-      this.removeAttribute('disabled');
-    })
-
-    form.addEventListener('submit', function (e) {
-      if (isRequired && !inputValueChanged) {
-        e.preventDefault();
-        errorField.classList.remove('visually-hidden');
-        var textPosition = errorField.offsetTop - 150;
-        window.scrollTo({ top: textPosition, behavior: 'smooth'});
-      }
+    rangeSlider.addEventListener('click', function (e) {
+      rangeSlider.removeAttribute('disabled');
+      input.removeAttribute('disabled');
     })
   }
 }

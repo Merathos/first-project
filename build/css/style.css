@@ -3354,12 +3354,15 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-weight: 400;
   color: var(--color-text, #a6abb3); }
 
-[disabled] .noUi-connect {
+[disabled] .noUi-connect,
+.slide-disabled .noUi-connect {
   background-color: #B8B8B8; }
 
-.form-range [disabled] .noUi-handle {
+.form-range [disabled] .noUi-handle,
+.form-range .slide-disabled .noUi-handle {
   border-color: #B8B8B8; }
-  .form-range [disabled] .noUi-handle:hover {
+  .form-range [disabled] .noUi-handle:hover,
+  .form-range .slide-disabled .noUi-handle:hover {
     border-color: #B8B8B8; }
 
 .form__section {
@@ -9893,7 +9896,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     margin-bottom: 15px;
     width: 100%; } }
 
-.notification {
+.notification-block {
   background: #eaf4fa;
   border-radius: 5px;
   padding: 14px 32px;
@@ -9908,7 +9911,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
           justify-content: space-between;
   margin-bottom: 32px;
   margin-top: 32px; }
-  .notification__wrapper {
+  .project-vote .notification-block {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .project-vote .notification-block .notification-block__text {
+      margin-bottom: 12px; }
+  .notification-block__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -9918,22 +9926,22 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start; }
-  .notification__text {
+  .notification-block__text {
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
     color: #354052;
     padding: 0;
     margin: 0 12px; }
-  .notification__icon {
+  .notification-block__icon {
     min-width: 24px; }
-  .notification .button.button--blue {
+  .notification-block .button.button--blue {
     padding: 13px 41px 11px 38px; }
   @media (max-width: 767px) {
-    .notification {
+    .notification-block {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
-      .notification__text {
+      .notification-block__text {
         margin-bottom: 12px; } }
 
 .news-notice {

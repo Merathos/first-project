@@ -1,4 +1,4 @@
-.notification {
+.notification-block {
   background: $light-blue;
   border-radius: 5px;
   padding: 14px 32px;
@@ -7,6 +7,14 @@
   justify-content: space-between;
   margin-bottom: 32px;
   margin-top: 32px;
+
+  .project-vote & {
+    flex-wrap: wrap;
+
+    .notification-block__text {
+      margin-bottom: 12px;
+    }
+  }
 
   &__wrapper {
     display: flex;

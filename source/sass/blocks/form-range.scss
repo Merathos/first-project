@@ -117,11 +117,13 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   color: var(--color-text, $grey-default);
 }
 
-[disabled] .noUi-connect {
+[disabled] .noUi-connect,
+.slide-disabled .noUi-connect {
   background-color: #B8B8B8;
 }
 
-.form-range [disabled]  .noUi-handle {
+.form-range [disabled]  .noUi-handle,
+.form-range .slide-disabled .noUi-handle {
   border-color: #B8B8B8;
 
   &:hover {
