@@ -9913,7 +9913,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-top: 32px; }
   .project-vote .notification-block {
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
+        flex-wrap: wrap;
+    margin-bottom: 0; }
     .project-vote .notification-block .notification-block__text {
       margin-bottom: 12px; }
   .notification-block__wrapper {
