@@ -7809,10 +7809,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
               flex-flow: row wrap; } }
 
 .rating-list__item {
-  padding: 31px 0 31px;
+  padding: 32px 0 32px;
   width: 100%;
-  border-top: 1px solid var(--color-stroke, #e3e8ee);
-  border-bottom: 1px solid var(--color-stroke, #e3e8ee); }
+  border-top: 1px solid var(--color-stroke, #e3e8ee); }
+  .rating-list__item:first-child {
+    border-top: none; }
   .rating-list__item--no-border {
     padding-top: 0;
     border-top: none; }
@@ -9943,6 +9944,35 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
           flex-wrap: wrap; }
       .notification-block__text {
         margin-bottom: 12px; } }
+
+.projects-winners {
+  margin-top: 80px; }
+  .projects-winners .rating-list {
+    padding-top: 8px;
+    margin-bottom: 0; }
+
+.budgets + .projects-winners {
+  margin-top: 0;
+  padding-bottom: 86px; }
+
+.projects-winners__title {
+  display: inline-block;
+  margin: 0;
+  font-weight: 400;
+  font-size: 2.5rem;
+  line-height: 2.9375rem; }
+
+.projects-winners__list {
+  margin-top: 40px; }
+
+.projects-winners__tooltip {
+  top: -5px;
+  left: 10px; }
+
+.projects-winners__tooltip-text {
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content; }
 
 .news-notice {
   -webkit-box-sizing: border-box;
