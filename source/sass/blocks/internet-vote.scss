@@ -43,34 +43,51 @@
 
 .internet-vote__text-container {
   margin-top: 34px;
+  margin-bottom: 0;
+  max-width: 75%;
 
   font-size: rem(15px);
   line-height: 180%;
 
   p {
     margin: 0;
+    padding: 0;
     margin-top: 15px;
   }
 
   ul {
     padding: 0;
-    margin-top: 12px;
+    padding-left: 20px;
+    margin-top: 15px;
     max-width: 90%;
 
     list-style: none;
   }
 
   li {
-    position: relative;
-    margin-top: 12px;
+    margin-top: 16px;
+    margin-bottom: 0;
+
     &::before {
-      content: "—";
-      position: absolute;
-      left: -1px;
-      top: 0;
+      left: -20px;
     }
-    &::first-letter {
-      margin-left: 15px;
+
+    >ul {
+      margin: 0;
+      margin-top: 4px;
+      padding-left: 15px;
+
+      li {
+        margin: 0;
+
+        &::before {
+          content: "—";
+          top: 0;
+          left: -15px;
+          color: $blue-default;
+          background-color: transparent;
+        }
+      }
     }
   }
 }

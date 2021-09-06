@@ -5758,6 +5758,15 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       top: 115px;
       grid-area: e; } }
 
+.proposal__vote-period {
+  color: #a6abb3;
+  font-size: 1rem;
+  line-height: 135%;
+  font-weight: 400; }
+
+.proposal__vote-dates {
+  color: #354052; }
+
 .proposal__text-container {
   margin-bottom: 48px; }
   @media (min-width: 1200px) {
@@ -10037,6 +10046,113 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content; }
+
+.internet-vote {
+  padding-top: 5px;
+  padding-bottom: 72px;
+  padding-left: 16px;
+  color: #354052; }
+  @media (min-width: 768px) {
+    .internet-vote {
+      padding-bottom: 104px;
+      padding-left: 24px; } }
+  @media (min-width: 1200px) {
+    .internet-vote {
+      padding-bottom: 100px;
+      padding-left: 0; } }
+
+.internet-vote__section {
+  padding-top: 35px;
+  padding-bottom: 20px; }
+  .internet-vote__section:not(:last-of-type) {
+    border-bottom: 1px solid #e3e8ee; }
+
+.internet-vote__wrapper {
+  margin-top: 40px; }
+
+.internet-vote__vote-period {
+  color: #a6abb3;
+  font-size: 1rem;
+  line-height: 135%;
+  font-weight: 400; }
+
+.internet-vote__vote-dates {
+  color: #354052; }
+
+.internet-vote__text-container {
+  margin-top: 34px;
+  margin-bottom: 0;
+  max-width: 75%;
+  font-size: 0.9375rem;
+  line-height: 180%; }
+  .internet-vote__text-container p {
+    margin: 0;
+    padding: 0;
+    margin-top: 15px; }
+  .internet-vote__text-container ul {
+    padding: 0;
+    padding-left: 20px;
+    margin-top: 15px;
+    max-width: 90%;
+    list-style: none; }
+  .internet-vote__text-container li {
+    margin-top: 16px;
+    margin-bottom: 0; }
+    .internet-vote__text-container li::before {
+      left: -20px; }
+    .internet-vote__text-container li > ul {
+      margin: 0;
+      margin-top: 4px;
+      padding-left: 15px; }
+      .internet-vote__text-container li > ul li {
+        margin: 0; }
+        .internet-vote__text-container li > ul li::before {
+          content: "—";
+          top: 0;
+          left: -15px;
+          color: #2c8ecc;
+          background-color: transparent; }
+
+.internet-vote__extra {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-left: 11px; }
+  .internet-vote__extra a {
+    margin-right: 37px; }
+
+.internet-vote__region-title {
+  margin: 0;
+  font-size: 1.875rem;
+  line-height: 36px;
+  font-weight: 400; }
+
+.internet-vote__region-name {
+  position: relative;
+  padding-left: 25px;
+  margin-top: 17px; }
+  .internet-vote__region-name::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 2px;
+    width: 12px;
+    height: 16px;
+    background-image: url("../img/region-pin.svg"); }
+
+.internet-vote__search {
+  display: block;
+  width: 100%;
+  margin-top: 23px;
+  padding: 16px;
+  padding-left: 19px;
+  background: #ffffff;
+  border: 1px solid #e3e8ee;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px; }
 
 .news-notice {
   -webkit-box-sizing: border-box;
