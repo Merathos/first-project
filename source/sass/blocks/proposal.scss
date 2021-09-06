@@ -117,6 +117,17 @@
   }
 }
 
+.proposal__vote-period {
+  color: $grey-default;
+  font-size: rem(16px);
+  line-height: 135%;
+  font-weight: 400;
+}
+
+.proposal__vote-dates {
+  color: $dark-text;
+}
+
 .proposal__text-container {
   margin-bottom: 48px;
 

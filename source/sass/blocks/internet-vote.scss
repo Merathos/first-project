@@ -1,0 +1,126 @@
+.internet-vote {
+  padding-top: 5px;
+  padding-bottom: 72px;
+  padding-left: 16px;
+
+  color: $dark-text;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 104px;
+    padding-left: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 100px;
+    padding-left: 0;
+  }
+}
+
+.internet-vote__section {
+  padding-top: 35px;
+  padding-bottom: 20px;
+
+  &:not(:last-of-type) {
+    border-bottom: 1px solid $light-grey;
+  }
+}
+
+.internet-vote__wrapper {
+  margin-top: 40px;
+}
+
+.internet-vote__vote-period {
+  color: $grey-default;
+  font-size: rem(16px);
+  line-height: 135%;
+  font-weight: 400;
+}
+
+.internet-vote__vote-dates {
+  color: $dark-text;
+}
+
+
+.internet-vote__text-container {
+  margin-top: 34px;
+
+  font-size: rem(15px);
+  line-height: 180%;
+
+  p {
+    margin: 0;
+    margin-top: 15px;
+  }
+
+  ul {
+    padding: 0;
+    margin-top: 12px;
+    max-width: 90%;
+
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+    margin-top: 12px;
+    &::before {
+      content: "—";
+      position: absolute;
+      left: -1px;
+      top: 0;
+    }
+    &::first-letter {
+      margin-left: 15px;
+    }
+  }
+}
+
+.internet-vote__extra {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 11px;
+
+  a {
+    margin-right: 37px;
+  }
+}
+
+.internet-vote__region-title {
+  margin: 0;
+
+  font-size: rem(30px);
+  line-height: 36px;
+  font-weight: 400;
+}
+
+.internet-vote__region-name {
+  position: relative;
+  padding-left: 25px;
+  margin-top: 17px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 2px;
+
+    width: 12px;
+    height: 16px;
+
+    background-image: url('../img/region-pin.svg');
+  }
+}
+
+.internet-vote__search {
+  display: block;
+  width: 100%;
+  margin-top: 23px;
+  padding: 16px;
+  padding-left: 19px;
+
+  background: $white;
+
+  border: 1px solid $light-grey;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
