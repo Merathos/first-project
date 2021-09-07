@@ -94,6 +94,10 @@
       }
     }
   }
+
+  @include tablet {
+    max-width: 100%;
+  }
 }
 
 .internet-vote__extra {
@@ -103,6 +107,10 @@
 
   a {
     margin-right: 37px;
+
+    @include mobile {
+      margin-top: 20px;
+    }
   }
 }
 
@@ -279,7 +287,7 @@
   height: 44px;
 
   @include mobile {
-    margin-top: 10px;
+    margin-top: 20px;
     min-width: auto;
     height: auto;
   }
