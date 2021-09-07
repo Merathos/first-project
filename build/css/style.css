@@ -4871,6 +4871,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   border-radius: 5px; }
   .status-info--accent {
     background-color: var(--color-text, #fca844); }
+  .status-info--green {
+    background-color: #70bf56; }
 
 .mod-theme-inverse .status-info {
   color: var(--color-bg-main); }
@@ -10048,7 +10050,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   max-width: max-content; }
 
 .internet-vote {
-  padding-top: 5px;
+  padding-top: 8px;
   padding-bottom: 72px;
   padding-left: 16px;
   color: #354052; }
@@ -10062,8 +10064,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       padding-left: 0; } }
 
 .internet-vote__section {
-  padding-top: 35px;
-  padding-bottom: 20px; }
+  padding-top: 32px;
+  padding-bottom: 25px; }
   .internet-vote__section:not(:last-of-type) {
     border-bottom: 1px solid #e3e8ee; }
 
@@ -10080,11 +10082,13 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   color: #354052; }
 
 .internet-vote__text-container {
-  margin-top: 34px;
+  margin-top: 35px;
   margin-bottom: 0;
   max-width: 75%;
   font-size: 0.9375rem;
   line-height: 180%; }
+  .internet-vote__text-container b {
+    font-weight: 500; }
   .internet-vote__text-container p {
     margin: 0;
     padding: 0;
@@ -10138,6 +10142,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     display: block;
     position: absolute;
     left: 2px;
+    top: 4px;
     width: 12px;
     height: 16px;
     background-image: url("../img/region-pin.svg"); }
@@ -10145,7 +10150,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .internet-vote__search {
   display: block;
   width: 100%;
-  margin-top: 23px;
+  margin-top: 25px;
   padding: 16px;
   padding-left: 19px;
   background: #ffffff;
@@ -10153,6 +10158,111 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 5px; }
+
+.internet-vote__confirmation-request {
+  margin-top: 30px;
+  font-size: 1.125rem;
+  line-height: 130%; }
+
+.internet-vote__confirmation-btn {
+  position: relative;
+  margin-right: 16px;
+  padding: 14px 15px 14px 46px;
+  min-width: 88px;
+  font-size: 0.8125rem;
+  line-height: 130%;
+  text-align: left;
+  border: 1px solid #e3e8ee;
+  background-color: #ffffff;
+  border-radius: 5px; }
+  .internet-vote__confirmation-btn--confirm::before {
+    background-image: url("../img/icon-tick-green.svg"); }
+  .internet-vote__confirmation-btn--reject::before {
+    background-image: url("../img/icon-close-red.svg"); }
+  .internet-vote__confirmation-btn::before {
+    position: absolute;
+    top: 12px;
+    left: 17px;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-size: 100%; }
+
+.internet-vote__buttons-wrapper {
+  margin-top: 19px;
+  font-size: 0; }
+
+.internet-vote__status {
+  margin-top: 28px; }
+  .internet-vote__status .status-info__text {
+    margin-top: 2px;
+    font-size: 1.125rem;
+    line-height: 130%; }
+    .internet-vote__status .status-info__text--small {
+      margin-top: 8px;
+      font-size: 1rem;
+      line-height: 135%;
+      font-weight: 400; }
+
+.internet-vote__error {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 16px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 68px;
+  padding-right: 32px;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 135%;
+  background-color: #eaf4fa;
+  border-radius: 5px; }
+  @media (max-width: 1199px) {
+    .internet-vote__error {
+      padding-left: 60px; } }
+  @media (max-width: 767px) {
+    .internet-vote__error {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+
+.internet-vote__error-text {
+  max-width: 60%;
+  margin: 0; }
+  @media (max-width: 767px) {
+    .internet-vote__error-text {
+      max-width: 90%; } }
+
+.internet-vote__error-icon {
+  position: absolute;
+  left: 30px;
+  top: 24px;
+  color: #2c8ecc; }
+  @media (max-width: 1199px) {
+    .internet-vote__error-icon {
+      left: 22px; } }
+
+.internet-vote__error-btn {
+  padding: 15px;
+  padding-top: 13px;
+  padding-bottom: 17px;
+  min-width: 280px;
+  height: 44px; }
+  @media (max-width: 767px) {
+    .internet-vote__error-btn {
+      margin-top: 10px;
+      min-width: auto;
+      height: auto; } }
 
 .news-notice {
   -webkit-box-sizing: border-box;

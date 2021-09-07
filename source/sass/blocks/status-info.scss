@@ -10,6 +10,10 @@
   &--accent {
     background-color: var(--color-text, $orange);
   }
+
+  &--green {
+    background-color: $green;
+  }
 }
 
 .mod-theme-inverse .status-info {
