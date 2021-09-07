@@ -10279,7 +10279,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   width: 100%;
   background-color: #eaf4fa;
   background-image: url("../img/internet-banner.svg");
-  background-size: cover;
+  background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center; }
 
