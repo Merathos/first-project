@@ -10183,7 +10183,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   -webkit-transition: 0.3s;
   transition: 0.3s; }
   .internet-vote__confirmation-btn:hover {
-    border-color: #9bd2f4;
+    color: var(--color-text, #ffffff);
+    background-color: var(--color-interactive-default, #2c8ecc);
     -webkit-transition: 0.3s;
     transition: 0.3s; }
   .internet-vote__confirmation-btn--confirm::before {

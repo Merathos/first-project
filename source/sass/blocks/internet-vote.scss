@@ -180,7 +180,10 @@
   transition: 0.3s;
 
   &:hover {
-    border-color: $light-blue-accent;
+    color: var(--color-text, $white);
+
+    background-color: var(--color-interactive-default, $blue-default);
+
     transition: 0.3s;
   }
 
