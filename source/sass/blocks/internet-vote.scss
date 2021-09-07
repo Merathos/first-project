@@ -108,7 +108,14 @@
     margin-right: 37px;
 
     @include mobile {
+      display: flex;
       margin-top: 20px;
+    }
+
+    &::before {
+      @include mobile {
+        margin-right: 10px;
+      }
     }
   }
 }
