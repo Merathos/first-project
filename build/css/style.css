@@ -10178,7 +10178,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   text-align: left;
   border: 1px solid #e3e8ee;
   background-color: #ffffff;
-  border-radius: 5px; }
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s; }
+  .internet-vote__confirmation-btn:hover {
+    border-color: #9bd2f4;
+    -webkit-transition: 0.3s;
+    transition: 0.3s; }
   .internet-vote__confirmation-btn--confirm::before {
     background-image: url("../img/icon-tick-green.svg"); }
   .internet-vote__confirmation-btn--reject::before {

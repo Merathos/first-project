@@ -176,6 +176,14 @@
   background-color: $white;
   border-radius: 5px;
 
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    border-color: $light-blue-accent;
+    transition: 0.3s;
+  }
+
   &--confirm {
     &::before {
       background-image: url('../img/icon-tick-green.svg');
