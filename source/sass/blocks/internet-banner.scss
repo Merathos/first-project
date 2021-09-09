@@ -6,6 +6,10 @@
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center;
+
+  @include mobile {
+    background-image: none;
+  }
 }
 
 .internet-banner__container {

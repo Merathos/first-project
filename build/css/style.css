@@ -10373,6 +10373,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center; }
+  @media (max-width: 767px) {
+    .internet-banner {
+      background-image: none; } }
 
 .internet-banner__container {
   max-width: 500px;
