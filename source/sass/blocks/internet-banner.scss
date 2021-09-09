@@ -1,7 +1,7 @@
 .internet-banner {
   width: 100%;
 
-  background-color: $light-blue;
+  background-color: var(--color-bg-secondary, $light-blue);
   background-image: url('../img/internet-banner.svg');
   background-size: auto 100%;
   background-repeat: no-repeat;

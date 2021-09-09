@@ -10052,7 +10052,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .internet-vote {
   padding-top: 8px;
   padding-bottom: 72px;
-  color: #354052; }
+  color: var(--color-text, #354052); }
   @media (min-width: 768px) {
     .internet-vote {
       padding-bottom: 104px;
@@ -10066,19 +10066,19 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   padding-top: 32px;
   padding-bottom: 25px; }
   .internet-vote__section:not(:last-of-type) {
-    border-bottom: 1px solid #e3e8ee; }
+    border-bottom: 1px solid var(--color-stroke, #e3e8ee); }
 
 .internet-vote__wrapper {
   margin-top: 40px; }
 
 .internet-vote__vote-period {
-  color: #a6abb3;
+  color: var(--color-text, #a6abb3);
   font-size: 1rem;
   line-height: 135%;
   font-weight: 400; }
 
 .internet-vote__vote-dates {
-  color: #354052; }
+  color: var(--color-text, #354052); }
 
 .internet-vote__text-container {
   margin-top: 35px;
@@ -10113,7 +10113,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
           content: "—";
           top: 0;
           left: -15px;
-          color: #2c8ecc;
+          color: var(--color-interactive-default, #2c8ecc);
           background-color: transparent; }
   @media (max-width: 1199px) {
     .internet-vote__text-container {
@@ -10164,8 +10164,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-top: 25px;
   padding: 16px;
   padding-left: 19px;
-  background: #ffffff;
-  border: 1px solid #e3e8ee;
+  background: var(--color-bg-main, #ffffff);
+  border: 1px solid var(--color-stroke, #e3e8ee);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 5px; }
@@ -10189,8 +10189,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-size: 0.8125rem;
   line-height: 130%;
   text-align: left;
-  border: 1px solid #e3e8ee;
-  background-color: #ffffff;
+  border: 1px solid var(--color-stroke, #e3e8ee);
+  background-color: var(--color-bg-main, #ffffff);
   border-radius: 5px;
   cursor: pointer;
   -webkit-transition: 0.3s;
@@ -10249,7 +10249,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-weight: 500;
   font-size: 1rem;
   line-height: 135%;
-  background-color: #eaf4fa;
+  background-color: var(--color-bg-secondary, #eaf4fa);
   border-radius: 5px; }
   @media (max-width: 1199px) {
     .internet-vote__error {
@@ -10272,7 +10272,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   position: absolute;
   left: 30px;
   top: 24px;
-  color: #2c8ecc; }
+  color: var(--color-interactive-default, #2c8ecc); }
   @media (max-width: 1199px) {
     .internet-vote__error-icon {
       left: 22px; } }
@@ -10298,7 +10298,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   padding: 32px 25px;
   margin-right: auto;
   margin-top: 32px;
-  background-color: #f9f9fa;
+  background-color: var(--color-bg-secondary, #f9f9fa);
   border-radius: 5px; }
   @media (max-width: 1199px) {
     .internet-vote__table-container {
@@ -10337,7 +10337,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .internet-vote__table th:last-child {
       white-space: nowrap; }
   .internet-vote__table thead {
-    border-top: 1px solid #e3e8ee; }
+    border-top: 1px solid var(--color-stroke, #e3e8ee); }
     .internet-vote__table thead th {
       padding-top: 27px;
       font-size: 1.125rem;
@@ -10368,7 +10368,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .internet-banner {
   width: 100%;
-  background-color: #eaf4fa;
+  background-color: var(--color-bg-secondary, #eaf4fa);
   background-image: url("../img/internet-banner.svg");
   background-size: auto 100%;
   background-repeat: no-repeat;
