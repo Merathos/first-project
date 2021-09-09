@@ -10289,6 +10289,83 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       min-width: auto;
       height: auto; } }
 
+.internet-vote__table-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.internet-vote__table-container {
+  padding: 32px 25px;
+  margin-right: auto;
+  margin-top: 32px;
+  background-color: #f9f9fa;
+  border-radius: 5px; }
+  @media (max-width: 1199px) {
+    .internet-vote__table-container {
+      min-width: auto; } }
+
+.internet-vote__table-title {
+  position: relative;
+  margin: 0;
+  padding-top: 10px;
+  padding-left: 67px;
+  padding-right: 3px;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 400; }
+  .internet-vote__table-title::before {
+    position: absolute;
+    top: 0;
+    left: 7px;
+    width: 48px;
+    height: 48px;
+    content: "";
+    display: block;
+    background-image: url("../img/statistics-column.svg");
+    background-repeat: no-repeat;
+    background-size: 100%; }
+
+.internet-vote__table {
+  width: 100%;
+  margin-top: 26px;
+  border-collapse: collapse; }
+  .internet-vote__table td,
+  .internet-vote__table th {
+    padding-left: 7px;
+    padding-right: 7px; }
+    .internet-vote__table td:last-child,
+    .internet-vote__table th:last-child {
+      white-space: nowrap; }
+  .internet-vote__table thead {
+    border-top: 1px solid #e3e8ee; }
+    .internet-vote__table thead th {
+      padding-top: 27px;
+      font-size: 1.125rem;
+      line-height: 100%;
+      font-weight: 400;
+      text-align: left; }
+      .internet-vote__table thead th:last-child {
+        font-weight: 500;
+        text-align: right; }
+  .internet-vote__table tbody td {
+    padding-top: 16px;
+    font-size: 1rem;
+    line-height: 135%; }
+    .internet-vote__table tbody td:last-child {
+      text-align: right; }
+  @media (max-width: 399px) {
+    .internet-vote__table tr {
+      max-width: 100%;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column; }
+    .internet-vote__table td {
+      max-width: 100%; } }
+
 .internet-banner {
   width: 100%;
   background-color: #eaf4fa;
