@@ -238,9 +238,14 @@
 .internet-vote__status {
   margin-top: 28px;
 
+  svg {
+    color: var(--color-text, $white);
+  }
+
   .status-info__text {
     margin-top: 2px;
 
+    color: var(--color-text, $white);
     font-size: rem(18px);
     line-height: 130%;
 

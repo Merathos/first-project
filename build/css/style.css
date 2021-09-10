@@ -4872,7 +4872,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .status-info--accent {
     background-color: var(--color-text, #fca844); }
   .status-info--green {
-    background-color: #70bf56; }
+    background-color: var(--color-bg-secondary, #70bf56); }
 
 .mod-theme-inverse .status-info {
   color: var(--color-bg-main); }
@@ -5755,7 +5755,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       margin-bottom: 40px; } }
   @media (min-width: 1200px) {
     .proposal__vote {
-      position: -webkit-sticky;
       position: sticky;
       top: 115px;
       grid-area: e; } }
@@ -10220,8 +10219,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .internet-vote__status {
   margin-top: 28px; }
+  .internet-vote__status svg {
+    color: var(--color-text, #ffffff); }
   .internet-vote__status .status-info__text {
     margin-top: 2px;
+    color: var(--color-text, #ffffff);
     font-size: 1.125rem;
     line-height: 130%; }
     .internet-vote__status .status-info__text--small {
@@ -13846,7 +13848,6 @@ ymaps p {
   grid-area: c; }
   @media (min-width: 1200px) {
     .hearings__time-frame {
-      position: -webkit-sticky;
       position: sticky;
       top: 90px; } }
   @media (max-width: 1199px) {
@@ -16294,7 +16295,6 @@ span.poll-page__hide {
     background-repeat: no-repeat;
     background-size: 100% 1px; }
   .table-fixed table tr:first-child {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 10;
