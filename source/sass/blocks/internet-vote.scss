@@ -87,7 +87,7 @@
           content: "—";
           top: 0;
           left: -15px;
-          color: var(--color-interactive-default, $blue-default);
+          color: var(--color-text, $blue-default);
           background-color: transparent;
         }
       }
@@ -138,7 +138,7 @@
     display: block;
     position: absolute;
     left: 2px;
-    top: 4px;
+    top: 0;
 
     width: 12px;
     height: 16px;
@@ -151,14 +151,12 @@
   display: block;
   width: 100%;
   margin-top: 25px;
-  padding: 16px;
   padding-left: 19px;
+  padding-bottom: 9px;
 
-  background: var(--color-bg-main, $white);
+  background: var(--color-bg-secondary, $white);
 
-  border: 1px solid var(--color-stroke, $light-grey);
   box-sizing: border-box;
-  border-radius: 5px;
 
   @include mobile {
     font-size: 11px;
@@ -183,6 +181,7 @@
   padding: 14px 15px 14px 46px;
   min-width: 88px;
 
+  color: var(--color-text, $dark-text);
   font-size: rem(13px);
   line-height: 130%;
   text-align: left;
@@ -192,14 +191,14 @@
   border-radius: 5px;
 
   cursor: pointer;
-  transition: 0.3s;
+  transition: color $style-change-duration, background-color $style-change-duration;;
 
   &:hover {
     color: var(--color-text, $white);
 
     background-color: var(--color-interactive-default, $blue-default);
 
-    transition: 0.3s;
+    transition: color $style-change-duration, background-color $style-change-duration;;
   }
 
   &--confirm {

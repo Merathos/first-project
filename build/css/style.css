@@ -10112,7 +10112,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
           content: "—";
           top: 0;
           left: -15px;
-          color: var(--color-interactive-default, #2c8ecc);
+          color: var(--color-text, #2c8ecc);
           background-color: transparent; }
   @media (max-width: 1199px) {
     .internet-vote__text-container {
@@ -10152,7 +10152,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     display: block;
     position: absolute;
     left: 2px;
-    top: 4px;
+    top: 0;
     width: 12px;
     height: 16px;
     background-image: url("../img/region-pin.svg"); }
@@ -10161,13 +10161,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   display: block;
   width: 100%;
   margin-top: 25px;
-  padding: 16px;
   padding-left: 19px;
-  background: var(--color-bg-main, #ffffff);
-  border: 1px solid var(--color-stroke, #e3e8ee);
+  padding-bottom: 9px;
+  background: var(--color-bg-secondary, #ffffff);
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  border-radius: 5px; }
+          box-sizing: border-box; }
   @media (max-width: 767px) {
     .internet-vote__search {
       font-size: 11px; } }
@@ -10185,6 +10183,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-right: 16px;
   padding: 14px 15px 14px 46px;
   min-width: 88px;
+  color: var(--color-text, #354052);
   font-size: 0.8125rem;
   line-height: 130%;
   text-align: left;
@@ -10192,13 +10191,13 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   background-color: var(--color-bg-main, #ffffff);
   border-radius: 5px;
   cursor: pointer;
-  -webkit-transition: 0.3s;
-  transition: 0.3s; }
+  -webkit-transition: color 0.2s, background-color 0.2s;
+  transition: color 0.2s, background-color 0.2s; }
   .internet-vote__confirmation-btn:hover {
     color: var(--color-text, #ffffff);
     background-color: var(--color-interactive-default, #2c8ecc);
-    -webkit-transition: 0.3s;
-    transition: 0.3s; }
+    -webkit-transition: color 0.2s, background-color 0.2s;
+    transition: color 0.2s, background-color 0.2s; }
   .internet-vote__confirmation-btn--confirm::before {
     background-image: url("../img/icon-tick-green.svg"); }
   .internet-vote__confirmation-btn--reject::before {
