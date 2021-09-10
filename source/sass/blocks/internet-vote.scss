@@ -158,6 +158,10 @@
 
   box-sizing: border-box;
 
+  &::placeholder {
+    font-size: inherit;
+  }
+
   @include mobile {
     font-size: 11px;
   }

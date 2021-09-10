@@ -10166,6 +10166,16 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   background: var(--color-bg-secondary, #ffffff);
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
+  .internet-vote__search::-webkit-input-placeholder {
+    font-size: inherit; }
+  .internet-vote__search::-moz-placeholder {
+    font-size: inherit; }
+  .internet-vote__search:-ms-input-placeholder {
+    font-size: inherit; }
+  .internet-vote__search::-ms-input-placeholder {
+    font-size: inherit; }
+  .internet-vote__search::placeholder {
+    font-size: inherit; }
   @media (max-width: 767px) {
     .internet-vote__search {
       font-size: 11px; } }
