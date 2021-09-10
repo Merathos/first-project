@@ -342,8 +342,9 @@
   background-color: var(--color-bg-secondary, $color-bg);
   border-radius: 5px;
 
-  @include tablet {
-    min-width: auto;
+  @include mobile-max {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 
@@ -392,43 +393,45 @@
 
   thead {
     border-top: 1px solid var(--color-stroke, $light-grey);
+  }
 
-    th {
-      padding-top: 27px;
+  th {
+    padding-top: 27px;
 
-      font-size: rem(18px);
-      line-height: 100%;
-      font-weight: 400;
-      text-align: left;
+    font-size: rem(18px);
+    line-height: 100%;
+    font-weight: 400;
+    text-align: left;
 
-      &:last-child {
-        font-weight: 500;
-        text-align: right;
-      }
+    &:last-child {
+      font-weight: 500;
+      text-align: right;
     }
   }
 
-  tbody {
-    td {
-      padding-top: 16px;
+  td {
+    padding-top: 16px;
 
-      font-size: rem(16px);
-      line-height: 135%;
+    font-size: rem(16px);
+    line-height: 135%;
 
-      &:last-child {
-        text-align: right;
-      }
+    &:last-child {
+      text-align: right;
     }
   }
 
   @include mobile-max {
     tr {
-      max-width: 100%;
       display: flex;
       flex-direction: column;
     }
-    td {
-      max-width: 100%;
+
+    td:last-child,
+    th:last-child {
+      text-align: left;
+    }
+    thead tr {
+      padding-bottom: 10px;
     }
   }
 }

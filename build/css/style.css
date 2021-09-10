@@ -10315,9 +10315,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-top: 32px;
   background-color: var(--color-bg-secondary, #f9f9fa);
   border-radius: 5px; }
-  @media (max-width: 1199px) {
+  @media (max-width: 399px) {
     .internet-vote__table-container {
-      min-width: auto; } }
+      padding-left: 15px;
+      padding-right: 15px; } }
 
 .internet-vote__table-title {
   position: relative;
@@ -10353,24 +10354,23 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       white-space: nowrap; }
   .internet-vote__table thead {
     border-top: 1px solid var(--color-stroke, #e3e8ee); }
-    .internet-vote__table thead th {
-      padding-top: 27px;
-      font-size: 1.125rem;
-      line-height: 100%;
-      font-weight: 400;
-      text-align: left; }
-      .internet-vote__table thead th:last-child {
-        font-weight: 500;
-        text-align: right; }
-  .internet-vote__table tbody td {
+  .internet-vote__table th {
+    padding-top: 27px;
+    font-size: 1.125rem;
+    line-height: 100%;
+    font-weight: 400;
+    text-align: left; }
+    .internet-vote__table th:last-child {
+      font-weight: 500;
+      text-align: right; }
+  .internet-vote__table td {
     padding-top: 16px;
     font-size: 1rem;
     line-height: 135%; }
-    .internet-vote__table tbody td:last-child {
+    .internet-vote__table td:last-child {
       text-align: right; }
   @media (max-width: 399px) {
     .internet-vote__table tr {
-      max-width: 100%;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
@@ -10378,8 +10378,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
               flex-direction: column; }
-    .internet-vote__table td {
-      max-width: 100%; } }
+    .internet-vote__table td:last-child,
+    .internet-vote__table th:last-child {
+      text-align: left; }
+    .internet-vote__table thead tr {
+      padding-bottom: 10px; } }
 
 .internet-banner {
   width: 100%;
