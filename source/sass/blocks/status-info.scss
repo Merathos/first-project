@@ -41,6 +41,18 @@
   font-weight: 500;
   font-size: rem(16px);
   line-height: rem(22px);
+
+  &--small {
+    font-weight: normal;
+  }
+}
+
+.status-info__title {
+  font-weight: 500;
+  font-size: rem(18px);
+  line-height: rem(23px);
+  margin: 0;
+  margin-bottom: 12px;
 }
 
 

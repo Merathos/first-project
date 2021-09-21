@@ -71,6 +71,11 @@
       color: #354052;
     }
   }
+
+  &--medium {
+    min-height: 132px;
+    resize:vertical;
+  }
 }
 
 .description-block__textarea-error {

@@ -8,7 +8,7 @@
     var label = container.querySelector('label[for="user-files"]');
     var previewContainer = container.querySelector('.file-uploads__preview-container');
     var files = [];
-    var MAX_FILES_NUMBER = 5;
+    var maxFileNumber = label.dataset.maxFiles ? label.dataset.maxFiles : 5;
 
     var checkPreviousFiles = function () {
       var prevFiles = previewContainer.querySelectorAll('.file-wrapper');
@@ -20,7 +20,7 @@
     };
 
     var checkInputVisible = function () {
-      if (files.length >= MAX_FILES_NUMBER) {
+      if (files.length >= maxFileNumber) {
         label.classList.add('visually-hidden');
       } else {
         label.classList.remove('visually-hidden');

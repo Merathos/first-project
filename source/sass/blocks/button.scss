@@ -137,6 +137,12 @@
       max-width: 100%;
     }
   }
+
+  &.disabled {
+    background-color: #C0D6EB;
+    cursor: default;
+    pointer-events: none;
+  }
 }
 
 @media print {

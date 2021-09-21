@@ -55,6 +55,10 @@
 .project-page__contacts {
   padding: 23px 25px;
   border-top: 1px solid var(--color-stroke, $light-grey);
+
+  &--border {
+    border-bottom: 1px solid var(--color-stroke, $light-grey);
+  }
 }
 
 .project-page__contacts-title {
@@ -168,6 +172,10 @@
 
 .project-page__survey-btn {
   width: 230px;
+
+  &.disabled {
+
+  }
 }
 
 .project-page__back-btn {
@@ -714,6 +722,18 @@
     .project-vote__date {
       padding-right: 0;
       margin-right: 0;
+    }
+  }
+}
+
+.project-page__aside-img {
+  font-size: 0;
+  line-height: 0;
+  margin: 0;
+
+  .content & {
+    img {
+      margin-bottom: 0;
     }
   }
 }
