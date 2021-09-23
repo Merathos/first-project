@@ -34,6 +34,13 @@
   }
 }
 
+.form-radio input[type="radio"]:not(:checked):focus-visible,
+.form-radio input[type="radio"]:checked:focus-visible,
+.form-radio input[type="radio"]:disabled:focus-visible {
+  & ~ label {
+    outline: 2px solid var(--color-interactive-default, $blue-accent);
+  }
+}
 
 .form-radio input[type="radio"]:checked ~ label {
   &::before {
@@ -51,7 +58,7 @@
 
   &:hover {
     &::before {
-      border: 1px solid rgba(161, 167, 174, 0.5);
+      border: 1px solid var(--color-stroke, rgba(161, 167, 174, 0.5));
     }
   }
 }

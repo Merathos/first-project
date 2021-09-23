@@ -86,12 +86,12 @@
 
 @include mobile {
   .article-link {
-    display: block;
+    //display: block;
 
-    &::before {
-      margin-right: 0;
-      margin-bottom: 16px;
-    }
+    //&::before {
+    //  margin-right: 0;
+    //  margin-bottom: 16px;
+    //}
 
     &--content {
       max-width: 100%;

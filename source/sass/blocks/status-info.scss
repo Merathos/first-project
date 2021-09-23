@@ -3,12 +3,13 @@
   flex-wrap: wrap;
   align-items: center;
   padding: 24px 32px;
-  color: $white;
-  background-color: var(--color-text, $blue-default);
+  color: var(--color-text, $white);
+  background-color: var(--color-bg-main, $blue-default);
   border-radius: $border-radius;
+  margin-bottom: 30px ;
 
   &--accent {
-    background-color: var(--color-text, $orange);
+    background-color: var(--color-bg-secondary, $orange);
   }
 
   &--green {
@@ -16,9 +17,9 @@
   }
 }
 
-.mod-theme-inverse .status-info {
-  color: var(--color-bg-main);
-}
+//.mod-theme-inverse .status-info {
+//  color: var(--color-bg-main);
+//}
 
 .status-info__text-group {
   display: flex;

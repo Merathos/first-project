@@ -93,3 +93,11 @@
     }
   }
 }
+
+.form-checkbox input[type="checkbox"]:not(:checked):focus-visible,
+.form-checkbox input[type="checkbox"]:checked:focus-visible,
+.form-checkbox input[type="checkbox"]:disabled:focus-visible {
+  & ~ label {
+    outline: 2px solid var(--color-interactive-default, $blue-accent);
+  }
+}

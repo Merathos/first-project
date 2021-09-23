@@ -2729,6 +2729,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .form-checkbox input[type="checkbox"]:disabled ~ label:hover::before {
     border: 1px solid rgba(161, 167, 174, 0.5); }
 
+.form-checkbox input[type="checkbox"]:not(:checked):focus-visible ~ label,
+.form-checkbox input[type="checkbox"]:checked:focus-visible ~ label,
+.form-checkbox input[type="checkbox"]:disabled:focus-visible ~ label {
+  outline: 2px solid var(--color-interactive-default, #116ca6); }
+
 .form-radio {
   position: relative;
   margin-bottom: 17px;
@@ -2771,6 +2776,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .form-radio input[type="radio"]:not(:checked) ~ label:hover::before {
   border: 1px solid var(--color-interactive-default, #116ca6); }
 
+.form-radio input[type="radio"]:not(:checked):focus-visible ~ label,
+.form-radio input[type="radio"]:checked:focus-visible ~ label,
+.form-radio input[type="radio"]:disabled:focus-visible ~ label {
+  outline: 2px solid var(--color-interactive-default, #116ca6); }
+
 .form-radio input[type="radio"]:checked ~ label::before {
   border: 6px solid var(--color-interactive-default, #2c8ecc); }
 
@@ -2780,7 +2790,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .form-radio input[type="radio"]:disabled ~ label::before {
     background-color: #f9f9fa; }
   .form-radio input[type="radio"]:disabled ~ label:hover::before {
-    border: 1px solid rgba(161, 167, 174, 0.5); }
+    border: 1px solid var(--color-stroke, rgba(161, 167, 174, 0.5)); }
 
 .form-select .ss-main {
   width: auto;
@@ -4529,13 +4539,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     color: var(--color-text, #116ca6); } }
 
 @media (max-width: 767px) {
-  .article-link {
-    display: block; }
-    .article-link::before {
-      margin-right: 0;
-      margin-bottom: 16px; }
-    .article-link--content {
-      max-width: 100%; } }
+  .article-link--content {
+    max-width: 100%; } }
 
 @media print {
   .article-link {
@@ -4880,16 +4885,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       -ms-flex-align: center;
           align-items: center;
   padding: 24px 32px;
-  color: #ffffff;
-  background-color: var(--color-text, #2c8ecc);
-  border-radius: 5px; }
+  color: var(--color-text, #ffffff);
+  background-color: var(--color-bg-main, #2c8ecc);
+  border-radius: 5px;
+  margin-bottom: 30px; }
   .status-info--accent {
-    background-color: var(--color-text, #fca844); }
+    background-color: var(--color-bg-secondary, #fca844); }
   .status-info--green {
     background-color: var(--color-bg-secondary, #70bf56); }
-
-.mod-theme-inverse .status-info {
-  color: var(--color-bg-main); }
 
 .status-info__text-group {
   display: -webkit-box;
@@ -10030,8 +10033,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
             justify-content: flex-start; }
   .notification-block__text {
     font-weight: 500;
-    font-size: 16px;
-    line-height: 22px;
+    font-size: 1rem;
+    line-height: 1.375rem;
     color: #354052;
     padding: 0;
     margin: 0 12px; }
@@ -10444,7 +10447,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   padding: 16px 50px 13px; }
 
 .links-list {
-  background: #f9f9fa;
+  background: var(--color-bg-secondary, #f9f9fa);
   border-radius: 5px;
   padding: 32px;
   margin-bottom: 54px; }
@@ -10452,7 +10455,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     font-weight: normal;
     font-size: 1.5rem;
     line-height: 1.75rem;
-    color: #354052;
+    color: var(--color-text, #354052);
     padding: 0;
     margin: 0;
     margin-bottom: 24px; }
@@ -10551,7 +10554,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       padding-top: 0; }
       .direct-line-form .file-uploads__wrapper label span:before {
         left: -30px;
-        top: 50%;
+        top: 45%;
         -webkit-transform: translateY(-50%);
                 transform: translateY(-50%); }
   .direct-line-form .file-wrapper {
@@ -10560,7 +10563,15 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     background-color: var(--color-bg-main, #ffffff); }
 
 .direct-line-section {
-  padding-top: 72px; }
+  padding-top: 72px;
+  text-align: center; }
+  .direct-line-section__button {
+    margin: 0 auto;
+    padding: 18px 58px 16px; }
+    @media (max-width: 767px) {
+      .direct-line-section__button {
+        margin: 0 0 32px;
+        padding: 18px 20px 16px 38px; } }
   .direct-line-section .section__head {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -10576,12 +10587,18 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
           -ms-flex-align: center;
               align-items: center;
       margin-bottom: 12px; }
+  .direct-line-section .concurrent-projects__title {
+    margin-bottom: 0; }
+    @media (max-width: 1199px) {
+      .direct-line-section .concurrent-projects__title {
+        margin-bottom: 0; } }
+    @media (max-width: 767px) {
+      .direct-line-section .concurrent-projects__title {
+        margin-bottom: 0; } }
   .direct-line-section .concurrent-projects__status-wrapper {
     margin-bottom: 11px; }
-  .direct-line-section .project-status {
-    padding-left: 21px; }
-    .direct-line-section .project-status:before {
-      left: 12px; }
+  .direct-line-section .date {
+    margin-right: 12px; }
 
 .news-notice {
   -webkit-box-sizing: border-box;
@@ -14159,7 +14176,7 @@ ymaps p {
   margin-top: 17px; }
 
 .project-page__budget-co-financing .project-page__budget-value {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 400;
   line-height: 28px;
   color: var(--color-text, #707b8c); }
@@ -14192,8 +14209,8 @@ ymaps p {
   margin-bottom: 16px;
   padding: 0;
   font-family: inherit;
-  font-size: 18px;
-  line-height: 23px;
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
   font-weight: 400;
   letter-spacing: 0;
   color: var(--color-text, #354052); }
@@ -14216,8 +14233,8 @@ ymaps p {
 
 .project-page__contacts-label,
 .project-page__contacts-info {
-  font-size: 13px;
-  line-height: 17px;
+  font-size: 0.8125rem;
+  line-height: 1.0625rem;
   font-weight: 400;
   letter-spacing: 0;
   color: var(--color-text, #a6abb2); }
@@ -14228,8 +14245,8 @@ ymaps p {
   margin-bottom: 15px;
   padding: 0;
   text-decoration: none;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 1rem;
+  line-height: 1.375rem;
   font-weight: 400;
   letter-spacing: 0;
   color: var(--color-text, #354052); }
@@ -14251,8 +14268,8 @@ ymaps p {
   margin-bottom: 10px; }
 
 .project-page__result-info {
-  font-size: 13px;
-  line-height: 17px;
+  font-size: 0.8125rem;
+  line-height: 1.0625rem;
   font-weight: 400;
   letter-spacing: 0;
   color: var(--color-text, #a6abb2); }
@@ -14310,7 +14327,7 @@ ymaps p {
   padding-left: 45px;
   padding-right: 45px;
   margin-top: 0;
-  font-size: 15px; }
+  font-size: 0.9375rem; }
 
 @media (min-width: 1200px) {
   .project-page__container {
@@ -14441,8 +14458,8 @@ ymaps p {
   margin-top: -13px;
   margin-bottom: 48px;
   font-family: inherit;
-  font-size: 16px;
-  line-height: 22px;
+  font-size: 1rem;
+  line-height: 1.375rem;
   font-weight: 400;
   letter-spacing: 0;
   color: var(--color-text, #354052); }
@@ -14512,7 +14529,7 @@ ymaps p {
   .project-page--single-page-rating .project-meta {
     margin-bottom: 39px; }
   .project-page--single-page-rating .project-meta__category {
-    font-size: 18px;
+    font-size: 1.125rem;
     padding-left: 21px;
     padding-bottom: 15px; }
   .project-page--single-page-rating .project-page__budget {
@@ -14613,17 +14630,17 @@ ymaps p {
       padding-left: 0;
       line-height: 23px; }
     .project-page--single-page-rating .info-banner__text {
-      font-size: 15px;
-      line-height: 20px; }
+      font-size: 0.9375rem;
+      line-height: 1.25rem; }
     .project-page--single-page-rating .content h1:not([class]) {
       margin-bottom: 25px;
-      font-size: 24px;
-      line-height: 28px; }
+      font-size: 1.5rem;
+      line-height: 1.75rem; }
     .project-page--single-page-rating .project-meta {
       margin-bottom: 17px; }
     .project-page--single-page-rating .project-meta__category {
       padding-left: 15px;
-      font-size: 16px; }
+      font-size: 1rem; }
     .project-page--single-page-rating .project-meta__category-link {
       margin-top: 10px;
       margin-left: 0; }
@@ -14665,7 +14682,7 @@ ymaps p {
     .project-page--single-page-rating .content h2:not([class]) {
       margin-top: 35px;
       margin-bottom: 18px;
-      font-size: 24px; }
+      font-size: 1.5rem; }
     .project-page--single-page-rating .project-page__address {
       padding-left: 17px; }
     .project-page--single-page-rating .project-page__files {

@@ -20,7 +20,7 @@
           <p>Статус:<a href="#">Идёт приём вопросов</a></p>
         </div>
 
-        <div class="project-page__container" data-sticky-container>
+        <div class="project-page__container js-hearings-parent" data-sticky-container>
           <div
             class="project-page__panel js-project-page__panel project-vote"
             data-margin-top="90" data-sticky-for="1199">
@@ -310,6 +310,18 @@
               </div>
             </div>
           </div>
+
+          <div
+            class="hearings-result__status-info status-info status-info--accent">
+            <div class="status-info__text-group">
+              <svg width="24" height="24">
+                <use xlink:href="img/sprite.svg#icon-clock"></use>
+              </svg>
+              <p class="status-info__text">Статистика будет отображена через
+                                           несколько минут</p>
+            </div>
+          </div>
+
         </div>
       </article>
 
@@ -353,8 +365,7 @@
 
             <div class="new-project__file-upload file-uploads">
               <h3 class="direct-line-form__subtitle">Загрузка файлов</h3>
-              <p>Если необходимо, вы можете загрузить файлы. Максимум 10 файлов  до 10 Мб каждый, форматов TXT,DOC,DOCX,RTF,XLS,XLSX,
-                 PPS,PPT,PPTX,PDF,JPG,JPEG,BMP,PNG,TIF,GIF,PCX, MP3,WMA,AVI,MP4,MKV,WMV,MOV,FLV,PUB
+              <p>Если необходимо, вы можете загрузить файлы. Максимум 10 файлов  до 10 Мб каждый, форматов TXT, DOC, DOCX, RTF, XLS, XLSX, PPS, PPT, PPTX, PDF, JPG, JPEG, BMP, PNG, TIF, GIF, PCX, MP3, WMA, AVI, MP4, MKV, WMV, MOV, FLV, PUB
               </p>
               <div class="file-uploads__wrapper js-upload-file-container">
                 <div class="file-uploads__preview-container">
@@ -363,7 +374,7 @@
                   </div>
                 </div>
                 <input class="visually-hidden" type="file" name="user-files" id="user-files"
-                       accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+                       accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,.txt,.rtf,.xls,.xlsx,.pps,.ppt,.pptx,.pdf,.jpg,.jpeg,.bmp,.png,.tif,.gif,.pcx,.mp3,.wma,.mkv,.wmv,.mov,.flv,.pub">
                 <label for="user-files" data-max-files="10"><span>Загрузить файл</span></label>
               </div>
             </div>
@@ -468,8 +479,33 @@
 
   <include src="source/components/modal-projects-period.html"></include>
 
+  <template id="poll-result">
+    <section class="poll-result">
+      <h2 class="visually-hidden">Результаты опроса</h2>
+      <div class="poll-result__section">
+        <p class="poll-result__question">Удовлетворены ли вы итогами проведенных
+                                         общественных
+                                         обсуждений?</p>
+        <div class="poll-result__item">
+          <p class="poll-result__description">
+            <span>Да, удовлетворен</span>
+            <span><b>140</b> (30%)</span>
+          </p>
+          <div class="poll-result__fill" style="width: 30%;"></div>
+        </div>
+        <div class="poll-result__item">
+          <p class="poll-result__description">
+            <span>Нет, не удовлетворен</span>
+            <span><b>250</b> (70%)</span>
+          </p>
+          <div class="poll-result__fill" style="width: 70%;"></div>
+        </div>
+      </div>
+    </section>
+  </template>
+
   <script src="js/libs.js"></script>
-  <script src="js/main.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
