@@ -40,6 +40,22 @@
   }
 }
 
+.form-checkbox--with-link label {
+  display: inline;
+  padding-left: 28px;
+  position: relative;
+
+  &:before {
+    position: absolute;
+    left: 0;
+  }
+
+  .link {
+    display: inline;
+  }
+}
+
+
 .form-checkbox input[type="checkbox"]:not(:checked) ~ label {
   &:hover {
     &::before {

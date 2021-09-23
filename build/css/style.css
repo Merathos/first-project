@@ -2700,6 +2700,16 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     -webkit-transition: all 0.2s;
     transition: all 0.2s; }
 
+.form-checkbox--with-link label {
+  display: inline;
+  padding-left: 28px;
+  position: relative; }
+  .form-checkbox--with-link label:before {
+    position: absolute;
+    left: 0; }
+  .form-checkbox--with-link label .link {
+    display: inline; }
+
 .form-checkbox input[type="checkbox"]:not(:checked) ~ label:hover::before {
   border: 1px solid var(--color-interactive-default, #116ca6); }
 
