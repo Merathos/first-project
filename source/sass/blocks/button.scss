@@ -44,8 +44,11 @@
       background-color: var(--color-bg-secondary, $blue-accent);
     }
 
-    &:disabled {
-      background-color: $light-grey;
+    &:disabled,
+    &.disabled {
+      background-color: var(--color-text, $blue-default);
+      cursor: auto;
+      pointer-events: none;
     }
   }
 
@@ -59,8 +62,11 @@
       background-color: var(--color-bg-secondary, $light-blue);
     }
 
-    &:disabled {
-      background-color: $light-grey;
+    &:disabled,
+    &.disabled {
+      background-color: var(--color-text, $blue-default);
+      cursor: auto;
+      pointer-events: none;
     }
   }
 
@@ -136,12 +142,6 @@
     @include mobile {
       max-width: 100%;
     }
-  }
-
-  &.disabled {
-    background-color: #C0D6EB;
-    cursor: default;
-    pointer-events: none;
   }
 }
 

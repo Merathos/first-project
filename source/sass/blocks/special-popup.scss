@@ -201,6 +201,12 @@
   border: 0;
   outline: none;
   cursor: pointer;
+
+  &:focus-visible {
+    color: var(--color-text, $blue-accent);
+    background-color: var(--color-bg-secondary, $light-blue);
+
+  }
 }
 
 .special-popup__btn-size {
@@ -283,6 +289,10 @@
 
     background-color: $dark;
     border-color: $dark;
+
+    &:focus-visible {
+      background-color: var(--color-interactive-default, $blue-default);
+    }
   }
 
   &--blue {
@@ -304,6 +314,10 @@
 
     background-color: $brown;
     border-color: $brown;
+
+    &:focus-visible {
+      background-color: var(--color-interactive-default, $blue-default);
+    }
   }
 
   @include tablet {
@@ -344,6 +358,10 @@
         border-bottom-right-radius: $border-radius;
       }
     }
+  }
+
+  &:focus-visible {
+    background-color: var(--color-interactive-default, $blue-default);
   }
 }
 

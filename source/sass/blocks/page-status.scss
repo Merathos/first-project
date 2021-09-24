@@ -16,6 +16,7 @@
     color: var(--color-text, $blue-default);
     position: relative;
     margin-left: 23px;
+    @include status-colors;
 
     &:before {
       content: "";

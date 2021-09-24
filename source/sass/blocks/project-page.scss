@@ -154,10 +154,12 @@
   }
 }
 
-.project-page__survey {
+.project-page__survey,
+.page-survey {
   padding: 23px 24px;
   background-color: var(--color-bg-secondary, $color-bg);
   border-radius: $border-radius;
+  margin-bottom: 40px;
 }
 
 .project-page__survey-container {
@@ -182,7 +184,7 @@
   width: 372px;
   padding-right: 20px;
   padding-left: 20px;
-  margin-top: 40px;
+  //margin-top: 40px;
   font-size: rem(14px);
   line-height: rem(19px);
 

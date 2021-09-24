@@ -67,6 +67,12 @@
     flex-flow: column wrap;
     margin-bottom: 20px;
   }
+
+  .date {
+    @media (max-width: $tablet-width - 1) {
+      margin-bottom: 8px;
+    }
+  }
 }
 
 .concurrent-projects__level {
