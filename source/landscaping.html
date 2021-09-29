@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ru">
+<include src="source/components/head.html"></include>
+
+<body class="page-body">
+  <include src="source/components/special-popup.html"></include>
+
+  <include src="source/components/header.html"></include>
+
+  <main class="landscaping-page page-content">
+    <section class="landscaping">
+      <div class="container">
+        <h1 class="page-title landscaping__title">
+          Форма предложения по благоустройству территории
+        </h1>
+        <a class="landscaping__rules-link link link--blue link--rules" href="#">
+          <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <path fill="currentColor" fill-rule="evenodd"
+              d="M.2 12C.2 5.494 5.492.2 12 .2 18.505.2 23.8 5.494 23.8 12c0 6.506-5.294 11.8-11.8 11.8C5.492 23.8.2 18.506.2 12zm2.152 0c0 5.32 4.328 9.647 9.647 9.647 5.32 0 9.647-4.327 9.647-9.647S17.318 2.354 12 2.354 2.352 6.68 2.352 12z"
+              clip-rule="evenodd" />
+            <rect width="2.5" height="8" x="10.75" y="6" fill="currentColor" rx="1" />
+            <rect width="2.5" height="3" x="10.75" y="15" fill="currentColor" rx="1" />
+          </svg>
+          <span>Правила размещения проектов</span>
+        </a>
+        <form action="#" class="landscaping-form" id="js-improvement-form" novalidate>
+          <div class="landscaping-form__section landscaping-form__section--description">
+            <h2 class="landscaping-form__title">
+              Название и описание предложения
+            </h2>
+            <div class="landscaping-form__textarea-container">
+              <textarea name="proposition" id="proposition" cols="30" rows="10"
+                class="landscaping-form__textarea landscaping-form__proposition-name"
+                placeholder="Название (ограничение 255 символов)" aria-label="Название предложения"></textarea>
+              <span class="landscaping-form__textarea-error">Вы превысили лимит на хх символов</span>
+            </div>
+            <div class="landscaping-form__textarea-container">
+              <textarea name="description" id="description" cols="30" rows="10"
+                class="landscaping-form__textarea landscaping-form__description"
+                placeholder="Описание  (ограничение 500 символов)" aria-label="Описание предложения"></textarea>
+              <span class="landscaping-form__textarea-error">Вы превысили лимит
+                на хх символов</span>
+            </div>
+          </div>
+          <div class="landscaping-form__section landscaping-form__section--upload image-uploads">
+            <h2 class="subtitle">Загрузка изображений</h2>
+            <p>Если необходимо, вы можете загрузить изображения. Максимум 5&nbsp;изображенний, формата JPEG, PNG, GIF.
+            </p>
+            <div class="image-uploads__wrapper js-upload-image-container">
+              <div class="image-uploads__image-wrapper">
+                <img src="img/img-project/1.jpg" alt="Мое загруженное изображение">
+              </div>
+              <div class="image-uploads__image-wrapper">
+                <img src="img/img-project/1.jpg" alt="Мое загруженное изображение">
+              </div>
+              <div class="image-uploads__image-wrapper">
+                <input class="visually-hidden" type="file" name="user-images"
+                  accept="image/png, image/jpeg, image/jpg, image/gif" aria-label="user-images">
+                <span>Загрузить изображение</span>
+              </div>
+            </div>
+          </div>
+          <div class="landscaping-form__section map-section">
+            <h2 class="map-section__title">Карта</h2>
+            <p class="map-section__tip">
+              Введите адрес проблемной территории или отметьте ее на карте
+            </p>
+            <input type="text" name="map-search" id="map-search" class="map-section__address"
+              placeholder="Адрес проблемной территории" aria-label="Введите адрес проблемной территории" />
+
+            <input type="hidden" id="mapCenter" name="" value="">
+            <input type="hidden" name="map-kml" id="map-kml" value="">
+
+            <div class="coordsFigure"></div>
+            <div class="map_container">
+              <div class="mapMenu">
+                <div class="title">Укажите ваш объект на карте:</div>
+
+                <button class="mapMenuIcon mapPin">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="#D0D6DE" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 9.10526C20 14.75 12 23 12 23C12 23 4 14.75 4 9.10526C4 4.62885 7.58172 1 12 1C16.4183 1 20 4.62885 20 9.10526Z"/>
+                    <ellipse cx="12.0001" cy="8.6998" rx="4.57143" ry="4.4" fill="white"/>
+                  </svg>
+                </button>
+
+                <button class="mapMenuIcon mapPolygon">
+                  <svg class="svgMapPolygon" version="1.1" id="Layer_1" fill="#D0D6DE" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                       viewBox="0 0 30.3 27.8" style="enable-background:new 0 0 30.3 27.8;" xml:space="preserve">
+                    <path class="st1" d="M20.7,3.9l5.5,9.5l-5.5,9.5h-11l-5.5-9.5l5.5-9.5H20.7z M4.1,13.6L4.1,13.6C4.1,13.6,4.1,13.6,4.1,13.6
+                      L4.1,13.6z M26.2,13.2L26.2,13.2C26.2,13.2,26.2,13.2,26.2,13.2L26.2,13.2z"/>
+                  </svg>
+                </button>
+
+                <button class="mapMenuIcon mapLineBroken">
+                  <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5 7C20.8807 7 22 5.88071 22 4.5C22 3.11929 20.8807 2 19.5 2C18.1333 2 17.0227 3.09676 17.0003 4.45819L9.23042 7.69566C8.78127 7.26479 8.17156 7 7.5 7C6.11929 7 5 8.11929 5 9.5C5 10.1538 5.251 10.749 5.66189 11.1945L2.66512 18.0054C2.61054 18.0018 2.55548 18 2.5 18C1.11929 18 0 19.1193 0 20.5C0 21.8807 1.11929 23 2.5 23C3.88071 23 5 21.8807 5 20.5C5 19.9045 4.79177 19.3576 4.44414 18.9281L7.49253 12L7.5 12C8.86675 12 9.97733 10.9032 9.99966 9.54181L17.7696 6.30434C18.2187 6.73521 18.8284 7 19.5 7Z"/>
+                  </svg>
+                </button>
+
+                <button class="mapMenuIcon mapLine">
+                  <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5 7C20.8807 7 22 5.88071 22 4.5C22 3.11929 20.8807 2 19.5 2C18.1193 2 17 3.11929 17 4.5C17 4.82243 17.061 5.1306 17.1722 5.41359L4.41359 18.1722C4.1306 18.061 3.82243 18 3.5 18C2.11929 18 1 19.1193 1 20.5C1 21.8807 2.11929 23 3.5 23C4.88071 23 6 21.8807 6 20.5C6 20.1776 5.93896 19.8694 5.82781 19.5864L18.5864 6.82781C18.8694 6.93896 19.1776 7 19.5 7Z"/>
+                  </svg>
+                </button>
+
+              </div>
+            <div id="map" data-icon="img/pin.png"></div>
+            </div>
+          <div class="landscaping-form__button-wrapper">
+            <button type="button" class="button button--white">Отменить</button>
+            <button type="button" class="button button--blue landscaping-form__submit-btn" id="improvement-submit-btn">
+              Отправить на модерацию
+            </button>
+          </div>
+          <div class="confirmation-popup">
+            <div class="confirmation-popup__body">
+              <button type="button" class="confirmation-popup__close-btn" aria-label="Отмена"></button>
+              <p>После отправки предложения на модерацию внести изменения будет нельзя</p>
+              <div class="confirmation-popup__buttons-wrap">
+                <button type="button" class="confirmation-popup__back-btn button button--white">Вернуться</button>
+                <button type="submit" class="confirmation-popup__submit-btn button button--blue">Отправить</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <include src="source/components/footer.html"></include>
+  <include src="source/components/cookie.html"></include>
+  <include src="source/components/up-btn.html"></include>
+
+  <template id="pin">
+    <button type="button" class="landscaping__pin"><img src="img/pin.png" width="36" height="54" draggable="false"
+        alt="Метка"></button>
+  </template>
+
+  <template id="general-pin">
+    <button type="button" class="landscaping__general-pin">4</button>
+  </template>
+
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a3b13bbc-c623-4647-90d4-48210288fe0d" type="text/javascript"></script>
+  <script src="js/libs.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

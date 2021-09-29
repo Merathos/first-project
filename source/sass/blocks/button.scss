@@ -46,7 +46,7 @@
 
     &:disabled,
     &.disabled {
-      background-color: var(--color-text, $blue-default);
+      background-color: var(--color-text, #C0D6EB);
       cursor: auto;
       pointer-events: none;
     }

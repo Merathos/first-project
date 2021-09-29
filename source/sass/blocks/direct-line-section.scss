@@ -1,5 +1,4 @@
 .direct-line-section {
-  padding-top: 72px;
   text-align: center;
 
   &__button {
@@ -13,6 +12,7 @@
   }
 
   .section__head {
+    padding-top: 72px;
     display: flex;
     justify-content: space-between;
     align-items: center;

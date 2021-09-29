@@ -5,12 +5,12 @@
   padding-right: 0;
   margin-bottom: 32px;
 
-  p, a {
+  p, span {
     font-size: rem(16px);
     line-height: rem(22px);
   }
 
-  a {
+  span {
     font-weight: normal;
     text-decoration: none;
     color: var(--color-text, $blue-default);
@@ -28,7 +28,7 @@
       height: 6px;
       border-radius: 50%;
       transform: translateY(-50%);
-      background-color: $blue-default;
+      background-color: currentColor;
     }
   }
 }
