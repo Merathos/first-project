@@ -78,7 +78,8 @@
   }
 }
 
-.description-block__textarea-error {
+.description-block__textarea-error,
+.input-error {
   display: none;
   position: absolute;
   bottom: -20px;

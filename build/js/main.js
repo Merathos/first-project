@@ -358,81 +358,86 @@
 })();
 
 'use strict';
-(function () {
-  var container = document.querySelector('.js-upload-file-container');
 
-  if (container) {
-    var input = container.querySelector('input[id="user-files"]');
-    var initialInput = input.cloneNode(true);
-    var label = container.querySelector('label[for="user-files"]');
-    var previewContainer = container.querySelector('.file-uploads__preview-container');
-    var files = [];
-    var maxFileNumber = label.dataset.maxFiles ? label.dataset.maxFiles : 5;
+var initFileUploader = function() {
+  var containers = document.querySelectorAll('.js-upload-file-container');
 
-    var checkPreviousFiles = function () {
-      var prevFiles = previewContainer.querySelectorAll('.file-wrapper');
-      prevFiles.forEach(function (item) {
-        var child = item.querySelector('span');
-        files.push(child);
-        renderCloseBtn(item, child);
-      });
-    };
+  if (containers) {
+    containers.forEach(function (el) {
+      var input = el.querySelector('.js-user-files');
+      var initialInput = input.cloneNode(true);
+      var label = el.querySelector('label');
+      var previewContainer = el.querySelector('.file-uploads__preview-container');
+      var files = [];
+      var maxFileNumber = label.dataset.maxFiles ? label.dataset.maxFiles : 5;
 
-    var checkInputVisible = function () {
-      if (files.length >= maxFileNumber) {
-        label.classList.add('visually-hidden');
-      } else {
-        label.classList.remove('visually-hidden');
-      }
-    };
-
-    var cloneInput = function (fileContainer) {
-      var currentInput = container.querySelector('#user-files');
-      var newInput = currentInput.cloneNode(true);
-      newInput.removeAttribute('id');
-      fileContainer.appendChild(newInput);
-    };
-
-    var renderCloseBtn = function (btnContainer, file) {
-      var button = document.createElement('button');
-      button.setAttribute('type', 'button');
-      button.setAttribute('aria-label', 'удалить загруженные данные');
-      btnContainer.appendChild(button);
-      button.addEventListener('click', function () {
-        btnContainer.remove();
-        var index = files.indexOf(file);
-        if (index > -1) {
-          files.splice(index, 1);
-          checkInputVisible();
-        }
-      });
-    };
-
-    var renderPreview = function (file) {
-      var fileContainer = document.createElement('div');
-      fileContainer.classList.add('file-wrapper');
-      var fileTitle = document.createElement('span');
-      fileTitle.textContent = file.name;
-      fileContainer.appendChild(fileTitle);
-      renderCloseBtn(fileContainer, file);
-      previewContainer.appendChild(fileContainer);
-      cloneInput(fileContainer);
-    };
-
-    checkPreviousFiles();
-    checkInputVisible();
-    input.addEventListener('change', function () {
-      if (input.files.length) {
-        input.files.forEach(function (file) {
-          files.push(file);
-          checkInputVisible();
-          renderPreview(file);
+      var checkPreviousFiles = function () {
+        var prevFiles = previewContainer.querySelectorAll('.file-wrapper');
+        prevFiles.forEach(function (item) {
+          var child = item.querySelector('span');
+          files.push(child);
+          renderCloseBtn(item, child);
         });
-      }
-      input.files = initialInput.files;
-    });
+      };
+
+      var checkInputVisible = function () {
+        if (files.length >= maxFileNumber) {
+          label.classList.add('visually-hidden');
+        } else {
+          label.classList.remove('visually-hidden');
+        }
+      };
+
+      var cloneInput = function (fileContainer) {
+        var currentInput = el.querySelector('.js-user-files');
+        var newInput = currentInput.cloneNode(true);
+        newInput.removeAttribute('id');
+        fileContainer.appendChild(newInput);
+      };
+
+      var renderCloseBtn = function (btnContainer, file) {
+        var button = document.createElement('button');
+        button.setAttribute('type', 'button');
+        button.setAttribute('aria-label', 'удалить загруженные данные');
+        btnContainer.appendChild(button);
+        button.addEventListener('click', function () {
+          btnContainer.remove();
+          var index = files.indexOf(file);
+          if (index > -1) {
+            files.splice(index, 1);
+            checkInputVisible();
+          }
+        });
+      };
+
+      var renderPreview = function (file) {
+        var fileContainer = document.createElement('div');
+        fileContainer.classList.add('file-wrapper');
+        var fileTitle = document.createElement('span');
+        fileTitle.textContent = file.name;
+        fileContainer.appendChild(fileTitle);
+        renderCloseBtn(fileContainer, file);
+        previewContainer.appendChild(fileContainer);
+        cloneInput(fileContainer);
+      };
+
+      checkPreviousFiles();
+      checkInputVisible();
+      input.addEventListener('change', function () {
+        if (input.files.length) {
+          input.files.forEach(function (file) {
+            files.push(file);
+            checkInputVisible();
+            renderPreview(file);
+          });
+        }
+        input.files = initialInput.files;
+      });
+    })
   }
-})();
+};
+
+initFileUploader();
 
 'use strict';
 
@@ -2509,8 +2514,8 @@
 })();
 
 'use strict';
-(function () {
 
+var initImgUpload = function () {
   function hideImgInput($inputsContainer) {
     var $imgUploadInputs = document.querySelectorAll('.image-uploads__image-wrapper input[type="file"]');
     if ($imgUploadInputs.length > 0) {
@@ -2610,7 +2615,6 @@
       reader.addEventListener('load', function () {
         var $previewImg = getPreviewImg(reader.result);
         makeElLoaded($inputsContainer, $imgUploadEl, $previewImg);
-        console.log('1')
 
         if (!isBlankUploadElExist($inputsContainer) && !isMaxAmountOfImagesAchieved($inputsContainer)) {
           addBlankUploadEl($inputsContainer, inputName);
@@ -2620,7 +2624,6 @@
       reader.readAsDataURL(file);
     });
   }
-
 
   var $inputsContainer = document.querySelector('.js-upload-image-container');
 
@@ -2657,7 +2660,9 @@
       }
     });
   }
-})();
+}
+
+initImgUpload();
 
 'use strict';
 
@@ -3732,13 +3737,11 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
 })();
 
 'use strict';
-(function () {
+var initSelects = function () {
   var Scrollbar = window.Scrollbar;
-  var widgetSelectType = document.querySelector('#widget-select-type');
-  var widgetSelectLevel = document.querySelector('#widget-select-level');
-  var widgetSelectProjectCategory = document.querySelector('#widget-select-project-category');
-  var widgetSelectPreview = document.querySelector('#widget_block-preview-select');
-  var widgetClassAdd = document.querySelector('.widget_block__selected_preview');
+  var selectsTypeType = document.querySelectorAll('.js-select-type');
+  var selectsTypeLevel = document.querySelectorAll('.js-select-level');
+  var selectsTypePreview = document.querySelectorAll('.js-select-preview');
 
   var arr;
   var obj;
@@ -3766,20 +3769,21 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
     var select = new window.SlimSelect({
       select: el,
       showSearch: false,
-      onChange: function (el) {
+      onChange: function (elem) {
         arr = new Array;
         obj = new Object;
-        for(var i = 0;i < el.length;i++){
+        for(var i = 0;i < elem.length;i++){
           obj = {};
-          obj['text'] = el[i].value;
+          obj['text'] = elem[i].value;
           arr.push(obj);
         }
+        var secondSelect = document.querySelector('[data-second-select=' + el.dataset.select + ']');
         if(arr.length > 1){
-          widgetClassAdd.classList.add('ss-arrow-show');
+          secondSelect.classList.add('ss-arrow-show');
         } else {
-          widgetClassAdd.classList.remove('ss-arrow-show');
+          secondSelect.classList.remove('ss-arrow-show');
         }
-        addSelectPreview(widgetSelectPreview);
+        addSelectPreview(secondSelect.querySelector('.js-select-preview'));
       },
       afterOpen: function () {
         Scrollbar.init(document.querySelector('.form-select .ss-list'), {
@@ -3796,7 +3800,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
     });
   };
 
-  function addSelectPreview(el) {
+  var addSelectPreview = function (el) {
     var select = new window.SlimSelect({
       select: el,
       showSearch: false,
@@ -3819,20 +3823,23 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
     });
   };
 
-  if (widgetSelectType) {
-    addSelectType(widgetSelectType);
+  if (selectsTypeLevel.length> 0) {
+    selectsTypeLevel.forEach(function (el) {
+      addSelectLevel(el);
+    })
   }
 
-  if (widgetSelectLevel) {
-    addSelectLevel(widgetSelectLevel);
+  if (selectsTypeType.length> 0) {
+    selectsTypeType.forEach(function (el) {
+      addSelectType(el);
+    })
   }
 
-  if (widgetSelectPreview) {
-    addSelectPreview(widgetSelectPreview);
+  if (selectsTypePreview.length> 0) {
+    selectsTypePreview.forEach(function (el) {
+      addSelectPreview(el)
+    })
   }
+}
 
-  if (widgetSelectProjectCategory) {
-    addSelectLevel(widgetSelectProjectCategory);
-  }
-
-})();
+initSelects();

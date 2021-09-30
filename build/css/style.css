@@ -5181,7 +5181,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     min-height: 132px;
     resize: vertical; }
 
-.description-block__textarea-error {
+.description-block__textarea-error,
+.input-error {
   display: none;
   position: absolute;
   bottom: -20px;
@@ -5189,7 +5190,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-size: 0.8125rem;
   line-height: 1.05625rem;
   color: #e55050; }
-  .description-block__textarea-error--show {
+  .description-block__textarea-error--show,
+  .input-error--show {
     display: block; }
 
 .description-block__proposition-name {

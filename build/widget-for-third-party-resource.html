@@ -250,14 +250,14 @@
               <div class="widget_block">
                 <form action="">
                       <div class="form-select widget_block__select">
-                          <select name="widget-select-type" id="widget-select-type" multiple="">
+                          <select name="widget-select-type" id="widget-select-type" multiple="" class="js-select-type" data-select="preview">
                               <option data-placeholder="true" value="Тип виджета">Тип виджета</option>
                               <option value="Обсуждения">Обсуждения</option>
                               <option value="Опросы">Опросы</option>
                               <option value="Новости">Новости</option>
                               <option value="Проекты">Проекты</option>
                             </select>
-                            <select name="widget-select-level" id="widget-select-level">
+                            <select name="widget-select-level" id="widget-select-level" class="js-select-level">
                                 <option data-placeholder="true" value="Уровень реализации инициатив">Уровень реализации инициатив</option>
                                 <option value="Региональный">Региональный</option>
                                 <option value="Муниципальный">Муниципальный</option>
@@ -273,7 +273,7 @@
                       </div>
                       <div class="widget_block__input widget_block__input_bottom">
                           <div class="widget_block__input_item">
-                              <input type="text" id="widget_width_input" placeholder="Ширина в px (320)">                          
+                              <input type="text" id="widget_width_input" placeholder="Ширина в px (320)">
                           </div>
                           <div class="widget_block__input_item">
                               <input type="text" id="widget_timer" placeholder="Частота обновления в мс (2000)">
@@ -294,9 +294,9 @@
                               </svg>
                             </a></div>
                           </div>
-                          <div class="widget_block__selected widget_block__selected_preview">
+                          <div class="widget_block__selected widget_block__selected_preview" data-second-select="preview">
                               <div class="form-select">
-                                  <select name="widget_block-preview-select" id="widget_block-preview-select">
+                                  <select name="widget_block-preview-select" id="widget_block-preview-select" class="js-select-preview">
                                       <option data-placeholder="true" value="Тип виджета">Тип виджета</option>
                                       <!-- <option value="Обсуждения">Обсуждения</option>
                                       <option value="Опросы">Опросы</option>
@@ -407,7 +407,7 @@
               <div class="widget-popup gallery-popup js-widget-popup popup js-popup">
                   <div class="popup__container">
                     <div class="popup__overlay js-popup__overlay"></div>
-            
+
                     <div class="gallery-popup__content popup__content">
                       <div class="popup__bar popup__bar--top">
                         <button class="popup__close-btn js-popup__close-btn" type="button">
@@ -476,6 +476,6 @@
 
 
     <script src="js/libs.js"></script>
-    <script src="js/main.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
