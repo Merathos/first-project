@@ -340,14 +340,14 @@
                 <option value="Новости">Новости</option>
                 <option value="Проекты">Проекты</option>
               </select>
-              <span class="input-error">Пожалуйста выберите одну из категорий</span>
+              <span class="error-field">Пожалуйста выберите одну из категорий</span>
             </div>
             <div class="description-block">
               <div class="description-block__textarea-container">
                 <textarea name="proposition" id="proposition description-block__proposition-name" rows="1" placeholder="Адрес проблемы"
                           class="description-block__textarea"
                           aria-label="Адрес проблемы"></textarea>
-                <span class="input-error">Вы превысили
+                <span class="error-field">Вы превысили
                   лимит на хх символов</span>
               </div>
             </div>
@@ -356,7 +356,7 @@
                 <textarea name="proposition" id="proposition1" rows="3" placeholder="Вопрос губернатору"
                           class="description-block__textarea description-block__textarea--medium"
                           aria-label="Вопрос губернатору"></textarea>
-                <span class="input-error">Вы превысили
+                <span class="error-field">Вы превысили
                   лимит на хх символов</span>
               </div>
             </div>
@@ -374,7 +374,8 @@
                 <input class="visually-hidden js-user-files" type="file" name="user-files" id="user-files"
                        accept=".doc,.docx,application/msword,.txt,.rtf,.xls,.xlsx,.pps,.ppt,.pptx,.pdf,.jpg,.jpeg,.bmp,.png,.tif,.gif,.pcx,.mp3,.wma,.mkv,.wmv,.mov,.flv,.pub">
                 <label for="user-files" data-max-files="10"><span>Загрузить файл</span></label>
-                <span class="input-error">Пожалуйста загрузите файл</span>
+                <span class="error-field">Пожалуйста загрузите файл</span>
+                <span class="error-field error-field--size visually-hidden">Файл не должен превышать 10Мб</span>
               </div>
             </div>
 

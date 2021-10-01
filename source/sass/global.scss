@@ -171,5 +171,11 @@ img {
 }
 
 .error-field {
+  position: absolute;
+  bottom: -20px;
   color: $red;
+}
+
+.error-field + .error-field {
+  bottom: -40px;
 }

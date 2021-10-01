@@ -153,7 +153,12 @@ img {
     margin: 11mm 17mm 17mm 17mm; } }
 
 .error-field {
+  position: absolute;
+  bottom: -20px;
   color: #e55050; }
+
+.error-field + .error-field {
+  bottom: -40px; }
 
 /* Плагины */
 /* stylelint-disable */
@@ -5181,8 +5186,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     min-height: 132px;
     resize: vertical; }
 
-.description-block__textarea-error,
-.input-error {
+.description-block__textarea-error {
   display: none;
   position: absolute;
   bottom: -20px;
@@ -5190,8 +5194,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-size: 0.8125rem;
   line-height: 1.05625rem;
   color: #e55050; }
-  .description-block__textarea-error--show,
-  .input-error--show {
+  .description-block__textarea-error--show {
     display: block; }
 
 .description-block__proposition-name {
@@ -6403,7 +6406,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
           flex-flow: row wrap;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
-          justify-content: flex-start; }
+          justify-content: flex-start;
+  position: relative; }
   @media (max-width: 767px) {
     .image-uploads__wrapper {
       -webkit-box-orient: vertical;

@@ -11,6 +11,7 @@ var initFileUploader = function() {
       var previewContainer = el.querySelector('.file-uploads__preview-container');
       var files = [];
       var maxFileNumber = label.dataset.maxFiles ? label.dataset.maxFiles : 5;
+      var errorSizeMessage = el.querySelector('.error-field--size');
 
       var checkPreviousFiles = function () {
         var prevFiles = previewContainer.querySelectorAll('.file-wrapper');
@@ -52,6 +53,12 @@ var initFileUploader = function() {
       };
 
       var renderPreview = function (file) {
+        if (Math.round(file.size / 1024) > 10240) {
+          errorSizeMessage.classList.remove('visually-hidden');
+          return
+        } else {
+          errorSizeMessage.classList.add('visually-hidden')
+        }
         var fileContainer = document.createElement('div');
         fileContainer.classList.add('file-wrapper');
         var fileTitle = document.createElement('span');

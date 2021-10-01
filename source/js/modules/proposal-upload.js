@@ -90,60 +90,70 @@ var initImgUpload = function () {
     $inputsContainer.append($uploadEl);
   }
 
-  function addFunctionailtyToFileInput($fileInput, $imgUploadEl, inputName) {
+  function addFunctionailtyToFileInput(inputsContainer, $fileInput, $imgUploadEl, inputName) {
     $fileInput.addEventListener('change', function (e) {
       var $target = e.target;
       var file = $target.files[0];
       var reader = new FileReader();
-
+      var errorSizeMessage = inputsContainer.querySelector('.error-field--size');
 
       reader.addEventListener('load', function () {
-        var $previewImg = getPreviewImg(reader.result);
-        makeElLoaded($inputsContainer, $imgUploadEl, $previewImg);
+        if (Math.round($target.files[0].size / 1024) > 10240) {
+          errorSizeMessage.classList.remove('visually-hidden');
+          return
+        } else {
+          errorSizeMessage.classList.add('visually-hidden')
+        }
 
-        if (!isBlankUploadElExist($inputsContainer) && !isMaxAmountOfImagesAchieved($inputsContainer)) {
-          addBlankUploadEl($inputsContainer, inputName);
+        var $previewImg = getPreviewImg(reader.result);
+        makeElLoaded(inputsContainer, $imgUploadEl, $previewImg);
+
+        if (!isBlankUploadElExist(inputsContainer) && !isMaxAmountOfImagesAchieved(inputsContainer)) {
+          addBlankUploadEl(inputsContainer, inputName);
         }
       });
-
       reader.readAsDataURL(file);
     });
   }
 
-  var $inputsContainer = document.querySelector('.js-upload-image-container');
+  var $inputsContainers = document.querySelectorAll('.js-upload-image-container');
 
-  if ($inputsContainer) {
-    var $imgUploadEls = document.querySelectorAll('.image-uploads__image-wrapper');
+  if ($inputsContainers) {
+    $inputsContainers.forEach(function (elem) {
+      var $inputsContainer = elem;
+      var $imgUploadEls = $inputsContainer.querySelectorAll('.image-uploads__image-wrapper');
 
-    var inputName = ' ';
+      var inputName = ' ';
 
-    if ($imgUploadEls.length > 0) {
-      for (var i = 0; i < $imgUploadEls.length; i++) {
-        var $input = $imgUploadEls[i].querySelector('input[type="file"]');
+      if ($imgUploadEls.length > 0) {
+        for (var i = 0; i < $imgUploadEls.length; i++) {
+          var $input = $imgUploadEls[i].querySelector('input[type="file"]');
 
-        if ($input) {
-          var attr = $input.getAttribute('name');
+          if ($input) {
+            var attr = $input.getAttribute('name');
 
-          if (attr) {
-            inputName = attr;
-            break;
+            if (attr) {
+              inputName = attr;
+              break;
+            }
           }
         }
       }
-    }
 
-    hideImgInput($inputsContainer);
+      hideImgInput($inputsContainer);
 
-    $imgUploadEls.forEach(function ($imgUploadEl) {
-      var $loadedImg = $imgUploadEl.querySelector('img');
+      $imgUploadEls.forEach(function ($imgUploadEl) {
+        var $loadedImg = $imgUploadEl.querySelector('img');
 
-      if ($loadedImg) {
-        makeElLoaded($inputsContainer, $imgUploadEl);
-      } else {
-        var $fileInput = $imgUploadEl.querySelector('input[type="file"]');
-        addFunctionailtyToFileInput($fileInput, $imgUploadEl, inputName);
-      }
-    });
+        if ($loadedImg) {
+          makeElLoaded($inputsContainer, $imgUploadEl);
+        } else {
+          var $fileInput = $imgUploadEl.querySelector('input[type="file"]');
+          addFunctionailtyToFileInput($inputsContainer, $fileInput, $imgUploadEl, inputName);
+        }
+      });
+
+    })
   }
 }
 

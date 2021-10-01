@@ -182,6 +182,8 @@
               <input class="visually-hidden js-user-files" type="file" name="user-files" id="user-files"
                 accept=".doc,.docx,.xml,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
               <label for="user-files"><span>Загрузить файл</span></label>
+              <span class="error-field error-field--size visually-hidden">Файл не должен превышать 10Мб</span>
+              <span class="error-field">Пожалуйста загрузите файл</span>
             </div>
           </div>
           <div class="new-project__image-upload image-uploads">
@@ -209,6 +211,8 @@
                   accept="image/png, image/jpeg, image/jpg, image/gif" aria-label="user-images">
                 <span>Загрузить изображение</span>
               </div>
+              <span class="error-field">Пожалуйста загрузите изображение</span>
+              <span class="error-field error-field--size visually-hidden">Изображение не должно превышать 10Мб</span>
             </div>
           </div>
           <include src="source/components/buttons-wrapper.html"></include>

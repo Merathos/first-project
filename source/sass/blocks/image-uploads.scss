@@ -26,6 +26,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
+  position: relative;
 
   @media (max-width: $tablet-width - 1) {
     flex-flow: column wrap;
