@@ -68,6 +68,16 @@
   }
 }
 
+.public-debate__archive-link-mobile {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
 .public-debate .description {
   margin: 0;
 }

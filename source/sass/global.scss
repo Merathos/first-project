@@ -171,11 +171,21 @@ img {
 }
 
 .error-field {
+  margin: 0;
   position: absolute;
-  bottom: -20px;
+  bottom: -19px;
   color: $red;
+  left: 0;
 }
 
 .error-field + .error-field {
-  bottom: -40px;
+  bottom: -36px;
+}
+
+.separator {
+  border: none;
+  height: 1px;
+  width: 100%;
+  margin: 48px 0 40px;
+  background-color: var(--color-stroke, #e3e8ee);
 }

@@ -15,6 +15,15 @@
     flex-wrap: wrap;
     align-items: center;
   }
+
+  &--fulfillment {
+    .project-vote__date {
+      margin-top: 8px;
+    }
+    .project-vote__expire {
+      margin-top: 18px;
+    }
+  }
 }
 
 .project-vote__title {
@@ -24,6 +33,10 @@
   font-weight: 400;
   font-size: rem(18px);
   line-height: rem(23px);
+
+  &--fulfillment {
+    margin-bottom: 8px;
+  }
 }
 
 .project-vote__date {
@@ -304,6 +317,19 @@
     color: var(--color-interactive-default, $blue-default);
   }
 }
+
+.project-vote__notification {
+  margin-top: 24px;
+}
+
+.project-vote__fulfillment-text {
+  margin: 0;
+
+  color: $grey;
+  font-size: rem(16px);
+  line-height: rem(21.6px);
+}
+
 
 @include tablet {
   .project-vote__container {

@@ -13,6 +13,13 @@
     padding-bottom: 100px;
     padding-left: 0;
   }
+
+  sup {
+    color: var(--color-interactive-default, #E55050);
+    padding-right: 5px;
+    top: 0;
+    font-size: 100%;
+  }
 }
 
 .internet-vote__section {
@@ -332,12 +339,19 @@
 
 .internet-vote__table-wrapper {
   display: flex;
+
+  .internet-vote__buttons-wrapper {
+    padding-top: 24px;
+    margin-top: 24px;
+    border-top: 1px solid var(--color-stroke, #e3e8ee);
+  }
 }
 
 .internet-vote__table-container {
   padding: 32px 25px;
   margin-right: auto;
   margin-top: 32px;
+  max-width: rem(650px);
 
   background-color: var(--color-bg-secondary, $color-bg);
   border-radius: 5px;
@@ -373,6 +387,13 @@
     background-repeat: no-repeat;
     background-size: 100%;
   }
+}
+
+.internet-vote__text {
+  color: var(--color-text, $grey-default);
+  font-size: rem(15px);
+  line-height: 135%;
+  padding-left: 67px;
 }
 
 .internet-vote__table {
@@ -418,17 +439,22 @@
     &:last-child {
       text-align: right;
     }
+
+    sup {
+      padding-left: 5px;
+    }
   }
 
   @include mobile-max {
-    tr {
-      display: flex;
-      flex-direction: column;
-    }
+    //tr {
+    //  display: flex;
+    //  flex-direction: column;
+    //}
 
     td:last-child,
     th:last-child {
-      text-align: left;
+      text-align: right;
+      vertical-align: top;
     }
     thead tr {
       padding-bottom: 10px;
