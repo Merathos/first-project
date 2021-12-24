@@ -5031,7 +5031,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-weight: normal;
   font-size: 0.875rem;
   line-height: 130%; }
-  .project-status {
+  .project-status, .project-status.status-color--grey {
     color: var(--color-text, #a6abb3); }
   .project-status.status-color--blue {
     color: var(--color-text, #2c8ecc); }
@@ -6074,7 +6074,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .improvement-stage__status {
   padding-left: 19px;
   position: relative; }
-  .improvement-stage__status {
+  .improvement-stage__status, .improvement-stage__status.status-color--grey {
     color: var(--color-text, #a6abb3); }
   .improvement-stage__status.status-color--blue {
     color: var(--color-text, #2c8ecc); }
@@ -6244,7 +6244,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   font-weight: 400;
   font-size: 0.9375rem;
   line-height: 135%; }
-  .proposal-list__status {
+  .proposal-list__status, .proposal-list__status.status-color--grey {
     color: var(--color-text, #a6abb3); }
   .proposal-list__status.status-color--blue {
     color: var(--color-text, #2c8ecc); }
@@ -10546,10 +10546,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .page-status span {
     font-weight: normal;
     text-decoration: none;
-    color: var(--color-text, #a6abb3);
+    color: var(--color-text, #2c8ecc);
     position: relative;
     margin-left: 23px; }
-    .page-status span {
+    .page-status span, .page-status span.status-color--grey {
       color: var(--color-text, #a6abb3); }
     .page-status span.status-color--blue {
       color: var(--color-text, #2c8ecc); }
@@ -13701,7 +13701,7 @@ span.poll__hide {
   padding-left: 9px;
   font-size: 0.875rem;
   line-height: 1.1375rem; }
-  .improvement-status {
+  .improvement-status, .improvement-status.status-color--grey {
     color: var(--color-text, #a6abb3); }
   .improvement-status.status-color--blue {
     color: var(--color-text, #2c8ecc); }

@@ -98,7 +98,8 @@
 }
 
 @mixin status-colors {
-  & {
+  &,
+  &.status-color--grey{
     color: var(--color-text, $grey-default);
   }
 
