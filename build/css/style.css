@@ -10546,7 +10546,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .page-status span {
     font-weight: normal;
     text-decoration: none;
-    color: var(--color-text, #2c8ecc);
+    color: var(--color-text, #a6abb3);
     position: relative;
     margin-left: 23px; }
     .page-status span {

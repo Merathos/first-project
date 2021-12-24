@@ -13,7 +13,7 @@
   span {
     font-weight: normal;
     text-decoration: none;
-    color: var(--color-text, $blue-default);
+    color: var(--color-text, $grey-default);
     position: relative;
     margin-left: 23px;
     @include status-colors;
