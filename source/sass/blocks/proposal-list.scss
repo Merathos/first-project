@@ -84,7 +84,8 @@
   }
 }
 
-.proposal-list__address {
+.proposal-list__address,
+.proposal-list__project-mark {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -106,6 +107,17 @@
     font-weight: normal;
     font-size: rem(14px);
     line-height: 130%;
+  }
+}
+
+.proposal-list__project-mark {
+  @media (min-width: $tablet-width) {
+    margin-right: 16px;
+  }
+
+  svg {
+    width: 14px;
+    height: 14px;
   }
 }
 
