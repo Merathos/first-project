@@ -229,8 +229,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -2463,6 +2462,22 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     -webkit-transition: all 0.2s;
     transition: all 0.2s; }
 
+.form-checkbox--round label::before {
+  width: 24px;
+  height: 24px;
+  border-radius: 100px; }
+
+.form-checkbox--round label::after {
+  display: block;
+  top: 6px;
+  left: 6px;
+  background-image: url("../img/checkbox-grey.svg"); }
+
+.form-checkbox--round input[type="checkbox"]:checked ~ label::after {
+  top: 6px;
+  left: 6px;
+  background-image: url("../img/checkbox.svg"); }
+
 .form-checkbox input[type="checkbox"]:not(:checked) ~ label:hover::before {
   border: 1px solid var(--color-interactive-default, #116ca6); }
 
@@ -4636,7 +4651,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 @media (min-width: 1200px) {
   .proposal--approved .proposal__vote {
-    position: -webkit-sticky;
     position: sticky;
     top: 115px;
     grid-area: c; } }
@@ -4779,7 +4793,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   grid-area: c; }
   @media (min-width: 1200px) {
     .proposal--implemented .proposal__vote {
-      position: -webkit-sticky;
       position: sticky;
       top: 90px; } }
   @media (max-width: 1199px) {
@@ -5286,7 +5299,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     height: 12px;
     fill: var(--color-interactive-default, #2c8ecc); }
 
-.proposal-list__address {
+.proposal-list__address,
+.proposal-list__project-mark {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5301,18 +5315,29 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       -ms-flex-align: center;
           align-items: center; }
   @media (min-width: 768px) {
-    .proposal-list__address {
+    .proposal-list__address,
+    .proposal-list__project-mark {
       margin-right: 9px; } }
-  .proposal-list__address svg {
+  .proposal-list__address svg,
+  .proposal-list__project-mark svg {
     color: var(--color-text, #a6abb3);
     margin-right: 5px;
     width: 12px;
     height: 12px; }
-  .proposal-list__address span {
+  .proposal-list__address span,
+  .proposal-list__project-mark span {
     color: var(--color-text, #a6abb3);
     font-weight: normal;
     font-size: 0.875rem;
     line-height: 130%; }
+
+@media (min-width: 768px) {
+  .proposal-list__project-mark {
+    margin-right: 16px; } }
+
+.proposal-list__project-mark svg {
+  width: 14px;
+  height: 14px; }
 
 .proposal-list__title {
   grid-area: b;
@@ -7393,9 +7418,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   height: 2.7em;
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+  -ms-hyphens: auto;
+      hyphens: auto;
   overflow-wrap: break-word;
   word-wrap: break-word; }
   @media (max-width: 1119px) {
@@ -7680,9 +7704,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   padding: 0;
   font-size: 1rem;
   line-height: 1.35;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+  -ms-hyphens: auto;
+      hyphens: auto;
   overflow-wrap: break-word;
   word-wrap: break-word; }
 
@@ -8382,9 +8405,8 @@ span.poll__hide {
   line-height: 1.25rem;
   font-weight: 400;
   line-height: 1.6875rem;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
+  -ms-hyphens: auto;
+      hyphens: auto;
   overflow-wrap: break-word;
   word-wrap: break-word;
   background-color: var(--color-bg-secondary, #f9f9fa);
@@ -10755,7 +10777,6 @@ span.poll__hide {
   grid-area: c; }
   @media (min-width: 1200px) {
     .hearings__time-frame {
-      position: -webkit-sticky;
       position: sticky;
       top: 90px; } }
   @media (max-width: 1199px) {
@@ -12494,9 +12515,8 @@ span.poll-page__hide {
       padding-bottom: 24px; } }
   .answers__text-wrapper p {
     margin: 0;
-    -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-            hyphens: auto;
+    -ms-hyphens: auto;
+        hyphens: auto;
     overflow-wrap: break-word;
     word-wrap: break-word;
     font-size: 0.9375rem;
@@ -12826,7 +12846,6 @@ span.poll-page__hide {
     background-repeat: no-repeat;
     background-size: 100% 1px; }
   .table-fixed table tr:first-child {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 10;

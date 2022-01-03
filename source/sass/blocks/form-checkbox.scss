@@ -40,6 +40,29 @@
   }
 }
 
+.form-checkbox--round label {
+  &::before {
+    width: 24px;
+    height: 24px;
+    border-radius: 100px;
+  }
+
+  &::after {
+    display: block;
+    top: 6px;
+    left: 6px;
+    background-image: url("../img/checkbox-grey.svg");
+  }
+}
+
+.form-checkbox--round input[type="checkbox"]:checked ~ label {
+  &::after {
+    top: 6px;
+    left: 6px;
+    background-image: url("../img/checkbox.svg");
+  }
+}
+
 .form-checkbox input[type="checkbox"]:not(:checked) ~ label {
   &:hover {
     &::before {
