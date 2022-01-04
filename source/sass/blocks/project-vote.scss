@@ -218,6 +218,18 @@
 }
 
 .project-vote__like-counter {
+  p {
+    font-size: 13px;
+    line-height: 16.9px;
+    color: $grey;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+.project-vote__like-counter {
   width: 100%;
   margin-top: 24px;
   padding-top: 25px;
