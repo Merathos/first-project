@@ -4598,7 +4598,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     display: grid;
     grid-template-columns: 1fr 360px;
     grid-column-gap: 20px;
-    grid-template-areas: "a   a" "k   c" "b   c" "d   c" "e   c" "f   c"; } }
+    grid-template-areas: "a   a" "k   c" "b   c" "d   c" "e   c" "f   c" "g   c"; } }
 
 .proposal--approved > * {
   -ms-flex-item-align: start;
@@ -4734,9 +4734,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .proposal--approved iframe {
       height: 288px; } }
 
+.proposal--approved .proposal__projects {
+  grid-area: f; }
+
 .proposal--approved .proposal__button-wrapper {
   justify-self: start;
-  grid-area: f; }
+  grid-area: g; }
   @media (max-width: 1199px) {
     .proposal--approved .proposal__button-wrapper {
       margin-left: 24px;
@@ -4937,6 +4940,116 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .proposal--implemented .button span {
     font-size: 0.875rem;
     padding: 0; }
+
+@media (max-width: 1199px) {
+  .proposal__projects {
+    margin-bottom: 41px;
+    margin-left: 24px;
+    margin-right: 24px; } }
+
+@media (max-width: 767px) {
+  .proposal__projects {
+    margin-bottom: 34px;
+    margin-left: 16px;
+    margin-right: 16px; } }
+
+.proposal__project-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%; }
+  .proposal__project-wrapper .proposal__project-img,
+  .proposal__project-wrapper .proposal__project-link,
+  .proposal__project-wrapper .proposal__project-figure {
+    width: 240px;
+    height: 130px; }
+  .proposal__project-wrapper .proposal__project-img {
+    margin-left: auto; }
+
+.proposal__project-details span {
+  font-size: 15px;
+  line-height: 20.25px;
+  color: #2c8ecc;
+  border-bottom: 1px dashed #9BD2F4; }
+
+.proposal__project-details svg {
+  margin-left: 9px; }
+
+.proposal__gallery .gallery__item-link,
+.proposal__gallery .gallery__item {
+  width: 129px;
+  height: 129px; }
+
+.proposal__project-2 .swiper-slide {
+  margin-right: 15px;
+  width: 129px;
+  height: 129px; }
+
+.proposal__project--open .proposal__project-details {
+  margin-top: 32px;
+  margin-left: 28px; }
+  .proposal__project--open .proposal__project-details svg {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+
+.proposal__project--open .proposal__gallery {
+  padding-left: 28px; }
+
+.proposal__project-1,
+.proposal__project-2,
+.proposal__project-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #e3e8ee;
+  margin-bottom: 32px; }
+  .proposal__project-1 button,
+  .proposal__project-2 button,
+  .proposal__project-3 button {
+    margin-left: 28px;
+    margin-top: 32px;
+    -ms-flex-item-align: start;
+        align-self: start; }
+
+.proposal__project-desc {
+  width: 438px; }
+  @media (max-width: 1199px) {
+    .proposal__project-desc {
+      width: 100%;
+      margin-right: 32px; } }
+
+.proposal__project-text {
+  color: #354052;
+  font-size: 15px;
+  line-height: 20.25px; }
+
+.proposal__project-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .proposal__project-head h3 {
+    font-size: 18px;
+    line-height: 23.4px;
+    font-weight: 400;
+    margin: 0;
+    color: #354052; }
+  .proposal__project-head span {
+    font-size: 13px;
+    line-height: 16.9px;
+    color: #707b8c; }
 
 .comments-tab {
   height: 46px;
@@ -11375,6 +11488,14 @@ span.poll__hide {
     opacity: 1; }
   .project-vote__revoke-btn:hover:not(.focus-visible) {
     opacity: 0.7; }
+
+.project-vote__like-counter p {
+  font-size: 13px;
+  line-height: 16.9px;
+  color: #707b8c; }
+
+.project-vote__like-counter button {
+  width: 100%; }
 
 .project-vote__like-counter {
   width: 100%;
