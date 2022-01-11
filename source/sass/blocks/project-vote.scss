@@ -419,3 +419,19 @@
     display: none;
   }
 }
+
+.project-vote__like-counter {
+  .proposal-list__like-counter {
+    margin-left: 0;
+
+    span {
+      margin-bottom: 17px;
+      font-size: 15px;
+      line-height: 20.25px;
+      font-weight: 400;
+      color: $blue-default;
+      padding-bottom: 2px;
+      border-bottom: 1px dashed $blue-default;
+    }
+  }
+}
