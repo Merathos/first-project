@@ -4980,24 +4980,22 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   width: 129px;
   height: 129px; }
 
-.proposal__project-2 .swiper-slide {
+.proposal__project .swiper-slide {
   margin-right: 15px;
   width: 129px;
   height: 129px; }
 
-.proposal__project--open .proposal__project-details {
-  margin-top: 32px;
-  margin-left: 28px; }
-  .proposal__project--open .proposal__project-details svg {
-    -webkit-transform: rotate(180deg);
-            transform: rotate(180deg); }
-
-.proposal__project--open .proposal__gallery {
+.proposal__project .proposal__gallery {
   padding-left: 28px; }
 
-.proposal__project-1,
-.proposal__project-2,
-.proposal__project-3 {
+.proposal__project .proposal__project-details {
+  margin-top: 32px;
+  margin-left: 28px; }
+  .proposal__project .proposal__project-details svg {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg); }
+
+.proposal__project {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5010,13 +5008,48 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   padding-bottom: 32px;
   border-bottom: 1px solid #e3e8ee;
   margin-bottom: 32px; }
-  .proposal__project-1 button,
-  .proposal__project-2 button,
-  .proposal__project-3 button {
-    margin-left: 28px;
+  .proposal__project button {
     margin-top: 32px;
     -ms-flex-item-align: start;
-        align-self: start; }
+        align-self: start;
+    display: block; }
+  .proposal__project .proposal-list__like-counter {
+    margin-top: 32px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .proposal__project .proposal-list__like-counter span {
+      margin-bottom: 17px;
+      font-size: 18px;
+      line-height: 23.4px;
+      font-weight: 400;
+      color: #354052; }
+  .proposal__project .button-details {
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-left: 0; }
+    .proposal__project .button-details__text {
+      margin-right: 9px; }
+      .proposal__project .button-details__text_opened {
+        display: none; }
+      .proposal__project .button-details__text_closed {
+        display: inline-block; }
+    .proposal__project .button-details .button-details__icon {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg); }
+    .proposal__project .button-details.opened .button-details__text_opened {
+      display: inline-block; }
+    .proposal__project .button-details.opened .button-details__text_closed {
+      display: none; }
+    .proposal__project .button-details.opened .button-details__icon {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg); }
 
 .proposal__project-desc {
   width: 438px; }
@@ -11621,6 +11654,17 @@ span.poll__hide {
 @media print {
   .project-vote__submit-form {
     display: none; } }
+
+.project-vote__like-counter .proposal-list__like-counter {
+  margin-left: 0; }
+  .project-vote__like-counter .proposal-list__like-counter span {
+    margin-bottom: 17px;
+    font-size: 15px;
+    line-height: 20.25px;
+    font-weight: 400;
+    color: #2c8ecc;
+    padding-bottom: 2px;
+    border-bottom: 1px dashed #2c8ecc; }
 
 .vote-results__output {
   display: -webkit-box;
