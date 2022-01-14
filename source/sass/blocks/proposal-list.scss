@@ -268,3 +268,24 @@
     }
   }
 }
+
+.proposal-list__like-counter {
+  .form-checkbox {
+    margin-bottom: 0;
+  }
+
+  .form-checkbox label::before {
+    margin-right: 0;
+  }
+}
+.proposal-list--update {
+  padding-top: 8px;
+
+  .proposal-list__like-counter {
+    margin-top: 0;
+  }
+}
+
+.proposal-list__item--update {
+  //padding-bottom: 31px;
+}
