@@ -188,7 +188,8 @@
       "d   c"
       "e   c"
       "f   c"
-      "g   c";
+      "g   c"
+      "h   c";
   }
 
   > * {
@@ -368,7 +369,8 @@
   .proposal__button-wrapper {
     justify-self: start;
     //grid-area: f;
-    grid-area: g;
+    //grid-area: g;
+    grid-area: h;
 
     @media (max-width: $desktop-width - 1) {
       margin-left: $tablet-padding;
@@ -673,7 +675,8 @@
   }
 }
 
-.proposal__project-details {
+.proposal__project-details,
+.proposal__milestones-details {
   //margin-top: 32px;
   //margin-left: 28px;
 
@@ -717,6 +720,17 @@
   }
 }
 
+.proposal__milestones-item {
+  .proposal__milestones-details {
+    margin-top: 32px;
+    margin-left: 28px;
+
+    svg {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
 .proposal__project {
   display: flex;
   flex-wrap: wrap;
@@ -737,11 +751,15 @@
     align-items: center;
 
     span {
-      margin-bottom: 17px;
+      //margin-bottom: 17px;
       font-size: 18px;
       line-height: 23.4px;
       font-weight: 400;
       color: $dark-text;
+    }
+
+    .form-checkbox {
+      margin-right: 10px;
     }
   }
 
@@ -819,4 +837,81 @@
     line-height: 16.9px;
     color: $grey;
   }
+}
+
+.proposal__projects-milestones {
+  grid-area: g;
+}
+
+.proposal__projects-tab {
+  font-size: 24px;
+  line-height: 28.44px;
+  color: $grey;
+  margin-right: 40px;
+  padding-bottom: 13px;
+  border-bottom: 1px solid transparent;
+}
+
+.proposal__milestones-tab {
+  font-size: 24px;
+  line-height: 28.44px;
+  color: $blue-default;
+  padding-bottom: 13px;
+  border-bottom: 1px solid transparent;
+
+  &--active {
+    border-bottom: 1px solid $blue-default;
+  }
+}
+
+.proposal__milestones-item {
+  padding-bottom: 32px;
+}
+
+.proposal__milestones-item {
+  .button-details {
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-left: 0;
+
+    &__text {
+      margin-right: 9px;
+
+      &_opened {
+        display: none;
+      }
+
+      &_closed {
+        display: inline-block;
+      }
+    }
+
+    .button-details__icon {
+      transform: rotate(0deg);
+    }
+
+    &.opened {
+      .button-details__text_opened {
+        display: inline-block;
+      }
+
+      .button-details__text_closed {
+        display: none;
+      }
+
+      .button-details__icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}
+
+.proposal__tabs {
+  display: flex;
+  //padding-bottom: 13px;
+  border-bottom: 1px solid $light-grey;
+  margin-bottom: 40px;
 }

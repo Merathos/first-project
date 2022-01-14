@@ -18,7 +18,10 @@
 <clipPath id="clip0">
 <rect width="20" height="20" fill="white"/>
 </clipPath>
-</defs><symbol id="icon-arrow-big" viewBox="0 0 8 14">
+</defs><symbol id="checkbox-white" viewBox="0 0 24 24">
+<path d="M0.1 12C0.1 5.43843 5.43843 0.1 12 0.1C18.5616 0.1 23.9 5.43843 23.9 12C23.9 18.5616 18.5616 23.9 12 23.9C5.43843 23.9 0.1 18.5616 0.1 12ZM2.45315 12C2.45315 17.2643 6.73597 21.5466 12 21.5466C17.264 21.5466 21.5469 17.2643 21.5469 12C21.5469 6.73571 17.264 2.4534 12 2.4534C6.73597 2.4534 2.45315 6.73571 2.45315 12Z" fill="white" stroke="#FCA844" stroke-width="0.2"/>
+<path d="M8 12L11.2 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><symbol id="icon-arrow-big" viewBox="0 0 8 14">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8 11.9833L3.02703 7L8 2.01667L6.48649 0.5L1.92713e-07 7L6.48649 13.5L8 11.9833Z" fill="currentColor"/>
 </symbol><symbol id="icon-arrow" viewBox="0 0 33 12">
 <path d="M32.5303 6.53033C32.8232 6.23744 32.8232 5.76257 32.5303 5.46967L27.7574 0.696702C27.4645 0.403808 26.9896 0.403808 26.6967 0.696701C26.4038 0.989595 26.4038 1.46447 26.6967 1.75736L30.9393 6L26.6967 10.2426C26.4038 10.5355 26.4038 11.0104 26.6967 11.3033C26.9896 11.5962 27.4645 11.5962 27.7574 11.3033L32.5303 6.53033ZM-6.55671e-08 6.75L32 6.75L32 5.25L6.55671e-08 5.25L-6.55671e-08 6.75Z" fill="currentColor"/>
