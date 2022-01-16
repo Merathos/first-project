@@ -25,9 +25,9 @@
         var projectTextLines = Math.ceil(
             projectTextHeight / projectTextLineHeight
         );
-
+        console.log(projectTextLines);
         // Максимально допустимое количество строк
-        var maxLinesAmount = 4;
+        var maxLinesAmount = 3;
 
         // Если в блоке есть заголовок, то максимальное количество строк отличается по макету, но в ТЗ речь про 3 при любых условиях
         if (project.querySelector('.proposal__project-title')) {

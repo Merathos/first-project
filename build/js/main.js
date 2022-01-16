@@ -1042,9 +1042,9 @@
         var projectTextLines = Math.ceil(
             projectTextHeight / projectTextLineHeight
         );
-
+        console.log(projectTextLines);
         // Максимально допустимое количество строк
-        var maxLinesAmount = 4;
+        var maxLinesAmount = 3;
 
         // Если в блоке есть заголовок, то максимальное количество строк отличается по макету, но в ТЗ речь про 3 при любых условиях
         if (project.querySelector('.proposal__project-title')) {
@@ -1084,6 +1084,42 @@
   (function () {
     return new window.Sticky('.js-project-page__panel');
   })();
+})();
+
+// Переключение вкладок в фильтре поиска шин - Параметры - по Марке
+'use strict';
+
+(function () {
+  var chooseTabs = function () {
+    var tabButton = document.querySelectorAll(".proposal__tab");
+    var tabItem = document.querySelectorAll(".proposal__tab-item");
+    var tabName;
+
+    tabButton.forEach(function (item) {
+      item.addEventListener('click', toggleTabs);
+    });
+
+    function toggleTabs() {
+      tabButton.forEach(function (item) {
+        item.classList.remove("proposal__tab--active");
+      });
+      this.classList.add("proposal__tab--active");
+      console.log(this);
+      tabName = this.getAttribute("data-tab-name");
+      selectTabContent(tabName);
+    }
+
+    function selectTabContent(tabName) {
+      tabItem.forEach(function (item) {
+        if (item.classList.value.includes(tabName)) {
+          item.classList.add("proposal__tab-item--active");
+        } else {
+          item.classList.remove("proposal__tab-item--active");
+        }
+      });
+    }
+  };
+  chooseTabs();
 })();
 
 'use strict';
