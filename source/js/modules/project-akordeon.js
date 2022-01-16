@@ -2,10 +2,14 @@
 (function () {
   var projectAkordeon = document.querySelectorAll('.proposal__project');
 
+  //console.log(projectGallery);
   if (projectAkordeon.length > 0) {
     projectAkordeon.forEach(function (project) {
       var projectText = project.querySelector('.proposal__project-text');
       var projectToggleTextButton = project.querySelector('.button-details');
+      //находит галереию в каждом проекте
+      var projectGallery = project.querySelector('.proposal__gallery');
+      console.log(projectGallery);
 
       if (projectText && projectToggleTextButton) {
 
@@ -40,7 +44,9 @@
           projectToggleTextButton.addEventListener('click', function (e) {
             e.currentTarget.classList.toggle('opened');
             projectText.classList.toggle('opened');
+            projectGallery.classList.toggle('opened');
             changeButtonText();
+            //console.log(projectGallery);
           });
         } else {
           project.classList.add('project_enough-lines_false');
