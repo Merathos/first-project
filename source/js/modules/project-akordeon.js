@@ -47,12 +47,7 @@
             projectText.classList.toggle('opened');
             projectGallery.classList.toggle('opened');
             changeButtonText();
-            var projectAkordeonOpened = document.querySelector('.proposal__project--opened');
-            if (projectAkordeonOpened) {
-              projectAkordeonOpened.classList.remove('proposal__project--opened');
-            } else {
-              e.currentTarget.classList.add('proposal__project--opened');
-            }
+            e.currentTarget.classList.toggle('proposal__project--opened');
           });
         } else {
           project.classList.add('project_enough-lines_false');

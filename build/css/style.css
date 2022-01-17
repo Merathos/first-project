@@ -5307,6 +5307,16 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .proposal__projects {
   grid-area: f; }
 
+.proposal__project--opened:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 483px;
+  background-color: #2c8ecc;
+  top: 30px;
+  left: 10px; }
+
 .proposal__like-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
