@@ -5304,6 +5304,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .proposal__tabs .proposal__tab:hover, .proposal__tabs .proposal__tab:focus {
       opacity: 0.7; } }
 
+.proposal__projects {
+  grid-area: f; }
+
 .proposal__project--opened:before {
   content: "";
   display: block;
