@@ -1170,15 +1170,21 @@
   grid-area: f;
 }
 
-.proposal__project--opened {
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 2px;
-    height: 483px;
-    background-color: $blue-default;
-    top: 30px;
-    left: 10px;
-  }
+// .proposal__project--opened {
+//   &:before {
+//     content: "";
+//     display: block;
+//     position: absolute;
+//     width: 2px;
+//     height: 483px;
+//     background-color: $blue-default;
+//     top: 30px;
+//     left: 10px;
+//   }
+// }
+
+.proposal__like-wrapper {
+  display: flex;
+  align-items: center;
+  display: none;
 }
