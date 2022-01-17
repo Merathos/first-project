@@ -28,13 +28,13 @@
               </svg>
               <span class="project-vote__expire-value">56 дней</span>&nbsp;до завершения
             </p>
-            <div class="project-vote__like-counter js-like-counter">
+            <div class="project-vote__like-counter">
               <span>Всего проголосовало: 504</spans=>
               <p>Выберите вариант дизайн-проекта для&nbsp;благоустройства территорий</p>
               <button type="button" class="button button--blue">ПРОГОЛОСОВАТЬ</button>
               <div class="project-vote__like-wrapper">
                 <div class="form-checkbox form-checkbox--round form-checkbox--white">
-                  <input type="checkbox" name="checkbox" id="checkbox-2" value="checkbox-2" checked>
+                  <input type="checkbox" name="checkbox" id="checkbox-2" value="checkbox-2" checked class="js-projects__item-link">
                   <label for="checkbox-2"></label>
                 </div>
                 <span>Ваш голос учтён</span>
@@ -180,7 +180,7 @@
             src="https://yandex.ru/map-widget/v1/?um=constructor%3A632dc64482e20035a9e82717af6071fd69e61f588fe2400013fa13d65e070cb6&amp;source=constructor" title="Интерактивная карта">
           </iframe>
         </div>
-        <div class="proposal__projects">
+        <div class="proposal__projects js-projects">
           <h2 class="subtitle subtitle--large">Выберите дизайн-проект для реализации этой&nbsp;территории</h2>
           <div class="proposal__project">
             <div class="proposal__project-wrapper">
@@ -687,6 +687,41 @@
               <use xlink:href="img/sprite.svg#icon-paginator-next"></use>
             </svg>
           </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="projects-popup projects-popup--proposal js-projects-popup popup js-popup">
+    <div class="popup__container">
+      <div class="popup__overlay js-popup__overlay"></div>
+      <div class="projects-popup__content popup__content">
+        <div class="popup__bar popup__bar--top">
+          <button class="popup__close-btn js-popup__close-btn" type="button">
+            <span class="visually-hidden">Закрыть</span>
+            <svg width="16" height="16">
+              <use xlink:href="img/sprite.svg#icon-cross"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="projects-popup__frame js-projects-popup__frame swiper-container"></div>
+        <p class="projects-popup__project-description js-projects-popup__project-description"></p>
+        <div class="popup__bar popup__bar--bottom">
+          <!-- <button class="gallery-popup__nav-btn gallery-popup__nav-btn--prev js-gallery-popup__nav-btn--prev"
+            type="button">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#icon-paginator-prev"></use>
+            </svg>
+          </button> -->
+          <p class="projects-popup__counter">
+            <span class="projects-popup__counter-current js-projects-popup__counter-current"></span>/<span
+              class="projects-popup__counter-total js-projects-popup__counter-total"></span>
+          </p>
+          <!-- <button class="gallery-popup__nav-btn gallery-popup__nav-btn--next js-gallery-popup__nav-btn--next"
+            type="button">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#icon-paginator-next"></use>
+            </svg>
+          </button> -->
         </div>
       </div>
     </div>

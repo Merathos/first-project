@@ -387,6 +387,7 @@
           <button aria-label="Дизайн-проекты" type="button" class="proposal__project-tab proposal__tab button" data-tab-name="projectstab">Дизайн-проекты</button>
           <button aria-label="Вехи реализации" type="button" class="proposal__milestones-tab proposal__tab proposal__tab--active button" data-tab-name="milestonestab">Вехи реализации</button>
         </div>
+
         <div class="proposal__projectstab proposal__tab-item">
           <div class="proposal__project">
             <div class="proposal__project-wrapper">
@@ -519,16 +520,16 @@
                 </div>
                 <span>Вы выбрали данный дизайн-проект</span>
               </div>
-              <button class="proposal__project-details button-details">
-                <span class="button-details__text">Подробнее</span>
-                <svg class="button-details__icon" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9833 0L7 4.97297L2.01667 0L0.5 1.51351L7 8L13.5 1.51351L11.9833 0Z" fill="#2C8ECC"></path>
-                </svg>
-              </button>
               <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
             </div>
+            <button class="proposal__project-details button-details">
+              <span class="button-details__text">Подробнее</span>
+              <svg class="button-details__icon" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9833 0L7 4.97297L2.01667 0L0.5 1.51351L7 8L13.5 1.51351L11.9833 0Z" fill="#2C8ECC"></path>
+              </svg>
+            </button>
           </div>
-          <div class="proposal__project proposal__project--open">
+          <div class="proposal__project">
             <div class="proposal__project-wrapper">
               <div class="form-radio">
                 <input type="radio" name="radio" id="radio-2" value="radio-2" checked="">
@@ -660,15 +661,15 @@
                 </div>
                 <span>Вы выбрали данный дизайн-проект</span>
               </div>
+            </div>
             <button class="proposal__project-details button-details">
-              <span class="button-details__text">Подробнее</span>
+              <span class="button-details__text button-details__text">Подробнее</span>
               <svg class="button-details__icon" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9833 0L7 4.97297L2.01667 0L0.5 1.51351L7 8L13.5 1.51351L11.9833 0Z" fill="#2C8ECC"></path>
                 </svg>
             </button>
-            </div>
           </div>
-          <div class="proposal__project proposal__project--close">
+          <div class="proposal__project">
             <div class="proposal__project-wrapper">
               <div class="form-radio">
                 <input type="radio" name="radio" id="radio-3" value="radio-3">
@@ -800,20 +801,20 @@
                 </div>
                 <span>Вы выбрали данный дизайн-проект</span>
               </div>
-                <button class="proposal__project-details button-details">
-                  <span class="button-details__text">Подробнее</span>
-                    <svg class="button-details__icon" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9833 0L7 4.97297L2.01667 0L0.5 1.51351L7 8L13.5 1.51351L11.9833 0Z" fill="#2C8ECC"></path>
-                    </svg>
-                </button>
             </div>
+            <button class="proposal__project-details button-details">
+              <span class="button-details__text">Подробнее</span>
+                <svg class="button-details__icon" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9833 0L7 4.97297L2.01667 0L0.5 1.51351L7 8L13.5 1.51351L11.9833 0Z" fill="#2C8ECC"></path>
+                </svg>
+            </button>
           </div>
         </div>
         <div class="proposal__milestonestab proposal__tab-item proposal__tab-item--active">
-          <div class="proposal__milestones-item">
+          <div class="proposal__milestones-item proposal__project">
             <time>2021-12-12</time>
             <h3>Очистка территории</h3>
-            <p>Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста- заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения. В случае произвольного набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных шрифтов, а также от распределения</p>
+            <p class="proposal__project-text">Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста- заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения. В случае произвольного набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных шрифтов, а также от распределения</p>
               <div class="proposal__gallery gallery js-gallery swiper-container swiper-container-initialized swiper-container-horizontal" style="cursor: grab;">
               <div class="gallery__tape swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
                 <div class="swiper-slide swiper-slide-active" style="margin-right: 16px;">
@@ -921,10 +922,10 @@
               </svg>
             </button>
           </div>
-          <div class="proposal__milestones-item">
+          <div class="proposal__milestones-item proposal__project">
             <time>2021-12-12</time>
             <h3>Очистка территории</h3>
-            <p>Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста- заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения. В случае произвольного набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных шрифтов, а также от распределения</p>
+            <p class="proposal__project-text">Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста- заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения. В случае произвольного набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных шрифтов, а также от распределения</p>
               <div class="proposal__gallery gallery js-gallery swiper-container swiper-container-initialized swiper-container-horizontal" style="cursor: grab;">
               <div class="gallery__tape swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
                 <div class="swiper-slide swiper-slide-active" style="margin-right: 16px;">
@@ -1032,10 +1033,10 @@
               </svg>
             </button>
           </div>
-          <div class="proposal__milestones-item">
+          <div class="proposal__milestones-item proposal__project">
             <time>2021-12-12</time>
             <h3>Очистка территории</h3>
-            <p>Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста- заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения. В случае произвольного набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных шрифтов, а также от распределения</p>
+            <p class="proposal__project-text">Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста- заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения. В случае произвольного набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных шрифтов, а также от распределения</p>
               <div class="proposal__gallery gallery js-gallery swiper-container swiper-container-initialized swiper-container-horizontal" style="cursor: grab;">
               <div class="gallery__tape swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
                 <div class="swiper-slide swiper-slide-active" style="margin-right: 16px;">
@@ -1144,379 +1145,7 @@
             </button>
           </div>
         </div>
-        <!-- <div class="proposal__projects-milestones">
-          <div class="proposal__tabs"><div class="proposal__projects-tab">Дизайн-проекты</div><div class="proposal__milestones-tab proposal__milestones-tab--active">Вехи реализации</div></div>
-            <div class="proposal__milestones-item">
-              <time>2021-12-12</time>
-              <h3>Очистка территории</h3>
-              <p>Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста- заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения. В случае произвольного набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных шрифтов, а также от распределения</p>
-                <div
-                class="proposal__gallery gallery js-gallery swiper-container swiper-container-initialized swiper-container-horizontal"
-                style="cursor: grab;">
-                <div class="gallery__tape swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
-                  <div class="swiper-slide swiper-slide-active" style="margin-right: 16px;">
-                    <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-1@2x.png" target="_blank"
-                      aria-label="описание картинки" data-index="0">
-                      <figure class="gallery__item">
-                        <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-1@2x.png"
-                          alt="описание картинки">
-                        <figcaption class="gallery__item-text">
-                          Описание, текст до 500 символов. Рыбным текстом
-                          называется текст, служащий для временного наполнения
-                          макета в публикациях или производстве веб-сайтов, пока
-                          финальный текст еще не создан. Рыбный текст также
-                          известен как текст- заполнитель или. Рыбные тексты также
-                          применяются для демонстрации различных видов шрифта и в
-                          разработке макетов. Как правило их содержание
-                          бессмысленно. По причине своей функции
-                          текста-заполнителя для макетов нечитабельность рыбных
-                          текстов имеет особое значение, во всех.
-                        </figcaption>
-                      </figure>
-                    </a>
-                  </div>
-                  <div class="swiper-slide swiper-slide-next" style="margin-right: 16px;">
-                    <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-2@2x.png" target="_blank"
-                      aria-label="описание картинки" data-index="1">
-                      <figure class="gallery__item">
-                        <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-2@2x.png"
-                          alt="описание картинки">
-                        <figcaption class="gallery__item-text">
-                          Самый известный текст-«рыба», называемый Lorem ipsum,
-                          имеет свои корни в 16-том веке. Lorem ipsum был создан
-                          на псевдо-латыни, которая приблизительно соответствует
-                          настоящей латыни. Этот текст содержит ряд настоящих
-                          латинских слов. Как и большинство других текстов, Lorem
-                          ipsum не имеет смысла, а лишь имитирует ритм большинства
-                          европейских языков использующих латиницу. Латинское
-                          происхождение и относительная бессмысленность текста
-                          Lorem ipsum хороши тем, что не привлекают к себе
-                          внимания и не отвлекают от дизайна.
-                        </figcaption>
-                      </figure>
-                    </a>
-                  </div>
-                  <div class="swiper-slide" style="margin-right: 16px;">
-                    <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-3@2x.png" target="_blank"
-                      aria-label="описание картинки" data-index="2">
-                      <figure class="gallery__item">
-                        <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-3@2x.png"
-                          alt="описание картинки">
-                        <figcaption class="gallery__item-text">
-                          Описание, текст до 500 символов. Рыбным текстом
-                          называется текст, служащий для временного наполнения
-                          макета в публикациях или производстве веб-сайтов, пока
-                          финальный текст еще не создан. Рыбный текст также
-                          известен как текст- заполнитель или. Рыбные тексты также
-                          применяются для демонстрации различных видов шрифта и в
-                          разработке макетов. Как правило их содержание
-                          бессмысленно. По причине своей функции
-                          текста-заполнителя для макетов нечитабельность рыбных
-                          текстов имеет особое значение, во всех.
-                        </figcaption>
-                      </figure>
-                    </a>
-                  </div>
-                  <div class="swiper-slide" style="margin-right: 16px;">
-                    <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-4@2x.png" target="_blank"
-                      aria-label="описание картинки" data-index="3">
-                      <figure class="gallery__item">
-                        <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-4@2x.png"
-                          alt="описание картинки">
-                        <figcaption class="gallery__item-text">
-                          Самый известный текст-«рыба», называемый Lorem ipsum,
-                          имеет свои корни в 16-том веке. Lorem ipsum был создан
-                          на псевдо-латыни, которая приблизительно соответствует
-                          настоящей латыни. Этот текст содержит ряд настоящих
-                          латинских слов. Как и большинство других текстов, Lorem
-                          ipsum не имеет смысла, а лишь имитирует ритм большинства
-                          европейских языков использующих латиницу. Латинское
-                          происхождение и относительная бессмысленность текста
-                          Lorem ipsum хороши тем, что не привлекают к себе
-                          внимания и не отвлекают от дизайна.
-                        </figcaption>
-                      </figure>
-                    </a>
-                  </div>
-                  <div class="swiper-slide" style="margin-right: 16px;">
-                    <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-5@2x.png" target="_blank"
-                      aria-label="описание картинки" data-index="4">
-                      <figure class="gallery__item">
-                        <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-5@2x.png"
-                          alt="описание картинки">
-                        <figcaption class="gallery__item-text">
-                          Описание, текст до 500 символов. Рыбным текстом
-                          называется текст, служащий для временного наполнения
-                          макета в публикациях или производстве веб-сайтов, пока
-                          финальный текст еще не создан. Рыбный текст также
-                          известен как текст- заполнитель или. Рыбные тексты также
-                          применяются для демонстрации различных видов шрифта и в
-                          разработке макетов. Как правило их содержание
-                          бессмысленно. По причине своей функции
-                          текста-заполнителя для макетов нечитабельность рыбных
-                          текстов имеет особое значение, во всех.
-                        </figcaption>
-                      </figure>
-                    </a>
-                  </div>
-                </div>
-                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-              </div>
-              <button class="proposal__milestones-details button-details">
-                <span class="button-details__text">Подробнее</span>
-                <svg class="button-details__icon" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9833 0L7 4.97297L2.01667 0L0.5 1.51351L7 8L13.5 1.51351L11.9833 0Z" fill="#2C8ECC"/>
-                </svg>
-              </button>
-            </div>
-            <div class="proposal__milestones-item">
-              <time>2021-12-12</time>
-              <h3>Очистка территории</h3>
-              <p>Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста- заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения. В случае произвольного набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных шрифтов, а также от распределения</p>
-                <div
-                class="proposal__gallery gallery js-gallery swiper-container swiper-container-initialized swiper-container-horizontal"
-                style="cursor: grab;">
-                <div class="gallery__tape swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
-                  <div class="swiper-slide swiper-slide-active" style="margin-right: 16px;">
-                    <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-1@2x.png" target="_blank"
-                      aria-label="описание картинки" data-index="0">
-                      <figure class="gallery__item">
-                        <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-1@2x.png"
-                          alt="описание картинки">
-                        <figcaption class="gallery__item-text">
-                          Описание, текст до 500 символов. Рыбным текстом
-                          называется текст, служащий для временного наполнения
-                          макета в публикациях или производстве веб-сайтов, пока
-                          финальный текст еще не создан. Рыбный текст также
-                          известен как текст- заполнитель или. Рыбные тексты также
-                          применяются для демонстрации различных видов шрифта и в
-                          разработке макетов. Как правило их содержание
-                          бессмысленно. По причине своей функции
-                          текста-заполнителя для макетов нечитабельность рыбных
-                          текстов имеет особое значение, во всех.
-                        </figcaption>
-                      </figure>
-                    </a>
-                  </div>
-                  <div class="swiper-slide swiper-slide-next" style="margin-right: 16px;">
-                    <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-2@2x.png" target="_blank"
-                      aria-label="описание картинки" data-index="1">
-                      <figure class="gallery__item">
-                        <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-2@2x.png"
-                          alt="описание картинки">
-                        <figcaption class="gallery__item-text">
-                          Самый известный текст-«рыба», называемый Lorem ipsum,
-                          имеет свои корни в 16-том веке. Lorem ipsum был создан
-                          на псевдо-латыни, которая приблизительно соответствует
-                          настоящей латыни. Этот текст содержит ряд настоящих
-                          латинских слов. Как и большинство других текстов, Lorem
-                          ipsum не имеет смысла, а лишь имитирует ритм большинства
-                          европейских языков использующих латиницу. Латинское
-                          происхождение и относительная бессмысленность текста
-                          Lorem ipsum хороши тем, что не привлекают к себе
-                          внимания и не отвлекают от дизайна.
-                        </figcaption>
-                      </figure>
-                    </a>
-                  </div>
-                  <div class="swiper-slide" style="margin-right: 16px;">
-                    <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-3@2x.png" target="_blank"
-                      aria-label="описание картинки" data-index="2">
-                      <figure class="gallery__item">
-                        <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-3@2x.png"
-                          alt="описание картинки">
-                        <figcaption class="gallery__item-text">
-                          Описание, текст до 500 символов. Рыбным текстом
-                          называется текст, служащий для временного наполнения
-                          макета в публикациях или производстве веб-сайтов, пока
-                          финальный текст еще не создан. Рыбный текст также
-                          известен как текст- заполнитель или. Рыбные тексты также
-                          применяются для демонстрации различных видов шрифта и в
-                          разработке макетов. Как правило их содержание
-                          бессмысленно. По причине своей функции
-                          текста-заполнителя для макетов нечитабельность рыбных
-                          текстов имеет особое значение, во всех.
-                        </figcaption>
-                      </figure>
-                    </a>
-                  </div>
-                  <div class="swiper-slide" style="margin-right: 16px;">
-                    <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-4@2x.png" target="_blank"
-                      aria-label="описание картинки" data-index="3">
-                      <figure class="gallery__item">
-                        <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-4@2x.png"
-                          alt="описание картинки">
-                        <figcaption class="gallery__item-text">
-                          Самый известный текст-«рыба», называемый Lorem ipsum,
-                          имеет свои корни в 16-том веке. Lorem ipsum был создан
-                          на псевдо-латыни, которая приблизительно соответствует
-                          настоящей латыни. Этот текст содержит ряд настоящих
-                          латинских слов. Как и большинство других текстов, Lorem
-                          ipsum не имеет смысла, а лишь имитирует ритм большинства
-                          европейских языков использующих латиницу. Латинское
-                          происхождение и относительная бессмысленность текста
-                          Lorem ipsum хороши тем, что не привлекают к себе
-                          внимания и не отвлекают от дизайна.
-                        </figcaption>
-                      </figure>
-                    </a>
-                  </div>
-                  <div class="swiper-slide" style="margin-right: 16px;">
-                    <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-5@2x.png" target="_blank"
-                      aria-label="описание картинки" data-index="4">
-                      <figure class="gallery__item">
-                        <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-5@2x.png"
-                          alt="описание картинки">
-                        <figcaption class="gallery__item-text">
-                          Описание, текст до 500 символов. Рыбным текстом
-                          называется текст, служащий для временного наполнения
-                          макета в публикациях или производстве веб-сайтов, пока
-                          финальный текст еще не создан. Рыбный текст также
-                          известен как текст- заполнитель или. Рыбные тексты также
-                          применяются для демонстрации различных видов шрифта и в
-                          разработке макетов. Как правило их содержание
-                          бессмысленно. По причине своей функции
-                          текста-заполнителя для макетов нечитабельность рыбных
-                          текстов имеет особое значение, во всех.
-                        </figcaption>
-                      </figure>
-                    </a>
-                  </div>
-                </div>
-                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-              </div>
-              <button class="proposal__milestones-details button-details">
-                <span class="button-details__text">Подробнее</span>
-                <svg class="button-details__icon" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9833 0L7 4.97297L2.01667 0L0.5 1.51351L7 8L13.5 1.51351L11.9833 0Z" fill="#2C8ECC"/>
-                </svg>
-              </button>
-            </div>
-            <div class="proposal__milestones-item">
-              <time>2021-12-12</time>
-              <h3>Очистка территории</h3>
-              <p>Рыбные тексты также применяются для демонстрации различных видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей функции текста- заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так как человеческое восприятие имеет особенность, распознавать определенные образцы и повторения. В случае произвольного набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных шрифтов, а также от распределения</p>
-                <div
-                class="proposal__gallery gallery js-gallery swiper-container swiper-container-initialized swiper-container-horizontal"
-                style="cursor: grab;">
-                <div class="gallery__tape swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
-                  <div class="swiper-slide swiper-slide-active" style="margin-right: 16px;">
-                    <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-1@2x.png" target="_blank"
-                      aria-label="описание картинки" data-index="0">
-                      <figure class="gallery__item">
-                        <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-1@2x.png"
-                          alt="описание картинки">
-                        <figcaption class="gallery__item-text">
-                          Описание, текст до 500 символов. Рыбным текстом
-                          называется текст, служащий для временного наполнения
-                          макета в публикациях или производстве веб-сайтов, пока
-                          финальный текст еще не создан. Рыбный текст также
-                          известен как текст- заполнитель или. Рыбные тексты также
-                          применяются для демонстрации различных видов шрифта и в
-                          разработке макетов. Как правило их содержание
-                          бессмысленно. По причине своей функции
-                          текста-заполнителя для макетов нечитабельность рыбных
-                          текстов имеет особое значение, во всех.
-                        </figcaption>
-                      </figure>
-                    </a>
-                  </div>
-                  <div class="swiper-slide swiper-slide-next" style="margin-right: 16px;">
-                    <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-2@2x.png" target="_blank"
-                      aria-label="описание картинки" data-index="1">
-                      <figure class="gallery__item">
-                        <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-2@2x.png"
-                          alt="описание картинки">
-                        <figcaption class="gallery__item-text">
-                          Самый известный текст-«рыба», называемый Lorem ipsum,
-                          имеет свои корни в 16-том веке. Lorem ipsum был создан
-                          на псевдо-латыни, которая приблизительно соответствует
-                          настоящей латыни. Этот текст содержит ряд настоящих
-                          латинских слов. Как и большинство других текстов, Lorem
-                          ipsum не имеет смысла, а лишь имитирует ритм большинства
-                          европейских языков использующих латиницу. Латинское
-                          происхождение и относительная бессмысленность текста
-                          Lorem ipsum хороши тем, что не привлекают к себе
-                          внимания и не отвлекают от дизайна.
-                        </figcaption>
-                      </figure>
-                    </a>
-                  </div>
-                  <div class="swiper-slide" style="margin-right: 16px;">
-                    <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-3@2x.png" target="_blank"
-                      aria-label="описание картинки" data-index="2">
-                      <figure class="gallery__item">
-                        <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-3@2x.png"
-                          alt="описание картинки">
-                        <figcaption class="gallery__item-text">
-                          Описание, текст до 500 символов. Рыбным текстом
-                          называется текст, служащий для временного наполнения
-                          макета в публикациях или производстве веб-сайтов, пока
-                          финальный текст еще не создан. Рыбный текст также
-                          известен как текст- заполнитель или. Рыбные тексты также
-                          применяются для демонстрации различных видов шрифта и в
-                          разработке макетов. Как правило их содержание
-                          бессмысленно. По причине своей функции
-                          текста-заполнителя для макетов нечитабельность рыбных
-                          текстов имеет особое значение, во всех.
-                        </figcaption>
-                      </figure>
-                    </a>
-                  </div>
-                  <div class="swiper-slide" style="margin-right: 16px;">
-                    <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-4@2x.png" target="_blank"
-                      aria-label="описание картинки" data-index="3">
-                      <figure class="gallery__item">
-                        <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-4@2x.png"
-                          alt="описание картинки">
-                        <figcaption class="gallery__item-text">
-                          Самый известный текст-«рыба», называемый Lorem ipsum,
-                          имеет свои корни в 16-том веке. Lorem ipsum был создан
-                          на псевдо-латыни, которая приблизительно соответствует
-                          настоящей латыни. Этот текст содержит ряд настоящих
-                          латинских слов. Как и большинство других текстов, Lorem
-                          ipsum не имеет смысла, а лишь имитирует ритм большинства
-                          европейских языков использующих латиницу. Латинское
-                          происхождение и относительная бессмысленность текста
-                          Lorem ipsum хороши тем, что не привлекают к себе
-                          внимания и не отвлекают от дизайна.
-                        </figcaption>
-                      </figure>
-                    </a>
-                  </div>
-                  <div class="swiper-slide" style="margin-right: 16px;">
-                    <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-5@2x.png" target="_blank"
-                      aria-label="описание картинки" data-index="4">
-                      <figure class="gallery__item">
-                        <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-5@2x.png"
-                          alt="описание картинки">
-                        <figcaption class="gallery__item-text">
-                          Описание, текст до 500 символов. Рыбным текстом
-                          называется текст, служащий для временного наполнения
-                          макета в публикациях или производстве веб-сайтов, пока
-                          финальный текст еще не создан. Рыбный текст также
-                          известен как текст- заполнитель или. Рыбные тексты также
-                          применяются для демонстрации различных видов шрифта и в
-                          разработке макетов. Как правило их содержание
-                          бессмысленно. По причине своей функции
-                          текста-заполнителя для макетов нечитабельность рыбных
-                          текстов имеет особое значение, во всех.
-                        </figcaption>
-                      </figure>
-                    </a>
-                  </div>
-                </div>
-                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-              </div>
-              <button class="proposal__milestones-details button-details">
-                <span class="button-details__text">Подробнее</span>
-                <svg class="button-details__icon" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9833 0L7 4.97297L2.01667 0L0.5 1.51351L7 8L13.5 1.51351L11.9833 0Z" fill="#2C8ECC"/>
-                </svg>
-              </button>
-            </div>
-        </div> -->
-        <div class="proposal__button-wrapper">
+            <div class="proposal__button-wrapper">
           <a class="button button--light-blue" href="#">
             <span>к списку предложений</span>
           </a>

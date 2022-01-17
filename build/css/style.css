@@ -4754,7 +4754,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   grid-area: g; }
 
 .proposal--approved .proposal__milestonestab {
-  grid-area: h; }
+  grid-area: h;
+  grid-area: g; }
 
 .proposal--approved .proposal__button-wrapper {
   justify-self: start;
@@ -5227,12 +5228,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .proposal__tabs {
   grid-area: f; }
 
-.proposal__milestones {
-  grid-area: g; }
-
-.proposal__projects {
-  grid-area: h; }
-
 .proposal__milestones-item {
   padding-bottom: 32px; }
 
@@ -5268,9 +5263,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-bottom: 40px; }
 
 .proposal__tab-item {
-  display: none; }
+  visibility: hidden; }
   .proposal__tab-item--active {
-    display: block; }
+    visibility: visible; }
 
 .proposal__tabs .proposal__tab {
   border-radius: 0;

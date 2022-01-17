@@ -6,6 +6,7 @@
   if (projectAkordeon.length > 0) {
     projectAkordeon.forEach(function (project) {
       var projectText = project.querySelector('.proposal__project-text');
+      console.log(projectText.getBoundingClientRect());
       var projectToggleTextButton = project.querySelector('.button-details');
       //находит галереию в каждом проекте
       var projectGallery = project.querySelector('.proposal__gallery');
@@ -29,7 +30,7 @@
         var projectTextLines = Math.ceil(
             projectTextHeight / projectTextLineHeight
         );
-        console.log(projectTextLines);
+        //console.log(projectTextLines);
         // Максимально допустимое количество строк
         var maxLinesAmount = 3;
 
