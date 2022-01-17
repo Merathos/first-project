@@ -1119,8 +1119,9 @@
             changeButtonText();
             var projectAkordeonOpened = document.querySelector('.proposal__project--opened');
             if (projectAkordeonOpened) {
-              projectAkordeonOpened.classList.toggle('.proposal__project--opened');
-              console.log(projectAkordeonOpened);
+              projectAkordeonOpened.classList.remove('proposal__project--opened');
+            } else {
+              e.currentTarget.classList.add('proposal__project--opened');
             }
           });
         } else {
