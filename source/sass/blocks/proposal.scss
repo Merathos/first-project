@@ -382,6 +382,7 @@
 
   .proposal__milestonestab {
     grid-area: h;
+    grid-area: g;
   }
 
   .proposal__button-wrapper {
@@ -936,7 +937,6 @@
 
   //кнопка подробнее-свернуть
   .button-details {
-    //position: absolute;
     margin-left: 30px;
     align-self: start;
     display: block;
@@ -945,13 +945,9 @@
     border: none;
     outline: none;
     background-color: transparent;
-    //margin-left: 0;
     z-index: 1;
     position: absolute;
     bottom: 30px;
-    //bottom: 0;
-    //bottom: -30px;
-    //left: 30px;
 
     &__text {
       margin-right: 9px;
@@ -1039,13 +1035,15 @@
   grid-area: f;
 }
 
-.proposal__milestones {
-  grid-area: g;
-}
+// .proposal__milestones {
+//   grid-area: g;
+//   //grid-area: h;
+// }
 
-.proposal__projects {
-  grid-area: h;
-}
+// .proposal__projects {
+//   grid-area: h;
+//   grid-area: g;
+// }
 
 .proposal__milestones-item {
   padding-bottom: 32px;
@@ -1099,10 +1097,12 @@
 }
 
 .proposal__tab-item {
-  display: none;
+  //display: none;
+  visibility: hidden;
 
   &--active {
-    display: block;
+    //display: block;
+    visibility: visible;
   }
 }
 

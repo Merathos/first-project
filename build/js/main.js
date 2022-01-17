@@ -972,6 +972,59 @@
 
 'use strict';
 
+(function () {
+  var popups = document.querySelectorAll('.js-popup');
+
+
+  window.openPopup = function (popup) {
+    window.bodyScrollLock.disableBodyScroll(popup);
+    popup.classList.add('popup--shown');
+  };
+
+  var closePopup = function (popup) {
+    window.bodyScrollLock.enableBodyScroll(popup);
+    popup.classList.remove('popup--shown');
+  };
+
+  var onEscPress = function (evt, popup) {
+    if (evt.keyCode === window.const.keyCode.ESC && popup.classList.contains('popup--shown')) {
+      evt.preventDefault();
+
+      closePopup(popup);
+    }
+  };
+
+
+  popups.forEach(function (popup) {
+    var overlay = popup.querySelector('.js-popup__overlay');
+    var closeBtn = popup.querySelector('.js-popup__close-btn');
+
+
+    overlay.addEventListener('click', function () {
+      closePopup(popup);
+    });
+    closeBtn.addEventListener('click', function () {
+      closePopup(popup);
+    });
+
+    document.addEventListener('keydown', function (evt) {
+      onEscPress(evt, popup);
+    });
+  });
+
+  var onDocumentClick = function (evt) {
+    if (evt.target.classList.contains('js-projects__item-link')) {
+      evt.preventDefault();
+
+      window.openPopup(popup);
+    }
+  };
+
+  document.addEventListener('click', onDocumentClick);
+})();
+
+'use strict';
+
 
 (function () {
   var popups = document.querySelectorAll('.js-popup');
@@ -1023,6 +1076,7 @@
   if (projectAkordeon.length > 0) {
     projectAkordeon.forEach(function (project) {
       var projectText = project.querySelector('.proposal__project-text');
+      console.log(projectText.getBoundingClientRect());
       var projectToggleTextButton = project.querySelector('.button-details');
       //находит галереию в каждом проекте
       var projectGallery = project.querySelector('.proposal__gallery');
@@ -1046,7 +1100,7 @@
         var projectTextLines = Math.ceil(
             projectTextHeight / projectTextLineHeight
         );
-        console.log(projectTextLines);
+        //console.log(projectTextLines);
         // Максимально допустимое количество строк
         var maxLinesAmount = 3;
 
@@ -1110,7 +1164,7 @@
         item.classList.remove("proposal__tab--active");
       });
       this.classList.add("proposal__tab--active");
-      console.log(this);
+      //console.log(this);
       tabName = this.getAttribute("data-tab-name");
       selectTabContent(tabName);
     }

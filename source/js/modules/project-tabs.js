@@ -16,7 +16,7 @@
         item.classList.remove("proposal__tab--active");
       });
       this.classList.add("proposal__tab--active");
-      console.log(this);
+      //console.log(this);
       tabName = this.getAttribute("data-tab-name");
       selectTabContent(tabName);
     }
