@@ -777,6 +777,12 @@
       transform: rotate(-180deg);
     }
   }
+
+  h3 {
+    font-size: 18px;
+    line-height: 23.4px;
+    font-weight: 400;
+  }
 }
 
 .proposal__project {
@@ -837,7 +843,7 @@
 
   .proposal__project-text {
     height: 2.6em;
-    height: 4.5em;
+    height: 4.3em;
     margin-bottom: 14px;
 
     @media (max-width: $mobile-max-width) {
@@ -948,6 +954,15 @@
     z-index: 1;
     position: absolute;
     bottom: 30px;
+
+    transition: opacity $trans--300;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 0.7;
+      }
+    }
 
     &__text {
       margin-right: 9px;
@@ -1115,12 +1130,36 @@
   background-color: transparent;
   font-size: 24px;
   line-height: 28.44px;
+  font-weight: 400;
   color: $grey;
   padding-bottom: 13px;
   margin-right: 40px;
   border-bottom: 1px solid transparent;
+  text-transform: none;
   &--active {
     border-bottom: 1px solid $blue-default;
     color: $blue-default;
+  }
+
+  transition: opacity $trans--300;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+  }
+}
+
+.proposal__project--opened {
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: 483px;
+    background-color: $blue-default;
+    top: 30px;
+    left: 10px;
   }
 }

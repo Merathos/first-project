@@ -2,15 +2,15 @@
 (function () {
   var projectAkordeon = document.querySelectorAll('.proposal__project');
 
-  //console.log(projectGallery);
+
   if (projectAkordeon.length > 0) {
     projectAkordeon.forEach(function (project) {
       var projectText = project.querySelector('.proposal__project-text');
-      console.log(projectText.getBoundingClientRect());
+
       var projectToggleTextButton = project.querySelector('.button-details');
       //находит галереию в каждом проекте
       var projectGallery = project.querySelector('.proposal__gallery');
-      console.log(projectGallery);
+
 
       if (projectText && projectToggleTextButton) {
 
@@ -30,7 +30,7 @@
         var projectTextLines = Math.ceil(
             projectTextHeight / projectTextLineHeight
         );
-        //console.log(projectTextLines);
+
         // Максимально допустимое количество строк
         var maxLinesAmount = 3;
 
@@ -47,7 +47,11 @@
             projectText.classList.toggle('opened');
             projectGallery.classList.toggle('opened');
             changeButtonText();
-            //console.log(projectGallery);
+            var projectAkordeonOpened = document.querySelector('.proposal__project--opened');
+            if (projectAkordeonOpened) {
+              projectAkordeonOpened.classList.toggle('.proposal__project--opened');
+              console.log(projectAkordeonOpened);
+            }
           });
         } else {
           project.classList.add('project_enough-lines_false');

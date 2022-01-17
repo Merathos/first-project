@@ -426,6 +426,13 @@
 
 .project-vote__like-counter .form-checkbox {
   margin-bottom: 0;
+
+  input[type="checkbox"]+label {
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+  }
 }
 
 .project-vote__rezult {
