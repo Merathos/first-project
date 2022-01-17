@@ -97,6 +97,11 @@
       color: $light-grey;
     }
   }
+
+  &--update {
+    font-size: 15px;
+    line-height: 20.25px;
+  }
 }
 
 @media print {
