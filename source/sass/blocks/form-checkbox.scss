@@ -100,16 +100,3 @@
     }
   }
 }
-
-.form-checkbox--white input[type="checkbox"]:checked ~ label{
-  &::before {
-    background-color: $white;
-    border: 1px solid $blue-accent;
-  }
-  &::after {
-    display: block;
-    top: 5px;
-    left: 4px;
-    background-image: url("../img/icon-tick.svg");
-  }
-}

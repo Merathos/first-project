@@ -376,11 +376,29 @@
 
   .proposal__projectstab {
     grid-area: g;
+
+    @media (max-width: $desktop-width - 1) {
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+    @media (max-width: $mobile-max-width) {
+      margin-left: 16px;
+      margin-right: 16px;
+    }
   }
 
   .proposal__milestonestab {
     grid-area: g;
     margin-bottom: 50px;
+
+    @media (max-width: $desktop-width - 1) {
+      margin-left: 24px;
+      margin-right: 24px;
+    }
+    @media (max-width: $mobile-max-width) {
+      margin-left: 16px;
+      margin-right: 16px;
+    }
   }
 
   .proposal__button-wrapper {
@@ -708,6 +726,7 @@
       margin-left: unset;
       width: 100%;
       order: 1;
+      margin-bottom: 24px;
     }
   }
 
@@ -749,8 +768,14 @@
   .proposal__gallery {
     padding-left: 32px;
 
+    @media (max-width: $tablet-width) {
+      padding-left: 0;
+      width: 100%;
+    }
+
     @media (max-width: $mobile-max-width) {
       padding-left: 0;
+      width: 100%;
     }
   }
   .proposal__project-details {
@@ -770,6 +795,14 @@
     .swiper-slide {
       width: 135px;
       height: 135px;
+    }
+  }
+  .gallery__tape .swiper-slide:first-child {
+    @media (max-width: $tablet-width) {
+      padding-left: 0;
+    }
+    @media (max-width: $mobile-max-width) {
+      padding-left: 0;
     }
   }
 }
@@ -805,6 +838,10 @@
   border-bottom: 1px solid $light-grey;
   margin-bottom: 33px;
   position: relative;
+
+  @media (max-width: $mobile-max-width) {
+    padding-bottom: 60px;
+  }
 
   .proposal__gallery {
     display: none;
@@ -861,6 +898,7 @@
 
     @media (max-width: $mobile-max-width) {
       height: 8em;
+      height: 4.2em;
       margin-bottom: 9px;
     }
 
@@ -968,6 +1006,13 @@
     position: absolute;
     bottom: 30px;
 
+    @media (max-width: $mobile-max-width) {
+      //bottom: 0;
+      left: 0;
+      margin-left: 0;
+      //margin-bottom: 30px;
+    }
+
     transition: opacity $trans--300;
 
     @media (hover: hover), screen and (min-width: 0\0) {
@@ -995,6 +1040,11 @@
 
     &.opened {
       position: unset;
+
+      @media (max-width: $mobile-max-width) {
+        margin-left: 0;
+      }
+
       .button-details__text_opened {
         display: inline-block;
       }
@@ -1022,6 +1072,16 @@
     padding-left: 32px;
 
     overflow: hidden;
+
+    @media (max-width: $tablet-width) {
+      padding-left: 0;
+      width: 100%;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      padding-left: 0;
+      width: 100%;
+    }
   }
 
   .proposal__project-text--stage {
@@ -1037,10 +1097,6 @@
     width: 100%;
     margin-right: 32px;
   }
-
-  @media (max-width: $tablet-width) {
-    // flex-direction: column-reverse;
-  }
 }
 
 .proposal__project-head {
@@ -1050,6 +1106,12 @@
   justify-content: unset;
 
   @media (max-width: $tablet-width) {
+    flex-direction: column;
+    //flex-wrap: wrap;
+    text-align: left;
+    align-items: baseline;
+  }
+  @media (max-width: $mobile-max-width) {
     flex-direction: column;
     //flex-wrap: wrap;
     text-align: left;
@@ -1069,6 +1131,10 @@
     line-height: 16.9px;
     color: $grey;
     margin-left: auto;
+    @media (max-width: $mobile-max-width) {
+      margin-right: auto;
+      margin-left: 32px;
+    }
   }
 
   .form-radio {
@@ -1079,6 +1145,16 @@
 
 .proposal__tabs {
   grid-area: f;
+
+  @media (max-width: $desktop-width - 1) {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-right: 16px;
+    margin-left: 16px;
+  }
 }
 
 // .proposal__milestones {
@@ -1208,6 +1284,10 @@
     margin: 0;
     margin-top: -5px;
     margin-bottom: 40px;
+
+    @media (max-width: $mobile-max-width) {
+      margin-bottom: 34px;
+    }
   }
 }
 
@@ -1221,6 +1301,11 @@
     background-color: $blue-default;
     top: 30px;
     left: 10px;
+    @media (max-width: $mobile-max-width) {
+      height: 770px;
+      left: -8px;
+      top: 0;
+    }
   }
 }
 
@@ -1234,4 +1319,8 @@
   &:before {
     display: none;
   }
+}
+
+.proposal__variant-wrapper {
+  display: flex;
 }
