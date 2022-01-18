@@ -99,8 +99,9 @@
   }
 
   &--update {
-    font-size: 15px;
-    line-height: 20.25px;
+    font-size: rem(15px);
+    line-height: rem(20.25px);
+    font-weight: 500;
   }
 }
 

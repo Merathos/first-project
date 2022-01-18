@@ -2289,8 +2289,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .button--grey:disabled {
       color: #e3e8ee; }
   .button--update {
-    font-size: 15px;
-    line-height: 20.25px; }
+    font-size: 0.9375rem;
+    line-height: 1.26563rem;
+    font-weight: 500; }
 
 @media print {
   .button {
@@ -2506,6 +2507,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .form-checkbox--white input[type="checkbox"]:checked ~ label::after {
   display: block;
+  top: 5px;
+  left: 4px;
   background-image: url("../img/icon-tick.svg"); }
 
 .form-radio {
@@ -4753,12 +4756,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       height: 288px; } }
 
 .proposal--approved .proposal__projectstab {
-  grid-area: f;
   grid-area: g; }
 
 .proposal--approved .proposal__milestonestab {
-  grid-area: h;
-  grid-area: g; }
+  grid-area: g;
+  margin-bottom: 50px; }
 
 .proposal--approved .proposal__button-wrapper {
   justify-self: start;
@@ -4984,8 +4986,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .proposal__project-wrapper .proposal__project-img,
   .proposal__project-wrapper .proposal__project-link,
   .proposal__project-wrapper .proposal__project-figure {
-    width: 240px;
-    height: 130px; }
+    width: 230px;
+    height: 140px; }
   @media (max-width: 400px) {
     .proposal__project-wrapper .proposal__project-link {
       width: 100%; } }
@@ -5034,7 +5036,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   height: 129px; }
 
 .proposal__project .proposal__gallery {
-  padding-left: 28px; }
+  padding-left: 32px; }
   @media (max-width: 400px) {
     .proposal__project .proposal__gallery {
       padding-left: 0; } }
@@ -5046,14 +5048,25 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     -webkit-transform: rotate(-180deg);
             transform: rotate(-180deg); }
 
+.proposal__project .proposal__gallery--stage {
+  padding-left: 0; }
+  .proposal__project .proposal__gallery--stage .gallery__item-link,
+  .proposal__project .proposal__gallery--stage .gallery__item,
+  .proposal__project .proposal__gallery--stage .swiper-slide {
+    width: 135px;
+    height: 135px; }
+
 .proposal__milestones-item .proposal__milestones-details {
-  margin-top: 32px;
+  margin-top: 26px;
   margin-left: 28px; }
   .proposal__milestones-item .proposal__milestones-details svg {
     -webkit-transform: rotate(-180deg);
             transform: rotate(-180deg); }
+  .proposal__milestones-item .proposal__milestones-details span {
+    margin-right: 0; }
 
 .proposal__milestones-item h3 {
+  margin: 0;
   font-size: 18px;
   line-height: 23.4px;
   font-weight: 400; }
@@ -5070,7 +5083,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
           flex-direction: column;
   padding-bottom: 32px;
   border-bottom: 1px solid #e3e8ee;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
   position: relative; }
   .proposal__project .proposal__gallery {
     display: none; }
@@ -5080,7 +5093,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     margin-top: 32px;
     -ms-flex-item-align: start;
         align-self: start;
-    display: block; }
+    display: block;
+    padding-top: 11px;
+    padding-bottom: 11px; }
   .proposal__project .proposal-list__like-counter {
     margin-top: 32px;
     display: -webkit-box;
@@ -5106,7 +5121,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .proposal__project .proposal__project-text {
     height: 2.6em;
     height: 4.3em;
-    margin-bottom: 14px; }
+    margin-bottom: 23px; }
     @media (max-width: 400px) {
       .proposal__project .proposal__project-text {
         height: 8em;
@@ -5176,7 +5191,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       .proposal__project .button-details:hover, .proposal__project .button-details:focus {
         opacity: 0.7; } }
     .proposal__project .button-details__text {
-      margin-right: 9px; }
+      margin-right: 0; }
       .proposal__project .button-details__text_opened {
         display: none; }
       .proposal__project .button-details__text_closed {
@@ -5193,15 +5208,21 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       .proposal__project .button-details.opened .button-details__icon {
         -webkit-transform: rotate(180deg);
                 transform: rotate(180deg); }
+  .proposal__project .proposal__milestones-details {
+    bottom: 22px; }
   .proposal__project .proposal__project-text {
     position: relative;
     color: #354052;
     font-size: 15px;
     line-height: 20.25px;
+    padding-left: 32px;
     overflow: hidden; }
+  .proposal__project .proposal__project-text--stage {
+    padding-left: 0;
+    margin-bottom: 30px; }
 
 .proposal__project-desc {
-  width: 438px; }
+  width: 470px; }
   @media (max-width: 1199px) {
     .proposal__project-desc {
       width: 100%;
@@ -5216,7 +5237,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset; }
   @media (max-width: 768px) {
     .proposal__project-head {
       -webkit-box-orient: vertical;
@@ -5236,7 +5260,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .proposal__project-head span {
     font-size: 13px;
     line-height: 16.9px;
-    color: #707b8c; }
+    color: #707b8c;
+    margin-left: auto; }
+  .proposal__project-head .form-radio {
+    margin-bottom: 0;
+    margin-right: 5px; }
 
 .proposal__tabs {
   grid-area: f; }
@@ -5268,12 +5296,18 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg); }
 
+.proposal__milestones-item time {
+  font-size: 0.875rem;
+  line-height: 1.1375rem;
+  font-weight: 500;
+  margin-bottom: 16px; }
+
 .proposal__tabs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   border-bottom: 1px solid #e3e8ee;
-  margin-bottom: 40px; }
+  margin-bottom: 38px; }
 
 .proposal__tab-item {
   visibility: hidden; }
@@ -5304,8 +5338,19 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .proposal__tabs .proposal__tab:hover, .proposal__tabs .proposal__tab:focus {
       opacity: 0.7; } }
 
+.proposal__tabs .proposal__tab--active {
+  cursor: unset; }
+  @media (hover: hover), screen and (min-width: 0\0) {
+    .proposal__tabs .proposal__tab--active:hover, .proposal__tabs .proposal__tab--active:focus {
+      opacity: 1; } }
+
 .proposal__projects {
-  grid-area: f; }
+  grid-area: f;
+  margin-bottom: 22px; }
+  .proposal__projects h2 {
+    margin: 0;
+    margin-top: -5px;
+    margin-bottom: 40px; }
 
 .proposal__project--opened:before {
   content: "";
@@ -5725,7 +5770,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     line-height: 130%; }
 
 .proposal-list__project-mark {
-  font-size: 14px; }
+  font-size: 0.875rem; }
   @media (min-width: 768px) {
     .proposal-list__project-mark {
       margin-right: 16px; } }
@@ -11947,6 +11992,26 @@ span.poll__hide {
     border-bottom: 1px dashed #2c8ecc; }
   .project-vote__like-wrapper .form-checkbox {
     margin-bottom: 0; }
+
+.project-vote__like-counter .form-checkbox--round label::before {
+  width: 20px;
+  height: 20px;
+  border-radius: 100px; }
+
+.project-vote__like-counter .form-checkbox--round label::after {
+  display: block;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  top: 0;
+  left: -2px;
+  background-image: url("../img/checkbox-grey.svg"); }
+
+.project-vote__like-counter .form-checkbox--white span {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20.25px;
+  color: #2c8ecc;
+  border-bottom: 1px dashed #2c8ecc; }
 
 .vote-results__output {
   display: -webkit-box;

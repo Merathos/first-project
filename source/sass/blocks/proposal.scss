@@ -375,21 +375,16 @@
   }
 
   .proposal__projectstab {
-    grid-area: f;
     grid-area: g;
-    //grid-area: h;
   }
 
   .proposal__milestonestab {
-    grid-area: h;
     grid-area: g;
+    margin-bottom: 50px;
   }
 
   .proposal__button-wrapper {
     justify-self: start;
-    //grid-area: f;
-    //grid-area: g;
-    //grid-area: h;
     grid-area: j;
 
     @media (max-width: $desktop-width - 1) {
@@ -686,8 +681,8 @@
   .proposal__project-img,
   .proposal__project-link,
   .proposal__project-figure {
-    width: 240px;
-    height: 130px;
+    width: 230px;
+    height: 140px;
   }
 
   .proposal__project-link {
@@ -752,7 +747,7 @@
 
 .proposal__project {
   .proposal__gallery {
-    padding-left: 28px;
+    padding-left: 32px;
 
     @media (max-width: $mobile-max-width) {
       padding-left: 0;
@@ -766,22 +761,39 @@
       transform: rotate(-180deg);
     }
   }
+
+  .proposal__gallery--stage {
+    padding-left: 0;
+
+    .gallery__item-link,
+    .gallery__item,
+    .swiper-slide {
+      width: 135px;
+      height: 135px;
+    }
+  }
 }
 
 .proposal__milestones-item {
   .proposal__milestones-details {
-    margin-top: 32px;
+    margin-top: 26px;
     margin-left: 28px;
 
     svg {
       transform: rotate(-180deg);
     }
+
+    span {
+      margin-right: 0;
+    }
   }
 
   h3 {
+    margin: 0;
     font-size: 18px;
     line-height: 23.4px;
     font-weight: 400;
+    //margin-top: 18px;
   }
 }
 
@@ -791,7 +803,7 @@
   flex-direction: column;
   padding-bottom: 32px;
   border-bottom: 1px solid $light-grey;
-  margin-bottom: 32px;
+  margin-bottom: 33px;
   position: relative;
 
   .proposal__gallery {
@@ -805,7 +817,8 @@
     margin-top: 32px;
     align-self: start;
     display: block;
-    //display: none;
+    padding-top: 11px;
+    padding-bottom: 11px;
   }
 
   //чекбокс выбранного проекта
@@ -844,7 +857,7 @@
   .proposal__project-text {
     height: 2.6em;
     height: 4.3em;
-    margin-bottom: 14px;
+    margin-bottom: 23px;
 
     @media (max-width: $mobile-max-width) {
       height: 8em;
@@ -965,7 +978,7 @@
     }
 
     &__text {
-      margin-right: 9px;
+      margin-right: 0;
 
       &_opened {
         display: none;
@@ -996,19 +1009,30 @@
     }
   }
 
+  .proposal__milestones-details {
+    bottom: 22px;
+  }
+
   // параграф описание проекта
   .proposal__project-text {
     position: relative;
     color: $dark-text;
     font-size: 15px;
     line-height: 20.25px;
+    padding-left: 32px;
 
     overflow: hidden;
+  }
+
+  .proposal__project-text--stage {
+    padding-left: 0;
+    margin-bottom: 30px;
   }
 }
 //описание с вариантом и 504
 .proposal__project-desc {
-  width: 438px;
+  width: 470px;
+
   @media (max-width: $desktop-width - 1) {
     width: 100%;
     margin-right: 32px;
@@ -1023,6 +1047,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  justify-content: unset;
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
@@ -1043,6 +1068,12 @@
     font-size: 13px;
     line-height: 16.9px;
     color: $grey;
+    margin-left: auto;
+  }
+
+  .form-radio {
+    margin-bottom: 0;
+    margin-right: 5px;
   }
 }
 
@@ -1103,12 +1134,19 @@
       }
     }
   }
+
+  time {
+    font-size:  rem(14px);
+    line-height: rem(18.2px);
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
 }
 
 .proposal__tabs {
   display: flex;
   border-bottom: 1px solid $light-grey;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 }
 
 .proposal__tab-item {
@@ -1136,6 +1174,7 @@
   margin-right: 40px;
   border-bottom: 1px solid transparent;
   text-transform: none;
+
   &--active {
     border-bottom: 1px solid $blue-default;
     color: $blue-default;
@@ -1151,23 +1190,25 @@
   }
 }
 
-// .proposal__project {
-//   &.opened {
-//     &:before {
-//       content: "";
-//       display: block;
-//       position: absolute;
-//       width: 2px;
-//       height: 483px;
-//       background-color: $blue-default;
-//       top: 30px;
-//       left: 10px;
-//     }
-//   }
-// }
+.proposal__tabs .proposal__tab--active {
+  cursor: unset;
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+}
 
 .proposal__projects {
   grid-area: f;
+  margin-bottom: 22px;
+
+  h2 {
+    margin: 0;
+    margin-top: -5px;
+    margin-bottom: 40px;
+  }
 }
 
 .proposal__project--opened {

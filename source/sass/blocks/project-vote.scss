@@ -464,3 +464,28 @@
     margin-bottom: 0;
   }
 }
+
+.project-vote__like-counter {
+  .form-checkbox--round label {
+    &::before {
+      width: 20px;
+      height: 20px;
+      border-radius: 100px;
+    }
+    &::after {
+      display: block;
+      transform: scale(0.8);
+      top: 0;
+      left: -2px;
+      background-image: url("../img/checkbox-grey.svg");
+    }
+  }
+
+  .form-checkbox--white span {
+    font-weight: 400;
+    font-size:  15px;
+    line-height: 20.25px;
+    color: $blue-default;
+    border-bottom: 1px dashed $blue-default;
+  }
+}
