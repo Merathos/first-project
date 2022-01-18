@@ -108,6 +108,8 @@
   }
   &::after {
     display: block;
+    top: 5px;
+    left: 4px;
     background-image: url("../img/icon-tick.svg");
   }
 }
