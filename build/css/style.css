@@ -5371,6 +5371,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
           align-items: center;
   display: none; }
 
+.proposal__milestones-details.proposal__project--opened:before {
+  display: none; }
+
 .comments-tab {
   height: 46px;
   overflow: hidden;

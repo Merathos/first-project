@@ -1229,3 +1229,9 @@
   align-items: center;
   display: none;
 }
+
+.proposal__milestones-details.proposal__project--opened {
+  &:before {
+    display: none;
+  }
+}
