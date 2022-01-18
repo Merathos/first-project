@@ -257,9 +257,9 @@
               <span>Всего проголосовало: 504</span>
               <p>Выберите вариант дизайн-проекта для&nbsp;благоустройства территорий</p>
               <button type="button" class="button button--blue button--update">ПРОГОЛОСОВАТЬ</button>
-              <div class="project-vote__like-wrapper">
-                <div class="form-checkbox form-checkbox--round form-checkbox--white">
-                  <input type="checkbox" name="checkbox" id="checkbox-1" value="checkbox-1" checked="" class="js-projects__item-link">
+              <div class="project-vote__like-wrapper ">
+                <div class="form-checkbox form-checkbox--round form-checkbox--white js-projects__item-link">
+                  <input type="checkbox" name="checkbox" id="checkbox-1" value="checkbox-1" checked="" disabled="">
                   <label for="checkbox-1"><span>Ваш голос учтён</span></label>
                 </div>
                 <!-- <span>Ваш голос учтён</span> -->
@@ -396,11 +396,13 @@
             <div class="proposal__project-wrapper">
               <div class="proposal__project-desc">
                 <div class="proposal__project-head">
-                  <div class="form-radio">
-                    <input type="radio" name="radio" id="radio-1" value="radio-1">
-                    <label for="radio-1"></label>
+                  <div class="proposal__variant-wrapper">
+                    <div class="form-radio">
+                      <input type="radio" name="radio" id="radio-1" value="radio-1">
+                      <label for="radio-1"></label>
+                    </div>
+                    <h3 class="proposal__project-title">Вариант №1</h3>
                   </div>
-                  <h3 class="proposal__project-title">Вариант №1</h3>
                   <span>Всего проголосовало: 504</span>
                 </div>
                 <p class="proposal__project-text">
@@ -536,11 +538,13 @@
             <div class="proposal__project-wrapper">
               <div class="proposal__project-desc">
                 <div class="proposal__project-head">
-                  <div class="form-radio">
-                    <input type="radio" name="radio" id="radio-2" value="radio-2" checked="">
-                    <label for="radio-2"></label>
+                  <div class="proposal__variant-wrapper">
+                    <div class="form-radio">
+                      <input type="radio" name="radio" id="radio-2" value="radio-2" checked="">
+                      <label for="radio-2"></label>
+                    </div>
+                    <h3 class="proposal__project-title">Вариант №2</h3>
                   </div>
-                  <h3 class="proposal__project-title">Вариант №2</h3>
                   <span>Всего проголосовало: 504</span>
                 </div>
                 <p class="proposal__project-text opened">
@@ -676,11 +680,13 @@
             <div class="proposal__project-wrapper">
               <div class="proposal__project-desc">
                 <div class="proposal__project-head">
-                  <div class="form-radio">
-                    <input type="radio" name="radio" id="radio-3" value="radio-3">
-                    <label for="radio-3"></label>
+                  <div class="proposal__variant-wrapper">
+                    <div class="form-radio">
+                      <input type="radio" name="radio" id="radio-3" value="radio-3">
+                      <label for="radio-3"></label>
+                    </div>
+                    <h3 class="proposal__project-title">Вариант №3</h3>
                   </div>
-                  <h3 class="proposal__project-title">Вариант №3</h3>
                   <span>Всего проголосовало: 504</span>
                 </div>
                 <p class="proposal__project-text">
@@ -894,16 +900,16 @@
           </button>
         </div>
         <div class="gallery-popup__frame js-gallery-popup__frame swiper-container"></div>
-        <p class="gallery-popup__photo-description js-gallery-popup__photo-description"></p>
-        <div class="popup__bar popup__bar--bottom">
-          <button class="gallery-popup__nav-btn gallery-popup__nav-btn--prev js-gallery-popup__nav-btn--prev" type="button">
-            <svg width="24" height="24">
-              <use xlink:href="img/sprite.svg#icon-paginator-prev"></use>
-            </svg>
-          </button>
-          <p class="gallery-popup__counter">
-            <span class="gallery-popup__counter-current js-gallery-popup__counter-current"></span>/<span class="gallery-popup__counter-total js-gallery-popup__counter-total"></span>
-          </p>
+          <p class="gallery-popup__photo-description js-gallery-popup__photo-description"></p>
+          <div class="popup__bar popup__bar--bottom">
+            <button class="gallery-popup__nav-btn gallery-popup__nav-btn--prev js-gallery-popup__nav-btn--prev" type="button">
+              <svg width="24" height="24">
+                <use xlink:href="img/sprite.svg#icon-paginator-prev"></use>
+              </svg>
+            </button>
+            <p class="gallery-popup__counter">
+              <span class="gallery-popup__counter-current js-gallery-popup__counter-current"></span>/<span class="gallery-popup__counter-total js-gallery-popup__counter-total"></span>
+            </p>
           <button class="gallery-popup__nav-btn gallery-popup__nav-btn--next js-gallery-popup__nav-btn--next" type="button">
             <svg width="24" height="24">
               <use xlink:href="img/sprite.svg#icon-paginator-next"></use>
@@ -925,25 +931,26 @@
             </svg>
           </button>
         </div>
-        <div class="projects-popup__frame js-projects-popup__frame swiper-container"></div>
-        <p class="projects-popup__project-description js-projects-popup__project-description"></p>
-        <div class="popup__bar popup__bar--bottom">
-          <!-- <button class="gallery-popup__nav-btn gallery-popup__nav-btn--prev js-gallery-popup__nav-btn--prev"
+        <div class="projects-popup__frame js-projects-popup__frame"></div>
+        <!-- <p class="projects-popup__project-description js-projects-popup__project-description"></p> -->
+        <!-- <div class="popup__bar popup__bar--bottom">
+          <button class="gallery-popup__nav-btn gallery-popup__nav-btn--prev js-gallery-popup__nav-btn--prev"
             type="button">
             <svg width="24" height="24">
               <use xlink:href="img/sprite.svg#icon-paginator-prev"></use>
             </svg>
-          </button> -->
+          </button>
           <p class="projects-popup__counter">
-            <span class="projects-popup__counter-current js-projects-popup__counter-current"></span>/<span class="projects-popup__counter-total js-projects-popup__counter-total"></span>
+            <span class="projects-popup__counter-current js-projects-popup__counter-current"></span>/<span
+              class="projects-popup__counter-total js-projects-popup__counter-total"></span>
           </p>
-          <!-- <button class="gallery-popup__nav-btn gallery-popup__nav-btn--next js-gallery-popup__nav-btn--next"
+          <button class="gallery-popup__nav-btn gallery-popup__nav-btn--next js-gallery-popup__nav-btn--next"
             type="button">
             <svg width="24" height="24">
               <use xlink:href="img/sprite.svg#icon-paginator-next"></use>
             </svg>
-          </button> -->
-        </div>
+          </button>
+        </div> -->
       </div>
     </div>
   </div>

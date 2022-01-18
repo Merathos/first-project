@@ -1,52 +1,39 @@
-'use strict';
+// 'use strict';
 
-(function () {
-  var popups = document.querySelectorAll('.js-popup');
+// (function () {
+//   //находит в разметке попапа в который будет вставляться блок проектов
+//   var popup = document.querySelectorAll('.js-projects-popup');
+//   //находит ссылку по которой будет клик
+//   var projectsLink = document.querySelector('.js-projects__item-link');
 
+//   if (!popup) {
+//     return;
+//   }
 
-  window.openPopup = function (popup) {
-    window.bodyScrollLock.disableBodyScroll(popup);
-    popup.classList.add('popup--shown');
-  };
+//   //наверно нужно для очищения после предыдущего открытия
+//   var resetProject = function () {
+//     designProjects.innerHTML = '';
+//   };
 
-  var closePopup = function (popup) {
-    window.bodyScrollLock.enableBodyScroll(popup);
-    popup.classList.remove('popup--shown');
-  };
+//   var initializeProjects = function (target) {
+//     var projects = document.querySelector(".proposal__projects")
+//   }
+//   //находит в попапе div в который будет попадать блок с проектами
+//   var designProjects = popup.querySelector('.js-projects-popup__frame');
 
-  var onEscPress = function (evt, popup) {
-    if (evt.keyCode === window.const.keyCode.ESC && popup.classList.contains('popup--shown')) {
-      evt.preventDefault();
+//   //другая конструкция для открытия попапа
+//   // var onDocumentClick = function (evt) {
+//   //   if (evt.target.classList.contains('js-projects__item-link')) {
+//   //     evt.preventDefault();
+//   //     window.openPopup(popup);
+//   //     resetProject();
+//   //   }
+//   // };
 
-      closePopup(popup);
-    }
-  };
+//   projectsLink.addEventListener('click', function(evt) {
+//     evt.preventDefault();
+//     window.openPopup(popup);
+//   });
 
-
-  popups.forEach(function (popup) {
-    var overlay = popup.querySelector('.js-popup__overlay');
-    var closeBtn = popup.querySelector('.js-popup__close-btn');
-
-
-    overlay.addEventListener('click', function () {
-      closePopup(popup);
-    });
-    closeBtn.addEventListener('click', function () {
-      closePopup(popup);
-    });
-
-    document.addEventListener('keydown', function (evt) {
-      onEscPress(evt, popup);
-    });
-  });
-
-  var onDocumentClick = function (evt) {
-    if (evt.target.classList.contains('js-projects__item-link')) {
-      evt.preventDefault();
-
-      window.openPopup(popup);
-    }
-  };
-
-  document.addEventListener('click', onDocumentClick);
-})();
+//   document.addEventListener('click', onDocumentClick);
+// })();

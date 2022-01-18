@@ -466,18 +466,34 @@
 }
 
 .project-vote__like-counter {
-  .form-checkbox--round label {
+  .form-checkbox--round input[type="checkbox"] ~ label {
     &::before {
       width: 20px;
       height: 20px;
       border-radius: 100px;
     }
+    // &::after {
+    //   display: block;
+    //   transform: scale(0.8);
+    //   top: 0;
+    //   left: -2px;
+    //   background-image: url("../img/tick-grey.svg");
+    // }
+
+    cursor: pointer;
+  }
+
+  .form-checkbox--white input[type="checkbox"]:checked ~ label{
+    &::before {
+      background-color: $white;
+      border: 1px solid $blue-accent;
+    }
     &::after {
       display: block;
+      top: 5px;
+      left: 4px;
       transform: scale(0.8);
-      top: 0;
-      left: -2px;
-      background-image: url("../img/checkbox-grey.svg");
+      background-image: url("../img/icon-tick.svg");
     }
   }
 
@@ -487,5 +503,13 @@
     line-height: 20.25px;
     color: $blue-default;
     border-bottom: 1px dashed $blue-default;
+  }
+
+  .button--update {
+    @media (max-width: $mobile-max-width) {
+      width: unset;
+      padding-left: 55px;
+      padding-right: 55px;
+    }
   }
 }
