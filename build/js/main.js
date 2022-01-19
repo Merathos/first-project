@@ -970,45 +970,52 @@
   window.adjustPageContentTopPadding = adjustPageContentTopPadding;
 })();
 
-// 'use strict';
+'use strict';
 
-// (function () {
-//   //находит в разметке попапа в который будет вставляться блок проектов
-//   var popup = document.querySelectorAll('.js-projects-popup');
-//   //находит ссылку по которой будет клик
-//   var projectsLink = document.querySelector('.js-projects__item-link');
+(function () {
+  var popup = document.querySelector('.js-projects-popup');
 
-//   if (!popup) {
-//     return;
-//   }
+  var projectsLink = document.querySelector('.js-projects__item-link');
 
-//   //наверно нужно для очищения после предыдущего открытия
-//   var resetProject = function () {
-//     designProjects.innerHTML = '';
-//   };
+  projectsLink.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    window.openPopup(popup);
+  });
 
-//   var initializeProjects = function (target) {
-//     var projects = document.querySelector(".proposal__projects")
-//   }
-//   //находит в попапе div в который будет попадать блок с проектами
-//   var designProjects = popup.querySelector('.js-projects-popup__frame');
+  window.openPopup = function (p) {
+    window.bodyScrollLock.disableBodyScroll(p);
+    p.classList.add('popup--shown');
+  };
 
-//   //другая конструкция для открытия попапа
-//   // var onDocumentClick = function (evt) {
-//   //   if (evt.target.classList.contains('js-projects__item-link')) {
-//   //     evt.preventDefault();
-//   //     window.openPopup(popup);
-//   //     resetProject();
-//   //   }
-//   // };
+  var closePopup = function (p) {
+    window.bodyScrollLock.enableBodyScroll(p);
+    p.classList.remove('popup--shown');
+  };
 
-//   projectsLink.addEventListener('click', function(evt) {
-//     evt.preventDefault();
-//     window.openPopup(popup);
-//   });
+  var onEscPress = function (evt, p) {
+    if (evt.keyCode === window.const.keyCode.ESC && p.classList.contains('popup--shown')) {
+      evt.preventDefault();
 
-//   document.addEventListener('click', onDocumentClick);
-// })();
+      closePopup(p);
+    }
+  };
+
+  // popup.forEach(function (p) {
+  var overlay = popup.querySelector('.js-popup__overlay');
+  var closeBtn = popup.querySelector('.js-popup__close-btn');
+
+  overlay.addEventListener('click', function () {
+    closePopup(popup);
+  });
+  closeBtn.addEventListener('click', function () {
+    closePopup(popup);
+  });
+
+  document.addEventListener('keydown', function (evt) {
+    onEscPress(evt, popup);
+  });
+  // });
+})();
 
 'use strict';
 
