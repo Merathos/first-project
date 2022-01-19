@@ -9195,6 +9195,18 @@ span.poll__hide {
       width: 20px;
       height: 20px; } }
 
+.popup__content--projects {
+  padding: 48px 40px;
+  max-width: 852px; }
+  .popup__content--projects .proposal__projects h2:first-of-type {
+    font-size: 24px;
+    line-height: 28.44px; }
+  .popup__content--projects .proposal__projects h2:last-of-type {
+    font-size: 18px;
+    line-height: 23.4px; }
+  .popup__content--projects .popup__close-btn {
+    margin-left: auto; }
+
 .gallery__tape {
   display: -webkit-box;
   display: -ms-flexbox;

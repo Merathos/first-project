@@ -1064,17 +1064,13 @@
 
 'use strict';
 (function () {
+
   var projectAkordeon = document.querySelectorAll('.proposal__project');
-
-
   if (projectAkordeon.length > 0) {
     projectAkordeon.forEach(function (project) {
       var projectText = project.querySelector('.proposal__project-text');
 
       var projectToggleTextButton = project.querySelector('.button-details');
-      //находит галереию в каждом проекте
-      var projectGallery = project.querySelector('.proposal__gallery');
-
 
       if (projectText && projectToggleTextButton) {
 
@@ -1106,20 +1102,38 @@
         if (projectTextLines > maxLinesAmount) {
           project.classList.add('project_enough-lines_true');
 
-          projectToggleTextButton.addEventListener('click', function (e) {
-            e.currentTarget.classList.toggle('opened');
-            projectText.classList.toggle('opened');
-            projectGallery.classList.toggle('opened');
-            changeButtonText();
-            e.currentTarget.classList.toggle('proposal__project--opened');
-          });
         } else {
           project.classList.add('project_enough-lines_false');
           changeButtonText();
         }
       }
     });
+
+    var openAkordeon = function (evt) {
+      var projectToggleTextButton = evt.target.closest('.button-details');
+      if (projectToggleTextButton) {
+        var parent = projectToggleTextButton.closest('.proposal__project');
+        var projectText = parent.querySelector('.proposal__project-text');
+        var projectGallery = parent.querySelector('.proposal__gallery');
+
+        projectToggleTextButton.classList.toggle('opened');
+        projectText.classList.toggle('opened');
+        projectGallery.classList.toggle('opened');
+        var textSpan = projectToggleTextButton.querySelector('.button-details__text');
+        // var changeButtonText = function () {
+        if (projectToggleTextButton.classList.contains('opened')) {
+          textSpan.textContent = 'Свернуть';
+        } else {
+          textSpan.textContent = 'Подробнее';
+        }
+        // };
+        // changeButtonText();
+        projectToggleTextButton.classList.toggle('proposal__project--opened');
+      }
+    };
   }
+
+  document.addEventListener('click', openAkordeon);
 })();
 
 'use strict';
@@ -1145,8 +1159,8 @@
 
 (function () {
   var chooseTabs = function () {
-    var tabButton = document.querySelectorAll(".proposal__tab");
-    var tabItem = document.querySelectorAll(".proposal__tab-item");
+    var tabButton = document.querySelectorAll('.proposal__tab');
+    var tabItem = document.querySelectorAll('.proposal__tab-item');
     var tabName;
 
     tabButton.forEach(function (item) {
@@ -1155,20 +1169,20 @@
 
     function toggleTabs() {
       tabButton.forEach(function (item) {
-        item.classList.remove("proposal__tab--active");
+        item.classList.remove('proposal__tab--active');
       });
-      this.classList.add("proposal__tab--active");
-      //console.log(this);
-      tabName = this.getAttribute("data-tab-name");
+      this.classList.add('proposal__tab--active');
+
+      tabName = this.getAttribute('data-tab-name');
       selectTabContent(tabName);
     }
 
     function selectTabContent(tabName) {
       tabItem.forEach(function (item) {
         if (item.classList.value.includes(tabName)) {
-          item.classList.add("proposal__tab-item--active");
+          item.classList.add('proposal__tab-item--active');
         } else {
-          item.classList.remove("proposal__tab-item--active");
+          item.classList.remove('proposal__tab-item--active');
         }
       });
     }
