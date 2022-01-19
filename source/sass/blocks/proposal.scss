@@ -381,6 +381,10 @@
       margin-left: 24px;
       margin-right: 24px;
     }
+    @media (max-width: $tablet-width) {
+      margin-left: 16px;
+      margin-right: 16px;
+    }
     @media (max-width: $mobile-max-width) {
       margin-left: 16px;
       margin-right: 16px;
@@ -685,7 +689,13 @@
     margin-right: $tablet-padding;
   }
 
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: $tablet-width) {
+    margin-bottom: 34px;
+    margin-left: $tablet-padding;
+    margin-right: $tablet-padding;
+  }
+
+  @media (max-width: $mobile-max-width) {
     margin-bottom: 34px;
     margin-left: $mobile-padding;
     margin-right: $mobile-padding;
@@ -704,12 +714,18 @@
   }
 
   .proposal__project-link {
+    @media (max-width: $tablet-width) {
+      width: 100%;
+    }
     @media (max-width: $mobile-max-width) {
       width: 100%;
     }
   }
 
   .proposal__project-figure {
+    @media (max-width: $tablet-width) {
+      width: 100%;
+    }
     @media (max-width: $mobile-max-width) {
       width: 100%;
     }
@@ -721,6 +737,8 @@
     @media (max-width: $tablet-width) {
       margin-left: unset;
       width: 100%;
+      order: 1;
+      margin-bottom: 24px;
     }
     @media (max-width: $mobile-max-width) {
       margin-left: unset;
@@ -729,7 +747,9 @@
       margin-bottom: 24px;
     }
   }
-
+  @media (max-width: $tablet-width) {
+    flex-direction: column-reverse;
+  }
   @media (max-width: $mobile-max-width) {
     flex-direction: column-reverse;
   }
@@ -856,6 +876,14 @@
     display: block;
     padding-top: 11px;
     padding-bottom: 11px;
+    display: none;
+
+    @media (max-width: $tablet-width) {
+      margin-left: 30px;
+    }
+    @media (max-width: $mobile-max-width) {
+      margin-left: 0;
+    }
   }
 
   //чекбокс выбранного проекта
@@ -864,6 +892,7 @@
     display: flex;
     align-items: center;
     display: none;
+    display: flex;
 
     span {
       font-size: 18px;
@@ -1075,6 +1104,7 @@
 
     @media (max-width: $tablet-width) {
       padding-left: 0;
+      padding-left: 32px;
       width: 100%;
     }
 
@@ -1131,6 +1161,10 @@
     line-height: 16.9px;
     color: $grey;
     margin-left: auto;
+    @media (max-width: $tablet-width) {
+      margin-right: auto;
+      margin-left: 32px;
+    }
     @media (max-width: $mobile-max-width) {
       margin-right: auto;
       margin-left: 32px;
@@ -1301,8 +1335,20 @@
     background-color: $blue-default;
     top: 30px;
     left: 10px;
+    @media (max-width: $tablet-width) {
+      height: 770px;
+      height: 620px;
+      left: -15px;
+      top: 0;
+    }
     @media (max-width: $mobile-max-width) {
       height: 770px;
+      height: 700px;
+      left: -8px;
+      top: 0;
+    }
+    @media (max-width: $mobile-width) {
+      height: 790px;
       left: -8px;
       top: 0;
     }
