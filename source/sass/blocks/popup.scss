@@ -134,6 +134,13 @@
   padding: 48px 40px;
   max-width: 852px;
 
+  @media (max-width: $tablet-width) {
+    padding: 24px;
+  }
+  @media (max-width: $mobile-max-width) {
+    padding: 16px;
+  }
+
   .proposal__projects {
     h2:first-of-type {
       font-size: 24px;
