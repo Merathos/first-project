@@ -375,7 +375,9 @@
   }
 
   .proposal__projectstab {
-    grid-area: g;
+    @media (min-width: $desktop-width) {
+      grid-area: g;
+    }
 
     @media (max-width: $desktop-width - 1) {
       margin-left: 24px;
@@ -392,8 +394,12 @@
   }
 
   .proposal__milestonestab {
-    grid-area: g;
+    @media (min-width: $desktop-width) {
+      grid-area: g;
+    }
+
     margin-bottom: 50px;
+    margin-bottom: 37px;
 
     @media (max-width: $desktop-width - 1) {
       margin-left: 24px;
@@ -1205,6 +1211,10 @@
   padding-bottom: 32px;
 }
 
+.proposal__milestones-item:nth-child(3) {
+  margin-top: 42px;
+}
+
 .proposal__milestones-item {
   .button-details {
     padding: 0;
@@ -1260,11 +1270,19 @@
 }
 
 .proposal__tab-item {
-  //display: none;
+  @media (min-width: $desktop-width) {
+    //display: none;
+    visibility: hidden;
+  }
+  height: 0;
   visibility: hidden;
 
   &--active {
-    //display: block;
+    @media (min-width: $desktop-width) {
+      //display: block;
+      visibility: visible;
+    }
+    height: auto;
     visibility: visible;
   }
 }
