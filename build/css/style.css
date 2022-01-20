@@ -2473,14 +2473,17 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .form-checkbox--round label::after {
   display: block;
-  top: 6px;
+  top: 7px;
   left: 6px;
-  background-image: url("../img/tick-grey.svg"); }
+  width: 12px;
+  height: 10px;
+  background-image: url("../img/icon-checkmark.svg"); }
 
 .form-checkbox--round input[type="checkbox"]:checked ~ label::after {
   top: 6px;
   left: 6px;
-  background-image: url("../img/checkbox.svg"); }
+  fill: white;
+  background-image: url("../img/icon-checkbox-blue.svg"); }
 
 .form-checkbox input[type="checkbox"]:not(:checked) ~ label:hover::before {
   border: 1px solid var(--color-interactive-default, #116ca6); }
