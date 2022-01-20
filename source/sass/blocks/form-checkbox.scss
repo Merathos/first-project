@@ -49,9 +49,12 @@
 
   &::after {
     display: block;
-    top: 6px;
+    top: 7px;
     left: 6px;
-    background-image: url("../img/tick-grey.svg");
+    width: 12px;
+    height: 10px;
+    //background-image: url("../img/tick-grey.svg");
+    background-image: url("../img/icon-checkmark.svg");
   }
 }
 
@@ -59,7 +62,10 @@
   &::after {
     top: 6px;
     left: 6px;
-    background-image: url("../img/checkbox.svg");
+    fill: white;
+    //background-image: url("../img/checkbox.svg");
+    background-image: url("../img/icon-checkbox-blue.svg");
+    //background-image: url("../img/icon-checkmark.svg");
   }
 }
 
