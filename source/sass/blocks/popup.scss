@@ -133,6 +133,7 @@
 .popup__content--projects {
   padding: 48px 40px;
   max-width: 852px;
+  border-radius: 5px;
 
   @media (max-width: $tablet-width) {
     padding: 24px;
@@ -145,6 +146,12 @@
     h2:first-of-type {
       font-size: 24px;
       line-height: 28.44px;
+      margin-top: 2px;
+      margin-bottom: 36px;
+
+      @media (max-width: $mobile-max-width) {
+        margin-top: 30px;
+      }
     }
 
     h2:last-of-type {
@@ -155,5 +162,42 @@
 
   .popup__close-btn {
     margin-left: auto;
+  }
+
+  .proposal__gallery .gallery__item,
+  .proposal__gallery .gallery__item-link {
+    width: 135px;
+    height: 135px;
+  }
+
+  .proposal__project-desc {
+    width: 502px;
+
+    @media (max-width: $mobile-max-width) {
+      width: 100%;
+    }
+  }
+
+  .proposal__projects {
+    @media (max-width: $mobile-max-width) {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  .popup__bar {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .button-details {
+    bottom: 35px;
+  }
+}
+
+.popup__container--update {
+  @media (max-width: $mobile-max-width) {
+    padding-top: 0;
   }
 }

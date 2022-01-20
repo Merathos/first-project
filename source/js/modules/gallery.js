@@ -21,6 +21,7 @@
 
       watchOverflow: true,
       grabCursor: true
+      //grabCursor: false
     });
   };
 
