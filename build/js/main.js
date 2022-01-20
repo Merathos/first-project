@@ -570,6 +570,7 @@
 
       watchOverflow: true,
       grabCursor: true
+      //grabCursor: false
     });
   };
 
@@ -974,15 +975,6 @@
 
 (function () {
   var popup = document.querySelector('.js-projects-popup');
-
-  // var projectsLink = document.querySelector('.js-projects__item-link');
-
-  // if (projectsLink) {
-  //   projectsLink.addEventListener('click', function (evt) {
-  //     evt.preventDefault();
-  //     window.openPopup(popup);
-  //   });
-  // }
 
   var projectsLink = document.querySelectorAll('.js-projects__item-link');
 

@@ -400,6 +400,7 @@
 
     margin-bottom: 50px;
     margin-bottom: 37px;
+    margin-bottom: 22px;
 
     @media (max-width: $desktop-width - 1) {
       margin-left: 24px;
@@ -1095,7 +1096,7 @@
   }
 
   .proposal__milestones-details {
-    bottom: 22px;
+    bottom: 32px;
   }
 
   // параграф описание проекта
@@ -1210,9 +1211,17 @@
 .proposal__milestones-item {
   padding-bottom: 32px;
 }
+.proposal__milestones-item:nth-child(2n) {
+  padding-bottom: 42px;
+}
 
 .proposal__milestones-item:nth-child(3) {
-  margin-top: 42px;
+  margin-top: 32px;
+  padding-bottom: 45px;
+
+  .button-details {
+    bottom: 34px;
+  }
 }
 
 .proposal__milestones-item {
@@ -1387,4 +1396,23 @@
 
 .proposal__variant-wrapper {
   display: flex;
+}
+
+.proposal__project-mark {
+  display: flex;
+  align-items: center;
+  margin-top: 32px;
+
+  svg {
+    margin-right: 10px;
+  }
+
+  span {
+    font-size: 18px;
+    line-height: 23.4px;
+
+    @media (max-width: $mobile-max-width) {
+      font-size: 14px;
+    }
+  }
 }
