@@ -4745,24 +4745,31 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .proposal--approved iframe {
       height: 288px; } }
 
-.proposal--approved .proposal__projectstab {
-  grid-area: g; }
-  @media (max-width: 1199px) {
-    .proposal--approved .proposal__projectstab {
-      margin-left: 24px;
-      margin-right: 24px; } }
-  @media (max-width: 768px) {
-    .proposal--approved .proposal__projectstab {
-      margin-left: 16px;
-      margin-right: 16px; } }
-  @media (max-width: 400px) {
-    .proposal--approved .proposal__projectstab {
-      margin-left: 16px;
-      margin-right: 16px; } }
+@media (min-width: 1200px) {
+  .proposal--approved .proposal__projectstab {
+    grid-area: g; } }
+
+@media (max-width: 1199px) {
+  .proposal--approved .proposal__projectstab {
+    margin-left: 24px;
+    margin-right: 24px; } }
+
+@media (max-width: 768px) {
+  .proposal--approved .proposal__projectstab {
+    margin-left: 16px;
+    margin-right: 16px; } }
+
+@media (max-width: 400px) {
+  .proposal--approved .proposal__projectstab {
+    margin-left: 16px;
+    margin-right: 16px; } }
 
 .proposal--approved .proposal__milestonestab {
-  grid-area: g;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  margin-bottom: 37px; }
+  @media (min-width: 1200px) {
+    .proposal--approved .proposal__milestonestab {
+      grid-area: g; } }
   @media (max-width: 1199px) {
     .proposal--approved .proposal__milestonestab {
       margin-left: 24px;
@@ -5372,6 +5379,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .proposal__milestones-item {
   padding-bottom: 32px; }
 
+.proposal__milestones-item:nth-child(3) {
+  margin-top: 42px; }
+
 .proposal__milestones-item .button-details {
   padding: 0;
   cursor: pointer;
@@ -5410,9 +5420,17 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-bottom: 38px; }
 
 .proposal__tab-item {
+  height: 0;
   visibility: hidden; }
+  @media (min-width: 1200px) {
+    .proposal__tab-item {
+      visibility: hidden; } }
   .proposal__tab-item--active {
+    height: auto;
     visibility: visible; }
+    @media (min-width: 1200px) {
+      .proposal__tab-item--active {
+        visibility: visible; } }
 
 .proposal__tabs .proposal__tab {
   border-radius: 0;
@@ -5898,7 +5916,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     line-height: 130%; }
 
 .proposal-list__project-mark {
-  font-size: 0.875rem; }
+  font-size: 14px; }
   @media (min-width: 768px) {
     .proposal-list__project-mark {
       margin-right: 16px; } }
