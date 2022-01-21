@@ -5,8 +5,6 @@
 
   var projectsLink = document.querySelectorAll('.js-projects__item-link');
 
-  var gallerys = popup.querySelectorAll('.js-gallery-popup');
-
   var sliderSwiper = function (gallery) {
     return new window.Swiper(gallery, {
       slidesPerView: 'auto',
@@ -26,7 +24,9 @@
     });
   };
 
-  var initSliders = function() {
+  var initSliders = function(popupInner) {
+    var gallerys = popupInner.querySelectorAll('.js-gallery-popup');
+
     gallerys.forEach(function (gallery) {
       sliderSwiper(gallery);
     });
@@ -39,7 +39,7 @@
         window.openPopup(popup);
 
         if (!popup.classList.contains('js-sliders-inited')) {
-          initSliders();
+          initSliders(popup);
         }
 
         popup.classList.add('js-sliders-inited');
@@ -69,6 +69,7 @@
   if (popup) {
     var overlay = popup.querySelector('.js-popup__overlay');
     var closeBtn = popup.querySelector('.js-popup__close-btn');
+
 
     if (overlay) {
       overlay.addEventListener('click', function () {
