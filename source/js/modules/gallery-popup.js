@@ -1,6 +1,5 @@
 'use strict';
 
-
 (function () {
   var popup = document.querySelector('.js-gallery-popup');
 
