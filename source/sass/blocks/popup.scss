@@ -213,10 +213,10 @@
     margin: 0;
 
     @media (max-width: $desktop-width - 1) {
-      max-width: unset;
+      max-width: 100%;
     }
     @media (max-width: $mobile-max-width) {
-      max-width: unset;
+      max-width: 100%;
       width: 100%;
     }
 
