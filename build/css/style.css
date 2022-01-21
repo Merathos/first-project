@@ -2290,7 +2290,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       color: #e3e8ee; }
   .button--update {
     font-size: 0.9375rem;
-    line-height: 1.26563rem;
+    line-height: 1.26562rem;
     font-weight: 500; }
 
 @media print {
@@ -5084,7 +5084,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   height: 129px; }
 
 .proposal__project .swiper-slide {
-  margin-right: 15px;
   width: 129px;
   height: 129px; }
 
@@ -5113,14 +5112,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .proposal__project .proposal__gallery--stage .swiper-slide {
     width: 135px;
     height: 135px; }
-
-@media (max-width: 768px) {
-  .proposal__project .gallery__tape .swiper-slide:first-child {
-    padding-left: 0; } }
-
-@media (max-width: 400px) {
-  .proposal__project .gallery__tape .swiper-slide:first-child {
-    padding-left: 0; } }
 
 .proposal__milestones-item .proposal__milestones-details {
   margin-top: 26px;
@@ -9369,10 +9360,10 @@ span.poll__hide {
     margin: 0; }
     @media (max-width: 1199px) {
       .popup__content--projects .proposal__gallery {
-        max-width: unset; } }
+        max-width: 100%; } }
     @media (max-width: 400px) {
       .popup__content--projects .proposal__gallery {
-        max-width: unset;
+        max-width: 100%;
         width: 100%; } }
     @media (max-width: 400px) {
       .popup__content--projects .proposal__gallery button {
@@ -9427,17 +9418,7 @@ span.poll__hide {
 .gallery__item-text {
   display: none; }
 
-@media (max-width: 1199px) {
-  .gallery__tape .swiper-slide:first-child {
-    padding-left: 24px; }
-  .gallery__tape .swiper-slide:last-child {
-    padding-right: 24px; } }
-
 @media (max-width: 767px) {
-  .gallery__tape .swiper-slide:first-child {
-    padding-left: 16px; }
-  .gallery__tape .swiper-slide:last-child {
-    padding-right: 16px; }
   .gallery__item-link {
     margin-right: 12px; } }
 
@@ -11125,7 +11106,7 @@ span.poll__hide {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 0.9375rem;
-  line-height: 1.26563rem; }
+  line-height: 1.26562rem; }
   .proposal-winners__status:before {
     display: none; }
 
@@ -11224,7 +11205,7 @@ span.poll__hide {
     display: block;
     padding: 15px 15px;
     font-size: 0.9375rem;
-    line-height: 1.26563rem;
+    line-height: 1.26562rem;
     font-weight: 500;
     color: #2C8ECC;
     text-transform: uppercase; }
@@ -11418,7 +11399,7 @@ span.poll__hide {
           align-items: center;
   padding-top: 4px;
   font-size: 0.9375rem;
-  line-height: 1.26563rem;
+  line-height: 1.26562rem;
   color: #116CA6;
   text-decoration: none; }
   .map-popup__details-btn span {

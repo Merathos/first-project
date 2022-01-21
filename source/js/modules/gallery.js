@@ -20,7 +20,10 @@
       },
 
       watchOverflow: true,
-      grabCursor: true
+      grabCursor: true,
+      observer: true,
+      observerParent: true,
+      observeSlideChildren: true,
       //grabCursor: false
     });
   };

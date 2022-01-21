@@ -50,28 +50,28 @@
 
 
 @include tablet {
-  .gallery__tape .swiper-slide {
-    &:first-child {
-      padding-left: $tablet-padding;
-    }
+  // .gallery__tape .swiper-slide {
+  //   &:first-child {
+  //     padding-left: $tablet-padding;
+  //   }
 
-    &:last-child {
-      padding-right: $tablet-padding;
-    }
-  }
+  //   &:last-child {
+  //     padding-right: $tablet-padding;
+  //   }
+  // }
 }
 
 
 @include mobile {
-  .gallery__tape .swiper-slide {
-    &:first-child {
-      padding-left: $mobile-padding;
-    }
+  // .gallery__tape .swiper-slide {
+  //   &:first-child {
+  //     padding-left: $mobile-padding;
+  //   }
 
-    &:last-child {
-      padding-right: $mobile-padding;
-    }
-  }
+  //   &:last-child {
+  //     padding-right: $mobile-padding;
+  //   }
+  // }
 
   .gallery__item-link {
     margin-right: 12px;

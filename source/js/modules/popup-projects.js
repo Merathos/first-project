@@ -5,11 +5,44 @@
 
   var projectsLink = document.querySelectorAll('.js-projects__item-link');
 
+  var gallerys = popup.querySelectorAll('.js-gallery-popup');
+
+  var sliderSwiper = function (gallery) {
+    return new window.Swiper(gallery, {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+
+      breakpoints: {
+        320: {
+          spaceBetween: 12
+        }
+      },
+
+      watchOverflow: true,
+      grabCursor: true,
+      observer: true,
+      observerParent: true,
+      observeSlideChildren: true,
+    });
+  };
+
+  var initSliders = function() {
+    gallerys.forEach(function (gallery) {
+      sliderSwiper(gallery);
+    });
+  };
+
   if (projectsLink) {
     projectsLink.forEach(function (item) {
       item.addEventListener('click', function (evt) {
         evt.preventDefault();
         window.openPopup(popup);
+
+        if (!popup.classList.contains('js-sliders-inited')) {
+          initSliders();
+        }
+
+        popup.classList.add('js-sliders-inited');
       });
     });
   }
