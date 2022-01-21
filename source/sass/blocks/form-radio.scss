@@ -39,6 +39,7 @@
   &::before {
     border: 6px solid var(--color-interactive-default, $blue-default);
   }
+  pointer-events: none;
 }
 
 .form-radio input[type="radio"]:disabled ~ label {

@@ -105,8 +105,9 @@
   span {
     color: var(--color-text, $grey-default);
     font-weight: normal;
-    font-size: rem(14px);
+    //font-size: rem(14px);
     line-height: 130%;
+    font-size: 14px;
   }
 }
 

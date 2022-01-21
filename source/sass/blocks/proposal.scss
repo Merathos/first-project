@@ -704,8 +704,10 @@
 
   @media (max-width: $mobile-max-width) {
     margin-bottom: 34px;
-    margin-left: $mobile-padding;
-    margin-right: $mobile-padding;
+    //margin-left: $mobile-padding;
+    //margin-right: $mobile-padding;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -759,14 +761,16 @@
   }
   @media (max-width: $mobile-max-width) {
     flex-direction: column-reverse;
+    display: block;
+    display: flex;
+    margin-left: 16px;
+    margin-right: 16px;
+    width: unset;
   }
 }
 
 .proposal__project-details,
 .proposal__milestones-details {
-  //margin-top: 32px;
-  //margin-left: 28px;
-
   span {
     font-size: 15px;
     line-height: 20.25px;
@@ -874,6 +878,10 @@
     display: none;
     &.opened {
       display: block;
+    }
+    @media (max-width: $mobile-max-width) {
+      margin-left: 0;
+      //margin-left: 16px;
     }
   }
 
@@ -1047,6 +1055,7 @@
       left: 0;
       margin-left: 0;
       //margin-bottom: 30px;
+      margin-left: 16px;
     }
 
     transition: opacity $trans--300;
@@ -1079,6 +1088,7 @@
 
       @media (max-width: $mobile-max-width) {
         margin-left: 0;
+        margin-left: 16px;
       }
 
       .button-details__text_opened {
@@ -1348,6 +1358,8 @@
 
     @media (max-width: $mobile-max-width) {
       margin-bottom: 34px;
+      margin-left: 16px;
+      margin-right: 16px;
     }
   }
 }
@@ -1358,26 +1370,19 @@
     display: block;
     position: absolute;
     width: 2px;
-    height: 483px;
+    height: calc(100% - 32px * 2);
     background-color: $blue-default;
     top: 30px;
     left: 10px;
     @media (max-width: $tablet-width) {
-      height: 770px;
-      height: 620px;
       left: -15px;
       top: 0;
     }
     @media (max-width: $mobile-max-width) {
-      height: 770px;
-      height: 700px;
-      left: -8px;
-      top: 0;
+      left: 8px;
     }
     @media (max-width: $mobile-width) {
-      height: 790px;
-      left: -8px;
-      top: 0;
+      left: 7px;
     }
   }
 }
@@ -1400,8 +1405,19 @@
 
 .proposal__project-mark {
   display: flex;
+  display: none;
   align-items: center;
   margin-top: 32px;
+  margin-left: 32px;
+
+  &.opened {
+    display: flex;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
 
   svg {
     margin-right: 10px;

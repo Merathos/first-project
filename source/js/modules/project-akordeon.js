@@ -51,10 +51,12 @@
         var parent = projectToggleTextButton.closest('.proposal__project');
         var projectText = parent.querySelector('.proposal__project-text');
         var projectGallery = parent.querySelector('.proposal__gallery');
+        var projectMark = parent.querySelector('.proposal__project-mark');
 
         projectToggleTextButton.classList.toggle('opened');
         projectText.classList.toggle('opened');
         projectGallery.classList.toggle('opened');
+        projectMark.classList.toggle('opened');
         var textSpan = projectToggleTextButton.querySelector('.button-details__text');
         // var changeButtonText = function () {
         if (projectToggleTextButton.classList.contains('opened')) {
