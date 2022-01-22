@@ -610,9 +610,9 @@ initFileUploader();
 
         Array.prototype.forEach.call(items, function (item) {
             var itemPhoto = item.querySelector('.gallery__item');
-            var bigPhotoSrc = item.querySelector('.gallery__item-link').href;
+            // var bigPhotoSrc = item.querySelector('.gallery__item-link').href;
             var element = itemPhoto.cloneNode(true);
-            element.querySelector('img').src = bigPhotoSrc;
+            // element.querySelector('img').src = bigPhotoSrc;
             element.classList.add('swiper-slide');
 
             sliderTape.appendChild(element);
@@ -624,6 +624,7 @@ initFileUploader();
             initialSlide: +target.dataset.index,
             slidesPerView: 1,
             watchOverflow: true,
+            
             grabCursor: true,
             loop: true,
 
@@ -688,7 +689,10 @@ initFileUploader();
       },
 
       watchOverflow: true,
-      grabCursor: true
+      grabCursor: true,
+      observer: true,
+      observerParent: true,
+      observeSlideChildren: true,
     });
   };
 
@@ -2144,6 +2148,97 @@ tooltipsInit();
 
 'use strict';
 
+(function () {
+  var popup = document.querySelector('.js-projects-popup');
+
+  var projectsLink = document.querySelectorAll('.js-projects__item-link');
+
+  var gallerys = popup.querySelectorAll('.js-gallery-popup');
+
+  var sliderSwiper = function (gallery) {
+    return new window.Swiper(gallery, {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+
+      breakpoints: {
+        320: {
+          spaceBetween: 12
+        }
+      },
+
+      watchOverflow: true,
+      grabCursor: true,
+      observer: true,
+      observerParent: true,
+      observeSlideChildren: true,
+    });
+  };
+
+  var initSliders = function() {
+    gallerys.forEach(function (gallery) {
+      sliderSwiper(gallery);
+    });
+  };
+
+  if (projectsLink) {
+    projectsLink.forEach(function (item) {
+      item.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        window.openPopup(popup);
+
+        if (!popup.classList.contains('js-sliders-inited')) {
+          initSliders();
+        }
+
+        popup.classList.add('js-sliders-inited');
+      });
+    });
+  }
+
+  window.openPopup = function (p) {
+    window.bodyScrollLock.disableBodyScroll(p);
+    p.classList.add('popup--shown');
+  };
+
+  var closePopup = function (p) {
+    window.bodyScrollLock.enableBodyScroll(p);
+    p.classList.remove('popup--shown');
+  };
+
+  var onEscPress = function (evt, p) {
+    if (evt.keyCode === window.const.keyCode.ESC && p.classList.contains('popup--shown')) {
+      evt.preventDefault();
+
+      closePopup(p);
+    }
+  };
+
+  // popup.forEach(function (p) {
+  if (popup) {
+    var overlay = popup.querySelector('.js-popup__overlay');
+    var closeBtn = popup.querySelector('.js-popup__close-btn');
+
+    if (overlay) {
+      overlay.addEventListener('click', function () {
+        closePopup(popup);
+      });
+    }
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function () {
+        closePopup(popup);
+      });
+    }
+  }
+
+  document.addEventListener('keydown', function (evt) {
+    onEscPress(evt, popup);
+  });
+  // });
+})();
+
+'use strict';
+
 
 (function () {
   var popups = document.querySelectorAll('.js-popup');
@@ -2274,6 +2369,82 @@ tooltipsInit();
 })();
 
 'use strict';
+(function () {
+
+  var projectAkordeon = document.querySelectorAll('.proposal__project');
+  if (projectAkordeon.length > 0) {
+    projectAkordeon.forEach(function (project) {
+      var projectText = project.querySelector('.proposal__project-text');
+
+      var projectToggleTextButton = project.querySelector('.button-details');
+
+      if (projectText && projectToggleTextButton) {
+
+        var textSpan = projectToggleTextButton.querySelector('.button-details__text');
+        var changeButtonText = function () {
+          if (projectToggleTextButton.classList.contains('opened')) {
+            textSpan.textContent = 'Свернуть';
+          } else {
+            textSpan.textContent = 'Подробнее';
+          }
+        };
+        // Количество строк текста
+        var projectTextHeight = projectText.getBoundingClientRect().height;
+        var projectTextLineHeight = +getComputedStyle(
+            projectText
+        ).lineHeight.replace('px', '');
+        var projectTextLines = Math.ceil(
+            projectTextHeight / projectTextLineHeight
+        );
+
+        // Максимально допустимое количество строк
+        var maxLinesAmount = 3;
+
+        // Если в блоке есть заголовок, то максимальное количество строк отличается по макету, но в ТЗ речь про 3 при любых условиях
+        if (project.querySelector('.proposal__project-title')) {
+          maxLinesAmount = 2;
+        }
+
+        if (projectTextLines > maxLinesAmount) {
+          project.classList.add('project_enough-lines_true');
+
+        } else {
+          project.classList.add('project_enough-lines_false');
+          changeButtonText();
+        }
+      }
+    });
+
+    var openAkordeon = function (evt) {
+      var projectToggleTextButton = evt.target.closest('.button-details');
+      if (projectToggleTextButton) {
+        var parent = projectToggleTextButton.closest('.proposal__project');
+        var projectText = parent.querySelector('.proposal__project-text');
+        var projectGallery = parent.querySelector('.proposal__gallery');
+        var projectMark = parent.querySelector('.proposal__project-mark');
+
+        projectToggleTextButton.classList.toggle('opened');
+        projectText.classList.toggle('opened');
+        projectGallery.classList.toggle('opened');
+        projectMark.classList.toggle('opened');
+        var textSpan = projectToggleTextButton.querySelector('.button-details__text');
+        // var changeButtonText = function () {
+        if (projectToggleTextButton.classList.contains('opened')) {
+          textSpan.textContent = 'Свернуть';
+        } else {
+          textSpan.textContent = 'Подробнее';
+        }
+        // };
+        // changeButtonText();
+        projectToggleTextButton.classList.toggle('proposal__project--opened');
+      }
+    };
+  }
+
+  document.addEventListener('click', openAkordeon);
+})();
+
+'use strict';
 
 
 (function () {
@@ -2309,6 +2480,42 @@ tooltipsInit();
   })();
 
 
+})();
+
+// Переключение вкладок в фильтре поиска шин - Параметры - по Марке
+'use strict';
+
+(function () {
+  var chooseTabs = function () {
+    var tabButton = document.querySelectorAll('.proposal__tab');
+    var tabItem = document.querySelectorAll('.proposal__tab-item');
+    var tabName;
+
+    tabButton.forEach(function (item) {
+      item.addEventListener('click', toggleTabs);
+    });
+
+    function toggleTabs() {
+      tabButton.forEach(function (item) {
+        item.classList.remove('proposal__tab--active');
+      });
+      this.classList.add('proposal__tab--active');
+
+      tabName = this.getAttribute('data-tab-name');
+      selectTabContent(tabName);
+    }
+
+    function selectTabContent(tabName) {
+      tabItem.forEach(function (item) {
+        if (item.classList.value.includes(tabName)) {
+          item.classList.add('proposal__tab-item--active');
+        } else {
+          item.classList.remove('proposal__tab-item--active');
+        }
+      });
+    }
+  };
+  chooseTabs();
 })();
 
 'use strict';

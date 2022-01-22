@@ -101,3 +101,36 @@
     outline: 2px solid var(--color-interactive-default, $blue-accent);
   }
 }
+
+.form-checkbox--round {
+  margin-bottom: 0;
+}
+
+.form-checkbox--round label {
+  &::before {
+    width: 24px;
+    height: 24px;
+    border-radius: 100px;
+  }
+
+  &::after {
+    display: block;
+    top: 7px;
+    left: 6px;
+    width: 12px;
+    height: 10px;
+    //background-image: url("../img/tick-grey.svg");
+    background-image: url("../img/icon-checkmark.svg");
+  }
+}
+
+.form-checkbox--round input[type="checkbox"]:checked ~ label {
+  &::after {
+    top: 6px;
+    left: 6px;
+    fill: white;
+    //background-image: url("../img/checkbox.svg");
+    background-image: url("../img/icon-checkbox-blue.svg");
+    //background-image: url("../img/icon-checkmark.svg");
+  }
+}

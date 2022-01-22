@@ -88,6 +88,20 @@
     margin-left: 1px;
   }
 }
+//новое добавление
+.proposal-list__project-mark {
+  color: $grey-lighter;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+
+  svg {
+    margin-right: 8px;
+    width: 14px;
+    height: 14px;
+  }
+}
 
 .proposal-list__address {
   // display: flex;
@@ -241,6 +255,21 @@
 
   .filled {
     transition: fill $style-change-duration;
+  }
+}
+
+.proposal-list__like-counter--update {
+  display: flex;
+  flex-wrap: wrap;
+
+  .form-checkbox {
+    display: block;
+    width: 100%;
+  }
+  .proposal__like-wrapper {
+    display: block;
+    width: 100%;
+    align-items: center;
   }
 }
 

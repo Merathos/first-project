@@ -143,6 +143,12 @@
       max-width: 100%;
     }
   }
+
+  &--update {
+    font-size: rem(15px);
+    line-height: rem(20.25px);
+    font-weight: 500;
+  }
 }
 
 @media print {

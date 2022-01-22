@@ -36,7 +36,11 @@
         "c c"
         "curator curator"
         "rules rules"
-        "d e";
+        "d e"
+        "f k"
+        "g l"
+        "h m"
+        "i i";
 
       >* {
         align-self: start;
@@ -45,6 +49,12 @@
   }
 }
 
+//кнопка переносится в самый низ после добавленных дизайн-проектов
+.proposal__buttons {
+  grid-area: i;
+}
+
+//grid-area: a
 .proposal__info {
   margin-top: 0;
   margin-bottom: 32px;
@@ -71,6 +81,7 @@
   }
 }
 
+//grid-area: b
 .proposal__title {
   margin-bottom: 24px;
 
@@ -87,6 +98,7 @@
   }
 }
 
+//grid-area: curator
 .proposal__curator {
   margin-bottom: 24px;
 
@@ -145,6 +157,7 @@
   line-height: 180%;
 }
 
+//grid-area: d
 .proposal__wrapper {
   @media (min-width: $desktop-width) {
     grid-area: d;
@@ -307,5 +320,736 @@
   grid-area: rules;
   &:not(:last-child) {
     margin-bottom: 40px;
+  }
+}
+
+//блок с новыми дизайн-проектами, добавленный ниже карты,
+// кнопку из proposal__wrapper grid-area d выношу за пределы,
+// чтобы она была после нового .proposal__projects-wrapper
+.proposal__projects {
+  grid-area: f;
+}
+
+.proposal__tabs {
+  display: flex;
+  border-bottom: 1px solid $light-grey;
+  margin-bottom: 38px;
+  grid-area: g;
+
+  @media (max-width: $desktop-width - 1) {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-right: 16px;
+    margin-left: 16px;
+  }
+}
+
+.proposal__projectstab,
+.proposal__milestonestab {
+  @media (min-width: $desktop-width) {
+    grid-area: h;
+    visibility: hidden;
+  }
+  height: 0;
+  visibility: hidden;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  @media (max-width: $mobile-max-width) {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}
+
+.proposal__tab-item--active {
+  @media (min-width: $desktop-width) {
+    visibility: visible;
+  }
+  height: auto;
+  visibility: visible;
+}
+
+.proposal__tabs .proposal__tab {
+  border-radius: 0;
+  padding-left: 0;
+  padding-right: 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 24px;
+  line-height: 28.44px;
+  font-weight: 400;
+  color: $grey;
+  padding-bottom: 13px;
+  margin-right: 40px;
+  border-bottom: 1px solid transparent;
+  text-transform: none;
+
+  &--active {
+    border-bottom: 1px solid $blue-default;
+    color: $blue-default;
+    cursor: unset;
+  }
+
+  transition: opacity 0.3s ease-out;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+  }
+}
+
+.proposal__milestonestab {
+  margin-bottom: 22px;
+}
+
+.proposal__projects {
+  margin-bottom: 22px;
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 41px;
+    margin-left: $tablet-padding;
+    margin-right: $tablet-padding;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 34px;
+    margin-left: $tablet-padding;
+    margin-right: $tablet-padding;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 34px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  h2 {
+    margin: 0;
+    margin-top: -5px;
+    margin-bottom: 40px;
+
+    @media (max-width: $mobile-max-width) {
+      margin-bottom: 34px;
+      margin-left: 16px;
+      margin-right: 16px;
+    }
+  }
+}
+
+.proposal__project-wrapper {
+  display: flex;
+  width: 100%;
+
+  .proposal__project-img,
+  .proposal__project-link,
+  .proposal__project-figure {
+    width: 230px;
+    height: 140px;
+  }
+
+  .proposal__project-link {
+    @media (max-width: $tablet-width) {
+      width: 100%;
+    }
+    @media (max-width: $mobile-max-width) {
+      width: 100%;
+    }
+  }
+
+  .proposal__project-figure {
+    @media (max-width: $tablet-width) {
+      width: 100%;
+    }
+    @media (max-width: $mobile-max-width) {
+      width: 100%;
+    }
+  }
+
+  .proposal__project-img {
+    margin-left: auto;
+
+    @media (max-width: $tablet-width) {
+      margin-left: unset;
+      width: 100%;
+      order: 1;
+      margin-bottom: 24px;
+    }
+    @media (max-width: $mobile-max-width) {
+      margin-left: unset;
+      width: 100%;
+      order: 1;
+      margin-bottom: 24px;
+    }
+  }
+  @media (max-width: $tablet-width) {
+    flex-direction: column-reverse;
+  }
+  @media (max-width: $mobile-max-width) {
+    flex-direction: column-reverse;
+    display: block;
+    display: flex;
+    margin-left: 16px;
+    margin-right: 16px;
+    width: unset;
+  }
+}
+
+.proposal__project-details,
+.proposal__milestones-details {
+  span {
+    font-size: 15px;
+    line-height: 20.25px;
+    color: $blue-default;
+    border-bottom: 1px dashed #9BD2F4;
+  }
+
+  svg {
+    margin-left: 9px;
+  }
+}
+
+.proposal__project {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding-bottom: 32px;
+  border-bottom: 1px solid $light-grey;
+  margin-bottom: 33px;
+  position: relative;
+
+  @media (max-width: $mobile-max-width) {
+    padding-bottom: 60px;
+  }
+
+  .proposal__gallery {
+    display: none;
+    &.opened {
+      display: block;
+    }
+    @media (max-width: $mobile-max-width) {
+      margin-left: 0;
+      //margin-left: 16px;
+    }
+  }
+
+  .button--blue {
+    margin-top: 32px;
+    align-self: start;
+    display: block;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    display: none;
+
+    @media (max-width: $tablet-width) {
+      margin-left: 30px;
+    }
+    @media (max-width: $mobile-max-width) {
+      margin-left: 0;
+    }
+  }
+
+  //чекбокс выбранного проекта
+  .proposal-list__like-counter {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    display: none;
+    display: flex;
+
+    span {
+      font-size: 18px;
+      line-height: 23.4px;
+      font-weight: 400;
+      color: $dark-text;
+    }
+
+    .form-checkbox {
+      margin-right: 10px;
+    }
+  }
+
+  &_enough-lines_false {
+    .proposal__project-text {
+      height: auto;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .button-details {
+      display: none;
+    }
+  }
+
+  .proposal__project-text {
+    height: 2.6em;
+    height: 4.3em;
+    margin-bottom: 23px;
+
+    @media (max-width: $mobile-max-width) {
+      height: 8em;
+      height: 4.2em;
+      margin-bottom: 9px;
+    }
+
+    &.opened {
+      height: auto;
+
+      &:after {
+        display: none;
+      }
+    }
+
+    &:after {
+      position: absolute;
+      bottom: -0.4rem;
+      left: 0;
+
+      width: 100%;
+      height: 2rem;
+
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0),
+        var(--color-bg-secondary, $color-bg) 100%
+      );
+
+      text-align: right;
+
+      content: '';
+    }
+  }
+
+  &_enough-lines_true {
+    .proposal__project-title {
+      + .proposal__project-text {
+        height: 2.6em;
+        margin-bottom: 14px;
+
+        @media (max-width: $mobile-max-width) {
+          height: 8em;
+          margin-bottom: 9px;
+        }
+
+        &:after {
+          bottom: -0.1rem;
+        }
+      }
+    }
+
+    //span внутри кнопки
+    .button-details__text {
+      height: 3.4rem;
+
+      @media (max-width: $mobile-max-width) {
+        height: 8.4rem;
+
+        font-size: rem(13px);
+        line-height: 1.35;
+      }
+
+      &.opened {
+        height: auto;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      //видимо это замутненный градиент скрывающий текст
+      &:after {
+        position: absolute;
+        bottom: -0.4rem;
+        left: 0;
+
+        width: 100%;
+        height: 2rem;
+
+        background: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0),
+          var(--color-bg-secondary, $color-bg) 100%
+        );
+
+        text-align: right;
+
+        content: '';
+      }
+    }
+
+    .button-details {
+      display: initial;
+    }
+  }
+
+  //кнопка подробнее-свернуть
+  .button-details {
+    margin-left: 30px;
+    align-self: start;
+    display: block;
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    z-index: 1;
+    position: absolute;
+    bottom: 30px;
+
+    @media (max-width: $mobile-max-width) {
+      //bottom: 0;
+      left: 0;
+      margin-left: 0;
+      //margin-bottom: 30px;
+      margin-left: 16px;
+    }
+
+    transition: opacity 0.3s ease-out;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 0.7;
+      }
+    }
+
+    &__text {
+      margin-right: 0;
+
+      &_opened {
+        display: none;
+      }
+
+      &_closed {
+        display: inline-block;
+      }
+    }
+
+    .button-details__icon {
+      transform: rotate(0deg);
+    }
+
+    &.opened {
+      position: unset;
+
+      @media (max-width: $mobile-max-width) {
+        margin-left: 0;
+        margin-left: 16px;
+      }
+
+      .button-details__text_opened {
+        display: inline-block;
+      }
+
+      .button-details__text_closed {
+        display: none;
+      }
+
+      .button-details__icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .proposal__milestones-details {
+    bottom: 32px;
+  }
+
+  // параграф описание проекта
+  .proposal__project-text {
+    position: relative;
+    color: $dark-text;
+    font-size: 15px;
+    line-height: 20.25px;
+    padding-left: 32px;
+
+    overflow: hidden;
+
+    @media (max-width: $tablet-width) {
+      padding-left: 0;
+      padding-left: 32px;
+      width: 100%;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      padding-left: 0;
+      width: 100%;
+    }
+  }
+
+  .proposal__project-text--stage {
+    padding-left: 0;
+    margin-bottom: 30px;
+  }
+}
+
+.proposal__project--opened {
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 2px;
+    height: calc(100% - 32px * 2);
+    background-color: $blue-default;
+    top: 30px;
+    left: 10px;
+    @media (max-width: $tablet-width) {
+      left: -15px;
+      top: 0;
+    }
+    @media (max-width: $mobile-max-width) {
+      left: 8px;
+    }
+    @media (max-width: $mobile-width) {
+      left: 7px;
+    }
+  }
+}
+
+.proposal__project .swiper-slide {
+  //margin-right: 15px;
+  width: 129px;
+  height: 129px;
+}
+
+.proposal__project {
+  .proposal__gallery {
+    padding-left: 32px;
+
+    @media (max-width: $tablet-width) {
+      padding-left: 0;
+      width: 100%;
+    }
+
+    @media (max-width: $mobile-max-width) {
+      padding-left: 0;
+      width: 100%;
+    }
+  }
+  .proposal__project-details {
+    margin-top: 32px;
+    margin-left: 28px;
+
+    svg {
+      transform: rotate(-180deg);
+    }
+  }
+
+  .proposal__gallery--stage {
+    padding-left: 0;
+
+    .gallery__item-link,
+    .gallery__item,
+    .swiper-slide {
+      width: 135px;
+      height: 135px;
+    }
+  }
+  // .gallery__tape .swiper-slide:first-child {
+  //   @media (max-width: $tablet-width) {
+  //     padding-left: 0;
+  //   }
+  //   @media (max-width: $mobile-max-width) {
+  //     padding-left: 0;
+  //   }
+  // }
+}
+
+.proposal__milestones-item {
+  .proposal__milestones-details {
+    margin-top: 26px;
+    margin-left: 28px;
+
+    svg {
+      transform: rotate(-180deg);
+    }
+
+    span {
+      margin-right: 0;
+    }
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 18px;
+    line-height: 23.4px;
+    font-weight: 400;
+  }
+}
+
+//описание с вариантом и 504
+.proposal__project-desc {
+  width: 470px;
+
+  @media (max-width: $desktop-width - 1) {
+    width: 100%;
+    margin-right: 32px;
+  }
+}
+
+.proposal__project-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: unset;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    //flex-wrap: wrap;
+    text-align: left;
+    align-items: baseline;
+  }
+  @media (max-width: $mobile-max-width) {
+    flex-direction: column;
+    //flex-wrap: wrap;
+    text-align: left;
+    align-items: baseline;
+  }
+
+  h3 {
+    font-size: 18px;
+    line-height: 23.4px;
+    font-weight: 400;
+    margin: 0;
+    color: $dark-text;
+  }
+
+  span {
+    font-size: 13px;
+    line-height: 16.9px;
+    color: $grey;
+    margin-left: auto;
+    @media (max-width: $tablet-width) {
+      margin-right: auto;
+      margin-left: 32px;
+    }
+    @media (max-width: $mobile-max-width) {
+      margin-right: auto;
+      margin-left: 32px;
+    }
+  }
+
+  .form-radio {
+    margin-bottom: 0;
+    margin-right: 5px;
+  }
+}
+
+.proposal__milestones-item {
+  padding-bottom: 32px;
+}
+.proposal__milestones-item:nth-child(2n) {
+  padding-bottom: 42px;
+}
+
+.proposal__milestones-item:nth-child(3) {
+  margin-top: 32px;
+  padding-bottom: 45px;
+
+  .button-details {
+    bottom: 34px;
+  }
+}
+
+.proposal__milestones-item {
+  .button-details {
+    padding: 0;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    margin-left: 0;
+
+    &__text {
+      margin-right: 9px;
+
+      &_opened {
+        display: none;
+      }
+
+      &_closed {
+        display: inline-block;
+      }
+    }
+
+    .button-details__icon {
+      transform: rotate(0deg);
+    }
+
+    &.opened {
+      .button-details__text_opened {
+        display: inline-block;
+      }
+
+      .button-details__text_closed {
+        display: none;
+      }
+
+      .button-details__icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  time {
+    font-size:  rem(14px);
+    line-height: rem(18.2px);
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+}
+
+.proposal__milestones-details.proposal__project--opened {
+  &:before {
+    display: none;
+  }
+}
+
+.proposal__variant-wrapper {
+  display: flex;
+}
+
+.proposal__like-wrapper {
+  align-items: center;
+  //display: none;
+  display: flex;
+  align-items: center;
+}
+
+.proposal__project-mark {
+  display: flex;
+  display: none;
+  align-items: center;
+  margin-top: 32px;
+  margin-left: 32px;
+
+  &.opened {
+    display: flex;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  svg {
+    margin-right: 10px;
+  }
+
+  span {
+    font-size: 18px;
+    line-height: 23.4px;
+
+    @media (max-width: $mobile-max-width) {
+      font-size: 14px;
+    }
   }
 }
