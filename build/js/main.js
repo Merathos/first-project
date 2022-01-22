@@ -1000,7 +1000,7 @@
   };
 
   var initSliders = function(popupInner) {
-    var gallerys = popupInner.querySelectorAll('.js-gallery-popup');
+    var gallerys = popupInner.querySelectorAll('.js-gallery-in-popup');
 
     gallerys.forEach(function (gallery) {
       sliderSwiper(gallery);
