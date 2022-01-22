@@ -458,7 +458,6 @@
 
 'use strict';
 
-
 (function () {
   var popup = document.querySelector('.js-gallery-popup');
 
@@ -547,7 +546,6 @@
 })();
 
 'use strict';
-
 
 (function () {
   var galleries = document.querySelectorAll('.js-gallery');

@@ -1,6 +1,5 @@
 'use strict';
 
-
 (function () {
   var galleries = document.querySelectorAll('.js-gallery');
 
