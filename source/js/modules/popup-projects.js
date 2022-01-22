@@ -5,7 +5,7 @@
 
   var projectsLink = document.querySelectorAll('.js-projects__item-link');
 
-  var gallerys = popup.querySelectorAll('.js-gallery-popup');
+  //var gallerys = popup.querySelectorAll('.js-gallery-popup');
 
   var sliderSwiper = function (gallery) {
     return new window.Swiper(gallery, {
@@ -26,7 +26,9 @@
     });
   };
 
-  var initSliders = function() {
+  var initSliders = function(popupInner) {
+    var gallerys = popupInner.querySelectorAll('.js-gallery-in-popup');
+
     gallerys.forEach(function (gallery) {
       sliderSwiper(gallery);
     });
