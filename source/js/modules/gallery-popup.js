@@ -45,6 +45,7 @@
       initialSlide: +target.dataset.index,
       slidesPerView: 1,
       watchOverflow: true,
+
       grabCursor: true,
       loop: true,
 
