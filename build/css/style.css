@@ -6603,10 +6603,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       .proposal__project-mark span {
         font-size: 14px; } }
 
-<<<<<<< HEAD
 .proposal--aside .buttons-wrapper {
   grid-area: j; }
-=======
+
 .proposal__project--active::after {
   content: "";
   position: absolute;
@@ -6615,7 +6614,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   left: 8px;
   background: #2c8ecc;
   width: 2px; }
->>>>>>> improvement-master
 
 .comments-tab {
   height: 46px;
