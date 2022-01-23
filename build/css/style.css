@@ -1877,15 +1877,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 /* Блоки */
 .form-checkbox-update {
   margin-bottom: 0;
-  position: relative;
   cursor: pointer; }
   .form-checkbox-update input {
     display: none; }
 
-.form-checkbox-update--grey input[type="checkbox"] ~ label {
+.form-checkbox-update__custom-checkbox + label {
   position: relative;
   cursor: pointer; }
-  .form-checkbox-update--grey input[type="checkbox"] ~ label:before {
+  .form-checkbox-update__custom-checkbox + label::before {
     top: -5px;
     right: 20px;
     position: absolute;
@@ -1895,7 +1894,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     height: 24px;
     border: 1.5px solid #a6abb2;
     border-radius: 100px; }
-  .form-checkbox-update--grey input[type="checkbox"] ~ label:after {
+    @media (max-width: 768px) {
+      .form-checkbox-update__custom-checkbox + label::before {
+        right: -25px; } }
+  .form-checkbox-update__custom-checkbox + label::after {
     top: 1px;
     right: 25px;
     position: absolute;
@@ -1905,23 +1907,28 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     background-image: url("../img/icon-tick-grey.svg");
     display: block;
     z-index: 100; }
+    @media (max-width: 768px) {
+      .form-checkbox-update__custom-checkbox + label::after {
+        right: -20px; } }
 
-.form-checkbox-update--grey input[type="checkbox"] ~ label:hover:before {
-  -webkit-transition: border-color 0.3s ease-out;
-  transition: border-color 0.3s ease-out;
-  border-color: #2c8ecc; }
+.form-checkbox-update__custom-checkbox + label:hover {
+  position: relative; }
+  .form-checkbox-update__custom-checkbox + label:hover:before {
+    -webkit-transition: border-color 0.3s ease-out;
+    transition: border-color 0.3s ease-out;
+    border-color: #2c8ecc; }
+  .form-checkbox-update__custom-checkbox + label:hover:after {
+    -webkit-transition: background-image 0.3s ease-out;
+    transition: background-image 0.3s ease-out;
+    background-image: url("../img/icon-tick-blue.svg"); }
 
-.form-checkbox-update--grey input[type="checkbox"] ~ label:hover:after {
-  -webkit-transition: background-image 0.3s ease-out;
-  transition: background-image 0.3s ease-out;
-  background-image: url("../img/icon-tick-blue.svg"); }
-
-.form-checkbox-update--grey input[type="checkbox"]:checked ~ label:before {
-  border-color: #2c8ecc;
-  background-color: #2c8ecc; }
-
-.form-checkbox-update--grey input[type="checkbox"]:checked ~ label:after {
-  background-image: url("../img/icon-tick-white_2.svg"); }
+.form-checkbox-update__custom-checkbox:checked + label {
+  position: relative; }
+  .form-checkbox-update__custom-checkbox:checked + label:before {
+    border-color: #2c8ecc;
+    background-color: #2c8ecc; }
+  .form-checkbox-update__custom-checkbox:checked + label:after {
+    background-image: url("../img/icon-tick-white_2.svg"); }
 
 .logo-link {
   display: inline-block;
@@ -6045,7 +6052,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       margin-right: 0; } }
   .proposal__projectstab .proposal__project-mark,
   .proposal__milestonestab .proposal__project-mark {
-    margin-left: 0; }
+    margin-left: 0;
+    margin-left: 32px; }
 
 .proposal__tab-item--active {
   height: auto;
@@ -6976,6 +6984,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .proposal-list__status {
       grid-area: c;
       margin-left: auto; } }
+
+.form-checkbox-update {
+  grid-area: c; }
 
 .proposal-list__like-counter {
   grid-area: c;
@@ -12852,7 +12863,6 @@ span.poll__hide {
   @media (max-width: 400px) {
     .popup__content--projects {
       padding: 16px;
-      padding-left: 0;
       padding-right: 0; } }
   .popup__content--projects .proposal__projects h2:first-of-type {
     font-size: 24px;

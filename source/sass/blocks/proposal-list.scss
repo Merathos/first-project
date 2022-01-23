@@ -190,6 +190,11 @@
   }
 }
 
+//добавка альтернативы лайка - чекбокс
+.form-checkbox-update {
+  grid-area: c;
+}
+
 .proposal-list__like-counter {
   grid-area: c;
 
