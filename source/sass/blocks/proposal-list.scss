@@ -261,13 +261,14 @@
 .proposal-list__like-counter--update {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 
   .form-checkbox {
     display: block;
     width: 100%;
   }
   .proposal__like-wrapper {
-    display: block;
+    display: flex;
     width: 100%;
     align-items: center;
   }

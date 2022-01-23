@@ -337,13 +337,14 @@
   grid-area: g;
 
   @media (max-width: $desktop-width - 1) {
-    margin-left: 24px;
+    //margin-left: 24px;
     margin-right: 24px;
   }
 
   @media (max-width: $mobile-max-width) {
     margin-right: 16px;
-    margin-left: 16px;
+    //margin-left: 16px;
+    justify-content: space-between;
   }
 }
 
@@ -357,12 +358,16 @@
   visibility: hidden;
 
   @media (max-width: $tablet-width) {
-    margin-left: 16px;
+    //margin-left: 16px;
     margin-right: 16px;
   }
   @media (max-width: $mobile-max-width) {
-    margin-left: 16px;
-    margin-right: 16px;
+    //margin-left: 16px;
+    margin-right: 0;
+  }
+
+  .proposal__project-mark {
+    margin-left: 0;
   }
 }
 
@@ -389,6 +394,13 @@
   margin-right: 40px;
   border-bottom: 1px solid transparent;
   text-transform: none;
+
+  @media (max-width: $mobile-max-width) {
+    //margin-right: 20px;
+    margin-right: 0;
+    font-size: 16px;
+    padding-bottom: 5px;
+  }
 
   &--active {
     border-bottom: 1px solid $blue-default;
@@ -473,7 +485,8 @@
   }
 
   .proposal__project-img {
-    margin-left: auto;
+    //margin-left: auto;
+    margin-left: 40px;
 
     @media (max-width: $tablet-width) {
       margin-left: unset;
@@ -495,8 +508,8 @@
     flex-direction: column-reverse;
     display: block;
     display: flex;
-    margin-left: 16px;
-    margin-right: 16px;
+    //margin-left: 16px;
+    //margin-right: 16px;
     width: unset;
   }
 }
@@ -791,25 +804,85 @@
   }
 }
 
-.proposal__project--opened {
-  &:before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 2px;
-    height: calc(100% - 32px * 2);
-    background-color: $blue-default;
-    top: 30px;
-    left: 10px;
-    @media (max-width: $tablet-width) {
-      left: -15px;
-      top: 0;
+
+//синяя палочка слева
+// .proposal__project--opened {
+//   &:before {
+//     content: "";
+//     display: block;
+//     position: absolute;
+//     width: 2px;
+//     height: calc(100% - 32px * 2);
+//     background-color: $blue-default;
+//     top: 30px;
+//     left: 10px;
+//     @media (max-width: $tablet-width) {
+//       left: -15px;
+//       top: 0;
+//     }
+//     @media (max-width: $mobile-max-width) {
+//       left: 8px;
+//     }
+//     @media (max-width: $mobile-width) {
+//       left: 7px;
+//     }
+//   }
+// }
+
+.form-radio input[type="radio"]:checked ~ label {
+
+  .proposal__project {
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 2px;
+      height: calc(100% - 32px * 2);
+      height: 110px;
+      background-color: $blue-default;
+      top: 30px;
+      left: 10px;
+      z-index: 100;
+      @media (max-width: $tablet-width) {
+        left: -15px;
+        top: 0;
+      }
+      @media (max-width: $mobile-max-width) {
+        left: 8px;
+      }
+      @media (max-width: $mobile-width) {
+        left: 7px;
+      }
     }
-    @media (max-width: $mobile-max-width) {
-      left: 8px;
-    }
-    @media (max-width: $mobile-width) {
-      left: 7px;
+  }
+}
+
+.form-radio input[type="radio"]:checked ~ label {
+
+  .proposal__project {
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 2px;
+      //height: calc(100% - 32px * 2);
+      //height: calc(110px + 60%);
+      background-color: $blue-default;
+      top: 30px;
+      left: 10px;
+      z-index: 100;
+      @media (max-width: $tablet-width) {
+        left: -15px;
+        top: 0;
+      }
+      @media (max-width: $mobile-max-width) {
+        left: 8px;
+      }
+      @media (max-width: $mobile-width) {
+        left: 7px;
+      }
     }
   }
 }
@@ -832,6 +905,12 @@
     @media (max-width: $mobile-max-width) {
       padding-left: 0;
       width: 100%;
+    }
+
+    .gallery__item,
+    .gallery__item-link {
+      width: 129px;
+      height: 129px;
     }
   }
   .proposal__project-details {
@@ -888,10 +967,11 @@
 //описание с вариантом и 504
 .proposal__project-desc {
   width: 470px;
+  width: 100%;
 
   @media (max-width: $desktop-width - 1) {
     width: 100%;
-    margin-right: 32px;
+    //margin-right: 32px;
   }
 }
 
