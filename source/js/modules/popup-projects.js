@@ -45,8 +45,6 @@
         }
 
         popup.classList.add('js-sliders-inited');
-
-        toggleActiveClass();
       });
     });
   }

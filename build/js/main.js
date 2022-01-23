@@ -2228,8 +2228,6 @@ tooltipsInit();
         }
 
         popup.classList.add('js-sliders-inited');
-
-        toggleActiveClass();
       });
     });
   }
@@ -2284,7 +2282,10 @@ tooltipsInit();
 
 
   window.openPopup = function (popup) {
-    window.bodyScrollLock.disableBodyScroll(popup);
+    window.bodyScrollLock.disableBodyScroll(popup, {
+      reserveScrollBarGap: true,
+    });
+
     popup.classList.add('popup--shown');
   };
 
