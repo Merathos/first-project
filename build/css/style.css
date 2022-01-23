@@ -6011,6 +6011,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   @media (max-width: 1199px) {
     .proposal__tabs {
       margin-right: 24px; } }
+  @media (max-width: 768px) {
+    .proposal__tabs {
+      -ms-flex-pack: distribute;
+          justify-content: space-around; } }
+  @media (max-width: 415px) {
+    .proposal__tabs {
+      -ms-flex-pack: distribute;
+          justify-content: space-around; } }
   @media (max-width: 400px) {
     .proposal__tabs {
       margin-right: 16px;
@@ -6063,6 +6071,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   text-transform: none;
   -webkit-transition: opacity 0.3s ease-out;
   transition: opacity 0.3s ease-out; }
+  @media (max-width: 768px) {
+    .proposal__tabs .proposal__tab {
+      margin-right: 0; } }
+  @media (max-width: 415px) {
+    .proposal__tabs .proposal__tab {
+      font-size: 16px;
+      padding-bottom: 5px;
+      margin: 0 auto; } }
   @media (max-width: 400px) {
     .proposal__tabs .proposal__tab {
       margin-right: 0;
@@ -6099,7 +6115,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     @media (max-width: 400px) {
       .proposal__projects h2 {
         margin-bottom: 34px;
-        margin-left: 16px;
         margin-right: 16px; } }
 
 .proposal__project-wrapper {
@@ -6614,6 +6629,16 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   left: 8px;
   background: #2c8ecc;
   width: 2px; }
+  @media (max-width: 768px) {
+    .proposal__project--active::after {
+      top: 0;
+      left: -7px;
+      bottom: 35px; } }
+  @media (max-width: 400px) {
+    .proposal__project--active::after {
+      top: 0;
+      left: -7px;
+      bottom: 35px; } }
 
 .comments-tab {
   height: 46px;
@@ -15729,7 +15754,7 @@ ymaps p {
 .project-vote {
   background-color: var(--color-bg-secondary, #f9f9fa);
   border-radius: 5px;
-  z-index: 1000; }
+  z-index: 9; }
 
 .project-vote__container {
   padding: 24px; }
@@ -16093,6 +16118,9 @@ ymaps p {
 
 .project-vote__choose-btn {
   margin-top: 20px; }
+
+.project-vote__wrapper {
+  width: 100%; }
 
 .vote-results__output {
   display: -webkit-box;

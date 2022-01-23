@@ -1,7 +1,8 @@
 .project-vote {
   background-color: var(--color-bg-secondary, $color-bg);
   border-radius: $border-radius;
-  z-index: 1000;
+  //z-index: 1000;
+  z-index: 9;
 }
 
 .project-vote__container {
@@ -484,4 +485,8 @@
 
 .project-vote__choose-btn {
   margin-top: 20px;
+}
+
+.project-vote__wrapper {
+  width: 100%;
 }
