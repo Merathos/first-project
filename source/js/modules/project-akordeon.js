@@ -58,15 +58,14 @@
         projectGallery.classList.toggle('opened');
         projectMark.classList.toggle('opened');
         var textSpan = projectToggleTextButton.querySelector('.button-details__text');
-        // var changeButtonText = function () {
+
         if (projectToggleTextButton.classList.contains('opened')) {
           textSpan.textContent = 'Свернуть';
         } else {
           textSpan.textContent = 'Подробнее';
         }
-        // };
-        // changeButtonText();
-        projectToggleTextButton.classList.toggle('proposal__project--opened');
+
+        //projectToggleTextButton.classList.toggle('proposal__project--opened');
       }
     };
   }

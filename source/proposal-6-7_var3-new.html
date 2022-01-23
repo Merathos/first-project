@@ -73,8 +73,9 @@
               завершения
             </p>
             <div class="project-vote__like-counter js-like-counter">
+              <span>Всего проголосовало:</span>
               <span>504</span>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+              <!-- <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path class="stroked"
                   d="M1.75 24H4.25C5.215 24 6 23.215 6 22.25V21.884C7.512 22.654 10.946 24 16.531 24H18.131C20.449 24 22.417 22.342 22.81 20.058L23.93 13.558C24.168 12.171 23.785 10.761 22.881 9.687C21.978 8.615 20.654 8 19.251 8H14.715C14.998 7.24 15.281 6.132 15.281 4.75C15.281 0.993 13.155 0 12.031 0C9.955 0 9.781 1.936 9.781 3.75C9.781 5.964 7.298 7.804 5.987 8.622C5.92 7.718 5.171 7 4.25 7H1.75C0.785 7 0 7.785 0 8.75V22.25C0 23.215 0.785 24 1.75 24ZM11.281 3.75C11.281 1.5 11.662 1.5 12.031 1.5C12.735 1.5 13.781 2.366 13.781 4.75C13.781 6.966 12.913 8.324 12.907 8.334C12.754 8.564 12.739 8.86 12.87 9.104C13 9.348 13.255 9.5 13.531 9.5H19.251C20.211 9.5 21.116 9.92 21.734 10.653C22.353 11.387 22.615 12.353 22.452 13.302L21.332 19.802C21.063 21.364 19.717 22.499 18.131 22.499H16.531C9.728 22.5 6.32 20.372 6 20.161V10.351C6.833 9.909 11.281 7.379 11.281 3.75ZM1.5 8.75C1.5 8.612 1.612 8.5 1.75 8.5H4.25C4.388 8.5 4.5 8.612 4.5 8.75V22.25C4.5 22.386 4.386 22.5 4.25 22.5H1.75C1.612 22.5 1.5 22.388 1.5 22.25V8.75Z"
@@ -85,7 +86,17 @@
                 <path class="filled" fill-rule="evenodd" clip-rule="evenodd"
                   d="M4.79997 8.61389C4.79561 8.6166 4.79128 8.6193 4.78697 8.62199C4.71997 7.718 3.97098 7 3.04998 7H1.74999C0.784995 7 0 7.785 0 8.74999V22.2499C0 23.2149 0.784995 23.9999 1.74999 23.9999H3.04998C4.01454 23.9999 4.79926 23.2156 4.79997 22.2512C4.79997 22.2508 4.79997 22.2503 4.79997 22.2499V21.8839L4.79997 8.61389Z"
                   fill="inherit" />
-              </svg>
+              </svg> -->
+            </div>
+            <div>
+              <p class="project-vote__choose-project">Выберите вариант дизайн-проекта для&nbsp;благоустройства территорий</p>
+              <a href="#proposal-projects" class="project-vote__choose-btn button button--blue">ПРОГОЛОСОВАТЬ</a>
+              <p class="project-vote__marked">
+                <svg width="20" height="20">
+                  <use xlink:href="img/sprite.svg#checkbox-blue-2"></use>
+                </svg>
+                <a href="#proposal-projects">Ваш голос учтён</a>
+              </p>
             </div>
           </div>
         </div>
@@ -195,7 +206,7 @@
           <button aria-label="Дизайн-проекты" type="button" class="proposal__project-tab proposal__tab button" data-tab-name="projectstab">Дизайн-проекты</button>
           <button aria-label="Вехи реализации" type="button" class="proposal__milestones-tab proposal__tab proposal__tab--active button" data-tab-name="milestonestab">Вехи реализации</button>
         </div>
-        <div class="proposal__projectstab proposal__tab-item">
+        <div class="proposal__projectstab proposal__tab-item" id="proposal-projects">
           <div class="proposal__project">
             <div class="proposal__project-wrapper">
               <div class="proposal__project-desc">
@@ -336,11 +347,11 @@
                 </div>
               </div>
               <button type="button" class="button button--blue button--update">ПРОГОЛОСОВАТЬ</button>
-              <div class="proposal-list__like-counter">
-                <div class="form-checkbox form-checkbox--round form-checkbox--white">
-                  <input type="checkbox" name="checkbox" id="checkbox-1" value="checkbox-1" checked>
-                  <label for="checkbox-1"></label>
-                </div>
+              <div class="proposal__project-mark">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="11.25" stroke="#2C8ECC" stroke-width="1.5"/>
+                  <path d="M7.19922 12.0004L11.0392 15.6004L16.7992 8.40039" stroke="#2C8ECC" stroke-width="1.5"/>
+                </svg>
                 <span>Вы выбрали данный дизайн-проект</span>
               </div>
               <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
@@ -389,7 +400,7 @@
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-1@2x.png" target="_blank"
                     aria-label="описание картинки" data-index="0">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-1@2x.png"
+                      <img width="129" height="129" class="gallery__item-img" src="img/img-project/project-img-1@2x.png"
                         alt="описание картинки">
                       <figcaption class="gallery__item-text">
                         Описание, текст до 500 символов. Рыбным текстом
@@ -410,7 +421,7 @@
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-2@2x.png" target="_blank"
                     aria-label="описание картинки" data-index="1">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-2@2x.png"
+                      <img width="129" height="129" class="gallery__item-img" src="img/img-project/project-img-2@2x.png"
                         alt="описание картинки">
                       <figcaption class="gallery__item-text">
                         Самый известный текст-«рыба», называемый Lorem ipsum,
@@ -431,7 +442,7 @@
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-3@2x.png" target="_blank"
                     aria-label="описание картинки" data-index="2">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-3@2x.png"
+                      <img width="129" height="129" class="gallery__item-img" src="img/img-project/project-img-3@2x.png"
                         alt="описание картинки">
                       <figcaption class="gallery__item-text">
                         Описание, текст до 500 символов. Рыбным текстом
@@ -452,7 +463,7 @@
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-4@2x.png" target="_blank"
                     aria-label="описание картинки" data-index="3">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-4@2x.png"
+                      <img width="129" height="129" class="gallery__item-img" src="img/img-project/project-img-4@2x.png"
                         alt="описание картинки">
                       <figcaption class="gallery__item-text">
                         Самый известный текст-«рыба», называемый Lorem ipsum,
@@ -473,7 +484,7 @@
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-5@2x.png" target="_blank"
                     aria-label="описание картинки" data-index="4">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-5@2x.png"
+                      <img width="129" height="129" class="gallery__item-img" src="img/img-project/project-img-5@2x.png"
                         alt="описание картинки">
                       <figcaption class="gallery__item-text">
                         Описание, текст до 500 символов. Рыбным текстом
@@ -493,11 +504,11 @@
               </div>
               <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
               <button type="button" class="button button--blue button--update">ПРОГОЛОСОВАТЬ</button>
-              <div class="proposal-list__like-counter">
-                <div class="form-checkbox form-checkbox--round form-checkbox--white">
-                  <input type="checkbox" name="checkbox" id="checkbox-2" value="checkbox-2" checked>
-                  <label for="checkbox-2"></label>
-                </div>
+              <div class="proposal__project-mark">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="11.25" stroke="#2C8ECC" stroke-width="1.5"/>
+                  <path d="M7.19922 12.0004L11.0392 15.6004L16.7992 8.40039" stroke="#2C8ECC" stroke-width="1.5"/>
+                </svg>
                 <span>Вы выбрали данный дизайн-проект</span>
               </div>
             </div>
@@ -649,11 +660,11 @@
               </div>
               <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
               <button type="button" class="button button--blue button--update">ПРОГОЛОСОВАТЬ</button>
-              <div class="proposal-list__like-counter">
-                <div class="form-checkbox form-checkbox--round form-checkbox--white">
-                  <input type="checkbox" name="checkbox" id="checkbox-3" value="checkbox-3" checked>
-                  <label for="checkbox-3"></label>
-                </div>
+              <div class="proposal__project-mark">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="12" cy="12" r="11.25" stroke="#2C8ECC" stroke-width="1.5"/>
+                  <path d="M7.19922 12.0004L11.0392 15.6004L16.7992 8.40039" stroke="#2C8ECC" stroke-width="1.5"/>
+                </svg>
                 <span>Вы выбрали данный дизайн-проект</span>
               </div>
             </div>
@@ -678,7 +689,7 @@
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-1@2x.png" target="_blank"
                     aria-label="описание картинки" data-index="0">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-1@2x.png"
+                      <img width="129" height="129" class="gallery__item-img" src="img/img-project/project-img-1@2x.png"
                         alt="описание картинки">
                       <figcaption class="gallery__item-text">
                         Описание, текст до 500 символов. Рыбным текстом
@@ -699,7 +710,7 @@
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-2@2x.png" target="_blank"
                     aria-label="описание картинки" data-index="1">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-2@2x.png"
+                      <img width="129" height="129" class="gallery__item-img" src="img/img-project/project-img-2@2x.png"
                         alt="описание картинки">
                       <figcaption class="gallery__item-text">
                         Самый известный текст-«рыба», называемый Lorem ipsum,
@@ -720,7 +731,7 @@
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-3@2x.png" target="_blank"
                     aria-label="описание картинки" data-index="2">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-3@2x.png"
+                      <img width="129" height="129" class="gallery__item-img" src="img/img-project/project-img-3@2x.png"
                         alt="описание картинки">
                       <figcaption class="gallery__item-text">
                         Описание, текст до 500 символов. Рыбным текстом
@@ -741,7 +752,7 @@
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-4@2x.png" target="_blank"
                     aria-label="описание картинки" data-index="3">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-4@2x.png"
+                      <img width="129" height="129" class="gallery__item-img" src="img/img-project/project-img-4@2x.png"
                         alt="описание картинки">
                       <figcaption class="gallery__item-text">
                         Самый известный текст-«рыба», называемый Lorem ipsum,
@@ -762,7 +773,7 @@
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-5@2x.png" target="_blank"
                     aria-label="описание картинки" data-index="4">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-5@2x.png"
+                      <img width="129" height="129" class="gallery__item-img" src="img/img-project/project-img-5@2x.png"
                         alt="описание картинки">
                       <figcaption class="gallery__item-text">
                         Описание, текст до 500 символов. Рыбным текстом
@@ -801,7 +812,7 @@
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-1@2x.png" target="_blank"
                     aria-label="описание картинки" data-index="0">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-1@2x.png"
+                      <img width="129" height="129" class="gallery__item-img" src="img/img-project/project-img-1@2x.png"
                         alt="описание картинки">
                       <figcaption class="gallery__item-text">
                         Описание, текст до 500 символов. Рыбным текстом
@@ -822,7 +833,7 @@
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-2@2x.png" target="_blank"
                     aria-label="описание картинки" data-index="1">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-2@2x.png"
+                      <img width="129" height="129" class="gallery__item-img" src="img/img-project/project-img-2@2x.png"
                         alt="описание картинки">
                       <figcaption class="gallery__item-text">
                         Самый известный текст-«рыба», называемый Lorem ipsum,
@@ -843,7 +854,7 @@
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-3@2x.png" target="_blank"
                     aria-label="описание картинки" data-index="2">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-3@2x.png"
+                      <img width="129" height="129" class="gallery__item-img" src="img/img-project/project-img-3@2x.png"
                         alt="описание картинки">
                       <figcaption class="gallery__item-text">
                         Описание, текст до 500 символов. Рыбным текстом
@@ -864,7 +875,7 @@
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-4@2x.png" target="_blank"
                     aria-label="описание картинки" data-index="3">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-4@2x.png"
+                      <img width="129" height="129" class="gallery__item-img" src="img/img-project/project-img-4@2x.png"
                         alt="описание картинки">
                       <figcaption class="gallery__item-text">
                         Самый известный текст-«рыба», называемый Lorem ipsum,
@@ -885,7 +896,7 @@
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-5@2x.png" target="_blank"
                     aria-label="описание картинки" data-index="4">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-5@2x.png"
+                      <img width="129" height="129" class="gallery__item-img" src="img/img-project/project-img-5@2x.png"
                         alt="описание картинки">
                       <figcaption class="gallery__item-text">
                         Описание, текст до 500 символов. Рыбным текстом
@@ -924,7 +935,7 @@
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-1@2x.png" target="_blank"
                     aria-label="описание картинки" data-index="0">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-1@2x.png"
+                      <img width="129" height="129" class="gallery__item-img" src="img/img-project/project-img-1@2x.png"
                         alt="описание картинки">
                       <figcaption class="gallery__item-text">
                         Описание, текст до 500 символов. Рыбным текстом
@@ -945,7 +956,7 @@
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-2@2x.png" target="_blank"
                     aria-label="описание картинки" data-index="1">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-2@2x.png"
+                      <img width="129" height="129" class="gallery__item-img" src="img/img-project/project-img-2@2x.png"
                         alt="описание картинки">
                       <figcaption class="gallery__item-text">
                         Самый известный текст-«рыба», называемый Lorem ipsum,
@@ -966,7 +977,7 @@
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-3@2x.png" target="_blank"
                     aria-label="описание картинки" data-index="2">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-3@2x.png"
+                      <img width="129" height="129" class="gallery__item-img" src="img/img-project/project-img-3@2x.png"
                         alt="описание картинки">
                       <figcaption class="gallery__item-text">
                         Описание, текст до 500 символов. Рыбным текстом
@@ -987,7 +998,7 @@
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-4@2x.png" target="_blank"
                     aria-label="описание картинки" data-index="3">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-4@2x.png"
+                      <img width="129" height="129" class="gallery__item-img" src="img/img-project/project-img-4@2x.png"
                         alt="описание картинки">
                       <figcaption class="gallery__item-text">
                         Самый известный текст-«рыба», называемый Lorem ipsum,
@@ -1008,7 +1019,7 @@
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/project-img-5@2x.png" target="_blank"
                     aria-label="описание картинки" data-index="4">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-5@2x.png"
+                      <img width="129" height="129" class="gallery__item-img" src="img/img-project/project-img-5@2x.png"
                         alt="описание картинки">
                       <figcaption class="gallery__item-text">
                         Описание, текст до 500 символов. Рыбным текстом
