@@ -45,8 +45,6 @@
         }
 
         popup.classList.add('js-sliders-inited');
-
-        toggleActiveClass();
       });
     });
   }
@@ -86,20 +84,6 @@
       });
     }
 
-    var projectsEls = document.querySelectorAll('.proposal__project');
-
-
-    var toggleActiveClass = function (e) {
-      projectsEls.forEach(function (project) {
-        var radioEl = project.querySelector('input[type="radio"]');
-        project.classList.toggle('proposal__project--active', radioEl.checked);
-      });
-    };
-
-    projectsEls.forEach(function (project) {
-      var radioEl = project.querySelector('input[type="radio"]');
-      radioEl.addEventListener('change', toggleActiveClass);
-    });
   }
 
   document.addEventListener('keydown', function (evt) {
