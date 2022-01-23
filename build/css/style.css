@@ -2687,7 +2687,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         max-width: 100%; } }
   .button--update {
     font-size: 0.9375rem;
-    line-height: 1.26563rem;
+    line-height: 1.26562rem;
     font-weight: 500; }
 
 @media print {
@@ -6593,6 +6593,15 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     @media (max-width: 400px) {
       .proposal__project-mark span {
         font-size: 14px; } }
+
+.proposal__project--active::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  left: 8px;
+  background: #2c8ecc;
+  width: 2px; }
 
 .comments-tab {
   height: 46px;
@@ -10677,7 +10686,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .notification__more {
   margin-top: 16px;
   padding: 0;
-  line-height: 1.26563rem;
+  line-height: 1.26562rem;
   background-color: transparent;
   border: none;
   cursor: pointer; }
@@ -14534,7 +14543,7 @@ span.poll__hide {
     margin: 0 auto;
     font-weight: 500;
     font-size: 0.9375rem;
-    line-height: 1.26563rem;
+    line-height: 1.26562rem;
     color: #2c8ecc;
     text-transform: uppercase;
     padding: 0;
@@ -14738,7 +14747,7 @@ ymaps p {
           align-items: center;
   padding-top: 0;
   font-size: 0.9375rem;
-  line-height: 1.26563rem;
+  line-height: 1.26562rem;
   text-decoration: none;
   position: relative;
   color: #2c8ecc; }
