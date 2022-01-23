@@ -2692,7 +2692,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         max-width: 100%; } }
   .button--update {
     font-size: 0.9375rem;
-    line-height: 1.26562rem;
+    line-height: 1.26563rem;
     font-weight: 500; }
 
 @media print {
@@ -6603,10 +6603,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       .proposal__project-mark span {
         font-size: 14px; } }
 
-<<<<<<< HEAD
 .proposal--aside .buttons-wrapper {
   grid-area: j; }
-=======
+
 .proposal__project--active::after {
   content: "";
   position: absolute;
@@ -6615,7 +6614,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   left: 8px;
   background: #2c8ecc;
   width: 2px; }
->>>>>>> improvement-master
 
 .comments-tab {
   height: 46px;
@@ -10700,7 +10698,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .notification__more {
   margin-top: 16px;
   padding: 0;
-  line-height: 1.26562rem;
+  line-height: 1.26563rem;
   background-color: transparent;
   border: none;
   cursor: pointer; }
@@ -14557,7 +14555,7 @@ span.poll__hide {
     margin: 0 auto;
     font-weight: 500;
     font-size: 0.9375rem;
-    line-height: 1.26562rem;
+    line-height: 1.26563rem;
     color: #2c8ecc;
     text-transform: uppercase;
     padding: 0;
@@ -14761,7 +14759,7 @@ ymaps p {
           align-items: center;
   padding-top: 0;
   font-size: 0.9375rem;
-  line-height: 1.26562rem;
+  line-height: 1.26563rem;
   text-decoration: none;
   position: relative;
   color: #2c8ecc; }

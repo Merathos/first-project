@@ -204,17 +204,6 @@
 
 })();
 
-// 'use strict';
-
-
-// (function () {
-//     var popup = document.querySelector('.onfirmatuio-popup');
-//     var buttonLink = document.querySelector('.project-vote__choose-btn');
-
-
-
-// });
-
 'use strict';
 (function () {
   var modals = document.querySelectorAll('.confirmation-popup[data-modal]');
