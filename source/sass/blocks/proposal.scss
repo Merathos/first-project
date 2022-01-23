@@ -395,6 +395,7 @@
 
   .proposal__project-mark {
     margin-left: 0;
+    margin-left: 32px;
   }
 }
 
@@ -1157,6 +1158,7 @@
 
   &.opened {
     display: flex;
+    //margin-left: 32px;
   }
 
   @media (max-width: $mobile-max-width) {
