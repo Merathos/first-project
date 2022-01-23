@@ -347,7 +347,7 @@
                 <div class="swiper-slide swiper-slide-active" style="margin-right: 16px;">
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/1.jpg" target="_blank" aria-label="описание картинки" data-index="0">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/1.jpg" alt="описание картинки">
+                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-1@2x.png" alt="описание картинки">
                       <figcaption class="gallery__item-text"></figcaption>
                     </figure>
                   </a>
@@ -355,7 +355,7 @@
                 <div class="swiper-slide swiper-slide-next" style="margin-right: 16px;">
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/2.jpg" target="_blank" aria-label="описание картинки" data-index="1">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/2.jpg" alt="описание картинки">
+                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-2@2x.png" alt="описание картинки">
                       <figcaption class="gallery__item-text"></figcaption>
                     </figure>
                   </a>
@@ -363,7 +363,7 @@
                 <div class="swiper-slide" style="margin-right: 16px;">
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/1.jpg" target="_blank" aria-label="описание картинки" data-index="2">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/1.jpg" alt="описание картинки">
+                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-3@2x.png" alt="описание картинки">
                       <figcaption class="gallery__item-text"></figcaption>
                     </figure>
                   </a>
@@ -371,7 +371,7 @@
                 <div class="swiper-slide" style="margin-right: 16px;">
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/2.jpg" target="_blank" aria-label="описание картинки" data-index="3">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/2.jpg" alt="описание картинки">
+                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-4@2x.png" alt="описание картинки">
                       <figcaption class="gallery__item-text"></figcaption>
                     </figure>
                   </a>
@@ -379,7 +379,7 @@
                 <div class="swiper-slide" style="margin-right: 16px;">
                   <a class="gallery__item-link js-gallery__item-link" href="img/img-project/1.jpg" target="_blank" aria-label="описание картинки" data-index="4">
                     <figure class="gallery__item">
-                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/1.jpg" alt="описание картинки">
+                      <img width="135" height="135" class="gallery__item-img" src="img/img-project/project-img-5@2x.png" alt="описание картинки">
                       <figcaption class="gallery__item-text"></figcaption>
                     </figure>
                   </a>
@@ -1173,6 +1173,40 @@
           <a class="button button--light-blue" href="#">
             <span>к списку предложений</span>
           </a>
+        </div>
+        <div class="buttons-wrapper">
+  <button type="button" class="button button--white">Отменить</button>
+  <button type="button" class="button-remove" data-modal="remove">
+    <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M7 7H5v6h2V7zM11 7H9v6h2V7z" fill="#2C8ECC"></path>
+      <path d="M12 1c0-.6-.4-1-1-1H5c-.6 0-1 .4-1 1v2H0v2h1v10c0 .6.4 1 1 1h12c.6 0 1-.4 1-1V5h1V3h-4V1zM6 2h4v1H6V2zm7 3v9H3V5h10z" fill="#2C8ECC"></path>
+    </svg>
+    <span>Удалить черновик</span>
+  </button>
+  <button type="button" class="buttons-wrapper__submit-btn button button--blue" id="improvement-submit-btn" data-modal="confirm">
+    Отправить на модерацию
+  </button>
+</div>
+
+        <div class="confirmation-popup" data-modal="remove">
+          <div class="confirmation-popup__body">
+            <button type="button" class="confirmation-popup__close-btn" aria-label="Отмена"></button>
+            <p>После отправки предложения на модерацию внести изменения будет нельзя После отправки предложения на модерацию внести изменения будет нельзя После отправки предложения на модерацию внести изменения будет нельзя После отправки предложения на модерацию внести изменения будет нельзя После отправки предложения на модерацию внести изменения будет нельзя После отправки предложения на модерацию внести изменения будет нельзя После отправки предложения на модерацию внести изменения будет нельзя</p>
+            <div class="confirmation-popup__buttons-wrap">
+              <button type="button" class="confirmation-popup__back-btn button button--white">Вернуться</button>
+              <button type="submit" class="confirmation-popup__submit-btn button button--blue">Отправить</button>
+            </div>
+          </div>
+        </div>
+        <div class="confirmation-popup" data-modal="confirm">
+          <div class="confirmation-popup__body">
+            <button type="button" class="confirmation-popup__close-btn" aria-label="Отмена"></button>
+            <p>После отправки предложения на модерацию внести изменения будет нельзя После отправки предложения на модерацию внести изменения будет нельзя После отправки предложения на модерацию внести изменения будет нельзя После отправки предложения на модерацию внести изменения будет нельзя После отправки предложения на модерацию внести изменения будет нельзя После отправки предложения на модерацию внести изменения будет нельзя После отправки предложения на модерацию внести изменения будет нельзя</p>
+            <div class="confirmation-popup__buttons-wrap">
+              <button type="button" class="confirmation-popup__back-btn button button--white">Вернуться</button>
+              <button type="submit" class="confirmation-popup__submit-btn button button--blue">Отправить</button>
+            </div>
+          </div>
         </div>
       </section>
     </div>
