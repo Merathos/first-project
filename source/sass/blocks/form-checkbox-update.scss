@@ -9,6 +9,7 @@
 
 .form-checkbox-update--grey input[type="checkbox"] ~ label {
   position: relative;
+  cursor: pointer;
   &:before {
     top: -5px;
     right: 20px;
@@ -36,9 +37,11 @@
 
 .form-checkbox-update--grey input[type="checkbox"] ~ label:hover {
   &:before {
+    transition: border-color 0.3s ease-out;
     border-color: $blue-default;
   }
   &:after {
+    transition: background-image 0.3s ease-out;
     background-image: url("../img/icon-tick-blue.svg");
   }
 }

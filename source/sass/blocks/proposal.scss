@@ -13,7 +13,7 @@
     padding-left: 0;
   }
 
-  > *:not(.proposal__wrapper) {
+  > *:not(.proposal__wrapper):not(.proposal__projects):not(.proposal__tab-item) {
     margin-right: 16px;
 
     @media (min-width: $tablet-width) {
@@ -24,6 +24,18 @@
       margin-right: 0;
     }
   }
+
+  // > *:not(.proposal__projects) {
+  //   margin-right: 16px;
+
+  //   @media (min-width: $tablet-width) {
+  //     margin-right: 24px;
+  //   }
+
+  //   @media (min-width: $desktop-width) {
+  //     margin-right: 0;
+  //   }
+  // }
 
   &--aside {
     @media (min-width: $desktop-width) {
@@ -40,7 +52,8 @@
         "f k"
         "g l"
         "h m"
-        "i i";
+        "i i"
+        "j j";
 
       >* {
         align-self: start;
@@ -328,6 +341,10 @@
 // чтобы она была после нового .proposal__projects-wrapper
 .proposal__projects {
   grid-area: f;
+
+  @media (max-width: $mobile-max-width) {
+    margin-right: 0;
+  }
 }
 
 .proposal__tabs {
@@ -426,14 +443,14 @@
   margin-bottom: 22px;
   @media (max-width: $desktop-width - 1) {
     margin-bottom: 41px;
-    margin-left: $tablet-padding;
-    margin-right: $tablet-padding;
+    //margin-left: $tablet-padding;
+    //margin-right: $tablet-padding;
   }
 
   @media (max-width: $tablet-width) {
     margin-bottom: 34px;
-    margin-left: $tablet-padding;
-    margin-right: $tablet-padding;
+    //margin-left: $tablet-padding;
+    //margin-right: $tablet-padding;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -501,10 +518,15 @@
       margin-bottom: 24px;
     }
   }
+  @media (min-width: $tablet-width) {
+    margin-right: 24px;
+  }
   @media (max-width: $tablet-width) {
     flex-direction: column-reverse;
+    margin-right: 16px;
   }
   @media (max-width: $mobile-max-width) {
+    margin-right: 16px;
     flex-direction: column-reverse;
     display: block;
     display: flex;
@@ -1134,6 +1156,10 @@
   }
 }
 
+<<<<<<< HEAD
+.proposal--aside .buttons-wrapper {
+  grid-area: j;
+=======
 .proposal__project--active {
   &::after {
     content: "";
@@ -1144,4 +1170,5 @@
     background: $blue-default;
     width: 2px;
   }
+>>>>>>> improvement-master
 }
