@@ -6055,6 +6055,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .proposal__milestonestab .proposal__project-mark {
     margin-left: 0;
     margin-left: 32px; }
+    @media (max-width: 400px) {
+      .proposal__projectstab .proposal__project-mark,
+      .proposal__milestonestab .proposal__project-mark {
+        margin-left: 0; } }
 
 .proposal__tab-item--active {
   height: auto;
@@ -6248,7 +6252,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         margin-left: 30px; } }
     @media (max-width: 400px) {
       .proposal__project .button--blue {
-        margin-left: 0; } }
+        margin-left: 0;
+        width: unset; } }
   .proposal__project .proposal-list__like-counter {
     margin-top: 32px;
     display: -webkit-box;
@@ -6363,8 +6368,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       position: unset; }
       @media (max-width: 400px) {
         .proposal__project .button-details.opened {
-          margin-left: 0;
-          margin-left: 16px; } }
+          margin-left: 0; } }
       .proposal__project .button-details.opened .button-details__text_opened {
         display: inline-block; }
       .proposal__project .button-details.opened .button-details__text_closed {
@@ -6462,6 +6466,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .proposal__project .proposal__project-details {
   margin-top: 32px;
   margin-left: 28px; }
+  @media (max-width: 400px) {
+    .proposal__project .proposal__project-details {
+      margin-left: 0; } }
   .proposal__project .proposal__project-details svg {
     -webkit-transform: rotate(-180deg);
             transform: rotate(-180deg); }
@@ -6627,7 +6634,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     display: flex; }
   @media (max-width: 400px) {
     .proposal__project-mark {
-      margin-left: 16px;
+      margin-left: 0;
       margin-right: 16px; } }
   .proposal__project-mark svg {
     margin-right: 10px; }
@@ -6669,6 +6676,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       top: 0;
       left: -7px;
       bottom: 35px; } }
+  @media (max-width: 320px) {
+    .proposal__project--active::after {
+      top: 0;
+      left: -7px;
+      bottom: 40px; } }
 
 .project__gallery-full {
   margin-left: 32px;
@@ -12960,9 +12972,15 @@ span.poll__hide {
     @media (max-width: 400px) {
       .popup__content--projects .proposal__gallery button {
         width: unset; } }
+<<<<<<< HEAD
+  @media (max-width: 400px) {
+    .popup__content--projects .proposal__project-mark {
+      margin-left: 0; } }
+=======
   .popup__content--projects .gallery-full__item {
     width: 100%;
     height: 300px; }
+>>>>>>> improvement-master
 
 @media (max-width: 400px) {
   .popup__container--update {
