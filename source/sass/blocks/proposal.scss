@@ -53,7 +53,8 @@
         "g l"
         "h m"
         "i i"
-        "j j";
+        "j j"
+        "n n";
 
       >* {
         align-self: start;
@@ -616,6 +617,12 @@
     padding-top: 11px;
     padding-bottom: 11px;
     display: none;
+    //display: block;
+    margin-left: 32px;
+
+    &.opened {
+      display: block;
+    }
 
     @media (max-width: $tablet-width) {
       margin-left: 30px;
@@ -1194,6 +1201,15 @@
 
 .proposal--aside .buttons-wrapper {
   grid-area: j;
+}
+
+.proposal--aside .buttons-wrapper--send {
+  grid-area: n;
+  display: flex;
+
+  @media (max-width: $mobile-max-width) {
+    flex-wrap: wrap;
+  }
 }
 
 .proposal__project--active {

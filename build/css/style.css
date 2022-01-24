@@ -5807,7 +5807,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       display: grid;
       grid-template-columns: minmax(740px, 1fr) 360px;
       grid-column-gap: 20px;
-      grid-template-areas: "a a" "b b" "c c" "curator curator" "rules rules" "d e" "f k" "g l" "h m" "i i" "j j"; }
+      grid-template-areas: "a a" "b b" "c c" "curator curator" "rules rules" "d e" "f k" "g l" "h m" "i i" "j j" "n n"; }
       .proposal--aside > * {
         -ms-flex-item-align: start;
             align-self: start; } }
@@ -6239,7 +6239,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     display: block;
     padding-top: 11px;
     padding-bottom: 11px;
-    display: none; }
+    display: none;
+    margin-left: 32px; }
+    .proposal__project .button--blue.opened {
+      display: block; }
     @media (max-width: 768px) {
       .proposal__project .button--blue {
         margin-left: 30px; } }
@@ -6637,6 +6640,16 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 
 .proposal--aside .buttons-wrapper {
   grid-area: j; }
+
+.proposal--aside .buttons-wrapper--send {
+  grid-area: n;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  @media (max-width: 400px) {
+    .proposal--aside .buttons-wrapper--send {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; } }
 
 .proposal__project--active::after {
   content: "";
@@ -12912,7 +12925,8 @@ span.poll__hide {
     width: 135px;
     height: 135px; }
   .popup__content--projects .proposal__project-desc {
-    width: 502px; }
+    width: 502px;
+    width: 100%; }
     @media (max-width: 400px) {
       .popup__content--projects .proposal__project-desc {
         width: 100%; } }

@@ -2584,11 +2584,17 @@ tooltipsInit();
         var projectText = parent.querySelector('.proposal__project-text');
         var projectGallery = parent.querySelector('.proposal__gallery');
         var projectMark = parent.querySelector('.proposal__project-mark');
+        var voteBtn = parent.querySelector('.button--update');
 
         projectToggleTextButton.classList.toggle('opened');
         projectText.classList.toggle('opened');
         projectGallery.classList.toggle('opened');
-        projectMark.classList.toggle('opened');
+        if (projectMark) {
+          projectMark.classList.toggle('opened');
+        }
+        if (voteBtn) {
+          voteBtn.classList.toggle('opened');
+        }
         var textSpan = projectToggleTextButton.querySelector('.button-details__text');
 
         if (projectToggleTextButton.classList.contains('opened')) {
