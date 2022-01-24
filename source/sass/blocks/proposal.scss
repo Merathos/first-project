@@ -398,6 +398,10 @@
   .proposal__project-mark {
     margin-left: 0;
     margin-left: 32px;
+
+    @media (max-width: $mobile-max-width) {
+      margin-left: 0;
+    }
   }
 }
 
@@ -629,6 +633,7 @@
     }
     @media (max-width: $mobile-max-width) {
       margin-left: 0;
+      width: unset;
     }
   }
 
@@ -819,7 +824,7 @@
 
       @media (max-width: $mobile-max-width) {
         margin-left: 0;
-        margin-left: 16px;
+        //margin-left: 16px;
       }
 
       .button-details__text_opened {
@@ -980,6 +985,10 @@
   .proposal__project-details {
     margin-top: 32px;
     margin-left: 28px;
+
+    @media (max-width: $mobile-max-width) {
+      margin-left: 0;
+    }
 
     svg {
       transform: rotate(-180deg);
@@ -1181,7 +1190,7 @@
   }
 
   @media (max-width: $mobile-max-width) {
-    margin-left: 16px;
+    margin-left: 0;
     margin-right: 16px;
   }
 
@@ -1231,6 +1240,11 @@
       top: 0;
       left: -7px;
       bottom: 35px;
+    }
+    @media (max-width: $mobile-width) {
+      top: 0;
+      left: -7px;
+      bottom: 40px;
     }
   }
 }

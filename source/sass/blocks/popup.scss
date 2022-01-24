@@ -231,6 +231,12 @@
       }
     }
   }
+
+  .proposal__project-mark {
+    @media (max-width: $mobile-max-width) {
+      margin-left: 0;
+    }
+  }
 }
 
 .popup__container--update {
