@@ -1234,3 +1234,14 @@
     }
   }
 }
+
+.project__gallery-full {
+  margin-left: 32px;
+  margin-top: 16px;
+  width: calc(100% - 32px);
+
+  @media (max-width: $mobile-max-width) {
+    width: 100%;
+    margin-left: 0;
+  }
+}
