@@ -90,11 +90,21 @@
 }
 //новое добавление
 .proposal-list__project-mark {
-  color: $grey-lighter;
-  font-size: 14px;
   display: flex;
   align-items: center;
   margin-right: 16px;
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  span {
+    color: $grey-lighter;
+    font-size: 14px;
+    line-height: 18.2px;
+  }
 
   svg {
     margin-right: 8px;

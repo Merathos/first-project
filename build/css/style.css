@@ -1898,8 +1898,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       .form-checkbox-update__custom-checkbox + label::before {
         right: -25px; } }
   .form-checkbox-update__custom-checkbox + label::after {
-    top: 1px;
-    right: 25px;
+    top: 2px;
+    right: 26px;
     position: absolute;
     width: 12px;
     height: 10px;
@@ -6021,7 +6021,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   @media (max-width: 768px) {
     .proposal__tabs {
       -ms-flex-pack: distribute;
-          justify-content: space-around; } }
+          justify-content: space-around;
+      margin-right: 16px; } }
   @media (max-width: 415px) {
     .proposal__tabs {
       -ms-flex-pack: distribute;
@@ -6081,7 +6082,15 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   transition: opacity 0.3s ease-out; }
   @media (max-width: 768px) {
     .proposal__tabs .proposal__tab {
-      margin-right: 0; } }
+      margin-right: 0;
+      font-size: 16px;
+      padding-bottom: 5px;
+      margin: 0 auto; } }
+  @media (max-width: 415px) {
+    .proposal__tabs .proposal__tab {
+      font-size: 16px;
+      padding-bottom: 5px;
+      margin: 0 auto; } }
   @media (max-width: 415px) {
     .proposal__tabs .proposal__tab {
       font-size: 16px;
@@ -6907,8 +6916,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     margin-left: 1px; }
 
 .proposal-list__project-mark {
-  color: #a6abb2;
-  font-size: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6916,6 +6923,19 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       -ms-flex-align: center;
           align-items: center;
   margin-right: 16px; }
+  @media (max-width: 400px) {
+    .proposal-list__project-mark {
+      margin-bottom: 10px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
+  .proposal-list__project-mark span {
+    color: #a6abb2;
+    font-size: 14px;
+    line-height: 18.2px; }
   .proposal-list__project-mark svg {
     margin-right: 8px;
     width: 14px;
@@ -12856,7 +12876,8 @@ span.poll__hide {
   padding: 48px 40px;
   max-width: 852px;
   border-radius: 5px;
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  margin: 0 auto; }
   @media (max-width: 768px) {
     .popup__content--projects {
       padding: 24px; } }
