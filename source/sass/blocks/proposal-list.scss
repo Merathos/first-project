@@ -89,6 +89,13 @@
   }
 }
 //новое добавление
+.proposal-list__like-wrapper {
+  align-items: center;
+  //display: none;
+  display: flex;
+  align-items: center;
+}
+
 .proposal-list__project-mark {
   display: flex;
   align-items: center;
