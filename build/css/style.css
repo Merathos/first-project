@@ -6371,6 +6371,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       .proposal__project .button-details.opened .button-details__icon {
         -webkit-transform: rotate(180deg);
                 transform: rotate(180deg); }
+      @media (hover: hover), screen and (min-width: 0\0) {
+        .proposal__project .button-details.opened:hover, .proposal__project .button-details.opened:focus {
+          opacity: 1; } }
   .proposal__project .proposal__milestones-details {
     bottom: 32px; }
   .proposal__project .proposal__project-text {
@@ -6459,7 +6462,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     height: 129px; }
 
 .proposal__project .proposal__project-details {
+<<<<<<< HEAD
+  margin-top: 32px;
+=======
   margin-top: -20px;
+>>>>>>> improvement-master
   margin-left: 32px; }
   @media (max-width: 400px) {
     .proposal__project .proposal__project-details {
@@ -12949,7 +12956,8 @@ span.poll__hide {
     right: 0;
     top: 0; }
   .popup__content--projects .button-details {
-    bottom: 35px; }
+    bottom: 35px;
+    margin-left: 32px; }
   .popup__content--projects .proposal__project:last-child {
     margin-bottom: 0; }
   .popup__content--projects .swiper-slide {

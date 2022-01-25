@@ -838,6 +838,14 @@
       .button-details__icon {
         transform: rotate(180deg);
       }
+
+      @media (hover: hover), screen and (min-width: 0\0) {
+        &:hover,
+        &:focus {
+          opacity: 1;
+          //cursor: unset;
+        }
+      }
     }
   }
 
@@ -872,31 +880,6 @@
     margin-bottom: 30px;
   }
 }
-
-
-//синяя палочка слева
-// .proposal__project--opened {
-//   &:before {
-//     content: "";
-//     display: block;
-//     position: absolute;
-//     width: 2px;
-//     height: calc(100% - 32px * 2);
-//     background-color: $blue-default;
-//     top: 30px;
-//     left: 10px;
-//     @media (max-width: $tablet-width) {
-//       left: -15px;
-//       top: 0;
-//     }
-//     @media (max-width: $mobile-max-width) {
-//       left: 8px;
-//     }
-//     @media (max-width: $mobile-width) {
-//       left: 7px;
-//     }
-//   }
-// }
 
 .form-radio input[type="radio"]:checked ~ label {
 
@@ -983,7 +966,11 @@
     }
   }
   .proposal__project-details {
+<<<<<<< HEAD
+    margin-top: 32px;
+=======
     margin-top: -20px;
+>>>>>>> improvement-master
     margin-left: 32px;
 
     @media (max-width: $mobile-max-width) {
