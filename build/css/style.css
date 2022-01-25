@@ -6282,7 +6282,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       .proposal__project .proposal__project-text {
         height: 8em;
         height: 4.2em;
-        margin-bottom: 9px; } }
+        margin-bottom: 9px;
+        margin-bottom: 20px; } }
     .proposal__project .proposal__project-text.opened {
       height: auto; }
       .proposal__project .proposal__project-text.opened:after {
@@ -6377,7 +6378,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         .proposal__project .button-details.opened:hover, .proposal__project .button-details.opened:focus {
           opacity: 1; } }
   .proposal__project .proposal__milestones-details {
-    bottom: 32px; }
+    bottom: 32px;
+    bottom: -25px; }
   .proposal__project .proposal__project-text {
     position: relative;
     color: #354052;
@@ -6396,7 +6398,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         width: 100%; } }
   .proposal__project .proposal__project-text--stage {
     padding-left: 0;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    margin-bottom: 20px; }
 
 .form-radio input[type="radio"]:checked ~ label .proposal__project {
   position: relative; }
@@ -6484,8 +6487,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     height: 135px; }
 
 .proposal__milestones-item .proposal__milestones-details {
-  margin-top: 26px;
-  margin-left: 28px; }
+  margin-left: 28px;
+  margin-top: 0; }
   .proposal__milestones-item .proposal__milestones-details svg {
     -webkit-transform: rotate(-180deg);
             transform: rotate(-180deg); }

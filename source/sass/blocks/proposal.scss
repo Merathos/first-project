@@ -681,6 +681,7 @@
       height: 8em;
       height: 4.2em;
       margin-bottom: 9px;
+      margin-bottom: 20px;
     }
 
     &.opened {
@@ -865,6 +866,7 @@
 
   .proposal__milestones-details {
     bottom: 32px;
+    bottom: -25px;
   }
 
   // параграф описание проекта
@@ -892,6 +894,7 @@
   .proposal__project-text--stage {
     padding-left: 0;
     margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 
@@ -1016,8 +1019,9 @@
 
 .proposal__milestones-item {
   .proposal__milestones-details {
-    margin-top: 26px;
+    //margin-top: 26px;
     margin-left: 28px;
+    margin-top: 0;
 
     svg {
       transform: rotate(-180deg);
