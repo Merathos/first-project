@@ -6288,15 +6288,17 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       .proposal__project .proposal__project-text.opened:after {
         display: none; }
     .proposal__project .proposal__project-text:after {
+      content: "";
       position: absolute;
-      bottom: -0.4rem;
       left: 0;
       width: 100%;
-      height: 2rem;
-      background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(var(--color-bg-secondary, #f9f9fa)));
-      background: linear-gradient(to bottom, rgba(255, 255, 255, 0), var(--color-bg-secondary, #f9f9fa) 100%);
-      text-align: right;
-      content: ''; }
+      height: 48px;
+      background-image: -webkit-gradient(linear, left top, left bottom, from(var(--color-bg-main, #ffffff)), to(var(--color-bg-main-transparent, rgba(255, 255, 255, 0))));
+      background-image: linear-gradient(180deg, var(--color-bg-main, #ffffff) 0%, var(--color-bg-main-transparent, rgba(255, 255, 255, 0)) 100%);
+      -webkit-transform: matrix(1, 0, 0, -1, 0, 0);
+              transform: matrix(1, 0, 0, -1, 0, 0);
+      bottom: 50px;
+      bottom: 0; }
   .proposal__project_enough-lines_true .proposal__project-title + .proposal__project-text {
     height: 2.6em;
     margin-bottom: 14px; }
