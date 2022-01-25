@@ -599,9 +599,9 @@
   margin-bottom: 33px;
   position: relative;
 
-  @media (max-width: $mobile-max-width) {
-    padding-bottom: 60px;
-  }
+  // @media (max-width: $mobile-max-width) {
+  //   padding-bottom: 60px;
+  // }
 
   .proposal__gallery {
     display: none;
@@ -783,8 +783,6 @@
     outline: none;
     background-color: transparent;
     z-index: 1;
-    position: absolute;
-    bottom: 30px;
 
     @media (max-width: $mobile-max-width) {
       //bottom: 0;
@@ -792,6 +790,7 @@
       margin-left: 0;
       //margin-bottom: 30px;
       margin-left: 16px;
+
     }
 
     transition: opacity 0.3s ease-out;
@@ -820,10 +819,11 @@
     }
 
     &.opened {
-      position: unset;
+      margin-top: 32px;
 
       @media (max-width: $mobile-max-width) {
         margin-left: 0;
+
         //margin-left: 16px;
       }
 
@@ -966,11 +966,16 @@
     }
   }
   .proposal__project-details {
+<<<<<<< HEAD
     margin-top: 32px;
+=======
+    margin-top: -20px;
+>>>>>>> improvement-master
     margin-left: 32px;
 
     @media (max-width: $mobile-max-width) {
       margin-left: 0;
+      margin-top: 0;
     }
 
     svg {
@@ -1209,7 +1214,7 @@
     content: "";
     position: absolute;
     top: 30px;
-    bottom: 30px;
+    bottom: 32px;
     left: 8px;
     background: $blue-default;
     width: 2px;
@@ -1237,14 +1242,8 @@
   margin-top: 16px;
   width: calc(100% - 32px);
 
-  display: none;
-
   @media (max-width: $mobile-max-width) {
-    width: calc(100% - 16px);
+    width: 100%;
     margin-left: 0;
-  }
-
-  .opened + & {
-    display: block;
   }
 }
