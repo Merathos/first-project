@@ -2699,7 +2699,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         max-width: 100%; } }
   .button--update {
     font-size: 0.9375rem;
-    line-height: 1.26562rem;
+    line-height: 1.26563rem;
     font-weight: 500; }
 
 @media print {
@@ -10788,7 +10788,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .notification__more {
   margin-top: 16px;
   padding: 0;
-  line-height: 1.26562rem;
+  line-height: 1.26563rem;
   background-color: transparent;
   border: none;
   cursor: pointer; }
@@ -12972,15 +12972,12 @@ span.poll__hide {
     @media (max-width: 400px) {
       .popup__content--projects .proposal__gallery button {
         width: unset; } }
-<<<<<<< HEAD
   @media (max-width: 400px) {
     .popup__content--projects .proposal__project-mark {
       margin-left: 0; } }
-=======
   .popup__content--projects .gallery-full__item {
     width: 100%;
     height: 300px; }
->>>>>>> improvement-master
 
 @media (max-width: 400px) {
   .popup__container--update {
@@ -14723,7 +14720,7 @@ span.poll__hide {
     margin: 0 auto;
     font-weight: 500;
     font-size: 0.9375rem;
-    line-height: 1.26562rem;
+    line-height: 1.26563rem;
     color: #2c8ecc;
     text-transform: uppercase;
     padding: 0;
@@ -14927,7 +14924,7 @@ ymaps p {
           align-items: center;
   padding-top: 0;
   font-size: 0.9375rem;
-  line-height: 1.26562rem;
+  line-height: 1.26563rem;
   text-decoration: none;
   position: relative;
   color: #2c8ecc; }
