@@ -6247,7 +6247,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     @media (max-width: 768px) {
       .proposal__project .button--blue {
         margin-left: 30px; } }
-    @media (max-width: 400px) {
+    @media (max-width: 767px) {
       .proposal__project .button--blue {
         margin-left: 0;
         width: unset; } }
@@ -6363,7 +6363,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
               transform: rotate(0deg); }
     .proposal__project .button-details.opened {
       margin-top: 32px; }
-      @media (max-width: 400px) {
+      @media (max-width: 767px) {
         .proposal__project .button-details.opened {
           margin-left: 0; } }
       .proposal__project .button-details.opened .button-details__text_opened {
@@ -6390,7 +6390,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         padding-left: 0;
         padding-left: 32px;
         width: 100%; } }
-    @media (max-width: 400px) {
+    @media (max-width: 767px) {
       .proposal__project .proposal__project-text {
         padding-left: 0;
         width: 100%; } }
@@ -6467,7 +6467,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-top: 32px;
   margin-top: -20px;
   margin-left: 32px; }
-  @media (max-width: 400px) {
+  @media (max-width: 767px) {
     .proposal__project .proposal__project-details {
       margin-left: 0;
       margin-top: 0; } }
@@ -6689,10 +6689,10 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-top: 16px;
   width: calc(100% - 32px);
   display: none; }
-  @media (max-width: 400px) {
+  @media (max-width: 767px) {
     .project__gallery-full {
       margin-left: 0;
-      width: calc(100% - 16px); } }
+      width: 100%; } }
   .opened + .project__gallery-full {
     display: block; }
 
@@ -12960,7 +12960,7 @@ span.poll__hide {
   .popup__content--projects .button-details {
     bottom: 35px;
     margin-left: 32px; }
-    @media (max-width: 400px) {
+    @media (max-width: 767px) {
       .popup__content--projects .button-details {
         margin-left: 0; } }
   .popup__content--projects .proposal__project:last-child {
@@ -12981,7 +12981,7 @@ span.poll__hide {
     @media (max-width: 400px) {
       .popup__content--projects .proposal__gallery button {
         width: unset; } }
-  @media (max-width: 400px) {
+  @media (max-width: 767px) {
     .popup__content--projects .proposal__project-mark {
       margin-left: 0; } }
   .popup__content--projects .gallery-full__item {
