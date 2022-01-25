@@ -2699,7 +2699,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         max-width: 100%; } }
   .button--update {
     font-size: 0.9375rem;
-    line-height: 1.26563rem;
+    line-height: 1.26562rem;
     font-weight: 500; }
 
 @media print {
@@ -6685,11 +6685,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .project__gallery-full {
   margin-left: 32px;
   margin-top: 16px;
-  width: calc(100% - 32px); }
+  width: calc(100% - 32px);
+  display: none; }
   @media (max-width: 400px) {
     .project__gallery-full {
-      width: 100%;
-      margin-left: 0; } }
+      margin-left: 0;
+      width: calc(100% - 16px); } }
+  .opened + .project__gallery-full {
+    display: block; }
 
 .comments-tab {
   height: 46px;
@@ -10788,7 +10791,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .notification__more {
   margin-top: 16px;
   padding: 0;
-  line-height: 1.26563rem;
+  line-height: 1.26562rem;
   background-color: transparent;
   border: none;
   cursor: pointer; }
@@ -14724,7 +14727,7 @@ span.poll__hide {
     margin: 0 auto;
     font-weight: 500;
     font-size: 0.9375rem;
-    line-height: 1.26563rem;
+    line-height: 1.26562rem;
     color: #2c8ecc;
     text-transform: uppercase;
     padding: 0;
@@ -14928,7 +14931,7 @@ ymaps p {
           align-items: center;
   padding-top: 0;
   font-size: 0.9375rem;
-  line-height: 1.26563rem;
+  line-height: 1.26562rem;
   text-decoration: none;
   position: relative;
   color: #2c8ecc; }
