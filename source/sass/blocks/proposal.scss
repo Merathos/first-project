@@ -1254,8 +1254,14 @@
   margin-top: 16px;
   width: calc(100% - 32px);
 
+  display: none;
+
   @media (max-width: $mobile-max-width) {
-    width: 100%;
+    width: calc(100% - 16px);
     margin-left: 0;
+  }
+
+  .opened + & {
+    display: block;
   }
 }
