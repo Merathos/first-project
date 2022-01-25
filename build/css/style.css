@@ -6154,12 +6154,21 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   @media (max-width: 400px) {
     .proposal__project-wrapper .proposal__project-link {
       width: 100%; } }
-  @media (max-width: 768px) {
-    .proposal__project-wrapper .proposal__project-figure {
-      width: 100%; } }
-  @media (max-width: 400px) {
-    .proposal__project-wrapper .proposal__project-figure {
-      width: 100%; } }
+  .proposal__project-wrapper .proposal__item-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 5px; }
+  .proposal__project-wrapper .proposal__project-figure {
+    margin: 0; }
+    @media (max-width: 768px) {
+      .proposal__project-wrapper .proposal__project-figure {
+        width: 100%; } }
+    @media (max-width: 400px) {
+      .proposal__project-wrapper .proposal__project-figure {
+        width: 100%; } }
   .proposal__project-wrapper .proposal__project-img {
     margin-left: 40px; }
     @media (max-width: 768px) {
@@ -6475,6 +6484,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       margin-left: 0;
       margin-top: 0; } }
   .proposal__project .proposal__project-details svg {
+    width: 14px;
+    height: 8px;
     -webkit-transform: rotate(-180deg);
             transform: rotate(-180deg); }
 
@@ -6495,7 +6506,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .proposal__milestones-item .proposal__milestones-details span {
     margin-right: 0; }
 
-.proposal__milestones-item h3 {
+.proposal__milestones-item .proposal__milestones-title {
   margin: 0;
   font-size: 18px;
   line-height: 23.4px;
@@ -6547,17 +6558,17 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     font-weight: 400;
     margin: 0;
     color: #354052; }
-  .proposal__project-head span {
+  .proposal__project-head .proposal__project-votes {
     font-size: 13px;
     line-height: 16.9px;
     color: #707b8c;
     margin-left: auto; }
     @media (max-width: 768px) {
-      .proposal__project-head span {
+      .proposal__project-head .proposal__project-votes {
         margin-right: auto;
         margin-left: 32px; } }
     @media (max-width: 400px) {
-      .proposal__project-head span {
+      .proposal__project-head .proposal__project-votes {
         margin-right: auto;
         margin-left: 32px; } }
   .proposal__project-head .form-radio {
@@ -6600,7 +6611,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     -webkit-transform: rotate(180deg);
             transform: rotate(180deg); }
 
-.proposal__milestones-item time {
+.proposal__milestones-item .proposal__milestones-date {
   font-size: 0.875rem;
   line-height: 1.1375rem;
   font-weight: 500;
@@ -6613,15 +6624,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-
-.proposal__like-wrapper {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  align-items: center; }
 
 .proposal__project-mark {
   display: -webkit-box;
@@ -6956,6 +6958,15 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     margin-right: 5px;
     margin-bottom: 3px;
     margin-left: 1px; }
+
+.proposal-list__like-wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center; }
 
 .proposal-list__project-mark {
   display: -webkit-box;
