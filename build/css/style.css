@@ -6557,7 +6557,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       -webkit-box-align: baseline;
           -ms-flex-align: baseline;
               align-items: baseline; } }
-  .proposal__project-head h3 {
+  .proposal__project-head h3,
+  .proposal__project-head .form-radio label {
     font-size: 18px;
     line-height: 23.4px;
     font-weight: 400;
@@ -6708,6 +6709,19 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       width: calc(100% - 16px); } }
   .opened + .project__gallery-full {
     display: block; }
+
+label.proposal__project-title {
+  font-size: 18px;
+  line-height: 23.4px;
+  font-weight: 400;
+  margin: 0;
+  color: #354052; }
+  label.proposal__project-title::before {
+    margin-right: 11px; }
+
+.button-details__icon {
+  width: 14px;
+  height: 8px; }
 
 .comments-tab {
   height: 46px;
