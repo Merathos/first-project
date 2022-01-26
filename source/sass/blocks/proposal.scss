@@ -409,6 +409,12 @@
   }
 }
 
+.proposal__tab-item {
+  .form-radio label::before {
+    display: none;
+  }
+}
+
 .proposal__tab-item--active {
   @media (min-width: $desktop-width) {
     visibility: visible;
@@ -416,6 +422,10 @@
   }
   height: auto;
   visibility: visible;
+
+  .form-radio label::before {
+    display: block;
+  }
 }
 
 .proposal__tabs .proposal__tab {
@@ -1090,7 +1100,8 @@
     align-items: baseline;
   }
 
-  h3 {
+  h3,
+  .form-radio label {
     font-size: 18px;
     line-height: 23.4px;
     font-weight: 400;
@@ -1276,7 +1287,28 @@
     width: 100%;
   }
 
+  @media (max-width: $mobile-max-width) {
+    width: calc(100% - 16px);
+  }
+
   .opened + & {
     display: block;
   }
+}
+
+label.proposal__project-title {
+  font-size: 18px;
+  line-height: 23.4px;
+  font-weight: 400;
+  margin: 0;
+  color: $dark-text;
+
+  &::before {
+    margin-right: 11px;
+  }
+}
+
+.button-details__icon {
+  width: 14px;
+  height: 8px;
 }

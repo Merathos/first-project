@@ -2699,7 +2699,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         max-width: 100%; } }
   .button--update {
     font-size: 0.9375rem;
-    line-height: 1.26563rem;
+    line-height: 1.26562rem;
     font-weight: 500; }
 
 @media print {
@@ -6060,12 +6060,17 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       .proposal__milestonestab .proposal__project-mark {
         margin-left: 0; } }
 
+.proposal__tab-item .form-radio label::before {
+  display: none; }
+
 .proposal__tab-item--active {
   height: auto;
   visibility: visible; }
   @media (min-width: 1200px) {
     .proposal__tab-item--active {
       visibility: visible; } }
+  .proposal__tab-item--active .form-radio label::before {
+    display: block; }
 
 .proposal__tabs .proposal__tab {
   border-radius: 0;
@@ -6556,7 +6561,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       -webkit-box-align: baseline;
           -ms-flex-align: baseline;
               align-items: baseline; } }
-  .proposal__project-head h3 {
+  .proposal__project-head h3,
+  .proposal__project-head .form-radio label {
     font-size: 18px;
     line-height: 23.4px;
     font-weight: 400;
@@ -6703,8 +6709,24 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .project__gallery-full {
       margin-left: 0;
       width: 100%; } }
+  @media (max-width: 400px) {
+    .project__gallery-full {
+      width: calc(100% - 16px); } }
   .opened + .project__gallery-full {
     display: block; }
+
+label.proposal__project-title {
+  font-size: 18px;
+  line-height: 23.4px;
+  font-weight: 400;
+  margin: 0;
+  color: #354052; }
+  label.proposal__project-title::before {
+    margin-right: 11px; }
+
+.button-details__icon {
+  width: 14px;
+  height: 8px; }
 
 .comments-tab {
   height: 46px;
@@ -10812,7 +10834,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .notification__more {
   margin-top: 16px;
   padding: 0;
-  line-height: 1.26563rem;
+  line-height: 1.26562rem;
   background-color: transparent;
   border: none;
   cursor: pointer; }
@@ -14748,7 +14770,7 @@ span.poll__hide {
     margin: 0 auto;
     font-weight: 500;
     font-size: 0.9375rem;
-    line-height: 1.26563rem;
+    line-height: 1.26562rem;
     color: #2c8ecc;
     text-transform: uppercase;
     padding: 0;
@@ -14952,7 +14974,7 @@ ymaps p {
           align-items: center;
   padding-top: 0;
   font-size: 0.9375rem;
-  line-height: 1.26563rem;
+  line-height: 1.26562rem;
   text-decoration: none;
   position: relative;
   color: #2c8ecc; }

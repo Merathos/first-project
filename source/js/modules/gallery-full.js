@@ -20,9 +20,9 @@
     var gallery = wrap.querySelector('.js-gallery-full');
     gallery.classList.remove('hidden');
 
-    var slider = wrap.querySelector('.js-gallery-full__frame');
-    var prevBtn = wrap.querySelector('.js-gallery-full__prev');
-    var nextBtn = wrap.querySelector('.js-gallery-full__next');
+    var slider = wrap.querySelector('.js-gallery-full-frame');
+    var prevBtn = wrap.querySelector('.js-gallery-full-prev');
+    var nextBtn = wrap.querySelector('.js-gallery-full-next');
 
     var sliderTape = document.createElement('div');
     sliderTape.classList.add('swiper-wrapper');
@@ -75,7 +75,7 @@
   var resetSlider = function (evt) {
     var wrap = evt.target.closest('.js-gallery-full-wrap');
     var gallery = wrap.querySelector('.js-gallery-full');
-    var slider = wrap.querySelector('.js-gallery-full__frame');
+    var slider = wrap.querySelector('.js-gallery-full-frame');
     var currentActiveSlide = wrap.querySelector('.js-full-gallery-link.active');
 
     if (wrap.swiper) {
@@ -98,7 +98,7 @@
 
   var onDocumentClick = function (evt) {
     var galleryLink = evt.target.closest('.js-full-gallery-link');
-    var closeBtn = evt.target.closest('.js-gallery-full__close-btn');
+    var closeBtn = evt.target.closest('.js-gallery-full-close-btn');
 
     if (galleryLink) {
       evt.preventDefault();
