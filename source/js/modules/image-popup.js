@@ -8,7 +8,7 @@
     return;
   }
 
-  var imageContainer = popup.querySelector('.js-image-popup__frame');
+  var imageContainer = popup.querySelector('.js-image-popup-frame');
 
   var initializePopup = function (target) {
     imageContainer.innerHTML = '';

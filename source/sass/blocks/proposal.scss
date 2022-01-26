@@ -1096,7 +1096,8 @@
     align-items: baseline;
   }
 
-  h3 {
+  h3,
+  .form-radio label {
     font-size: 18px;
     line-height: 23.4px;
     font-weight: 400;
@@ -1289,4 +1290,21 @@
   .opened + & {
     display: block;
   }
+}
+
+label.proposal__project-title {
+  font-size: 18px;
+  line-height: 23.4px;
+  font-weight: 400;
+  margin: 0;
+  color: $dark-text;
+
+  &::before {
+    margin-right: 11px;
+  }
+}
+
+.button-details__icon {
+  width: 14px;
+  height: 8px;
 }
