@@ -854,6 +854,8 @@
     }
 
     .button-details__icon {
+      width: 14px;
+      height: 8px;
       transform: rotate(0deg);
     }
 
@@ -875,6 +877,8 @@
       }
 
       .button-details__icon {
+        width: 14px;
+        height: 8px;
         transform: rotate(180deg);
       }
 
@@ -1218,16 +1222,16 @@
   }
 
   svg {
+    width: 24px;
+    height: 24px;
     margin-right: 10px;
   }
 
-  span {
-    font-size: 18px;
-    line-height: 23.4px;
+  font-size: 18px;
+  line-height: 23.4px;
 
-    @media (max-width: $mobile-max-width) {
-      font-size: 14px;
-    }
+  @media (max-width: $mobile-max-width) {
+    font-size: 14px;
   }
 }
 

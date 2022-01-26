@@ -484,6 +484,7 @@
   margin-top: 20px;
   display: flex;
   align-items: center;
+
   a {
     text-decoration: none;
     color: $blue-default;
@@ -495,6 +496,8 @@
   }
 
   svg {
+    width: 20px;
+    height: 20px;
     margin-right: 8px;
     fill: white;
   }
