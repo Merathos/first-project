@@ -6369,6 +6369,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       .proposal__project .button-details__text_closed {
         display: inline-block; }
     .proposal__project .button-details .button-details__icon {
+      width: 14px;
+      height: 8px;
       -webkit-transform: rotate(0deg);
               transform: rotate(0deg); }
     .proposal__project .button-details.opened {
@@ -6381,6 +6383,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       .proposal__project .button-details.opened .button-details__text_closed {
         display: none; }
       .proposal__project .button-details.opened .button-details__icon {
+        width: 14px;
+        height: 8px;
         -webkit-transform: rotate(180deg);
                 transform: rotate(180deg); }
       @media (hover: hover), screen and (min-width: 0\0) {
@@ -6634,7 +6638,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 32px;
-  margin-left: 32px; }
+  margin-left: 32px;
+  font-size: 18px;
+  line-height: 23.4px; }
   .proposal__project-mark.opened {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -6644,13 +6650,12 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       margin-left: 0;
       margin-right: 16px; } }
   .proposal__project-mark svg {
+    width: 24px;
+    height: 24px;
     margin-right: 10px; }
-  .proposal__project-mark span {
-    font-size: 18px;
-    line-height: 23.4px; }
-    @media (max-width: 400px) {
-      .proposal__project-mark span {
-        font-size: 14px; } }
+  @media (max-width: 400px) {
+    .proposal__project-mark {
+      font-size: 14px; } }
 
 .proposal--aside .buttons-wrapper {
   grid-area: j; }
@@ -16300,6 +16305,8 @@ ymaps p {
     padding-bottom: 2px;
     border-bottom: 1px dashed #2c8ecc; }
   .project-vote__marked svg {
+    width: 20px;
+    height: 20px;
     margin-right: 8px;
     fill: white; }
 
