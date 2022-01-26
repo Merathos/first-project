@@ -1,15 +1,20 @@
 .discussion {
   box-sizing: border-box;
-  padding: 88px 40px 97px;
+  padding-top: 79px;
+  padding-bottom: 24px;
 
-  text-align: center;
-
-  @media (max-width: $desktop-width - 81) {
-    padding: 79px 24px 24px;
-  }
 
   @media (max-width: $tablet-width - 1) {
-    padding: 64px 16px 7px;
+    padding-top: 64px;
+    padding-bottom: 7px;
+  }
+}
+
+.discussion__head {
+  margin-bottom: 40px;
+
+  @include mobile {
+    margin-bottom: 32px;
   }
 }
 
@@ -22,19 +27,18 @@
 .discussion__list {
   margin: 0;
   padding: 0;
-  padding-top: 16px;
   padding-bottom: 48px;
 
   list-style: none;
 
   @media (max-width: $tablet-width - 1) {
-    padding-top: 8px;
     padding-bottom: 33px;
   }
 }
 
 .discussion__item {
   position: relative;
+
   padding-top: 24px;
   padding-bottom: 32px;
 
@@ -44,29 +48,25 @@
     padding-bottom: 31px;
   }
 
+  &:first-child {
+    padding-top: 0;
+  }
+
   &--used {
     .discussion__used {
       display: block;
     }
   }
 
-  &--sign {
-    .button-star {
-      display: block;
-
-      color: var(--color-interactive-default, $blue-default);
-
-      &:hover,
-      &:focus {
-        color: var(--color-interactive-accent, $blue-accent);
-        outline: none;
-      }
-    }
-  }
-
   &:hover {
-    .button-star {
-      display: block;
+    .button-star:not(.button-star--active) {
+      color: $light-grey;
+
+      opacity: 1;
+
+      &:hover {
+        color: var(--color-interactive-accent, $blue-accent);
+      }
     }
   }
 }
@@ -178,15 +178,16 @@
 
 .discussion .button-star {
   position: absolute;
-  right: 0;
   top: 50%;
-  transform: translateY(-50%);
+  right: 0;
 
-  display: none;
+  display: block;
   padding: 0;
 
-  @media (max-width: $desktop-width - 1) {
-    display: block;
+  transform: translateY(-50%);
+
+  &:hover {
+    color: var(--color-interactive-accent, $blue-accent);
   }
 
   @media (max-width: $desktop-width - 81) {
@@ -196,6 +197,11 @@
 
 .discussion__button {
   // padding: 16px 24px 15px;
+  display: block;
+  width: 100%;
+  width: auto;
+  max-width: 420px;
+  margin: 0 auto;
 
   .discussion__hide {
     padding: 0;
@@ -222,7 +228,7 @@
   padding: 0;
 
   & .discussion__list {
-    padding-top: 5px;
+    padding-top: 0;
     padding-bottom: 0;
 
     @media (max-width: $mobile-max-width) {
@@ -248,18 +254,14 @@
 @media print {
   .discussion__archive-link,
   .discussion__archive-mobile,
-  .discussion .button-star,
   .discussion__used {
     display: none;
   }
 
   .discussion__item {
-    page-break-inside: avoid;
     break-inside: avoid;
 
-    & .button-star {
-      display: none;
-    }
+    page-break-inside: avoid;
 
     & .discussion__used {
       display: none;

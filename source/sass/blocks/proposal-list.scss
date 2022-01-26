@@ -6,35 +6,38 @@
 }
 
 .proposal-list__item {
-  padding: 41px 0 32px;
+  padding: 32px 0;
 
-  border-top: 1px solid var(--color-stroke, $light-grey);
   border-bottom: 1px solid var(--color-stroke, $light-grey);
 
+  &:first-child {
+    padding-top: 0;
+  }
+
   @media (min-width: $tablet-width) {
-    display: grid;
-    grid-template-columns: 1fr 15%;
-    grid-template-areas:
-    "a  a"
+    grid-template-areas: "a  a"
     "b  c"
     "d  d";
+    grid-template-columns: 1fr 15%;
+
+    display: grid;
 
     > * {
-      align-self: start;
       justify-self: start;
+
+      align-self: start;
     }
   }
 
-  &--userless {
+  &--border-top {
     padding-top: 32px;
+
+    border-top: 1px solid var(--color-stroke, $light-grey);
   }
 
-  &--activity-improvement {
-    border-top: none;
-
-    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1){
-      padding-top: 50px;
-    }
+  &--without-counter {
+    display: flex;
+    flex-flow: column nowrap;
   }
 }
 
@@ -42,15 +45,16 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-
   width: 100%;
 
   @media (min-width: $tablet-width) {
     grid-area: a;
+
     margin-bottom: 4px;
   }
 
   @media (max-width: $tablet-width - 1) {
+    flex-flow: column wrap;
     margin-bottom: 24px;
   }
 }
@@ -61,10 +65,10 @@
   justify-content: flex-start;
   align-items: center;
 
-  color: var(--color-interactive-default, $blue-default);
   font-weight: normal;
   font-size: rem(14px);
   line-height: 130%;
+  color: var(--color-interactive-default, $blue-default);
 
   @media (min-width: $tablet-width) {
     margin-right: 9px;
@@ -75,68 +79,94 @@
   }
 
   svg {
+    fill: var(--color-interactive-default, $blue-default);
+
+    width: 10px;
+    height: 12px;
     margin-right: 5px;
     margin-bottom: 3px;
     margin-left: 1px;
-    width: 10px;
-    height: 12px;
-    fill: var(--color-interactive-default, $blue-default);
+  }
+}
+//новое добавление
+.proposal-list__like-wrapper {
+  align-items: center;
+  //display: none;
+  display: flex;
+  align-items: center;
+}
+
+.proposal-list__project-mark {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+
+  @media (max-width: $mobile-max-width) {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  span {
+    color: $grey-lighter;
+    font-size: 14px;
+    line-height: 18.2px;
+  }
+
+  svg {
+    margin-right: 8px;
+    width: 14px;
+    height: 14px;
   }
 }
 
-.proposal-list__address,
-.proposal-list__project-mark {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: center;
+.proposal-list__address {
+  // display: flex;
+  // flex-flow: row wrap;
+  // justify-content: flex-start;
+  // align-items: center;
+  display: inline-block;
 
   @media (min-width: $tablet-width) {
     margin-right: 9px;
   }
 
   svg {
-    color: var(--color-text, $grey-default);
-    margin-right: 5px;
     width: 12px;
     height: 12px;
-  }
+    margin-right: 5px;
 
-  span {
     color: var(--color-text, $grey-default);
-    font-weight: normal;
-    //font-size: rem(14px);
-    line-height: 130%;
-    font-size: 14px;
-  }
-}
-
-.proposal-list__project-mark {
-  font-size: 14px;
-  @media (min-width: $tablet-width) {
-    margin-right: 16px;
-  }
-
-  svg {
-    width: 14px;
-    height: 14px;
   }
 
   span {
-    font-size: 14px;
+    font-weight: normal;
+    font-size: rem(14px);
+    line-height: 130%;
+    color: var(--color-text, $grey-default);
   }
 }
 
 .proposal-list__title {
   grid-area: b;
+
   margin: 0;
-  text-decoration: none;
 
   font-weight: 500;
   font-size: rem(18px);
   line-height: 130%;
   color: var(--color-text, $dark-text);
+  text-decoration: none;
+
   transition: color $style-change-duration;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &--regular {
+    font-weight: 400;
+  }
 
   @media (min-width: $desktop-width) {
     &:hover:not(.focus-visible) {
@@ -144,7 +174,7 @@
     }
   }
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1){
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
     margin-bottom: 24px;
   }
 
@@ -155,7 +185,7 @@
   }
 
   &--shorter {
-    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1){
+    @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
       margin-bottom: 0;
     }
   }
@@ -163,19 +193,28 @@
 
 .proposal-list__status {
   grid-area: d;
+
   font-weight: 400;
   font-size: rem(15px);
   line-height: 135%;
-  color: var(--color-interactive-default, $blue-default);
+
+  @include status-colors;
 
   @media (min-width: $desktop-width) {
     grid-area: c;
+
     margin-left: auto;
   }
 }
 
+//добавка альтернативы лайка - чекбокс
+.form-checkbox-update {
+  grid-area: c;
+}
+
 .proposal-list__like-counter {
   grid-area: c;
+
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
@@ -184,7 +223,6 @@
   font-weight: normal;
   font-size: rem(13px);
   line-height: 130%;
-
   color: var(--color-text, $grey-default);
 
   cursor: pointer;
@@ -204,30 +242,36 @@
   }
 
   @media (min-width: $tablet-width) {
+    align-self: flex-start;
     margin-top: 5px;
     margin-left: auto;
-    align-self: flex-start;
   }
 
   @media (max-width: $tablet-width - 1) {
     margin-top: 27px;
   }
 
+  &--disabled {
+    pointer-events: none;
+  }
+
   span {
-    transition: color $style-change-duration;
     min-width: 35px;
+
+    transition: color $style-change-duration;
   }
 
   svg {
+    align-self: flex-start;
     width: 20px;
     height: 20px;
     margin-top: -5px;
     margin-left: 13px;
-    align-self: flex-start;
   }
 
   .stroked {
     fill: var(--color-text, $grey-default);
+
     transition: fill $style-change-duration;
   }
 
@@ -236,12 +280,27 @@
   }
 }
 
+.proposal-list__like-counter--update {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  .form-checkbox {
+    display: block;
+    width: 100%;
+  }
+  .proposal__like-wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+}
+
 .liked {
   color: var(--color-interactive-accent, $blue-accent);
 
   @media (min-width: $desktop-width) {
     &:hover:not(.focus-visible) {
-
       svg {
         .stroked {
           fill: transparent;
@@ -259,7 +318,7 @@
   }
 
   .filled {
-    fill: var(--color-interactive-default, $blue-default)
+    fill: var(--color-interactive-default, $blue-default);
   }
 }
 
@@ -273,25 +332,4 @@
       margin-bottom: 0;
     }
   }
-}
-
-.proposal-list__like-counter {
-  .form-checkbox {
-    margin-bottom: 0;
-  }
-
-  .form-checkbox label::before {
-    margin-right: 0;
-  }
-}
-.proposal-list--update {
-  padding-top: 8px;
-
-  .proposal-list__like-counter {
-    margin-top: 0;
-  }
-}
-
-.proposal-list__item--update {
-  //padding-bottom: 31px;
 }

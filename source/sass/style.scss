@@ -12,19 +12,22 @@
 @import "plugins/simplebar";
 
 /* Блоки */
+@import "blocks/form-checkbox-update";
+@import "blocks/logo-link";
+@import "blocks/link-arrow";
+@import "blocks/link";
 @import "blocks/section";
 @import "blocks/page-body";
 @import "blocks/page-content";
 @import "blocks/back-btn";
 @import "blocks/container";
 @import "blocks/content";
-@import "blocks/logo-link";
 @import "blocks/button";
-@import "blocks/link-arrow";
-@import "blocks/link";
 @import "blocks/form-checkbox";
 @import "blocks/form-radio";
 @import "blocks/form-select";
+@import "blocks/single-select";
+@import "blocks/multiple-select";
 @import "blocks/form-range";
 @import "blocks/form";
 @import "blocks/filter";
@@ -32,10 +35,13 @@
 @import "blocks/counter";
 @import "blocks/paginator";
 @import "blocks/button-star";
+@import "blocks/button-remove";
 @import "blocks/page-404";
 @import "blocks/page-footer";
 @import "blocks/page-title";
 @import "blocks/page-nav";
+@import "blocks/categories-filter";
+@import "blocks/voices-counter";
 @import "blocks/page-top";
 @import "blocks/archive-link";
 @import "blocks/article-link";
@@ -45,16 +51,21 @@
 @import "blocks/info-tooltip";
 @import "blocks/project-status";
 @import "blocks/description";
+@import "blocks/description-block";
+@import "blocks/buttons-wrapper";
 @import "blocks/date";
 @import "blocks/application-period";
 @import "blocks/project-link";
 @import "blocks/main-empty";
+@import "blocks/info-block";
+@import "blocks/cards-list";
+@import "blocks/zoom-button";
+@import "blocks/preview-input";
 @import "blocks/info-banner";
 @import "blocks/info-banner-button";
 @import 'blocks/proposal';
 @import 'blocks/comments-tab';
 @import 'blocks/address-pin';
-@import 'blocks/area-improvement';
 @import 'blocks/improvement-stage';
 @import 'blocks/proposal-list';
 @import 'blocks/proposal-description';
@@ -73,11 +84,43 @@
 @import 'blocks/rating';
 @import 'blocks/rating-list';
 @import 'blocks/button-like';
+@import 'blocks/your-projects-list';
 @import 'blocks/text-input';
 @import 'blocks/address';
 @import 'blocks/budjet';
 @import 'blocks/contacts-inputs';
 @import 'blocks/site-tip';
+@import 'blocks/warning';
+@import 'blocks/attention';
+@import 'blocks/steps-list';
+@import 'blocks/last-comment';
+@import 'blocks/blockquote';
+@import 'blocks/line';
+@import 'blocks/image-block';
+@import 'blocks/bulleted-list';
+@import 'blocks/numbered-list';
+@import 'blocks/personal-news';
+@import 'blocks/personal-poll';
+@import 'blocks/cluster-icon';
+@import 'blocks/map-buttons';
+@import 'blocks/popover';
+@import 'blocks/category-list';
+@import 'blocks/curator';
+@import 'blocks/project-rules';
+@import 'blocks/additional';
+@import 'blocks/landscaping';
+@import 'blocks/landscaping-form';
+@import 'blocks/notification';
+@import 'blocks/deadlines';
+@import 'blocks/notification-block';
+@import 'blocks/projects-winners';
+@import 'blocks/internet-vote';
+@import 'blocks/internet-banner';
+@import 'blocks/link-list';
+@import 'blocks/page-status';
+@import 'blocks/direct-line-form';
+@import 'blocks/direct-line-section';
+@import 'blocks/info-item';
 
 // main page
 @import "blocks/news-notice";
@@ -96,6 +139,7 @@
 @import "blocks/popup";
 @import "blocks/gallery";
 @import "blocks/gallery-popup";
+@import "blocks/gallery-full";
 
 // header
 @import "blocks/page-header";
@@ -112,8 +156,6 @@
 @import "blocks/filter-2.scss";
 
 // landscaping-form
-@import "blocks/landscaping.scss";
-@import "blocks/landscaping-form.scss";
 @import "blocks/map-section.scss";
 @import "blocks/confirmation-popup.scss";
 
@@ -127,6 +169,9 @@
 @import "blocks/improvement-fork-4.scss";
 @import "blocks/proposal-winners.scss";
 @import "blocks/map-popup.scss";
+
+// area-improvement
+@import 'blocks/area-improvement';
 
 // hearings 1-4
 @import "blocks/hearings.scss";
@@ -166,9 +211,18 @@
 @import "blocks/partners-list";
 @import "blocks/activity-tabs";
 
+// rating
+@import "blocks/rating-main";
+
 // widget
 @import "blocks/widget";
 
 // new-project
 @import "blocks/new-project.scss";
+
+// service-unavalable
+@import "blocks/unavailable";
+
+// error-page
+@import "blocks/error-page";
 

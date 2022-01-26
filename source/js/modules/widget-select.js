@@ -1,10 +1,9 @@
 'use strict';
-(function () {
+var initSelects = function () {
   var Scrollbar = window.Scrollbar;
-  var widgetSelectType = document.querySelector('#widget-select-type');
-  var widgetSelectLevel = document.querySelector('#widget-select-level');
-  var widgetSelectPreview = document.querySelector('#widget_block-preview-select');
-  var widgetClassAdd = document.querySelector('.widget_block__selected_preview');
+  var selectsTypeType = document.querySelectorAll('.js-select-type');
+  var selectsTypeLevel = document.querySelectorAll('.js-select-level');
+  var selectsTypePreview = document.querySelectorAll('.js-select-preview');
 
   var arr;
   var obj;
@@ -32,20 +31,21 @@
     var select = new window.SlimSelect({
       select: el,
       showSearch: false,
-      onChange: function (el) {
+      onChange: function (elem) {
         arr = new Array;
         obj = new Object;
-        for(var i = 0;i < el.length;i++){
+        for(var i = 0;i < elem.length;i++){
           obj = {};
-          obj['text'] = el[i].value;
+          obj['text'] = elem[i].value;
           arr.push(obj);
         }
+        var secondSelect = document.querySelector('[data-second-select=' + el.dataset.select + ']');
         if(arr.length > 1){
-          widgetClassAdd.classList.add('ss-arrow-show');
+          secondSelect.classList.add('ss-arrow-show');
         } else {
-          widgetClassAdd.classList.remove('ss-arrow-show');
+          secondSelect.classList.remove('ss-arrow-show');
         }
-        addSelectPreview(widgetSelectPreview);
+        addSelectPreview(secondSelect.querySelector('.js-select-preview'));
       },
       afterOpen: function () {
         Scrollbar.init(document.querySelector('.form-select .ss-list'), {
@@ -62,7 +62,7 @@
     });
   };
 
-  function addSelectPreview(el) {
+  var addSelectPreview = function (el) {
     var select = new window.SlimSelect({
       select: el,
       showSearch: false,
@@ -85,16 +85,23 @@
     });
   };
 
-  if (widgetSelectType) {
-    addSelectType(widgetSelectType);
+  if (selectsTypeLevel.length> 0) {
+    selectsTypeLevel.forEach(function (el) {
+      addSelectLevel(el);
+    })
   }
 
-  if (widgetSelectLevel) {
-    addSelectLevel(widgetSelectLevel);
+  if (selectsTypeType.length> 0) {
+    selectsTypeType.forEach(function (el) {
+      addSelectType(el);
+    })
   }
 
-  if (widgetSelectPreview) {
-    addSelectPreview(widgetSelectPreview);
+  if (selectsTypePreview.length> 0) {
+    selectsTypePreview.forEach(function (el) {
+      addSelectPreview(el)
+    })
   }
-  
-})();
+}
+
+initSelects();

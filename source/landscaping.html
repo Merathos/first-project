@@ -47,9 +47,19 @@
             <p>Если необходимо, вы можете загрузить изображения. Максимум 5&nbsp;изображенний, формата JPEG, PNG, GIF.
             </p>
             <div class="image-uploads__wrapper js-upload-image-container">
-              <input class="visually-hidden" type="file" name="user-images" id="user-images"
-                accept="image/png, image/jpeg, image/jpg, image/gif" multiple>
-              <label for="user-images"><span>Загрузить изображение</span></label>
+              <div class="image-uploads__image-wrapper">
+                <img src="img/img-project/1.jpg" alt="Мое загруженное изображение">
+              </div>
+              <div class="image-uploads__image-wrapper">
+                <img src="img/img-project/1.jpg" alt="Мое загруженное изображение">
+              </div>
+              <div class="image-uploads__image-wrapper">
+                <input class="visually-hidden" type="file" name="user-images"
+                  accept="image/png, image/jpeg, image/jpg, image/gif" aria-label="user-images">
+                <span>Загрузить изображение</span>
+              </div>
+              <span class="error-field">Пожалуйста загрузите изображение</span>
+              <span class="error-field error-field--size visually-hidden">Изображение не должно превышать 10Мб</span>
             </div>
           </div>
           <div class="landscaping-form__section map-section">
@@ -59,10 +69,45 @@
             </p>
             <input type="text" name="map-search" id="map-search" class="map-section__address"
               placeholder="Адрес проблемной территории" aria-label="Введите адрес проблемной территории" />
-            <iframe
-              src="https://yandex.ru/map-widget/v1/?um=constructor%3A9cb3dfe5638344382497a81fa8472068b0dfbf25654b37a69d276c0dce8d2718&amp;source=constructor"
-              width="800" height="600" title="Карта"></iframe>
-          </div>
+
+            <input type="hidden" id="mapCenter" name="" value="">
+            <input type="hidden" name="map-kml" id="map-kml" value="">
+
+            <div class="coordsFigure"></div>
+            <div class="map_container">
+              <div class="mapMenu">
+                <div class="title">Укажите ваш объект на карте:</div>
+
+                <button class="mapMenuIcon mapPin">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="#D0D6DE" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 9.10526C20 14.75 12 23 12 23C12 23 4 14.75 4 9.10526C4 4.62885 7.58172 1 12 1C16.4183 1 20 4.62885 20 9.10526Z"/>
+                    <ellipse cx="12.0001" cy="8.6998" rx="4.57143" ry="4.4" fill="white"/>
+                  </svg>
+                </button>
+
+                <button class="mapMenuIcon mapPolygon">
+                  <svg class="svgMapPolygon" version="1.1" id="Layer_1" fill="#D0D6DE" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                       viewBox="0 0 30.3 27.8" style="enable-background:new 0 0 30.3 27.8;" xml:space="preserve">
+                    <path class="st1" d="M20.7,3.9l5.5,9.5l-5.5,9.5h-11l-5.5-9.5l5.5-9.5H20.7z M4.1,13.6L4.1,13.6C4.1,13.6,4.1,13.6,4.1,13.6
+                      L4.1,13.6z M26.2,13.2L26.2,13.2C26.2,13.2,26.2,13.2,26.2,13.2L26.2,13.2z"/>
+                  </svg>
+                </button>
+
+                <button class="mapMenuIcon mapLineBroken">
+                  <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5 7C20.8807 7 22 5.88071 22 4.5C22 3.11929 20.8807 2 19.5 2C18.1333 2 17.0227 3.09676 17.0003 4.45819L9.23042 7.69566C8.78127 7.26479 8.17156 7 7.5 7C6.11929 7 5 8.11929 5 9.5C5 10.1538 5.251 10.749 5.66189 11.1945L2.66512 18.0054C2.61054 18.0018 2.55548 18 2.5 18C1.11929 18 0 19.1193 0 20.5C0 21.8807 1.11929 23 2.5 23C3.88071 23 5 21.8807 5 20.5C5 19.9045 4.79177 19.3576 4.44414 18.9281L7.49253 12L7.5 12C8.86675 12 9.97733 10.9032 9.99966 9.54181L17.7696 6.30434C18.2187 6.73521 18.8284 7 19.5 7Z"/>
+                  </svg>
+                </button>
+
+                <button class="mapMenuIcon mapLine">
+                  <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5 7C20.8807 7 22 5.88071 22 4.5C22 3.11929 20.8807 2 19.5 2C18.1193 2 17 3.11929 17 4.5C17 4.82243 17.061 5.1306 17.1722 5.41359L4.41359 18.1722C4.1306 18.061 3.82243 18 3.5 18C2.11929 18 1 19.1193 1 20.5C1 21.8807 2.11929 23 3.5 23C4.88071 23 6 21.8807 6 20.5C6 20.1776 5.93896 19.8694 5.82781 19.5864L18.5864 6.82781C18.8694 6.93896 19.1776 7 19.5 7Z"/>
+                  </svg>
+                </button>
+
+              </div>
+            <div id="map" data-icon="img/pin.png"></div>
+            </div>
           <div class="landscaping-form__button-wrapper">
             <button type="button" class="button button--white">Отменить</button>
             <button type="button" class="button button--blue landscaping-form__submit-btn" id="improvement-submit-btn">
@@ -97,6 +142,7 @@
     <button type="button" class="landscaping__general-pin">4</button>
   </template>
 
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a3b13bbc-c623-4647-90d4-48210288fe0d" type="text/javascript"></script>
   <script src="js/libs.js"></script>
   <script src="js/main.min.js"></script>
 </body>

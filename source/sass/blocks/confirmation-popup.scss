@@ -38,7 +38,7 @@
     width: 26px;
     height: 26px;
     cursor: pointer;
-    
+
     &::before,
     &::after {
         position: absolute;
@@ -92,11 +92,12 @@
     }
 
     .confirmation-popup__back-btn {
-        margin-bottom: 20px;
+        margin-bottom: 0;
         width: 100%;
     }
-    
+
     .confirmation-popup__submit-btn {
+        margin-bottom: 20px;
         width: 100%;
     }
 }

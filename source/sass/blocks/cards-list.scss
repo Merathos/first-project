@@ -1,0 +1,33 @@
+.cards-list {
+  --cardsGap: 20px;
+  --cardsCount: 4;
+  width: calc(100% + var(--cardsGap));
+  margin: 0 calc(var(--cardsGap)* -1) calc(var(--cardsGap)* -1) 0;
+  padding: 0;
+  list-style: none;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+
+  @include tablet {
+    --cardsCount: 2;
+  }
+
+  @include mobile {
+    --cardsCount: 1;
+    --cardsGap: 15px;
+
+    margin-right: 0;
+  }
+}
+
+.cards-list__item {
+  width: calc(100% / var(--cardsCount) - var(--cardsGap));
+  margin-right: var(--cardsGap);
+  margin-bottom: var(--cardsGap);
+
+  @include mobile {
+    margin-right: 0;
+  }
+}

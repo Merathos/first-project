@@ -1,0 +1,30 @@
+.notification {
+  padding: 20px;
+  width: 100%;
+
+  background-color: $white;
+  border: 1px solid $light-grey;
+  border-radius: 5px;
+}
+
+.notification__title {
+  margin: 0;
+
+  font-weight: 500;
+}
+
+.notification__content {
+  margin: 0;
+  margin-top: 4px;
+}
+
+.notification__more {
+  margin-top: 16px;
+  padding: 0;
+
+  line-height: rem(20.25px);
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

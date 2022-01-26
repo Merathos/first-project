@@ -68,6 +68,20 @@
   }
 }
 
+.public-debate__archive-link-mobile {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.public-debate .description {
+  margin: 0;
+}
+
 .public-debate__description {
   min-width: 100%;
 }
@@ -98,6 +112,11 @@
 
     &:hover:not(.focus-visible) .button-star {
       opacity: 1;
+      display: block;
+
+      &:hover {
+        color: var(--color-interactive-accent, $blue-accent);
+      }
     }
   }
 
@@ -133,6 +152,9 @@
 }
 
 .public-debate__status {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   margin-right: 12px;
 
   @media (min-width: $tablet-width) {
@@ -267,84 +289,8 @@
     }
   }
 
-  .public-debate__select {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-
-    border: 1px solid var(--color-stroke, $light-grey);
-    border-radius: 5px;
-
-    @media (max-width: $tablet-width - 1) {
-      margin-bottom: 16px;
-      flex-flow: column wrap;
-      align-items: flex-start;
-    }
-
-    @media (min-width: $tablet-width) {
-      margin-bottom: 16px;
-    }
-
-    .ss-single-selected {
-      padding: 15px 16px 15px 23px;
-
-      @media (max-width: $tablet-width - 1) {
-        padding: 15px 16px;
-        justify-content: center;
-      }
-
-      .placeholder {
-        .ss-disabled {
-          font-size: rem(15px);
-          line-height: 135%;
-        }
-      }
-    }
-
-    .placeholder {
-      flex: 0 0 auto;
-      width: auto;
-
-      font-size: rem(15px);
-      line-height: 135%;
-
-      @media (max-width: $tablet-width - 1) {
-        flex-shrink: 1;
-      }
-    }
-
-    .ss-content {
-      top: 41px;
-      left: 0;
-      width: 219px;
-
-      background-color: #ffffff;
-    }
-
-    .ss-main .ss-single-selected .ss-arrow {
-      margin-left: 12px;
-    }
-
-    .ss-main .ss-single-selected .ss-arrow span {
-      width: 8px;
-      height: 8px;
-    }
-
-    .form-select__checkbox-wrapper {
-      padding: 23px;
-      margin: 0 0 0 auto;
-      font-size: rem(15px);
-      line-height: 135%;
-
-      label {
-        position: relative;
-      }
-
-      @media (max-width: $tablet-width - 1) {
-        padding: 15px 16px;
-        margin-left: 0;
-      }
-    }
+  .public-debate__filter {
+    margin-bottom: 16px;
   }
 
   .public-debate__list {

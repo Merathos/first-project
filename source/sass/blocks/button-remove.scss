@@ -1,0 +1,30 @@
+.button-remove {
+  padding: 17px 26px;
+  border: none;
+  background-color: transparent;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: center;
+
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 135%;
+  text-transform: uppercase;
+
+  color: var(--color-interactive-default, $blue-default);
+
+  cursor: pointer;
+
+  transition: color $style-change-duration;
+
+  &:hover:not(.focus-visible) {
+    color: var(--color-interactive-accent, $blue-accent);
+  }
+
+  svg {
+    margin-right: 8px;
+    transition: fill $style-change-duration;
+  }
+}

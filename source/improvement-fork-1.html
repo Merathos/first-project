@@ -3,62 +3,76 @@
 <include src="source/components/head.html"></include>
 
 <body class="page-body">
-    <include src="source/components/special-popup.html"></include>
+  <include src="source/components/special-popup.html"></include>
 
-    <include src="source/components/header.html"></include>
+  <include src="source/components/header.html"></include>
 
-    <main>
-        <section class="improvement-fork section">
-            <div class="container">
-                <a class="improvement-fork__back back-btn" href="main-page.html">
-                    <svg width="8" height="14">
-                        <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
-                    </svg>
-                    К списку благоустройств
-                </a>
-                <h1 class="improvement-fork__title page-title">Рыбным текстом называется текст, служащий для временного
-                    наполнения макета в
-                    публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также
-                    известен как текст- заполнитель или же текст-наполнитель. Иногда текст- «рыба» также</h1>
-                <div class="improvement-fork__status-container improvement-stage">
-                    <div class="improvement-stage__wrapper">
-                        <span>Статус:</span>
-                        <span class="improvement-stage__status">Идет прием заявок</span>
-                    </div>
-                    <div class="improvement-stage__wrapper improvement-stage__wrapper--line-height">
-                        <span>Приём заявок&nbsp;</span>
-                        <span class="improvement-stage__dates">с <time datetime="2020-08-20">20.08.2020</time> по <time
-                                datetime="2020-11-20">20.11.2020</time></span>
-                    </div>
-                </div>
-                <div class="improvement-fork__content">
-                    <p>Рыбные тексты также применяются для демонстрации
-                        различных
-                        видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей
-                        функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так
-                        как
-                        человеческое
-                        восприятие имеет особенность, распознавать определенные образцы и повторения. В случае
-                        произвольного
-                        набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных
-                        шрифтов, а
-                        также от распределения текста на.</p>
-                    <a href="#" target="_blank" class="improvement-fork__btn button button--white"><span>Добавить свое
-                            предложение</span><svg width="33" height="12" viewBox="0 0 33 12" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="img/sprite.svg#icon-arrow"></use>
-                        </svg></a>
-                </div>
+  <main>
+    <section class="area-improvement section">
+      <div class="container">
+        <a class="area-improvement__back-btn back-btn" href="main-page.html">
+          <svg width="8" height="14">
+            <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
+          </svg>
+          К списку благоустройств
+        </a>
+        <h1 class="area-improvement__title page-title">Рыбным текстом называется текст, служащий для временного
+          наполнения макета в
+          публикациях или производстве веб-сайтов, пока финальный текст еще не создан. Рыбный текст также
+          известен как текст- заполнитель или же текст-наполнитель. Иногда текст- «рыба» также</h1>
+        <div class="area-improvement__status-container improvement-stage">
+          <div class="improvement-stage__container">
+            <div class="improvement-stage__wrapper">
+              <span>Статус:</span>
+              <span class="improvement-stage__status status-color--orange">Идет прием заявок</span>
             </div>
-        </section>
-    </main>
+            <div class="improvement-stage__wrapper improvement-stage__wrapper--line-height">
+              <span>Приём заявок&nbsp;</span>
+              <span class="improvement-stage__dates">с <time datetime="2020-08-20">20.08.2020</time> по <time
+                  datetime="2020-11-20">20.11.2020</time></span>
+            </div>
+          </div>
+          <p class="area-improvement__text improvement-stage__text main-text">Рыбные тексты также применяются для
+            демонстрации
+            различных
+            видов шрифта и в разработке макетов. Как правило их содержание бессмысленно. По причине своей
+            функции текста-заполнителя для макетов нечитабельность рыбных текстов имеет особое значение, так
+            как
+            человеческое
+            восприятие имеет особенность, распознавать определенные образцы и повторения. В случае
+            произвольного
+            набора букв и длины слов ничто не отвлекает от оценки воздействия и читаемости различных
+            шрифтов, а
+            также от распределения текста на.
+          </p>
+        </div>
+        <div class="activity-tabs">
+          <ul class="activity-tabs__list">
+            <li class="activity-tabs__item activity-tabs__item--active">
+              <a href="#" class="activity-tabs__link">Ваши объекты</a>
+            </li>
+            <li class="activity-tabs__item">
+              <a href="#" class="activity-tabs__link">Объекты пользователей</a>
+            </li>
+          </ul>
+          <div class="activity-tabs__bottom"></div>
+        </div>
+        <a href="#" target="_blank" class="area-improvement__btn button button--white"><span>Добавить свое
+            предложение</span><svg width="33" height="12" viewBox="0 0 33 12" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#icon-arrow"></use>
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
 
-    <include src="source/components/footer.html"></include>
-    <include src="source/components/cookie.html"></include>
-    <include src="source/components/up-btn.html"></include>
+  <include src="source/components/footer.html"></include>
+  <include src="source/components/cookie.html"></include>
+  <include src="source/components/up-btn.html"></include>
 
-    <script src="js/libs.js"></script>
-    <script src="js/main.min.js"></script>
+  <script src="js/libs.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>

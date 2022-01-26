@@ -1,0 +1,41 @@
+.internet-banner {
+  width: 100%;
+
+  background-color: var(--color-bg-secondary, $light-blue);
+  background-image: url('../img/internet-banner.svg');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include mobile {
+    background-image: none;
+  }
+}
+
+.internet-banner__container {
+  max-width: 500px;
+
+  padding-top: 61px;
+  padding-bottom: 62px;
+}
+
+.internet-banner__title {
+  margin: 0;
+  max-width: 500px;
+
+  font-size: rem(40px);
+  line-height: 47px;
+}
+
+.internet-banner__text {
+  margin: 0;
+  margin-top: 32px;
+
+  font-size: rem(16px);
+  line-height: 135%;
+}
+
+.internet-banner__button {
+  margin-top: 32px;
+  padding: 16px 50px 13px;
+}

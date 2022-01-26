@@ -5,6 +5,10 @@
   background-position: left bottom;
   background-repeat: no-repeat;
   background-size: 100% 1px;
+
+  &:first-child {
+    padding-top: 0;
+  }
 }
 
 .improvement__text {

@@ -1,5 +1,7 @@
 $desktop-width: 1200px;
+$tablet-max-width: 1024px;
 $tablet-width: 768px;
+$tablet-min-width: 500px;
 $mobile-max-width: 400px;
 $mobile-width: 320px;
 
@@ -33,7 +35,6 @@ $comfort: #4d4b43;
 $light-yellow: #f7f3d8;
 $brown: #3b2717;
 $fill-color: rgba(155, 210, 244, 0.25);
-$pattens-blue: #dcdee0;
 
 $retina2x-dpi: 144dpi;
 $retina2x-dppx: 1.5dppx;
@@ -42,4 +43,3 @@ $border-radius: 5px;
 $style-change-duration: 0.2s;
 $style-change-duration-slow: 0.4s;
 
-$trans--300: 0.3s;

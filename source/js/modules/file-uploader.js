@@ -1,35 +1,32 @@
 'use strict';
-(function () {
-  var container = document.querySelector('.js-upload-file-container');
 
-  if (container) {
-    var input = container.querySelector('input[name="user-files"]');
-    var label = container.querySelector('label[for="user-files"]');
+var initFileUploader = function() {
+  var blockContainer = document.querySelector('.js-upload-file-container');
+
+  if (blockContainer) {
+    var input = blockContainer.querySelector('.js-user-files');
+    // var initialInput = input.cloneNode(true);
+    // var label = blockContainer.querySelector('label');
+    var previewContainer = blockContainer.querySelector('.file-uploads__preview-container');
     var files = [];
-    var MAX_FILES_NUMBER = 5;
 
-    var checkInputVisible = function () {
-      if (files.length === MAX_FILES_NUMBER) {
-        label.classList.add('visually-hidden');
-      } else {
-        label.classList.remove('visually-hidden');
-      }
-    };
-
-    var limitFilesNumber = function () {
-      var tempList = new DataTransfer();
-      for (var i = 0; i < MAX_FILES_NUMBER; i++) {
-        tempList.items.add(input.files[i]);
-      }
-      input.files = tempList.files;
-    };
-
-    var checkFilesList = function () {
-      var list = new DataTransfer();
-      files.forEach(function (file) {
-        list.items.add(file);
+    var checkPreviousFiles = function () {
+      var prevFiles = previewContainer.querySelectorAll('.file-wrapper');
+      prevFiles.forEach(function (item) {
+        var child = item.querySelector('span');
+        files.push(child);
+        renderCloseBtn(item, child);
       });
-      input.files = list.files;
+    };
+
+    var cloneInput = function (fileContainer) {
+      var currentInput = blockContainer.querySelector('.js-user-files');
+      var newInput = currentInput.cloneNode(true);
+      newInput.removeAttribute('id');
+      fileContainer.appendChild(newInput);
+      if(currentInput.value) {
+        currentInput.value ='';
+      }
     };
 
     var renderCloseBtn = function (btnContainer, file) {
@@ -42,8 +39,7 @@
         var index = files.indexOf(file);
         if (index > -1) {
           files.splice(index, 1);
-          checkInputVisible();
-          checkFilesList();
+          // checkInputVisible();
         }
       });
     };
@@ -55,26 +51,23 @@
       fileTitle.textContent = file.name;
       fileContainer.appendChild(fileTitle);
       renderCloseBtn(fileContainer, file);
-      container.insertBefore(fileContainer, container.querySelector('label'));
+      previewContainer.appendChild(fileContainer);
+      cloneInput(fileContainer);
     };
 
+    checkPreviousFiles();
+    // checkInputVisible();
     input.addEventListener('change', function () {
       if (input.files.length) {
-
-        if (input.files.length > MAX_FILES_NUMBER) {
-          limitFilesNumber();
-        }
-
         input.files.forEach(function (file) {
-          if (files.length > MAX_FILES_NUMBER - 1) {
-            return;
-          }
           files.push(file);
-          checkInputVisible();
+          // checkInputVisible();
           renderPreview(file);
         });
       }
-      checkFilesList();
+      // input.files = initialInput.files;
     });
   }
-})();
+};
+
+initFileUploader();

@@ -1,0 +1,46 @@
+.project-rules {
+  position: relative;
+  padding: 15px 15px 15px 35px;
+  border: 1px solid var(--color-stroke, $light-grey);
+  border-radius: $border-radius;
+
+  @include font;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 17px;
+
+  color: var(--color-text, $dark-text);
+
+  @media (min-width: $tablet-width) {
+    padding: 19px 24px 19px 44px;
+
+    font-size: 15px;
+    line-height: 135%;
+  }
+
+  em {
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  a {
+    color: var(--color-interactive-default, $blue-default);
+    text-underline-offset: 2px;
+    transition: color $style-change-duration;
+
+    &:hover:not(.focus-visible) {
+      color: var(--color-interactive-accent, $blue-accent);
+    }
+  }
+
+  svg {
+    position: absolute;
+    top: 17px;
+    left: 11px;
+
+    @media (min-width: $tablet-width) {
+      top: 22px;
+      left: 20px;
+    }
+  }
+}

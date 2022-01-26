@@ -4,36 +4,34 @@
   align-items: flex-end;
   grid-area: c;
 
+  .button-star {
+    height: 19px;
+    padding: 0;
+    margin-left: auto;
+    transition: opacity $style-change-duration;
+
+    &:hover {
+      color: var(--color-interactive-accent, $blue-accent);
+    }
+  }
+
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-areas:
       "a    c"
       "b    c";
 
-    &>* {
+    & > * {
       align-self: start;
     }
+
+    .button-star {
+      height: 21px;
+      margin-left: 24px;
+      grid-area: c;
+      align-self: center;
+    }
   }
-}
-
-.application-period .button-star {
-  height: 19px;
-  padding: 0;
-  margin-left: auto;
-  transition: opacity $style-change-duration;
-
-  @media (min-width: $desktop-width) {
-    height: 21px;
-    margin-left: 24px;
-    grid-area: c;
-    align-self: center;
-
-    opacity: 0;
-  }
-}
-
-.application-period--favorite .button-star {
-  color: var(--color-interactive-accent, $blue-default);
 }
 
 .application-period__text {

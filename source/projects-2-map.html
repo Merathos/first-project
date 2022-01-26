@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="ru">
+<include src="source/components/head.html"></include>
+
+<body class="page-body">
+    <include src="source/components/special-popup.html"></include>
+
+    <include src="source/components/header.html"></include>
+
+    <main class="projects projects-2 page-content">
+        <div class="container">
+            <a class="back-btn" href="main-page.html">
+                <svg width="8" height="14">
+                    <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
+                </svg>
+                К списку категорий
+            </a>
+
+            <div class="info-banner">
+                <svg width="24" height="24" class="info-icon info-banner__icon" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 24 24">
+                    <path fill="currentColor" fill-rule="evenodd"
+                        d="M.2 12C.2 5.494 5.492.2 12 .2 18.505.2 23.8 5.494 23.8 12c0 6.506-5.294 11.8-11.8 11.8C5.492 23.8.2 18.506.2 12zm2.152 0c0 5.32 4.328 9.647 9.647 9.647 5.32 0 9.647-4.327 9.647-9.647S17.318 2.354 12 2.354 2.352 6.68 2.352 12z"
+                        clip-rule="evenodd"></path>
+                    <rect width="2.5" height="8" x="10.75" y="6" fill="currentColor" rx="1"></rect>
+                    <rect width="2.5" height="3" x="10.75" y="15" fill="currentColor" rx="1"></rect>
+                </svg>
+
+                <p class="info-banner__title">
+                    Данное голосование является открытым
+                </p>
+
+                <p class="info-banner__text">
+                    В соответствии с приказом Министерства строительства Российской Федерации № 75895422 от 20.01.2020
+                    персональные данные участников голосования (в составе ФИО, дата рождения, номер паспорта) будут
+                    переданы уполномоченным ответственной организации. Рыбным текстом называется текст, служащий для
+                    временного наполнения макета в публикациях или производстве веб-сайтов, пока
+                </p>
+
+                <button class="info-banner__button info-banner-button">
+                    <span class="info-banner-button__text">
+                        Развернуть
+                    </span>
+
+                    <svg class="arrow-down info-banner-button__icon" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        width="13" height="8" viewBox="0 0 14 8">
+                        <path fill="currentColor" fill-rule="evenodd"
+                            d="M11.98 0L7 4.97 2.02 0 .5 1.51 7 8l6.5-6.49L11.98 0z" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="budgets__status status-info status-info--accent">
+                <div class="status-info__text-group">
+                    <svg width="24" height="24">
+                        <use xlink:href="img/sprite.svg#icon-tick"></use>
+                    </svg>
+
+                    <p class="status-info__text">Голосование завершено, победители
+                    указаны в&nbsp;соответствующих категориях</p>
+                </div>
+                <a class="status-info__file file-item file-item--small file-item--white" href="#" download="">
+                    <svg width="24" height="24">
+                        <use xlink:href="img/sprite.svg#icon-doc-doc"></use>
+                    </svg>
+
+                    <p class="file-item__info">
+                        <span class="file-item__name">Протокол</span>
+                        <span class="file-item__size">3,2 мб</span>
+                    </p>
+                </a>
+            </div>
+
+            <div class="filter-2 projects__filter filter js-filter">
+                <form action="#" method="post">
+                    <div class="filter__header">
+                        <h1 class="filter__header-item">Проекты на голосовании&nbsp;</h1>
+                        <span class="filter__header-item filter__header-item--last">в категории</span>
+
+                        <div class="filter__category-select form-select js-form-select">
+                            <select name="category-select" id="category-select" title="Открыть фильтр">
+                                <option value="ЖКХ" title="ЖКХ">ЖКХ</option>
+                                <option value="Благоустройство" title="Благоустройство">Благоустройство</option>
+                                <option value="Бытовое обслуживание" title="Бытовое обслуживание">Бытовое обслуживание
+                                </option>
+                                <option value="Водоснабжение" title="Водоснабжение">Водоснабжение</option>
+                                <option value="Детские площадки" title="Детские площадки">Детские площадки</option>
+                                <option value="Дороги" title="Дороги">Дороги</option>
+                                <option value="Доходогенерирующие проекты" title="Доходогенерирующие проекты">
+                                    Доходогенерирующие проекты</option>
+                                <option value="Массовое мероприятие" title="Массовое мероприятие">Массовое мероприятие
+                                </option>
+                                <option value="Места захоронения" title="Места захоронения">Места захоронения</option>
+                                <option value="Места массового пользования" title="Места массового пользования">Места
+                                    массового пользования</option>
+                                <option value="Муниципальные образовательные организации"
+                                    title="Муниципальные образовательные организации">Муниципальные образовательные
+                                    организации</option>
+                                <option value="Народное творчество" title="Народное творчество">Народное творчество
+                                </option>
+                                <option value="Объекты культурного наследия" title="Объекты культурного наследия">
+                                    Объекты культурного наследия</option>
+                                <option value="Объекты культуры" title="Объекты культуры">Объекты культуры</option>
+                                <option value="Пожарная безопасность" title="Пожарная безопасность">Пожарная
+                                    безопасность</option>
+                                <option value="Сбор бытовых отходов" title="Сбор бытовых отходов">Сбор бытовых отходов
+                                </option>
+                                <option value="Связь" title="Связь">Связь</option>
+                                <option value="Спорт" title="Спорт">Спорт</option>
+                                <option value="Туризм" title="Туризм">Туризм</option>
+                                <option value="Фельдшерско-акушерские пункты" title="Фельдшерско-акушерские пункты">
+                                    Фельдшерско-акушерские пункты</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="filter__item filter-2__select filter__item--vote filter-vote form-select js-form-select">
+                        <select name="vote-select" id="vote-select" data-placeholder-text="Поиск города"
+                            data-deselect="true">
+                            <option data-placeholder="true"></option>
+                            <option value="За">За</option>
+                            <option value="Против">Против</option>
+                            <option value="Не голосовал">Не голосовал</option>
+                        </select>
+                    </div>
+
+                    <div id="map-progects" data-icon="img/pin.png"></div>
+
+                    <input type="hidden" id="mapProgectsCenter" name="" value="">
+
+                    <button class="filter__open-btn js-filter__open-btn button button--light-blue"
+                        type="button">Фильтры</button>
+
+                    <div class="filter-2__body">
+                        <div class="filter-2__counter">
+                            <p class="filter-2__caption">У вас осталось голосов</p>
+                            <span class="filter-2__counter-avaliable">1</span>&nbsp;из&nbsp;<span
+                                class="filter-2__counter-total">2</span>
+                        </div>
+                        <div
+                            class="filter__item filter-2__select filter__item--vote filter-vote form-select js-form-select">
+                            <select name="vote-select" id="vote-select" data-placeholder-text="Фильтр"
+                                data-deselect="true">
+                                <option data-placeholder="true"></option>
+                                <option value="За">За</option>
+                                <option value="Против">Против</option>
+                                <option value="Не голосовал">Не голосовал</option>
+                            </select>
+                        </div>
+
+                        <div class="filter__item filter-2__checkbox filter__item--separated form-checkbox">
+                            <input type="checkbox" name="favorite-only" id="favorite-only" value="checkbox">
+                            <label for="favorite-only">Только избранные</label>
+                        </div>
+                    </div>
+
+                    <button class="filter__show-btn button button--blue" type="submit">Показать</button>
+                </form>
+            </div>
+
+            <div class="projects-list js-projects-list">
+                <article class="project-item">
+                    <a class="project-item__link" href="#">
+                        <h2 class="project-item__title">Обязать контролеров проверять как пассажиров так и перевозчиков
+                        </h2>
+
+                        <p class="project-item__expire">
+                            Голосование до:
+                            <time class="project-item__expire-date" datetime="2019-08-16">16.08.19 </time>
+                        </p>
+                    </a>
+
+                    <include src="source/components/button-star.html"></include>
+                </article>
+
+                <article class="project-item project-item--voted">
+                    <a class="project-item__link" href="#">
+                        <h2 class="project-item__title">Онлайн-голосование граждан за принятие законов Российской
+                            Федерации</h2>
+
+                        <p class="project-item__expire">
+                            Голосование до:
+                            <time class="project-item__expire-date" datetime="2019-08-16">16.08.19 </time>
+                        </p>
+                    </a>
+
+                    <include src="source/components/button-star.html"></include>
+                </article>
+
+                <article class="project-item project-item--against">
+                    <a class="project-item__link" href="#">
+                        <h2 class="project-item__title">Инициатива "За строительство подземного метро в районе Северный
+                            (г. Москва) и социальной инфраструктуры</h2>
+
+                        <p class="project-item__expire">
+                            Голосование до:
+                            <time class="project-item__expire-date" datetime="2019-08-16">16.08.19 </time>
+                        </p>
+                    </a>
+
+                    <include src="source/components/button-star.html"></include>
+                </article>
+
+                <article class="project-item project-item--disabled">
+                    <a class="project-item__link" href="#">
+                        <h2 class="project-item__title">Возрождение вечерних школ</h2>
+
+                        <p class="project-item__expire">
+                            Голосование до:
+                            <time class="project-item__expire-date" datetime="2019-08-16">16.08.19 </time>
+                        </p>
+                    </a>
+
+                    <include src="source/components/button-star.html"></include>
+                </article>
+
+                <article class="project-item">
+                    <a class="project-item__link" href="#">
+                        <h2 class="project-item__title">Художественное ПТУ на базе янтарного комбината в Калининградской
+                            области</h2>
+
+                        <p class="project-item__expire">
+                            Голосование до:
+                            <time class="project-item__expire-date" datetime="2019-08-16">16.08.19 </time>
+                        </p>
+                    </a>
+
+                    <include src="source/components/button-star.html"></include>
+                </article>
+
+                <article class="project-item">
+                    <a class="project-item__link" href="#">
+                        <h2 class="project-item__title">Обязать контролеров проверять как пассажиров так и перевозчиков
+                        </h2>
+
+                        <p class="project-item__expire">
+                            Голосование до:
+                            <time class="project-item__expire-date" datetime="2019-08-16">16.08.19 </time>
+                        </p>
+                    </a>
+
+                    <include src="source/components/button-star.html"></include>
+                </article>
+
+                <article class="project-item project-item--voted">
+                    <a class="project-item__link" href="#">
+                        <h2 class="project-item__title">Онлайн-голосование граждан за принятие законов Российской
+                            Федерации</h2>
+
+                        <p class="project-item__expire">
+                            Голосование до:
+                            <time class="project-item__expire-date" datetime="2019-08-16">16.08.19 </time>
+                        </p>
+                    </a>
+
+                    <include src="source/components/button-star.html"></include>
+                </article>
+
+                <article class="project-item project-item--against">
+                    <a class="project-item__link" href="#">
+                        <h2 class="project-item__title">Инициатива "За строительство подземного метро в районе Северный
+                            (г. Москва) и социальной инфраструктуры</h2>
+
+                        <p class="project-item__expire">
+                            Голосование до:
+                            <time class="project-item__expire-date" datetime="2019-08-16">16.08.19 </time>
+                        </p>
+                    </a>
+
+                    <include src="source/components/button-star.html"></include>
+                </article>
+
+                <article class="project-item project-item--disabled">
+                    <a class="project-item__link" href="#">
+                        <h2 class="project-item__title">Возрождение вечерних школ</h2>
+
+                        <p class="project-item__expire">
+                            Голосование до:
+                            <time class="project-item__expire-date" datetime="2019-08-16">16.08.19 </time>
+                        </p>
+                    </a>
+
+                    <include src="source/components/button-star.html"></include>
+                </article>
+
+                <article class="project-item">
+                    <a class="project-item__link" href="#">
+                        <h2 class="project-item__title">Художественное ПТУ на базе янтарного комбината в Калининградской
+                            области</h2>
+
+                        <p class="project-item__expire">
+                            Голосование до:
+                            <time class="project-item__expire-date" datetime="2019-08-16">16.08.19 </time>
+                        </p>
+                    </a>
+
+                    <include src="source/components/button-star.html"></include>
+                </article>
+
+                <article class="project-item">
+                    <a class="project-item__link" href="#">
+                        <h2 class="project-item__title">Обязать контролеров проверять как пассажиров так и перевозчиков
+                        </h2>
+
+                        <p class="project-item__expire">
+                            Голосование до:
+                            <time class="project-item__expire-date" datetime="2019-08-16">16.08.19 </time>
+                        </p>
+                    </a>
+
+                    <include src="source/components/button-star.html"></include>
+                </article>
+
+                <article class="project-item project-item--voted">
+                    <a class="project-item__link" href="#">
+                        <h2 class="project-item__title">Онлайн-голосование граждан за принятие законов Российской
+                            Федерации</h2>
+
+                        <p class="project-item__expire">
+                            Голосование до:
+                            <time class="project-item__expire-date" datetime="2019-08-16">16.08.19 </time>
+                        </p>
+                    </a>
+
+                    <include src="source/components/button-star.html"></include>
+                </article>
+
+                <article class="project-item project-item--against">
+                    <a class="project-item__link" href="#">
+                        <h2 class="project-item__title">Инициатива "За строительство подземного метро в районе Северный
+                            (г. Москва) и социальной инфраструктуры</h2>
+
+                        <p class="project-item__expire">
+                            Голосование до:
+                            <time class="project-item__expire-date" datetime="2019-08-16">16.08.19 </time>
+                        </p>
+                    </a>
+
+                    <include src="source/components/button-star.html"></include>
+                </article>
+
+                <article class="project-item project-item--disabled">
+                    <a class="project-item__link" href="#">
+                        <h2 class="project-item__title">Возрождение вечерних школ</h2>
+
+                        <p class="project-item__expire">
+                            Голосование до:
+                            <time class="project-item__expire-date" datetime="2019-08-16">16.08.19 </time>
+                        </p>
+                    </a>
+
+                    <include src="source/components/button-star.html"></include>
+                </article>
+
+                <article class="project-item">
+                    <a class="project-item__link" href="#">
+                        <h2 class="project-item__title">Художественное ПТУ на базе янтарного комбината в Калининградской
+                            области</h2>
+
+                        <p class="project-item__expire">
+                            Голосование до:
+                            <time class="project-item__expire-date" datetime="2019-08-16">16.08.19 </time>
+                        </p>
+                    </a>
+
+                    <include src="source/components/button-star.html"></include>
+                </article>
+            </div>
+
+            <include src="source/components/paginator.html"></include>
+
+            <section class="projects-winners">
+                <h2 class="projects-winners__title">
+                    Проекты-победители
+                    <div class="projects-winners__tooltip info-tooltip" tabindex="0">
+                        <span class="info-tooltip__sign">?</span>
+                        <div class="projects-winners__tooltip-text info-tooltip__text">
+                            Ниже представлен список победителей,<br>определенный первым этапом голосования  
+                        </div>
+                    </div>
+                </h2>
+
+                
+
+                <div class="projects-winners__list projects-list js-projects-list">
+                    <article class="project-item project-item--win">
+                        <a class="project-item__link" href="#">
+                            <h3 class="project-item__title">Обязать контролеров проверять как пассажиров так и перевозчиков
+                            </h3>
+    
+                            <p class="project-item__expire">
+                                Голосование до:
+                                <time class="project-item__expire-date" datetime="2019-08-16">16.08.19 </time>
+                            </p>
+                        </a>
+    
+                        <include src="source/components/button-star.html"></include>
+                    </article>
+    
+                    <article class="project-item project-item--win">
+                        <a class="project-item__link" href="#">
+                            <h3 class="project-item__title">Оставить бумажную систему учёта граждан</h3>
+    
+                            <p class="project-item__expire">
+                                Голосование до:
+                                <time class="project-item__expire-date" datetime="2019-08-16">16.08.19 </time>
+                            </p>
+                        </a>
+    
+                        <include src="source/components/button-star.html"></include>
+                    </article>
+    
+                    <article class="project-item project-item--win">
+                        <a class="project-item__link" href="#">
+                            <h3 class="project-item__title">Инициатива "За строительство подземного метро в районе Северный   (г. Москва) и социальной инфраструк...</h3>
+    
+                            <p class="project-item__expire">
+                                Голосование до:
+                                <time class="project-item__expire-date" datetime="2019-08-16">16.08.19 </time>
+                            </p>
+                        </a>
+    
+                        <include src="source/components/button-star.html"></include>
+                    </article>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <include src="source/components/footer.html"></include>
+    <include src="source/components/cookie.html"></include>
+    <include src="source/components/up-btn.html"></include>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=a3b13bbc-c623-4647-90d4-48210288fe0d" type="text/javascript"></script>
+
+    <script src="js/libs.js"></script>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

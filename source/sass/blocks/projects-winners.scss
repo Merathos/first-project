@@ -1,0 +1,35 @@
+.projects-winners {
+  margin-top: 80px;
+
+  .rating-list {
+    padding-top: 8px;
+    margin-bottom: 0;
+  }
+}
+
+.budgets + .projects-winners {
+  margin-top: 0;
+  padding-bottom: 86px;
+}
+
+.projects-winners__title {
+  display: inline-block;
+  margin: 0;
+
+  font-weight: 400;
+  font-size: rem(40px);
+  line-height: rem(47px);
+}
+
+.projects-winners__list {
+  margin-top: 40px;
+}
+
+.projects-winners__tooltip {
+  top: -5px;
+  left: 10px;
+}
+
+.projects-winners__tooltip-text {
+  max-width: max-content;
+}

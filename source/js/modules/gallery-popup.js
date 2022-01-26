@@ -20,6 +20,7 @@
 
   var swiper = null;
 
+
   var resetSlider = function () {
     swiper.destroy();
     slider.innerHTML = '';
@@ -34,7 +35,9 @@
 
     Array.prototype.forEach.call(items, function (item) {
       var itemPhoto = item.querySelector('.gallery__item');
+      // var bigPhotoSrc = item.querySelector('.gallery__item-link').href;
       var element = itemPhoto.cloneNode(true);
+      // element.querySelector('img').src = bigPhotoSrc;
       element.classList.add('swiper-slide');
 
       sliderTape.appendChild(element);
@@ -71,6 +74,7 @@
       popupBarBottom.classList.add(hideClass);
     }
   };
+
 
   var onDocumentClick = function (evt) {
     if (evt.target.classList.contains('js-gallery__item-link')) {

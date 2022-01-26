@@ -2,7 +2,7 @@
 
 (function () {
     if (document.querySelector('.hearings-result__status-info')) {
-        var resultContainer = document.querySelector('.hearings__result');
+        var resultContainer = document.querySelector('.js-hearings-parent');
         var statusInfo = resultContainer.querySelector('.hearings-result__status-info');
         var pollResultTemplate = document.querySelector('#poll-result');
 

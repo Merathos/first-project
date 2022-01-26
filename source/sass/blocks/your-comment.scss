@@ -38,7 +38,13 @@
     }
 
     .your-comment__text {
-      color: var(--color-text, #707b8c);
+      color: var(--color-text, $grey);
+    }
+  }
+
+  &--moderation {
+    .your-comment__status p {
+      color: var(--color-text, $grey);
     }
   }
 }

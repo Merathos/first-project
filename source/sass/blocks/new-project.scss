@@ -1,19 +1,35 @@
 .new-project {
   padding-top: 16px;
+
+  @media (min-width: $desktop-width) {
+    padding-top: 0;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 14px;
+  }
+}
+
+.new-project__info-banner {
+  margin: 0 0 40px;
 }
 
 .new-project__title {
-  margin-bottom: 24px;
+  margin-bottom: 40px;
   @media (max-width: $desktop-width - 1) {
     margin-bottom: 32px;
   }
 }
 
-.new-project__rules {
-  margin-bottom: 30px;
+.new-project__comments {
+  margin: 28px 0 12px;
+}
 
-  @media (max-width: $tablet-width - 1) {
-    margin-bottom: 20px;
+.new-project__last-comment {
+  margin: 0 0 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 27px;
   }
 }
 
@@ -23,15 +39,38 @@
 }
 
 .new-project__select {
-  margin-bottom: 60px;
+  margin-bottom: 80px;
+  display: block;
 
   @media (max-width: $tablet-width - 1) {
-    margin-bottom: 52px;
+    margin-bottom: 72px;
+  }
+
+  .ss-main {
+    display: block;
+    width: 100%;
+
+    &:last-child {
+      margin-left: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 550px;
+    }
   }
 
   .ss-main .ss-single-selected {
     padding: 12px 16px;
     min-height: 51px;
+    background-color: var(--color-bg-secondary, $color-bg);
+
+    @media (max-width: $desktop-width - 1) {
+      width: 100%;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: 100%;
+    }
   }
 
   .ss-main .ss-single-selected .ss-arrow {
@@ -68,7 +107,11 @@
 }
 
 .new-project__contacts {
-  margin: 0 0 80px;
+  margin: 0 0 48px;
+
+  @media (max-width: $desktop-width - 1) {
+    margin-bottom: 80px;
+  }
 
   @media (max-width: $tablet-width - 1) {
     margin-bottom: 72px;
@@ -77,6 +120,7 @@
 
 .new-project__file-upload {
   margin: 0 0 80px;
+  position: relative;
 
   @media (max-width: $tablet-width - 1) {
     margin-bottom: 72px;
@@ -92,12 +136,23 @@
 }
 
 .new-project__image-upload {
+  position: relative;
   margin-bottom: 47px;
   padding-bottom: 48px;
   border-bottom: 1px solid var(--color-stroke, $light-grey);
 
-  @media (max-width: $desktop-width - 1) {
+  @media (max-width: $tablet-width - 1) {
     padding-bottom: 40px;
     margin-bottom: 40px;
   }
+}
+
+.new-project .project-rules {
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.project-rules + .new-project__form {
+  padding-top: 0;
 }

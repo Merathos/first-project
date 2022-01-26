@@ -241,24 +241,65 @@
           </svg>
           На главную
         </a>
-        <h1 class="public-debate__title page-title">Общественные обсуждения и&nbsp;публичные слушания</h1>
+        <h1 class="public-debate__title page-title">Общественные обсуждения
+          и&nbsp;публичные слушания</h1>
         <p class="public-debate__description description">
-          Общественные обсуждения и публичные слушания - это возможность для граждан узнать о начале общественных
-          обсуждений / публичных слушаний и оставить свое мнение по вопросам, выносящимся на обсуждение.
+          Общественные обсуждения и публичные слушания - это возможность для
+          граждан узнать о начале общественных
+          обсуждений / публичных слушаний и оставить свое мнение по вопросам,
+          выносящимся на обсуждение.
         </p>
-        <form class="public-debate__select form-select js-form-select">
-          <select name="category-select" id="category-select" title="Открыть фильтр" data-placeholder-text="Все статусы" data-deselect="true">
+        <form class="public-debate__filter categories-filter js-form-select">
+          <ul class="page-nav">
+            <li class="page-nav__item">
+              <input class="page-nav__radio-input" type="radio" name="status" id="federal-status" checked="">
+              <label class="page-nav__radio-label" for="federal-status" aria-label="Федеральные"></label>
+              <a href="#" class="page-nav__link page-nav__link--active" data-radio="federal-status">Федеральные</a>
+            </li>
+            <li class="page-nav__item">
+              <input class="page-nav__radio-input" type="radio" name="status" id="regional-status">
+              <label class="page-nav__radio-label" for="regional-status" aria-label="Региональные"></label>
+              <a href="#" class="page-nav__link" data-radio="regional-status">Региональные</a>
+            </li>
+            <li class="page-nav__item">
+              <input class="page-nav__radio-input" type="radio" name="status" id="local-status">
+              <label class="page-nav__radio-label" for="local-status" aria-label="Местные"></label>
+              <a href="#" class="page-nav__link" data-radio="local-status">Местные</a>
+            </li>
+          </ul>
+          <select name="categories" id="categories" title="Открыть фильтр" data-deselect="true" class="multiple-select js-multiple-select" data-placeholder-text="Все категории" multiple="">
             <option data-placeholder="true"></option>
-            <option value="Идёт приём мнений" title="Идёт приём мнений">Идёт приём мнений</option>
-            <option value="Прием мнений завершён" title="Прием мнений завершён">Прием мнений завершён</option>
-            <option value="Подготовка к проведению слушания" title="Подготовка к проведению слушания">Подготовка к
-              проведению слушания</option>
-            <option value="Публичное слушание в процессе" title="Публичное слушание в процессе">Публичное слушание в
-              процессе</option>
-            <option value="Подведение итогов" title="Подведение итогов">Подведение итогов</option>
-            <option value="Подведены итоги" title="Подведены итоги">Подведены итоги</option>
+            <option value="Библиотеки" title="Библиотеки">Библиотеки</option>
+            <option value="Муниципальные образовательные организации" title="Муниципальные образовательные организации">Муниципальные образовательные организации</option>
+            <option value="Благоустройство" title="Благоустройство">Благоустройство</option>
+            <option value="Народное творчество" title="Народное творчество">Народное творчество</option>
+            <option value="Бытовое обслуживание" title="Бытовое обслуживание">Бытовое обслуживание</option>
+            <option value="Объекты культурного наследия" title="Объекты культурного наследия">Объекты культурного наследия</option>
+            <option value="Водоснабжение" title="Водоснабжение">Водоснабжение</option>
+            <option value="Объекты культуры" title="Объекты культуры">Объекты культуры</option>
+            <option value="Детские площадки" title="Детские площадки">Детские площадки</option>
+            <option value="Пожарная безопасность" title="Пожарная безопасность">Пожарная безопасность</option>
+            <option value="Дороги" title="Дороги">Дороги</option>
+            <option value="Сбор бытовых отходов" title="Сбор бытовых отходов">Сбор бытовых отходов</option>
+            <option value="Доходогенерирующие проекты" title="Доходогенерирующие проекты">Доходогенерирующие проекты</option>
+            <option value="Связь" title="Связь">Связь</option>
+            <option value="ЖКХ" title="ЖКХ">ЖКХ</option>
+            <option value="Спорт" title="Спорт">Спорт</option>
+            <option value="Массовое мероприятиеТуризм" title="Массовое мероприятиеТуризм">Массовое мероприятиеТуризм</option>
+            <option value="Туризм" title="Туризм">Туризм</option>
+            <option value="Места захоронения" title="Места захоронения">Места захоронения</option>
+            <option value="Фельдшерско-акушерские пункты" title="Фельдшерско-акушерские пункты">Фельдшерско-акушерские пункты</option>
+            <option value="Места массового пользования" title="Места массового пользования">Места массового пользования</option>
           </select>
-          <div class="form-select__checkbox-wrapper form-checkbox">
+          <select name="category-select" id="category-select" class="single-select" title="Открыть фильтр" data-placeholder-text="Все статусы" data-deselect="true">
+            <option data-placeholder="true"></option>
+            <option value="В процессе приема Комментариев" title="В процессе приема Комментариев">В процессе приема Комментариев</option>
+            <option value="Прием комментариев завершён" title="Прием комментариев завершён">Прием Комментариев завершён. Идёт подготовка к проведению.</option>
+            <option value="В процессе" title="В процессе">В процессе</option>
+            <option value="Подводятся итоги" title="Подводятся итоги">Подводятся итоги</option>
+            <option value="Итоги подведены" title="Итоги подведены">Итоги подведены</option>
+          </select>
+          <div class="form-checkbox">
             <input type="checkbox" name="favorites-checkbox" id="favorites-checkbox">
             <label for="favorites-checkbox">Только избранные</label>
           </div>
@@ -267,20 +308,24 @@
           <li class="public-debate__item">
             <div class="public-debate__date-wrapper">
               <span class="public-debate__date date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
-              <span class="public-debate__status project-status">Подготовка к проведению слушаний</span>
-              <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
-                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
-                </svg>
-                <span class="join-indicator__tooltip">Участие принято</span>
+              <div class="join-indicator-wrapper">
+                <span class="public-debate__status project-status">Подготовка к
+                  проведению слушаний</span>
+                <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <span class="join-indicator__tooltip">Участие принято</span>
+                </div>
               </div>
             </div>
-            <a href="#" class="public-debate__link project-link">Реконструкция моста через р. Дон на км 11+600 автомобильной дороги
+            <a href="#" class="public-debate__link project-link">Реконструкция
+              моста через р. Дон на км 11+600 автомобильной дороги
               Новомосковское кольцо в Узловском районе Тульской области</a>
             <div class="public-debate__period-wrapper application-period">
               <span class="application-period__text">Период приема мнений</span>
               <span class="application-period__dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
-              <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+              <button class="button-star js-button-favorive" type="button" data-tooltip="В избранное" data-flow="down">
   <svg width="20" height="20" viewbox="0 0 20 20">
     <use xlink:href="img/sprite.svg#icon-star"></use>
   </svg>
@@ -293,20 +338,24 @@
           <li class="public-debate__item">
             <div class="public-debate__date-wrapper">
               <span class="public-debate__date date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
-              <span class="public-debate__status project-status project-status--orange">Подведение итогов</span>
-              <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
-                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
-                </svg>
-                <span class="join-indicator__tooltip">Участие принято</span>
+              <div class="join-indicator-wrapper">
+                <span class="public-debate__status project-status status-color--orange">Подведение
+                  итогов</span>
+                <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <span class="join-indicator__tooltip">Участие принято</span>
+                </div>
               </div>
             </div>
-            <a href="#" class="public-debate__link project-link">Государственное дошкольное образовательное учреждение Тульской
+            <a href="#" class="public-debate__link project-link">Государственное
+              дошкольное образовательное учреждение Тульской
               области «Узловский детский сад»</a>
             <div class="public-debate__period-wrapper application-period application-period--favorite">
               <span class="application-period__text">Период приема мнений</span>
               <span class="application-period__dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
-              <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+              <button class="button-star js-button-favorive" type="button" data-tooltip="В избранное" data-flow="down">
   <svg width="20" height="20" viewbox="0 0 20 20">
     <use xlink:href="img/sprite.svg#icon-star"></use>
   </svg>
@@ -319,20 +368,24 @@
           <li class="public-debate__item">
             <div class="public-debate__date-wrapper">
               <span class="public-debate__date date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
-              <span class="public-debate__status project-status project-status--blue">Идет прием мнений</span>
-              <div class="public-debate__joined public-debate__joined--visible join-indicator" data-tooltip="Участие принято" data-flow="down">
-                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
-                </svg>
-                <span class="join-indicator__tooltip">Участие принято</span>
+              <div class="join-indicator-wrapper">
+                <span class="public-debate__status project-status status-color--blue">Идет
+                  прием мнений</span>
+                <div class="public-debate__joined public-debate__joined--visible join-indicator" data-tooltip="Участие принято" data-flow="down">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <span class="join-indicator__tooltip">Участие принято</span>
+                </div>
               </div>
             </div>
-            <a href="#" class="public-debate__link project-link">Государственное дшкольное образовательное учреждение «Узловский
+            <a href="#" class="public-debate__link project-link">Государственное
+              дшкольное образовательное учреждение «Узловский
               детский сад»</a>
             <div class="public-debate__period-wrapper application-period application-period--favorite">
               <span class="application-period__text">Период приема мнений</span>
               <span class="application-period__dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
-              <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+              <button class="button-star js-button-favorive" type="button" data-tooltip="В избранное" data-flow="down">
   <svg width="20" height="20" viewbox="0 0 20 20">
     <use xlink:href="img/sprite.svg#icon-star"></use>
   </svg>
@@ -345,21 +398,25 @@
           <li class="public-debate__item">
             <div class="public-debate__date-wrapper">
               <span class="public-debate__date date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
-              <span class="public-debate__status project-status project-status--green">Подготовка к проведению
-                слушаний</span>
-              <div class="public-debate__joined public-debate__joined--visible join-indicator" data-tooltip="Участие принято" data-flow="down">
-                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
-                </svg>
-                <span class="join-indicator__tooltip">Участие принято</span>
+              <div class="join-indicator-wrapper">
+                <span class="public-debate__status project-status status-color--green">Подготовка
+                  к проведению
+                  слушаний</span>
+                <div class="public-debate__joined public-debate__joined--visible join-indicator" data-tooltip="Участие принято" data-flow="down">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <span class="join-indicator__tooltip">Участие принято</span>
+                </div>
               </div>
             </div>
-            <a href="#" class="public-debate__link project-link">Реконструкция моста через р. Дон на км 11+600 автомобильной дороги
+            <a href="#" class="public-debate__link project-link">Реконструкция
+              моста через р. Дон на км 11+600 автомобильной дороги
               Новомосковское кольцо в Узловском районе Тульской области</a>
             <div class="public-debate__period-wrapper application-period">
               <span class="application-period__text">Период приема мнений</span>
               <span class="application-period__dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
-              <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+              <button class="button-star js-button-favorive" type="button" data-tooltip="В избранное" data-flow="down">
   <svg width="20" height="20" viewbox="0 0 20 20">
     <use xlink:href="img/sprite.svg#icon-star"></use>
   </svg>
@@ -372,20 +429,24 @@
           <li class="public-debate__item">
             <div class="public-debate__date-wrapper">
               <span class="public-debate__date date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
-              <span class="public-debate__status project-status">Подготовка к проведению слушаний</span>
-              <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
-                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
-                </svg>
-                <span class="join-indicator__tooltip">Участие принято</span>
+              <div class="join-indicator-wrapper">
+                <span class="public-debate__status project-status">Подготовка к
+                  проведению слушаний</span>
+                <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <span class="join-indicator__tooltip">Участие принято</span>
+                </div>
               </div>
             </div>
-            <a href="#" class="public-debate__link project-link">Государственное дшкольное образовательное учреждение «Узловский
+            <a href="#" class="public-debate__link project-link">Государственное
+              дшкольное образовательное учреждение «Узловский
               детский сад»</a>
             <div class="public-debate__period-wrapper application-period">
               <span class="application-period__text">Период приема мнений</span>
               <span class="application-period__dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
-              <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+              <button class="button-star js-button-favorive" type="button" data-tooltip="В избранное" data-flow="down">
   <svg width="20" height="20" viewbox="0 0 20 20">
     <use xlink:href="img/sprite.svg#icon-star"></use>
   </svg>
@@ -398,20 +459,24 @@
           <li class="public-debate__item">
             <div class="public-debate__date-wrapper">
               <span class="public-debate__date date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
-              <span class="public-debate__status project-status">Подготовка к проведению слушаний</span>
-              <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
-                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
-                </svg>
-                <span class="join-indicator__tooltip">Участие принято</span>
+              <div class="join-indicator-wrapper">
+                <span class="public-debate__status project-status">Подготовка к
+                  проведению слушаний</span>
+                <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <span class="join-indicator__tooltip">Участие принято</span>
+                </div>
               </div>
             </div>
-            <a href="#" class="public-debate__link project-link">Реконструкция моста через р. Дон на км 11+600 автомобильной дороги
+            <a href="#" class="public-debate__link project-link">Реконструкция
+              моста через р. Дон на км 11+600 автомобильной дороги
               Новомосковское кольцо в Узловском районе Тульской области</a>
             <div class="public-debate__period-wrapper application-period">
               <span class="application-period__text">Период приема мнений</span>
               <span class="application-period__dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
-              <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+              <button class="button-star js-button-favorive" type="button" data-tooltip="В избранное" data-flow="down">
   <svg width="20" height="20" viewbox="0 0 20 20">
     <use xlink:href="img/sprite.svg#icon-star"></use>
   </svg>
@@ -424,20 +489,24 @@
           <li class="public-debate__item">
             <div class="public-debate__date-wrapper">
               <span class="public-debate__date date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
-              <span class="public-debate__status project-status project-status--orange">Подведение итогов</span>
-              <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
-                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
-                </svg>
-                <span class="join-indicator__tooltip">Участие принято</span>
+              <div class="join-indicator-wrapper">
+                <span class="public-debate__status project-status status-color--orange">Подведение
+                  итогов</span>
+                <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <span class="join-indicator__tooltip">Участие принято</span>
+                </div>
               </div>
             </div>
-            <a href="#" class="public-debate__link project-link">Государственное дошкольное образовательное учреждение Тульской
+            <a href="#" class="public-debate__link project-link">Государственное
+              дошкольное образовательное учреждение Тульской
               области «Узловский детский сад»</a>
             <div class="public-debate__period-wrapper application-period application-period--favorite">
               <span class="application-period__text">Период приема мнений</span>
               <span class="application-period__dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
-              <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+              <button class="button-star js-button-favorive" type="button" data-tooltip="В избранное" data-flow="down">
   <svg width="20" height="20" viewbox="0 0 20 20">
     <use xlink:href="img/sprite.svg#icon-star"></use>
   </svg>
@@ -450,20 +519,24 @@
           <li class="public-debate__item">
             <div class="public-debate__date-wrapper">
               <span class="public-debate__date date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
-              <span class="public-debate__status project-status project-status--blue">Идет прием мнений</span>
-              <div class="public-debate__joined public-debate__joined--visible join-indicator" data-tooltip="Участие принято" data-flow="down">
-                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
-                </svg>
-                <span class="join-indicator__tooltip">Участие принято</span>
+              <div class="join-indicator-wrapper">
+                <span class="public-debate__status project-status status-color--blue">Идет
+                  прием мнений</span>
+                <div class="public-debate__joined public-debate__joined--visible join-indicator" data-tooltip="Участие принято" data-flow="down">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <span class="join-indicator__tooltip">Участие принято</span>
+                </div>
               </div>
             </div>
-            <a href="#" class="public-debate__link project-link">Государственное дшкольное образовательное учреждение «Узловский
+            <a href="#" class="public-debate__link project-link">Государственное
+              дшкольное образовательное учреждение «Узловский
               детский сад»</a>
             <div class="public-debate__period-wrapper application-period application-period--favorite">
               <span class="application-period__text">Период приема мнений</span>
               <span class="application-period__dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
-              <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+              <button class="button-star js-button-favorive" type="button" data-tooltip="В избранное" data-flow="down">
   <svg width="20" height="20" viewbox="0 0 20 20">
     <use xlink:href="img/sprite.svg#icon-star"></use>
   </svg>
@@ -476,21 +549,25 @@
           <li class="public-debate__item">
             <div class="public-debate__date-wrapper">
               <span class="public-debate__date date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
-              <span class="public-debate__status project-status project-status--green">Подготовка к проведению
-                слушаний</span>
-              <div class="public-debate__joined public-debate__joined--visible join-indicator" data-tooltip="Участие принято" data-flow="down">
-                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
-                </svg>
-                <span class="join-indicator__tooltip">Участие принято</span>
+              <div class="join-indicator-wrapper">
+                <span class="public-debate__status project-status status-color--green">Подготовка
+                  к проведению
+                  слушаний</span>
+                <div class="public-debate__joined public-debate__joined--visible join-indicator" data-tooltip="Участие принято" data-flow="down">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <span class="join-indicator__tooltip">Участие принято</span>
+                </div>
               </div>
             </div>
-            <a href="#" class="public-debate__link project-link">Реконструкция моста через р. Дон на км 11+600 автомобильной дороги
+            <a href="#" class="public-debate__link project-link">Реконструкция
+              моста через р. Дон на км 11+600 автомобильной дороги
               Новомосковское кольцо в Узловском районе Тульской области</a>
             <div class="public-debate__period-wrapper application-period">
               <span class="application-period__text">Период приема мнений</span>
               <span class="application-period__dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
-              <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+              <button class="button-star js-button-favorive" type="button" data-tooltip="В избранное" data-flow="down">
   <svg width="20" height="20" viewbox="0 0 20 20">
     <use xlink:href="img/sprite.svg#icon-star"></use>
   </svg>
@@ -503,20 +580,24 @@
           <li class="public-debate__item">
             <div class="public-debate__date-wrapper">
               <span class="public-debate__date date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
-              <span class="public-debate__status project-status">Подготовка к проведению слушаний</span>
-              <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
-                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
-                </svg>
-                <span class="join-indicator__tooltip">Участие принято</span>
+              <div class="join-indicator-wrapper">
+                <span class="public-debate__status project-status">Подготовка к
+                  проведению слушаний</span>
+                <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <span class="join-indicator__tooltip">Участие принято</span>
+                </div>
               </div>
             </div>
-            <a href="#" class="public-debate__link project-link">Государственное дшкольное образовательное учреждение «Узловский
+            <a href="#" class="public-debate__link project-link">Государственное
+              дшкольное образовательное учреждение «Узловский
               детский сад»</a>
             <div class="public-debate__period-wrapper application-period">
               <span class="application-period__text">Период приема мнений</span>
               <span class="application-period__dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
-              <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+              <button class="button-star js-button-favorive" type="button" data-tooltip="В избранное" data-flow="down">
   <svg width="20" height="20" viewbox="0 0 20 20">
     <use xlink:href="img/sprite.svg#icon-star"></use>
   </svg>
@@ -529,20 +610,24 @@
           <li class="public-debate__item">
             <div class="public-debate__date-wrapper">
               <span class="public-debate__date date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
-              <span class="public-debate__status project-status">Подготовка к проведению слушаний</span>
-              <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
-                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
-                </svg>
-                <span class="join-indicator__tooltip">Участие принято</span>
+              <div class="join-indicator-wrapper">
+                <span class="public-debate__status project-status">Подготовка к
+                  проведению слушаний</span>
+                <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <span class="join-indicator__tooltip">Участие принято</span>
+                </div>
               </div>
             </div>
-            <a href="#" class="public-debate__link project-link">Реконструкция моста через р. Дон на км 11+600 автомобильной дороги
+            <a href="#" class="public-debate__link project-link">Реконструкция
+              моста через р. Дон на км 11+600 автомобильной дороги
               Новомосковское кольцо в Узловском районе Тульской области</a>
             <div class="public-debate__period-wrapper application-period">
               <span class="application-period__text">Период приема мнений</span>
               <span class="application-period__dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
-              <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+              <button class="button-star js-button-favorive" type="button" data-tooltip="В избранное" data-flow="down">
   <svg width="20" height="20" viewbox="0 0 20 20">
     <use xlink:href="img/sprite.svg#icon-star"></use>
   </svg>
@@ -555,20 +640,24 @@
           <li class="public-debate__item">
             <div class="public-debate__date-wrapper">
               <span class="public-debate__date date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
-              <span class="public-debate__status project-status project-status--orange">Подведение итогов</span>
-              <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
-                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
-                </svg>
-                <span class="join-indicator__tooltip">Участие принято</span>
+              <div class="join-indicator-wrapper">
+                <span class="public-debate__status project-status status-color--orange">Подведение
+                  итогов</span>
+                <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <span class="join-indicator__tooltip">Участие принято</span>
+                </div>
               </div>
             </div>
-            <a href="#" class="public-debate__link project-link">Государственное дошкольное образовательное учреждение Тульской
+            <a href="#" class="public-debate__link project-link">Государственное
+              дошкольное образовательное учреждение Тульской
               области «Узловский детский сад»</a>
             <div class="public-debate__period-wrapper application-period application-period--favorite">
               <span class="application-period__text">Период приема мнений</span>
               <span class="application-period__dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
-              <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+              <button class="button-star js-button-favorive" type="button" data-tooltip="В избранное" data-flow="down">
   <svg width="20" height="20" viewbox="0 0 20 20">
     <use xlink:href="img/sprite.svg#icon-star"></use>
   </svg>
@@ -581,20 +670,24 @@
           <li class="public-debate__item">
             <div class="public-debate__date-wrapper">
               <span class="public-debate__date date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
-              <span class="public-debate__status project-status project-status--blue">Идет прием мнений</span>
-              <div class="public-debate__joined public-debate__joined--visible join-indicator" data-tooltip="Участие принято" data-flow="down">
-                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
-                </svg>
-                <span class="join-indicator__tooltip">Участие принято</span>
+              <div class="join-indicator-wrapper">
+                <span class="public-debate__status project-status status-color--blue">Идет
+                  прием мнений</span>
+                <div class="public-debate__joined public-debate__joined--visible join-indicator" data-tooltip="Участие принято" data-flow="down">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <span class="join-indicator__tooltip">Участие принято</span>
+                </div>
               </div>
             </div>
-            <a href="#" class="public-debate__link project-link">Государственное дшкольное образовательное учреждение «Узловский
+            <a href="#" class="public-debate__link project-link">Государственное
+              дшкольное образовательное учреждение «Узловский
               детский сад»</a>
             <div class="public-debate__period-wrapper application-period application-period--favorite">
               <span class="application-period__text">Период приема мнений</span>
               <span class="application-period__dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
-              <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+              <button class="button-star js-button-favorive" type="button" data-tooltip="В избранное" data-flow="down">
   <svg width="20" height="20" viewbox="0 0 20 20">
     <use xlink:href="img/sprite.svg#icon-star"></use>
   </svg>
@@ -607,21 +700,25 @@
           <li class="public-debate__item">
             <div class="public-debate__date-wrapper">
               <span class="public-debate__date date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
-              <span class="public-debate__status project-status project-status--green">Подготовка к проведению
-                слушаний</span>
-              <div class="public-debate__joined public-debate__joined--visible join-indicator" data-tooltip="Участие принято" data-flow="down">
-                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
-                </svg>
-                <span class="join-indicator__tooltip">Участие принято</span>
+              <div class="join-indicator-wrapper">
+                <span class="public-debate__status project-status status-color--green">Подготовка
+                  к проведению
+                  слушаний</span>
+                <div class="public-debate__joined public-debate__joined--visible join-indicator" data-tooltip="Участие принято" data-flow="down">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <span class="join-indicator__tooltip">Участие принято</span>
+                </div>
               </div>
             </div>
-            <a href="#" class="public-debate__link project-link">Реконструкция моста через р. Дон на км 11+600 автомобильной дороги
+            <a href="#" class="public-debate__link project-link">Реконструкция
+              моста через р. Дон на км 11+600 автомобильной дороги
               Новомосковское кольцо в Узловском районе Тульской области</a>
             <div class="public-debate__period-wrapper application-period">
               <span class="application-period__text">Период приема мнений</span>
               <span class="application-period__dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
-              <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+              <button class="button-star js-button-favorive" type="button" data-tooltip="В избранное" data-flow="down">
   <svg width="20" height="20" viewbox="0 0 20 20">
     <use xlink:href="img/sprite.svg#icon-star"></use>
   </svg>
@@ -634,20 +731,24 @@
           <li class="public-debate__item">
             <div class="public-debate__date-wrapper">
               <span class="public-debate__date date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
-              <span class="public-debate__status project-status">Подготовка к проведению слушаний</span>
-              <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
-                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
-                </svg>
-                <span class="join-indicator__tooltip">Участие принято</span>
+              <div class="join-indicator-wrapper">
+                <span class="public-debate__status project-status">Подготовка к
+                  проведению слушаний</span>
+                <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <span class="join-indicator__tooltip">Участие принято</span>
+                </div>
               </div>
             </div>
-            <a href="#" class="public-debate__link project-link">Государственное дшкольное образовательное учреждение «Узловский
+            <a href="#" class="public-debate__link project-link">Государственное
+              дшкольное образовательное учреждение «Узловский
               детский сад»</a>
             <div class="public-debate__period-wrapper application-period">
               <span class="application-period__text">Период приема мнений</span>
               <span class="application-period__dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
-              <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+              <button class="button-star js-button-favorive" type="button" data-tooltip="В избранное" data-flow="down">
   <svg width="20" height="20" viewbox="0 0 20 20">
     <use xlink:href="img/sprite.svg#icon-star"></use>
   </svg>
@@ -660,20 +761,24 @@
           <li class="public-debate__item">
             <div class="public-debate__date-wrapper">
               <span class="public-debate__date date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
-              <span class="public-debate__status project-status">Подготовка к проведению слушаний</span>
-              <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
-                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
-                </svg>
-                <span class="join-indicator__tooltip">Участие принято</span>
+              <div class="join-indicator-wrapper">
+                <span class="public-debate__status project-status">Подготовка к
+                  проведению слушаний</span>
+                <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <span class="join-indicator__tooltip">Участие принято</span>
+                </div>
               </div>
             </div>
-            <a href="#" class="public-debate__link project-link">Реконструкция моста через р. Дон на км 11+600 автомобильной дороги
+            <a href="#" class="public-debate__link project-link">Реконструкция
+              моста через р. Дон на км 11+600 автомобильной дороги
               Новомосковское кольцо в Узловском районе Тульской области</a>
             <div class="public-debate__period-wrapper application-period">
               <span class="application-period__text">Период приема мнений</span>
               <span class="application-period__dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
-              <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+              <button class="button-star js-button-favorive" type="button" data-tooltip="В избранное" data-flow="down">
   <svg width="20" height="20" viewbox="0 0 20 20">
     <use xlink:href="img/sprite.svg#icon-star"></use>
   </svg>
@@ -686,20 +791,24 @@
           <li class="public-debate__item">
             <div class="public-debate__date-wrapper">
               <span class="public-debate__date date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
-              <span class="public-debate__status project-status project-status--orange">Подведение итогов</span>
-              <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
-                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
-                </svg>
-                <span class="join-indicator__tooltip">Участие принято</span>
+              <div class="join-indicator-wrapper">
+                <span class="public-debate__status project-status status-color--orange">Подведение
+                  итогов</span>
+                <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <span class="join-indicator__tooltip">Участие принято</span>
+                </div>
               </div>
             </div>
-            <a href="#" class="public-debate__link project-link">Государственное дошкольное образовательное учреждение Тульской
+            <a href="#" class="public-debate__link project-link">Государственное
+              дошкольное образовательное учреждение Тульской
               области «Узловский детский сад»</a>
             <div class="public-debate__period-wrapper application-period application-period--favorite">
               <span class="application-period__text">Период приема мнений</span>
               <span class="application-period__dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
-              <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+              <button class="button-star js-button-favorive" type="button" data-tooltip="В избранное" data-flow="down">
   <svg width="20" height="20" viewbox="0 0 20 20">
     <use xlink:href="img/sprite.svg#icon-star"></use>
   </svg>
@@ -712,20 +821,24 @@
           <li class="public-debate__item">
             <div class="public-debate__date-wrapper">
               <span class="public-debate__date date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
-              <span class="public-debate__status project-status project-status--blue">Идет прием мнений</span>
-              <div class="public-debate__joined public-debate__joined--visible join-indicator" data-tooltip="Участие принято" data-flow="down">
-                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
-                </svg>
-                <span class="join-indicator__tooltip">Участие принято</span>
+              <div class="join-indicator-wrapper">
+                <span class="public-debate__status project-status status-color--blue">Идет
+                  прием мнений</span>
+                <div class="public-debate__joined public-debate__joined--visible join-indicator" data-tooltip="Участие принято" data-flow="down">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <span class="join-indicator__tooltip">Участие принято</span>
+                </div>
               </div>
             </div>
-            <a href="#" class="public-debate__link project-link">Государственное дшкольное образовательное учреждение «Узловский
+            <a href="#" class="public-debate__link project-link">Государственное
+              дшкольное образовательное учреждение «Узловский
               детский сад»</a>
             <div class="public-debate__period-wrapper application-period application-period--favorite">
               <span class="application-period__text">Период приема мнений</span>
               <span class="application-period__dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
-              <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+              <button class="button-star js-button-favorive" type="button" data-tooltip="В избранное" data-flow="down">
   <svg width="20" height="20" viewbox="0 0 20 20">
     <use xlink:href="img/sprite.svg#icon-star"></use>
   </svg>
@@ -738,21 +851,25 @@
           <li class="public-debate__item">
             <div class="public-debate__date-wrapper">
               <span class="public-debate__date date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
-              <span class="public-debate__status project-status project-status--green">Подготовка к проведению
-                слушаний</span>
-              <div class="public-debate__joined public-debate__joined--visible join-indicator" data-tooltip="Участие принято" data-flow="down">
-                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
-                </svg>
-                <span class="join-indicator__tooltip">Участие принято</span>
+              <div class="join-indicator-wrapper">
+                <span class="public-debate__status project-status status-color--green">Подготовка
+                  к проведению
+                  слушаний</span>
+                <div class="public-debate__joined public-debate__joined--visible join-indicator" data-tooltip="Участие принято" data-flow="down">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <span class="join-indicator__tooltip">Участие принято</span>
+                </div>
               </div>
             </div>
-            <a href="#" class="public-debate__link project-link">Реконструкция моста через р. Дон на км 11+600 автомобильной дороги
+            <a href="#" class="public-debate__link project-link">Реконструкция
+              моста через р. Дон на км 11+600 автомобильной дороги
               Новомосковское кольцо в Узловском районе Тульской области</a>
             <div class="public-debate__period-wrapper application-period">
               <span class="application-period__text">Период приема мнений</span>
               <span class="application-period__dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
-              <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+              <button class="button-star js-button-favorive" type="button" data-tooltip="В избранное" data-flow="down">
   <svg width="20" height="20" viewbox="0 0 20 20">
     <use xlink:href="img/sprite.svg#icon-star"></use>
   </svg>
@@ -765,20 +882,24 @@
           <li class="public-debate__item">
             <div class="public-debate__date-wrapper">
               <span class="public-debate__date date">Дата проведения:<time datetime="2020-12-29">29.12.2020</time></span>
-              <span class="public-debate__status project-status">Подготовка к проведению слушаний</span>
-              <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
-                <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
-                </svg>
-                <span class="join-indicator__tooltip">Участие принято</span>
+              <div class="join-indicator-wrapper">
+                <span class="public-debate__status project-status">Подготовка к
+                  проведению слушаний</span>
+                <div class="public-debate__joined join-indicator" data-tooltip="Участие принято" data-flow="down">
+                  <svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                  </svg>
+                  <span class="join-indicator__tooltip">Участие принято</span>
+                </div>
               </div>
             </div>
-            <a href="#" class="public-debate__link project-link">Государственное дшкольное образовательное учреждение «Узловский
+            <a href="#" class="public-debate__link project-link">Государственное
+              дшкольное образовательное учреждение «Узловский
               детский сад»</a>
             <div class="public-debate__period-wrapper application-period">
               <span class="application-period__text">Период приема мнений</span>
               <span class="application-period__dates">с&nbsp;<time datetime="2020-08-20">20.08.2020</time>&nbsp;по&nbsp;<time datetime="2020-11-20">20.11.2020</time></span>
-              <button class="button-star" type="button" data-tooltip="В избранное" data-flow="down">
+              <button class="button-star js-button-favorive" type="button" data-tooltip="В избранное" data-flow="down">
   <svg width="20" height="20" viewbox="0 0 20 20">
     <use xlink:href="img/sprite.svg#icon-star"></use>
   </svg>
@@ -809,7 +930,8 @@
           </a>
         </div>
         <div class="public-debate__archive archive-link">
-          <p class="archive-link__description">Также вы&nbsp;можете ознакомиться со&nbsp;всеми записями, перейдя
+          <p class="archive-link__description">Также вы&nbsp;можете ознакомиться
+            со&nbsp;всеми записями, перейдя
             в&nbsp;архив</p>
           <a href="#" class="link-arrow archive-link__btn">
             <span>Архив <span class="archive-link__hidden">обсуждений</span></span>

@@ -5,6 +5,11 @@
   }
 }
 
+.activity__proposal-list {
+  padding: 0;
+  margin: 0;
+}
+
 
 @include tablet {
   .activity {

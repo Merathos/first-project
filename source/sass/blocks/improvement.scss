@@ -1,12 +1,15 @@
 .improvement {
-  padding: 0px 40px 95px;    
-  
+  padding-top: 79px;
+  padding-bottom: 120px;
+
   @media (max-width: $desktop-width - 81) {
-    padding: 79px 24px 104px;
+    padding-top: 79px;
+    padding-bottom: 104px;
   }
-  
+
   @media (max-width: $tablet-width - 1) {
-    padding: 64px 16px 65px;
+    padding-top: 64px;
+    padding-bottom: 65px;
   }
 }
 

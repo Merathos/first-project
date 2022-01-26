@@ -130,18 +130,21 @@
   }
 }
 
+//дополнительные стили для попапа дизайн-проектов
 .popup__content--projects {
   padding: 48px 40px;
   max-width: 852px;
   border-radius: 5px;
   padding-bottom: 0;
+  margin: 0 auto;
 
   @media (max-width: $tablet-width) {
     padding: 24px;
   }
+
   @media (max-width: $mobile-max-width) {
     padding: 16px;
-    padding-left: 0;
+    //padding-left: 0;
     padding-right: 0;
   }
 
@@ -175,6 +178,7 @@
 
   .proposal__project-desc {
     width: 502px;
+    width: 100%;
 
     @media (max-width: $mobile-max-width) {
       width: 100%;
@@ -197,6 +201,11 @@
 
   .button-details {
     bottom: 35px;
+    margin-left: 32px;
+
+    @include mobile {
+      margin-left: 0;
+    }
   }
 
   .proposal__project:last-child {
@@ -213,9 +222,11 @@
     margin: 0;
 
     @media (max-width: $desktop-width - 1) {
+      //max-width: unset;
       max-width: 100%;
     }
     @media (max-width: $mobile-max-width) {
+      //max-width: unset;
       max-width: 100%;
       width: 100%;
     }
@@ -225,6 +236,17 @@
         width: unset;
       }
     }
+  }
+
+  .proposal__project-mark {
+    @include mobile {
+      margin-left: 0;
+    }
+  }
+
+  .gallery-full__item {
+    width: 100%;
+    height: 300px;
   }
 }
 

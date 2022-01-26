@@ -1,0 +1,51 @@
+.notification-block {
+  background: $light-blue;
+  border-radius: 5px;
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  margin-top: 32px;
+
+  .project-vote & {
+    flex-wrap: wrap;
+    margin-bottom: 0;
+
+    .notification-block__text {
+      margin-bottom: 12px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    //margin-top: 10px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: rem(16px);
+    line-height: rem(22px);
+    color: $dark-text;
+    padding: 0;
+    margin: 0 12px;
+  }
+
+  &__icon {
+    min-width: 24px;
+  }
+
+  .button.button--blue {
+    padding: 13px 41px 11px 38px;
+  }
+
+  @include mobile {
+    flex-wrap: wrap;
+
+    &__text {
+      margin-bottom: 12px;
+    }
+  }
+}

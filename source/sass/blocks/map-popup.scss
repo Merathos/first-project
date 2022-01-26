@@ -1,13 +1,20 @@
 .map-popup {
-    position: absolute;
-    top: 120px;
-    left: 40%;
+    //position: absolute;
+    //top: 120px;
+    //left: 40%;
     width: 300px;
-    height: 235px;
+    //height: 235px;
     padding-top: 20px;
+    padding-bottom: 12px;
     border-radius: 5px;
     background-color: #ffffff;
     box-shadow: 0px 4px 8px rgba(0, 30, 75, 0.2);
+}
+
+ymaps h3,
+ymaps p {
+  margin: 0;
+  padding: 0;
 }
 
 .map-popup__top-wrapper {
@@ -15,13 +22,15 @@
     padding-right: 40px;
     padding-left: 16px;
     padding-bottom: 17px;
-    background-image: linear-gradient(var(--color-stroke, $light-grey), var(--color-stroke, $light-grey));
-    background-position: left bottom;
-    background-repeat: no-repeat;
-    background-size: 100% 1px;
-    
+    //background-image: linear-gradient(var(--color-stroke, $light-grey), var(--color-stroke, $light-grey));
+    //background-position: left bottom;
+    //background-repeat: no-repeat;
+    //background-size: 100% 1px;
+
     button {
         display: block;
+        font-weight: normal;
+        font-family: "Rubik", "Arial", sans-serif;
     }
 
     p {
@@ -29,6 +38,8 @@
         font-size: rem(13px);
         line-height: rem(17px);
         color: #354052;
+        font-weight: normal;
+        font-family: "Rubik", "Arial", sans-serif;
     }
 
     &::before {
@@ -36,10 +47,10 @@
         position: absolute;
         top: 85px;
         left: -13px;
-        width: 0; 
-        height: 0; 
+        width: 0;
+        height: 0;
         border-top: 13px solid transparent;
-        border-bottom: 13px solid transparent; 
+        border-bottom: 13px solid transparent;
         border-right:13px solid #ffffff;
     }
 }
@@ -48,23 +59,31 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 8px;
+    padding-top: 11px;
     padding-left: 15px;
     padding-right: 15px;
+    border-top: 1px solid $light-grey;
 }
+
 
 .map-popup__likes {
     margin: 0;
     width: 90px;
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     font-size: rem(13px);
     line-height: rem(17px);
     color: #707B8C;
 
+    svg {
+      fill: #707B8C;
+    }
+
     span {
-        margin-right: 14px;
-        padding-bottom: 3px;
+        margin-right: 10px;
+        font-weight: normal;
+        margin-top: 3px;
+        font-family: "Rubik", "Arial", sans-serif;
     }
 
     button {
@@ -72,6 +91,8 @@
         display: block;
         padding-top: 4px;
         cursor: pointer;
+        font-weight: normal;
+        font-family: "Rubik", "Arial", sans-serif;
 
         svg {
             fill: #707B8C;
@@ -93,7 +114,7 @@
     width: 26px;
     height: 26px;
     cursor: pointer;
-    
+
     &::before,
     &::after {
         position: absolute;
@@ -124,25 +145,42 @@
 .map-popup__details-btn {
     display: flex;
     align-items: center;
-    padding-top: 4px;
+    padding-top: 0;
     font-size: rem(15px);
     line-height: rem(20.25px);
-    color: #116CA6;
     text-decoration: none;
+    position: relative;
+    color: #2c8ecc;
+
+    //&:after {
+    //    content: '';
+    //    position: absolute;
+    //    right: 0;
+    //    top: 50%;
+    //    display: block;
+    //    height: 13px;
+    //    width: 8px;
+    //    background-image: url("../img/proposal-right-arrow.svg");
+    //    background-repeat: no-repeat;
+    //    background-size: 13px;
+    //  background-position: center;
+    //}
 
     span {
         margin-right: 5px;
     }
 
     svg {
-        fill: #116CA6;
+        fill: #2c8ecc;
     }
 
     &:hover {
-        color: #2c8ecc;
+        color: #116CA6;
+        text-decoration: none;
+
 
         svg {
-            fill: #2c8ecc;
+            fill: #116CA6;
         }
     }
 }

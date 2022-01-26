@@ -3,22 +3,27 @@
   flex-wrap: wrap;
   align-items: center;
   padding: 24px 32px;
-  color: $white;
-  background-color: var(--color-text, $blue-default);
+  color: var(--color-text, $white);
+  background-color: var(--color-bg-main, $blue-default);
   border-radius: $border-radius;
+  margin-bottom: 30px ;
 
   &--accent {
-    background-color: var(--color-text, $orange);
+    background-color: var(--color-bg-secondary, $orange);
+  }
+
+  &--green {
+    background-color: var(--color-bg-secondary, $green);
   }
 }
 
-.mod-theme-inverse .status-info {
-  color: var(--color-bg-main);
-}
+//.mod-theme-inverse .status-info {
+//  color: var(--color-bg-main);
+//}
 
 .status-info__text-group {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   margin-right: auto;
 
   svg {
@@ -37,6 +42,19 @@
   font-weight: 500;
   font-size: rem(16px);
   line-height: rem(22px);
+  margin-top: 2px;
+
+  &--small {
+    font-weight: normal;
+  }
+}
+
+.status-info__title {
+  font-weight: 500;
+  font-size: rem(18px);
+  line-height: rem(23px);
+  margin: 0;
+  margin-bottom: 12px;
 }
 
 

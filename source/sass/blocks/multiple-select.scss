@@ -1,0 +1,246 @@
+.multiple-select {
+  --colNum: 1;
+  --colWidth: 264px;
+  --columnGap: 48px;
+  --listPadding: 24px;
+  --maxHeight: auto;
+
+  width: auto;
+  max-width: 100%;
+
+  @include mobile {
+    --listPadding: 16px;
+  }
+
+  &.two-column {
+    --colNum: 2;
+    --maxHeight: 324px;
+
+    @include mobile {
+      --colNum: 1;
+      --maxHeight: 400px;
+    }
+  }
+
+  &.three-column {
+    --colNum: 3;
+
+    @include tablet {
+      --colNum: 2;
+      --maxHeight: 324px;
+    }
+    @include mobile {
+      --colNum: 1;
+      --maxHeight: 400px;
+    }
+  }
+
+  &.fixed-height {
+    --maxHeight: 324px;
+  }
+
+  .scrollbar-track {
+    width: 10px;
+
+    background-color: transparent;
+  }
+
+  .scrollbar-thumb {
+    width: 6px;
+
+    background-color: $light-grey;
+    border-radius: 5px;
+  }
+
+  .ss-content {
+    top: 31px;
+    left: -21px;
+    z-index: 10;
+
+    width: calc(var(--colWidth) * var(--colNum) + var(--columnGap) * (var(--colNum) - 1) + (var(--listPadding) * 2));
+    max-height: var(--maxHeight);
+    padding: 0;
+    overflow-x: hidden;
+
+    background-color: var(--color-bg-secondary, $color-bg);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
+
+    .ss-search {
+      display: none;
+    }
+
+    .ss-list {
+      position: static;
+
+      width: calc(var(--colWidth) * var(--colNum) + var(--columnGap) * (var(--colNum) - 1) + (var(--listPadding) * 2));
+      max-width: 936px;
+      max-height: initial;
+      padding: 16px var(--listPadding) 24px;
+
+      column-count: var(--colNum);
+      column-gap: var(--columnGap);
+      column-width: var(--colWidth);
+
+      @include mobile {
+        width: 288px;
+      }
+
+      .ss-option {
+        break-inside: avoid;
+
+        position: relative;
+
+        padding: 8px 10px 8px 28px;
+
+        font-size: 15px;
+        line-height: 20px;
+        color: var(--color-text, $dark-text);
+
+        border-radius: 5px;
+
+        transition: background-color $style-change-duration color $style-change-duration;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 0;
+
+          width: 12px;
+          height: 12px;
+
+          background-image: url(../img/icon-tick.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          transform: translateY(-50%) translateX(50%);
+          opacity: 0;
+
+          transition: opacity $style-change-duration;
+        }
+
+        &:focus,
+        &:focus:not(.focus-visible),
+        &:active:not(.focus-visible),
+        &:hover:not(.focus-visible) {
+          color: var(--color-text, $blue-default);
+
+          background-color: var(--color-bg-secondary, #eff1f4);
+        }
+      }
+
+      .ss-option:not(.ss-disabled).ss-option-selected {
+        color: var(--color-interactive-accent, $blue-accent);
+
+        background-color: transparent;
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .ss-multi-selected {
+    min-height: initial;
+    padding: 0;
+
+    border: none;
+
+    .ss-values {
+      display: none;
+    }
+
+    .ss-add {
+      position: relative;
+
+      display: flex;
+      flex: initial;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0;
+
+      .ss-plus {
+        all: revert;
+
+        margin-right: 8px;
+        overflow: hidden;
+
+        font-size: 15px;
+        line-height: 20px;
+        color: var(--color-interactive-default, $blue-default);
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        border-bottom: 2px dashed var(--color-interactive-default, $blue-default);
+
+        @include font;
+
+        &:after {
+          all: revert;
+        }
+      }
+
+      svg {
+        transform: rotate(180deg);
+
+        transition: transform $style-change-duration;
+      }
+
+      .ss-plus.ss-cross {
+        transform: rotate(0);
+      }
+
+      .ss-deselect-all {
+        position: relative;
+
+        width: 12px;
+        height: 12px;
+        margin-right: 10px;
+        padding: 0;
+
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        &::after,
+        &::before {
+          content: "";
+          position: absolute;
+          top: calc(50% - 1px);
+          left: 0;
+
+          width: 14px;
+          height: 2px;
+
+          background-color: var(--color-interactive-default, $red);
+        }
+
+        &::after {
+          transform: rotate(45deg);
+        }
+
+        &::before {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    .ss-add.ss-empty {
+      .ss-deselect-all {
+        display: none;
+      }
+    }
+  }
+
+  .ss-open-below {
+    .ss-add {
+      svg {
+        transform: rotate(0);
+      }
+    }
+  }
+}

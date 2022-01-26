@@ -1,0 +1,182 @@
+.categories-filter {
+  --paddingLeft: 20px;
+  --paddingRight: 24px;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 18px 24px 18px 20px;
+
+  border: 1px solid var(--color-stroke, $light-grey);
+  border-radius: 5px;
+
+  @include tablet {
+    padding: 18px var(--paddingRight) 18px var(--paddingLeft);
+  }
+  @include mobile {
+    --paddingLeft: 19px;
+    --paddingRight: 19px;
+
+    flex-flow: column wrap;
+    align-items: flex-start;
+    margin-bottom: 32px;
+  }
+
+  & > *:not(:last-child):not(:nth-last-child(2)) {
+    border-right: 1px solid var(--color-stroke, $light-grey);
+
+    @include tablet {
+      &.page-nav {
+        border-right: none;
+      }
+    }
+    @include mobile {
+      border-right: none;
+    }
+  }
+
+  .page-nav {
+    width: calc(100% + 26px);
+    max-width: max-content;
+    margin: 0 29px 0 0;
+    padding: 0 6px 0 0;
+
+    background-color: transparent;
+    border-radius: 0;
+
+    li {
+      margin: 0 26px 0 0;
+
+      @include tablet {
+        margin-right: 24px;
+      }
+    }
+
+    @include tablet {
+      justify-content: flex-start;
+      max-width: 100%;
+      margin-right: -26px;
+      margin-bottom: 21px;
+      padding-bottom: 21px;
+
+      border-bottom: 1px solid var(--color-stroke, $light-grey);
+    }
+    @include mobile {
+      flex-flow: column nowrap;
+      padding-bottom: 0;
+
+      li {
+        margin: 0 0 20px 0;
+      }
+    }
+  }
+
+  .multiple-select {
+    margin-right: 33px;
+    padding-right: 33px;
+
+    @include tablet {
+      margin-right: 16px;
+      padding-right: 16px;
+
+      &:nth-last-child(2) {
+        margin-right: auto;
+      }
+    }
+    @include mobile {
+      width: 100%;
+      margin: 0 0 20px 0;
+      padding: 0;
+
+      .ss-content {
+        left: calc((var(--paddingLeft) + 1px) * -1);
+
+        width: calc(100% + var(--paddingLeft) + var(--paddingRight) + 2px);
+
+        .ss-option {
+          padding-left: var(--paddingLeft);
+
+          &:after {
+            left: -6px;
+          }
+        }
+      }
+    }
+  }
+
+  .single-select {
+    max-width: 200px;
+    padding-right: 32px;
+
+    @include tablet {
+      max-width: 218px;
+      margin-right: 16px;
+      padding-right: 16px;
+    }
+    @include mobile {
+      width: 100%;
+      max-width: unset;
+      margin: 0 0 20px 0;
+      padding: 0;
+
+      .ss-content {
+        left: calc((var(--paddingLeft) + 1px) * -1);
+
+        width: calc(100% + var(--paddingLeft) + var(--paddingRight) + 2px);
+        padding-left: 0;
+
+        .ss-option {
+          padding-left: var(--paddingLeft);
+        }
+      }
+    }
+  }
+
+  .form-checkbox {
+    margin-bottom: 0;
+    margin-left: auto;
+
+    @include mobile {
+      margin-left: 0;
+    }
+
+    label {
+      color: var(--color-text, $grey);
+
+      &:focus,
+      &:focus:not(.focus-visible),
+      &:active:not(.focus-visible),
+      &:hover:not(.focus-visible) {
+        color: var(--color-text, $dark-text);
+      }
+    }
+
+    input[type="checkbox"]:checked + label {
+      color: var(--color-text, $dark-text);
+    }
+  }
+
+  .voices-counter {
+    margin-right: 33px;
+
+    @include tablet {
+      width: auto;
+      margin-right: 16px;
+      padding-right: 16px;
+    }
+    @include mobile {
+      width: 100%;
+      margin: 0 0 20px 0;
+      padding: 0 0 20px 0;
+
+      border-bottom: 1px solid var(--color-stroke, $light-grey);
+
+      .voices-counter__caption {
+        margin-right: 6px;
+      }
+    }
+  }
+}

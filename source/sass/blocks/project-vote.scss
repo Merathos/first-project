@@ -1,6 +1,8 @@
 .project-vote {
   background-color: var(--color-bg-secondary, $color-bg);
   border-radius: $border-radius;
+  //z-index: 1000;
+  z-index: 9;
 }
 
 .project-vote__container {
@@ -15,6 +17,15 @@
     flex-wrap: wrap;
     align-items: center;
   }
+
+  &--fulfillment {
+    .project-vote__date {
+      margin-top: 8px;
+    }
+    .project-vote__expire {
+      margin-top: 18px;
+    }
+  }
 }
 
 .project-vote__title {
@@ -24,6 +35,10 @@
   font-weight: 400;
   font-size: rem(18px);
   line-height: rem(23px);
+
+  &--fulfillment {
+    margin-bottom: 8px;
+  }
 }
 
 .project-vote__date {
@@ -64,6 +79,17 @@
 
   &--address {
     margin-top: 0;
+  }
+
+  &--single-page-rating {
+    font-size: 13px;
+
+    strong:not([class]) {
+      margin-right: -3px;
+      font-size: 15px;
+      font-weight: 400;
+      font-style: normal;
+    }
   }
 }
 
@@ -216,19 +242,23 @@
     opacity: 0.7;
   }
 }
+.project-vote__number {
+  width: 100%;
+  margin-top: 24px;
+  padding-top: 25px;
 
-.project-vote__like-counter {
-  p {
-    font-size: 13px;
-    line-height: 16.9px;
-    color: $grey;
-  }
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
 
-  button {
-    width: 100%;
-  }
+  border-top: 1px solid var(--color-stroke, $light-grey);
+
+  margin-right: 12px;
+  font-weight: 500;
+  font-size: rem(15px);
+  line-height: 135%;
 }
-
 .project-vote__like-counter {
   width: 100%;
   margin-top: 24px;
@@ -254,6 +284,7 @@
           fill: var(--color-interactive-default, $blue-default);
         }
       }
+
       span {
         color: var(--color-interactive-default, $blue-default);
       }
@@ -262,6 +293,7 @@
 
   &--disabled {
     cursor: auto;
+    pointer-events: none;
   }
 
   span {
@@ -302,6 +334,18 @@
   span {
     color: var(--color-interactive-default, $blue-default);
   }
+}
+
+.project-vote__notification {
+  margin-top: 24px;
+}
+
+.project-vote__fulfillment-text {
+  margin: 0;
+
+  color: $grey;
+  font-size: rem(16px);
+  line-height: rem(21.6px);
 }
 
 
@@ -383,6 +427,11 @@
     }
   }
 
+  .project-page--single-page-rating .project-vote__container {
+    padding: 17px;
+    padding-bottom: 19px;
+  }
+
   .project-vote__expire {
     margin-top: 16px;
     margin-left: 0;
@@ -420,96 +469,44 @@
   }
 }
 
-.project-vote__like-counter {
-  margin-left: 0;
-}
-
-.project-vote__like-counter .form-checkbox {
+.project-vote__choose-project {
+  color: $grey;
+  font-size: 13px;
+  line-height: 16.9px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   margin-bottom: 0;
-
-  input[type="checkbox"]+label {
-    &:hover,
-    &:focus {
-      opacity: 0.7;
-    }
-  }
+  display: none;
 }
 
-.project-vote__rezult {
-  //margin-bottom: 17px;
-  font-size: 15px;
-  line-height: 20.25px;
-  font-weight: 400;
-  color: $blue-default;
-  padding-bottom: 2px;
-  border-bottom: 1px dashed $blue-default;
-}
-
-.project-vote__like-wrapper {
-  margin-top: 12px;
+.project-vote__marked {
+  margin: 0;
+  margin-top: 20px;
   display: flex;
   align-items: center;
 
-  span {
-    //margin-bottom: 17px;
-    font-size: 18px;
-    line-height: 23.4px;
-    font-weight: 400;
-    color: $dark-text;
+  a {
+    text-decoration: none;
     color: $blue-default;
+    font-size: 15px;
+    line-height: 20.25px;
+    font-weight: 400;
+    padding-bottom: 2px;
     border-bottom: 1px dashed $blue-default;
   }
 
-  .form-checkbox {
-    margin-bottom: 0;
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    fill: white;
   }
 }
 
-.project-vote__like-counter {
-  .form-checkbox--round input[type="checkbox"] ~ label {
-    &::before {
-      width: 20px;
-      height: 20px;
-      border-radius: 100px;
-    }
-    // &::after {
-    //   display: block;
-    //   transform: scale(0.8);
-    //   top: 0;
-    //   left: -2px;
-    //   background-image: url("../img/tick-grey.svg");
-    // }
+.project-vote__choose-btn {
+  margin-top: 20px;
+}
 
-    cursor: pointer;
-  }
-
-  .form-checkbox--white input[type="checkbox"]:checked ~ label{
-    &::before {
-      background-color: $white;
-      border: 1px solid $blue-accent;
-    }
-    &::after {
-      display: block;
-      top: 5px;
-      left: 4px;
-      transform: scale(0.8);
-      background-image: url("../img/icon-tick.svg");
-    }
-  }
-
-  .form-checkbox--white span {
-    font-weight: 400;
-    font-size:  15px;
-    line-height: 20.25px;
-    color: $blue-default;
-    border-bottom: 1px dashed $blue-default;
-  }
-
-  .button--update {
-    @media (max-width: $mobile-max-width) {
-      width: unset;
-      padding-left: 55px;
-      padding-right: 55px;
-    }
-  }
+.project-vote__wrapper {
+  width: 100%;
 }

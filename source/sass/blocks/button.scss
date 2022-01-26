@@ -44,8 +44,11 @@
       background-color: var(--color-bg-secondary, $blue-accent);
     }
 
-    &:disabled {
-      background-color: $light-grey;
+    &:disabled,
+    &.disabled {
+      background-color: var(--color-text, #C0D6EB);
+      cursor: auto;
+      pointer-events: none;
     }
   }
 
@@ -59,8 +62,11 @@
       background-color: var(--color-bg-secondary, $light-blue);
     }
 
-    &:disabled {
-      background-color: $light-grey;
+    &:disabled,
+    &.disabled {
+      background-color: var(--color-text, $blue-default);
+      cursor: auto;
+      pointer-events: none;
     }
   }
 
@@ -98,6 +104,46 @@
     }
   }
 
+  &--show-all {
+    text-transform: inherit;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: $blue-default;
+    display: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+      outline: none;
+      border: none;
+      background-color: transparent;
+      color: $blue-accent;
+    }
+
+    @media (max-width: $tablet-width) {
+      display: block;
+    }
+  }
+
+  &--white-content {
+    max-width: 66%;
+    width: 100%;
+    margin-bottom: 48px;
+    padding-left: 23px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    font-size: 15px;
+    text-align: left;
+
+    @include mobile {
+      max-width: 100%;
+    }
+  }
+
   &--update {
     font-size: rem(15px);
     line-height: rem(20.25px);
@@ -109,4 +155,24 @@
   .button {
     display: none;
   }
+}
+
+.button-more-text {
+  display: inline;
+
+  .is-shown & {
+    display: none;
+  }
+}
+
+.button-less-text {
+  display: none;
+
+  .is-shown & {
+    display: inline;
+  }
+}
+
+.button.is-shown svg {
+  transform: rotate(180deg);
 }

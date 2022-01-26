@@ -1,0 +1,47 @@
+.additional {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-bottom: 24px;
+
+  @include mobile {
+    margin-bottom: 16px;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.additional__wrapper {
+  margin-right: rem(32px);
+  margin-bottom: rem(16px);
+
+  @include mobile {
+    margin-right: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.additional__text {
+  padding-right: 8px;
+
+  color: var(--color-text, $grey-default);
+
+  @include font-h5;
+}
+
+.additional__datetime {
+  font-weight: 400;
+  color: var(--color-text, $dark-text);
+
+  @include font-h5;
+}
+
+.additional__link {
+  color: var(--color-interactive-default, $blue-default);
+  @include font-h5;
+}

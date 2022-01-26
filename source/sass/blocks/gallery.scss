@@ -1,3 +1,8 @@
+.gallery {
+  width: 100%;
+  margin-left: 0;
+}
+
 .gallery__tape {
   display: flex;
 }
@@ -25,6 +30,21 @@
 
   &:hover:not(.focus-visible) {
     opacity: 0.6;
+  }
+
+  &.active {
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border: 2px solid $blue-default;
+      border-radius: $border-radius;
+      pointer-events: none;
+    }
   }
 }
 

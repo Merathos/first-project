@@ -1,7 +1,19 @@
-.improvement-stage__wrapper {
+.improvement-stage {
+  padding: 0 0 40px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 40px;
+  }
+}
+
+.improvement-stage__container {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.improvement-stage__wrapper {
+  display: inline-block;
 
   font-weight: normal;
   font-size: 16px;
@@ -11,8 +23,18 @@
   margin-right: 32px;
   margin-bottom: 0;
 
+
+
+  &--status {
+    @media (max-width: $tablet-max-width + 100) and (min-width: $tablet-min-width) {
+      white-space: nowrap;
+    }
+  }
+
   @media (max-width: $tablet-width - 1) {
     margin-bottom: 25px;
+    margin-right: 0;
+
   }
 
   &--line-height {
@@ -22,18 +44,23 @@
       margin-bottom: 0;
     }
   }
+
+  @include mobile {
+    width: 100%;
+  }
 }
 
 .improvement-stage__status {
   padding-left: 19px;
   position: relative;
-  color: var(--color-text, $orange);
+
+  @include status-colors;
 
   &::before {
     content: "";
     position: absolute;
 
-    top: 50%;
+    top: 10px;
     left: 7px;
 
     width: 6px;
@@ -44,22 +71,6 @@
 
     transform: translateY(-50%);
   }
-
-  &--opened {
-    color: var(--color-text, $blue-default);
-  }
-
-  &--complete {
-    color: var(--color-text, $green);
-  }
-
-  &--declined {
-    color: var(--color-text, $red);
-  }
-
-  &--neutral {
-    color: var(--color-text, $grey-default);
-  }
 }
 
 .improvement-stage__dates {
@@ -68,4 +79,11 @@
 
 .improvement-stage__level {
   color: var(--color-text, $dark-text);
+}
+
+.improvement-stage__text {
+  font-size: rem(15px);
+  line-height: rem(27px);
+  max-width: 740px;
+  margin: 0;
 }

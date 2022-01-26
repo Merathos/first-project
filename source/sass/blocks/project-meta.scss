@@ -57,13 +57,17 @@
 .project-meta .button-star {
   padding: 0;
   margin-left: auto;
+  opacity: 1;
 
   svg {
     width: 24px;
     height: 24px;
   }
-}
 
+  &:hover {
+    color: var(--color-interactive-accent, $blue-accent);
+  }
+}
 
 @include mobile {
   .project-meta__category {

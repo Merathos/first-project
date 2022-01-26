@@ -1,0 +1,203 @@
+.single-select {
+  width: auto;
+  max-width: 100%;
+
+  .ss-single-selected .ss-arrow span {
+    width: 12px;
+    height: 12px;
+    border-color: var(--color-text, $blue-default);
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .ss-content .ss-list .ss-option.ss-disabled {
+    color: var(--color-text, $blue-accent);
+    cursor: default;
+  }
+
+  .ss-content,
+  .ss-content .ss-list .ss-option.ss-disabled,
+  .ss-content .ss-search input,
+  .ss-multi-selected {
+    background-color: var(--color-bg-secondary, $color-bg);
+  }
+
+  & .ss-content {
+    border: none;
+  }
+
+  & .ss-option {
+    @include main-text;
+    color: var(--color-text, $dark-text);
+  }
+
+  .ss-content .ss-list .ss-optgroup-label-selectable:hover,
+  .ss-content .ss-list .ss-option.ss-highlighted,
+  .ss-content .ss-list .ss-option:hover {
+    color: var(--color-interactive-default, $blue-default);;
+    background-color: var(--color-bg-main, #f5f6f7);
+  }
+
+  .ss-content {
+    z-index: 10;
+    top: calc(100% + 8px);
+    left: -25px;
+    width: 304px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
+    border-radius: 5px;
+
+    @include tablet {
+      left: -15px;
+    }
+
+    @media (max-width: $tablet-width - 1) {
+      left: 0;
+      width: 288px;
+    }
+  }
+
+  .ss-content .ss-list {
+    max-height: 336px;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+
+    & .scrollbar-track {
+      background-color: transparent;
+      margin-right: 8px;
+    }
+
+    & .scrollbar-thumb {
+      width: 6px;
+      min-height: 242px;
+      background-color: var(--color-stroke, $light-grey);
+      border-radius: 5px;
+    }
+  }
+
+  .ss-multi-selected,
+  .ss-single-selected,
+  .ss-single-selected .placeholder .ss-disabled {
+    height: auto;
+
+    font-size: rem(15px);
+    line-height: 135%;
+    color: var(--color-interactive-default, $blue-default);
+
+    border: none;
+    background-color: transparent;
+
+    transition: color $style-change-duration;
+
+    &:hover {
+      color: var(--color-interactive-accent, $blue-accent);
+    }
+  }
+
+  .ss-single-selected .placeholder {
+    width: max-content;
+    max-width: 85%;
+    flex: 0 0 auto;
+    line-height: 135%;
+    display: inline-block;
+    border-bottom: 2px dashed var(--color-interactive-default, $blue-default);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    @include tablet {
+      max-width: 100%;
+    }
+
+    @include mobile {
+      max-width: 80%;
+    }
+  }
+
+  .ss-single-selected {
+    max-width: 330px;
+    padding: 0;
+    justify-content: flex-start;
+  }
+
+  .ss-content .ss-list .ss-option {
+    padding: 8px 24px;
+  }
+
+  .ss-single-selected .ss-arrow {
+    margin-left: 13px;
+
+      span {
+        width: 9px;
+        height: 9px;
+      }
+
+      span.arrow-up {
+        margin-top: 5px;
+      }
+      span.arrow-down {
+        margin-top: -5px;
+      }
+  }
+
+  .ss-single-selected .ss-deselect {
+    order: -1;
+    align-self: center;
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    margin-right: 10px;
+  }
+
+  .ss-deselect button {
+    display: block;
+    padding: 0;
+    color: var(--color-text, $red);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    user-select: none;
+    cursor: pointer;
+    transition: color $style-change-duration;
+
+    &:focus {
+      color: var(--color-interactive-accent, rgba($red, 0.8));
+    }
+
+    &:focus:not(.focus-visible) {
+      color: var(--color-text, $red);
+    }
+
+    &:hover:not(.focus-visible) {
+      color: var(--color-interactive-accent, rgba($red, 0.8));
+    }
+
+    @include tablet {
+      &:hover:not(.focus-visible) {
+        color: var(--color-text, $red);
+      }
+
+      &:active:not(.focus-visible) {
+        color: var(--color-interactive-default, rgba($red, 0.8));
+      }
+    }
+  }
+
+  .ss-deselect svg {
+    display: block;
+    width: 12px;
+    height: 12px;
+    fill: currentColor;
+    stroke: currentColor;
+    pointer-events: none;
+    transition: stroke $style-change-duration;
+  }
+}

@@ -1,12 +1,13 @@
 .vote-results__output {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin: 0;
   font-size: rem(18px);
   line-height: rem(23px);
 }
 
-.vote-results__value--reject {
+.vote-results__value--rejected {
   margin-left: auto;
 }
 

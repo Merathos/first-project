@@ -1,0 +1,34 @@
+.page-status {
+  border: none;
+  color: var(--color-text, $grey-default);
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 32px;
+
+  p, span {
+    font-size: rem(16px);
+    line-height: rem(22px);
+  }
+
+  span {
+    font-weight: normal;
+    text-decoration: none;
+    color: var(--color-text, $blue-default);
+    position: relative;
+    margin-left: 23px;
+    @include status-colors;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -12px;
+      top: 50%;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      transform: translateY(-50%);
+      background-color: currentColor;
+    }
+  }
+}

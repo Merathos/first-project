@@ -24,7 +24,6 @@
       observer: true,
       observerParent: true,
       observeSlideChildren: true,
-      //grabCursor: false
     });
   };
 

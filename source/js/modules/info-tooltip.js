@@ -1,7 +1,6 @@
 'use strict';
 
-
-(function () {
+var tooltipsInit = function () {
   var tooltips = document.querySelectorAll('.info-tooltip');
 
   if (!tooltips.length) {
@@ -57,4 +56,6 @@
 
   document.addEventListener('focusin', showTooltip);
   document.addEventListener('focusout', hideTooltip);
-})();
+}
+
+tooltipsInit();

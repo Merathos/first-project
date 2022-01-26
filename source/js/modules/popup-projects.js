@@ -5,6 +5,8 @@
 
   var projectsLink = document.querySelectorAll('.js-projects__item-link');
 
+  //var gallerys = popup.querySelectorAll('.js-gallery-popup');
+
   var sliderSwiper = function (gallery) {
     return new window.Swiper(gallery, {
       slidesPerView: 'auto',
@@ -69,7 +71,6 @@
   if (popup) {
     var overlay = popup.querySelector('.js-popup__overlay');
     var closeBtn = popup.querySelector('.js-popup__close-btn');
-
 
     if (overlay) {
       overlay.addEventListener('click', function () {

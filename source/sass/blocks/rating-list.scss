@@ -13,20 +13,18 @@
 }
 
 .rating-list__item {
-  padding: 30px 0 34px;
+  padding: 32px 0 32px;
   width: 100%;
 
   border-top: 1px solid var(--color-stroke, $light-grey);
-  border-bottom: 1px solid var(--color-stroke, $light-grey);
 
   &:first-child {
-    padding-top: 0;
-    padding-bottom: 30px;
     border-top: none;
+  }
 
-    .rating-list__total {
-      margin-bottom: -13px;
-    }
+  &--no-border {
+    padding-top: 0;
+    border-top: none;
   }
 
   &--my-progect .rating-list__title {
@@ -39,11 +37,26 @@
     flex-flow: row wrap;
     justify-content: flex-start;
   }
+
+  @include tablet {
+    padding: 32px 0;
+
+    &--no-border {
+      padding-top: 0;
+    }
+  }
+
+  @include mobile {
+    padding: 23px 0;
+
+    &--no-border {
+      padding-top: 0;
+    }
+  }
 }
 
 .rating-list__content {
-  margin-right: auto;
-  max-width: 80%;
+  width: 100%;
 }
 
 .rating-list__my-project {
@@ -76,9 +89,29 @@
   }
 }
 
+.rating-list__link-wrap {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
+    width: 100%;
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: $mobile-max-width) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 .rating-list__title {
   margin: 0;
   text-decoration: none;
+  width: 100%;
 
   font-weight: 400;
   font-size: rem(16px);
@@ -94,15 +127,13 @@
     }
   }
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width - 1) {
-    width: 100%;
-    margin-bottom: 24px;
-  }
-
   @media (max-width: $tablet-width - 1) {
     display: block;
-    margin-top: 24px;
     margin-bottom: 22px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -110,6 +141,16 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  margin-left: 25px;
+  white-space: nowrap;
+
+  @media (min-width: $desktop-width) {
+    margin-left: auto;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    margin-left: 0;
+  }
 }
 
 .rating-list__winner {
@@ -118,5 +159,5 @@
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0;
-  color: $blue-default;
+  color: var(--color-text, $blue-default);
 }
