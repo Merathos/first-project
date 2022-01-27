@@ -2588,7 +2588,9 @@ tooltipsInit();
 
         projectToggleTextButton.classList.toggle('opened');
         projectText.classList.toggle('opened');
-        projectGallery.classList.toggle('opened');
+        if (projectGallery) {
+          projectGallery.classList.toggle('opened');
+        }
         if (projectMark) {
           projectMark.classList.toggle('opened');
         }
