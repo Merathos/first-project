@@ -1117,6 +1117,7 @@
     line-height: 16.9px;
     color: $grey;
     margin-left: auto;
+    align-self: baseline;
     @media (max-width: $tablet-width) {
       margin-right: auto;
       margin-left: 32px;
