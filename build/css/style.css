@@ -6569,7 +6569,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     font-size: 13px;
     line-height: 16.9px;
     color: #707b8c;
-    margin-left: auto; }
+    margin-left: auto;
+    -ms-flex-item-align: baseline;
+        align-self: baseline; }
     @media (max-width: 768px) {
       .proposal__project-head .proposal__project-votes {
         margin-right: auto;
