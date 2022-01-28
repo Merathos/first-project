@@ -6717,7 +6717,11 @@ label.proposal__project-title {
   line-height: 23.4px;
   font-weight: 400;
   margin: 0;
-  color: #354052; }
+  color: #354052;
+  max-width: 300px; }
+  @media (max-width: 768px) {
+    label.proposal__project-title {
+      max-width: unset; } }
   label.proposal__project-title::before {
     margin-right: 11px; }
 
@@ -12955,6 +12959,14 @@ span.poll__hide {
   border-radius: 5px;
   padding-bottom: 0;
   margin: 0 auto; }
+  .popup__content--projects .proposal {
+    padding-top: 0;
+    padding-left: 0; }
+  .popup__content--projects .proposal__project-title {
+    max-width: 250px; }
+    @media (max-width: 768px) {
+      .popup__content--projects .proposal__project-title {
+        max-width: unset; } }
   @media (max-width: 768px) {
     .popup__content--projects {
       padding: 24px; } }

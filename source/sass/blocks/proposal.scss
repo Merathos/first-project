@@ -1305,6 +1305,11 @@ label.proposal__project-title {
   font-weight: 400;
   margin: 0;
   color: $dark-text;
+  max-width: 300px;
+
+  @media (max-width: $tablet-width) {
+    max-width: unset;
+  }
 
   &::before {
     margin-right: 11px;
