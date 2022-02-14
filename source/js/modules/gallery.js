@@ -9,7 +9,7 @@
   }
 
   var sliderSwiper = function (gallery) {
-    return new window.Swiper(gallery, {
+    var swiper = new window.Swiper(gallery, {
       slidesPerView: 'auto',
       spaceBetween: 16,
 
@@ -25,10 +25,14 @@
       observerParent: true,
       observeSlideChildren: true,
     });
+
+    gallery.swiper = swiper;
+
+    return swiper;
   };
 
 
-  galleries.forEach(function (gallery) {
+  var initSlider = function (gallery) {
     var previews = gallery.querySelectorAll('.js-gallery__item-link');
 
     previews.forEach(function (preview, i) {
@@ -36,5 +40,15 @@
     });
 
     sliderSwiper(gallery);
+
+    gallery.classList.add('is-inited');
+  };
+
+
+  galleries.forEach(function (gallery) {
+    initSlider(gallery);
   });
+
+
+  window.initSlider = initSlider;
 })();

@@ -2699,7 +2699,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         max-width: 100%; } }
   .button--update {
     font-size: 0.9375rem;
-    line-height: 1.26563rem;
+    line-height: 1.26562rem;
     font-weight: 500; }
 
 @media print {
@@ -10838,7 +10838,7 @@ label.proposal__project-title {
 .notification__more {
   margin-top: 16px;
   padding: 0;
-  line-height: 1.26563rem;
+  line-height: 1.26562rem;
   background-color: transparent;
   border: none;
   cursor: pointer; }
@@ -14782,7 +14782,7 @@ span.poll__hide {
     margin: 0 auto;
     font-weight: 500;
     font-size: 0.9375rem;
-    line-height: 1.26563rem;
+    line-height: 1.26562rem;
     color: #2c8ecc;
     text-transform: uppercase;
     padding: 0;
@@ -14986,7 +14986,7 @@ ymaps p {
           align-items: center;
   padding-top: 0;
   font-size: 0.9375rem;
-  line-height: 1.26563rem;
+  line-height: 1.26562rem;
   text-decoration: none;
   position: relative;
   color: #2c8ecc; }

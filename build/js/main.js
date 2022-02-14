@@ -800,7 +800,7 @@ initFileUploader();
   }
 
   var sliderSwiper = function (gallery) {
-    return new window.Swiper(gallery, {
+    var swiper = new window.Swiper(gallery, {
       slidesPerView: 'auto',
       spaceBetween: 16,
 
@@ -816,10 +816,14 @@ initFileUploader();
       observerParent: true,
       observeSlideChildren: true,
     });
+
+    gallery.swiper = swiper;
+
+    return swiper;
   };
 
 
-  galleries.forEach(function (gallery) {
+  var initSlider = function (gallery) {
     var previews = gallery.querySelectorAll('.js-gallery__item-link');
 
     previews.forEach(function (preview, i) {
@@ -827,7 +831,17 @@ initFileUploader();
     });
 
     sliderSwiper(gallery);
+
+    gallery.classList.add('is-inited');
+  };
+
+
+  galleries.forEach(function (gallery) {
+    initSlider(gallery);
   });
+
+
+  window.initSlider = initSlider;
 })();
 
 'use strict';
@@ -2313,7 +2327,7 @@ tooltipsInit();
   //var gallerys = popup.querySelectorAll('.js-gallery-popup');
 
   var sliderSwiper = function (gallery) {
-    return new window.Swiper(gallery, {
+    var swiper = new window.Swiper(gallery, {
       slidesPerView: 'auto',
       spaceBetween: 16,
 
@@ -2329,6 +2343,10 @@ tooltipsInit();
       observerParent: true,
       observeSlideChildren: true,
     });
+
+    gallery.swiper = swiper;
+
+    return swiper;
   };
 
   var initSliders = function(popupInner) {
@@ -2338,6 +2356,8 @@ tooltipsInit();
       sliderSwiper(gallery);
     });
   };
+
+  window.initSliderInPopup = sliderSwiper;
 
   if (projectsLink) {
     projectsLink.forEach(function (item) {
@@ -2585,6 +2605,8 @@ tooltipsInit();
         var projectGallery = parent.querySelector('.proposal__gallery');
         var projectMark = parent.querySelector('.proposal__project-mark');
         var voteBtn = parent.querySelector('.button--update');
+        var gallerySlider = parent.querySelector('.js-gallery');
+        var gallerySliderInPopup = parent.querySelector('.js-gallery-in-popup');
 
         projectToggleTextButton.classList.toggle('opened');
         projectText.classList.toggle('opened');
@@ -2603,6 +2625,14 @@ tooltipsInit();
           textSpan.textContent = 'Свернуть';
         } else {
           textSpan.textContent = 'Подробнее';
+        }
+
+        if (gallerySlider && !gallerySlider.swiper) {
+          window.initSlider(gallerySlider);
+        }
+
+        if (gallerySliderInPopup && !gallerySliderInPopup.swiper) {
+          window.initSliderInPopup(gallerySliderInPopup);
         }
       }
     };
@@ -2890,8 +2920,8 @@ tooltipsInit();
     return;
   }
 
-  var toggleActiveClass = function (e) {
-    projectsEls.forEach(function (project) {
+  var toggleActiveClass = function (els) {
+    els.forEach(function (project) {
       var radioEl = project.querySelector('input[type="radio"]');
 
       if (radioEl) {
@@ -2900,15 +2930,15 @@ tooltipsInit();
     });
   };
 
-  projectsEls.forEach(function (project) {
-    var radioEl = project.querySelector('input[type="radio"]');
+  toggleActiveClass(projectsEls);
 
-    if (radioEl) {
-      radioEl.addEventListener('change', toggleActiveClass);
-    }
-  });
+  var proposalForm = document.querySelector('.proposal form');
 
-  toggleActiveClass();
+  if (proposalForm) {
+    proposalForm.addEventListener('change', function (e) {
+      toggleActiveClass(e.currentTarget.querySelectorAll('.proposal__project'));
+    });
+  }
 })();
 
 'use strict';

@@ -8,8 +8,8 @@
     return;
   }
 
-  var toggleActiveClass = function (e) {
-    projectsEls.forEach(function (project) {
+  var toggleActiveClass = function (els) {
+    els.forEach(function (project) {
       var radioEl = project.querySelector('input[type="radio"]');
 
       if (radioEl) {
@@ -18,13 +18,13 @@
     });
   };
 
-  projectsEls.forEach(function (project) {
-    var radioEl = project.querySelector('input[type="radio"]');
+  toggleActiveClass(projectsEls);
 
-    if (radioEl) {
-      radioEl.addEventListener('change', toggleActiveClass);
-    }
-  });
+  var proposalForm = document.querySelector('.proposal form');
 
-  toggleActiveClass();
+  if (proposalForm) {
+    proposalForm.addEventListener('change', function (e) {
+      toggleActiveClass(e.currentTarget.querySelectorAll('.proposal__project'));
+    });
+  }
 })();

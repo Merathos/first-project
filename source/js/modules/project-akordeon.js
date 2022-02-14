@@ -53,6 +53,8 @@
         var projectGallery = parent.querySelector('.proposal__gallery');
         var projectMark = parent.querySelector('.proposal__project-mark');
         var voteBtn = parent.querySelector('.button--update');
+        var gallerySlider = parent.querySelector('.js-gallery');
+        var gallerySliderInPopup = parent.querySelector('.js-gallery-in-popup');
 
         projectToggleTextButton.classList.toggle('opened');
         projectText.classList.toggle('opened');
@@ -71,6 +73,14 @@
           textSpan.textContent = 'Свернуть';
         } else {
           textSpan.textContent = 'Подробнее';
+        }
+
+        if (gallerySlider && !gallerySlider.swiper) {
+          window.initSlider(gallerySlider);
+        }
+
+        if (gallerySliderInPopup && !gallerySliderInPopup.swiper) {
+          window.initSliderInPopup(gallerySliderInPopup);
         }
       }
     };
