@@ -8,7 +8,7 @@
   //var gallerys = popup.querySelectorAll('.js-gallery-popup');
 
   var sliderSwiper = function (gallery) {
-    return new window.Swiper(gallery, {
+    var swiper = new window.Swiper(gallery, {
       slidesPerView: 'auto',
       spaceBetween: 16,
 
@@ -24,6 +24,10 @@
       observerParent: true,
       observeSlideChildren: true,
     });
+
+    gallery.swiper = swiper;
+
+    return swiper;
   };
 
   var initSliders = function(popupInner) {
@@ -33,6 +37,8 @@
       sliderSwiper(gallery);
     });
   };
+
+  window.initSliderInPopup = sliderSwiper;
 
   if (projectsLink) {
     projectsLink.forEach(function (item) {

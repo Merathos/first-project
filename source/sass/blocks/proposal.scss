@@ -385,10 +385,12 @@
 .proposal__milestonestab {
   @media (min-width: $desktop-width) {
     grid-area: h;
-    visibility: hidden;
+    //visibility: hidden;
+    display: none;
   }
-  height: 0;
-  visibility: hidden;
+  //height: 0;
+  //visibility: hidden;
+  display: none;
 
   @media (max-width: $tablet-width) {
     //margin-left: 16px;
@@ -417,11 +419,12 @@
 
 .proposal__tab-item--active {
   @media (min-width: $desktop-width) {
-    visibility: visible;
+    //visibility: visible;
     //z-index: 100;
+    display: block;
   }
-  height: auto;
-  visibility: visible;
+  //height: auto;
+  //visibility: visible;
 
   .form-radio label::before {
     display: block;
@@ -568,6 +571,7 @@
   .proposal__project-img {
     //margin-left: auto;
     margin-left: 40px;
+    margin-bottom: 16px;
 
     @media (max-width: $tablet-width) {
       margin-left: unset;
@@ -1114,6 +1118,7 @@
     line-height: 16.9px;
     color: $grey;
     margin-left: auto;
+    align-self: baseline;
     @media (max-width: $tablet-width) {
       margin-right: auto;
       margin-left: 32px;
@@ -1302,6 +1307,11 @@ label.proposal__project-title {
   font-weight: 400;
   margin: 0;
   color: $dark-text;
+  max-width: 300px;
+
+  @media (max-width: $tablet-width) {
+    max-width: unset;
+  }
 
   &::before {
     margin-right: 11px;
