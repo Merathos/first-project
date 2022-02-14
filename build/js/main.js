@@ -2604,8 +2604,6 @@ tooltipsInit();
         } else {
           textSpan.textContent = 'Подробнее';
         }
-
-        //projectToggleTextButton.classList.toggle('proposal__project--opened');
       }
     };
   }
