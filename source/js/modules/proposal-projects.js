@@ -1,30 +1,35 @@
 'use strict';
+var toggleActiveClass = function (els) {
+  els.forEach(function (project) {
+    var radioEl = project.querySelector('input[type="radio"]');
 
+    if (radioEl) {
+      project.classList.toggle('proposal__project--active', radioEl.checked);
+    }
+  });
+};
 
-(function () {
+var initProposalProjects = function () {
   var projectsEls = document.querySelectorAll('.proposal__project');
 
   if (!projectsEls.length) {
     return;
   }
 
-  var toggleActiveClass = function (els) {
-    els.forEach(function (project) {
-      var radioEl = project.querySelector('input[type="radio"]');
-
-      if (radioEl) {
-        project.classList.toggle('proposal__project--active', radioEl.checked);
-      }
-    });
-  };
-
   toggleActiveClass(projectsEls);
 
   var proposalForm = document.querySelector('.proposal form');
 
-  if (proposalForm) {
+  if (proposalForm && !proposalForm.classList.contains('is-inited')) {
     proposalForm.addEventListener('change', function (e) {
       toggleActiveClass(e.currentTarget.querySelectorAll('.proposal__project'));
     });
+
+    proposalForm.classList.add('is-inited');
   }
+};
+
+(function () {
+  initProposalProjects();
+  window.initProposalProjects = initProposalProjects;
 })();

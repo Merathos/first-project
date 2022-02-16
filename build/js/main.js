@@ -2551,11 +2551,55 @@ tooltipsInit();
 })();
 
 'use strict';
-(function () {
 
+var openAkordeon = function (evt) {
+  var projectToggleTextButton = evt.target.closest('.button-details');
+  if (projectToggleTextButton) {
+    var parent = projectToggleTextButton.closest('.proposal__project');
+    var projectText = parent.querySelector('.proposal__project-text');
+    var projectGallery = parent.querySelector('.proposal__gallery');
+    var projectMark = parent.querySelector('.proposal__project-mark');
+    var voteBtn = parent.querySelector('.button--update');
+    var gallerySlider = parent.querySelector('.js-gallery');
+    var gallerySliderInPopup = parent.querySelector('.js-gallery-in-popup');
+
+    projectToggleTextButton.classList.toggle('opened');
+    projectText.classList.toggle('opened');
+    if (projectGallery) {
+      projectGallery.classList.toggle('opened');
+    }
+    if (projectMark) {
+      projectMark.classList.toggle('opened');
+    }
+    if (voteBtn) {
+      voteBtn.classList.toggle('opened');
+    }
+    var textSpan = projectToggleTextButton.querySelector('.button-details__text');
+
+    if (projectToggleTextButton.classList.contains('opened')) {
+      textSpan.textContent = 'Свернуть';
+    } else {
+      textSpan.textContent = 'Подробнее';
+    }
+
+    if (gallerySlider && !gallerySlider.swiper) {
+      window.initSlider(gallerySlider);
+    }
+
+    if (gallerySliderInPopup && !gallerySliderInPopup.swiper) {
+      window.initSliderInPopup(gallerySliderInPopup);
+    }
+  }
+};
+
+var initProjectAccordion = function () {
   var projectAkordeon = document.querySelectorAll('.proposal__project');
   if (projectAkordeon.length > 0) {
     projectAkordeon.forEach(function (project) {
+      if (project.classList.contains('is-inited')) {
+        return;
+      }
+
       var projectText = project.querySelector('.proposal__project-text');
 
       var projectToggleTextButton = project.querySelector('.button-details');
@@ -2594,51 +2638,18 @@ tooltipsInit();
           project.classList.add('project_enough-lines_false');
           changeButtonText();
         }
+
+        project.classList.add('is-inited');
       }
     });
-
-    var openAkordeon = function (evt) {
-      var projectToggleTextButton = evt.target.closest('.button-details');
-      if (projectToggleTextButton) {
-        var parent = projectToggleTextButton.closest('.proposal__project');
-        var projectText = parent.querySelector('.proposal__project-text');
-        var projectGallery = parent.querySelector('.proposal__gallery');
-        var projectMark = parent.querySelector('.proposal__project-mark');
-        var voteBtn = parent.querySelector('.button--update');
-        var gallerySlider = parent.querySelector('.js-gallery');
-        var gallerySliderInPopup = parent.querySelector('.js-gallery-in-popup');
-
-        projectToggleTextButton.classList.toggle('opened');
-        projectText.classList.toggle('opened');
-        if (projectGallery) {
-          projectGallery.classList.toggle('opened');
-        }
-        if (projectMark) {
-          projectMark.classList.toggle('opened');
-        }
-        if (voteBtn) {
-          voteBtn.classList.toggle('opened');
-        }
-        var textSpan = projectToggleTextButton.querySelector('.button-details__text');
-
-        if (projectToggleTextButton.classList.contains('opened')) {
-          textSpan.textContent = 'Свернуть';
-        } else {
-          textSpan.textContent = 'Подробнее';
-        }
-
-        if (gallerySlider && !gallerySlider.swiper) {
-          window.initSlider(gallerySlider);
-        }
-
-        if (gallerySliderInPopup && !gallerySliderInPopup.swiper) {
-          window.initSliderInPopup(gallerySliderInPopup);
-        }
-      }
-    };
   }
 
   document.addEventListener('click', openAkordeon);
+};
+
+(function () {
+  initProjectAccordion();
+  window.initProjectAccordion = initProjectAccordion;
 })();
 
 'use strict';
@@ -2911,34 +2922,39 @@ tooltipsInit();
 })();
 
 'use strict';
+var toggleActiveClass = function (els) {
+  els.forEach(function (project) {
+    var radioEl = project.querySelector('input[type="radio"]');
 
+    if (radioEl) {
+      project.classList.toggle('proposal__project--active', radioEl.checked);
+    }
+  });
+};
 
-(function () {
+var initProposalProjects = function () {
   var projectsEls = document.querySelectorAll('.proposal__project');
 
   if (!projectsEls.length) {
     return;
   }
 
-  var toggleActiveClass = function (els) {
-    els.forEach(function (project) {
-      var radioEl = project.querySelector('input[type="radio"]');
-
-      if (radioEl) {
-        project.classList.toggle('proposal__project--active', radioEl.checked);
-      }
-    });
-  };
-
   toggleActiveClass(projectsEls);
 
   var proposalForm = document.querySelector('.proposal form');
 
-  if (proposalForm) {
+  if (proposalForm && !proposalForm.classList.contains('is-inited')) {
     proposalForm.addEventListener('change', function (e) {
       toggleActiveClass(e.currentTarget.querySelectorAll('.proposal__project'));
     });
+
+    proposalForm.classList.add('is-inited');
   }
+};
+
+(function () {
+  initProposalProjects();
+  window.initProposalProjects = initProposalProjects;
 })();
 
 'use strict';
