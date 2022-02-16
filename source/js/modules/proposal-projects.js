@@ -20,10 +20,12 @@ var initProposalProjects = function () {
 
   var proposalForm = document.querySelector('.proposal form');
 
-  if (proposalForm) {
+  if (proposalForm && !proposalForm.classList.contains('is-inited')) {
     proposalForm.addEventListener('change', function (e) {
       toggleActiveClass(e.currentTarget.querySelectorAll('.proposal__project'));
     });
+
+    proposalForm.classList.add('is-inited');
   }
 };
 

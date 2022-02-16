@@ -2596,6 +2596,10 @@ var initProjectAccordion = function () {
   var projectAkordeon = document.querySelectorAll('.proposal__project');
   if (projectAkordeon.length > 0) {
     projectAkordeon.forEach(function (project) {
+      if (project.classList.contains('is-inited')) {
+        return;
+      }
+
       var projectText = project.querySelector('.proposal__project-text');
 
       var projectToggleTextButton = project.querySelector('.button-details');
@@ -2634,6 +2638,8 @@ var initProjectAccordion = function () {
           project.classList.add('project_enough-lines_false');
           changeButtonText();
         }
+
+        project.classList.add('is-inited');
       }
     });
   }
@@ -2937,10 +2943,12 @@ var initProposalProjects = function () {
 
   var proposalForm = document.querySelector('.proposal form');
 
-  if (proposalForm) {
+  if (proposalForm && !proposalForm.classList.contains('is-inited')) {
     proposalForm.addEventListener('change', function (e) {
       toggleActiveClass(e.currentTarget.querySelectorAll('.proposal__project'));
     });
+
+    proposalForm.classList.add('is-inited');
   }
 };
 

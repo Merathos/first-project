@@ -44,6 +44,10 @@ var initProjectAccordion = function () {
   var projectAkordeon = document.querySelectorAll('.proposal__project');
   if (projectAkordeon.length > 0) {
     projectAkordeon.forEach(function (project) {
+      if (project.classList.contains('is-inited')) {
+        return;
+      }
+
       var projectText = project.querySelector('.proposal__project-text');
 
       var projectToggleTextButton = project.querySelector('.button-details');
@@ -82,6 +86,8 @@ var initProjectAccordion = function () {
           project.classList.add('project_enough-lines_false');
           changeButtonText();
         }
+
+        project.classList.add('is-inited');
       }
     });
   }
