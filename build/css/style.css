@@ -6287,17 +6287,15 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .proposal__project_enough-lines_false .button-details {
     display: none; }
   .proposal__project .proposal__project-text {
-    height: 2.6em;
-    height: 4.3em;
+    max-height: 4.3em;
     margin-bottom: 23px; }
     @media (max-width: 400px) {
       .proposal__project .proposal__project-text {
-        height: 8em;
-        height: 4.2em;
+        max-height: 4.2em;
         margin-bottom: 9px;
         margin-bottom: 20px; } }
     .proposal__project .proposal__project-text.opened {
-      height: auto; }
+      max-height: none; }
       .proposal__project .proposal__project-text.opened:after {
         display: none; }
     .proposal__project .proposal__project-text:after {
@@ -6712,7 +6710,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   @media (max-width: 400px) {
     .project__gallery-full {
       width: calc(100% - 16px); } }
-  .opened + .project__gallery-full {
+  .opened + .project__gallery-full, .project__gallery-full.opened {
     display: block; }
 
 label.proposal__project-title {
@@ -12958,6 +12956,7 @@ span.poll__hide {
 
 .popup__content--projects {
   padding: 48px 40px;
+  width: 100%;
   max-width: 852px;
   border-radius: 5px;
   padding-bottom: 0;
@@ -13588,6 +13587,13 @@ span.poll__hide {
     color: var(--color-interactive-default, #2c8ecc); }
   .gallery-full__btn:hover:not(.focus-visible) {
     color: var(--color-interactive-accent, #116ca6); }
+
+.gallery-full__image img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover; }
 
 .page-header {
   width: 100%;

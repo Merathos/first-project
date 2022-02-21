@@ -701,19 +701,17 @@
   }
 
   .proposal__project-text {
-    height: 2.6em;
-    height: 4.3em;
+    max-height: 4.3em;
     margin-bottom: 23px;
 
     @media (max-width: $mobile-max-width) {
-      height: 8em;
-      height: 4.2em;
+      max-height: 4.2em;
       margin-bottom: 9px;
       margin-bottom: 20px;
     }
 
     &.opened {
-      height: auto;
+      max-height: none;
 
       &:after {
         display: none;
@@ -1296,7 +1294,8 @@
     width: calc(100% - 16px);
   }
 
-  .opened + & {
+  .opened + &,
+  &.opened {
     display: block;
   }
 }
