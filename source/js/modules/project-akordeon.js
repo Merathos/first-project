@@ -1,42 +1,51 @@
 'use strict';
 
-var openAkordeon = function (evt) {
+var openAkordeon = function (btn) {
+  var parent = btn.closest('.proposal__project');
+  var projectText = parent.querySelector('.proposal__project-text');
+  var projectGallery = parent.querySelector('.proposal__gallery');
+  var projectMark = parent.querySelector('.proposal__project-mark');
+  var voteBtn = parent.querySelector('.button--update');
+  var gallerySlider = parent.querySelector('.js-gallery');
+  var gallerySliderInPopup = parent.querySelector('.js-gallery-in-popup');
+  var singleImage = parent.querySelector('.js-single-image');
+
+  btn.classList.toggle('opened');
+  projectText.classList.toggle('opened');
+  if (projectGallery) {
+    projectGallery.classList.toggle('opened');
+  }
+  if (projectMark) {
+    projectMark.classList.toggle('opened');
+  }
+  if (voteBtn) {
+    voteBtn.classList.toggle('opened');
+  }
+  var textSpan = btn.querySelector('.button-details__text');
+
+  if (btn.classList.contains('opened')) {
+    textSpan.textContent = 'Свернуть';
+  } else {
+    textSpan.textContent = 'Подробнее';
+  }
+
+  if (gallerySlider && !gallerySlider.swiper) {
+    window.initSlider(gallerySlider);
+  }
+
+  if (gallerySliderInPopup && !gallerySliderInPopup.swiper) {
+    window.initSliderInPopup(gallerySliderInPopup);
+  }
+
+  if (singleImage && !btn.classList.contains('opened')) {
+    singleImage.remove();
+  }
+};
+
+var onOpenAkordeon = function (evt) {
   var projectToggleTextButton = evt.target.closest('.button-details');
   if (projectToggleTextButton) {
-    var parent = projectToggleTextButton.closest('.proposal__project');
-    var projectText = parent.querySelector('.proposal__project-text');
-    var projectGallery = parent.querySelector('.proposal__gallery');
-    var projectMark = parent.querySelector('.proposal__project-mark');
-    var voteBtn = parent.querySelector('.button--update');
-    var gallerySlider = parent.querySelector('.js-gallery');
-    var gallerySliderInPopup = parent.querySelector('.js-gallery-in-popup');
-
-    projectToggleTextButton.classList.toggle('opened');
-    projectText.classList.toggle('opened');
-    if (projectGallery) {
-      projectGallery.classList.toggle('opened');
-    }
-    if (projectMark) {
-      projectMark.classList.toggle('opened');
-    }
-    if (voteBtn) {
-      voteBtn.classList.toggle('opened');
-    }
-    var textSpan = projectToggleTextButton.querySelector('.button-details__text');
-
-    if (projectToggleTextButton.classList.contains('opened')) {
-      textSpan.textContent = 'Свернуть';
-    } else {
-      textSpan.textContent = 'Подробнее';
-    }
-
-    if (gallerySlider && !gallerySlider.swiper) {
-      window.initSlider(gallerySlider);
-    }
-
-    if (gallerySliderInPopup && !gallerySliderInPopup.swiper) {
-      window.initSliderInPopup(gallerySliderInPopup);
-    }
+    openAkordeon(projectToggleTextButton);
   }
 };
 
@@ -92,10 +101,11 @@ var initProjectAccordion = function () {
     });
   }
 
-  document.addEventListener('click', openAkordeon);
+  document.addEventListener('click', onOpenAkordeon);
 };
 
 (function () {
   initProjectAccordion();
   window.initProjectAccordion = initProjectAccordion;
+  window.openAkordeon = openAkordeon;
 })();
