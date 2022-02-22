@@ -26,7 +26,10 @@
       window.openAkordeon(openBtn);
     }
 
-    gallery.after(singleImage);
+    if (gallery) {
+      window.galleryInSliderReset(wrap);
+      gallery.after(singleImage);
+    }
   };
 
   var onDocumentClick = function (evt) {

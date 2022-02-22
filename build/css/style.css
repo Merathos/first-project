@@ -6310,6 +6310,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
               transform: matrix(1, 0, 0, -1, 0, 0);
       bottom: 50px;
       bottom: 0; }
+  .proposal__project.project_enough-lines_false .proposal__project-text::after {
+    display: none; }
   .proposal__project_enough-lines_true .proposal__project-title + .proposal__project-text {
     height: 2.6em;
     margin-bottom: 14px; }
