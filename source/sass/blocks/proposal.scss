@@ -751,6 +751,10 @@
     // }
   }
 
+  &.project_enough-lines_false .proposal__project-text::after {
+    display: none;
+  }
+
   &_enough-lines_true {
     .proposal__project-title {
       + .proposal__project-text {
