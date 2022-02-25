@@ -248,7 +248,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -11678,8 +11679,9 @@ label.proposal__project-title {
   height: 2.7em;
   overflow: hidden;
   text-overflow: ellipsis;
-  -ms-hyphens: auto;
-      hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
   overflow-wrap: break-word;
   word-wrap: break-word; }
   @media (max-width: 1119px) {
@@ -11993,8 +11995,9 @@ label.proposal__project-title {
   padding: 0;
   font-size: 1rem;
   line-height: 1.35;
-  -ms-hyphens: auto;
-      hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
   overflow-wrap: break-word;
   word-wrap: break-word; }
 
@@ -12693,8 +12696,9 @@ span.poll__hide {
   line-height: 1.25rem;
   font-weight: 400;
   line-height: 1.6875rem;
-  -ms-hyphens: auto;
-      hyphens: auto;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
   overflow-wrap: break-word;
   word-wrap: break-word;
   background-color: var(--color-bg-secondary, #f9f9fa);
@@ -16087,9 +16091,9 @@ ymaps p {
     background-color: var(--color-interactive-default, #2c8ecc); }
   .project-vote__vote-btn .project-vote__confirmation-text {
     display: none; }
-  .project-vote__vote-btn input:checked ~ span .project-vote__confirmation-text {
+  .project-vote__vote-btn:not(.project-vote__vote-btn--disabled) input:checked ~ span .project-vote__confirmation-text {
     display: inline; }
-  .project-vote__vote-btn input:checked ~ span .project-vote__btn-text {
+  .project-vote__vote-btn:not(.project-vote__vote-btn--disabled) input:checked ~ span .project-vote__btn-text {
     display: none; }
   .project-vote__vote-btn span,
   .project-vote__vote-btn svg {
@@ -16106,6 +16110,28 @@ ymaps p {
     stroke: var(--color-icon, #70bf56); }
   .project-vote__vote-btn--reject svg {
     stroke: var(--color-icon, #e55050); }
+  .project-vote__vote-btn--disabled {
+    pointer-events: none;
+    color: var(--color-text, #cfd3d9); }
+    @media screen and (min-width: 1200px) {
+      .project-vote__vote-btn--disabled {
+        pointer-events: all; } }
+    .project-vote__vote-btn--disabled svg {
+      stroke: var(--color-icon, #cfd3d9); }
+    .project-vote__vote-btn--disabled:focus {
+      color: var(--color-text, #cfd3d9);
+      background-color: var(--color-bg-main, #ffffff); }
+    .project-vote__vote-btn--disabled:focus:not(.focus-visible) {
+      color: var(--color-text, #cfd3d9);
+      background-color: var(--color-bg-main, #ffffff); }
+    .project-vote__vote-btn--disabled:hover:not(.focus-visible) {
+      color: var(--color-text, #cfd3d9);
+      background-color: var(--color-bg-main, #ffffff); }
+  @media screen and (min-width: 1200px) {
+    .project-vote__vote-btn:not(.project-vote__vote-btn--disabled)[data-tooltip]::after, .project-vote__vote-btn:not(.project-vote__vote-btn--disabled)[data-tooltip]::before {
+      display: none; }
+    .project-vote__vote-btn[data-tooltip]::after {
+      min-width: 216px; } }
 
 .project-vote--voted .project-vote__vote-btn {
   display: none; }
@@ -16129,6 +16155,8 @@ ymaps p {
   font-size: 0.8125rem;
   line-height: 1.0625rem;
   color: var(--color-text, #a6abb3); }
+  .project-vote__notion--single {
+    margin: 0; }
 
 .project-vote__revoke-form {
   display: none;
@@ -17382,8 +17410,9 @@ span.poll-page__hide {
       padding-bottom: 24px; } }
   .answers__text-wrapper p {
     margin: 0;
-    -ms-hyphens: auto;
-        hyphens: auto;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
     overflow-wrap: break-word;
     word-wrap: break-word;
     font-size: 0.9375rem;
