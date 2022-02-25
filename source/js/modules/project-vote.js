@@ -23,7 +23,7 @@
 
 
   var onSubmitFormClick = function (evt) {
-    if (evt.target.classList.contains('project-vote__vote-btn') && !evt.target.classList.contains('project-vote__vote-btn--selected')) {
+    if (evt.target.classList.contains('project-vote__vote-btn') && !evt.target.classList.contains('project-vote__vote-btn--selected') && !evt.target.classList.contains('project-vote__vote-btn--disabled')) {
       vote.classList.add('project-vote--voted');
       evt.target.classList.add('project-vote__vote-btn--selected');
 

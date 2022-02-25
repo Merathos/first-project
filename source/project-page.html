@@ -145,7 +145,25 @@
                 <form action="#" method="post">
                   <label
                     class="project-vote__vote-btn project-vote__vote-btn--approve"
-                    tabindex="0">
+                    tabindex="0"
+                    data-tooltip="Для того чтобы поддержать проект, ответьте на все заданные вопросы в блоке выбора дополнительных опций" data-flow="down">
+                    <input type="radio" name="vote" value="approve" />
+
+                    <svg width="16" height="16">
+                      <use xlink:href="img/sprite.svg#icon-tick"></use>
+                    </svg>
+
+                    <span>
+                      <span class="project-vote__confirmation-text">Вы
+                        поддержали проект</span>
+                      <span class="project-vote__btn-text">Поддерживаю</span>
+                    </span>
+                  </label>
+
+                  <label
+                    class="project-vote__vote-btn project-vote__vote-btn--approve project-vote__vote-btn--disabled"
+                    tabindex="0"
+                    data-tooltip="Для того чтобы поддержать проект, ответьте на все заданные вопросы в блоке выбора дополнительных опций" data-flow="down">
                     <input type="radio" name="vote" value="approve" />
 
                     <svg width="16" height="16">
@@ -196,6 +214,12 @@
                   </button>
                 </form>
               </div>
+            </div>
+
+            <div class="project-vote__container project-vote__container--vote">
+              <p class="project-vote__notion project-vote__notion--single">
+                У&nbsp;данного проекта есть <a class="project-vote__notion--link link link--blue" href="#">дополнительные опции</a>. Выбранные опции будут учтены только при голосовании в&nbsp;поддержку проекта.
+              </p>
             </div>
 
             <p class="project-page__budget">

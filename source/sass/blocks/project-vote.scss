@@ -148,12 +148,14 @@
     display: none;
   }
 
-  input:checked ~ span .project-vote__confirmation-text {
-    display: inline;
-  }
+  &:not(.project-vote__vote-btn--disabled) {
+    input:checked ~ span .project-vote__confirmation-text {
+      display: inline;
+    }
 
-  input:checked ~ span .project-vote__btn-text {
-    display: none;
+    input:checked ~ span .project-vote__btn-text {
+      display: none;
+    }
   }
 
   span,
@@ -176,6 +178,47 @@
 
   &--reject svg {
     stroke: var(--color-icon, $red);
+  }
+
+  &--disabled {
+    pointer-events: none;
+    color: var(--color-text, $disabled-color);
+
+    @media screen and (min-width: $desktop-width) {
+      pointer-events: all;
+    }
+
+    svg {
+      stroke: var(--color-icon, $disabled-color);
+    }
+
+    &:focus {
+      color: var(--color-text, $disabled-color);
+      background-color: var(--color-bg-main, $white);
+    }
+
+    &:focus:not(.focus-visible) {
+      color: var(--color-text, $disabled-color);
+      background-color: var(--color-bg-main, $white);
+    }
+
+    &:hover:not(.focus-visible) {
+      color: var(--color-text, $disabled-color);
+      background-color: var(--color-bg-main, $white);
+    }
+  }
+
+  @media screen and (min-width: $desktop-width) {
+    &:not(.project-vote__vote-btn--disabled) {
+      &[data-tooltip]::after,
+      &[data-tooltip]::before {
+        display: none;
+      }
+    }
+
+    &[data-tooltip]::after {
+      min-width: 216px;
+    }
   }
 }
 
@@ -207,6 +250,14 @@
   font-size: rem(13px);
   line-height: rem(17px);
   color: var(--color-text, $grey-default);
+
+  &--single {
+    margin: 0;
+  }
+
+  &--link {
+
+  }
 }
 
 .project-vote__revoke-form {
