@@ -227,7 +227,10 @@
   .project-page__panel,
   .project-page__text,
   .project-page__files,
-  .project-page__examination-date {
+  .project-page__examination-date,
+  .project-page__form,
+  .project-page__milestones,
+  .project-page__tabs {
     width: calc(100% - 2 * #{$tablet-padding});
     margin-right: $tablet-padding;
     margin-left: $tablet-padding;
@@ -737,5 +740,45 @@
     img {
       margin-bottom: 0;
     }
+  }
+}
+
+.project-page__cards-list {
+  --cardsGap: 15px;
+  --cardsCount: 3;
+
+  @include tablet {
+    --cardsCount: 2;
+  }
+
+  @include mobile {
+    --cardsCount: 1;
+
+    margin-right: 0;
+  }
+}
+
+.project-page__cards-image-wrapper {
+  height: 154px;
+}
+
+.project-page__form {
+  .form__section {
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+}
+
+.project-page__tab {
+  display: none;
+}
+
+.project-page {
+  .proposal__tab-item--active {
+    display: block;
+  }
+  .proposal__tabs {
+    margin-right: 0;
   }
 }

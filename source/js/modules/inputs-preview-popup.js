@@ -2,7 +2,7 @@
 
 (function () {
   var previews = document.querySelectorAll('.preview-input');
-  var popup = document.querySelector('.js-popup');
+  var popup = document.querySelector('.js-popup:not(.js-popup--gallery-full):not(.js-popup--gallery-single)');
 
   if (previews.length && popup) {
 
