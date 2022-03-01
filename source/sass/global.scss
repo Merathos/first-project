@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 
   font-size: ($base-font-size / 16px) * 100%;
   font-family: "Rubik", "Arial", sans-serif;
@@ -85,6 +86,8 @@ html {
 }
 
 body {
+  scroll-behavior: smooth;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 

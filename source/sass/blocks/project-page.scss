@@ -770,6 +770,15 @@
   }
 }
 
+.project-page__tab-wrapper {
+  background-color: $color-bg;
+  padding: 32px 24px;
+
+  h2:not([class]) {
+    margin-top: 0;
+  }
+}
+
 .project-page__tab {
   display: none;
 }
@@ -778,6 +787,7 @@
   .proposal__tab-item--active {
     display: block;
   }
+
   .proposal__tabs {
     margin-right: 0;
   }
