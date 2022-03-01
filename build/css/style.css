@@ -30,6 +30,7 @@
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  scroll-behavior: smooth;
   font-size: 100%;
   font-family: "Rubik", "Arial", sans-serif; }
   html.mod-font-family-arial {
@@ -92,6 +93,7 @@ html {
           box-sizing: inherit; }
 
 body {
+  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   position: relative;
@@ -3461,6 +3463,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   background-position: left bottom;
   background-repeat: no-repeat;
   background-size: 100% 1px; }
+  .form__section:last-child {
+    background-image: unset;
+    padding-bottom: 0; }
   @media (max-width: 400px) {
     .form__section {
       padding-top: 24px;
@@ -5577,7 +5582,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     color: var(--color-interactive-accent, #116ca6); }
   .preview-input--no-content {
     border: none;
-    min-height: unset; }
+    min-height: unset;
+    -webkit-transition: opacity ease-out 0.15s;
+    transition: opacity ease-out 0.15s; }
+    .preview-input--no-content:hover {
+      opacity: 0.7; }
 
 .preview-input__image-wrapper {
   width: 100%;
@@ -12649,6 +12658,8 @@ span.poll__hide {
   padding-bottom: 9px;
   padding-left: 18px;
   padding-right: 16px;
+  position: relative;
+  z-index: 2;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   font-weight: 400;
@@ -15875,6 +15886,12 @@ ymaps p {
 
 .project-page__form .form__section:first-child {
   padding-top: 0; }
+
+.project-page__tab-wrapper {
+  background-color: #f9f9fa;
+  padding: 32px 24px; }
+  .project-page__tab-wrapper h2:not([class]) {
+    margin-top: 0; }
 
 .project-page__tab {
   display: none; }
