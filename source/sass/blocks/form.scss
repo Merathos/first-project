@@ -29,6 +29,10 @@
   .cards-list {
     margin-bottom: -5px;
 
+    .poll-result & {
+      max-width: 800px;
+    }
+
     @include mobile {
       margin-bottom: 10px;
     }
