@@ -405,4 +405,15 @@
   line-height: 19px;
 }
 
+.choices .scrollbar-track {
+  width: 10px;
+  background-color: transparent;
+}
+
+.choices .scrollbar-thumb {
+  width: 6px;
+  background-color: #e3e8ee;
+  border-radius: 5px;
+}
+
 /*=====  End of Choices  ======*/

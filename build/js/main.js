@@ -1027,15 +1027,25 @@ tooltipsInit();
 
 'use strict';
 var initChoices = function () {
+  var Scrollbar = window.Scrollbar;
   var selectItems = document.querySelectorAll('._select');
   if (selectItems.length > 0) {
     selectItems.forEach(function (item) {
-      new Choices(item, {
+      var list = item.parentElement.nextElementSibling.querySelector('.choices__list');
+      new window.Choices(item, {
         searchEnabled: false,
         itemSelectText: '',
         shouldSort: false,
         placeholder: true,
         placeholderValue: 'Выберите из списка',
+      });
+      item.addEventListener('showDropdown', function(evt) {
+        Scrollbar.init((item.parentElement.nextElementSibling.querySelector('.choices__list')), {
+          continuousScrolling: false
+        });
+      });
+      Scrollbar.init((item.parentElement.nextElementSibling.querySelector('.choices__list')), {
+        continuousScrolling: false
       });
     });
   }
@@ -1043,6 +1053,7 @@ var initChoices = function () {
   var selectItemSearch = document.querySelectorAll('._select-search');
   if (selectItemSearch.length > 0) {
     selectItemSearch.forEach(function (item) {
+      var list = item.parentElement.nextElementSibling.querySelector('.choices__list');
       new Choices(item, {
         searchEnabled: true,
         itemSelectText: '',
@@ -1051,6 +1062,14 @@ var initChoices = function () {
         placeholderValue: 'Выберите из списка',
         noResultsText: 'Ни чего не найдено',
         searchPlaceholderValue: 'Начните вводить текст',
+      });
+      item.addEventListener('showDropdown', function(evt) {
+        Scrollbar.init((item.parentElement.nextElementSibling.querySelector('.choices__list')), {
+          continuousScrolling: false
+        });
+      });
+      Scrollbar.init((item.parentElement.nextElementSibling.querySelector('.choices__list')), {
+        continuousScrolling: false
       });
     });
   }
