@@ -19786,7 +19786,7 @@ span.poll-page__hide {
       width: 145px; } }
 
 .authorization {
-  padding: 48px 0 0 0; }
+  padding: 48px 0 100px 0; }
   .authorization__inner {
     -webkit-box-align: center;
         -ms-flex-align: center;
