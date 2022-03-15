@@ -114,3 +114,42 @@
   @include main-text;
   color: var(--color-text, $grey-default);
 }
+
+.form__input-date-wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 675px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    background: url("../img/icon-calendar-empty.svg") no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+.form__input-date {
+  display: block;
+  width: 100%;
+  border: 1px solid $light-grey;
+  border-radius: 5px;
+  background: #fff;
+
+  padding: 16px;
+  padding-right: 40px;
+
+  font-size: 15px;
+  line-height: 20px;
+
+  outline: none;
+
+  &:focus {
+    border-color: $grey;
+  }
+}
