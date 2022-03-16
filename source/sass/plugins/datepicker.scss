@@ -23,6 +23,7 @@
   display: inline-block;
   border-radius: 4px;
   background-color: white;
+  width: 280px;
 }
 
 .datepicker-dropdown .datepicker-picker {
@@ -44,7 +45,7 @@
 }
 
 .datepicker-main {
-  padding: 16px;
+  padding: 16px 12px;
 }
 
 .datepicker-footer {
@@ -82,9 +83,13 @@
   line-height: 2.25rem;
 }
 
-.datepicker-cell {
+span.datepicker-cell {
   height: 32px;
-  line-height: 32px;
+  line-height: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .datepicker-title {
