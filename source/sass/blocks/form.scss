@@ -135,6 +135,8 @@
 }
 
 .form__input-date {
+  -webkit-appearance: none;
+  appearance: none;
   display: block;
   width: 100%;
   border: 1px solid $light-grey;

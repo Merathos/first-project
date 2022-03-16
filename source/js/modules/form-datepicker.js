@@ -10,7 +10,9 @@
 
   inputs.forEach(function (input) {
     var datepicker = new window.Datepicker(input, {
-      language: 'ru'
+      language: 'ru',
+      minDate: new Date(),
+      autohide: true,
     });
   });
 })();
