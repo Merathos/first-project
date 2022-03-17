@@ -117,7 +117,6 @@
 
 .form__input-date-wrap {
   position: relative;
-  z-index: 1;
   max-width: 675px;
 
   &::after {
@@ -125,8 +124,7 @@
     position: absolute;
     z-index: 1;
     right: 16px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 20px;
     width: 16px;
     height: 16px;
     background: url("../img/icon-calendar-empty.svg") no-repeat;
