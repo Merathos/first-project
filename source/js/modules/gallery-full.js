@@ -2,12 +2,6 @@
 
 
 (function () {
-  var galleryFullLinks = document.querySelectorAll('.js-full-gallery-link');
-
-  if (!galleryFullLinks.length) {
-    return;
-  }
-
   var initializeSlider = function (target) {
     var wrap = target.closest('.js-gallery-full-wrap');
 
