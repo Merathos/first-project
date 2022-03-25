@@ -24,6 +24,7 @@
     Array.prototype.forEach.call(items, function (item) {
       var itemPhoto = item.querySelector('.gallery__item');
       var element = itemPhoto.cloneNode(true);
+      element.querySelector('.gallery__item-img').src = item.querySelector('.gallery__item-link').href;
       element.classList.remove('gallery__item');
       element.classList.add('swiper-slide');
       element.classList.add('gallery-full__item');

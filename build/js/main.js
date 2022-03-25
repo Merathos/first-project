@@ -596,12 +596,6 @@ initFileUploader();
 
 
 (function () {
-  var galleryFullLinks = document.querySelectorAll('.js-full-gallery-link');
-
-  if (!galleryFullLinks.length) {
-    return;
-  }
-
   var initializeSlider = function (target) {
     var wrap = target.closest('.js-gallery-full-wrap');
 
@@ -624,6 +618,7 @@ initFileUploader();
     Array.prototype.forEach.call(items, function (item) {
       var itemPhoto = item.querySelector('.gallery__item');
       var element = itemPhoto.cloneNode(true);
+      element.querySelector('.gallery__item-img').src = item.querySelector('.gallery__item-link').href;
       element.classList.remove('gallery__item');
       element.classList.add('swiper-slide');
       element.classList.add('gallery-full__item');
