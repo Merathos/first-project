@@ -62,4 +62,7 @@ var initChoices = function () {
     });
   }
 };
+
+window.initChoices = initChoices;
+
 initChoices();
