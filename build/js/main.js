@@ -735,8 +735,6 @@
         if (notSelectedElement && activeItems.length) {
           notSelectedElement.classList.add('has-separator');
         }
-
-        console.log(activeItems, notSelectedElement)
       });
     }
 
