@@ -26,18 +26,20 @@
   };
 
   const createNativeOptionsMarkup = (items, activeIndex) => {
-    return items.map((el, index) => {
-      if (activeIndex.length) {
-        const currentIndex = activeIndex.find((item) => item === index);
-        if (currentIndex === index) {
-          return `<option ${el.value ? `value=${el.value}` : ''} selected>${el.text ? `${el.text}` : ''}</option>`;
+    return items
+      .map((el, index) => {
+        if (activeIndex.length) {
+          const currentIndex = activeIndex.find((item) => item === index);
+          if (currentIndex === index) {
+            return `<option ${el.value ? `value=${el.value}` : ''} selected>${el.text ? `${el.text}` : ''}</option>`;
+          } else {
+            return `<option ${el.value ? `value=${el.value}` : ''}>${el.text ? `${el.text}` : ''}</option>`;
+          }
         } else {
           return `<option ${el.value ? `value=${el.value}` : ''}>${el.text ? `${el.text}` : ''}</option>`;
         }
-      } else {
-        return `<option ${el.value ? `value=${el.value}` : ''}>${el.text ? `${el.text}` : ''}</option>`;
-      }
-    }).join('\n');
+      })
+      .join('\n');
   };
 
   const createNativeSelectMarkup = ({id, items, multiple, name, required, activeIndex = []}) => {
@@ -140,8 +142,10 @@
             const activeItems = parent.querySelectorAll('.custom-select__item[aria-selected="true"]');
             const items = parent.querySelectorAll('.custom-select__item');
             items.forEach((item) => item.classList.remove('has-separator'));
-            const notSelectedElement = parent.querySelector('.custom-select__item:not([aria-selected="true"])');
-            if (notSelectedElement) {
+            const notSelectedElement = parent.querySelector(
+              '.custom-select__item:not([aria-selected="true"]):not(.is-hidden)',
+            );
+            if (notSelectedElement && activeItems.length) {
               notSelectedElement.classList.add('has-separator');
             }
             const str = this._createMultiString(activeItems);
@@ -154,8 +158,10 @@
           } else {
             element.setAttribute('aria-selected', 'true');
             const items = parent.querySelectorAll('.custom-select__item');
-            items.forEach((item) => item.classList.remove('has-separator'))
-            const notSelectedElement = parent.querySelector('.custom-select__item:not([aria-selected="true"])');
+            items.forEach((item) => item.classList.remove('has-separator'));
+            const notSelectedElement = parent.querySelector(
+              '.custom-select__item:not([aria-selected="true"]):not(.is-hidden)',
+            );
             if (notSelectedElement) {
               notSelectedElement.classList.add('has-separator');
             }
@@ -295,8 +301,8 @@
       const selectItems = item.querySelectorAll('.custom-select__item');
       this._setActiveSelectItemsState(multiple, selectItems);
 
-      Scrollbar.init((selectList), {
-        continuousScrolling: false
+      Scrollbar.init(selectList, {
+        continuousScrolling: false,
       });
 
       if (this._activeIndex.length) {
@@ -328,10 +334,22 @@
       if (!searchInput) {
         return;
       }
-
       const selectItems = select.querySelectorAll('.custom-select__item');
+      const buttonClean = select.querySelector('.custom-select__search-clean');
 
-      searchInput.addEventListener('input', () => {
+      buttonClean.addEventListener('click', () => {
+        searchInput.value = '';
+        const inputEv = new CustomEvent('input');
+        searchInput.dispatchEvent(inputEv);
+      });
+
+      searchInput.addEventListener('input', ({target}) => {
+        if (target.value) {
+          buttonClean.classList.add('is-active');
+        } else {
+          buttonClean.classList.remove('is-active');
+        }
+
         selectItems.forEach((item) => {
           if (item.innerText.toLowerCase().includes(searchInput.value.toLowerCase())) {
             item.classList.remove('is-hidden');
@@ -339,6 +357,27 @@
             item.classList.add('is-hidden');
           }
         });
+
+        const notHiddenSelectItems = select.querySelectorAll('.custom-select__item:not(.is-hidden)');
+        const emptyBox = select.querySelector('.custom-select__empty-box');
+        if (emptyBox) {
+          if (!notHiddenSelectItems.length) {
+            emptyBox.classList.add('is-active');
+          } else {
+            emptyBox.classList.remove('is-active');
+          }
+        }
+
+        const items = select.querySelectorAll('.custom-select__item');
+        const activeItems = select.querySelectorAll('.custom-select__item[aria-selected="true"]:not(.is-hidden)');
+        items.forEach((item) => item.classList.remove('has-separator'));
+        const notSelectedElement = select.querySelector('.custom-select__item:not([aria-selected="true"]):not(.is-hidden)');
+
+        if (notSelectedElement && activeItems.length) {
+          notSelectedElement.classList.add('has-separator');
+        }
+
+        console.log(activeItems, notSelectedElement)
       });
     }
 
@@ -388,5 +427,4 @@
   // При добавлении новых селектов без перезагрузки страницы нужно будет вызвать метод  window.customSelect.init();
 
   console.log();
-
 })();
