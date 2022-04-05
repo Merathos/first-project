@@ -20,7 +20,7 @@
   };
 
   var onEscPress = function (evt, popup) {
-    if (evt.keyCode === window.const.keyCode.ESC && popup.classList.contains('popup--shown')) {
+    if (evt.keyCode === window.var.keyCode.ESC && popup.classList.contains('popup--shown')) {
       evt.preventDefault();
 
       closePopup(popup);

@@ -49,7 +49,7 @@
   overlay.addEventListener('click', closeDropdown);
 
   document.addEventListener('keydown', function (evt) {
-    if (evt.keyCode === window.const.keyCode.ESC && overlay.classList.contains('user-menu__overlay--shown')) {
+    if (evt.keyCode === window.var.keyCode.ESC && overlay.classList.contains('user-menu__overlay--shown')) {
       evt.preventDefault();
 
       closeDropdown();

@@ -2157,7 +2157,7 @@ initChoices();
   var specialBtn = document.querySelectorAll('.js-open-popup');
 
   var adjustMenuHeight = function () {
-    menu.style.height = header.classList.contains('page-header--open-menu') && document.documentElement.clientWidth < window.const.resolution.DESKTOP ? window.innerHeight - topBar.offsetHeight + 'px' : '';
+    menu.style.height = header.classList.contains('page-header--open-menu') && document.documentElement.clientWidth < window.var.resolution.DESKTOP ? window.innerHeight - topBar.offsetHeight + 'px' : '';
   };
 
 
@@ -2780,7 +2780,7 @@ initChoices();
 
 
   var adjustHeaderAppearance = function () {
-    if (document.documentElement.clientWidth >= window.const.resolution.DESKTOP && window.pageYOffset > 0) {
+    if (document.documentElement.clientWidth >= window.var.resolution.DESKTOP && window.pageYOffset > 0) {
       header.classList.add('page-header--above-content');
       header.style.top = -headerBar.offsetHeight + 'px';
     } else {
@@ -2904,7 +2904,7 @@ initChoices();
   };
 
   var onEscPress = function (evt, p) {
-    if (evt.keyCode === window.const.keyCode.ESC && p.classList.contains('popup--shown')) {
+    if (evt.keyCode === window.var.keyCode.ESC && p.classList.contains('popup--shown')) {
       evt.preventDefault();
 
       closePopup(p);
@@ -2913,6 +2913,7 @@ initChoices();
 
   // popup.forEach(function (p) {
   if (popup) {
+    console.log(popup)
     var overlay = popup.querySelector('.js-popup__overlay');
     var closeBtn = popup.querySelector('.js-popup__close-btn');
 
@@ -2927,11 +2928,12 @@ initChoices();
         closePopup(popup);
       });
     }
-  }
+    document.addEventListener('keydown', function (evt) {
+      console.log('11')
 
-  document.addEventListener('keydown', function (evt) {
-    onEscPress(evt, popup);
-  });
+      onEscPress(evt, popup);
+    });
+  }
   // });
 })();
 
@@ -2957,7 +2959,7 @@ initChoices();
   };
 
   var onEscPress = function (evt, popup) {
-    if (evt.keyCode === window.const.keyCode.ESC && popup.classList.contains('popup--shown')) {
+    if (evt.keyCode === window.var.keyCode.ESC && popup.classList.contains('popup--shown')) {
       evt.preventDefault();
 
       closePopup(popup);
@@ -3330,7 +3332,7 @@ var initProjectAccordion = function () {
     if (windowWidth !== document.documentElement.clientWidth) {
       windowWidth = document.documentElement.clientWidth;
 
-      if (windowWidth < window.const.resolution.TABLET) {
+      if (windowWidth < window.var.resolution.TABLET) {
         if (isInitialized) {
           return;
         }
@@ -3343,7 +3345,7 @@ var initProjectAccordion = function () {
   };
 
 
-  if (windowWidth < window.const.resolution.TABLET) {
+  if (windowWidth < window.var.resolution.TABLET) {
     init();
   }
 
@@ -4061,7 +4063,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
         evt.preventDefault();
         popup.classList.remove(hideClass);
 
-        if (root.clientWidth < window.const.resolution.DESKTOP) {
+        if (root.clientWidth < window.var.resolution.DESKTOP) {
           window.bodyScrollLock.disableBodyScroll(popup);
         }
       });
@@ -4070,17 +4072,17 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
     popupCloseBtn.addEventListener('click', function () {
       popup.classList.add(hideClass);
 
-      if (root.clientWidth < window.const.resolution.DESKTOP) {
+      if (root.clientWidth < window.var.resolution.DESKTOP) {
         window.bodyScrollLock.enableBodyScroll(popup);
       }
     });
 
     window.addEventListener('keydown', function (evt) {
-      if (evt.keyCode === window.const.keyCode.ESC) {
+      if (evt.keyCode === window.var.keyCode.ESC) {
         evt.preventDefault();
         popup.classList.add(hideClass);
 
-        if (root.clientWidth < window.const.resolution.DESKTOP) {
+        if (root.clientWidth < window.var.resolution.DESKTOP) {
           window.bodyScrollLock.enableBodyScroll(popup);
         }
       }
@@ -4223,7 +4225,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
 
   var posX = tab.offsetLeft;
 
-  if (windowWidth < window.const.resolution.TABLET) {
+  if (windowWidth < window.var.resolution.TABLET) {
     tabList.scrollLeft = posX - 16;
   }
 
@@ -4424,7 +4426,7 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
   overlay.addEventListener('click', closeDropdown);
 
   document.addEventListener('keydown', function (evt) {
-    if (evt.keyCode === window.const.keyCode.ESC && overlay.classList.contains('user-menu__overlay--shown')) {
+    if (evt.keyCode === window.var.keyCode.ESC && overlay.classList.contains('user-menu__overlay--shown')) {
       evt.preventDefault();
 
       closeDropdown();

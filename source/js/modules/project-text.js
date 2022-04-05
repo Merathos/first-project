@@ -73,7 +73,7 @@
     if (windowWidth !== document.documentElement.clientWidth) {
       windowWidth = document.documentElement.clientWidth;
 
-      if (windowWidth < window.const.resolution.TABLET) {
+      if (windowWidth < window.var.resolution.TABLET) {
         if (isInitialized) {
           return;
         }
@@ -86,7 +86,7 @@
   };
 
 
-  if (windowWidth < window.const.resolution.TABLET) {
+  if (windowWidth < window.var.resolution.TABLET) {
     init();
   }
 

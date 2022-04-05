@@ -16,7 +16,7 @@
 
   var posX = tab.offsetLeft;
 
-  if (windowWidth < window.const.resolution.TABLET) {
+  if (windowWidth < window.var.resolution.TABLET) {
     tabList.scrollLeft = posX - 16;
   }
 

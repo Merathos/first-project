@@ -66,7 +66,7 @@
   };
 
   var onEscPress = function (evt, p) {
-    if (evt.keyCode === window.const.keyCode.ESC && p.classList.contains('popup--shown')) {
+    if (evt.keyCode === window.var.keyCode.ESC && p.classList.contains('popup--shown')) {
       evt.preventDefault();
 
       closePopup(p);
@@ -89,10 +89,9 @@
         closePopup(popup);
       });
     }
+    document.addEventListener('keydown', function (evt) {
+      onEscPress(evt, popup);
+    });
   }
-
-  document.addEventListener('keydown', function (evt) {
-    onEscPress(evt, popup);
-  });
   // });
 })();

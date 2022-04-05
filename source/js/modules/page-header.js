@@ -13,7 +13,7 @@
 
 
   var adjustHeaderAppearance = function () {
-    if (document.documentElement.clientWidth >= window.const.resolution.DESKTOP && window.pageYOffset > 0) {
+    if (document.documentElement.clientWidth >= window.var.resolution.DESKTOP && window.pageYOffset > 0) {
       header.classList.add('page-header--above-content');
       header.style.top = -headerBar.offsetHeight + 'px';
     } else {

@@ -85,7 +85,7 @@
         evt.preventDefault();
         popup.classList.remove(hideClass);
 
-        if (root.clientWidth < window.const.resolution.DESKTOP) {
+        if (root.clientWidth < window.var.resolution.DESKTOP) {
           window.bodyScrollLock.disableBodyScroll(popup);
         }
       });
@@ -94,17 +94,17 @@
     popupCloseBtn.addEventListener('click', function () {
       popup.classList.add(hideClass);
 
-      if (root.clientWidth < window.const.resolution.DESKTOP) {
+      if (root.clientWidth < window.var.resolution.DESKTOP) {
         window.bodyScrollLock.enableBodyScroll(popup);
       }
     });
 
     window.addEventListener('keydown', function (evt) {
-      if (evt.keyCode === window.const.keyCode.ESC) {
+      if (evt.keyCode === window.var.keyCode.ESC) {
         evt.preventDefault();
         popup.classList.add(hideClass);
 
-        if (root.clientWidth < window.const.resolution.DESKTOP) {
+        if (root.clientWidth < window.var.resolution.DESKTOP) {
           window.bodyScrollLock.enableBodyScroll(popup);
         }
       }
