@@ -14,7 +14,7 @@
   };
 
 
-  window.const = {
+  window.var = {
     keyCode: KeyCode,
     resolution: Resolution
   };

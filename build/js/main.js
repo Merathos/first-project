@@ -274,7 +274,7 @@
   };
 
 
-  window.const = {
+  window.var = {
     keyCode: KeyCode,
     resolution: Resolution
   };
@@ -362,15 +362,15 @@
 (function () {
   var Scrollbar = window.Scrollbar;
 
-  const createElement = (template) => {
-    const newElement = document.createElement('div');
+  var createElement = (template) => {
+    var newElement = document.createElement('div');
 
     newElement.innerHTML = template;
 
     return newElement.firstChild;
   };
 
-  const renderElement = (container, component, place = 'beforeend') => {
+  var renderElement = (container, component, place = 'beforeend') => {
     switch (place) {
       case 'prepend':
         container.prepend(component);
@@ -384,11 +384,11 @@
     }
   };
 
-  const createNativeOptionsMarkup = (items, activeIndex) => {
+  var createNativeOptionsMarkup = (items, activeIndex) => {
     return items
       .map((el, index) => {
         if (activeIndex.length) {
-          const currentIndex = activeIndex.find((item) => item === index);
+          var currentIndex = activeIndex.find((item) => item === index);
           if (currentIndex === index) {
             return `<option ${el.value ? `value=${el.value}` : ''} selected>${el.text ? `${el.text}` : ''}</option>`;
           } else {
@@ -401,7 +401,7 @@
       .join('\n');
   };
 
-  const createNativeSelectMarkup = ({id, items, multiple, name, required, activeIndex = []}) => {
+  var createNativeSelectMarkup = ({id, items, multiple, name, required, activeIndex = []}) => {
     return `<select ${id ? `id='${id}'` : ''} ${name ? `name='${name}'` : ''} ${multiple ? 'multiple' : ''} ${
       required ? 'required' : ''
     } tabindex="-1" aria-hidden="true">
@@ -436,10 +436,10 @@
     }
 
     _setSelectActiveState(multiple, insert, item) {
-      const buttonTextBlock = item.querySelector('.custom-select__text');
-      const activeItems = item.querySelectorAll('.custom-select__item[aria-selected="true"]');
-      const label = item.querySelector('.custom-select__label');
-      const str = this._createMultiString(activeItems);
+      var buttonTextBlock = item.querySelector('.custom-select__text');
+      var activeItems = item.querySelectorAll('.custom-select__item[aria-selected="true"]');
+      var label = item.querySelector('.custom-select__label');
+      var str = this._createMultiString(activeItems);
 
       buttonTextBlock.style.transition = '0s';
       if (label) {
@@ -465,7 +465,7 @@
     }
 
     _closeSelect() {
-      const activeSelect = document.querySelector('[data-select].is-open');
+      var activeSelect = document.querySelector('[data-select].is-open');
       document.removeEventListener('click', this._onDocumentClick);
       document.removeEventListener('keydown', this._onEscapePress);
       if (activeSelect) {
@@ -474,22 +474,22 @@
     }
 
     _onSelectElementClickAction(element, index) {
-      const parent = element.closest('.custom-select');
-      const multiple = parent.dataset.multiple;
-      const insert = parent.dataset.insert;
-      const buttonTextBlock = parent.querySelector('.custom-select__text');
-      const itemText = element.innerText;
-      const options = parent.querySelectorAll('option');
-      const select = parent.querySelector('select');
-      const changeEv = new CustomEvent('change');
-      const inputEv = new CustomEvent('input');
+      var parent = element.closest('.custom-select');
+      var multiple = parent.dataset.multiple;
+      var insert = parent.dataset.insert;
+      var buttonTextBlock = parent.querySelector('.custom-select__text');
+      var itemText = element.innerText;
+      var options = parent.querySelectorAll('option');
+      var select = parent.querySelector('select');
+      var changeEv = new CustomEvent('change');
+      var inputEv = new CustomEvent('input');
       select.dispatchEvent(changeEv);
       select.dispatchEvent(inputEv);
-      const form = select.closest('form');
+      var form = select.closest('form');
 
       if (form) {
-        const formChangeEv = new CustomEvent('change');
-        const formInputEv = new CustomEvent('input');
+        var formChangeEv = new CustomEvent('change');
+        var formInputEv = new CustomEvent('input');
         form.dispatchEvent(formChangeEv);
         form.dispatchEvent(formInputEv);
       }
@@ -498,16 +498,16 @@
         if (insert === 'true') {
           if (element.getAttribute('aria-selected') === 'true') {
             element.setAttribute('aria-selected', 'false');
-            const activeItems = parent.querySelectorAll('.custom-select__item[aria-selected="true"]');
-            const items = parent.querySelectorAll('.custom-select__item');
+            var activeItems = parent.querySelectorAll('.custom-select__item[aria-selected="true"]');
+            var items = parent.querySelectorAll('.custom-select__item');
             items.forEach((item) => item.classList.remove('has-separator'));
-            const notSelectedElement = parent.querySelector(
+            var notSelectedElement = parent.querySelector(
               '.custom-select__item:not([aria-selected="true"]):not(.is-hidden)',
             );
             if (notSelectedElement && activeItems.length) {
               notSelectedElement.classList.add('has-separator');
             }
-            const str = this._createMultiString(activeItems);
+            var str = this._createMultiString(activeItems);
             options[index + 1].selected = false;
             buttonTextBlock.innerText = str;
             if (!str) {
@@ -516,16 +516,16 @@
             }
           } else {
             element.setAttribute('aria-selected', 'true');
-            const items = parent.querySelectorAll('.custom-select__item');
+            var items = parent.querySelectorAll('.custom-select__item');
             items.forEach((item) => item.classList.remove('has-separator'));
-            const notSelectedElement = parent.querySelector(
+            var notSelectedElement = parent.querySelector(
               '.custom-select__item:not([aria-selected="true"]):not(.is-hidden)',
             );
             if (notSelectedElement) {
               notSelectedElement.classList.add('has-separator');
             }
-            const activeItems = parent.querySelectorAll('.custom-select__item[aria-selected="true"]');
-            const str = this._createMultiString(activeItems);
+            var activeItems = parent.querySelectorAll('.custom-select__item[aria-selected="true"]');
+            var str = this._createMultiString(activeItems);
             buttonTextBlock.innerText = str;
             parent.classList.add('not-empty');
             parent.classList.add('is-valid');
@@ -541,7 +541,7 @@
           }
         }
       } else {
-        const activeItem = parent.querySelector('.custom-select__item[aria-selected="true"]');
+        var activeItem = parent.querySelector('.custom-select__item[aria-selected="true"]');
         if (element.getAttribute('aria-selected') === 'true') {
           this._closeSelect();
         } else {
@@ -567,7 +567,7 @@
     }
 
     _onEscapePress(evt) {
-      const isEscape = evt.key === 'Escape';
+      var isEscape = evt.key === 'Escape';
       if (isEscape) {
         this._closeSelect();
       }
@@ -578,22 +578,22 @@
     }
 
     _onSelectItemKeydown(evt, element, index) {
-      const isEnter = evt.key === 'Enter';
+      var isEnter = evt.key === 'Enter';
       if (isEnter) {
         this._onSelectElementClickAction(element, index);
       }
     }
 
     _onLastItemKeydown(evt) {
-      const isTab = evt.key === 'Tab';
+      var isTab = evt.key === 'Tab';
       if (isTab) {
         this._closeSelect();
       }
     }
 
     _onSelectClick(evt) {
-      const parent = evt.target.closest('[data-select]');
-      const activeSelect = document.querySelector('[data-select].is-open');
+      var parent = evt.target.closest('[data-select]');
+      var activeSelect = document.querySelector('[data-select].is-open');
       parent.classList.remove('is-invalid');
 
       if (activeSelect && activeSelect === parent) {
@@ -616,7 +616,7 @@
     }
 
     _onSelectKeydown(evt) {
-      const parent = evt.target.closest('[data-select]');
+      var parent = evt.target.closest('[data-select]');
       parent.classList.remove('is-invalid');
       if (evt.shiftKey && evt.key === 'Tab' && parent.closest('.is-open')) {
         this._closeSelect();
@@ -643,21 +643,21 @@
     }
 
     _createSelectStructure(item) {
-      const nativeSelect = item.querySelector('select');
+      var nativeSelect = item.querySelector('select');
       this._startText = item.querySelector('.custom-select__text').innerText;
       if (nativeSelect) {
         this._selectElement = null;
         return;
       }
-      const options = {};
+      var options = {};
       options.items = [];
-      const multiple = item.dataset.multiple;
-      const id = item.dataset.id;
-      const name = item.dataset.name;
-      const required = item.dataset.required;
-      const insert = item.dataset.insert;
-      const selectList = item.querySelector('.custom-select__list');
-      const selectItems = item.querySelectorAll('.custom-select__item');
+      var multiple = item.dataset.multiple;
+      var id = item.dataset.id;
+      var name = item.dataset.name;
+      var required = item.dataset.required;
+      var insert = item.dataset.insert;
+      var selectList = item.querySelector('.custom-select__list');
+      var selectItems = item.querySelectorAll('.custom-select__item');
       this._setActiveSelectItemsState(multiple, selectItems);
 
       Scrollbar.init(selectList, {
@@ -675,8 +675,8 @@
       options.multiple = Boolean(multiple);
 
       selectItems.forEach((selectItem) => {
-        const value = selectItem.dataset.selectValue;
-        const itemInfo = {};
+        var value = selectItem.dataset.selectValue;
+        var itemInfo = {};
         itemInfo.text = selectItem.innerText;
         itemInfo.value = value;
         options.items.push(itemInfo);
@@ -689,16 +689,16 @@
     }
 
     _initSearch(select) {
-      const searchInput = select.querySelector('.custom-select__search input');
+      var searchInput = select.querySelector('.custom-select__search input');
       if (!searchInput) {
         return;
       }
-      const selectItems = select.querySelectorAll('.custom-select__item');
-      const buttonClean = select.querySelector('.custom-select__search-clean');
+      var selectItems = select.querySelectorAll('.custom-select__item');
+      var buttonClean = select.querySelector('.custom-select__search-clean');
 
       buttonClean.addEventListener('click', () => {
         searchInput.value = '';
-        const inputEv = new CustomEvent('input');
+        var inputEv = new CustomEvent('input');
         searchInput.dispatchEvent(inputEv);
       });
 
@@ -717,8 +717,8 @@
           }
         });
 
-        const notHiddenSelectItems = select.querySelectorAll('.custom-select__item:not(.is-hidden)');
-        const emptyBox = select.querySelector('.custom-select__empty-box');
+        var notHiddenSelectItems = select.querySelectorAll('.custom-select__item:not(.is-hidden)');
+        var emptyBox = select.querySelector('.custom-select__empty-box');
         if (emptyBox) {
           if (!notHiddenSelectItems.length) {
             emptyBox.classList.add('is-active');
@@ -727,10 +727,10 @@
           }
         }
 
-        const items = select.querySelectorAll('.custom-select__item');
-        const activeItems = select.querySelectorAll('.custom-select__item[aria-selected="true"]:not(.is-hidden)');
+        var items = select.querySelectorAll('.custom-select__item');
+        var activeItems = select.querySelectorAll('.custom-select__item[aria-selected="true"]:not(.is-hidden)');
         items.forEach((item) => item.classList.remove('has-separator'));
-        const notSelectedElement = select.querySelector('.custom-select__item:not([aria-selected="true"]):not(.is-hidden)');
+        var notSelectedElement = select.querySelector('.custom-select__item:not([aria-selected="true"]):not(.is-hidden)');
 
         if (notSelectedElement && activeItems.length) {
           notSelectedElement.classList.add('has-separator');
@@ -742,8 +742,8 @@
       if (!this._selectElement) {
         return;
       }
-      const button = this._selectElement.querySelector('.custom-select__button');
-      const selectItems = this._selectElement.querySelectorAll('.custom-select__item');
+      var button = this._selectElement.querySelector('.custom-select__button');
+      var selectItems = this._selectElement.querySelectorAll('.custom-select__item');
 
       button.addEventListener('click', this._onSelectClick);
       button.addEventListener('keydown', this._onSelectKeydown);
@@ -775,7 +775,7 @@
 
   window.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('load', () => {
-      const customSelect = new CustomSelect();
+      var customSelect = new CustomSelect();
       window.customSelect = customSelect;
       customSelect.init();
     });
