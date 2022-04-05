@@ -14273,7 +14273,8 @@ span.poll__hide {
   .gallery-full.hidden {
     display: none; }
 
-.gallery-full__item {
+.gallery-full__item,
+.proposal__project .swiper-slide .gallery-full__item {
   width: 100%;
   height: 300px;
   margin: 0; }
@@ -14322,7 +14323,8 @@ span.poll__hide {
   .gallery-full__btn:hover:not(.focus-visible) {
     color: var(--color-interactive-accent, #116ca6); }
 
-.gallery-full__image img {
+.gallery-full__image img,
+.proposal__project .swiper-slide .gallery-full__image img {
   display: block;
   width: 100%;
   height: 300px;

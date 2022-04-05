@@ -594,6 +594,31 @@ initFileUploader();
 
 'use strict';
 
+// выскакивает ошибка при проверке 46 бага, должно помочь.
+var resetSlider = function (wrap) {
+  var gallery = wrap.querySelector('.js-gallery-full');
+  var slider = wrap.querySelector('.js-gallery-full-frame');
+  var currentActiveSlide = wrap.querySelector('.js-full-gallery-link.active');
+
+  if (wrap.swiper) {
+    wrap.swiper.destroy();
+    wrap.swiper = null;
+  }
+
+  if (slider) {
+    slider.innerHTML = '';
+  }
+
+  if (gallery) {
+    gallery.classList.add('hidden');
+  }
+
+  if (currentActiveSlide) {
+    currentActiveSlide.classList.remove('active');
+  }
+};
+
+window.galleryInSliderReset = resetSlider;
 
 (function () {
   var initializeSlider = function (target) {
@@ -667,28 +692,6 @@ initFileUploader();
     }
   };
 
-  var resetSlider = function (wrap) {
-    var gallery = wrap.querySelector('.js-gallery-full');
-    var slider = wrap.querySelector('.js-gallery-full-frame');
-    var currentActiveSlide = wrap.querySelector('.js-full-gallery-link.active');
-
-    if (wrap.swiper) {
-      wrap.swiper.destroy();
-      wrap.swiper = null;
-    }
-
-    if (slider) {
-      slider.innerHTML = '';
-    }
-
-    if (gallery) {
-      gallery.classList.add('hidden');
-    }
-
-    if (currentActiveSlide) {
-      currentActiveSlide.classList.remove('active');
-    }
-  };
 
   var onDocumentClick = function (evt) {
     var galleryLink = evt.target.closest('.js-full-gallery-link');
@@ -711,7 +714,6 @@ initFileUploader();
   };
 
   document.addEventListener('click', onDocumentClick);
-  window.galleryInSliderReset = resetSlider;
 })();
 
 'use strict';
