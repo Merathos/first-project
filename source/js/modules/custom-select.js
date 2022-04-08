@@ -31,19 +31,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     }
   };
 
+  var returnDataset = function returnDataset(dataset) {
+    var string = '';
+
+    for (var el in dataset) {
+      string += el + '="' + dataset[el] + '" ';
+    }
+
+    return string;
+  };
+
   var createNativeOptionsMarkup = function createNativeOptionsMarkup(items, activeIndex) {
     return items.map(function (el, index) {
+      returnDataset(el.datasetBackend);
       if (activeIndex.length) {
         var currentIndex = activeIndex.find(function (item) {
           return item === index;
         });
         if (currentIndex === index) {
-          return '<option ' + (el.value ? 'value=' + el.value : '') + ' selected>' + (el.text ? '' + el.text : '') + '</option>';
+          return '<option ' + (el.value ? 'value=' + el.value : '') + ' ' + returnDataset(el.datasetBackend) + ' selected>' + (el.text ? '' + el.text : '') + '</option>';
         } else {
-          return '<option ' + (el.value ? 'value=' + el.value : '') + '>' + (el.text ? '' + el.text : '') + '</option>';
+          return '<option ' + (el.value ? 'value=' + el.value : '') + ' ' + returnDataset(el.datasetBackend) + '>' + (el.text ? '' + el.text : '') + '</option>';
         }
       } else {
-        return '<option ' + (el.value ? 'value=' + el.value : '') + '>' + (el.text ? '' + el.text : '') + '</option>';
+        return '<option ' + (el.value ? 'value=' + el.value : '') + ' ' + returnDataset(el.datasetBackend) + '>' + (el.text ? '' + el.text : '') + '</option>';
       }
     }).join('\n');
   };
@@ -173,17 +184,17 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
               }
             } else {
               element.setAttribute('aria-selected', 'true');
-              var items = parent.querySelectorAll('.custom-select__item');
-              items.forEach(function (item) {
+              var _items = parent.querySelectorAll('.custom-select__item');
+              _items.forEach(function (item) {
                 return item.classList.remove('has-separator');
               });
-              var notSelectedElement = parent.querySelector('.custom-select__item:not([aria-selected="true"]):not(.is-hidden)');
-              if (notSelectedElement) {
-                notSelectedElement.classList.add('has-separator');
+              var _notSelectedElement = parent.querySelector('.custom-select__item:not([aria-selected="true"]):not(.is-hidden)');
+              if (_notSelectedElement) {
+                _notSelectedElement.classList.add('has-separator');
               }
-              var activeItems = parent.querySelectorAll('.custom-select__item[aria-selected="true"]');
-              var str = this._createMultiString(activeItems);
-              buttonTextBlock.innerText = str;
+              var _activeItems = parent.querySelectorAll('.custom-select__item[aria-selected="true"]');
+              var _str = this._createMultiString(_activeItems);
+              buttonTextBlock.innerText = _str;
               parent.classList.add('not-empty');
               parent.classList.add('is-valid');
               options[index + 1].selected = true;
@@ -345,10 +356,25 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         options.multiple = Boolean(multiple);
 
         selectItems.forEach(function (selectItem) {
+          // console.log(selectItem.attributes)
+          var datasetBackend = {};
+          selectItem.attributes.forEach(function (f) {
+            // console.log(f.name.startsWith('data'))
+            // console.log(JSON.stringify(f))
+            // if (reg.test(attr[j].name)) {
+            //   arr.push(el);
+            // }
+            // console.log(f.startsWith('data'))
+            if (f.name.startsWith('data')) {
+              datasetBackend[f.name] = f.value;
+            }
+          });
           var value = selectItem.dataset.selectValue;
           var itemInfo = {};
+          // const dataset1 = selectItem.dataset;
           itemInfo.text = selectItem.innerText;
           itemInfo.value = value;
+          itemInfo.datasetBackend = datasetBackend;
           options.items.push(itemInfo);
         });
 
