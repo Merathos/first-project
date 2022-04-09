@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<include src="source/components/head.html"></include>
+
+<body class="page-body">
+  <include src="source/components/special-popup.html"></include>
+
+  <include src="source/components/header.html"></include>
+
+  <main>
+    <section class="voting section section--gray">
+      <div class="container">
+        <a class="back-btn" href="main-page.html">
+          <svg width="8" height="14">
+            <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
+          </svg>
+          На главную
+        </a>
+        <div class="project-rules project-rules--no-icon">
+          <span>Принимая участие в голосовании вы даете</span>
+          <a href="#">согласие на обработку моих персональных данных,</a>
+          <span>а также их передачу в соответствии с п.3. ст.6 ФЗ-152 «О персональных данных» оператором голосования по отбору общественных территорий, подлежащих благоустройству в рамках реализации муниципальных программ (подпрограмм) формирования современной городской среды в рамках федерального проекта «Формирование комфортной городской среды» в составе государственной программы Российской Федерации «Обеспечение доступным и комфортным жильем и коммунальными услугами граждан Российской Федерации ФАУ «Проектная дирекция Минстроя России»</span>
+        </div>
+        <div class="page-line"></div>
+        <h1 class="page-title">Объекты для голосования</h1>
+        <p class="page-description">Муниципальное образование или район</p>
+        <div class="custom-select custom-select--search custom-select--input" data-select data-name="some-name" data-id="id-example" data-insert="true">
+          <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+            <span class="custom-select__text">Выберите одну из опций</span>
+            <span class="custom-select__icon"></span>
+          </button>
+          <div class="custom-select__list-box">
+            <div class="custom-select__search" data-search>
+              <input type="search" placeholder="Выберите муниципальное образование или район из списка или продолжите ввод" aria-label="Поиск">
+              <button class="custom-select__search-clean" type="button" aria-label="Отчистить поиск"></button>
+            </div>
+            <div class="custom-select__empty-box">По вашему запросу ничего не найдено</div>
+            <ul class="custom-select__list" role="listbox">
+              <li class="custom-select__item custom-select__item--title" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Кемерово (районы города)</li>
+              <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Ленинский</li>
+              <li class="custom-select__item custom-select__item--title" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">Муниципальные образования региона</li>
+              <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">Беловский</li>
+              <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">Новокузнецкий муниципальный район</li>
+              <li class="custom-select__item" tabindex="0" data-select-value="id-6" aria-selected="false" role="option">Осинниковский</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <section class="voting section">
+      <div class="container">
+        <div class="activity-tabs activity-tabs--radio">
+          <ul class="activity-tabs__list">
+            <li class="activity-tabs__item">
+              <label>
+                <input type="radio" name="tabs">
+                <span class="activity-tabs__control-title">Территории</span>
+                <span class="activity-tabs__control-counter">0</span>
+              </label>
+            </li>
+            <li class="activity-tabs__item">
+              <label>
+                <input type="radio" name="tabs">
+                <span class="activity-tabs__control-title">Дизайн-проекты</span>
+                <span class="activity-tabs__control-counter">0</span>
+              </label>
+            </li>
+          </ul>
+          <div class="activity-tabs__bottom"></div>
+        </div>
+
+        <div class="info-banner info-banner--black">
+          <svg width="24" height="24" class="info-icon info-banner__icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <path fill="currentColor" fill-rule="evenodd" d="M.2 12C.2 5.494 5.492.2 12 .2 18.505.2 23.8 5.494 23.8 12c0 6.506-5.294 11.8-11.8 11.8C5.492 23.8.2 18.506.2 12zm2.152 0c0 5.32 4.328 9.647 9.647 9.647 5.32 0 9.647-4.327 9.647-9.647S17.318 2.354 12 2.354 2.352 6.68 2.352 12z" clip-rule="evenodd"></path>
+            <rect width="2.5" height="8" x="10.75" y="6" fill="currentColor" rx="1"></rect>
+            <rect width="2.5" height="3" x="10.75" y="15" fill="currentColor" rx="1"></rect>
+          </svg>
+
+          <p class="info-banner__title">
+            Выберите муниципальное образование
+          </p>
+
+          <p class="info-banner__text">
+            Чтобы увидеть объекты для голосования, пожалуйста, выберите муниципальное образование или район.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <include src="source/components/footer.html"></include>
+  <include src="source/components/cookie.html"></include>
+  <include src="source/components/up-btn.html"></include>
+
+  <script src="js/libs.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

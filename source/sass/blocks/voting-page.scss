@@ -1,0 +1,92 @@
+.voting {
+  padding-bottom: 80px;
+
+  &.section--gray {
+    padding-bottom: 40px;
+  }
+
+  .back-btn {
+    margin-top: 40px;
+  }
+
+  .project-rules {
+    margin-bottom: 40px;
+  }
+
+  .page-title {
+    margin-top: 40px;
+    margin-bottom: 34px;
+  }
+
+  .page-line {
+    width: 100%;
+    height: 1px;
+    background-color: $light-grey;
+  }
+
+  .page-description {
+    margin: 0 0 24px;
+
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .activity-tabs {
+    margin: 40px 0;
+  }
+
+  @include tablet {
+    padding-bottom: 71px;
+
+    .project-rules {
+      margin-top: 31px;
+    }
+
+    &.section--gray {
+      padding-bottom: 31px;
+    }
+
+    .page-title {
+      margin-top: 31px;
+      margin-bottom: 27px;
+    }
+
+    .back-btn {
+      margin-top: 31px;
+    }
+
+    .activity-tabs {
+      margin: 31px 0;
+    }
+  }
+
+  @include mobile {
+      padding-bottom: 54px;
+
+    &.section--gray {
+      padding-bottom: 24px;
+    }
+
+    .project-rules {
+      margin-top: 24px;
+    }
+
+    .page-title {
+      margin-top: 24px;
+      margin-bottom: 20px;
+    }
+
+    .back-btn {
+      margin-top: 24px;
+    }
+
+    .activity-tabs {
+      margin: 24px 0;
+    }
+  }
+}
+
+
+
+
+

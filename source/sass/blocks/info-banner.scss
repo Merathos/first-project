@@ -256,3 +256,12 @@
     }
   }
 }
+
+
+.info-banner--black {
+  .info-banner__title {
+    color: $dark-text;
+  }
+
+  border-color: $light-grey;
+}

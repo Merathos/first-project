@@ -464,3 +464,57 @@
     }
   }
 }
+
+.custom-select--input {
+  .custom-select__search {
+    &::before {
+      display: none;
+    }
+
+    border-bottom: none;
+  }
+
+  .custom-select__button {
+    background-color: $white;
+  }
+
+  .custom-select__search input {
+    padding-right: 16px;
+  }
+
+  .custom-select__search-clean {
+    right: 16px;
+  }
+
+  .custom-select__item {
+    padding-left: 17px;
+
+    font-size: 15px;
+    line-height: 20px;
+    color: $grey;
+
+    &::before {
+      display: none;
+    }
+
+    &[aria-selected=true] {
+      order: unset;
+      color: $blue-default;
+    }
+
+    &--description {
+      padding-bottom: 24px;
+
+      color: $grey-lighter;
+
+      pointer-events: none;
+    }
+
+    &--title {
+      font-size: 18px;
+      line-height: 23px;
+      color: $dark-text;
+      pointer-events: none;
+    }
+  }
+}

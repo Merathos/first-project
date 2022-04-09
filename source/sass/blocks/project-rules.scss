@@ -43,4 +43,12 @@
       left: 20px;
     }
   }
+
+  &--no-icon {
+    padding: 20px;
+
+    span {
+      color: $grey;
+    }
+  }
 }
