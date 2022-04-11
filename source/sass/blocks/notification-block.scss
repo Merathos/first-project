@@ -28,9 +28,16 @@
     font-weight: 500;
     font-size: rem(16px);
     line-height: rem(22px);
-    color: $dark-text;
+    color: var(--color-text, $dark-text);
     padding: 0;
     margin: 0 12px;
+
+    &--thin {
+      color: var(--color-text, $grey);
+      font-weight: 400;
+      font-size: rem(15px);
+      line-height: rem(20px);
+    }
   }
 
   &__icon {

@@ -2,26 +2,34 @@
   width: 100%;
 
   background-color: var(--color-bg-secondary, $light-blue);
-  background-image: url('../img/internet-banner.svg');
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center;
 
   @include mobile {
-    background-image: none;
+    .internet-banner__image-wrapper {
+      display: none;
+    }
   }
 }
 
 .internet-banner__container {
-  max-width: 500px;
+  max-width: 600px;
 
   padding-top: 61px;
   padding-bottom: 62px;
 }
 
+.internet-banner__wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .internet-banner__title {
   margin: 0;
-  max-width: 500px;
+  max-width: 600px;
 
   font-size: rem(40px);
   line-height: 47px;
@@ -33,9 +41,26 @@
 
   font-size: rem(16px);
   line-height: 135%;
+  max-width: 500px;
 }
 
 .internet-banner__button {
   margin-top: 32px;
   padding: 16px 50px 13px;
+}
+
+.internet-banner__period {
+  margin: 32px 0 0;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  text-transform: uppercase;
+}
+
+.internet-banner__date {
+  margin: 8px 0 0;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
 }
