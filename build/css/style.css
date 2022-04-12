@@ -20728,7 +20728,8 @@ span.poll-page__hide {
             transform: translateY(-50%); }
 
 .voting {
-  padding-bottom: 80px; }
+  padding-bottom: 74px;
+  padding-top: 40px; }
   .voting.section--gray {
     padding-bottom: 40px; }
   .voting .back-btn {
@@ -20747,7 +20748,8 @@ span.poll-page__hide {
     font-size: 16px;
     line-height: 22px; }
   .voting .activity-tabs {
-    margin: 40px 0; }
+    margin-bottom: 46px;
+    padding-right: 0; }
   @media (max-width: 1199px) {
     .voting {
       padding-bottom: 71px; }

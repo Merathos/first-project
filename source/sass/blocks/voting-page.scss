@@ -1,5 +1,6 @@
 .voting {
-  padding-bottom: 80px;
+  padding-bottom: 74px;
+  padding-top: 40px;
 
   &.section--gray {
     padding-bottom: 40px;
@@ -32,7 +33,8 @@
   }
 
   .activity-tabs {
-    margin: 40px 0;
+    margin-bottom: 46px;
+    padding-right: 0;
   }
 
   @include tablet {
