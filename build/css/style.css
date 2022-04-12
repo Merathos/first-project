@@ -14700,7 +14700,8 @@ span.poll__hide {
     display: none; }
 
 .gallery-full__item,
-.proposal__project .swiper-slide .gallery-full__item {
+.proposal__project .swiper-slide .gallery-full__item,
+.proposal__project .swiper-slide.gallery-full__item {
   width: 100%;
   height: 300px;
   margin: 0; }
