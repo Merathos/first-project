@@ -41,7 +41,7 @@ var initChoices = function () {
         shouldSort: false,
         placeholder: true,
         placeholderValue: 'Выберите из списка',
-        noResultsText: 'Ни чего не найдено',
+        noResultsText: 'Ничего не найдено',
         searchPlaceholderValue: 'Начните вводить текст',
       });
       item.addEventListener('showDropdown', function (evt) {
