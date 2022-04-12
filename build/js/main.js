@@ -1706,9 +1706,9 @@ window.galleryInSliderReset = resetSlider;
 
     Array.prototype.forEach.call(items, function (item) {
       var itemPhoto = item.querySelector('.gallery__item');
-      // var bigPhotoSrc = item.querySelector('.gallery__item-link').href;
+      var bigPhotoSrc = item.querySelector('.gallery__item-link').href;
       var element = itemPhoto.cloneNode(true);
-      // element.querySelector('img').src = bigPhotoSrc;
+      element.querySelector('img').src = bigPhotoSrc;
       element.classList.add('swiper-slide');
 
       sliderTape.appendChild(element);
