@@ -12063,8 +12063,8 @@ label.proposal__project-title {
 
 .internet-banner__container {
   max-width: 600px;
-  padding-top: 61px;
-  padding-bottom: 62px; }
+  padding-top: 30px;
+  padding-bottom: 30px; }
 
 .internet-banner__wrapper {
   display: -webkit-box;
@@ -12079,7 +12079,9 @@ label.proposal__project-title {
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px; }
 
 .internet-banner__title {
   margin: 0;
