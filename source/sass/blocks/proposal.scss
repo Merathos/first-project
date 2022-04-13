@@ -632,10 +632,16 @@
   // }
 
   .proposal__gallery {
-    display: none;
+    display: block;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
     &.opened {
-      display: block;
+      opacity: 1;
+      max-height: 100em;
     }
+
     @media (max-width: $mobile-max-width) {
       margin-left: 0;
       //margin-left: 16px;
@@ -645,15 +651,19 @@
   .button--blue {
     margin-top: 32px;
     align-self: start;
-    display: block;
+    display: none;
     padding-top: 11px;
     padding-bottom: 11px;
-    display: none;
     //display: block;
     margin-left: 32px;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
     &.opened {
       display: block;
+      opacity: 1;
+      max-height: 100em;
     }
 
     @media (max-width: $tablet-width) {
@@ -703,6 +713,7 @@
   .proposal__project-text {
     max-height: 4.3em;
     margin-bottom: 23px;
+    transition: max-height 0.3s ease-in-out;
 
     @media (max-width: $mobile-max-width) {
       max-height: 4.2em;
@@ -711,7 +722,7 @@
     }
 
     &.opened {
-      max-height: none;
+      max-height: 100em;
 
       &:after {
         display: none;
@@ -1213,13 +1224,20 @@
 
 .proposal__project-mark {
   display: flex;
-  display: none;
+  //display: none;
   align-items: center;
-  margin-top: 32px;
+  margin-top: 0;
   margin-left: 32px;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  overflow: hidden;
 
   &.opened {
-    display: flex;
+    max-height: 100em;
+    margin-top: 32px;
+    margin-left: 32px;
+    opacity: 1;
     //margin-left: 32px;
   }
 

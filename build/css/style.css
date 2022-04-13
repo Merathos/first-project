@@ -6973,9 +6973,14 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   margin-bottom: 33px;
   position: relative; }
   .proposal__project .proposal__gallery {
-    display: none; }
+    display: block;
+    max-height: 0;
+    opacity: 0;
+    -webkit-transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; }
     .proposal__project .proposal__gallery.opened {
-      display: block; }
+      opacity: 1;
+      max-height: 100em; }
     @media (max-width: 400px) {
       .proposal__project .proposal__gallery {
         margin-left: 0; } }
@@ -6983,13 +6988,18 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     margin-top: 32px;
     -ms-flex-item-align: start;
         align-self: start;
-    display: block;
+    display: none;
     padding-top: 11px;
     padding-bottom: 11px;
-    display: none;
-    margin-left: 32px; }
+    margin-left: 32px;
+    max-height: 0;
+    opacity: 0;
+    -webkit-transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out; }
     .proposal__project .button--blue.opened {
-      display: block; }
+      display: block;
+      opacity: 1;
+      max-height: 100em; }
     @media (max-width: 768px) {
       .proposal__project .button--blue {
         margin-left: 30px; } }
@@ -7022,14 +7032,16 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     display: none; }
   .proposal__project .proposal__project-text {
     max-height: 4.3em;
-    margin-bottom: 23px; }
+    margin-bottom: 23px;
+    -webkit-transition: max-height 0.3s ease-in-out;
+    transition: max-height 0.3s ease-in-out; }
     @media (max-width: 400px) {
       .proposal__project .proposal__project-text {
         max-height: 4.2em;
         margin-bottom: 9px;
         margin-bottom: 20px; } }
     .proposal__project .proposal__project-text.opened {
-      max-height: none; }
+      max-height: 100em; }
       .proposal__project .proposal__project-text.opened:after {
         display: none; }
     .proposal__project .proposal__project-text:after {
@@ -7373,18 +7385,23 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 32px;
+  margin-top: 0;
   margin-left: 32px;
+  max-height: 0;
+  opacity: 0;
+  -webkit-transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  overflow: hidden;
   font-size: 18px;
   line-height: 23.4px; }
   .proposal__project-mark.opened {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
+    max-height: 100em;
+    margin-top: 32px;
+    margin-left: 32px;
+    opacity: 1; }
   @media (max-width: 400px) {
     .proposal__project-mark {
       margin-left: 0;

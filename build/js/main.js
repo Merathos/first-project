@@ -3638,6 +3638,7 @@ var openAkordeon = function (btn) {
 
 var onOpenAkordeon = function (evt) {
   var projectToggleTextButton = evt.target.closest('.button-details');
+  console.log('1')
   if (projectToggleTextButton) {
     openAkordeon(projectToggleTextButton);
   }
