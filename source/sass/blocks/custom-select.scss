@@ -77,9 +77,9 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 135%;
-    color: #354052;
+    color: var(--color-text, #354052);
 
-    background-color: rgba(255, 255, 255, 0);
+    background-color: var(--color-bg-secondary, $white);
     border: 1px solid #e3e8ee;
     border-radius: 5px 5px 5px 5px;
     outline: none;
@@ -104,7 +104,7 @@
     flex-direction: column;
     width: 100%;
 
-    background-color: #ffffff;
+    background-color: var(--color-bg-secondary, $white);
     transform: translateY(100%);
     visibility: hidden;
     opacity: 0;
@@ -201,7 +201,7 @@
 
     list-style: none;
 
-    background-color: #ffffff;
+    background-color: var(--color-bg-secondary, $white);
     border: 2px solid #000000;
   }
 
@@ -240,7 +240,7 @@
     &[aria-selected="true"] {
       order: -1;
 
-      color: #354052;
+      color: var(--color-text, #354052);
 
       background-color: #ffffff;
 

@@ -61,8 +61,8 @@
 .form-checkbox-update__custom-checkbox:checked+label {
   position: relative;
   &:before {
-    border-color: $blue-default;
-    background-color: $blue-default;
+    border-color: var(--color-interactive-default, $blue-default);
+    background-color: var(--color-interactive-default, $blue-default);
   }
   &:after {
     background-image: url("../img/icon-tick-white_2.svg");

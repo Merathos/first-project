@@ -49,6 +49,13 @@
   }
 }
 
+.mod-theme-inverse .status-info__text-group svg,
+.mod-theme-blue .status-info__text-group svg,
+.mod-theme-comfort .status-info__text-group svg,
+.mod-theme-brown .status-info__text-group svg {
+  display: none;
+}
+
 .status-info__title {
   font-weight: 500;
   font-size: rem(18px);

@@ -33,6 +33,7 @@ html {
     --color-stroke: #{$light-grey};
     --color-tag: #{$grey};
     --color-text: #{$white};
+    --color-blue: #{$light-blue};
   }
 
 
@@ -47,6 +48,7 @@ html {
     --color-stroke: #{$blue-default};
     --color-tag: #{$light-grey};
     --color-text: #{$dark-text};
+    --color-blue: #{$light-blue};
   }
 
 
@@ -61,6 +63,7 @@ html {
     --color-stroke: #{$comfort};
     --color-tag: #{$light-grey};
     --color-text: #{$comfort};
+    --color-blue: #{$light-blue};
   }
 
 
@@ -75,6 +78,7 @@ html {
     --color-stroke: #{$light-green};
     --color-tag: #{$grey};
     --color-text: #{$light-green};
+    --color-blue: #{$light-blue};
   }
 }
 

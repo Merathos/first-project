@@ -1,7 +1,7 @@
 .project-rules {
   position: relative;
   padding: 15px 15px 15px 35px;
-  border: 1px solid var(--color-stroke, $light-grey);
+  border: 1px solid var(--color-text, $light-grey);
   border-radius: $border-radius;
 
   @include font;
@@ -48,7 +48,7 @@
     padding: 20px;
 
     span {
-      color: $grey;
+      color: var(--color-text, $grey);
     }
   }
 }

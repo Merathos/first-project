@@ -53,8 +53,10 @@
 
     + .info-banner__text {
       @media (max-width: $mobile-max-width) {
-        padding-top: 36px;
-        height: calc(7.8em + 36px);
+        padding-left: 36px;
+        margin: 0;
+        margin-top: 4px;
+        //height: calc(7.8em + 36px);
       }
     }
   }
@@ -260,7 +262,7 @@
 
 .info-banner--black {
   .info-banner__title {
-    color: $dark-text;
+    color: var(--color-text, $dark-text);
   }
 
   border-color: $light-grey;

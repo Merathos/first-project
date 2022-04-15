@@ -100,6 +100,7 @@
   display: flex;
   align-items: center;
   margin-right: 16px;
+  color: var(--color-text, $grey-lighter);
 
   @media (max-width: $mobile-max-width) {
     margin-bottom: 10px;
@@ -108,7 +109,6 @@
   }
 
   span {
-    color: $grey-lighter;
     font-size: 14px;
     line-height: 18.2px;
   }
@@ -117,6 +117,11 @@
     margin-right: 8px;
     width: 14px;
     height: 14px;
+    stroke: var(--color-interactive-default, $white);
+
+    circle {
+      fill: var(--color-text, #DCDEE0);
+    }
   }
 }
 
@@ -270,7 +275,7 @@
   }
 
   .stroked {
-    fill: var(--color-text, $grey-default);
+    fill: var(--color-interactive-default, $grey-default);
 
     transition: fill $style-change-duration;
   }

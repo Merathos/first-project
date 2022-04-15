@@ -539,19 +539,20 @@
 
   a {
     text-decoration: none;
-    color: $blue-default;
+    color: var(--color-text, $blue-default);
     font-size: 15px;
     line-height: 20.25px;
     font-weight: 400;
     padding-bottom: 2px;
-    border-bottom: 1px dashed $blue-default;
+    border-bottom: 1px dashed var(--color-text, $blue-default);
   }
 
   svg {
     width: 20px;
     height: 20px;
     margin-right: 8px;
-    fill: white;
+    fill: var(--color-text, white);
+    stroke: var(--color-interactive-default, #2C8ECC);
   }
 }
 

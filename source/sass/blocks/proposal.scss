@@ -144,14 +144,14 @@
 }
 
 .proposal__vote-period {
-  color: $grey-default;
+  color: var(--color-text, $grey-default);
   font-size: rem(16px);
   line-height: 135%;
   font-weight: 400;
 }
 
 .proposal__vote-dates {
-  color: $dark-text;
+  color: var(--color-text, $dark-text);
 }
 
 .proposal__text-container {
@@ -350,7 +350,7 @@
 
 .proposal__tabs {
   display: flex;
-  border-bottom: 1px solid $light-grey;
+  border-bottom: 1px solid var(--color-text, $light-grey);
   margin-bottom: 38px;
   grid-area: g;
 
@@ -441,7 +441,7 @@
   font-size: 24px;
   line-height: 28.44px;
   font-weight: 400;
-  color: $grey;
+  color: var(--color-text, $grey);
   padding-bottom: 13px;
   margin-right: 40px;
   border-bottom: 1px solid transparent;
@@ -478,8 +478,8 @@
   }
 
   &--active {
-    border-bottom: 1px solid $blue-default;
-    color: $blue-default;
+    border-bottom: 1px solid var(--color-interactive-default, $blue-default);
+    color: var(--color-interactive-default, $blue-default);
     cursor: unset;
   }
 
@@ -609,8 +609,8 @@
   span {
     font-size: 15px;
     line-height: 20.25px;
-    color: $blue-default;
-    border-bottom: 1px dashed #9BD2F4;
+    color: var(--color-text, $blue-default);
+    border-bottom: 1px dashed var(--color-text, #9BD2F4);
   }
 
   svg {
@@ -623,7 +623,7 @@
   flex-wrap: wrap;
   flex-direction: column;
   padding-bottom: 32px;
-  border-bottom: 1px solid $light-grey;
+  border-bottom: 1px solid var(--color-text, $light-grey);
   margin-bottom: 33px;
   position: relative;
 
@@ -688,7 +688,7 @@
       font-size: 18px;
       line-height: 23.4px;
       font-weight: 400;
-      color: $dark-text;
+      color: var(--color-text, $dark-text);
     }
 
     .form-checkbox {
@@ -917,7 +917,7 @@
   // параграф описание проекта
   .proposal__project-text {
     position: relative;
-    color: $dark-text;
+    color: var(--color-text, $dark-text);
     font-size: 15px;
     line-height: 20.25px;
     padding-left: 32px;
@@ -1123,13 +1123,13 @@
     line-height: 23.4px;
     font-weight: 400;
     margin: 0;
-    color: $dark-text;
+    color: var(--color-text, $dark-text);
   }
 
   .proposal__project-votes {
     font-size: 13px;
     line-height: 16.9px;
-    color: $grey;
+    color: var(--color-text, $grey);
     margin-left: auto;
     align-self: baseline;
     @media (max-width: $tablet-width) {
@@ -1280,7 +1280,7 @@
     top: 30px;
     bottom: 32px;
     left: 8px;
-    background: $blue-default;
+    background: var(--color-text, $blue-default);
     width: 2px;
 
     @media (max-width: $tablet-width) {
@@ -1322,12 +1322,12 @@
   }
 }
 
-label.proposal__project-title {
+.form-radio input[type="radio"]:checked ~ label.proposal__project-title {
   font-size: 18px;
   line-height: 23.4px;
   font-weight: 400;
   margin: 0;
-  color: $dark-text;
+  color: var(--color-text, $dark-text);
   max-width: 300px;
 
   @media (max-width: $tablet-width) {
@@ -1336,10 +1336,13 @@ label.proposal__project-title {
 
   &::before {
     margin-right: 11px;
+    border: 6px solid var(--color-text, $blue-default);
   }
 }
 
 .button-details__icon {
   width: 14px;
   height: 8px;
+  fill: var(--color-text, $blue-default);
+  color: var(--color-text, $blue-default);
 }

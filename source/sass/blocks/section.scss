@@ -82,5 +82,5 @@ a.section__description-link {
 }
 
 .section--gray {
-  background-color: $color-bg;
+  background-color: var(--color-bg-main, $color-bg);
 }

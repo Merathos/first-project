@@ -26,8 +26,8 @@
 <circle cx="10" cy="10" r="9.25" stroke="#2C8ECC" stroke-width="1.5"/>
 <path d="M6 10L9.2 13L14 7" stroke="#2C8ECC" stroke-width="1.5"/>
 </symbol><symbol id="checkbox-blue-2" viewBox="0 0 20 20">
-<circle cx="10" cy="10" r="9.25" stroke="#2C8ECC" stroke-width="1.5"/>
-<path d="M6 10L9.2 13L14 7" stroke="#2C8ECC" stroke-width="1.5"/>
+<circle cx="10" cy="10" r="9.25" stroke="" stroke-width="1.5"/>
+<path d="M6 10L9.2 13L14 7" stroke="" stroke-width="1.5"/>
 </symbol><symbol id="checkbox-blue" viewBox="0 0 24 24">
 <circle cx="12" cy="12" r="11.25" stroke="#2C8ECC" stroke-width="1.5"/>
 <path d="M7 12L11 16L17 8" stroke="#2C8ECC" stroke-width="1.5"/>
