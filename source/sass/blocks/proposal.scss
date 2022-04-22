@@ -585,6 +585,30 @@
       order: 1;
       margin-bottom: 24px;
     }
+
+    .proposal__project-votes {
+      display: inline-block;
+      margin-bottom: 5px;
+      font-size: 13px;
+      line-height: 16.9px;
+      color: var(--color-text, $grey);
+      margin-left: auto;
+      align-self: baseline;
+      @media (max-width: $tablet-width) {
+        margin-right: auto;
+        margin-left: 32px;
+      }
+      @media (max-width: $mobile-max-width) {
+        margin-right: auto;
+        margin-left: 32px;
+      }
+
+      &--desktop {
+        @media (max-width: $tablet-width) {
+          display: none;
+        }
+      }
+    }
   }
   @media (min-width: $tablet-width) {
     margin-right: 24px;
@@ -1139,6 +1163,14 @@
     @media (max-width: $mobile-max-width) {
       margin-right: auto;
       margin-left: 32px;
+    }
+
+    &--mobile {
+      display: none;
+
+      @media (max-width: $tablet-width) {
+        display: inline-block;
+      }
     }
   }
 

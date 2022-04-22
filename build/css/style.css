@@ -3386,7 +3386,7 @@ span.datepicker-cell {
         max-width: 100%; } }
   .button--update {
     font-size: 0.9375rem;
-    line-height: 1.26563rem;
+    line-height: 1.26562rem;
     font-weight: 500; }
 
 @media print {
@@ -6607,7 +6607,6 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       margin-bottom: 40px; } }
   @media (min-width: 1200px) {
     .proposal__vote {
-      position: -webkit-sticky;
       position: sticky;
       top: 115px;
       grid-area: e; } }
@@ -6936,6 +6935,26 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
             -ms-flex-order: 1;
                 order: 1;
         margin-bottom: 24px; } }
+    .proposal__project-wrapper .proposal__project-img .proposal__project-votes {
+      display: inline-block;
+      margin-bottom: 5px;
+      font-size: 13px;
+      line-height: 16.9px;
+      color: var(--color-text, #707b8c);
+      margin-left: auto;
+      -ms-flex-item-align: baseline;
+          align-self: baseline; }
+      @media (max-width: 768px) {
+        .proposal__project-wrapper .proposal__project-img .proposal__project-votes {
+          margin-right: auto;
+          margin-left: 32px; } }
+      @media (max-width: 400px) {
+        .proposal__project-wrapper .proposal__project-img .proposal__project-votes {
+          margin-right: auto;
+          margin-left: 32px; } }
+      @media (max-width: 768px) {
+        .proposal__project-wrapper .proposal__project-img .proposal__project-votes--desktop {
+          display: none; } }
   @media (min-width: 768px) {
     .proposal__project-wrapper {
       margin-right: 24px; } }
@@ -7339,6 +7358,11 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       .proposal__project-head .proposal__project-votes {
         margin-right: auto;
         margin-left: 32px; } }
+    .proposal__project-head .proposal__project-votes--mobile {
+      display: none; }
+      @media (max-width: 768px) {
+        .proposal__project-head .proposal__project-votes--mobile {
+          display: inline-block; } }
   .proposal__project-head .form-radio {
     margin-bottom: 0;
     margin-right: 5px; }
@@ -11611,7 +11635,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
 .notification__more {
   margin-top: 16px;
   padding: 0;
-  line-height: 1.26563rem;
+  line-height: 1.26562rem;
   background-color: transparent;
   border: none;
   cursor: pointer; }
@@ -15986,7 +16010,7 @@ span.poll__hide {
     margin: 0 auto;
     font-weight: 500;
     font-size: 0.9375rem;
-    line-height: 1.26563rem;
+    line-height: 1.26562rem;
     color: #2c8ecc;
     text-transform: uppercase;
     padding: 0;
@@ -16190,7 +16214,7 @@ ymaps p {
           align-items: center;
   padding-top: 0;
   font-size: 0.9375rem;
-  line-height: 1.26563rem;
+  line-height: 1.26562rem;
   text-decoration: none;
   position: relative;
   color: #2c8ecc; }
@@ -16376,7 +16400,6 @@ ymaps p {
   grid-area: c; }
   @media (min-width: 1200px) {
     .hearings__time-frame {
-      position: -webkit-sticky;
       position: sticky;
       top: 90px; } }
   @media (max-width: 1199px) {
@@ -18974,7 +18997,6 @@ span.poll-page__hide {
     background-repeat: no-repeat;
     background-size: 100% 1px; }
   .table-fixed table tr:first-child {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 10;
