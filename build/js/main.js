@@ -1850,11 +1850,12 @@ window.galleryInSliderReset = resetSlider;
 
   var initializePopup = function (target) {
     imageContainer.innerHTML = '';
+    var targetLink = target.closest('.js-image-popup-link');
 
     var image = document.createElement('img');
-    var sourceImage = target.querySelector('img');
+    // var sourceImage = target.querySelector('img');
 
-    image.setAttribute('src', sourceImage.getAttribute('src'));
+    image.setAttribute('src', targetLink.getAttribute('href'));
 
     imageContainer.appendChild(image);
   };
