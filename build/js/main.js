@@ -4462,9 +4462,9 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
     }
 
     var gallery = wrap.querySelector('.js-gallery-full');
-    var sourceImage = target.querySelector('img');
+    var sourceImage = target.closest('.js-single-image-link');
 
-    var markup = '<button class="gallery-full__btn gallery-full__btn--close js-single-photo-close-btn" type="button"><span class="visually-hidden">Закрыть</span><svg width="16" height="16"><use xlink:href="img/sprite.svg#icon-close"></use></svg></button><div class="gallery-full__image js-single-photo-frame"><img src="' + sourceImage.getAttribute('src') + '"></div>';
+    var markup = '<button class="gallery-full__btn gallery-full__btn--close js-single-photo-close-btn" type="button"><span class="visually-hidden">Закрыть</span><svg width="16" height="16"><use xlink:href="img/sprite.svg#icon-close"></use></svg></button><div class="gallery-full__image js-single-photo-frame"><img src="' + sourceImage.getAttribute('href') + '"></div>';
 
     var singleImage = document.createElement('div');
     singleImage.classList.add('project__gallery-full', 'gallery-full', 'opened', 'js-single-image');
