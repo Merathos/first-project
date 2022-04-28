@@ -145,7 +145,7 @@
   }
 
   .proposal__project-title {
-    max-width: 250px;
+    max-width: 100%;
 
     @media (max-width: $tablet-width) {
       max-width: unset;

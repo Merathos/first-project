@@ -1360,7 +1360,6 @@
   font-weight: 400;
   margin: 0;
   color: var(--color-text, $dark-text);
-  max-width: 300px;
 
   @media (max-width: $tablet-width) {
     max-width: unset;

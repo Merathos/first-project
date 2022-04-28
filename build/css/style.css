@@ -7507,8 +7507,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   line-height: 23.4px;
   font-weight: 400;
   margin: 0;
-  color: var(--color-text, #354052);
-  max-width: 300px; }
+  color: var(--color-text, #354052); }
   @media (max-width: 768px) {
     .form-radio input[type="radio"]:checked ~ label.proposal__project-title {
       max-width: unset; } }
@@ -14184,7 +14183,7 @@ span.poll__hide {
     padding-top: 0;
     padding-left: 0; }
   .popup__content--projects .proposal__project-title {
-    max-width: 250px; }
+    max-width: 100%; }
     @media (max-width: 768px) {
       .popup__content--projects .proposal__project-title {
         max-width: unset; } }
