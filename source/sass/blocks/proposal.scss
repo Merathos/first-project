@@ -320,6 +320,48 @@
       color: var(--color-text, $green);
     }
   }
+
+  &--files {
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $tablet-width) {
+      flex-direction: column;
+    }
+
+    .files {
+      width: auto;
+      grid-gap: 32px;
+      margin-left: 25px;
+
+      @media (max-width: $desktop-width) {
+        grid-gap: 16px;
+      }
+
+      @media (max-width: $tablet-width) {
+        margin-left: 0;
+        margin-top: 16px;
+      }
+
+      .file-item {
+        width: 270px;
+        padding: 0;
+        border: none;
+
+        @media (max-width: $desktop-width) {
+          width: 200px;
+        }
+
+        @media (max-width: $tablet-width) {
+          width: auto;
+        }
+      }
+
+      .file-item__name:not(.hack-class) {
+        color: var(--color-text, $dark-text);
+      }
+    }
+  }
 }
 
 .proposal__files {
@@ -1124,9 +1166,7 @@
 
 .proposal__project-head {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  justify-content: unset;
+  flex-direction: column;
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
@@ -1376,4 +1416,59 @@
   height: 8px;
   fill: var(--color-text, $blue-default);
   color: var(--color-text, $blue-default);
+}
+
+.proposal__banner {
+  padding: 24px 32px 24px 68px;
+  margin-bottom: 24px;
+
+  @media (max-width: $desktop-width) {
+    margin-right: 20px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding-left: 54px;
+  }
+
+  @media (max-width: $mobile-max-width) {
+    padding-top: 12px;
+    padding-right: 14px;
+    padding-bottom: 16px;
+    padding-left: 15px;
+  }
+
+  .info-banner__icon {
+    top: 26px;
+  }
+}
+
+.proposal__markup {
+  display: flex;
+  align-items: center;
+
+  padding-left: 28px;
+  margin-top: 9px;
+
+  color: var(--color-icon, $orange);
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 8px;
+  }
+
+  &--blue {
+    color: var(--color-icon, $blue-default);
+  }
+
+  svg {
+    color: inherit;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.proposal__markup-text {
+  color: inherit;
+  font-size: 15px;
+  line-height: 135%;
+  margin-left: 4px;
 }

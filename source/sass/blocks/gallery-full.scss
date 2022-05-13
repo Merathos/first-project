@@ -80,3 +80,23 @@
     object-fit: cover;
   }
 }
+
+.gallery-full__image {
+  img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+
+    margin: 0 auto;
+  }
+}
+
+.gallery-full__item {
+  img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+
+    margin: 0 auto;
+  }
+}

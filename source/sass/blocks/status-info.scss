@@ -15,6 +15,10 @@
   &--green {
     background-color: var(--color-bg-secondary, $green);
   }
+
+  &--voting {
+    margin-top: 30px;
+  }
 }
 
 //.mod-theme-inverse .status-info {
