@@ -6751,6 +6751,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column; } }
+    .proposal__status--files p {
+      margin-top: 3px; }
     .proposal__status--files .files {
       width: auto;
       grid-gap: 32px;
@@ -7562,13 +7564,18 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       margin-right: 20px; } }
   @media (max-width: 768px) {
     .proposal__banner {
-      padding-left: 54px; } }
+      padding-left: 54px;
+      margin-right: 24px; } }
   @media (max-width: 400px) {
     .proposal__banner {
       padding-top: 12px;
       padding-right: 14px;
       padding-bottom: 16px;
       padding-left: 15px; } }
+  @media (max-width: 400px) {
+    .proposal__banner {
+      margin-right: 16px;
+      margin-top: 34px; } }
   .proposal__banner .info-banner__icon {
     top: 26px; }
 

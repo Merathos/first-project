@@ -329,6 +329,10 @@
       flex-direction: column;
     }
 
+    p {
+      margin-top: 3px;
+    }
+
     .files {
       width: auto;
       grid-gap: 32px;
@@ -1428,6 +1432,7 @@
 
   @media (max-width: $tablet-width) {
     padding-left: 54px;
+    margin-right: 24px;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -1435,6 +1440,11 @@
     padding-right: 14px;
     padding-bottom: 16px;
     padding-left: 15px;
+  }
+
+  @media (max-width: 400px) {
+    margin-right: 16px;
+    margin-top: 34px;
   }
 
   .info-banner__icon {
