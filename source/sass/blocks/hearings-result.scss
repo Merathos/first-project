@@ -26,6 +26,10 @@
         position: relative;
         z-index: 2;
     }
+
+    &--public {
+      padding-bottom: 0;
+    }
 }
 
 .hearings-result__files {
@@ -72,6 +76,11 @@
     @include mobile {
         padding: 24px;
     }
+
+    &--public {
+      padding-bottom: 24px;
+      margin-bottom: 48px;
+    }
 }
 
 .hearings-result__survey-container {
@@ -82,6 +91,72 @@
     .form-radio:last-child {
         margin-bottom: 0;
     }
+
+    &--public {
+      padding-bottom: 0;
+      margin-bottom: 0;
+      border-bottom: none;
+
+      .hearings-result__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .form__question {
+        margin-bottom: 0;
+      }
+    }
+
+    &.is-open {
+      .form__toggle svg {
+        transform: rotate(180deg);
+      }
+    }
+
+    .form__bottom {
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid var(--color-stroke, $light-grey);
+    }
+
+    .form__toggle {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      margin-left: 20px;
+
+      color: var(--color-stroke, $blue-default);
+
+      font-size: 15px;
+      line-height: 135%;
+      white-space: nowrap;
+
+      cursor: pointer;
+
+      transition: color 0.15s ease;
+
+      &.focus-visible:focus,
+      &:hover:not(.focus-visible) {
+        color: var(--color-interactive-default, $blue-accent);
+      }
+
+      svg {
+        margin-left: 8px;
+
+        transition: transform 0.15s ease;
+      }
+    }
+}
+
+.hearings-result__content {
+  display: none;
+
+  margin-top: 24px;
+
+  .is-open & {
+    display: block;
+  }
 }
 
 .hearings-result__survey-btn {

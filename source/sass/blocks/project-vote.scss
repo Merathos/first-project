@@ -39,6 +39,13 @@
   &--fulfillment {
     margin-bottom: 8px;
   }
+
+  &--result {
+    color: var(--color-text, $blue-default);
+    font-weight: 300;
+    font-size: rem(40px);
+    line-height: rem(47px);
+  }
 }
 
 .project-vote__date {
@@ -90,6 +97,10 @@
       font-weight: 400;
       font-style: normal;
     }
+  }
+
+  &--result {
+    margin-top: 0;
   }
 }
 
