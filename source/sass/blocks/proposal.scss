@@ -366,6 +366,12 @@
       }
     }
   }
+
+  &--orange {
+    p span {
+      color: var(--color-text, $orange);
+    }
+  }
 }
 
 .proposal__files {

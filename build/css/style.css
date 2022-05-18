@@ -6776,6 +6776,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
             width: auto; } }
       .proposal__status--files .files .file-item__name:not(.hack-class) {
         color: var(--color-text, #354052); }
+  .proposal__status--orange p span {
+    color: var(--color-text, #fca844); }
 
 .proposal__files {
   margin-bottom: 48px; }
