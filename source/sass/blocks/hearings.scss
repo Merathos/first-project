@@ -32,16 +32,14 @@
   }
 
   &--public {
-    grid-template-areas:
-      "a   a"
-      "b   c"
-      "result c"
-      "d   c"
-      "e   c"
-      "f   c"
-      "g   c"
-      "h   c"
-      "i   c"
+    .hearings__files {
+      padding-bottom: 48px;
+      border-bottom: 1px solid $light-grey;
+
+      @include mobile {
+        padding-bottom: 32px;
+      }
+    }
   }
 
   &--result {
@@ -263,6 +261,10 @@
 
   margin-bottom: 32px;
 
+  @include mobile {
+    padding: 16px;
+  }
+
   .subtitle {
     margin:  0 0 16px;
   }
@@ -274,6 +276,10 @@
   font-size: 15px;
   line-height: 135%;
 
+  @include mobile {
+    margin-bottom: 24px;
+  }
+
   a {
     display: inline;
   }
@@ -282,10 +288,18 @@
 .hearings__application-status {
   margin-bottom: 48px;
   grid-area: g;
+
+  @include mobile {
+    margin-bottom: 32px;
+  }
 }
 
 .hearings__bottom {
   grid-area: h;
   padding-top: 48px;
   border-top: 1px solid $light-grey;
+
+  @include mobile {
+    padding-top: 32px;
+  }
 }

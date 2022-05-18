@@ -21,17 +21,37 @@
 })();
 
 'use strict';
+
+(function () {
+  var popup = document.querySelector('.js-application-popup');
+
+  if (!popup) {
+    return;
+  }
+
+  var onDocumentClick = function (evt) {
+    if (evt.target.classList.contains('js-application-link')) {
+      evt.preventDefault();
+
+      window.openPopup(popup);
+    }
+  };
+
+  document.addEventListener('click', onDocumentClick);
+})();
+
+'use strict';
 (function () {
   var toggle = document.querySelector('.js-application-toggle');
   var parent = document.querySelector('.js-application-parent');
 
-  if (!toggle) {
+  if (!toggle || !parent) {
     return;
   }
 
   var toggleText = toggle.querySelector('span');
 
-  var onToggleClick = function (evt) {
+  var onToggleClick = function () {
     toggleText.textContent = '';
     parent.classList.toggle('is-open');
 
@@ -1337,13 +1357,13 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   var toggle = document.querySelector('.js-expand-toggle');
   var parent = document.querySelector('.js-expand-parent');
 
-  if (!toggle) {
+  if (!toggle || !parent) {
     return;
   }
 
   var toggleText = toggle.querySelector('span');
 
-  var onToggleClick = function (evt) {
+  var onToggleClick = function () {
     toggleText.textContent = '';
     parent.classList.toggle('is-open');
 
@@ -1360,6 +1380,7 @@ var initFileUploader = function() {
 
   if (blockContainer) {
     var input = blockContainer.querySelector('.js-user-files');
+    var fileLabel = blockContainer.querySelector('.js-file-label');
     // var initialInput = input.cloneNode(true);
     // var label = blockContainer.querySelector('label');
     var previewContainer = blockContainer.querySelector('.file-uploads__preview-container');
@@ -1390,12 +1411,19 @@ var initFileUploader = function() {
       button.setAttribute('aria-label', 'удалить загруженные данные');
       btnContainer.appendChild(button);
       button.addEventListener('click', function () {
+
+        if (input.classList.contains('js-user-files-one')) {
+          fileLabel.classList.remove('is-hidden');
+        }
+
         btnContainer.remove();
         var index = files.indexOf(file);
         if (index > -1) {
           files.splice(index, 1);
           // checkInputVisible();
         }
+        // var input = container.querySelector('.js-user-files');
+
       });
     };
 
@@ -1419,6 +1447,10 @@ var initFileUploader = function() {
           // checkInputVisible();
           renderPreview(file);
         });
+      }
+
+      if (input.classList.contains('js-user-files-one')) {
+        fileLabel.classList.add('is-hidden');
       }
       // input.files = initialInput.files;
     });

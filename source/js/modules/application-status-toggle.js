@@ -3,13 +3,13 @@
   var toggle = document.querySelector('.js-application-toggle');
   var parent = document.querySelector('.js-application-parent');
 
-  if (!toggle) {
+  if (!toggle || !parent) {
     return;
   }
 
   var toggleText = toggle.querySelector('span');
 
-  var onToggleClick = function (evt) {
+  var onToggleClick = function () {
     toggleText.textContent = '';
     parent.classList.toggle('is-open');
 
