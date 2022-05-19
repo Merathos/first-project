@@ -1,5 +1,5 @@
 .application-status {
-  background: $color-bg;
+  background: var(--color-bg-secondary, $color-bg);
   border-radius: 5px;
 
   padding: 32px;
@@ -59,7 +59,7 @@
 
   color: var(--color-stroke, $blue-default);
 
-  font-size: 15px;
+  font-size: rem(15px);
   line-height: 135%;
   white-space: nowrap;
 
@@ -93,7 +93,7 @@
 .application-status__text {
   color: var(--color-text, $grey);
 
-  font-size: 15px;
+  font-size: rem(15px);
   line-height: 135%;
 
   margin: 0;
@@ -113,7 +113,7 @@
 }
 
 .application-status__title {
-  font-size: 18px;
+  font-size: rem(18px);
   line-height: 135%;
   font-weight: 400;
 
@@ -124,7 +124,7 @@
   span {
     display: block;
     margin-bottom: 8px;
-    font-size: 15px;
+    font-size: rem(15px);
   }
 }
 
@@ -133,7 +133,7 @@
 
   margin-bottom: 24px;
 
-  border: 1px solid $light-green-2;
+  border: 1px solid var(--color-stroke, $light-green-2);
   border-radius: 5px;
 
   @include mobile {
@@ -141,11 +141,11 @@
   }
 
   .application-status--red & {
-    border-color: $light-red;
+    border-color: var(--color-stroke, $light-red);
   }
 
   .application-status--blue & {
-    border-color: $light-blue-accent
+    border-color: var(--color-stroke, $light-blue-accent);
   }
 }
 
@@ -156,6 +156,9 @@
   color: var(--color-text, $green);
 
   margin-bottom: 8px;
+
+  font-size: rem(13px);
+  line-height: 130%;
 
   .application-status--red & {
     color: var(--color-text, $red);
@@ -175,7 +178,7 @@
   margin: 0 0 12px;
   padding-left: 25px;
 
-  font-size: 13px;
+  font-size: rem(13px);
   line-height: 130%;
   color: var(--color-text, $grey);
 
@@ -192,7 +195,7 @@
 
 .application-status__date {
   padding-left: 25px;
-  font-size: 13px;
+  font-size: rem(13px);
   line-height: 130%;
   color: var(--color-text, $grey-default);
 
@@ -204,7 +207,7 @@
 .application-status__files {
   padding-top: 32px;
   margin-top: 32px;
-  border-top: 1px solid $light-grey;
+  border-top: 1px solid var(--color-stroke, $light-grey);
 
   display: flex;
   flex-direction: column;
@@ -216,7 +219,7 @@
 
   .file-item {
     width: 100%;
-    background-color: $white;
+    background-color: var(--color-bg-secondary, $white);
 
     @include mobile {
       svg {
@@ -230,7 +233,7 @@
   margin-bottom: 32px;
   margin-top: 0;
 
-  font-size: 15px;
+  font-size: rem(15px);
   line-height: 180%;
 
   color: var(--color-text, $grey);

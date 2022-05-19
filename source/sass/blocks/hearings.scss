@@ -31,17 +31,6 @@
     align-self: start;
   }
 
-  &--public {
-    .hearings__files {
-      padding-bottom: 48px;
-      border-bottom: 1px solid $light-grey;
-
-      @include mobile {
-        padding-bottom: 32px;
-      }
-    }
-  }
-
   &--result {
     grid-template-areas:
       "a   a"
@@ -68,6 +57,29 @@
     .hearings__time-frame {
       @include mobile {
         margin-bottom: 35px;
+      }
+    }
+  }
+
+  &--public {
+    .hearings__files {
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--color-stroke, $light-grey);
+
+      @include mobile {
+        padding-bottom: 20px;
+      }
+    }
+
+    .hearings__status {
+      @include mobile {
+        margin-bottom: 24px;
+      }
+    }
+
+    .hearings__title {
+      @include mobile {
+        margin-bottom: 24px;
       }
     }
   }
@@ -256,7 +268,7 @@
 .hearings__proposal {
   grid-area: f;
   padding: 40px 32px;
-  background: $color-bg;
+  background: ar(--color-bg-secondary, $color-bg);
   border-radius: 5px;
 
   margin-bottom: 32px;
@@ -267,16 +279,22 @@
 
   .subtitle {
     margin:  0 0 16px;
+
+    @include mobile {
+      margin-bottom: 8px;
+    }
   }
 }
 
 .hearings__proposal-text {
   margin: 0 0 32px;
 
-  font-size: 15px;
+  font-size: rem(15px);
   line-height: 135%;
 
   @include mobile {
+    font-size: rem(13px);
+    line-height: 130%;
     margin-bottom: 24px;
   }
 
@@ -297,7 +315,7 @@
 .hearings__bottom {
   grid-area: h;
   padding-top: 48px;
-  border-top: 1px solid $light-grey;
+  border-top: 1px solid var(--color-stroke, $light-grey);
 
   @include mobile {
     padding-top: 32px;

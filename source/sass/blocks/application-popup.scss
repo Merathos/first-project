@@ -10,7 +10,9 @@
   width: 100%;
   max-width: 852px;
 
-  padding: 28px 39px 40px;
+  padding: 47px 39px 40px;
+
+  border-radius: 5px;
 
   @include tablet {
     margin: 0 auto;
@@ -23,7 +25,7 @@
   .popup__bar {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 5px;
   }
 }
 
@@ -35,7 +37,7 @@
   margin: 0;
 
   font-weight: 400;
-  font-size: 15px;
+  font-size: rem(15px);
   line-height: 135%;
 
   .link {
@@ -58,30 +60,27 @@
 
   @include mobile {
     flex-direction: column;
+    margin-bottom: 18px;
   }
 
   .application-popup__legend {
     @include mobile {
-      margin-bottom: 12px;
+      margin-bottom: 9px;
     }
   }
 }
 
 .application-popup__legend {
-  margin: 0 0 24px;
+  margin: 0 0 20px;
 
   font-weight: 400;
-  font-size: 18px;
+  font-size: rem(18px);
   line-height: 130%;
 }
 
 .application-popup__tooltip-link {
   display: flex;
   align-items: center;
-
-  @include mobile {
-    margin-top: 12px;
-  }
 }
 
 .application-popup__tooltip {
@@ -93,6 +92,13 @@
   width: 15px;
   height: 15px;
 
+  border-radius: 50%;
+  background-color: var(--color-bg-secondary, $light-grey);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   &:hover,
   &:focus {
     .application-popup__tooltip-text {
@@ -102,16 +108,13 @@
 }
 
 .application-popup__tooltip-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-
-  border-radius: 50%;
-  background-color: $light-grey;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // width: 100%;
 
   font-weight: 400;
-  font-size: 10.1818px;
+  font-size: rem(10px);
   line-height: 130%;
   color: var(--color-text, $grey);
 }
@@ -131,12 +134,12 @@
   margin: 0;
 
   font-weight: 400;
-  font-size: 13px;
+  font-size: rem(13px);
   line-height: 130%;
 
   color: var(--color-text, $grey);
 
-  background: $select-grey;
+  background: var(--color-bg-secondary, $select-grey);
 
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 4px rgba(0, 30, 75, 0.15);
   border-radius: 5px;
@@ -175,9 +178,9 @@
   display: grid;
   column-gap: 20px;
 
-  padding-bottom: 28px;
-  margin-bottom: 48px;
-  border-bottom: 1px solid $light-grey;
+  padding-bottom: 31px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid var(--color-stroke, $light-grey);
 
   @include mobile {
     padding-bottom: 12px;
@@ -213,7 +216,7 @@
       max-width: 510px;
 
       font-weight: 400;
-      font-size: 15px;
+      font-size: rem(15px);
       line-height: 140%;
       color: var(--color-text, $grey-default);
 
@@ -233,11 +236,18 @@
       flex-direction: column;
     }
 
+    .file-uploads__preview-container .file-wrapper button[type=button] {
+      @include mobile {
+        top: 16px;
+        right: 8px;
+      }
+    }
+
     .file-uploads__wrapper label span {
       padding-top: 0;
 
       @include mobile {
-        font-size: 15px;
+        font-size: rem(15px);
         max-width: 100%;
       }
 
@@ -258,11 +268,13 @@
 .application-popup__input-wrapper {
   position: relative;
 
-  margin-bottom: 20px;
+  margin-bottom: 17px;
 
   textarea {
     height: 51px;
     resize: none;
+
+    padding-bottom: 8px;
   }
 
   &--address {
@@ -314,7 +326,7 @@
 
   &--invalid {
     .application-popup__input {
-      border: 1px solid #f3a8a8;
+      border: 1px solid var(--color-interactive-default, #f3a8a8);
     }
 
     .application-popup__error-text {
@@ -326,7 +338,7 @@
     display: inline-block;
 
     font-weight: 400;
-    font-size: 13px;
+    font-size: rem(13px);
     line-height: 130%;
     color: var(--color-text, $grey-default);
 
@@ -344,8 +356,6 @@
     width: 100%;
     min-height: 123px;
     padding: 16px 22px;
-
-    resize: none;
   }
 }
 
@@ -382,7 +392,7 @@
   p {
     margin: 0 0 0 40px;
     max-width: 302px;
-    font-size: 13px;
+    font-size: rem(13px);
     line-height: 130%;
     color: var(--color-text, $grey-default);
 

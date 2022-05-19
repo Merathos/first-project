@@ -534,8 +534,8 @@
 
 .project-vote__choose-project {
   color: $grey;
-  font-size: 13px;
-  line-height: 16.9px;
+  font-size: rem(13px);
+  line-height: rem(16.9px);
   margin-top: 20px;
   margin-bottom: 20px;
   margin-bottom: 0;
@@ -573,4 +573,11 @@
 
 .project-vote__wrapper {
   width: 100%;
+}
+
+.project-vote__link {
+  margin-top: 16px;
+
+  font-size: rem(16px);
+  line-height: 135%;
 }
