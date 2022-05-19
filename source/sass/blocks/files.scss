@@ -10,11 +10,18 @@
   }
 
   &--one-column {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
+
+    .file-item {
+      margin-bottom: 12px;
+    }
   }
 
   &--gray {
-    background-color: $color-bg;
+    .file-item {
+      background-color: ar(--color-bg-secondary, $color-bg);
+    }
 
     .file-item__name {
       font-size: rem(15px);

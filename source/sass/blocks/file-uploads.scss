@@ -162,6 +162,7 @@
       font-size: rem(13px);
       line-height: rem(17px);
       color: var(--color-text, $dark-text);
+      word-break: break-word;
     }
 
     button[type="button"] {
