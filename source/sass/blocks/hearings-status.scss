@@ -11,6 +11,18 @@
     padding: 0;
   }
 
+  &--green {
+    .hearings-status__text span {
+      color: var(--color-text, $green);
+    }
+  }
+
+  &--blue {
+    .hearings-status__text span {
+      color: var(--color-text, $blue-default);
+    }
+  }
+
   p {
     margin: 0;
     margin-right: auto;

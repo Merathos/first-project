@@ -8,6 +8,19 @@
   .file-item {
     width: 100%;
   }
+
+  &--one-column {
+    grid-template-columns: 1fr;
+  }
+
+  &--gray {
+    background-color: $color-bg;
+
+    .file-item__name {
+      font-size: rem(15px);
+      line-height: 135%;
+    }
+  }
 }
 
 

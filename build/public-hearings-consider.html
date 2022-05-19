@@ -237,7 +237,7 @@
       <section class="hearings hearings--result hearings--public">
         <h1 class="hearings__title page-title">Реконструкция системы водоснабжения в р.п. Усть-Донецкий Усть-Донецкого района Ростовской области
         </h1>
-        <div class="hearings__status hearings-status hearings-status--green">
+        <div class="hearings__status hearings-status hearings-status--blue">
           <p class="hearings-status__text">Статус<span>Подведены итоги</span></p>
           <button class="button-star js-button-favorive" type="button" data-tooltip="В избранное" data-flow="down">
             <svg width="20" height="20" viewBox="0 0 20 20">
@@ -373,8 +373,7 @@
             Подать замечания и предложения
           </a>
         </div>
-
-        <div class="hearings__application-status application-status">
+        <div class="hearings__application-status application-status application-status--blue application-status--expanding js-application-parent">
           <div class="application-status__top">
             <p class="application-status__text">Усть-Донецкий район</p>
             <p class="application-status__text application-status__text--date">
@@ -386,15 +385,19 @@
             Представление замечаний и предложений по публичному слушанию
           </h2>
           <div class="application-status__result">
-              <span class="application-status__status">
-                <svg width="14" height="14">
-                  <use xlink:href="img/sprite.svg#icon-exclamation-2"></use>
-                </svg>
-                Принято</span>
-              <p class="application-status__info">Ваши замечания и предложения были приняты сотрудником органа местного самоуправления.</p>
-              <span class="application-status__date"> <time datetime="2021-04-17T11:51:00+03:00">17.04.2021, 11:51</time></span>
+            <span class="application-status__status">
+              <svg width="14" height="14">
+                <use xlink:href="img/sprite.svg#icon-exclamation-2"></use>
+              </svg>
+              На рассмотрении</span>
+            <p class="application-status__info">Ваши замечания и предложения были приняты сотрудником органа местного
+              самоуправления.</p>
+            <span class="application-status__date"> <time datetime="2021-04-17T11:51:00+03:00">17.04.2021, 11:51</time></span>
           </div>
           <div class="application-status__content js-application-content">
+            <p class="application-status__bottom-text">Ожидайте изменения статуса мероприятия для отслеживания информации об итогах
+              публичных слушаний в личном кабинете
+              пользователя в разделе <a class="link link--blue" href="#">«Моя активность»</a> или <a class="link link--blue" href="#">«общественные обсуждения и публичные слушания»</a></p>
             <div class="application-status__files">
               <a class="file-item" href="#" download="">
                 <svg width="24" height="24">
@@ -404,10 +407,15 @@
                   <span class="file-item__name">Нормативно правовой акт по реконструкции нормативно правовой</span>
                   <span class="file-item__download link link--blue">Скачать</span>
                 </p>
-
               </a>
             </div>
           </div>
+          <button class="application-status__toggle js-application-toggle">
+            <span>Развернуть</span>
+            <svg class="arrow-down info-banner-button__icon" xmlns="http://www.w3.org/2000/svg" fill="none" width="13" height="8" viewBox="0 0 14 8">
+              <path fill="currentColor" fill-rule="evenodd" d="M11.98 0L7 4.97 2.02 0 .5 1.51 7 8l6.5-6.49L11.98 0z" clip-rule="evenodd"></path>
+            </svg>
+          </button>
         </div>
 
         <div class="hearings__bottom">

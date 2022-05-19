@@ -76,6 +76,25 @@
   flex-grow: 1;
   margin: 0;
   overflow: hidden;
+
+  &--download {
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      padding-top: 3px;
+    }
+  }
+}
+
+.file-item__download {
+  margin-left: 20px;
+
+  @include mobile {
+    margin-left: auto;
+    margin-top: 8px;
+  }
 }
 
 .file-item__name {
