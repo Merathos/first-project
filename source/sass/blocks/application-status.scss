@@ -2,7 +2,7 @@
   background: var(--color-bg-secondary, $color-bg);
   border-radius: 5px;
 
-  padding: 32px;
+  padding: 34px 32px;
 
   @include mobile {
     padding: 16px;
@@ -121,9 +121,13 @@
 
   color: var(--color-text, $dark-text);
 
+  @include mobile {
+    margin-bottom: 20px;
+  }
+
   span {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     font-size: rem(15px);
   }
 }
@@ -160,6 +164,10 @@
   font-size: rem(13px);
   line-height: 130%;
 
+  @include mobile {
+    margin-bottom: 12px;
+  }
+
   .application-status--red & {
     color: var(--color-text, $red);
   }
@@ -175,7 +183,7 @@
 }
 
 .application-status__info {
-  margin: 0 0 12px;
+  margin: 0 0 7px;
   padding-left: 25px;
 
   font-size: rem(13px);

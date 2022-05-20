@@ -20,7 +20,7 @@
 
   &--gray {
     .file-item {
-      background-color: ar(--color-bg-secondary, $color-bg);
+      background-color: var(--color-bg-secondary, $color-bg);
     }
 
     .file-item__name {
