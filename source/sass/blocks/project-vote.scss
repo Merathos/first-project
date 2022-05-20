@@ -45,6 +45,10 @@
     font-weight: 300;
     font-size: rem(40px);
     line-height: rem(47px);
+
+    @include mobile {
+      margin-bottom: -10px;
+    }
   }
 }
 

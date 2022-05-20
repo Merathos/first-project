@@ -9271,7 +9271,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     margin: 0;
     margin-right: auto;
     font-weight: 400;
-    font-size: 0.9375rem;
+    font-size: 1rem;
     line-height: 135%; }
     @media (max-width: 767px) {
       .hearings-status p {
@@ -9281,6 +9281,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     .hearings-status p span {
       margin-left: 8px;
       font-weight: 400;
+      font-size: 0.9375rem;
       color: var(--color-text, #a6abb3); }
       @media (max-width: 767px) {
         .hearings-status p span {
@@ -9317,7 +9318,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     color: var(--color-text, #70bf56); }
 
 .hearings-result {
-  margin-bottom: 48px;
+  margin-bottom: 53px;
   padding-bottom: 48px;
   border-bottom: 1px solid var(--color-stroke, #e3e8ee); }
   @media (max-width: 1199px) {
@@ -9378,7 +9379,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     margin-bottom: 48px; }
     @media (max-width: 767px) {
       .hearings-result__survey--public {
-        margin-bottom: 32px; } }
+        margin-bottom: 24px; } }
 
 .hearings-result__survey-container {
   padding-bottom: 34px;
@@ -14192,7 +14193,7 @@ span.poll__hide {
     .files--one-column .file-item {
       margin-bottom: 12px; }
   .files--gray .file-item {
-    background-color: ar(--color-bg-secondary, #f9f9fa); }
+    background-color: var(--color-bg-secondary, #f9f9fa); }
   .files--gray .file-item__name {
     font-size: 0.9375rem;
     line-height: 135%; }
@@ -16637,7 +16638,7 @@ ymaps p {
   @media (max-width: 767px) {
     .hearings-page {
       padding-top: 30px;
-      padding-bottom: 64px; } }
+      padding-bottom: 60px; } }
 
 @media (min-width: 1200px) {
   .hearings {
@@ -16669,7 +16670,8 @@ ymaps p {
   border-bottom: 1px solid var(--color-stroke, #e3e8ee); }
   @media (max-width: 767px) {
     .hearings--public .hearings__files {
-      padding-bottom: 20px; } }
+      padding-bottom: 19px;
+      margin-bottom: 33px; } }
 
 @media (max-width: 767px) {
   .hearings--public .hearings__status {
@@ -16731,7 +16733,8 @@ ymaps p {
   line-height: 1.6875rem;
   color: var(--color-text, #354052); }
   .hearings__text-container p {
-    margin-top: 0; }
+    margin-top: 0;
+    margin-bottom: 24px; }
   @media (max-width: 1199px) {
     .hearings__text-container {
       margin-bottom: 40px; } }
@@ -16811,8 +16814,8 @@ ymaps p {
 
 .hearings__proposal {
   grid-area: f;
-  padding: 40px 32px;
-  background: ar(--color-bg-secondary, #f9f9fa);
+  padding: 36px 32px;
+  background: var(--color-bg-secondary, #f9f9fa);
   border-radius: 5px;
   margin-bottom: 32px; }
   @media (max-width: 767px) {
@@ -17599,6 +17602,9 @@ ymaps p {
     font-weight: 300;
     font-size: 2.5rem;
     line-height: 2.9375rem; }
+    @media (max-width: 767px) {
+      .project-vote__title--result {
+        margin-bottom: -10px; } }
 
 .project-vote__date {
   margin: 0;
@@ -21224,7 +21230,7 @@ span.poll-page__hide {
 .application-status {
   background: var(--color-bg-secondary, #f9f9fa);
   border-radius: 5px;
-  padding: 32px; }
+  padding: 34px 32px; }
   @media (max-width: 767px) {
     .application-status {
       padding: 16px; } }
@@ -21307,9 +21313,12 @@ span.poll-page__hide {
   font-weight: 400;
   margin: 0 0 24px;
   color: var(--color-text, #354052); }
+  @media (max-width: 767px) {
+    .application-status__title {
+      margin-bottom: 20px; } }
   .application-status__title span {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     font-size: 0.9375rem; }
 
 .application-status__result {
@@ -21336,6 +21345,9 @@ span.poll-page__hide {
   margin-bottom: 8px;
   font-size: 0.8125rem;
   line-height: 130%; }
+  @media (max-width: 767px) {
+    .application-status__status {
+      margin-bottom: 12px; } }
   .application-status--red .application-status__status {
     color: var(--color-text, #e55050); }
   .application-status--blue .application-status__status {
@@ -21345,7 +21357,7 @@ span.poll-page__hide {
     fill: inherit; }
 
 .application-status__info {
-  margin: 0 0 12px;
+  margin: 0 0 7px;
   padding-left: 25px;
   font-size: 0.8125rem;
   line-height: 130%;
@@ -21662,7 +21674,8 @@ span.poll-page__hide {
 .application-popup__textarea-wrapper textarea {
   width: 100%;
   min-height: 123px;
-  padding: 16px 22px; }
+  padding: 16px 22px;
+  resize: vertical; }
 
 .application-popup__error-text {
   display: none;
