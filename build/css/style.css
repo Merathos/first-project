@@ -21590,6 +21590,8 @@ span.poll-page__hide {
     margin-bottom: 32px; }
     .application-popup__fieldset-content--files .application-popup__legend {
       margin-bottom: 12px; }
+    .application-popup__fieldset-content--files .error-field {
+      bottom: -22px; }
     .application-popup__fieldset-content--files p {
       max-width: 510px;
       font-weight: 400;
@@ -21675,11 +21677,13 @@ span.poll-page__hide {
   width: 100%;
   max-height: 51px; }
 
-.application-popup__textarea-wrapper textarea {
-  width: 100%;
-  min-height: 123px;
-  padding: 16px 22px;
-  resize: vertical; }
+.application-popup__textarea-wrapper {
+  position: relative; }
+  .application-popup__textarea-wrapper textarea {
+    width: 100%;
+    min-height: 123px;
+    padding: 16px 22px;
+    resize: vertical; }
 
 .application-popup__error-text {
   display: none;
@@ -21696,6 +21700,8 @@ span.poll-page__hide {
   @media (max-width: 767px) {
     .application-popup__checkbox {
       margin-bottom: 48px; } }
+  .application-popup__checkbox .error-field {
+    bottom: -22px; }
 
 .application-popup__bottom {
   display: -webkit-box;

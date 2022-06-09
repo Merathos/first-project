@@ -212,6 +212,10 @@
       margin-bottom: 12px;
     }
 
+    .error-field {
+      bottom: -22px;
+    }
+
     p {
       max-width: 510px;
 
@@ -352,6 +356,7 @@
 }
 
 .application-popup__textarea-wrapper {
+  position: relative;
   textarea {
     width: 100%;
     min-height: 123px;
@@ -380,6 +385,10 @@
 
   @include mobile {
     margin-bottom: 48px;
+  }
+
+  .error-field {
+    bottom: -22px;
   }
 }
 
