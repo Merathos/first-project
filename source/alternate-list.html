@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<include src="source/components/head.html"></include>
+
+<body class="page-body">
+  <include src="source/components/special-popup.html"></include>
+
+  <include src="source/components/header.html"></include>
+
+  <main class="page-content alternate-list">
+    <div class="container">
+      <a class="back-btn" href="main-page.html">
+        <svg width="8" height="14">
+          <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
+        </svg>
+        Назад
+      </a>
+      <div class="page-top">
+        <h1 class="page-title">Реализованные проекты</h1>
+        <ul class="page-nav">
+          <li class="page-nav__item">
+            <a href="#" class="page-nav__link">Проекты</a>
+          </li>
+          <li class="page-nav__item">
+            <a href="#" class="page-nav__link">Объекты</a>
+          </li>
+        </ul>
+      </div>
+      <form class="categories-filter js-form-select">
+        <ul class="page-nav">
+          <li class="page-nav__item">
+            <input class="page-nav__radio-input" type="radio" name="status" id="regional-status" checked>
+            <label class="page-nav__radio-label" for="regional-status" aria-label="Региональные"></label>
+            <a href="#" class="page-nav__link" data-radio="regional-status">Региональные</a>
+          </li>
+          <li class="page-nav__item">
+            <input class="page-nav__radio-input" type="radio" name="status" id="local-status">
+            <label class="page-nav__radio-label" for="local-status" aria-label="Местные"></label>
+            <a href="#" class="page-nav__link" data-radio="local-status">Местные</a>
+          </li>
+        </ul>
+        <select name="categories" id="categories" title="Открыть фильтр" data-deselect="true" class="multiple-select js-multiple-select" data-placeholder-text="Все категории" multiple>
+          <option data-placeholder="true"></option>
+          <option value="Библиотеки" title="Библиотеки">Библиотеки</option>
+          <option value="Муниципальные образовательные организации" title="Муниципальные образовательные организации">Муниципальные образовательные организации</option>
+          <option value="Благоустройство" title="Благоустройство">Благоустройство</option>
+          <option value="Народное творчество" title="Народное творчество">Народное творчество</option>
+          <option value="Бытовое обслуживание" title="Бытовое обслуживание">Бытовое обслуживание</option>
+          <option value="Объекты культурного наследия" title="Объекты культурного наследия">Объекты культурного наследия</option>
+          <option value="Водоснабжение" title="Водоснабжение">Водоснабжение</option>
+          <option value="Объекты культуры" title="Объекты культуры">Объекты культуры</option>
+          <option value="Детские площадки" title="Детские площадки">Детские площадки</option>
+          <option value="Пожарная безопасность" title="Пожарная безопасность">Пожарная безопасность</option>
+          <option value="Дороги" title="Дороги">Дороги</option>
+          <option value="Сбор бытовых отходов" title="Сбор бытовых отходов">Сбор бытовых отходов</option>
+          <option value="Доходогенерирующие проекты" title="Доходогенерирующие проекты">Доходогенерирующие проекты</option>
+          <option value="Связь" title="Связь">Связь</option>
+          <option value="ЖКХ" title="ЖКХ">ЖКХ</option>
+          <option value="Спорт" title="Спорт">Спорт</option>
+          <option value="Массовое мероприятиеТуризм" title="Массовое мероприятиеТуризм">Массовое мероприятиеТуризм</option>
+          <option value="Туризм" title="Туризм">Туризм</option>
+          <option value="Места захоронения" title="Места захоронения">Места захоронения</option>
+          <option value="Фельдшерско-акушерские пункты" title="Фельдшерско-акушерские пункты">Фельдшерско-акушерские пункты</option>
+          <option value="Места массового пользования" title="Места массового пользования">Места массового пользования</option>
+        </select>
+        <select name="category-select" id="category-select" class="single-select"
+                title="Открыть фильтр" data-placeholder-text="Участие принято"
+                data-deselect="true">
+          <option data-placeholder="true"></option>
+          <option value="В процессе приема Комментариев" title="В процессе приема Комментариев">В процессе приема Комментариев</option>
+          <option value="Прием комментариев завершён" title="Прием комментариев завершён">Прием Комментариев завершён. Идёт подготовка к проведению.</option>
+          <option value="В процессе" title="В процессе">В процессе</option>
+          <option value="Подводятся итоги" title="Подводятся итоги">Подводятся итоги</option>
+          <option value="Итоги подведены" title="Итоги подведены">Итоги подведены</option>
+        </select>
+      </form>
+      <ul class="alternate-list__list">
+        <li class="alternate-list__item">
+          <img width="135" height="135"  class="alternate-list__img" src="img/img-project/project-img-2.png" alt="описание картинки" />
+          <a href="#" class="project-link">Оценка качества услуг учреждений сферы государственной молодежной политики</a>
+        </li>
+        <li class="alternate-list__item">
+          <img width="135" height="135"  class="alternate-list__img" src="img/img-project/project-img-3.png" alt="описание картинки" />
+          <a href="#" class="project-link">Реконструкция моста через р. Дон на км 11+600 автомобильной дороги Новомосковское кольцо в Узловском районе Тульской области</a>
+        </li>
+        <li class="alternate-list__item">
+          <img width="135" height="135"  class="alternate-list__img" src="img/img-project/project-img-4.png" alt="описание картинки" />
+          <a href="#" class="project-link">Государственное дошкольное образовательное учреждение Тульской области «Узловский детский сад»</a>
+        </li>
+        <li class="alternate-list__item">
+          <img width="135" height="135"  class="alternate-list__img" src="img/img-project/project-img-5.png" alt="описание картинки" />
+          <a href="#" class="project-link">Оценка качества услуг учреждений сферы государственной молодежной политики</a>
+        </li>
+        <li class="alternate-list__item">
+          <img width="135" height="135"  class="alternate-list__img" src="img/img-project/project-img-1.png" alt="описание картинки" />
+          <a href="#" class="project-link">Государственное дошкольное образовательное учреждение Тульской области «Узловский детский сад»</a>
+        </li>
+      </ul>
+      <div class="paginator">
+        <a class="paginator__item paginator__item--prev paginator__item--disabled"
+           aria-label="предыдущий">
+          <svg width="18" height="10" viewBox="0 0 18 10" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#icon-paginator-prev"></use>
+          </svg>
+        </a>
+        <a class="paginator__item paginator__item--current">1</a>
+        <a class="paginator__item" href="#2">2</a>
+        <a class="paginator__item" href="#3">3</a>
+        <span class="paginator__item paginator__item--hidden">…</span>
+        <a class="paginator__item paginator__item--hidden" href="#9">9</a>
+        <a class="paginator__item paginator__item--hidden" href="#10">10</a>
+        <a class="paginator__item paginator__item--hidden" href="#11">11</a>
+        <a class="paginator__item paginator__item--next" href="#next"
+           aria-label="следующий">
+          <svg width="18" height="10" viewBox="0 0 18 10" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#icon-paginator-next"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <include src="source/components/footer.html"></include>
+  <include src="source/components/cookie.html"></include>
+  <include src="source/components/up-btn.html"></include>
+
+  <script src="js/libs.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

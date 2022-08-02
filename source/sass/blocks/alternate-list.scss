@@ -1,0 +1,46 @@
+.alternate-list {
+  .page-top {
+    margin-bottom: 28px;
+
+    .page-nav {
+      width: auto;
+    }
+  }
+
+  &__list {
+    @include list-reset;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid $light-grey;
+    padding-top: 24px;
+    padding-bottom: 32px;
+
+    @include mobile-max {
+      flex-direction: column;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    object-position: center;
+    width: 135px;
+    height: 135px;
+    min-width: 135px;
+    min-height: 135px;
+    border-radius: 5px;
+    margin-right: 24px;
+
+    @include mobile-max {
+      margin-bottom: 24px;
+    }
+  }
+
+  .project-link {
+    font-size: rem(18px);
+    line-height: rem(23px);
+    max-width: 687px;
+  }
+}
