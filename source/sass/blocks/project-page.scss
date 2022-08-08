@@ -771,7 +771,7 @@
 }
 
 .project-page__tab-wrapper {
-  background-color: $color-bg;
+  background-color: var(--color-bg-secondary, $color-bg);
   padding: 32px 24px;
 
   h2:not([class]) {
