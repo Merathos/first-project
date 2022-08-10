@@ -63,7 +63,7 @@
         padding: 0 24px;
       }
 
-      .container--desktop-only {
+      .page-container--desktop-only {
         padding: 0;
       }
     }
@@ -73,7 +73,7 @@
         padding: 0 16px;
       }
 
-      .container--desktop-only {
+      .page-container--desktop-only {
         padding: 0;
       }
     }
@@ -2419,7 +2419,7 @@
     </div>
 
     <div class="page-header__main-menu main-menu js-main-menu">
-      <div class="container">
+      <div class="page-container">
         <div class="page-header__location-switcher location-switcher js-location-switcher">
           <p class="visually-hidden">Выберите регион голосования:</p>
 
@@ -2491,7 +2491,7 @@
 
   <main>
     <section class="unavailable">
-      <div class="container">
+      <div class="page-container">
         <div class="unavailable__container">
           <div class="unavailable__content-wrapper">
             <h1 class="unavailable__title page-title page-title--project">Сервис недоступен</h1>
@@ -2629,7 +2629,7 @@
   </main>
 
   <footer class="page-footer">
-    <div class="container">
+    <div class="page-container">
       <div class="page-footer__top">
         <ul class="page-footer__list">
           <li class="page-footer__item">
@@ -4317,7 +4317,7 @@
       panel.classList.add('project-page__panel--js');
 
       var checkPanelHeight = function () {
-        var mainContent = document.querySelector('.container--desktop-only');
+        var mainContent = document.querySelector('.page-container--desktop-only');
         var mainContentHeight = mainContent.getBoundingClientRect().height;
         var panelHeight = panel.getBoundingClientRect().height;
 
@@ -5179,11 +5179,11 @@
             return;
           }
           if (text.scrollHeight > HEIGHT) {
-            text.classList.add('text-hidden__container--close');
+            text.classList.add('text-hidden__page-container--close');
             btnTextOpen.addEventListener('click', function (evt) {
               evt.preventDefault();
               btnTextOpen.classList.toggle('text-hidden__btn--open');
-              text.classList.toggle('text-hidden__container--close');
+              text.classList.toggle('text-hidden__page-container--close');
               btnContainer.classList.toggle('text-hidden__btn-wrapper--open');
               btnText.textContent = btnText.textContent === 'Развернуть' ? 'Свернуть' : 'Развернуть';
             });

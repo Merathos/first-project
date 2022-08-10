@@ -1,0 +1,9 @@
+.notice-type {
+  background-color: var(--color-bg-secondary, $light-blue);
+  border-radius: 5px;
+  padding: 5px 8px;
+  font-weight: 400;
+  font-size: rem(14px);
+  line-height: 130%;
+  color: var(--color-text, $dark-text);
+}
