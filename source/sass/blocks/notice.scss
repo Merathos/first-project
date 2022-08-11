@@ -11,11 +11,20 @@
   text-decoration: none;
   padding: 24px;
 
+  @include mobile {
+    padding: 24px 16px;
+  }
+
   &__head,
   &__footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include mobile {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
   }
 
   &__votes {
@@ -33,17 +42,29 @@
     line-height: 150%;
     color: var(--color-text, $dark-text);
     margin: 0;
-    padding: 0;
+    padding: 15px 0 40px;
     transition: color 0.3s;
     overflow: hidden;
     text-overflow: ellipsis;
     width: 100%;
     white-space: nowrap;
+
+    @include mobile {
+      text-overflow: unset;
+      overflow: visible;
+      white-space: unset;
+      padding-bottom: 16px;
+    }
   }
 
   &:hover {
     .notice__text {
       color: var(--color-interactive-accent, $blue-default);
     }
+  }
+
+  .link-arrow {
+    font-size: rem(13px);
+    line-height: 135%;
   }
 }

@@ -7,4 +7,10 @@
   line-height: 141%;
   color: var(--color-text, $dark-text);
   margin: 0;
+
+  @include mobile {
+    font-size: rem(13px);
+    line-height: 130%;
+    margin-bottom: 12px;
+  }
 }
