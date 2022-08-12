@@ -44,6 +44,7 @@
       grid-column-gap: 20px;
       grid-template-areas:
         "a a"
+        "a1 a1"
         "b b"
         "c c"
         "curator curator"
@@ -108,7 +109,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    grid-area: b;
+    grid-area: a;
   }
 }
 

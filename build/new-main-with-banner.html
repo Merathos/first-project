@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Общественное голосование</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preload" href="fonts/Rubik-Light.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Rubik-Regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Rubik-Medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Rubik-Bold.woff2" as="font" crossorigin="anonymous">
+  <link href="css/style.min.css" rel="stylesheet">
+</head>
+
+
+<body class="page-body page-main">
+  <section class="special-popup js-hide">
+  <h2 class="visually-hidden">Настройки для слабовидящих</h2>
+
+  <div class="special-popup__wrap">
+    <button class="special-popup__btn-close js-close-popup" type="button" aria-label="Закрыть">
+      <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <use xlink:href="img/sprite.svg#icon-close"></use>
+      </svg>
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+
+    <div class="special-popup__title">Настройки</div>
+
+    <div class="special-popup__group-list">
+      <div class="special-popup__group">
+        <h3 class="special-popup__name">Размер шрифта:</h3>
+
+        <ul class="special-popup__list">
+          <li class="special-popup__item">
+            <button class="special-popup__btn-size special-popup__btn-size--default js-special-popup__btn-size active" data-property="font-size" data-value="default" type="button">
+              <span>A</span>
+            </button>
+          </li>
+
+          <li class="special-popup__item">
+            <button class="special-popup__btn-size special-popup__btn-size--larger js-special-popup__btn-size" data-property="font-size" data-value="larger" type="button">
+              <span>A</span>
+            </button>
+          </li>
+
+          <li class="special-popup__item">
+            <button class="special-popup__btn-size special-popup__btn-size--largest js-special-popup__btn-size" data-property="font-size" data-value="largest" type="button">
+              <span>A</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="special-popup__group">
+        <h3 class="special-popup__name">Цветовая схема:</h3>
+
+        <ul class="special-popup__list">
+          <li class="special-popup__item">
+            <button class="special-popup__btn-color special-popup__btn-color--default active" data-property="theme" data-value="default" type="button">
+              <span>Стандартный</span>
+            </button>
+          </li>
+
+          <li class="special-popup__item">
+            <button class="special-popup__btn-color special-popup__btn-color--inverse" data-property="theme" data-value="inverse" type="button">
+              <span>Инверсия</span>
+            </button>
+          </li>
+
+          <li class="special-popup__item">
+            <button class="special-popup__btn-color special-popup__btn-color--blue" data-property="theme" data-value="blue" type="button">
+              <span>Синий</span>
+            </button>
+          </li>
+
+          <li class="special-popup__item">
+            <button class="special-popup__btn-color special-popup__btn-color--comfort" data-property="theme" data-value="comfort" type="button">
+              <span>Комфортный</span>
+            </button>
+          </li>
+
+          <li class="special-popup__item">
+            <button class="special-popup__btn-color special-popup__btn-color--brown" data-property="theme" data-value="brown" type="button">
+              <span>Коричневый</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="special-popup__group">
+        <h3 class="special-popup__name">Шрифт:</h3>
+
+        <ul class="special-popup__list special-popup__list--font">
+          <li class="special-popup__item">
+            <button class="special-popup__btn-font special-popup__btn-font--default active" data-property="font-family" data-value="default" type="button">
+              <span>Стандартный</span>
+            </button>
+          </li>
+
+          <li class="special-popup__item">
+            <button class="special-popup__btn-font special-popup__btn-font--arial" data-property="font-family" data-value="arial" type="button">
+              <span>Arial</span>
+            </button>
+          </li>
+
+          <li class="special-popup__item">
+            <button class="special-popup__btn-font special-popup__btn-font--times" data-property="font-family" data-value="times" type="button">
+              <span>Times New Roman</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <button type="button" class="special-popup__reset js-special-popup__reset button button--blue" disabled="">Сбросить всё</button>
+  </div>
+</section>
+
+
+  <header class="page-header js-page-header">
+  <div class="page-header__bar js-page-header__bar">
+    <div class="page-header__container page-container">
+      <a class="page-header__roi-logo logo-link" href="#">
+        <span class="visually-hidden">Перейти на сайт российской общественной инициативы</span>
+        <svg width="180" height="29" viewbox="0 0 180 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <g clip-path="url(#clip0_1031_6887)">
+            <path d="M117.491 0.668543H102.764C102.6 0.668543 102.518 0.752117 102.518 0.919264C102.109 7.68872 100.882 15.0432 99.0818 20.9769V21.2276C99.1637 21.3112 99.2455 21.3112 99.3273 21.3112H104.4C104.482 21.3112 104.645 21.2276 104.645 21.144C106.036 16.5475 107.182 10.5302 107.591 5.43223H112.418V21.0605C112.418 21.2276 112.5 21.3112 112.664 21.3112H117.491C117.655 21.3112 117.736 21.2276 117.736 21.0605V1.00284C117.736 0.83569 117.655 0.668543 117.491 0.668543ZM179.755 0.668543H174.927C174.764 0.668543 174.682 0.752117 174.682 0.919264V16.4639C173.618 16.7982 172.555 16.8818 171.409 16.8818C168.218 16.8818 167.482 15.8789 167.482 11.5331V1.00284C167.482 0.83569 167.4 0.752117 167.236 0.752117H162.409C162.245 0.752117 162.164 0.83569 162.164 1.00284V12.2017C162.164 19.2219 164.455 21.9798 170.427 21.9798C173.782 21.9798 177.627 21.0605 179.836 20.2247C179.918 20.2247 180 20.0576 180 19.974V1.00284C180 0.83569 179.918 0.668543 179.755 0.668543ZM77.8909 0.752117H72.9818C72.8182 0.752117 72.7364 0.83569 72.7364 0.919264C72 4.01148 70.4455 9.19304 68.3182 14.6253L63.4091 0.83569C63.4091 0.752117 63.2455 0.668543 63.1637 0.668543H58.2546C58.1728 0.668543 58.0909 0.752117 58.0091 0.752117C57.9273 0.83569 57.9273 0.919264 58.0091 1.00284L65.3728 21.5619C64.6364 23.1498 63.9 24.487 63.2455 25.7406C62.7546 26.6599 62.2637 27.5792 61.7728 28.5821C61.6909 28.6657 61.7728 28.7492 61.7728 28.8328C61.8546 28.9164 61.9364 29 62.0182 29H67.3364C67.4182 29 67.5 28.9164 67.5818 28.8328C68.4818 27.0778 69.6273 24.5706 70.6909 22.0634C73.8 14.5417 76.3364 7.52157 78.2182 1.08641C78.2182 1.00284 78.2182 0.919264 78.1364 0.83569C78.0546 0.752117 77.9727 0.752117 77.8909 0.752117ZM95.4 16.5475C95.4 16.4639 95.3182 16.3804 95.2364 16.3804H94.9909C93.8455 16.7982 91.6364 17.2161 90.0818 17.2161C86.7273 17.2161 85.1728 16.2968 85.1728 11.0317C85.1728 6.85298 85.6637 4.84722 90.0818 4.84722C91.3091 4.84722 92.5364 5.01436 94.0091 5.5158C94.1728 5.5158 94.2546 5.5158 94.3364 5.34866C94.9091 4.2622 95.5637 3.0086 96.3 1.33713V1.08641C96.3 1.00284 96.2182 0.919264 96.1364 0.919264C94.1728 0.250676 91.8 -0.0836182 89.7546 -0.0836182C82.7182 -0.0836182 79.6091 3.25932 79.6091 10.8645C79.6091 18.5533 82.7182 21.9798 89.7546 21.9798C91.4728 21.9798 94.9909 21.5619 96.6273 20.8933C96.7909 20.8098 96.7909 20.7262 96.7909 20.559L95.4 16.5475ZM141.136 0.752117H136.227C136.145 0.752117 135.982 0.83569 135.982 0.919264C135.245 4.01148 133.691 9.19304 131.564 14.6253L126.655 0.83569C126.655 0.752117 126.491 0.668543 126.409 0.668543H121.5C121.418 0.668543 121.336 0.752117 121.255 0.752117C121.173 0.83569 121.173 0.919264 121.255 1.00284L128.618 21.5619C127.882 23.1498 127.145 24.4034 126.491 25.7406C126 26.6599 125.509 27.5792 125.018 28.5821C124.936 28.6657 125.018 28.7492 125.018 28.8328C125.1 28.9164 125.182 29 125.264 29H130.582C130.664 29 130.745 28.9164 130.827 28.8328C131.727 27.0778 132.873 24.5706 133.936 22.0634C137.045 14.5417 139.582 7.52157 141.382 1.08641C141.382 1.00284 141.382 0.919264 141.3 0.83569C141.3 0.752117 141.218 0.752117 141.136 0.752117ZM159.136 0.668543H144.9C144.736 0.668543 144.655 0.752117 144.655 0.919264V21.0605C144.655 21.2276 144.736 21.3112 144.9 21.3112H149.727C149.891 21.3112 149.973 21.2276 149.973 21.0605V5.5158H157.418C157.5 5.5158 157.664 5.43223 157.664 5.34866C158.236 4.01148 158.809 2.50716 159.382 1.08641V0.83569C159.3 0.752117 159.218 0.668543 159.136 0.668543Z" fill="#EE3F58"></path>
+            <path d="M25.6091 17.3833C22.4182 17.3833 21.4364 16.464 21.4364 11.0317C21.4364 5.18156 22.5 4.68011 25.6091 4.68011C28.7182 4.68011 29.8636 5.18156 29.8636 11.0317C29.8636 16.5475 28.8 17.3833 25.6091 17.3833ZM25.6091 0.0835735C18.6545 0.0835735 15.9545 3.09222 15.9545 10.9481C15.9545 18.8876 18.6545 21.9798 25.6091 21.9798C32.5636 21.9798 35.3455 18.8876 35.3455 10.9481C35.3455 3.17579 32.5636 0.0835735 25.6091 0.0835735ZM54.4909 16.5475C54.4909 16.464 54.4091 16.3804 54.3273 16.3804H54.0818C52.9364 16.7983 50.7273 17.2161 49.1727 17.2161C45.8182 17.2161 44.2636 16.2968 44.2636 11.0317C44.2636 6.85302 44.7545 4.84726 49.1727 4.84726C50.4 4.84726 51.6273 5.01441 53.1 5.51585C53.1818 5.51585 53.3455 5.51585 53.4273 5.3487C54 4.26225 54.6545 3.00865 55.3909 1.33718V1.08646C55.3909 1.00288 55.3091 0.919308 55.2273 0.919308C53.3455 0.334294 50.9727 0 48.9273 0C41.8909 0 38.7818 3.34294 38.7818 10.9481C38.7818 18.6369 41.8909 22.0634 48.9273 22.0634C50.6455 22.0634 54.1636 21.6455 55.8 20.9769C55.9636 20.8934 55.9636 20.8098 55.9636 20.6427L54.4909 16.5475ZM14.4818 0.668588H0.245455C0.0818182 0.668588 0 0.835735 0 1.00288V21.1441C0 21.3112 0.0818182 21.3948 0.245455 21.3948H5.07273C5.23636 21.3948 5.31818 21.3112 5.31818 21.1441V5.51585H12.7636C12.8455 5.51585 12.9273 5.43228 13.0091 5.3487C13.5818 4.01153 14.1545 2.5072 14.7273 1.08646V0.835735C14.6455 0.752161 14.5636 0.668588 14.4818 0.668588Z" fill="#0065B1"></path>
+          </g>
+          <defs>
+            <clipPath id="clip0_1031_6887">
+              <rect width="180" height="29" fill="white"></rect>
+            </clipPath>
+          </defs>
+        </svg>
+      </a>
+
+      <a class="page-header__site-name link link--black" href="#">Общественное голосование</a>
+
+      <button type="button" class="page-header__location">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#icon-pin"></use>
+        </svg>
+        Алтайский край
+      </button>
+
+      <a class="page-header__version-btn page-header__version-btn--bar link link--black js-open-popup" href="#">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#icon-glasses"></use>
+        </svg>
+        Версия для слабовидящих
+      </a>
+
+      <button type="button" class="page-header__sign-in">
+        Войти
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#icon-sign-in"></use>
+        </svg>
+      </button>
+
+      <button class="page-header__menu-btn menu-btn js-menu-btn" type="button">
+        <span class="menu-btn__text visually-hidden">Открыть основное меню</span>
+        <span class="menu-btn__icon"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="page-header__main-menu main-menu js-main-menu">
+    <div class="page-container">
+      <div class="page-header__location-switcher location-switcher js-location-switcher">
+        <p class="visually-hidden">Выберите регион голосования:</p>
+
+        <form action="#" method="post">
+          <div class="location-switcher__btn form-radio">
+            <input id="location-residence" type="radio" name="location" value="residence" checked="">
+            <label for="location-residence">
+              Адрес проживания
+              <span class="page-header__location-address location-switcher__address">Городской округ рабочий поселок Новогуровский</span>
+            </label>
+          </div>
+
+          <div class="location-switcher__btn form-radio">
+            <input id="location-registration" type="radio" name="location" value="registration">
+            <label for="location-registration">
+              Адрес регистрации
+              <span class="page-header__location-address location-switcher__address">Краснобродский городской округ</span>
+            </label>
+          </div>
+
+          <button class="location-switcher__show-btn button button--blue" type="submit">Показать</button>
+        </form>
+      </div>
+
+      <a class="page-header__version-btn page-header__version-btn--menu link link--black js-open-popup" href="#">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#icon-glasses"></use>
+        </svg>
+        Версия для слабовидящих
+      </a>
+
+<!--      <nav class="page-header__user-menu user-menu js-user-menu">-->
+<!--        <div class="user-menu__overlay js-user-menu__overlay"></div>-->
+
+<!--        <button class="user-menu__dropdown-btn js-user-menu__dropdown-btn link link&#45;&#45;black" type="button">-->
+<!--          <span class="user-menu__dropdown-btn-text visually-hidden">Открыть меню пользователя</span>-->
+
+<!--          <svg class="user-menu__user-icon" width="16" height="16">-->
+<!--            <use xlink:href="img/sprite.svg#icon-user"></use>-->
+<!--          </svg>-->
+
+<!--          <span class="user-menu__user-name">Анастасия</span>-->
+
+<!--          <svg class="user-menu__dropdown-icon" width="13" height="13">-->
+<!--            <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>-->
+<!--          </svg>-->
+<!--        </button>-->
+
+<!--        <ul class="user-menu__list js-user-menu__list">-->
+<!--          <li class="user-menu__item">-->
+<!--            <a class="user-menu__link link link&#45;&#45;black" href="#">Избранное</a>-->
+<!--          </li>-->
+
+<!--          <li class="user-menu__item">-->
+<!--            <a class="user-menu__link link link&#45;&#45;black" href="#">Моя активность</a>-->
+<!--          </li>-->
+
+<!--          <li class="user-menu__item">-->
+<!--            <a class="user-menu__link link link&#45;&#45;black" href="#">Выход</a>-->
+<!--          </li>-->
+<!--        </ul>-->
+<!--      </nav>-->
+    </div>
+  </div>
+</header>
+
+
+  <div class="internet-banner">
+  <div class="page-container">
+    <div class="internet-banner__wrapper">
+      <div class="internet-banner__container">
+        <p class="internet-banner__title">Опросы и голосования</p>
+        <p class="internet-banner__text">Принимайте активное участие в развитии своего региона: голосуйте, делитесь мнением, учавствуйте в обсуждениях и предлагайте идеи </p>
+        <a class="internet-banner__button button button--blue" href="#">Подробнее о проекте</a>
+      </div>
+      <div class="internet-banner__image-wrapper">
+        <img width="410" height="300" src="img/new-banner.svg" alt="Картинка">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <main class="main-page">
+    <div class="page-container">
+      <h1 class="visually-hidden">Главная страница</h1>
+      <section class="section">
+        <div class="section__head px-2 mt-5 mt-md-0">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#icon-file-replace"></use>
+          </svg>
+          <h2 class="section__title">Популярные мероприятия</h2>
+        </div>
+        <ul class="list-unstyled mt-3 mt-md-0 row gx-3 gy-3 gy-md-4 mb-1 mb-md-5">
+          <li class="col-md-6">
+            <a href="#" class="notice ">
+              <div class="notice__head">
+                <p class="notice__votes">Всего 325 голосов</p>
+                <p class="tag">Национальный проект</p>
+              </div>
+              <p class="notice__text">Удовлетворенность граждан информацией, размещаемой на официальном сайте администрации города Славгорода</p>
+              <div class="notice__footer">
+                <p class="notice-type">Опрос</p>
+                <div class="link-arrow d-none d-lg-block d-xl-none">
+                  <span>Перейти</span>
+                  <svg width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="col-md-6">
+            <a href="#" class="notice">
+              <div class="notice__head">
+                <p class="notice__votes">Всего 521 голосов</p>
+              </div>
+              <p class="notice__text">Голосование по отбору общественной территории для участия в программе "Комплексное развитие сельских территорий" </p>
+              <div class="notice__footer">
+                <p class="notice-type">Голосование по проектам</p>
+                <div class="link-arrow d-none d-lg-block d-xl-none">
+                  <span>Перейти</span>
+                  <svg width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="col-md-6">
+            <a href="#" class="notice">
+              <div class="notice__head">
+                <p class="notice__votes">Всего 150 голосов</p>
+              </div>
+              <p class="notice__text">Онлайн-голосование по отбору общественной территории, подлежащей благоустройству в 2022 году </p>
+              <div class="notice__footer">
+                <p class="notice-type">Голосование по благоустройству</p>
+                <div class="link-arrow d-none d-lg-block d-xl-none">
+                  <span>Перейти</span>
+                  <svg width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </li>
+          <li class="col-md-6">
+            <a href="#" class="notice">
+              <div class="notice__head">
+                <p class="notice__votes">Всего 325 голосов</p>
+                <p class="tag">Национальный проект</p>
+              </div>
+              <p class="notice__text">О внесении изменений и дополнений в Устав муниципального образования Мамонтовский район Алтайского края</p>
+              <div class="notice__footer">
+                <p class="notice-type">Общественные обсуждения и публичные слушания</p>
+                <div class="link-arrow d-none d-lg-block d-xl-none">
+                  <span>Перейти</span>
+                  <svg width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <hr>
+
+      <section class="section mt-5 mb-5">
+        <div class="section__head px-md-2">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#icon-section"></use>
+          </svg>
+          <h2 class="section__title">Разделы</h2>
+        </div>
+        <ul class="project js_short_list row gx-0 gx-md-3 gy-3 gy-md-4 pb-3 pb-md-5 mt-3 mt-mb-0">
+          <li class="col-md-6">
+            <div class="project__item">
+            <a href="#" class="project__link">
+            <span class="project__icon">
+              <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#icon-direct-line"></use>
+              </svg>
+            </span>
+              <span class="project__name">Прямые линии</span>
+              <span class="project__count">2</span>
+            </a>
+          </div>
+          </li>
+          <li class="col-md-6">
+            <div class="project__item">
+            <a href="#" class="project__link">
+            <span class="project__icon">
+              <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#icon-query"></use>
+              </svg>
+            </span>
+              <span class="project__name">Опросы</span>
+              <span class="project__count">12</span>
+            </a>
+          </div>
+          </li>
+          <li class="col-md-6">
+            <div class="project__item">
+              <a href="#" class="project__link">
+            <span class="project__icon">
+              <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#icon-project"></use>
+              </svg>
+            </span>
+                <span class="project__name">Голосование по проектам</span>
+                <span class="project__count">15</span>
+              </a>
+            </div>
+          </li>
+          <li class="col-md-6">
+            <div class="project__item">
+              <a href="#" class="project__link">
+            <span class="project__icon">
+              <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#icon-oops"></use>
+              </svg>
+            </span>
+                <span class="project__name">Общественные обсуждения  и публичные слушания</span>
+                <span class="project__count">7</span>
+              </a>
+            </div>
+          </li>
+          <li class="col-md-6">
+            <div class="project__item">
+              <a href="#" class="project__link">
+            <span class="project__icon">
+              <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#icon-forum"></use>
+              </svg>
+            </span>
+                <span class="project__name">Обсуждения</span>
+                <span class="project__count">3</span>
+              </a>
+            </div>
+          </li>
+          <li class="col-md-6">
+            <div class="project__item">
+              <a href="#" class="project__link">
+            <span class="project__icon">
+              <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#icon-rate"></use>
+              </svg>
+            </span>
+                <span class="project__name">Рейтингования</span>
+                <span class="project__count">3</span>
+              </a>
+            </div>
+          </li>
+          <li class="col-md-6">
+            <div class="project__item">
+              <a href="#" class="project__link">
+            <span class="project__icon">
+              <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite.svg#icon-landscape"></use>
+              </svg>
+            </span>
+                <span class="project__name">Благоустройство</span>
+                <span class="project__count">1</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="internet-banner">
+  <div class="page-container">
+    <div class="internet-banner__wrapper">
+      <div class="internet-banner__container">
+        <p class="internet-banner__title">Реализованные проекты</p>
+        <p class="internet-banner__text">ПВ данном разделе можно ознакомиться с реализованными в регионе проектами</p>
+        <a class="internet-banner__button button button--blue" href="#">перейти к проектам</a>
+      </div>
+      <div class="internet-banner__image-wrapper">
+        <img width="518" height="276" src="img/new-banner-2.svg" alt="Картинка">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div class="page-container">
+      <section class="section news mt-3 mt-md-5 mb-5">
+        <div class="section__head pt-5 px-md-2">
+          <svg class="news__title-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#icon-news"></use>
+          </svg>
+          <h2 class="section__title">Новости</h2>
+          <a href="#" class="link-arrow link d-none d-lg-flex d-xl-none">
+            <span>Все новости</span>
+            <svg width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite.svg#icon-arrow"></use>
+            </svg>
+          </a>
+        </div>
+        <ul class="row gy-4 gy-md-5 list-unstyled mt-0 px-md-2">
+          <li class="col-md-4">
+            <a href="#" class="single-news">
+              <div class="single-news__date-wrapper date">
+                <time datetime="2022-06-26">26.06.2022</time>
+              </div>
+              <p class="single-news__text">Драматический театр «Галерка» отметил 30-летний юбилей</p>
+            </a>
+          </li>
+          <li class="col-md-4">
+            <a href="#" class="single-news">
+              <div class="single-news__date-wrapper date">
+                <time datetime="2022-05-15">15.05.2022</time>
+              </div>
+              <p class="single-news__text">Утверждены новые Правила учета древесины</p>
+            </a>
+          </li>
+          <li class="col-md-4">
+            <a href="#" class="single-news">
+              <div class="single-news__date-wrapper date">
+                <time datetime="2022-05-10">10.05.2022</time>
+              </div>
+              <p class="single-news__text">Более 300 тысяч квадратных метров аварийного жилья планируют расселить в Алтайском крае</p>
+            </a>
+          </li>
+        </ul>
+        <a href="#" class="link-arrow link d-flex d-lg-none">
+          <span>Все новости</span>
+          <svg width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite.svg#icon-arrow"></use>
+          </svg>
+        </a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+  <div class="page-container">
+    <div class="page-footer__top">
+      <ul class="page-footer__list">
+        <li class="page-footer__item">
+          <span>Сайт Президента Российской Федерации</span>
+          <a href="http://kremlin.ru/" target="_blank">kremlin.ru</a>
+        </li>
+        <li class="page-footer__item">
+          <span>Сайт Правительства Российской Федерации</span>
+          <a href="http://government.ru/" target="_blank">government.ru</a>
+        </li>
+        <li class="page-footer__item">
+          <span>Государственная дума Российской Федерации</span>
+          <a href="http://duma.gov.ru/" target="_blank">duma.gov.ru</a>
+        </li>
+      </ul>
+      <ul class="page-footer__list">
+        <li class="page-footer__item">
+          <span>Портал государственных услуг</span>
+          <a href="http://gosuslugi.ru/" target="_blank">gosuslugi.ru</a>
+        </li>
+        <li class="page-footer__item">
+          <span>Единый портал раскрытия информации о подготовке проектов нормативных актов</span>
+          <a href="http://regulation.gov.ru/" target="_blank">regulation.gov.ru</a>
+        </li>
+        <li class="page-footer__item">
+          <span>Официальный интернет-портал правовой информации</span>
+          <a href="http://pravo.gov.ru/" target="_blank">pravo.gov.ru</a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__bottom">
+      <span>© 2019</span>
+    </div>
+  </div>
+</footer>
+
+  <div class="cookie js_cookie">
+  <div class="cookie__wrap container">
+    <div class="cookie__main">
+      <p class="cookie__title">
+        Информируем Вас о том, что сайт обрабатывает персональные данные и использует файлы "cookies"
+      </p>
+      <p class="cookie__text">
+        Мы обязуемся обеспечить конфиденциальность полученных от Вас персональных данных для целей, указанных в настоящей Политике обработки персональных данных, а также безопасность при их обработке в соответствии с требованиями Законодательства Российской Федерации. Для подтверждения Вашего согласия на обработку данных на указанных выше условиях нажмите "Согласен"
+      </p>
+    </div>
+
+    <button type="button" class="cookie__button js-cookie__button button button--blue">Согласен</button>
+  </div>
+</div>
+
+  <button class="page-body__up-btn js-page-body__up-btn" type="button">
+  <svg width="20" height="12" viewbox="0 0 33 12">
+    <use xlink:href="img/sprite.svg#icon-arrow"></use>
+  </svg>
+  <span class="visually-hidden">Наверх</span>
+</button>
+
+
+  <script src="js/libs.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>

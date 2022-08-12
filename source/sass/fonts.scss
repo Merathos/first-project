@@ -33,3 +33,30 @@
   src: url("../fonts/Rubik-Bold.woff2") format("woff2"),
     url("../fonts/Rubik-Bold.woff") format("woff");
 }
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("../fonts/lato-regular.woff2") format("woff2"),
+    url("../fonts/lato-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url("../fonts/lato-medium.woff2") format("woff2"),
+    url("../fonts/lato-medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url("../fonts/lato-bold.woff2") format("woff2"),
+    url("../fonts/lato-bold.woff") format("woff");
+}

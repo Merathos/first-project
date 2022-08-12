@@ -19,6 +19,7 @@
     grid-column-gap: 20px;
     grid-template-areas:
       "a   a"
+      "a1   a1"
       "b   c"
       "d   c"
       "e   c"
@@ -34,6 +35,7 @@
   &--result {
     grid-template-areas:
       "a   a"
+      "a1   a1"
       "b   c"
       "result c"
       "d   c"

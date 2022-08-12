@@ -105,6 +105,7 @@ body {
   padding: 0;
 
   font-style: normal;
+  font-family: "Lato", "Arial", sans-serif;
   font-weight: 400;
   font-size: rem(15px);
   line-height: rem(20px);
@@ -165,8 +166,8 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .main-page {
   width: 100%;
-  min-width: $mobile-width;
-  max-width: $desktop-width;
+  //min-width: $mobile-width;
+  //max-width: $desktop-width;
   margin: 0 auto;
 }
 
