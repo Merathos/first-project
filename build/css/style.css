@@ -10147,6 +10147,27 @@ textarea.form-control-lg {
   font-weight: 700;
   src: url("../fonts/Rubik-Bold.woff2") format("woff2"), url("../fonts/Rubik-Bold.woff") format("woff"); }
 
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url("../fonts/lato-regular.woff2") format("woff2"), url("../fonts/lato-regular.woff") format("woff"); }
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url("../fonts/lato-medium.woff2") format("woff2"), url("../fonts/lato-medium.woff") format("woff"); }
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url("../fonts/lato-bold.woff2") format("woff2"), url("../fonts/lato-bold.woff") format("woff"); }
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -10233,7 +10254,7 @@ body {
   margin: 0;
   padding: 0;
   font-style: normal;
-  font-family: "Rubik", "Arial", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -25557,7 +25578,7 @@ span.poll__hide {
 
 @media (max-width: 767px) {
   .page-header__roi-logo svg {
-    width: 124px;
+    width: 113px;
     height: 40px; }
   .page-header__site-name {
     width: 90px;
