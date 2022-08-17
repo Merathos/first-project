@@ -12,6 +12,9 @@ var initChoices = function () {
         shouldSort: false,
         placeholder: true,
         placeholderValue: 'Выберите из списка',
+        classNames: {
+          containerOuter: 'choices choices--glass',
+        }
       });
       item.addEventListener('showDropdown', function () {
         Scrollbar.init((item.parentElement.nextElementSibling.querySelector('.choices__list')), {

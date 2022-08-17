@@ -2,7 +2,7 @@
   input,
   textarea {
     -webkit-appearance: none;
-    font-size: rem(16px);
+    font-size: rem(15px);
     line-height: 180%;
     color: var(--color-text, #354052);
     background-color: var(--color-bg-secondary, #f9f9fa);
@@ -49,15 +49,15 @@
   margin: 0 0 32px;
 }
 
-.description-block__textarea {
+textarea.description-block__textarea {
   padding: 13px 16px;
   display: block;
   width: 100%;
-  resize: none;
+  //resize: none;
   border-radius: 5px;
 
   &--error {
-    border: 1px solid #f3a8a8;
+    border: 1px solid #F3A8A8;
   }
 
   &::placeholder {
@@ -82,9 +82,9 @@
   display: none;
   position: absolute;
   bottom: -20px;
-  right: 0;
-  font-size: rem(13px);
-  line-height: rem(16.9px);
+  left: 0;
+  font-size: rem(14px);
+  line-height: 130%;
   color: #e55050;
 
   &--show {

@@ -40,20 +40,21 @@
     togglers.forEach(function (toggler) {
       var content = toggler.parentElement.querySelector('.js-collapse-content');
       var text = toggler.querySelector('span');
-
-      var collapseContent = function () {
-        if (content.getAttribute('data-collapsed') === 'false') {
-          content.setAttribute('data-collapsed', 'true');
-          text.textContent = 'Контакты';
-          toggler.classList.remove('collapsed');
-        } else {
-          content.setAttribute('data-collapsed', 'false');
-          text.textContent = 'Свернуть';
-          toggler.classList.add('collapsed');
-        }
-      };
-      collapseContent();
-      toggler.addEventListener('click', collapseContent);
+      if(content) {
+        var collapseContent = function () {
+          if (content.getAttribute('data-collapsed') === 'false') {
+            content.setAttribute('data-collapsed', 'true');
+            text.textContent = 'Контакты';
+            toggler.classList.remove('collapsed');
+          } else {
+            content.setAttribute('data-collapsed', 'false');
+            text.textContent = 'Свернуть';
+            toggler.classList.add('collapsed');
+          }
+        };
+        collapseContent();
+        toggler.addEventListener('click', collapseContent);
+      }
     });
   }
 })();

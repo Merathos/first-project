@@ -1,0 +1,29 @@
+.choices--glass[data-type*="select-one"]::after {
+  background: url("../img/icon-looking-glass.svg") no-repeat center;
+  width: 24px;
+  height: 24px;
+  transform: translateY(-50%);
+}
+
+.choices.is-disabled {
+  .choices__inner {
+    border-color: $light-grey;
+    background-color: $color-bg;
+  }
+
+  .choices__placeholder {
+    color: $grey-2;
+  }
+
+  &[data-type*="select-one"]::after {
+    background: url("../img/icon-choices-grey.svg") no-repeat center;
+  }
+
+  &.choices--glass[data-type*="select-one"]::after {
+    background: url("../img/icon-looking-glass-grey.svg") no-repeat center;
+  }
+}
+
+.choices__placeholder {
+  color: $lightest-text;
+}

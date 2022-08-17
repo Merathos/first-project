@@ -1,14 +1,14 @@
 .button {
   display: inline-block;
   box-sizing: border-box;
-  padding-top: 17px;
-  padding-bottom: 15px;
-  padding-left: 56px;
-  padding-right: 56px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 32px;
+  padding-right: 32px;
 
-  font-weight: 500;
+  font-weight: 700;
   font-size: rem(15px);
-  line-height: rem(20px);
+  line-height: 135%;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
@@ -41,12 +41,12 @@
     &:hover,
     &:focus {
       color: var(--color-bg-secondary, $white);
-      background-color: var(--color-text, $blue-accent);
+      background-color: var(--color-text, $blue-hover);
     }
 
     &:disabled,
     &.disabled {
-      background-color: var(--color-text, #C0D6EB);
+      background-color: var(--color-text, #C3D3F5);
       cursor: auto;
       pointer-events: none;
     }
@@ -58,13 +58,14 @@
 
     &:hover,
     &:focus {
-      color: var(--color-bg-secondary, $blue-accent);
+      color: var(--color-bg-secondary, $blue-hover);
       background-color: var(--color-text, $light-blue);
     }
 
     &:disabled,
     &.disabled {
-      background-color: var(--color-text, $blue-default);
+      background-color: var(--color-text, $light-blue);
+      color: $blue-sail;
       cursor: auto;
       pointer-events: none;
     }
@@ -77,13 +78,14 @@
 
     &:hover,
     &:focus {
-      color: var(--color-bg-secondary, $blue-accent);
+      color: var(--color-bg-secondary, $blue-hover);
       background-color: var(--color-text, transparent);
-      border-color: var(--color-text, $light-blue-accent);
+      border-color: var(--color-text, $blue-sail);
     }
 
     &:disabled {
-      color: $light-grey;
+      color: $blue-sail;
+      border-color: var(--color-text, $light-grey);
     }
   }
 
@@ -94,9 +96,9 @@
 
     &:hover,
     &:focus {
-      color: var(--color-bg-secondary, $blue-accent);
+      color: var(--color-bg-secondary, $blue-hover);
       background-color: var(--color-text, transparent);
-      border-color: var(--color-text, $light-blue-accent);
+      border-color: var(--color-text, $blue-sail);
     }
 
     &:disabled {
@@ -148,6 +150,10 @@
     font-size: rem(15px);
     line-height: rem(20.25px);
     font-weight: 500;
+  }
+
+  &--small {
+    font-size: rem(13px);
   }
 }
 

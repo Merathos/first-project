@@ -12,6 +12,9 @@
   align-self: flex-start;
   cursor: pointer;
   transition: all $style-change-duration;
+  font-weight: 400;
+  font-size: rem(16px);
+  line-height: 150%;
 
   &::before {
     content: "";
@@ -21,7 +24,7 @@
     margin-right: 8px;
     background-color: var(--color-bg-main, $white);
     border-radius: 50%;
-    border: 1px solid var(--color-stroke, rgba(161, 167, 174, 0.5));
+    border: 1px solid var(--color-stroke, $light-grey);
     transition: all $style-change-duration;
   }
 }
@@ -29,7 +32,7 @@
 .form-radio input[type="radio"]:not(:checked) ~ label {
   &:hover {
     &::before {
-      border: 1px solid var(--color-interactive-default, $blue-accent);
+      border: 1px solid var(--color-interactive-default, $blue-sail);
     }
   }
 }
@@ -38,7 +41,7 @@
 .form-radio input[type="radio"]:checked:focus-visible,
 .form-radio input[type="radio"]:disabled:focus-visible {
   & ~ label {
-    outline: 2px solid var(--color-interactive-default, $blue-accent);
+    outline: 2px solid var(--color-interactive-default, $blue-sail);
   }
 }
 
@@ -49,18 +52,18 @@
 }
 
 .form-radio input[type="radio"]:disabled ~ label {
-  color: $grey-default;
+  color: $light-grey;
   cursor: text;
 
   &::before {
     background-color: $color-bg;
   }
 
-  &:hover {
-    &::before {
-      border: 1px solid var(--color-stroke, rgba(161, 167, 174, 0.5));
-    }
-  }
+  //&:hover {
+  //  &::before {
+  //    border: 1px solid var(--color-stroke, rgba(161, 167, 174, 0.5));
+  //  }
+  //}
 }
 
 //по выбранному радио нельзя кликать

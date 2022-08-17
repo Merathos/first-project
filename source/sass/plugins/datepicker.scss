@@ -258,7 +258,7 @@ span.datepicker-cell {
 
 .datepicker-cell.selected,
 .datepicker-cell.selected:hover {
-  background-color: #2C8ECC;
+  background-color: $blue-default;
   color: #fff;
 }
 
@@ -288,6 +288,9 @@ span.datepicker-cell {
 .datepicker .datepicker-cell {
   flex-grow: 0;
   margin-bottom: 4px;
+  font-weight: 400;
+  font-size: rem(16px);
+  line-height: 150%;
 }
 
 .datepicker-cell.highlighted:not(.selected):not(.range):not(.today) {

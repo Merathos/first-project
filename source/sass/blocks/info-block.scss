@@ -5,16 +5,19 @@
 
   @include font;
   font-weight: 400;
-  font-size: 13px;
-  line-height: 17px;
+  font-size: rem(13px);
+  line-height: 150%;
 
   color: var(--color-text, $dark-text);
 
   @media (min-width: $tablet-width) {
-    padding: 19px;
+    padding: 16px;
 
-    font-size: 15px;
-    line-height: 20px;
+    font-size: rem(16px);
+  }
+
+  svg {
+    color: $blue-default;
   }
 }
 

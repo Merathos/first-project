@@ -8,7 +8,7 @@
   align-items: center;
   width: 100%;
   margin-bottom: 40px;
-  padding: 18px 24px 18px 20px;
+  padding: 24px 24px 24px 20px;
 
   border: 1px solid var(--color-stroke, $light-grey);
   border-radius: 5px;
@@ -75,8 +75,8 @@
   }
 
   .multiple-select {
-    margin-right: 33px;
-    padding-right: 33px;
+    margin-right: 26px;
+    padding-right: 24px;
 
     @include tablet {
       margin-right: 16px;

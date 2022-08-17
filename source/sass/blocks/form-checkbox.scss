@@ -12,6 +12,9 @@
   align-self: flex-start;
   cursor: pointer;
   transition: all $style-change-duration;
+  font-weight: 400;
+  font-size: rem(16px);
+  line-height: 150%;
 
   &::before {
     content: "";
@@ -21,7 +24,7 @@
     margin-right: 8px;
     background-color: var(--color-bg-main, $white);
     border-radius: 5px;
-    border: 1px solid var(--color-stroke, rgba(161, 167, 174, 0.5));
+    border: 1px solid var(--color-stroke, $light-grey);
     transition: all $style-change-duration;
   }
 
@@ -59,7 +62,7 @@
 .form-checkbox input[type="checkbox"]:not(:checked) ~ label {
   &:hover {
     &::before {
-      border: 1px solid var(--color-interactive-default, $blue-accent);
+      border: 1px solid var(--color-interactive-default, $blue-sail);
     }
   }
 }
@@ -67,6 +70,7 @@
 
 .form-checkbox input[type="checkbox"]:checked ~ label {
   &::before {
+    border-color: $blue-default;
     background-color: var(--color-interactive-default, $blue-default);
   }
 
@@ -87,17 +91,21 @@
     background-image: url("../img/checkbox-disabled.svg");
   }
 
-  &:hover {
-    &::before {
-      border: 1px solid rgba(161, 167, 174, 0.5);
-    }
-  }
+  //&:hover {
+  //  &::before {
+  //    border: 1px solid rgba(161, 167, 174, 0.5);
+  //  }
+  //}
 }
 
 .form-checkbox input[type="checkbox"]:not(:checked):focus-visible,
 .form-checkbox input[type="checkbox"]:checked:focus-visible,
 .form-checkbox input[type="checkbox"]:disabled:focus-visible {
   & ~ label {
-    outline: 2px solid var(--color-interactive-default, $blue-accent);
+    outline: 2px solid var(--color-interactive-default, $blue-sail);
   }
+}
+
+.form-checkbox.error label::before {
+  border-color: $light-red;
 }

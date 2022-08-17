@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<include src="source/components/head.html"></include>
+<style>
+  .ui-block {
+    box-shadow: 0 4px 20px rgba(46, 67, 102, 0.06);
+    border-radius: 5px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    padding: 64px 48px;
+  }
+
+  .ui-block__sub-block {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    margin-bottom: 60px;
+    position: relative;
+  }
+
+  .ui-block__sub-block .ui-block__sub-block {
+    margin-bottom: 0;
+  }
+
+  .ui-block__sub-block--color {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 40px;
+    margin-bottom: 24px !important;
+  }
+
+  .small-title {
+    display: inline-block;
+    margin-bottom: 24px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    color: #979797;
+  }
+
+  .color-demo {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    border: 1px solid #B1C5F9;
+    margin-right: 16px;
+  }
+
+  .ui-container {
+    max-width: 2300px;
+    margin: 0 auto;
+    padding: 60px;
+  }
+
+  .location-switcher__btn:first-of-type::after {
+    display: none;
+  }
+</style>
+<body class="page-body">
+  <div class="content ui-container">
+    <h1>UI kit</h1>
+
+    <div class="ui-block">
+      <div class="row flex-column gy-5">
+        <h2 style="margin-bottom: 40px">Style text</h2>
+
+        <h2>Заголовок два h2</h2>
+        <h3>Заголовок три h3</h3>
+        <h4>Заголовок четыре h4</h4>
+        <p>Текст</p>
+        <div class="col">
+          <table>
+            <caption>Caption</caption>
+          </table>
+
+        </div>
+        <div class="col">
+          <button type="button" class="button">Button</button>
+        </div>
+        <div class="col">
+          <button type="button" class="button button--small">Button small</button>
+        </div>
+        <div class="col">
+          <a href="#">ссылка - a:link</a>
+        </div>
+      </div>
+      <div class="ui-block__sub-block">
+        <h2 style="margin-bottom: 40px">Color</h2>
+        <div class="row gy-5 gx-5 row-cols-auto">
+          <div class="col me-5">
+            <span class="small-title">BG</span>
+            <div class="row row-cols-auto gx-5">
+              <div class="col">
+                <div class="color-demo" style="background-color: #F9F9FA"></div>
+              </div>
+              <div class="col">
+                <div class="color-demo" style="background-color: #FFFFFF"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col me-5">
+            <span class="small-title">Text</span>
+            <div class="row row-cols-auto gx-5">
+              <div class="col">
+                <div class="color-demo" style="background-color: #354052"></div>
+              </div>
+              <div class="col">
+                <div class="color-demo" style="background-color: #586170"></div>
+              </div>
+              <div class="col">
+                <div class="color-demo" style="background-color: #8D9299"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col me-5">
+            <span class="small-title">Color</span>
+            <div class="row row-cols-auto gx-5">
+              <div class="col">
+                <div class="color-demo" style="background-color: #0E4CD3"></div>
+              </div>
+              <div class="col">
+                <div class="color-demo" style="background-color: #E3E8EE"></div>
+              </div>
+              <div class="col">
+                <div class="color-demo" style="background-color: #B1C5F9"></div>
+              </div>
+              <div class="col">
+                <div class="color-demo" style="background-color: #EDF2FE"></div>
+              </div>
+              <div class="col">
+                <div class="color-demo" style="background-color: #E55050"></div>
+              </div>
+              <div class="col">
+                <div class="color-demo" style="background-color: #F3A8A8"></div>
+              </div>
+              <div class="col">
+                <div class="color-demo" style="background-color: #70BF56"></div>
+              </div>
+              <div class="col">
+                <div class="color-demo" style="background-color: #DDF5E7"></div>
+              </div>
+              <div class="col">
+                <div class="color-demo" style="background-color: #FFA51D"></div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col me-5">
+            <span class="small-title">Select color</span>
+            <div class="row row-cols-auto gx-5">
+              <div class="col">
+                <div class="color-demo" style="background-color: #60D2CC"></div>
+              </div>
+              <div class="col">
+                <div class="color-demo" style="background-color: #E55050"></div>
+              </div>
+              <div class="col">
+                <div class="color-demo" style="background-color: #8D9299"></div>
+              </div>
+              <div class="col">
+                <div class="color-demo" style="background-color: #FFA51D"></div>
+              </div>
+              <div class="col">
+                <div class="color-demo" style="background-color: #2C8ECC"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="ui-block__sub-block">
+        <h2 style="margin-bottom: 40px">Icon</h2>
+        <div class="row row-cols-1 gy-5">
+          <div class="col">
+            <div class="row row-cols-auto gx-5 gy-5">
+              <div class="col">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-pin"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-glasses"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-sign-in"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" style="color: #8D9299">
+                  <use xlink:href="img/sprite.svg#icon-clock"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" style="stroke: #B1BAC7">
+                  <use xlink:href="img/sprite.svg#icon-cross"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-search"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-user"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" style="fill: #B1C5F9">
+                  <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-arrow-down"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" style="stroke: #E55050">
+                  <use xlink:href="img/sprite.svg#icon-cross"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" style="color: #E3E8EE">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" style="color: #0E4CD3">
+                  <use xlink:href="img/sprite.svg#icon-star"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" style="color: #0E4CD3">
+                  <use xlink:href="img/sprite.svg#icon-exclamation"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" style="color: #0E4CD3">
+                  <use xlink:href="img/sprite.svg#icon-hide"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" style="color: #0E4CD3">
+                  <use xlink:href="img/sprite.svg#icon-personal"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" style="color: #9BD2F4">
+                  <use xlink:href="img/sprite.svg#icon-page"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" style="color: #9BD2F4">
+                  <use xlink:href="img/sprite.svg#icon-blank-document"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" style="color: #9BD2F4">
+                  <use xlink:href="img/sprite.svg#icon-zoom"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" style="color: #9BD2F4">
+                  <use xlink:href="img/sprite.svg#icon-looking-glass"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" style="color: #9BD2F4">
+                  <use xlink:href="img/sprite.svg#icon-calendar"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="row row-cols-auto gx-5 gy-5">
+              <div class="col">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" style="color: #CCD3DD">
+                  <use xlink:href="img/sprite.svg#icon-telegram"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" style="color: #CCD3DD">
+                  <use xlink:href="img/sprite.svg#icon-vk"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" style="color: #CCD3DD">
+                  <use xlink:href="img/sprite.svg#icon-ok"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" style="color: #33B3E3">
+                  <use xlink:href="img/sprite.svg#icon-telegram"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" style="color: #0E4CD3">
+                  <use xlink:href="img/sprite.svg#icon-vk"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" style="color: #F38420">
+                  <use xlink:href="img/sprite.svg#icon-ok"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="row row-cols-auto gx-5 gy-5">
+              <div class="col">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-file-replace"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg class="news__title-icon" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-news"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-section"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-rate"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-oops"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-query"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-landscape"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-forum"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-project"></use>
+                </svg>
+              </div>
+
+              <div class="col">
+                <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-direct-line"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui-block">
+      <div class="ui-block__sub-block">
+        <h2 style="margin-bottom: 40px">Button</h2>
+        <div class="ui-block__sub-block ui-block__sub-block--color">
+          <div class="ui-block__sub-block">
+            <span class="small-title">normal</span>
+            <div class="ui-block__sub-block ui-block__sub-block--color align-items-center">
+              <button type="button" class="button button--blue" href="#" style="margin: 40px">Кнопка</button>
+
+              <button type="button" class="button button--white" href="#" style="margin: 40px">Кнопка</button>
+
+              <button type="button" class="button button--light-blue" href="#" style="margin: 40px">Кнопка</button>
+
+              <a href="#" class="link-arrow" style="margin: 40px">
+                <span>Кнопка</span>
+                <svg width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+
+              <a href="#" class="link-arrow link-arrow--small" style="margin: 40px">
+                <span>Кнопка</span>
+                <svg width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+
+              <button class="info-banner-button js-collapse-button opened" style="margin: 40px">
+                <span class="info-banner-button__text">Свернуть</span>
+                <svg class="arrow-down info-banner-button__icon" xmlns="http://www.w3.org/2000/svg" fill="none" width="13" height="8" viewBox="0 0 14 8">
+                  <path fill="currentColor" fill-rule="evenodd" d="M11.98 0L7 4.97 2.02 0 .5 1.51 7 8l6.5-6.49L11.98 0z" clip-rule="evenodd"></path>
+                </svg>
+              </button>
+
+              <button class="info-banner-button js-collapse-button" style="margin: 40px">
+                <span class="info-banner-button__text">Развернуть</span>
+                <svg class="arrow-down info-banner-button__icon" xmlns="http://www.w3.org/2000/svg" fill="none" width="13" height="8" viewBox="0 0 14 8">
+                  <path fill="currentColor" fill-rule="evenodd" d="M11.98 0L7 4.97 2.02 0 .5 1.51 7 8l6.5-6.49L11.98 0z" clip-rule="evenodd"></path>
+                </svg>
+              </button>
+
+              <a href="#" class="link link--blue" style="margin: 40px">Скачать</a>
+
+              <a class="back-btn" href="#" style="margin: 40px">
+                <svg width="8" height="14">
+                  <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
+                </svg>
+                Назад
+              </a>
+            </div>
+          </div>
+
+          <div class="ui-block__sub-block">
+            <span class="small-title">disabled</span>
+            <div class="ui-block__sub-block ui-block__sub-block--color align-items-center">
+              <button type="button" class="button button--blue" href="#" disabled style="margin: 40px">Кнопка</button>
+
+              <button type="button" class="button button--white" href="#" disabled style="margin: 40px">Кнопка</button>
+
+              <button type="button" class="button button--light-blue" href="#" disabled style="margin: 40px">Кнопка</button>
+
+              <a href="#" class="link-arrow disabled" style="margin: 40px" disabled>
+                <span>Кнопка</span>
+                <svg width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+
+              <a href="#" class="link-arrow link-arrow--small disabled" style="margin: 40px" disabled>
+                <span>Кнопка</span>
+                <svg width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                </svg>
+              </a>
+
+              <a href="#" class="link link--blue disabled" style="margin: 40px" disabled>Скачать</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui-block">
+      <div class="ui-block__sub-block">
+        <h2 style="margin-bottom: 40px">Check and radio box</h2>
+        <div class="ui-block__sub-block ui-block__sub-block--color">
+          <div class="ui-block__sub-block">
+            <span class="small-title">normal</span>
+            <div class="ui-block__sub-block ui-block__sub-block--color align-items-center">
+              <div class="form-checkbox">
+                <input type="checkbox" name="interaction-2" id="interaction-2" value="Телефон доверия Губернатора">
+                <label for="interaction-2"></label>
+              </div>
+
+              <div class="form-radio">
+                <input class="visually-hidden" type="radio" name="survey-1"
+                       id="survey-2-no" value="no" />
+                <label for="survey-2-no"></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-block__sub-block">
+            <span class="small-title">active</span>
+            <div class="ui-block__sub-block ui-block__sub-block--color align-items-center">
+              <div class="form-checkbox">
+                <input type="checkbox" name="interaction-21" id="interaction-21" value="Телефон доверия Губернатора" checked>
+                <label for="interaction-21"></label>
+              </div>
+
+              <div class="form-radio">
+                <input class="visually-hidden" type="radio" name="survey-11"
+                       id="survey-2-no1" value="no" checked />
+                <label for="survey-2-no1"></label>
+              </div>
+            </div>
+          </div>
+
+          <div class="ui-block__sub-block">
+            <span class="small-title">disable</span>
+            <div class="ui-block__sub-block ui-block__sub-block--color align-items-center">
+              <div class="form-checkbox">
+                <input type="checkbox" name="interaction-22" id="interaction-212" value="Телефон доверия Губернатора" disabled>
+                <label for="interaction-212"></label>
+              </div>
+
+              <div class="form-radio">
+                <input class="visually-hidden" type="radio" name="survey-12"
+                       id="survey-2-no12" value="no" disabled />
+                <label for="survey-2-no12"></label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2 style="margin-bottom: 40px">List</h2>
+        <div class="ui-block__sub-block ui-block__sub-block--color">
+          <div class="ui-block__sub-block ui-block__sub-block--color">
+            <div class="ui-block__sub-block" style="margin: 0 40px 40px 0">
+              <div class="form-checkbox">
+                <input type="checkbox" name="list1" id="list11" value="Телефон доверия Губернатора">
+                <label for="list11">Первый</label>
+              </div>
+              <div class="form-checkbox">
+                <input type="checkbox" name="list1" id="list12" value="Телефон доверия Губернатора">
+                <label for="list12">Второй</label>
+              </div>
+              <div class="form-checkbox">
+                <input type="checkbox" name="list1" id="list13" value="Телефон доверия Губернатора">
+                <label for="list13">Третий</label>
+              </div>
+            </div>
+            <div class="ui-block__sub-block" style="margin: 0 40px 40px 0">
+              <div class="form-radio">
+                <input class="visually-hidden" type="radio" name="survey1"
+                       id="survey-11" value="no" />
+                <label for="survey-11">Первый</label>
+              </div>
+             <div class="form-radio">
+                <input class="visually-hidden" type="radio" name="survey1"
+                       id="survey-12" value="no" />
+                <label for="survey-12">Второй</label>
+              </div>
+             <div class="form-radio">
+                <input class="visually-hidden" type="radio" name="survey1"
+                       id="survey-13" value="no" />
+                <label for="survey-13">Третий</label>
+              </div>
+            </div>
+            <div class="ui-block__sub-block" style="margin: 0 40px 40px 0">
+              <div class="location-switcher__btn form-radio">
+                <input id="location-residence1" type="radio" name="location1" value="residence" checked>
+                <label for="location-residence1">
+                  Выбранный регион
+                  <span class="page-header__location-address location-switcher__address">Не указано</span>
+                </label>
+              </div>
+
+              <div class="location-switcher__btn form-radio">
+                <input id="location-registration2" type="radio" name="location1" value="registration">
+                <label for="location-registration2">
+                  Адрес проживания
+                  <span class="page-header__location-address location-switcher__address">Не указано</span>
+                </label>
+              </div>
+
+              <div class="location-switcher__btn form-radio">
+                <input id="location-registration3" type="radio" name="location1" value="registration1">
+                <label for="location-registration3">
+                  Адрес регистрации
+                  <span class="page-header__location-address location-switcher__address">Не указано</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="ui-block__sub-block" style="margin: 0 40px 40px 0; width: 300px">
+              <span class="small-title">mistake</span>
+              <div class="form-checkbox error">
+                <input type="checkbox" name="list1" id="list112" value="Телефон доверия Губернатора">
+                <label for="list112">Первый</label>
+              </div>
+              <div class="form-checkbox error">
+                <input type="checkbox" name="list1" id="list122" value="Телефон доверия Губернатора">
+                <label for="list122">Второй</label>
+              </div>
+              <div class="form-checkbox error">
+                <input type="checkbox" name="list1" id="list132" value="Телефон доверия Губернатора">
+                <label for="list132">Третий</label>
+              </div>
+              <p class="error-field">Это обязательный вопрос</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui-block">
+      <div class="ui-block__sub-block">
+        <h2 style="margin-bottom: 40px">Card / Block</h2>
+        <div class="ui-block__sub-block">
+          <span class="small-title">Normal</span>
+          <div class="row flex-column gy-5">
+            <div class="col">
+              <a href="#" class="notice">
+                <div class="notice__head">
+                  <p class="notice__votes">Всего 325 голосов</p>
+                  <p class="tag">Национальный проект</p>
+                </div>
+                <p class="notice__text">Удовлетворенность граждан информацией, размещаемой на&nbsp;официальном сайте администрации города Славгорода</p>
+                <div class="notice__footer">
+                  <p class="notice-type">Опрос</p>
+                  <div class="link-arrow d-none d-md-flex ms-1">
+                    <span>Перейти</span>
+                    <svg width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col">
+              <a href="#" class="notice">
+                <div class="notice__head">
+                  <div class="notice__wrapper">
+                    <svg width="18" height="18" viewBox="0 0 18 18" style="fill: #B1C5F9"
+                         xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-personal"></use>
+                    </svg>
+                    <span class="notice__result notice__result--green"
+                          data-tooltip="Участие принято" data-flow="down">
+                  Подведены итоги</span>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
+                         xmlns="http://www.w3.org/2000/svg" style="fill: #B1C5F9">
+                      <use xlink:href="img/sprite.svg#icon-lightning"></use>
+                    </svg>
+
+                  </div>
+                  <p class="tag">Национальный проект</p>
+                </div>
+                <p class="notice__text">Удовлетворенность граждан информацией, размещаемой на&nbsp;официальном сайте администрации города Славгорода</p>
+                <div class="notice__footer">
+                  <p class="notice-type">Опрос</p>
+                  <div class="link-arrow d-none d-md-flex ms-1">
+                    <span>Перейти</span>
+                    <svg width="33" height="12" viewBox="0 0 33 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-arrow"></use>
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col">
+              <div class="project__item">
+                <a href="#" class="project__link">
+                  <span class="project__icon">
+                    <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <use xlink:href="img/sprite.svg#icon-direct-line"></use>
+                    </svg>
+                  </span>
+                  <span class="project__name">Прямые линии</span>
+                  <span class="project__count">2</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="col">
+              <a href="#" class="single-news">
+                <div class="single-news__date-wrapper date">
+                  <time datetime="2022-05-10">10.05.2022</time>
+                </div>
+                <p class="single-news__text">Более 300 тысяч квадратных метров аварийного жилья планируют расселить в&nbsp;Алтайском крае</p>
+              </a>
+            </div>
+
+            <div class="col">
+              <div class="composite-poll-description">
+                <p >Здесь будет описание опроса (информация из стандартного поля). Рыбным текстом называется текст для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан.</p>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="info-block">
+                <div class="info-block__wrapper">
+                  <span class="info-block__text">Данный опрос анонимный. Его результаты представляются в обезличенном виде в формате статистики.</span>
+                  <a class="info-block__link" href="#">Правила прохождения опроса</a>
+                  <svg class="info-block__icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-privacy"></use>
+                  </svg>
+                </div>
+                <div class="info-block__wrapper">
+                  <span class="info-block__text">Это персонализированный опрос на основе вашего возраста и пола.</span>
+                  <svg class="info-block__icon" width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-personal"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="info-banner">
+                <svg width="24" height="24" class="info-icon info-banner__icon"
+                     xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <path fill="currentColor" fill-rule="evenodd"
+                        d="M.2 12C.2 5.494 5.492.2 12 .2 18.505.2 23.8 5.494 23.8 12c0 6.506-5.294 11.8-11.8 11.8C5.492 23.8.2 18.506.2 12zm2.152 0c0 5.32 4.328 9.647 9.647 9.647 5.32 0 9.647-4.327 9.647-9.647S17.318 2.354 12 2.354 2.352 6.68 2.352 12z"
+                        clip-rule="evenodd" />
+                  <rect width="2.5" height="8" x="10.75" y="6" fill="currentColor"
+                        rx="1" />
+                  <rect width="2.5" height="3" x="10.75" y="15" fill="currentColor"
+                        rx="1" />
+                </svg>
+
+                <p class="info-banner__title">
+                  Данное голосование является открытым
+                </p>
+
+                <p class="info-banner__text">
+                  В соответствии с приказом Министерства строительства Российской
+                  Федерации № 75895422 от 20.01.2020 персональные данные участников
+                  голосования (в составе ФИО, дата рождения, номер паспорта) будут
+                  переданы уполномоченным ответственной организации. Рыбным текстом
+                  называется текст, служащий для временного наполнения макета в
+                  публикациях или производстве веб-сайтов, пока
+                </p>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="status-info status-info--accent">
+                <div class="status-info__text-group">
+                  <svg width="24" height="24">
+                    <use xlink:href="img/sprite.svg#icon-clock"></use>
+                  </svg>
+                  <p class="status-info__text">Результаты опроса будут опубликованы после&nbsp;<time datetime="2019-11-25">25.11.2019</time></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="status-info">
+                <div class="status-info__text-group">
+                  <svg width="24" height="24">
+                    <use xlink:href="img/sprite.svg#icon-tick"></use>
+                  </svg>
+
+                  <p class="status-info__text">Голосование завершено, победители указаны
+                                               в&nbsp;соответствующих категориях</p>
+                </div>
+                <a class="status-info__file file-item file-item--small file-item--white" href="#" download>
+                  <svg width="24" height="24">
+                    <use xlink:href="img/sprite.svg#icon-page"></use>
+                  </svg>
+
+                  <p class="file-item__info">
+                    <span class="file-item__name">Протокол</span>
+                    <span class="file-item__size">3,2 мб</span>
+                  </p>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui-block">
+      <div class="ui-block__sub-block">
+        <h2 style="margin-bottom: 40px">Field</h2>
+        <div class="ui-block__sub-block">
+          <span class="small-title">Normal</span>
+          <div class="row flex-column gy-5">
+            <div class="col">
+              <input type="text" name="surname" id="surname" class="text-input" placeholder="Введите название"
+                     aria-label="Введите название" />
+              <span class="error-field">Введите только буквы</span>
+            </div>
+
+            <div class="col">
+              <input type="text" name="surname" id="surname1" class="text-input" placeholder="Введите название"
+                     aria-label="Введите название" disabled/>
+              <span class="error-field">Введите только буквы</span>
+            </div>
+
+            <div class="col">
+              непонятный блок, пока не делал.
+            </div>
+
+            <div class="col">
+              <select class="_select" id="formSelect21" data-trigger="data-trigger">
+                <option placeholder value="">Введите регион</option>
+                <option value="1">Первый вариант</option>
+                <option value="2">Второй вариант</option>
+                <option value="3">Третий вариант</option>
+                <option value="4">Четвертый вариант</option>
+                <option value="5">Пятый вариант</option>
+                <option value="5">Пятый вариант</option>
+                <option value="5">Пятый вариант</option>
+                <option value="5">Пятый вариант</option>
+                <option value="5">Пятый вариант</option>
+                <option value="6">Шестой вариант</option>
+              </select>
+            </div>
+
+            <div class="col">
+              <select class="_select" id="formSelect213" data-trigger="data-trigger" disabled>
+                <option placeholder value="">Введите регион</option>
+                <option value="1">Первый вариант</option>
+                <option value="2">Второй вариант</option>
+                <option value="3">Третий вариант</option>
+                <option value="4">Четвертый вариант</option>
+                <option value="5">Пятый вариант</option>
+                <option value="5">Пятый вариант</option>
+                <option value="5">Пятый вариант</option>
+                <option value="5">Пятый вариант</option>
+                <option value="5">Пятый вариант</option>
+                <option value="6">Шестой вариант</option>
+              </select>
+            </div>
+
+            <div class="col">
+              <select class="_select-search" id="formSelect2" data-trigger="data-trigger">
+                <option placeholder value="">Выберите из списка</option>
+                <option value="1">Первый вариант</option>
+                <option value="2">Второй вариант</option>
+                <option value="3">Третий вариант</option>
+                <option value="4">Четвертый вариант</option>
+                <option value="5">Пятый вариант</option>
+                <option value="5">Пятый вариант</option>
+                <option value="5">Пятый вариант</option>
+                <option value="5">Пятый вариант</option>
+                <option value="5">Пятый вариант</option>
+                <option value="6">Шестой вариант</option>
+              </select>
+            </div>
+
+            <div class="col">
+              <select class="_select-search" id="formSelect212" data-trigger="data-trigger" disabled>
+                <option placeholder value="">Выберите из списка</option>
+                <option value="1">Первый вариант</option>
+                <option value="2">Второй вариант</option>
+                <option value="3">Третий вариант</option>
+                <option value="4">Четвертый вариант</option>
+                <option value="5">Пятый вариант</option>
+                <option value="5">Пятый вариант</option>
+                <option value="5">Пятый вариант</option>
+                <option value="5">Пятый вариант</option>
+                <option value="5">Пятый вариант</option>
+                <option value="6">Шестой вариант</option>
+              </select>
+            </div>
+
+            <div class="col">
+              <div class="form__input-date-wrap">
+                <input class="form__input-date js-datepicker" type="text" name="date" autocomplete="off" placeholder="ДД.ММ.ГГГГ">
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="form__input-date-wrap">
+                <input class="form__input-date js-datepicker" type="text" name="date" autocomplete="off" placeholder="ДД.ММ.ГГГГ" disabled>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="description-block">
+                <div class="description-block__textarea-container">
+                <textarea name="proposition" id="proposition" cols="30"
+                          rows="10" placeholder="Ваш комментарий"
+                          class="description-block__textarea description-block__proposition-name"
+                          aria-label="Ваш вариант ответа"></textarea>
+                  <span class="description-block__textarea-error">Вы превысили
+                  лимит на хх символов</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="description-block">
+                <div class="description-block__textarea-container">
+                <textarea name="proposition" id="proposition1" cols="30"
+                          rows="10" placeholder="Ваш комментарий"
+                          class="description-block__textarea description-block__proposition-name description-block__textarea--error"
+                          aria-label="Ваш вариант ответа"></textarea>
+                  <span class="description-block__textarea-error description-block__textarea-error--show">Вы превысили
+                  лимит на хх символов</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="description-block">
+                <div class="description-block__textarea-container">
+                <textarea name="proposition" id="proposition3" cols="30"
+                          rows="10" placeholder="Ваш комментарий"
+                          class="description-block__textarea description-block__proposition-name"
+                          aria-label="Ваш вариант ответа" disabled></textarea>
+                  <span class="description-block__textarea-error">Вы превысили
+                  лимит на хх символов</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui-block">
+      <div class="ui-block__sub-block">
+        <h2 style="margin-bottom: 40px">Other</h2>
+        <div class="ui-block__sub-block">
+          <span class="small-title">Normal</span>
+          <div class="row flex-column gy-5">
+            <div class="col">
+              <span class="small-title">filter + drop</span>
+              <form class="categories-filter js-form-select">
+                <ul class="page-nav">
+                  <li class="page-nav__item">
+                    <input class="page-nav__radio-input" type="radio" name="status" id="regional-status" checked="">
+                    <label class="page-nav__radio-label" for="regional-status" aria-label="Региональные">название 1</label>
+                  </li>
+                  <li class="page-nav__item">
+                    <input class="page-nav__radio-input" type="radio" name="status" id="local-status">
+                    <label class="page-nav__radio-label" for="local-status" aria-label="Местные">название 2</label>
+                  </li>
+                </ul>
+                <select name="categories" id="categories" title="Открыть фильтр" data-deselect="true" class="multiple-select js-multiple-select" data-placeholder-text="Статус" multiple="">
+                  <option data-placeholder="true"></option>
+                  <option value="Библиотеки" title="Библиотеки">Библиотеки</option>
+                  <option value="Библиотеки1" title="Библиотеки1">Библиотеки1</option>
+                  <option value="Библиотеки2" title="Библиотеки2">Библиотеки2</option>
+                  <option value="Библиотеки3" title="Библиотеки3">Библиотеки3</option>
+                </select>
+                <select name="categories" id="categories1" title="Открыть фильтр" data-deselect="true" class="multiple-select js-multiple-select" data-placeholder-text="Активность" multiple="">
+                  <option data-placeholder="true"></option>
+                  <option value="Библиотеки" title="Библиотеки">Библиотеки</option>
+                  <option value="Библиотеки1" title="Библиотеки1">Библиотеки1</option>
+                  <option value="Библиотеки2" title="Библиотеки2">Библиотеки2</option>
+                  <option value="Библиотеки3" title="Библиотеки3">Библиотеки3</option>
+                </select>
+                <select name="categories" id="categories12" title="Открыть фильтр" data-deselect="true" class="multiple-select js-multiple-select" data-placeholder-text="Уровень" multiple="">
+                  <option data-placeholder="true"></option>
+                  <option value="Библиотеки" title="Библиотеки">Библиотеки</option>
+                  <option value="Библиотеки1" title="Библиотеки1">Библиотеки1</option>
+                  <option value="Библиотеки2" title="Библиотеки2">Библиотеки2</option>
+                  <option value="Библиотеки3" title="Библиотеки3">Библиотеки3</option>
+                </select>
+                <select name="categories" id="categories123" title="Открыть фильтр" data-deselect="true" class="multiple-select js-multiple-select" data-placeholder-text="Все категории" multiple="">
+                  <option data-placeholder="true"></option>
+                  <option value="Библиотеки" title="Библиотеки">Библиотеки</option>
+                  <option value="Библиотеки1" title="Библиотеки1">Библиотеки1</option>
+                  <option value="Библиотеки2" title="Библиотеки2">Библиотеки2</option>
+                  <option value="Библиотеки3" title="Библиотеки3">Библиотеки3</option>
+                </select>
+                <div class="form-checkbox">
+                  <input type="checkbox" name="favorites-checkbox"
+                         id="favorites-checkbox">
+                  <label for="favorites-checkbox">Только избранные</label>
+                </div>
+              </form>
+            </div>
+
+            <div class="col">
+              <span class="small-title">file</span>
+
+              <a class="file-item file-item--grey" href="#" download style="margin-bottom: 40px">
+                <svg width="16" height="16">
+                  <use xlink:href="img/sprite.svg#icon-blank-document"></use>
+                </svg>
+                <p class="file-item__info file-item__info--download">
+                  <span class="file-item__name">Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан.</span>
+                  <span class="file-item__download link link--blue">Скачать</span>
+                </p>
+              </a>
+
+              <a class="file-item" href="#" download>
+                <svg width="24" height="24">
+                  <use xlink:href="img/sprite.svg#icon-page"></use>
+                </svg>
+                <p class="file-item__info file-item__info--download">
+                  <span class="file-item__name">Рыбным текстом называется текст, служащий для временного наполнения макета в публикациях или производстве веб-сайтов, пока финальный текст еще не создан.</span>
+                  <span class="file-item__download link link--blue">Скачать</span>
+                </p>
+              </a>
+            </div>
+
+            <div class="col">
+              <span class="small-title">pagination</span>
+              <div class="paginator">
+                <a class="paginator__item paginator__item--prev paginator__item--disabled"
+                   aria-label="предыдущий">
+                  <svg width="18" height="10" viewBox="0 0 18 10" fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-paginator-prev"></use>
+                  </svg>
+                </a>
+                <a class="paginator__item paginator__item--current">1</a>
+                <a class="paginator__item" href="#2">2</a>
+                <a class="paginator__item" href="#3">3</a>
+                <span class="paginator__item paginator__item--hidden">&hellip;</span>
+                <a class="paginator__item paginator__item--hidden" href="#9">9</a>
+                <a class="paginator__item paginator__item--hidden" href="#10">10</a>
+                <a class="paginator__item paginator__item--hidden" href="#11">11</a>
+                <a class="paginator__item paginator__item--next" href="#next"
+                   aria-label="следующий">
+                  <svg width="18" height="10" viewBox="0 0 18 10" fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite.svg#icon-paginator-next"></use>
+                  </svg>
+                </a>
+              </div>
+
+            </div>
+
+            <div class="col">
+              <span class="small-title">tooltipe</span>
+              <span class="notice__result notice__result--green"
+                    data-tooltip="Участие принято" data-flow="down">
+                  Подведены итоги</span>
+            </div>
+
+            <div class="col">
+              <span class="small-title">slider</span>
+              <div class="form__range-wrapper form-range">
+                <div class="form-range__value">
+                  <span>1</span>
+                  <!-- <span>5</span> -->
+                  <span>10</span>
+                </div>
+                <!--     if you dont need this field - add attribute disabled for DIV. See example in nex form__section block   -->
+                <div class="js-poll-range" id="poll-range" data-input="poll-range" data-min="0" data-max="10"
+                     data-step="1" data-required="true">
+                </div>
+                <p class="error-field visually-hidden">Пожалуйста заполните поле</p>
+                <div class="form-range__description">
+                  <span>очень плохо</span>
+                  <span>очень хорошо</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col">
+              <div class="preloader"></div>
+            </div>
+
+            <div class="col">
+              <div class="custom-select custom-select--search" data-select data-name="some-name" data-id="id-example" data-multiple="true" data-insert="true">
+                <button class="custom-select__button" type="button" aria-label="Выберите одну из опций">
+                  <span class="custom-select__text">Выберите одну из опций</span>
+                  <span class="custom-select__icon"></span>
+                </button>
+                <div class="custom-select__list-box">
+                  <div class="custom-select__search" data-search>
+                    <input type="search" placeholder="Поиск" aria-label="Поиск">
+                    <button class="custom-select__search-clean" type="button" aria-label="Отчистить поиск"></button>
+                  </div>
+                  <div class="custom-select__empty-box">По вашему запросу ничего не найдено</div>
+                  <ul class="custom-select__list" role="listbox">
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option" data-test="1" data-some="xxx">Программа моделирования технологических процессов обработки металлов давлением (QForm)</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option" data-test1="boo">Zyfra Industrial Automation Kit</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option" data-test1="boo2">pSeven</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option" data-test1="boo3">«ADEM-VX CAM версия 2020 для КОМПАС-3D»</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option" data-test1="boo4">Цифровые сервисы планирования и диспетчеризации производства / Zyfra Production Scheduling</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-6" aria-selected="false" role="option" data-test1="boo5">«ADEM-VX CAM версия 2020 для КОМПАС-3D»</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-7" aria-selected="false" role="option">Zyfra Plant Production Planning</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-8" aria-selected="false" role="option">Цифровая платформа StreamDat (СтримДат)</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-9" aria-selected="false" role="option">СПРУТ-ОКП</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-10" aria-selected="false" role="option">«ADEM-VX CAM версия 2020 для КОМПАС-3D»</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-11" aria-selected="false" role="option">Система Управления Мобильными Специалистами ОПТИМУМ (ОПТИМУМ СУМС)</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-1" aria-selected="false" role="option">Программа моделирования технологических процессов обработки металлов давлением (QForm)</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-2" aria-selected="false" role="option">Zyfra Industrial Automation Kit</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-3" aria-selected="false" role="option">pSeven</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-4" aria-selected="false" role="option">«ADEM-VX CAM версия 2020 для КОМПАС-3D»</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-5" aria-selected="false" role="option">Цифровые сервисы планирования и диспетчеризации производства / Zyfra Production Scheduling</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-6" aria-selected="false" role="option">«ADEM-VX CAM версия 2020 для КОМПАС-3D»</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-7" aria-selected="false" role="option">Zyfra Plant Production Planning</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-8" aria-selected="false" role="option">Цифровая платформа StreamDat (СтримДат)</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-9" aria-selected="false" role="option">СПРУТ-ОКП</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-10" aria-selected="false" role="option">«ADEM-VX CAM версия 2020 для КОМПАС-3D»</li>
+                    <li class="custom-select__item" tabindex="0" data-select-value="id-11" aria-selected="false" role="option">Система Управления Мобильными Специалистами ОПТИМУМ (ОПТИМУМ СУМС)</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/libs.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

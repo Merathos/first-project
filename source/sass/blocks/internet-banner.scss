@@ -54,6 +54,7 @@
 
   font-size: rem(40px);
   line-height: 47px;
+  font-weight: 500;
 
   @include mobile {
     font-size: rem(30px);
@@ -76,10 +77,11 @@
 }
 
 .internet-banner__button {
-  margin-top: 32px;
+  margin-top: 46px;
   padding: 18px 32px 15px;
 
   @include mobile {
+    margin-top: 32px;
     width: auto;
     font-size: rem(13px);
     padding: 15px 34px 15px;

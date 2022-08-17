@@ -1,24 +1,50 @@
 .content {
+  font-family: "Lato", "Arial", sans-serif;
+
   h1:not([class]) {
     margin: 0;
     margin-bottom: 40px;
     font-weight: 400;
     font-size: rem(40px);
-    line-height: rem(47px);
+    line-height: 118%;
   }
 
   h2:not([class]) {
     margin-top: 40px;
     margin-bottom: 24px;
-    font-weight: 400;
+    font-weight: 500;
+    font-size: rem(40px);
+    line-height: 150%;
+  }
+
+  h3:not([class]) {
+    margin-top: 40px;
+    margin-bottom: 24px;
+    font-weight: 500;
     font-size: rem(30px);
-    line-height: rem(36px);
+    line-height: 150%;
+  }
+
+  caption:not([class]) {
+    font-weight: 400;
+    font-size: rem(14px);
+    line-height: 130%;
+    padding: 0;
+  }
+
+  a:not([class]) {
+    font-weight: 400;
+    font-size: rem(16px);
+    line-height: 150%;
+    padding: 0;
+    color: $blue-default;
   }
 
   p:not([class]) {
     margin: 0;
-    font-size: rem(15px);
-    line-height: rem(27px);
+    font-weight: 500;
+    font-size: rem(16px);
+    line-height: 150%;
 
     &:not(:last-child) {
       margin-bottom: 24px;
@@ -31,7 +57,7 @@
     padding: 32px;
     margin-bottom: 48px;
     font-size: rem(16px);
-    line-height: rem(22px);
+    line-height: 138%;
     background-color: var(--color-bg-secondary, $color-bg);
     border-radius: $border-radius;
 
@@ -152,7 +178,7 @@
     h1:not([class]) {
       margin-bottom: 24px;
       font-size: rem(30px);
-      line-height: rem(36px);
+      line-height: 120%;
     }
 
     h2:not([class]) {

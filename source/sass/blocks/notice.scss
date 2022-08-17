@@ -11,9 +11,28 @@
   text-decoration: none;
   padding: 24px;
   height: 100%;
+  max-width: rem(550px);
 
   @include mobile {
     padding: 24px 16px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    svg {
+      color: $blue-sail;
+    }
+  }
+
+  &__result {
+    font-weight: 400;
+    font-size: rem(14px);
+    line-height: 130%;
+    color: green;
+    padding: 0 12px;
   }
 
   &__head,

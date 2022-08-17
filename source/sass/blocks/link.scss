@@ -170,6 +170,10 @@
       font-size: 15px;
     }
   }
+
+  &.disabled {
+    color: $grey-2;
+  }
 }
 
 

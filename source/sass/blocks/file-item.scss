@@ -3,13 +3,13 @@
   align-items: center;
   box-sizing: border-box;
   width: 364px;
-  padding: 18px 23px;
-  font-size: rem(13px);
-  line-height: rem(17px);
+  padding: 15px 23px;
+  font-size: rem(14px);
+  line-height: 130%;
   color: var(--color-text, $dark-text);
   text-decoration: none;
   user-select: none;
-  border: 1px solid var(--color-stroke, $light-grey);
+  border: 1px solid var(--color-stroke, #DFE3EA);
   border-radius: $border-radius;
   outline: none;
   transition: color $style-change-duration;
@@ -50,6 +50,10 @@
       color: $white;
       opacity: 0.6;
     }
+  }
+
+  &--grey {
+    background-color: $color-bg;
   }
 
   @media (max-width: $mobile-max-width) {

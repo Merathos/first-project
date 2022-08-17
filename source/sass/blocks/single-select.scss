@@ -201,3 +201,7 @@
     transition: stroke $style-change-duration;
   }
 }
+
+.single-select .ss-single-selected .placeholder {
+  background-color: transparent;
+}
