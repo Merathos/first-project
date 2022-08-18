@@ -33,6 +33,13 @@
 
   &.disabled {
     color: $grey-2;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  span + svg {
+    margin: 0;
+    padding: 0;
   }
 }
 

@@ -12,7 +12,8 @@
     var datepicker = new window.Datepicker(input, {
       language: 'ru',
       minDate: new Date(),
-      autohide: true,
+      showOtherMonths: true,
+      autohide: false,
     });
   });
 })();

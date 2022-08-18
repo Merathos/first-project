@@ -130,6 +130,10 @@
     background: url("../img/icon-calendar-empty.svg") no-repeat;
     background-size: 100% 100%;
   }
+
+  &.disabled::after {
+    background: url("../img/icon-calendar-empty-grey.svg") no-repeat;
+  }
 }
 
 .form__input-date {

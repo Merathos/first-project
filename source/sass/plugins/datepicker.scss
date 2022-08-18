@@ -264,6 +264,7 @@ span.datepicker-cell {
 
 .datepicker-cell.disabled {
   color: #dbdbdb;
+  //opacity: 0;
 }
 
 .datepicker-cell.prev:not(.disabled),
@@ -282,7 +283,7 @@ span.datepicker-cell {
 }
 
 .datepicker-cell.next {
-  display: none;
+  color: #8D9299;
 }
 
 .datepicker .datepicker-cell {

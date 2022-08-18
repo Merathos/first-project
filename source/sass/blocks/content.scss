@@ -15,6 +15,7 @@
     font-weight: 500;
     font-size: rem(40px);
     line-height: 150%;
+    color: var(--color-text, $text-color);
   }
 
   h3:not([class]) {
@@ -23,6 +24,16 @@
     font-weight: 500;
     font-size: rem(30px);
     line-height: 150%;
+    color: var(--color-text, $text-color);
+  }
+
+  h4:not([class]) {
+    margin-top: 40px;
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: rem(24px);
+    line-height: 120%;
+    color: var(--color-text, $text-color);
   }
 
   caption:not([class]) {
@@ -30,6 +41,7 @@
     font-size: rem(14px);
     line-height: 130%;
     padding: 0;
+    color: var(--color-text, $text-color);
   }
 
   a:not([class]) {
@@ -37,17 +49,35 @@
     font-size: rem(16px);
     line-height: 150%;
     padding: 0;
-    color: $blue-default;
+    color: var(--color-text, $blue-default);
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--color-interactive-accent, $blue-hover);
+    }
   }
 
   p:not([class]) {
     margin: 0;
-    font-weight: 500;
+    font-weight: 400;
     font-size: rem(16px);
     line-height: 150%;
+    color: var(--color-text, $text-color);
 
     &:not(:last-child) {
       margin-bottom: 24px;
+    }
+  }
+
+  button.button {
+    font-weight: 700;
+    font-size: rem(15px);
+    line-height: 135%;
+    color: var(--color-text, $text-color);
+    text-transform: uppercase;
+
+    &--small {
+      font-size: rem(13px);
     }
   }
 

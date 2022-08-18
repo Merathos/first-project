@@ -22,7 +22,7 @@
 
   &::placeholder {
     font-weight: 400;
-    font-size: 15px;
+    font-size: rem(16px);
     line-height: 140%;
     color: var(--color-text, $lightest-text);
   }

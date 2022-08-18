@@ -106,6 +106,9 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: 400;
+  font-size: rem(13px);
+  line-height: 130%;
 }
 
 .mod-theme-inverse .file-item--white .file-item__name,
@@ -120,7 +123,9 @@
 }
 
 .file-item__size {
-  font-size: 300;
+  font-weight: 400;
+  font-size: rem(13px);
+  line-height: 130%;
   text-transform: uppercase;
   color: var(--color-text, $grey-default);
 }

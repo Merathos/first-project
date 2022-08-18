@@ -9,6 +9,10 @@
   padding-right: 25px;
   max-width: rem(340px);
 
+  &:hover {
+    color: var(--color-interactive-default, $blue-default);
+  }
+
   @include mobile {
     margin-right: 0;
     padding-bottom: 8px;

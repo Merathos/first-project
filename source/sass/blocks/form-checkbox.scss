@@ -26,6 +26,7 @@
     border-radius: 5px;
     border: 1px solid var(--color-stroke, $light-grey);
     transition: all $style-change-duration;
+    margin-top: 3px;
   }
 
   &::after {
@@ -40,6 +41,11 @@
     background-repeat: no-repeat;
     background-position: center;
     transition: all $style-change-duration;
+    margin-top: 3px;
+  }
+
+  @include mobile {
+    font-size: rem(14px);
   }
 }
 

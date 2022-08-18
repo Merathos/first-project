@@ -284,6 +284,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   padding: 5px;
   text-align: center;
   white-space: nowrap;
+  font-weight: 500;
+  font-size: rem(16px);
+  line-height: 135%;
 }
 .noUi-horizontal .noUi-tooltip {
   -webkit-transform: translate(-50%, 0);
