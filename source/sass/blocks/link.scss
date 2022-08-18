@@ -15,7 +15,7 @@
     color: var(--color-interactive-default, $blue-default);
 
     &:focus {
-      color: var(--color-interactive-accent, $blue-accent);
+      color: var(--color-interactive-accent, $blue-hover);
     }
 
     &:focus:not(.focus-visible) {
@@ -23,7 +23,7 @@
     }
 
     &:active:not(.focus-visible) {
-      color: var(--color-interactive-accent, $blue-accent);
+      color: var(--color-interactive-accent, $blue-hover);
     }
   }
 
@@ -31,7 +31,7 @@
     color: var(--color-text, $grey-default);
 
     &:focus {
-      color: var(--color-interactive-default, $blue-accent);
+      color: var(--color-interactive-default, $blue-hover);
     }
 
     &:focus:not(.focus-visible) {
@@ -39,7 +39,7 @@
     }
 
     &:active:not(.focus-visible) {
-      color: var(--color-interactive-default, $blue-accent);
+      color: var(--color-interactive-default, $blue-hover);
     }
   }
 
@@ -167,12 +167,14 @@
     }
 
     @include mobile {
-      font-size: 15px;
+      font-size: rem(15px);
     }
   }
 
   &.disabled {
     color: $grey-2;
+    cursor: default;
+    pointer-events: none;
   }
 }
 
@@ -181,13 +183,13 @@
   .link {
     &--blue {
       &:hover:not(.focus-visible) {
-        color: var(--color-interactive-accent, $blue-accent);
+        color: var(--color-interactive-accent, $blue-hover);
       }
     }
 
     &--grey {
       &:hover:not(.focus-visible) {
-        color: var(--color-interactive-default, $blue-accent);
+        color: var(--color-interactive-default, $blue-hover);
       }
     }
 

@@ -38,7 +38,7 @@
 
   &__icon {
     position: absolute;
-    top: 23px;
+    top: 28px;
     left: 30px;
 
     color: var(--color-interactive-default, $blue-default);
@@ -64,8 +64,10 @@
   &__title {
     margin-top: 4px;
     margin-bottom: 2px;
+    font-weight: 500;
 
     font-size: rem(18px);
+    line-height: 150%;
 
     color: var(--color-interactive-default, $blue-default);
 

@@ -95,6 +95,7 @@
   right: 20px;
   top: 50%;
   transform: translateY(-50%) rotate(-180deg);
+  z-index: 10;
 }
 
 .choices[data-type*='select-one'].is-open:after {
@@ -402,11 +403,11 @@
 }
 
 .choices__placeholder {
-  color: var(--color-text, #354052);
+  color: var(--color-text, #8D9299);
   font-family: inherit;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 19px;
+  font-size: rem(16px);
+  font-weight: 400;
+  line-height: 135%;
 }
 
 .choices .scrollbar-track {

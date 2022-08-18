@@ -24,9 +24,12 @@
   margin-right: 8px;
   text-align: center;
   text-decoration: none;
-  color: inherit;
   border: 1px solid var(--color-stroke, $light-grey);
   border-radius: 5px;
+  font-weight: 400;
+  font-size: rem(16px);
+  line-height: 135%;
+  color: var(--color-text, $dark-text);
   transition: color $style-change-duration, border $style-change-duration;
 
   &:last-child {
@@ -36,8 +39,8 @@
   &[href]:hover,
   &[href]:focus,
   &[href]:active {
-    color: var(--color-interactive-default, $blue-accent);
-    border: 1px solid var(--color-interactive-default, $light-blue-accent);
+    color: var(--color-interactive-default, $blue-default);
+    border: 1px solid var(--color-interactive-default, $blue-sail);
   }
 
   &--current {
@@ -63,7 +66,7 @@
   }
 
   &--disabled {
-    color: $grey-default;
+    color: $lightest-text;
   }
 
   &--hidden {

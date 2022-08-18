@@ -77,7 +77,9 @@
   }
 
   & .noUi-tooltip {
-    @include font-h5;
+    font-weight: 500;
+    font-size: rem(16px);
+    line-height: 135%;
     color: var(--color-text, $dark-text);
     padding-bottom: 1px;
     padding-left: 10px;

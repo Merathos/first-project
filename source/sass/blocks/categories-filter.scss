@@ -144,18 +144,18 @@
     }
 
     label {
-      color: var(--color-text, $grey);
+      color: var(--color-text, $dark-text);
 
       &:focus,
       &:focus:not(.focus-visible),
       &:active:not(.focus-visible),
       &:hover:not(.focus-visible) {
-        color: var(--color-text, $dark-text);
+        color: var(--color-text, $grey);
       }
     }
 
     input[type="checkbox"]:checked + label {
-      color: var(--color-text, $dark-text);
+      color: var(--color-text, $grey);
     }
   }
 

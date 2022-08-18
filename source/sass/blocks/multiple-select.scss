@@ -89,10 +89,13 @@
 
       .ss-option {
         break-inside: avoid;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
 
         position: relative;
 
-        padding: 8px 10px 8px 28px;
+        padding: 8px 0 8px 0;
 
         font-size: 15px;
         line-height: 20px;
@@ -104,21 +107,25 @@
 
         &::after {
           content: "";
-          position: absolute;
+          display: block;
+          order: -1;
+          //position: absolute;
           top: 50%;
           left: 0;
 
-          width: 12px;
+          width: 0;
           height: 12px;
+          margin-right: 0;
+          overflow: hidden;
 
           background-image: url(../img/icon-tick.svg);
           background-repeat: no-repeat;
           background-position: center;
           background-size: cover;
-          transform: translateY(-50%) translateX(50%);
+          //transform: translateY(-50%) translateX(50%);
           opacity: 0;
 
-          transition: opacity $style-change-duration;
+          //transition: opacity 1s, width 1s, margin-right 1s;
         }
 
         &:focus,
@@ -132,11 +139,13 @@
       }
 
       .ss-option:not(.ss-disabled).ss-option-selected {
-        color: var(--color-interactive-accent, $blue-accent);
+        color: var(--color-interactive-accent, $blue-default);
 
         background-color: transparent;
         &:after {
           opacity: 1;
+          width: 12px;
+          margin-right: 8px;
         }
       }
     }
@@ -174,7 +183,7 @@
         white-space: nowrap;
         text-overflow: ellipsis;
 
-        border-bottom: 2px dashed var(--color-interactive-default, $blue-default);
+        border-bottom: 2px dashed var(--color-interactive-default, $blue-sail);
 
         @include font;
 

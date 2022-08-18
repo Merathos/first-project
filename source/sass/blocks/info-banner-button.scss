@@ -31,7 +31,7 @@
 
   &.focus-visible:focus,
   &:hover:not(.focus-visible) {
-    color: var(--color-interactive-default, $blue-accent);
+    color: var(--color-interactive-default, $blue-hover);
   }
 
   &.opened {

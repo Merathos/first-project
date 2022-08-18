@@ -119,6 +119,7 @@
   font-size: rem(18px);
   line-height: 1.3;
   font-weight: 500;
+  color: var(--color-text, $dark-text);
 
   transition: color $style-change-duration linear;
 
@@ -140,8 +141,8 @@
   width: 32px;
   height: 32px;
 
-  font-size: rem(18px);
-  line-height: 1.3;
+  font-size: rem(16px);
+  line-height: 1.35;
   color: var(--color-text, $light-text);
 
   background-color: var(--color-bg-main, $white);
