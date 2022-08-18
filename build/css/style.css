@@ -12973,7 +12973,7 @@ span.datepicker-cell {
     @media (max-width: 767px) {
       .section__head svg {
         min-width: 28px;
-        margin-top: 5px; } }
+        margin-top: 14px; } }
 
 .section__title-wrap {
   display: -webkit-box;
@@ -14745,7 +14745,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .paginator__item:last-child {
     margin-right: 0; }
   .paginator__item[href]:hover, .paginator__item[href]:focus, .paginator__item[href]:active {
-    color: var(--color-interactive-default, #2E6BEF);
+    color: var(--color-interactive-default, #0E4CD3);
     border: 1px solid var(--color-interactive-default, #B1C5F9); }
   .paginator__item--current {
     color: var(--color-bg-secondary, #ffffff);
@@ -20393,7 +20393,11 @@ textarea.description-block__textarea {
   outline: none;
   -webkit-appearance: none;
      -moz-appearance: none;
-          appearance: none; }
+          appearance: none;
+  -webkit-transition: border-color 0.3s;
+  transition: border-color 0.3s; }
+  .text-input:hover {
+    border-color: #B1C5F9; }
   .text-input:disabled {
     border-color: #e3e8ee;
     background-color: #f9f9fa; }

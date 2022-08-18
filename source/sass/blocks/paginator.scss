@@ -39,7 +39,7 @@
   &[href]:hover,
   &[href]:focus,
   &[href]:active {
-    color: var(--color-interactive-default, $blue-hover);
+    color: var(--color-interactive-default, $blue-default);
     border: 1px solid var(--color-interactive-default, $blue-sail);
   }
 
