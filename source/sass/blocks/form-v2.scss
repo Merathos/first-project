@@ -1,0 +1,6 @@
+.form__input-date {
+  &:disabled {
+    border-color: $light-grey;
+    background-color: $color-bg;
+  }
+}

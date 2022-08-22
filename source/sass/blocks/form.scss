@@ -156,9 +156,4 @@
   &:focus {
     border-color: $grey;
   }
-
-  &:disabled {
-    border-color: $light-grey;
-    background-color: $color-bg;
-  }
 }

@@ -3,13 +3,13 @@
   align-items: center;
   box-sizing: border-box;
   width: 364px;
-  padding: 15px 23px;
-  font-size: rem(14px);
-  line-height: 130%;
+  padding: 18px 23px;
+  font-size: rem(13px);
+  line-height: rem(17px);
   color: var(--color-text, $dark-text);
   text-decoration: none;
   user-select: none;
-  border: 1px solid var(--color-stroke, #DFE3EA);
+  border: 1px solid var(--color-stroke, $light-grey);
   border-radius: $border-radius;
   outline: none;
   transition: color $style-change-duration;
@@ -50,10 +50,6 @@
       color: $white;
       opacity: 0.6;
     }
-  }
-
-  &--grey {
-    background-color: $color-bg;
   }
 
   @media (max-width: $mobile-max-width) {
@@ -106,9 +102,6 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-weight: 400;
-  font-size: rem(13px);
-  line-height: 130%;
 }
 
 .mod-theme-inverse .file-item--white .file-item__name,
@@ -123,9 +116,7 @@
 }
 
 .file-item__size {
-  font-weight: 400;
-  font-size: rem(13px);
-  line-height: 130%;
+  font-size: 300;
   text-transform: uppercase;
   color: var(--color-text, $grey-default);
 }

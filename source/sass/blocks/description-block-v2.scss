@@ -1,0 +1,26 @@
+.description-block {
+  input,
+  textarea {
+    font-size: rem(15px);
+  }
+}
+
+textarea.description-block__textarea {
+  &--error {
+    border: 1px solid #F3A8A8;
+  }
+}
+
+.description-block__textarea-error {
+  display: none;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  font-size: rem(14px);
+  line-height: 130%;
+  color: #e55050;
+
+  &--show {
+    display: block;
+  }
+}

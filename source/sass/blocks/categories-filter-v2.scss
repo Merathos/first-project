@@ -1,0 +1,23 @@
+.categories-filter {
+  padding: 24px 24px 24px 20px;
+
+  .multiple-select {
+    margin-right: 26px;
+    padding-right: 24px;
+  }
+
+  label {
+    color: var(--color-text, $dark-text);
+
+    &:focus,
+    &:focus:not(.focus-visible),
+    &:active:not(.focus-visible),
+    &:hover:not(.focus-visible) {
+      color: var(--color-text, $grey);
+    }
+  }
+
+  input[type="checkbox"]:checked + label {
+    color: var(--color-text, $grey);
+  }
+}

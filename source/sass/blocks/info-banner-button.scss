@@ -1,3 +1,4 @@
+//кнопка info-banner свернуть-развернуть
 .info-banner-button {
   @include btn-reset;
 
@@ -9,7 +10,7 @@
 
   color: var(--color-interactive-default, $blue-default);
 
-  font-size: rem(16px);
+  font-size: rem(15px);
 
   outline: none;
 
@@ -31,7 +32,7 @@
 
   &.focus-visible:focus,
   &:hover:not(.focus-visible) {
-    color: var(--color-interactive-default, $blue-hover);
+    color: var(--color-interactive-default, $blue-accent);
   }
 
   &.opened {

@@ -1,0 +1,9 @@
+.info-banner {
+  border: 1px solid var(--color-interactive-default, $light-grey);
+
+  &__text {
+    color: var(--color-text, $light-text);
+    font-size: rem(16px);
+    line-height: 150%;
+  }
+}

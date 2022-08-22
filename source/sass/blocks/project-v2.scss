@@ -1,0 +1,28 @@
+.project__item {
+  max-width: rem(550px);
+
+  &:hover {
+    box-shadow: 0 4px 10px rgba(46, 67, 102, 0.1);
+  }
+}
+
+.project__name {
+  padding: 0 65px 0 17px;
+  font-weight: 500;
+  color: var(--color-text, $dark-text);
+
+  @media (max-width: $tablet-width - 1) {
+    padding: 0 20px 0 11px;
+  }
+}
+
+.project__count {
+  color: var(--color-text, $light-text);
+
+  background-color: var(--color-bg-main, $white);
+  border-radius: 50%;
+
+  @media (max-width: $tablet-width - 1) {
+    font-size: rem(14px);
+  }
+}

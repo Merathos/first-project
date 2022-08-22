@@ -95,7 +95,6 @@
   right: 20px;
   top: 50%;
   transform: translateY(-50%) rotate(-180deg);
-  z-index: 10;
 }
 
 .choices[data-type*='select-one'].is-open:after {
@@ -284,7 +283,7 @@
 }
 
 .is-active.choices__list--dropdown {
-   .choices__list {
+  .choices__list {
     max-height: 220px;
   }
 }
@@ -403,11 +402,11 @@
 }
 
 .choices__placeholder {
-  color: var(--color-text, #8D9299);
+  color: var(--color-text, #354052);
   font-family: inherit;
-  font-size: rem(16px);
-  font-weight: 400;
-  line-height: 135%;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
 }
 
 .choices .scrollbar-track {

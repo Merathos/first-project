@@ -32,19 +32,3 @@
     }
   }
 }
-
-.page-title-h2 {
-  @include font-h2;
-}
-
-.page-title-h3 {
-  @include font-h3;
-}
-
-.page-title-h4 {
-  @include font-h4;
-}
-
-.page-caption {
-  @include caption-text
-}

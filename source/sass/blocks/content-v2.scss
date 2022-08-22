@@ -1,0 +1,122 @@
+.content {
+  font-family: "Lato", "Arial", sans-serif;
+
+  h1:not([class]) {
+    margin: 0;
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: rem(40px);
+    line-height: 118%;
+  }
+
+  h2:not([class]) {
+    margin-top: 40px;
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: rem(40px);
+    line-height: 150%;
+    color: var(--color-text, $text-color);
+  }
+
+  h3:not([class]) {
+    margin-top: 40px;
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: rem(30px);
+    line-height: 150%;
+    color: var(--color-text, $text-color);
+  }
+
+  h4:not([class]) {
+    margin-top: 40px;
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: rem(24px);
+    line-height: 120%;
+    color: var(--color-text, $text-color);
+  }
+
+  caption:not([class]) {
+    font-weight: 400;
+    font-size: rem(14px);
+    line-height: 130%;
+    padding: 0;
+    color: var(--color-text, $text-color);
+  }
+
+  a:not([class]) {
+    font-weight: 400;
+    font-size: rem(16px);
+    line-height: 150%;
+    padding: 0;
+    color: var(--color-text, $blue-default);
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--color-interactive-accent, $blue-hover);
+    }
+  }
+
+  p:not([class]) {
+    margin: 0;
+    font-weight: 400;
+    font-size: rem(16px);
+    line-height: 150%;
+    color: var(--color-text, $text-color);
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+
+  button.button {
+    font-weight: 700;
+    font-size: rem(15px);
+    line-height: 135%;
+    color: var(--color-text, $text-color);
+    text-transform: uppercase;
+
+    &--small {
+      font-size: rem(13px);
+    }
+  }
+
+  ul:not([class]) {
+    @include list-reset;
+
+    padding: 32px;
+    margin-bottom: 48px;
+    font-size: rem(16px);
+    line-height: 138%;
+    background-color: var(--color-bg-secondary, $color-bg);
+    border-radius: $border-radius;
+
+    li {
+      position: relative;
+      padding-left: 14px;
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 6px;
+        height: 6px;
+        background-color: var(--color-text, $grey);
+        border-radius: 50%;
+      }
+    }
+  }
+
+  @include mobile {
+    h1:not([class]) {
+      margin-bottom: 24px;
+      font-size: rem(30px);
+      line-height: 120%;
+    }
+  }
+}

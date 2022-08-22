@@ -1,0 +1,28 @@
+.section__head {
+  align-items: flex-start;
+
+  text-align: left;
+  margin-top: 0;
+
+  svg {
+    min-width: 32px;
+    margin-top: 8px;
+
+    @include mobile {
+      min-width: 28px;
+      margin-top: 14px;
+    }
+  }
+}
+
+.section__title {
+  @include font-h1();
+  font-weight: 500;
+
+  @media (max-width: $tablet-width - 1) {
+    padding-left: 14px;
+
+    @include font-h2();
+    font-weight: 500;
+  }
+}

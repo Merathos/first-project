@@ -19,7 +19,7 @@
     display: block;
   }
 
-  .main-menu .page-container {
+  .main-menu .container {
     flex-direction: column;
     align-items: flex-start;
     padding: 0;
@@ -33,7 +33,7 @@
 
 
 @include mobile {
-  .main-menu .page-container {
+  .main-menu .container {
     padding: 0;
   }
 }

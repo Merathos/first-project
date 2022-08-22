@@ -1,0 +1,25 @@
+/*===============================
+=            Choices            =
+===============================*/
+.choices[data-type*='select-one']:after {
+  background: url('../img/icon-choices.svg') no-repeat center;
+  content: '';
+  height: 8px;
+  position: absolute;
+  pointer-events: none;
+  width: 13px;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%) rotate(-180deg);
+  z-index: 10;
+}
+
+.choices__placeholder {
+  color: var(--color-text, #8D9299);
+  font-family: inherit;
+  font-size: rem(16px);
+  font-weight: 400;
+  line-height: 135%;
+}
+
+/*=====  End of Choices  ======*/

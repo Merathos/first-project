@@ -1,0 +1,48 @@
+.form-checkbox label {
+  font-weight: 400;
+  font-size: rem(16px);
+  line-height: 150%;
+
+  &::before {
+    margin-top: 3px;
+    border: 1px solid var(--color-stroke, $light-grey);
+  }
+}
+
+.form-checkbox input[type="checkbox"]:not(:checked) ~ label {
+  &:hover {
+    &::before {
+      border: 1px solid var(--color-interactive-default, $blue-sail);
+    }
+  }
+}
+
+
+.form-checkbox input[type="checkbox"]:checked ~ label {
+  &::before {
+    border-color: $blue-default;
+    background-color: var(--color-interactive-default, $blue-default);
+  }
+
+  &::after {
+    display: block;
+    top: 7px;
+  }
+}
+
+.form-checkbox input[type="checkbox"]:disabled ~ label {
+  cursor: text;
+  pointer-events: none;
+}
+
+.form-checkbox input[type="checkbox"]:not(:checked):focus-visible,
+.form-checkbox input[type="checkbox"]:checked:focus-visible,
+.form-checkbox input[type="checkbox"]:disabled:focus-visible {
+  & ~ label {
+    outline: 2px solid var(--color-interactive-default, $blue-sail);
+  }
+}
+
+.form-checkbox.error label::before {
+  border-color: $light-red;
+}

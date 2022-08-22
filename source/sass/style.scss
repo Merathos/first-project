@@ -1,5 +1,3 @@
-@import "plugins/bootstrap";
-
 @import "functions";
 @import "variables";
 @import "mixins";
@@ -126,12 +124,6 @@
 @import 'blocks/direct-line-section';
 @import 'blocks/info-item';
 @import 'blocks/custom-select';
-@import 'blocks/notice';
-@import 'blocks/tag';
-@import 'blocks/notice-type';
-@import 'blocks/single-news';
-@import 'blocks/choices-custom';
-@import 'blocks/preloader';
 
 // main page
 @import "blocks/news-notice";
