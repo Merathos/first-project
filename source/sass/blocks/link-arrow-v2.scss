@@ -1,0 +1,50 @@
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: rem(15px);
+  line-height: 135%;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-interactive-default, $blue-default);
+
+  transition: all $style-change-duration;
+
+  & span {
+    padding-right: 11px;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--color-interactive-accent, $blue-hover);
+  }
+
+  &--small {
+    font-size: rem(13px);
+  }
+
+  &--grey {
+    color: var(--color-text, $grey-default);
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    font-size: rem(13px);
+  }
+
+  &.disabled {
+    color: $grey-2;
+    cursor: default;
+    pointer-events: none;
+  }
+
+  span + svg {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media print {
+  .link-arrow {
+    display: none;
+  }
+}

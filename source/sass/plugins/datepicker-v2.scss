@@ -1,0 +1,13 @@
+.datepicker-cell.selected,
+.datepicker-cell.selected:hover {
+  background-color: $blue-default;
+  color: #fff;
+}
+
+.datepicker .datepicker-cell {
+  flex-grow: 0;
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: rem(16px);
+  line-height: 150%;
+}

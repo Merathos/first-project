@@ -166,8 +166,8 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .main-page {
   width: 100%;
-  //min-width: $mobile-width;
-  //max-width: $desktop-width;
+  min-width: $mobile-width;
+  max-width: $desktop-width;
   margin: 0 auto;
 }
 
@@ -191,9 +191,6 @@ input[type="search"]::-webkit-search-results-decoration {
   bottom: -19px;
   color: $red;
   left: 0;
-  font-weight: 400;
-  font-size: rem(14px);
-  line-height: 130%;
 }
 
 .error-field + .error-field {

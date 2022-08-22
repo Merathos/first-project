@@ -21,24 +21,21 @@
 }
 
 @mixin font-h2 {
-  font-size: rem(40px);
-  line-height: 150%;
-  font-weight: 500;
-  color: var(--color-text, $text-color);
+  font-size: rem(30px);
+  line-height: 130%;
+  font-weight: 400;
 }
 
 @mixin font-h3 {
-  font-size: rem(30px);
-  line-height: 150%;
-  font-weight: 500;
-  color: var(--color-text, $text-color);
+  font-size: rem(24px);
+  line-height: rem(28px);
+  font-weight: 400;
 }
 
 @mixin font-h4 {
-  font-size: rem(24px);
-  line-height: 150%;
-  font-weight: 500;
-  color: var(--color-text, $text-color);
+  font-size: rem(18px);
+  line-height: rem(23px);
+  font-weight: 400;
 }
 
 @mixin font-h5 {
@@ -54,10 +51,9 @@
 }
 
 @mixin caption-text {
-  font-size: rem(14px);
-  line-height: 130%;
+  font-size: rem(13px);
+  line-height: rem(17px);
   font-weight: 400;
-  color: var(--color-text, $text-color);
 }
 
 @mixin desktop-only {

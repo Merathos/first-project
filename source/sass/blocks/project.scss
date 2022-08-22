@@ -61,7 +61,6 @@
   border-radius: $border-radius;
 
   transition: box-shadow $style-change-duration linear;
-  max-width: rem(550px);
 
   @media (max-width: $desktop-width - 81) {
     width: 100%;
@@ -74,7 +73,11 @@
   }
 
   &:hover {
-    box-shadow: 0 4px 10px rgba(46, 67, 102, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 30, 75, 0.15);
+
+    .project__name {
+      color: var(--color-interactive-default, $blue-default);
+    }
   }
 }
 
@@ -114,18 +117,17 @@
   position: relative;
 
   margin: 0 auto 0 0;
-  padding: 0 65px 0 17px;
+  padding: 0;
+  padding-left: 17px;
 
   font-size: rem(18px);
   line-height: 1.3;
-  font-weight: 500;
-  color: var(--color-text, $dark-text);
 
   transition: color $style-change-duration linear;
 
-  @media (max-width: $tablet-width - 1) {
+  @include mobile {
     font-size: rem(14px);
-    padding: 0 20px 0 11px;
+    padding: 0 10px 0 11px;
   }
 
   //@media (max-width: $tablet-width - 1) {
@@ -141,16 +143,12 @@
   width: 32px;
   height: 32px;
 
-  font-size: rem(16px);
-  line-height: 1.35;
-  color: var(--color-text, $light-text);
+  font-size: rem(18px);
+  line-height: 1.3;
+  color: var(--color-text, $grey-default);
 
   background-color: var(--color-bg-main, $white);
   border-radius: 50%;
-
-  @media (max-width: $tablet-width - 1) {
-    font-size: rem(14px);
-  }
 }
 
 .project__button {
@@ -190,4 +188,3 @@
     page-break-inside: avoid;
   }
 }
-

@@ -1,0 +1,9 @@
+.file-item {
+  padding: 15px 23px;
+  font-size: rem(14px);
+  line-height: 130%;
+
+  &--grey {
+    background-color: $color-bg;
+  }
+}

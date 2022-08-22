@@ -1,0 +1,289 @@
+@import "plugins/bootstrap";
+
+@import "functions";
+@import "variables-v2";
+@import "mixins-v2";
+@import "fonts";
+@import "global-v2";
+
+/* Плагины */
+@import "plugins/normalize";
+@import "plugins/swiper";
+@import "plugins/slimselect";
+@import "plugins/nouislider";
+@import "plugins/nouislider-v2";
+@import "plugins/simplebar";
+@import "plugins/choices";
+@import "plugins/choices-v2";
+@import "plugins/datepicker";
+@import "plugins/datepicker-v2";
+
+/* Блоки */
+@import "blocks/form-checkbox-update";
+@import "blocks/logo-link";
+@import "blocks/link-arrow";
+@import "blocks/link";
+@import "blocks/section";
+@import "blocks/page-body";
+@import "blocks/page-content";
+@import "blocks/back-btn";
+@import "blocks/container";
+@import "blocks/content";
+@import "blocks/button";
+@import "blocks/form-checkbox";
+@import "blocks/form-radio";
+@import "blocks/form-select";
+@import "blocks/single-select";
+@import "blocks/multiple-select";
+@import "blocks/form-range";
+@import "blocks/form";
+@import "blocks/filter";
+@import "blocks/filter-vote";
+@import "blocks/counter";
+@import "blocks/paginator";
+@import "blocks/button-star";
+@import "blocks/button-remove";
+@import "blocks/page-404";
+@import "blocks/page-footer";
+@import "blocks/page-title";
+@import "blocks/page-nav";
+@import "blocks/categories-filter";
+@import "blocks/voices-counter";
+@import "blocks/page-top";
+@import "blocks/archive-link";
+@import "blocks/article-link";
+@import "blocks/video-link";
+@import "blocks/special-popup";
+@import "blocks/status-info";
+@import "blocks/info-tooltip";
+@import "blocks/project-status";
+@import "blocks/description";
+@import "blocks/description-block";
+@import "blocks/buttons-wrapper";
+@import "blocks/date";
+@import "blocks/application-period";
+@import "blocks/project-link";
+@import "blocks/main-empty";
+@import "blocks/info-block";
+@import "blocks/cards-list";
+@import "blocks/zoom-button";
+@import "blocks/preview-input";
+@import "blocks/info-banner";
+@import "blocks/info-banner-button";
+@import 'blocks/proposal';
+@import 'blocks/comments-tab';
+@import 'blocks/address-pin';
+@import 'blocks/improvement-stage';
+@import 'blocks/proposal-list';
+@import 'blocks/proposal-description';
+@import 'blocks/image-uploads';
+@import 'blocks/file-uploads';
+@import 'blocks/subtitle';
+@import 'blocks/concurrent-projects';
+@import 'blocks/budgets';
+@import 'blocks/public-debate';
+@import 'blocks/join-indicator';
+@import 'blocks/commentary-add.scss';
+@import 'blocks/hearings-status.scss';
+@import 'blocks/hearings-result.scss';
+@import 'blocks/activity-index';
+@import 'blocks/activity-list';
+@import 'blocks/rating';
+@import 'blocks/rating-list';
+@import 'blocks/button-like';
+@import 'blocks/your-projects-list';
+@import 'blocks/text-input';
+@import 'blocks/address';
+@import 'blocks/budjet';
+@import 'blocks/contacts-inputs';
+@import 'blocks/site-tip';
+@import 'blocks/warning';
+@import 'blocks/attention';
+@import 'blocks/steps-list';
+@import 'blocks/last-comment';
+@import 'blocks/blockquote';
+@import 'blocks/line';
+@import 'blocks/image-block';
+@import 'blocks/bulleted-list';
+@import 'blocks/numbered-list';
+@import 'blocks/personal-news';
+@import 'blocks/personal-poll';
+@import 'blocks/cluster-icon';
+@import 'blocks/map-buttons';
+@import 'blocks/popover';
+@import 'blocks/category-list';
+@import 'blocks/curator';
+@import 'blocks/project-rules';
+@import 'blocks/additional';
+@import 'blocks/landscaping';
+@import 'blocks/landscaping-form';
+@import 'blocks/notification';
+@import 'blocks/deadlines';
+@import 'blocks/notification-block';
+@import 'blocks/projects-winners';
+@import 'blocks/internet-vote';
+@import 'blocks/internet-banner';
+@import 'blocks/link-list';
+@import 'blocks/page-status';
+@import 'blocks/direct-line-form';
+@import 'blocks/direct-line-section';
+@import 'blocks/info-item';
+@import 'blocks/custom-select';
+
+// main page
+@import "blocks/news-notice";
+@import "blocks/social";
+@import "blocks/poll";
+@import "blocks/project";
+@import "blocks/discussion";
+@import "blocks/concurrent-voting";
+@import "blocks/cookie";
+
+// composite poll
+@import "blocks/poll-result";
+@import "blocks/composite-poll";
+@import "blocks/files";
+@import "blocks/file-item";
+@import "blocks/popup";
+@import "blocks/gallery";
+@import "blocks/gallery-popup";
+@import "blocks/gallery-full";
+
+// header
+@import "blocks/page-header";
+@import "blocks/menu-btn";
+@import "blocks/main-menu";
+@import "blocks/location-switcher";
+@import "blocks/user-menu";
+
+// projects
+@import "blocks/project-item";
+@import "blocks/projects-list";
+@import "blocks/projects";
+@import "blocks/projects-2.scss";
+@import "blocks/filter-2.scss";
+
+// landscaping-form
+@import "blocks/map-section.scss";
+@import "blocks/confirmation-popup.scss";
+
+// improvement on main page
+@import "blocks/improvement.scss";
+@import "blocks/improvement-item.scss";
+
+// improvement fork1,4
+@import "blocks/improvement-status.scss";
+@import "blocks/improvement-fork-1.scss";
+@import "blocks/improvement-fork-4.scss";
+@import "blocks/proposal-winners.scss";
+@import "blocks/map-popup.scss";
+
+// area-improvement
+@import 'blocks/area-improvement';
+
+// hearings 1-4
+@import "blocks/hearings.scss";
+
+// project page
+@import "blocks/project-page";
+@import "blocks/project-meta";
+@import "blocks/project-vote";
+@import "blocks/vote-results";
+@import "blocks/vote-popup";
+@import "blocks/projects-note";
+@import "blocks/modal-projects-period";
+
+// poll page
+@import "blocks/poll-page";
+
+// news-item
+@import "blocks/news-item";
+
+// discussions
+@import "blocks/discussion-content";
+@import "blocks/discussion-item";
+@import "blocks/discussion-list";
+@import "blocks/answers";
+@import "blocks/text-hidden";
+@import "blocks/table-fixed";
+
+// comment popup
+@import "blocks/comment-popup";
+@import "blocks/comment-add";
+@import "blocks/all-comments";
+@import "blocks/your-comment";
+@import "blocks/table-popup";
+
+// activity
+@import "blocks/activity";
+@import "blocks/partners-list";
+@import "blocks/activity-tabs";
+
+// rating
+@import "blocks/rating-main";
+
+// widget
+@import "blocks/widget";
+
+// new-project
+@import "blocks/new-project.scss";
+
+// service-unavalable
+@import "blocks/unavailable";
+
+// error-page
+@import "blocks/error-page";
+
+// authorization
+@import "blocks/authorization";
+
+// voting-page
+@import "blocks/voting-page";
+
+// public-hearings
+@import "blocks/application-status";
+@import "blocks/application-popup";
+@import "blocks/application-result";
+
+//alternate-list
+@import "blocks/alternate-list";
+
+//gallery-with-thumbs
+@import "blocks/gallery-with-thumbs";
+
+
+/* Блоки V2 */
+@import 'blocks/notice';
+@import 'blocks/tag';
+@import 'blocks/notice-type';
+@import 'blocks/single-news';
+@import 'blocks/choices-custom';
+@import 'blocks/preloader';
+@import 'blocks/internet-banner-v2';
+@import 'blocks/page-header-v2';
+@import 'blocks/project-v2';
+@import 'blocks/back-btn-v2';
+@import 'blocks/button-v2';
+@import 'blocks/categories-filter-v2';
+@import 'blocks/composite-poll-v2';
+@import 'blocks/content-v2';
+@import 'blocks/description-block-v2';
+@import 'blocks/file-item-v2';
+@import 'blocks/form-v2';
+@import 'blocks/form-checkbox-v2';
+@import 'blocks/form-radio-v2';
+@import 'blocks/form-range-v2';
+@import 'blocks/info-banner-v2';
+@import 'blocks/info-banner-button-v2';
+@import 'blocks/info-block-v2';
+@import 'blocks/link-v2';
+@import 'blocks/link-arrow-v2';
+@import 'blocks/page-footer-v2';
+@import 'blocks/project-v2';
+@import 'blocks/section-v2';
+@import 'blocks/single-select-v2';
+@import 'blocks/status-info-v2';
+@import 'blocks/status-info-v2';
+@import 'blocks/location-switcher-v2';
+@import 'blocks/multiple-select-v2';
+@import 'blocks/page-title-v2';

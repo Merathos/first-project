@@ -1,83 +1,27 @@
 .content {
-  font-family: "Lato", "Arial", sans-serif;
-
   h1:not([class]) {
     margin: 0;
     margin-bottom: 40px;
     font-weight: 400;
     font-size: rem(40px);
-    line-height: 118%;
+    line-height: rem(47px);
   }
 
   h2:not([class]) {
     margin-top: 40px;
     margin-bottom: 24px;
-    font-weight: 500;
-    font-size: rem(40px);
-    line-height: 150%;
-    color: var(--color-text, $text-color);
-  }
-
-  h3:not([class]) {
-    margin-top: 40px;
-    margin-bottom: 24px;
-    font-weight: 500;
+    font-weight: 400;
     font-size: rem(30px);
-    line-height: 150%;
-    color: var(--color-text, $text-color);
-  }
-
-  h4:not([class]) {
-    margin-top: 40px;
-    margin-bottom: 24px;
-    font-weight: 500;
-    font-size: rem(24px);
-    line-height: 120%;
-    color: var(--color-text, $text-color);
-  }
-
-  caption:not([class]) {
-    font-weight: 400;
-    font-size: rem(14px);
-    line-height: 130%;
-    padding: 0;
-    color: var(--color-text, $text-color);
-  }
-
-  a:not([class]) {
-    font-weight: 400;
-    font-size: rem(16px);
-    line-height: 150%;
-    padding: 0;
-    color: var(--color-text, $blue-default);
-    transition: color 0.3s;
-
-    &:hover {
-      color: var(--color-interactive-accent, $blue-hover);
-    }
+    line-height: rem(36px);
   }
 
   p:not([class]) {
     margin: 0;
-    font-weight: 400;
-    font-size: rem(16px);
-    line-height: 150%;
-    color: var(--color-text, $text-color);
+    font-size: rem(15px);
+    line-height: rem(27px);
 
     &:not(:last-child) {
       margin-bottom: 24px;
-    }
-  }
-
-  button.button {
-    font-weight: 700;
-    font-size: rem(15px);
-    line-height: 135%;
-    color: var(--color-text, $text-color);
-    text-transform: uppercase;
-
-    &--small {
-      font-size: rem(13px);
     }
   }
 
@@ -87,7 +31,7 @@
     padding: 32px;
     margin-bottom: 48px;
     font-size: rem(16px);
-    line-height: 138%;
+    line-height: rem(22px);
     background-color: var(--color-bg-secondary, $color-bg);
     border-radius: $border-radius;
 
@@ -208,7 +152,7 @@
     h1:not([class]) {
       margin-bottom: 24px;
       font-size: rem(30px);
-      line-height: 120%;
+      line-height: rem(36px);
     }
 
     h2:not([class]) {

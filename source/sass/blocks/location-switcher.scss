@@ -27,8 +27,8 @@
 
 .location-switcher__btn label {
   flex-wrap: wrap;
-  //font-size: inherit;
-  //line-height: inherit;
+  font-size: inherit;
+  line-height: inherit;
 
   &::before {
     margin-right: 12px;
@@ -43,8 +43,7 @@
   margin-top: 3px;
   font-size: rem(13px);
   line-height: rem(15px);
-  color: var(--color-text, $light-text);
-  opacity: 0.75;
+  color: var(--color-text, $grey);
 }
 
 .location-switcher__show-btn {

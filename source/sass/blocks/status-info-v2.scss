@@ -1,0 +1,19 @@
+.status-info {
+  background-color: var(--color-bg-main, $neon-blue);
+
+  &--accent {
+    background-color: var(--color-bg-secondary, $bright-orange);
+  }
+}
+
+.status-info__text {
+  margin: 0;
+  font-weight: 400;
+  font-size: rem(16px);
+  line-height: 135%;
+  margin-top: 2px;
+
+  &--small {
+    font-weight: normal;
+  }
+}

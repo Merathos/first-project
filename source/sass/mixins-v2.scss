@@ -1,0 +1,125 @@
+@mixin btn-reset {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin font {
+  font-family: "Rubik", "Arial", sans-serif;
+}
+
+@mixin font-h1 {
+  font-size: rem(40px);
+  line-height: rem(47px);
+  font-weight: 400;
+}
+
+@mixin font-h2 {
+  font-size: rem(40px);
+  line-height: 150%;
+  font-weight: 500;
+  color: var(--color-text, $text-color);
+}
+
+@mixin font-h3 {
+  font-size: rem(30px);
+  line-height: 150%;
+  font-weight: 500;
+  color: var(--color-text, $text-color);
+}
+
+@mixin font-h4 {
+  font-size: rem(24px);
+  line-height: 150%;
+  font-weight: 500;
+  color: var(--color-text, $text-color);
+}
+
+@mixin font-h5 {
+  font-size: rem(16px);
+  line-height: rem(22px);
+  font-weight: 400;
+}
+
+@mixin main-text {
+  font-size: rem(15px);
+  line-height: rem(20px);
+  font-weight: 400;
+}
+
+@mixin caption-text {
+  font-size: rem(14px);
+  line-height: 130%;
+  font-weight: 400;
+  color: var(--color-text, $text-color);
+}
+
+@mixin desktop-only {
+  @media (min-width: $desktop-width) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $desktop-width - 1) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $tablet-width - 1) {
+    @content;
+  }
+}
+
+@mixin mobile-max {
+  @media (max-width: $mobile-max-width - 1) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+}
+
+@mixin status-colors {
+  &,
+  &.status-color--gray {
+    color: var(--color-text, $grey-default);
+  }
+
+  &.status-color--blue {
+    color: var(--color-text, $blue-default);
+  }
+
+  &.status-color--green {
+    color: var(--color-text, $green);
+  }
+
+  &.status-color--red {
+    color: var(--color-text, $red);
+  }
+
+  &.status-color--orange {
+    color: var(--color-text, $orange);
+  }
+}

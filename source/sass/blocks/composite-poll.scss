@@ -33,17 +33,19 @@
   }
 }
 
-.composite-poll-description {
+.composite-poll__description {
   margin: 0;
   padding: 32px;
 
-  font-weight: 400;
-  font-size: rem(16px);
-  line-height: 150%;
-  color: $dark-text;
+  @include main-text;
+  line-height: rem(27px);
+  hyphens: auto;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 
   background-color: var(--color-blue, $color-bg);
   border-radius: 5px;
+  overflow: hidden;
 
   @media (max-width: $mobile-max-width) {
     padding: 24px;
@@ -53,9 +55,6 @@
     @media (max-width: $tablet-width - 1) {
       display: block;
     }
-  }
-  p {
-    margin: 0;
   }
 }
 

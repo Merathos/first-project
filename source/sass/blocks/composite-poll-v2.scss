@@ -1,0 +1,26 @@
+.composite-poll-description {
+  margin: 0;
+  padding: 32px;
+
+  font-weight: 400;
+  font-size: rem(16px);
+  line-height: 150%;
+  color: $dark-text;
+
+  background-color: var(--color-blue, $color-bg);
+  border-radius: 5px;
+
+  @media (max-width: $mobile-max-width) {
+    padding: 24px;
+  }
+
+  & a {
+    @media (max-width: $tablet-width - 1) {
+      display: block;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}
