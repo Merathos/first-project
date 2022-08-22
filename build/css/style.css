@@ -134,7 +134,6 @@ body {
   margin: 0;
   padding: 0;
   font-style: normal;
-  font-family: "Lato", "Arial", sans-serif;
   font-weight: 400;
   font-size: 0.9375rem;
   line-height: 1.25rem;
@@ -174,6 +173,8 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .main-page {
   width: 100%;
+  min-width: 320px;
+  max-width: 1200px;
   margin: 0 auto; }
 
 .ruble-sign {
@@ -15154,7 +15155,7 @@ span.poll__hide {
     z-index: 100;
     top: 0; }
 
-.page-header .page-container {
+.page-header .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
