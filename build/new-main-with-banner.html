@@ -148,7 +148,7 @@
 
       <a class="page-header__site-name link link--black" href="#">Общественное голосование</a>
 
-      <button type="button" class="page-header__location">
+      <button type="button" class="page-header__location" data-bs-toggle="modal" data-bs-target="#regionModal">
         <svg width="18" height="18">
           <use xlink:href="img/sprite.svg#icon-pin"></use>
         </svg>
@@ -515,6 +515,66 @@
       </section>
     </div>
   </main>
+
+  <div class="modal fade" id="regionModal" tabindex="-1" aria-labelledby="regionModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header row flex-column">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="exampleModalLabel">Ваш регион</h5>
+        <p>Выберите регион из списка или один из ваших адресов, чтобы посмотреть и принять участие в доступных Вам активностях </p>
+      </div>
+      <div class="modal-body">
+        <form action="" id="region-form">
+          <div class="form-radio">
+            <input id="location-residence1" type="radio" name="location1" value="residence" checked="" data-checkbox-show-more="formSelect3">
+            <label for="location-residence1">
+              Выбранный регион
+              <span>Не указано</span>
+            </label>
+          </div>
+
+          <div id="formSelect3">
+            <select class="_select-search" id="formSelect2" data-trigger="data-trigger">
+              <option placeholder="" value="">Выберите из списка</option>
+              <option value="1">Первый вариант</option>
+              <option value="2">Второй вариант</option>
+              <option value="3">Третий вариант</option>
+              <option value="4">Четвертый вариант</option>
+              <option value="5">Пятый вариант</option>
+              <option value="5">Пятый вариант</option>
+              <option value="5">Пятый вариант</option>
+              <option value="5">Пятый вариант</option>
+              <option value="5">Пятый вариант</option>
+              <option value="6">Шестой вариант</option>
+            </select>
+          </div>
+
+          <div class="form-radio">
+            <input id="location-registration2" type="radio" name="location1" value="registration">
+            <label for="location-registration2">
+              Адрес проживания
+              <span>150054, г Ярославль, пл Ярославль Главный</span>
+            </label>
+          </div>
+
+          <div class="form-radio">
+            <input id="location-registration3" type="radio" name="location1" value="registration1" disabled="">
+            <label for="location-registration3">
+              Адрес регистрации
+              <span>
+                <a href="#" class="link link--blue">Укажите на портале Госуслуги</a>
+              </span>
+            </label>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" form="region-form" class="button button--blue" data-bs-dismiss="modal">Применить</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <footer class="page-footer">
   <div class="container">

@@ -1,8 +1,14 @@
 .project {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  list-style: none;
+  padding: 96px 40px 0;
+
+  @media (max-width: $desktop-width - 81) {
+    padding: 88px 24px 0;
+  }
+
+  @media (max-width: $tablet-width - 1) {
+    padding: 65px 16px 0;
+  }
 }
 
 .project__head {
@@ -55,7 +61,7 @@
 .project__item {
   flex-shrink: 0;
   width: calc(50% - 4px);
-  margin-bottom: 0;
+  margin-bottom: 8px;
 
   background-color: var(--color-bg-secondary, $color-bg);
   border-radius: $border-radius;
@@ -81,22 +87,16 @@
   }
 }
 
-.row .project__item {
-  width: 100%;
-}
-
 .project__icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 58px;
+  width: 32px;
 
-  @include mobile {
-    width: 40px;
-
-    //position: absolute;
-    //top: 27px;
-    //left: 16px;
+  @media (max-width: $tablet-width - 1) {
+    position: absolute;
+    top: 27px;
+    left: 16px;
   }
 }
 
@@ -104,12 +104,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 17px 22px 17px 20px;
+  padding: 25px 16px 23px 23px;
 
   text-decoration: none;
 
-  @include mobile {
-    padding: 9px 12px 6px;
+  @media (max-width: $tablet-width - 1) {
+    position: relative;
+
+    padding: 24px 16px 23px 16px;
   }
 }
 
@@ -125,14 +127,9 @@
 
   transition: color $style-change-duration linear;
 
-  @include mobile {
-    font-size: rem(14px);
-    padding: 0 10px 0 11px;
+  @media (max-width: $tablet-width - 1) {
+    padding: 37px 0 0;
   }
-
-  //@media (max-width: $tablet-width - 1) {
-  //  padding: 37px 0 0;
-  //}
 }
 
 .project__count {
@@ -140,8 +137,8 @@
   flex-shrink: 0;
   justify-content: center;
   align-items: center;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
 
   font-size: rem(18px);
   line-height: 1.3;
