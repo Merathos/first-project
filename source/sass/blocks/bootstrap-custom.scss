@@ -1,0 +1,62 @@
+.modal-title {
+  @include font-h3;
+  margin-bottom: 15px;
+}
+
+.collapse {
+  .choices {
+    margin-bottom: 24px;
+  }
+}
+
+.modal {
+  .btn-close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
+
+  .modal-content {
+    border-radius: 10px;
+  }
+
+  .modal-body {
+    padding: 0;
+    padding-top: 29px;
+  }
+
+  .modal-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 31px;
+  }
+
+  &__subtitle {
+    padding: 0;
+    margin: 0;
+    @include main-text
+  }
+
+  .modal-footer {
+    justify-content: flex-start;
+    padding: 0;
+    padding-top: 30px;
+  }
+}
+
+.modal--region {
+  .modal-dialog {
+    max-width: 548px;
+  }
+
+  .modal-content {
+    padding: 32px;
+    padding-bottom: 23px;
+    padding-top: 27px;
+  }
+
+}

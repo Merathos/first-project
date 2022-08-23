@@ -1179,12 +1179,16 @@
               </div>
               <div class="poll-page__form-section form__section">
                 <p class="form__question">Оцените качество работы</p>
-                <div class="form__range-wrapper form-range">
+                <div class="form-range">
                   <div class="form-range__value">
                     <span>1</span>
+                    <!-- <span>5</span> -->
                     <span>10</span>
                   </div>
-                  <div class="js-poll-range" id="poll-range"></div>
+                  <!--     if you dont need this field - add attribute disabled for DIV. See example in nex form__section block   -->
+                  <div class="js-poll-range" id="poll-range" data-input="poll-range" data-min="0" data-max="10" data-step="1" data-required="true">
+                  </div>
+                  <p class="error-field visually-hidden">Пожалуйста заполните поле</p>
                   <div class="form-range__description">
                     <span>очень плохо</span>
                     <span>очень хорошо</span>
