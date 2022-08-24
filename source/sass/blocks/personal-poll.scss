@@ -2,6 +2,10 @@
   display: flex;
   align-items: center;
 
+  svg {
+    color: var(--color-icon, $light-blue-accent);
+  }
+
   &--page-info {
     margin-bottom: 13px;
 

@@ -10649,7 +10649,7 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   .personal-news__wrap:hover .personal-news__text {
     display: block; }
   .personal-news__wrap svg {
-    fill: var(--color-icon, #9bd2f4); }
+    color: var(--color-icon, #9bd2f4); }
 
 .personal-news__text {
   position: absolute;
@@ -10686,6 +10686,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  .personal-poll svg {
+    color: var(--color-icon, #9bd2f4); }
   .personal-poll--page-info {
     margin-bottom: 13px; }
     .personal-poll--page-info .personal-poll__text {

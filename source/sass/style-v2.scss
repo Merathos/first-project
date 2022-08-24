@@ -1,9 +1,10 @@
-@import "plugins/bootstrap";
-
 @import "functions";
+@import "variables";
 @import "variables-v2";
+@import "mixins";
 @import "mixins-v2";
 @import "fonts";
+@import "global";
 @import "global-v2";
 
 /* Плагины */
@@ -22,21 +23,33 @@
 @import "blocks/form-checkbox-update";
 @import "blocks/logo-link";
 @import "blocks/link-arrow";
+@import "blocks/link-arrow-v2";
 @import "blocks/link";
+@import "blocks/link-v2";
 @import "blocks/section";
+@import "blocks/section-v2";
 @import "blocks/page-body";
 @import "blocks/page-content";
 @import "blocks/back-btn";
+@import "blocks/back-btn-v2";
 @import "blocks/container";
 @import "blocks/content";
+@import "blocks/content-v2";
 @import "blocks/button";
+@import 'blocks/button-v2';
 @import "blocks/form-checkbox";
+@import "blocks/form-checkbox-v2";
 @import "blocks/form-radio";
+@import "blocks/form-radio-v2";
 @import "blocks/form-select";
 @import "blocks/single-select";
 @import "blocks/multiple-select";
+@import "blocks/single-select-v2";
+@import "blocks/multiple-select-v2";
 @import "blocks/form-range";
+@import "blocks/form-range-v2";
 @import "blocks/form";
+@import "blocks/form-v2";
 @import "blocks/filter";
 @import "blocks/filter-vote";
 @import "blocks/counter";
@@ -45,9 +58,12 @@
 @import "blocks/button-remove";
 @import "blocks/page-404";
 @import "blocks/page-footer";
+@import "blocks/page-footer-v2";
 @import "blocks/page-title";
+@import "blocks/page-title-v2";
 @import "blocks/page-nav";
 @import "blocks/categories-filter";
+@import "blocks/categories-filter-v2";
 @import "blocks/voices-counter";
 @import "blocks/page-top";
 @import "blocks/archive-link";
@@ -55,21 +71,26 @@
 @import "blocks/video-link";
 @import "blocks/special-popup";
 @import "blocks/status-info";
+@import "blocks/status-info-v2";
 @import "blocks/info-tooltip";
 @import "blocks/project-status";
 @import "blocks/description";
 @import "blocks/description-block";
+@import "blocks/description-block-v2";
 @import "blocks/buttons-wrapper";
 @import "blocks/date";
 @import "blocks/application-period";
 @import "blocks/project-link";
 @import "blocks/main-empty";
 @import "blocks/info-block";
+@import "blocks/info-block-v2";
 @import "blocks/cards-list";
 @import "blocks/zoom-button";
 @import "blocks/preview-input";
 @import "blocks/info-banner";
+@import "blocks/info-banner-v2";
 @import "blocks/info-banner-button";
+@import "blocks/info-banner-button-v2";
 @import 'blocks/proposal';
 @import 'blocks/comments-tab';
 @import 'blocks/address-pin';
@@ -123,20 +144,27 @@
 @import 'blocks/projects-winners';
 @import 'blocks/internet-vote';
 @import 'blocks/internet-banner';
+@import 'blocks/internet-banner-v2';
 @import 'blocks/link-list';
 @import 'blocks/page-status';
 @import 'blocks/direct-line-form';
 @import 'blocks/direct-line-section';
 @import 'blocks/info-item';
 @import 'blocks/custom-select';
-@import 'blocks/form-info';
-@import 'blocks/bootstrap-custom';
+@import 'blocks/notice';
+@import 'blocks/tag';
+@import 'blocks/notice-type';
+@import 'blocks/single-news';
+@import 'blocks/choices-custom';
+@import 'blocks/preloader';
+
 
 // main page
 @import "blocks/news-notice";
 @import "blocks/social";
 @import "blocks/poll";
 @import "blocks/project";
+@import "blocks/project-v2";
 @import "blocks/discussion";
 @import "blocks/concurrent-voting";
 @import "blocks/cookie";
@@ -144,8 +172,10 @@
 // composite poll
 @import "blocks/poll-result";
 @import "blocks/composite-poll";
+@import "blocks/composite-poll-v2";
 @import "blocks/files";
 @import "blocks/file-item";
+@import "blocks/file-item-v2";
 @import "blocks/popup";
 @import "blocks/gallery";
 @import "blocks/gallery-popup";
@@ -153,17 +183,19 @@
 
 // header
 @import "blocks/page-header";
+@import "blocks/page-header-v2";
 @import "blocks/menu-btn";
 @import "blocks/main-menu";
 @import "blocks/location-switcher";
+@import "blocks/location-switcher-v2";
 @import "blocks/user-menu";
 
 // projects
 @import "blocks/project-item";
 @import "blocks/projects-list";
 @import "blocks/projects";
-@import "blocks/projects-2.scss";
-@import "blocks/filter-2.scss";
+@import "blocks/projects-v2";
+@import "blocks/filter-v2";
 
 // landscaping-form
 @import "blocks/map-section.scss";
@@ -252,40 +284,3 @@
 
 //gallery-with-thumbs
 @import "blocks/gallery-with-thumbs";
-
-
-/* Блоки V2 */
-@import 'blocks/notice';
-@import 'blocks/tag';
-@import 'blocks/notice-type';
-@import 'blocks/single-news';
-@import 'blocks/choices-custom';
-@import 'blocks/preloader';
-@import 'blocks/internet-banner-v2';
-@import 'blocks/page-header-v2';
-@import 'blocks/project-v2';
-@import 'blocks/back-btn-v2';
-@import 'blocks/button-v2';
-@import 'blocks/categories-filter-v2';
-@import 'blocks/composite-poll-v2';
-@import 'blocks/content-v2';
-@import 'blocks/description-block-v2';
-@import 'blocks/file-item-v2';
-@import 'blocks/form-v2';
-@import 'blocks/form-checkbox-v2';
-@import 'blocks/form-radio-v2';
-@import 'blocks/form-range-v2';
-@import 'blocks/info-banner-v2';
-@import 'blocks/info-banner-button-v2';
-@import 'blocks/info-block-v2';
-@import 'blocks/link-v2';
-@import 'blocks/link-arrow-v2';
-@import 'blocks/page-footer-v2';
-@import 'blocks/project-v2';
-@import 'blocks/section-v2';
-@import 'blocks/single-select-v2';
-@import 'blocks/status-info-v2';
-@import 'blocks/status-info-v2';
-@import 'blocks/location-switcher-v2';
-@import 'blocks/multiple-select-v2';
-@import 'blocks/page-title-v2';

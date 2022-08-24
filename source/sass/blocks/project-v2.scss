@@ -1,4 +1,4 @@
-.project {
+.section .project {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -52,7 +52,7 @@
   text-align: left;
 }
 
-.project__item {
+.row .project__item {
   flex-shrink: 0;
   width: calc(50% - 4px);
   margin-bottom: 0;

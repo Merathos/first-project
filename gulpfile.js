@@ -39,6 +39,21 @@ gulp.task('style', () => gulp.src('source/sass/style.scss')
   .pipe(server.stream())
 );
 
+gulp.task('bootstrap', () => gulp.src('source/sass/bootstrap.scss')
+  .pipe(plumber())
+  .pipe(sourcemaps.init())
+  .pipe(sass())
+  .pipe(postcss([
+    autoprefixer()
+  ]))
+  .pipe(gulp.dest('build/css'))
+  .pipe(minify())
+  .pipe(rename('bootstrap.min.css'))
+  .pipe(sourcemaps.write('./'))
+  .pipe(gulp.dest('build/css'))
+  .pipe(server.stream())
+);
+
 gulp.task('styleV2', () => gulp.src('source/sass/style-v2.scss')
   .pipe(plumber())
   .pipe(sourcemaps.init())
@@ -127,11 +142,10 @@ gulp.task('serve', () => {
 
   gulp.watch('source/img/**/*.{gif,png,jpg,svg,webp}', gulp.series('images', 'webp'));
   gulp.watch('source/img/sprite/*.svg', gulp.series('sprite'));
-  gulp.watch('source/sass/**/*.scss', gulp.series('style'));
   gulp.watch('source/sass/**/*.scss', gulp.series('styleV2'));
   gulp.watch('source/**/*.html', gulp.series('html')).on('change', server.reload);
   gulp.watch('source/js/**/*.js', gulp.series('jsPlugins', 'js')).on('change', server.reload);
   gulp.watch('source/json/**', gulp.series('copyJson')).on('change', server.reload);
 });
 
-gulp.task('build', gulp.series('clean', 'images', 'webp', 'sprite', 'copy', 'style', 'styleV2', 'html', 'js', 'jsPlugins'));
+gulp.task('build', gulp.series('clean', 'images', 'webp', 'sprite', 'copy', 'bootstrap', 'style', 'styleV2', 'html', 'js', 'jsPlugins'));
