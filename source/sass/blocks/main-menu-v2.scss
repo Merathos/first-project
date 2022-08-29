@@ -1,0 +1,38 @@
+.main-menu {
+  padding: 25px 0;
+  background-color: var(--color-bg-secondary, $color-bg);
+}
+
+.page-header--js .main-menu {
+  display: none;
+}
+
+@include tablet {
+  .main-menu {
+    padding: 0;
+    background-color: transparent;
+    overflow-y: hidden;
+  }
+
+  .page-header--open-menu .main-menu {
+    display: block;
+  }
+
+  .main-menu .container {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    height: 100%;
+    overflow-y: scroll;
+
+    // iOS fix
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+
+@include mobile {
+  .main-menu .container {
+    padding: 0;
+  }
+}

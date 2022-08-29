@@ -29,6 +29,7 @@
 @import "blocks/section";
 @import "blocks/section-v2";
 @import "blocks/page-body";
+@import "blocks/page-body-v2";
 @import "blocks/page-content";
 @import "blocks/back-btn";
 @import "blocks/back-btn-v2";
@@ -186,6 +187,7 @@
 @import "blocks/page-header-v2";
 @import "blocks/menu-btn";
 @import "blocks/main-menu";
+@import "blocks/main-menu-v2";
 @import "blocks/location-switcher";
 @import "blocks/location-switcher-v2";
 @import "blocks/user-menu";
@@ -284,3 +286,7 @@
 
 //gallery-with-thumbs
 @import "blocks/gallery-with-thumbs";
+
+
+// кастомизация bootstrap
+@import "blocks/bootstrap-custom";

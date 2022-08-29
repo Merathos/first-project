@@ -8,17 +8,15 @@
     return;
   }
 
-
   var headerBar = header.querySelector('.js-page-header__bar');
-
 
   var adjustHeaderAppearance = function () {
     if (document.documentElement.clientWidth >= window.var.resolution.DESKTOP && window.pageYOffset > 0) {
       header.classList.add('page-header--above-content');
-      header.style.top = -headerBar.offsetHeight + 'px';
+      // header.style.top = -headerBar.offsetHeight + 'px';
     } else {
       header.classList.remove('page-header--above-content');
-      header.style.top = 0;
+      // header.style.top = 0;
     }
   };
 

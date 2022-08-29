@@ -1,4 +1,4 @@
-.internet-banner {
+.internet-banner-v2 {
   width: 100%;
 
   background-color: var(--color-bg-secondary, $light-blue);
@@ -13,15 +13,16 @@
   //}
 }
 
-.internet-banner__image-wrapper {
+.internet-banner-v2__image-wrapper {
   align-self: flex-start;
 
   @include mobile {
+    align-self: unset;
     //margin: 0 -16px;
   }
 }
 
-.internet-banner__container {
+.internet-banner-v2__container {
   max-width: 600px;
 
   padding-top: 60px;
@@ -33,22 +34,26 @@
   }
 }
 
-.internet-banner__wrapper {
+.internet-banner-v2__wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  max-width: 1000px;
+  max-width: 1200px;
+  padding: 30px 68px 30px 48px;
   margin: 0 auto;
 
+  @include tablet {
+    padding: 0 $tablet-padding;
+  }
+
   @include mobile {
+    padding: 0 $mobile-padding;
     flex-direction: column-reverse;
   }
 }
 
-.internet-banner__title {
+.internet-banner-v2__title {
   margin: 0;
   max-width: 600px;
 
@@ -62,7 +67,7 @@
   }
 }
 
-.internet-banner__text {
+.internet-banner-v2__text {
   margin: 0;
   margin-top: 32px;
 
@@ -76,7 +81,7 @@
   }
 }
 
-.internet-banner__button {
+.internet-banner-v2__button {
   margin-top: 46px;
   padding: 18px 32px 15px;
 
@@ -88,7 +93,7 @@
   }
 }
 
-.internet-banner__period {
+.internet-banner-v2__period {
   margin: 32px 0 0;
   font-style: normal;
   font-weight: 400;
@@ -97,7 +102,7 @@
   text-transform: uppercase;
 }
 
-.internet-banner__date {
+.internet-banner-v2__date {
   margin: 8px 0 0;
   font-weight: 400;
   font-size: 30px;

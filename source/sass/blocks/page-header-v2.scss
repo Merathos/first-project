@@ -4,6 +4,7 @@
   line-height: rem(19px);
   background-color: var(--color-bg-main, $white);
   font-family: "Rubik", "Arial", sans-serif;
+  padding-right: var(--padding-right-modal-open);
 
   &--js {
     position: fixed;
@@ -50,20 +51,53 @@
   font-weight: 400;
   font-size: rem(16px);
   line-height: 120%;
-  color: $dark-text;
+  color: var(--color-text, $dark-text);
 }
 
 .page-header__location {
-  color: $blue-default;
+  color: var(--color-text, $blue-default);
+  transition: color 0.3s;
 
   svg {
     margin-right: 10px;
+  }
+
+  &:hover:not(.focus-visible) {
+    color: var(--color-interactive-default, $blue-hover);
+  }
+
+  &:focus {
+    color: var(--color-interactive-default, $blue-hover);
+  }
+
+  &:focus:not(.focus-visible) {
+    color: var(--color-text, $dark-text);
+  }
+
+  &:active:not(.focus-visible) {
+    color: var(--color-interactive-default, $blue-hover);
   }
 }
 
 .page-header__sign-in {
   svg {
     margin-left: 10px;
+  }
+
+  &:hover:not(.focus-visible) {
+    color: var(--color-interactive-default, $blue-default);
+  }
+
+  &:focus {
+    color: var(--color-interactive-default, $blue-default);
+  }
+
+  &:focus:not(.focus-visible) {
+    color: var(--color-text, $dark-text);
+  }
+
+  &:active:not(.focus-visible) {
+    color: var(--color-interactive-default, $blue-default);
   }
 }
 

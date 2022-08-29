@@ -68,6 +68,8 @@
   }
 
   @media (max-width: $tablet-width - 1) {
+    max-width: unset;
+
     &.js_hide {
       display: none;
     }
@@ -90,6 +92,7 @@
 
   @include mobile {
     width: 40px;
+    position: static;
 
     //position: absolute;
     //top: 27px;

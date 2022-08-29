@@ -3,3 +3,31 @@
   cursor: default;
   pointer-events: none;
 }
+
+.link {
+  &--blue {
+    color: var(--color-interactive-default, $blue-default);
+
+    &:focus {
+      color: var(--color-interactive-accent, $blue-hover);
+    }
+
+    &:focus:not(.focus-visible) {
+      color: var(--color-interactive-default, $blue-default);
+    }
+
+    &:active:not(.focus-visible) {
+      color: var(--color-interactive-accent, $blue-hover);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .link {
+    &--blue {
+      &:hover:not(.focus-visible) {
+        color: var(--color-interactive-accent, $blue-hover);
+      }
+    }
+  }
+}

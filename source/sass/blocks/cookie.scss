@@ -8,6 +8,7 @@
 
   background-color: var(--color-bg-main, $white);
   box-shadow: 0 -4px 8px rgba(46, 67, 102, 0.1);
+  padding-right: var(--padding-right-modal-open);
 
   &.js_hide {
     display: none;

@@ -130,7 +130,7 @@
 
 
   <header class="page-header js-page-header">
-  <div class="page-header__bar js-page-header__bar">
+  <div class="page-header__bar js-page-header__bar js-main-menu">
     <div class="page-header__container container">
       <a class="page-header__roi-logo logo-link" href="#">
         <span class="visually-hidden">Перейти на сайт российской общественной инициативы</span>
@@ -177,38 +177,38 @@
     </div>
   </div>
 
-  <div class="page-header__main-menu main-menu js-main-menu">
-    <div class="container">
-      <div class="page-header__location-switcher location-switcher js-location-switcher">
-        <p class="visually-hidden">Выберите регион голосования:</p>
+<!--  <div class="page-header__main-menu main-menu">-->
+<!--    <div class="container">-->
+<!--      <div class="page-header__location-switcher location-switcher js-location-switcher">-->
+<!--        <p class="visually-hidden">Выберите регион голосования:</p>-->
 
-        <form action="#" method="post">
-          <div class="location-switcher__btn form-radio">
-            <input id="location-residence" type="radio" name="location" value="residence" checked="">
-            <label for="location-residence">
-              Адрес проживания
-              <span class="page-header__location-address location-switcher__address">Городской округ рабочий поселок Новогуровский</span>
-            </label>
-          </div>
+<!--        <form action="#" method="post">-->
+<!--          <div class="location-switcher__btn form-radio">-->
+<!--            <input id="location-residence" type="radio" name="location" value="residence" checked>-->
+<!--            <label for="location-residence">-->
+<!--              Адрес проживания-->
+<!--              <span class="page-header__location-address location-switcher__address">Городской округ рабочий поселок Новогуровский</span>-->
+<!--            </label>-->
+<!--          </div>-->
 
-          <div class="location-switcher__btn form-radio">
-            <input id="location-registration" type="radio" name="location" value="registration">
-            <label for="location-registration">
-              Адрес регистрации
-              <span class="page-header__location-address location-switcher__address">Краснобродский городской округ</span>
-            </label>
-          </div>
+<!--          <div class="location-switcher__btn form-radio">-->
+<!--            <input id="location-registration" type="radio" name="location" value="registration">-->
+<!--            <label for="location-registration">-->
+<!--              Адрес регистрации-->
+<!--              <span class="page-header__location-address location-switcher__address">Краснобродский городской округ</span>-->
+<!--            </label>-->
+<!--          </div>-->
 
-          <button class="location-switcher__show-btn button button--blue" type="submit">Показать</button>
-        </form>
-      </div>
+<!--          <button class="location-switcher__show-btn button button&#45;&#45;blue" type="submit">Показать</button>-->
+<!--        </form>-->
+<!--      </div>-->
 
-      <a class="page-header__version-btn page-header__version-btn--menu link link--black js-open-popup" href="#">
-        <svg width="18" height="18">
-          <use xlink:href="img/sprite.svg#icon-glasses"></use>
-        </svg>
-        Версия для слабовидящих
-      </a>
+<!--      <a class="page-header__version-btn page-header__version-btn&#45;&#45;menu link link&#45;&#45;black js-open-popup" href="#">-->
+<!--        <svg width="18" height="18">-->
+<!--          <use xlink:href="img/sprite.svg#icon-glasses"></use>-->
+<!--        </svg>-->
+<!--        Версия для слабовидящих-->
+<!--      </a>-->
 
 <!--      <nav class="page-header__user-menu user-menu js-user-menu">-->
 <!--        <div class="user-menu__overlay js-user-menu__overlay"></div>-->
@@ -241,22 +241,20 @@
 <!--          </li>-->
 <!--        </ul>-->
 <!--      </nav>-->
-    </div>
-  </div>
+<!--    </div>-->
+<!--  </div>-->
 </header>
 
 
-  <div class="internet-banner">
-  <div class="container">
-    <div class="internet-banner__wrapper">
-      <div class="internet-banner__container">
-        <p class="internet-banner__title">Опросы и&nbsp;голосования</p>
-        <p class="internet-banner__text">Принимайте активное участие в&nbsp;развитии своего региона: голосуйте, делитесь мнением, учавствуйте в&nbsp;обсуждениях и&nbsp;предлагайте идеи</p>
-        <a class="internet-banner__button button button--blue" href="#">Подробнее о проекте</a>
-      </div>
-      <div class="internet-banner__image-wrapper">
-        <img width="410" height="300" src="img/new-banner.svg" alt="Картинка">
-      </div>
+  <div class="internet-banner-v2">
+  <div class="internet-banner-v2__wrapper">
+    <div class="internet-banner-v2__container">
+      <p class="internet-banner-v2__title">Опросы и&nbsp;голосования</p>
+      <p class="internet-banner-v2__text">Принимайте активное участие в&nbsp;развитии своего региона: голосуйте, делитесь мнением, учавствуйте в&nbsp;обсуждениях и&nbsp;предлагайте идеи</p>
+      <a class="internet-banner-v2__button button button--blue" href="#">Подробнее о проекте</a>
+    </div>
+    <div class="internet-banner-v2__image-wrapper">
+      <img width="410" height="300" src="img/new-banner.svg" alt="Картинка">
     </div>
   </div>
 </div>
@@ -348,14 +346,14 @@
 
       <hr>
 
-      <section class="section mt-5 mb-5">
+      <section class="section pt-5 pb-5">
         <div class="section__head px-md-2">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/sprite.svg#icon-section"></use>
           </svg>
           <h2 class="section__title">Разделы</h2>
         </div>
-        <ul class="project js_short_list row gx-0 gx-md-3 gy-3 gy-md-4 pb-3 pb-md-5 mt-3 mt-mb-0">
+        <ul class="project js_short_list row gx-0 gx-md-3 gy-3 gy-md-4 mt-3 mt-mb-0">
           <li class="col-md-6">
             <div class="project__item">
             <a href="#" class="project__link">
@@ -451,24 +449,22 @@
       </section>
     </div>
 
-    <div class="internet-banner">
-  <div class="container">
-    <div class="internet-banner__wrapper">
-      <div class="internet-banner__container">
-        <p class="internet-banner__title">Реализованные проекты</p>
-        <p class="internet-banner__text">В&nbsp;данном разделе можно ознакомиться с&nbsp;реализованными в&nbsp;регионе проектами</p>
-        <a class="internet-banner__button button button--blue" href="#">перейти к проектам</a>
-      </div>
-      <div class="internet-banner__image-wrapper">
-        <img width="518" height="276" src="img/new-banner-2.svg" alt="Картинка">
-      </div>
+    <div class="internet-banner-v2 mt-5 mb-5">
+  <div class="internet-banner-v2__wrapper">
+    <div class="internet-banner-v2__container">
+      <p class="internet-banner-v2__title">Реализованные проекты</p>
+      <p class="internet-banner-v2__text">В&nbsp;данном разделе можно ознакомиться с&nbsp;реализованными в&nbsp;регионе проектами</p>
+      <a class="internet-banner-v2__button button button--blue" href="#">перейти к проектам</a>
+    </div>
+    <div class="internet-banner-v2__image-wrapper">
+      <img width="518" height="276" src="img/new-banner-2.svg" alt="Картинка">
     </div>
   </div>
 </div>
 
 
     <div class="container">
-      <section class="section news mt-3 mt-md-5 mb-5">
+      <section class="section news pb-5 mb-3 mb-md-0">
         <div class="section__head pt-5 px-md-2">
           <svg class="news__title-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <use xlink:href="img/sprite.svg#icon-news"></use>

@@ -25,6 +25,7 @@
 
   var adjustMenuHeight = function () {
     menu.style.height = header.classList.contains('page-header--open-menu') && document.documentElement.clientWidth < window.var.resolution.DESKTOP ? window.innerHeight - topBar.offsetHeight + 'px' : '';
+    console.log(menu.style.height)
   };
 
 
@@ -54,7 +55,7 @@
       openMenu();
     }
 
-    adjustMenuHeight();
+    // adjustMenuHeight();
   };
 
   var onWindowResize = function () {
@@ -64,7 +65,7 @@
       closeMenu();
     }
 
-    adjustMenuHeight();
+    // adjustMenuHeight();
   };
 
 

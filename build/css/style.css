@@ -5718,6 +5718,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
     background-color: var(--color-bg-secondary, #70bf56); }
   .status-info--voting {
     margin-top: 30px; }
+  .status-info .file-item {
+    padding: 0; }
 
 .status-info__text-group {
   display: -webkit-box;
@@ -13656,7 +13658,8 @@ span.poll__hide {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 32px; }
+  width: 32px;
+  color: #2c8ecc; }
   @media (max-width: 767px) {
     .project__icon {
       position: absolute;
@@ -14019,7 +14022,8 @@ span.poll__hide {
   width: 100%;
   background-color: var(--color-bg-main, #ffffff);
   -webkit-box-shadow: 0 -4px 8px rgba(46, 67, 102, 0.1);
-          box-shadow: 0 -4px 8px rgba(46, 67, 102, 0.1); }
+          box-shadow: 0 -4px 8px rgba(46, 67, 102, 0.1);
+  padding-right: var(--padding-right-modal-open); }
   .cookie.js_hide {
     display: none; }
 

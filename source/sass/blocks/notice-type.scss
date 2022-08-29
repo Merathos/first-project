@@ -7,4 +7,12 @@
   font-size: rem(14px);
   line-height: 130%;
   color: var(--color-text, $dark-text);
+
+  .mod-theme-inverse &,
+  .mod-theme-blue &,
+  .mod-theme-comfort &,
+  .mod-theme-brown & {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
