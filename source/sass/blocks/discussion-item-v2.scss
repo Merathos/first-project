@@ -1,0 +1,10 @@
+.discussion-item__screen-btn {
+  transition: background-color border-color color $style-change-duration;
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-bg-secondary, $blue-hover);
+    border-color: $blue-hover;
+    color: var(--color-text, $white);
+  }
+}

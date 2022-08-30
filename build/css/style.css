@@ -12007,7 +12007,8 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       font-size: 0.9375rem;
       line-height: 1.25rem; }
   .notification-block__icon {
-    min-width: 24px; }
+    min-width: 24px;
+    color: var(--color-text, #2c8ecc); }
   .notification-block .button.button--blue {
     padding: 13px 41px 11px 38px; }
   @media (max-width: 767px) {

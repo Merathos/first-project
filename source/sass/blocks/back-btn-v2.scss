@@ -1,5 +1,29 @@
 .back-btn {
+  &:focus {
+    color: var(--color-text, $grey);
+  }
+
+  &:focus:not(.focus-visible) {
+    color: var(--color-text, $grey);
+  }
+
+  &:hover:not(.focus-visible) {
+    color: var(--color-text, $grey);
+  }
+
   svg {
     padding-bottom: 0;
+  }
+}
+
+@include tablet {
+  .back-btn {
+    &:hover:not(.focus-visible) {
+      color: var(--color-text, $grey);
+    }
+
+    &:active:not(.focus-visible) {
+      color: var(--color-text, $grey);
+    }
   }
 }

@@ -1,0 +1,9 @@
+.public-debate__item {
+  @media (min-width: $desktop-width) {
+    &:hover:not(.focus-visible) .button-star {
+      &:hover {
+        color: var(--color-interactive-accent, $blue-hover);
+      }
+    }
+  }
+}

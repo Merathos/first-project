@@ -1,0 +1,26 @@
+.popup__close-btn {
+  &:focus svg {
+    stroke: var(--color-interactive-default, $blue-default);
+  }
+
+  &:focus:not(.focus-visible) svg {
+    stroke: var(--color-text, $grey-default);
+  }
+
+  &:hover:not(.focus-visible) svg {
+    stroke: var(--color-interactive-default, $blue-default);
+  }
+}
+
+
+@include tablet {
+  .popup__close-btn {
+    &:hover:not(.focus-visible) svg {
+      stroke: var(--color-text, $grey-default);
+    }
+
+    &:active:not(.focus-visible) svg {
+      stroke: var(--color-interactive-default, $blue-default);
+    }
+  }
+}

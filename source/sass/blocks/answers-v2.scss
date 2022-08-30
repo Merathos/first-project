@@ -1,0 +1,11 @@
+.answers__comment-link {
+  color: var(--color-interactive-default, $blue-sail);
+}
+
+.answers__text-wrapper {
+  background-color: var(--color-bg-secondary, $light-green-3);
+
+  &--accent {
+    background-color: var(--color-bg-secondary, $light-red);
+  }
+}

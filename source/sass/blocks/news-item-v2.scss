@@ -1,0 +1,5 @@
+.news-item .button-star {
+  &:hover {
+    color: var(--color-interactive-accent,  $blue-hover);
+  }
+}

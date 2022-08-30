@@ -1,3 +1,9 @@
 .form-range {
   width: 320px;
+
+  & .noUi-horizontal .noUi-handle {
+    &:hover {
+      border-color: var(--color-interactive-accent, $blue-accent);
+    }
+  }
 }

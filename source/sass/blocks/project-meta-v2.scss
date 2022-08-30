@@ -1,0 +1,5 @@
+.project-meta .button-star {
+  &:hover {
+    color: var(--color-interactive-accent, $blue-hover);
+  }
+}

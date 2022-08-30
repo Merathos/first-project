@@ -69,7 +69,9 @@
 @import "blocks/page-top";
 @import "blocks/archive-link";
 @import "blocks/article-link";
+@import "blocks/article-link-v2";
 @import "blocks/video-link";
+@import "blocks/video-link-v2";
 @import "blocks/special-popup";
 @import "blocks/status-info";
 @import "blocks/status-info-v2";
@@ -81,12 +83,14 @@
 @import "blocks/buttons-wrapper";
 @import "blocks/date";
 @import "blocks/application-period";
+@import "blocks/application-period-v2";
 @import "blocks/project-link";
 @import "blocks/main-empty";
 @import "blocks/info-block";
 @import "blocks/info-block-v2";
 @import "blocks/cards-list";
 @import "blocks/zoom-button";
+@import "blocks/zoom-button-v2";
 @import "blocks/preview-input";
 @import "blocks/info-banner";
 @import "blocks/info-banner-v2";
@@ -104,13 +108,16 @@
 @import 'blocks/concurrent-projects';
 @import 'blocks/budgets';
 @import 'blocks/public-debate';
+@import 'blocks/public-debate-v2';
 @import 'blocks/join-indicator';
-@import 'blocks/commentary-add.scss';
-@import 'blocks/hearings-status.scss';
-@import 'blocks/hearings-result.scss';
+@import 'blocks/commentary-add';
+@import 'blocks/hearings-status';
+@import 'blocks/hearings-status-v2';
+@import 'blocks/hearings-result';
 @import 'blocks/activity-index';
 @import 'blocks/activity-list';
 @import 'blocks/rating';
+@import 'blocks/rating-v2';
 @import 'blocks/rating-list';
 @import 'blocks/button-like';
 @import 'blocks/your-projects-list';
@@ -142,6 +149,7 @@
 @import 'blocks/notification';
 @import 'blocks/deadlines';
 @import 'blocks/notification-block';
+@import 'blocks/notification-block-v2';
 @import 'blocks/projects-winners';
 @import 'blocks/internet-vote';
 @import 'blocks/internet-banner';
@@ -167,19 +175,23 @@
 @import "blocks/project";
 @import "blocks/project-v2";
 @import "blocks/discussion";
+@import "blocks/discussion-v2";
 @import "blocks/concurrent-voting";
 @import "blocks/cookie";
 
 // composite poll
 @import "blocks/poll-result";
+@import "blocks/poll-result-v2";
 @import "blocks/composite-poll";
 @import "blocks/composite-poll-v2";
 @import "blocks/files";
 @import "blocks/file-item";
 @import "blocks/file-item-v2";
 @import "blocks/popup";
+@import "blocks/popup-v2";
 @import "blocks/gallery";
 @import "blocks/gallery-popup";
+@import "blocks/gallery-popup-v2";
 @import "blocks/gallery-full";
 
 // header
@@ -191,9 +203,11 @@
 @import "blocks/location-switcher";
 @import "blocks/location-switcher-v2";
 @import "blocks/user-menu";
+@import "blocks/user-menu-v2";
 
 // projects
 @import "blocks/project-item";
+@import "blocks/project-item-v2";
 @import "blocks/projects-list";
 @import "blocks/projects";
 @import "blocks/projects-v2";
@@ -222,11 +236,15 @@
 
 // project page
 @import "blocks/project-page";
+@import "blocks/project-page-v2";
 @import "blocks/project-meta";
+@import "blocks/project-meta-v2";
 @import "blocks/project-vote";
 @import "blocks/vote-results";
+@import "blocks/vote-results-v2";
 @import "blocks/vote-popup";
 @import "blocks/projects-note";
+@import "blocks/projects-note-v2";
 @import "blocks/modal-projects-period";
 
 // poll page
@@ -234,12 +252,15 @@
 
 // news-item
 @import "blocks/news-item";
+@import "blocks/news-item-v2";
 
 // discussions
 @import "blocks/discussion-content";
 @import "blocks/discussion-item";
+@import "blocks/discussion-item-v2";
 @import "blocks/discussion-list";
 @import "blocks/answers";
+@import "blocks/answers-v2";
 @import "blocks/text-hidden";
 @import "blocks/table-fixed";
 

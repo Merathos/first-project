@@ -1,0 +1,5 @@
+.zoom-button {
+  &:hover:not(.focus-visible) {
+    color: var(--color-interactive-accent, $blue-hover);
+  }
+}

@@ -1,0 +1,21 @@
+.discussion__item {
+  &:hover {
+    .button-star:not(.button-star--active) {
+      &:hover {
+        color: var(--color-interactive-accent, $blue-hover);
+      }
+    }
+  }
+}
+
+.discussion__used {
+  svg {
+    fill: var(--color-icon, $blue-sail);
+  }
+}
+
+.discussion .button-star {
+  &:hover {
+    color: var(--color-interactive-accent, $blue-hover);
+  }
+}

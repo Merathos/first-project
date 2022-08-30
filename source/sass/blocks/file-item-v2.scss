@@ -3,6 +3,10 @@
   font-size: rem(14px);
   line-height: 130%;
 
+  svg {
+    color: var(--color-text, $blue-sail);
+  }
+
   &--grey {
     background-color: $color-bg;
   }

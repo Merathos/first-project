@@ -1,0 +1,7 @@
+.hearings-status {
+  .button-star {
+    &:hover {
+      color: var(--color-interactive-accent, $blue-hover);
+    }
+  }
+}

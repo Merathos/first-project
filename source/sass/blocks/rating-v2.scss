@@ -1,0 +1,7 @@
+.rating__item {
+  @media (min-width: $desktop-width) {
+    &:hover:not(.focus-visible) .button-star {
+      color: var(--color-interactive-accent, $blue-hover);
+    }
+  }
+}

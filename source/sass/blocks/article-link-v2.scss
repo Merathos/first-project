@@ -1,0 +1,37 @@
+.article-link {
+  &:focus {
+    color: var(--color-interactive-accent, $blue-hover);
+  }
+
+  &:focus:not(.focus-visible) {
+    color: var(--color-interactive-default, $blue-default);
+  }
+
+  &:hover:not(.focus-visible) {
+    color: var(--color-interactive-accent, $blue-hover);
+  }
+
+  &--content {
+    &:hover:not(.focus-visible) {
+      color: var(--color-text, $blue-hover);
+    }
+  }
+}
+
+@include tablet {
+  .article-link {
+    &:hover:not(.focus-visible) {
+      color: var(--color-interactive-default, $blue-default);
+    }
+
+    &:active:not(.focus-visible) {
+      color: var(--color-interactive-accent, $blue-hover);
+    }
+
+    &--content {
+      &:hover:not(.focus-visible) {
+        color: var(--color-text, $blue-hover);
+      }
+    }
+  }
+}

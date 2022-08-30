@@ -1,3 +1,8 @@
 .info-banner-button {
   font-size: rem(16px);
+
+  &.focus-visible:focus,
+  &:hover:not(.focus-visible) {
+    color: var(--color-interactive-default, $blue-hover);
+  }
 }

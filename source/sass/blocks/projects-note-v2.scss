@@ -1,0 +1,19 @@
+.projects-note__link {
+  &:focus {
+    color: var(--color-interactive-default, $blue-hover);
+  }
+
+  &:focus:not(.focus-visible) {
+    color: var(--color-text, $blue-default);
+  }
+
+  &:active:not(.focus-visible) {
+    color: var(--color-interactive-default, $blue-hover);
+  }
+
+  @media (min-width: $desktop-width) {
+    &:hover:not(.focus-visible) {
+      color: var(--color-interactive-default, $blue-hover);
+    }
+  }
+}

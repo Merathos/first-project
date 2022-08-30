@@ -1,0 +1,6 @@
+.notification-block {
+  &__icon {
+    min-width: 24px;
+    color: var(--color-text, $blue-default);
+  }
+}
