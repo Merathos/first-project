@@ -47,6 +47,13 @@
     color: var(--color-bg-secondary, $white);
     background-color: var(--color-text, $blue-default);
     border-color: var(--color-text, $blue-default);
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: var(--color-bg-secondary, $white);
+      border: 1px solid var(--color-interactive-default, $blue-sail);
+    }
   }
 
   &--prev {

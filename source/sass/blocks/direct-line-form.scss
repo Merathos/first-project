@@ -31,11 +31,11 @@
   }
 
   .description-block,
-  .form-select {
+  .form-select-custom {
     margin-bottom: 25px;
   }
 
-  .form-select .ss-main .ss-single-selected {
+  .form-select-custom .ss-main .ss-single-selected {
     .placeholder {
       border: none;
     }
@@ -60,7 +60,7 @@
     }
   }
 
-  .form-select .ss-main .ss-content {
+  .form-select-custom .ss-main .ss-content {
     width: 100%;
     background-color: var(--color-bg-secondary, $white);
     top: calc(100% + 2px);

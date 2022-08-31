@@ -13663,6 +13663,11 @@ span.poll__hide {
           align-items: center;
   width: 32px;
   color: #2c8ecc; }
+  .mod-theme-inverse .project__icon,
+  .mod-theme-blue .project__icon,
+  .mod-theme-comfort .project__icon,
+  .mod-theme-brown .project__icon {
+    display: none; }
   @media (max-width: 767px) {
     .project__icon {
       position: absolute;
@@ -15278,7 +15283,9 @@ span.poll__hide {
   .page-header__version-btn {
     width: 100%; }
   .page-header__version-btn {
-    margin-right: auto; } }
+    margin-right: auto; }
+  .page-header__bar .page-header__user-menu {
+    display: none; } }
 
 @media (max-width: 767px) {
   .page-header__roi-logo svg {

@@ -1,3 +1,9 @@
 .single-select .ss-single-selected .placeholder {
   background-color: transparent;
 }
+
+.form-select-custom .ss-main .ss-multi-selected:hover,
+.form-select-custom .ss-main .ss-single-selected .placeholder .ss-disabled:hover,
+.form-select-custom .ss-main .ss-single-selected:hover {
+  color: var(--color-interactive-accent, $blue-hover);
+}

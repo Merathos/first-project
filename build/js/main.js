@@ -5463,7 +5463,7 @@ var initSelects = function () {
       select: el,
       showSearch: false,
       afterOpen: function () {
-        Scrollbar.init(document.querySelector('.form-select .ss-list'), {
+        Scrollbar.init(document.querySelector('.form-select-custom .ss-list'), {
           continuousScrolling: false
         });
       },
@@ -5472,7 +5472,7 @@ var initSelects = function () {
     if (!select) {
       return;
     }
-    Scrollbar.init(document.querySelector('.form-select .ss-main .ss-content .ss-list'), {
+    Scrollbar.init(document.querySelector('.form-select-custom .ss-main .ss-content .ss-list'), {
       continuousScrolling: false
     });
   };
@@ -5498,7 +5498,7 @@ var initSelects = function () {
         addSelectPreview(secondSelect.querySelector('.js-select-preview'));
       },
       afterOpen: function () {
-        Scrollbar.init(document.querySelector('.form-select .ss-list'), {
+        Scrollbar.init(document.querySelector('.form-select-custom .ss-list'), {
           continuousScrolling: false
         });
       },
@@ -5507,7 +5507,7 @@ var initSelects = function () {
     if (!select) {
       return;
     }
-    Scrollbar.init(document.querySelector('.form-select .ss-main .ss-content .ss-list'), {
+    Scrollbar.init(document.querySelector('.form-select-custom .ss-main .ss-content .ss-list'), {
       continuousScrolling: false
     });
   };
@@ -5519,7 +5519,7 @@ var initSelects = function () {
       placeholder: 'Тип виджета',
       data: arr,
       afterOpen: function () {
-        Scrollbar.init(document.querySelector('.form-select .ss-list'), {
+        Scrollbar.init(document.querySelector('.form-select-custom .ss-list'), {
           continuousScrolling: false
         });
       },
@@ -5530,7 +5530,7 @@ var initSelects = function () {
     if (!select) {
       return;
     }
-    Scrollbar.init(document.querySelector('.form-select .ss-main .ss-content .ss-list'), {
+    Scrollbar.init(document.querySelector('.form-select-custom .ss-main .ss-content .ss-list'), {
       continuousScrolling: false
     });
   };

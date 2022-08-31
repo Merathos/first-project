@@ -87,5 +87,11 @@
     padding-bottom: 23px;
     padding-top: 27px;
   }
+}
 
+.placeholder {
+  min-height: unset;
+  opacity: unset;
+  background-color: transparent;
+  cursor: pointer;
 }
