@@ -19,6 +19,10 @@
   <link rel="preload" href="fonts/Rubik-Regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Rubik-Medium.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Rubik-Bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato-medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato-regular.woff2" as="font" crossorigin="anonymous">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style-v2.min.css" rel="stylesheet">
 </head>
 
@@ -444,6 +448,63 @@
 
     </div>
   </main>
+
+  <div class="modal modal--region fade" id="regionModal" tabindex="-1" aria-labelledby="regionModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h3 class="modal-title">Ваш регион</h3>
+        <p class="modal__subtitle">Выберите регион из списка или один из ваших адресов, чтобы посмотреть и принять участие в доступных Вам активностях </p>
+      </div>
+      <div class="modal-body">
+        <form action="" id="region-form">
+          <div class="form-radio">
+            <input id="location-residence1" type="radio" name="location1" value="residence" data-checkbox-show-more="formSelect3">
+            <label for="location-residence1">
+              Выбранный регион
+              <span>Не указано</span>
+            </label>
+          </div>
+
+          <div id="formSelect3" class="collapse">
+            <select class="_select-search" id="formSelect2" data-trigger="data-trigger">
+              <option placeholder="" value="">Выберите из списка</option>
+              <option value="1">Магаданская область</option>
+              <option value="2">Московская область</option>
+              <option value="3">Мурманская область</option>
+            </select>
+          </div>
+
+          <div class="form-radio">
+            <input id="location-registration2" type="radio" name="location1" value="registration">
+            <label for="location-registration2">
+              Адрес проживания
+              <span>150054, г Ярославль, пл Ярославль Главный</span>
+            </label>
+          </div>
+
+          <div class="form-radio">
+            <input id="location-registration3" type="radio" name="location1" value="registration1" disabled="">
+            <label for="location-registration3">
+              Адрес регистрации
+              <span>
+                <a href="#" class="link link--blue">Укажите на портале Госуслуги</a>
+              </span>
+            </label>
+          </div>
+        </form>
+
+        <p class="form-info mt-4 mb-4">
+          Подробную инструкцию о добавлении адресов смотрите на странице <a href="#" class="link link--blue">О проекте</a>
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" form="region-form" class="button button--blue" data-bs-dismiss="modal">Применить</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   <footer class="page-footer">
   <div class="container">

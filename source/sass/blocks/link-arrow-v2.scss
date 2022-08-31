@@ -16,7 +16,7 @@
 
   &:hover,
   &:focus {
-    color: var(--color-interactive-accent, $blue-hover);
+    color: var(--color-interactive-default, $blue-hover);
   }
 
   &--small {

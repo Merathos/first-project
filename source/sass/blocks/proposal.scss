@@ -1356,6 +1356,10 @@
   }
 }
 
+.proposal--aside .proposal__title {
+  grid-area: a1;
+}
+
 .proposal__project--active {
   &::after {
     content: "";

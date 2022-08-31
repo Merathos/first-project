@@ -12,8 +12,36 @@
 .modal {
   .btn-close {
     position: absolute;
-    right: 16px;
-    top: 16px;
+    right: 32px;
+    top: 32px;
+    width: 16px;
+    height: 16px;
+    background-image: none;
+    padding: 0;
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 22px;
+      height: 2px;
+      background-color: var(--color-text, $grey-2);
+      bottom: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 22px;
+      height: 2px;
+      background-color: var(--color-text, $grey-2);
+      bottom: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
   }
 
   .modal-content {

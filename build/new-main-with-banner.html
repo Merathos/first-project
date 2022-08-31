@@ -19,6 +19,9 @@
   <link rel="preload" href="fonts/Rubik-Regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Rubik-Medium.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/Rubik-Bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato-bold.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato-medium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato-regular.woff2" as="font" crossorigin="anonymous">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style-v2.min.css" rel="stylesheet">
 </head>
@@ -163,12 +166,37 @@
         Версия для слабовидящих
       </a>
 
-      <button type="button" class="page-header__sign-in">
-        Войти
-        <svg width="18" height="18">
-          <use xlink:href="img/sprite.svg#icon-sign-in"></use>
-        </svg>
-      </button>
+      <nav class="page-header__user-menu user-menu js-user-menu">
+        <div class="user-menu__overlay js-user-menu__overlay"></div>
+
+        <button class="user-menu__dropdown-btn js-user-menu__dropdown-btn link link--black" type="button">
+          <span class="user-menu__dropdown-btn-text visually-hidden">Открыть меню пользователя</span>
+
+          <svg class="user-menu__user-icon" width="16" height="16">
+            <use xlink:href="img/sprite.svg#icon-user"></use>
+          </svg>
+
+          <span class="user-menu__user-name">Анастасия</span>
+
+          <svg class="user-menu__dropdown-icon" width="13" height="13">
+            <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
+          </svg>
+        </button>
+
+        <ul class="user-menu__list js-user-menu__list">
+          <li class="user-menu__item">
+            <a class="user-menu__link link link--black" href="#">Избранное</a>
+          </li>
+
+          <li class="user-menu__item">
+            <a class="user-menu__link link link--black" href="#">Моя активность</a>
+          </li>
+
+          <li class="user-menu__item">
+            <a class="user-menu__link link link--black" href="#">Выход</a>
+          </li>
+        </ul>
+      </nav>
 
       <button class="page-header__menu-btn menu-btn js-menu-btn" type="button">
         <span class="menu-btn__text visually-hidden">Открыть основное меню</span>
@@ -177,72 +205,72 @@
     </div>
   </div>
 
-<!--  <div class="page-header__main-menu main-menu">-->
-<!--    <div class="container">-->
-<!--      <div class="page-header__location-switcher location-switcher js-location-switcher">-->
-<!--        <p class="visually-hidden">Выберите регион голосования:</p>-->
+  <div class="page-header__main-menu main-menu">
+    <div class="container">
+      <div class="page-header__location-switcher location-switcher js-location-switcher">
+        <p class="visually-hidden">Выберите регион голосования:</p>
 
-<!--        <form action="#" method="post">-->
-<!--          <div class="location-switcher__btn form-radio">-->
-<!--            <input id="location-residence" type="radio" name="location" value="residence" checked>-->
-<!--            <label for="location-residence">-->
-<!--              Адрес проживания-->
-<!--              <span class="page-header__location-address location-switcher__address">Городской округ рабочий поселок Новогуровский</span>-->
-<!--            </label>-->
-<!--          </div>-->
+        <form action="#" method="post">
+          <div class="location-switcher__btn form-radio">
+            <input id="location-residence" type="radio" name="location" value="residence" checked="">
+            <label for="location-residence">
+              Адрес проживания
+              <span class="page-header__location-address location-switcher__address">Городской округ рабочий поселок Новогуровский</span>
+            </label>
+          </div>
 
-<!--          <div class="location-switcher__btn form-radio">-->
-<!--            <input id="location-registration" type="radio" name="location" value="registration">-->
-<!--            <label for="location-registration">-->
-<!--              Адрес регистрации-->
-<!--              <span class="page-header__location-address location-switcher__address">Краснобродский городской округ</span>-->
-<!--            </label>-->
-<!--          </div>-->
+          <div class="location-switcher__btn form-radio">
+            <input id="location-registration" type="radio" name="location" value="registration">
+            <label for="location-registration">
+              Адрес регистрации
+              <span class="page-header__location-address location-switcher__address">Краснобродский городской округ</span>
+            </label>
+          </div>
 
-<!--          <button class="location-switcher__show-btn button button&#45;&#45;blue" type="submit">Показать</button>-->
-<!--        </form>-->
-<!--      </div>-->
+          <button class="location-switcher__show-btn button button--blue" type="submit">Показать</button>
+        </form>
+      </div>
 
-<!--      <a class="page-header__version-btn page-header__version-btn&#45;&#45;menu link link&#45;&#45;black js-open-popup" href="#">-->
-<!--        <svg width="18" height="18">-->
-<!--          <use xlink:href="img/sprite.svg#icon-glasses"></use>-->
-<!--        </svg>-->
-<!--        Версия для слабовидящих-->
-<!--      </a>-->
+      <a class="page-header__version-btn page-header__version-btn--menu link link--black js-open-popup" href="#">
+        <svg width="18" height="18">
+          <use xlink:href="img/sprite.svg#icon-glasses"></use>
+        </svg>
+        Версия для слабовидящих
+      </a>
 
-<!--      <nav class="page-header__user-menu user-menu js-user-menu">-->
-<!--        <div class="user-menu__overlay js-user-menu__overlay"></div>-->
+      <nav class="page-header__user-menu user-menu js-user-menu">
+        <div class="user-menu__overlay js-user-menu__overlay"></div>
 
-<!--        <button class="user-menu__dropdown-btn js-user-menu__dropdown-btn link link&#45;&#45;black" type="button">-->
-<!--          <span class="user-menu__dropdown-btn-text visually-hidden">Открыть меню пользователя</span>-->
+        <button class="user-menu__dropdown-btn js-user-menu__dropdown-btn link link--black" type="button">
+          <span class="user-menu__dropdown-btn-text visually-hidden">Открыть меню пользователя</span>
 
-<!--          <svg class="user-menu__user-icon" width="16" height="16">-->
-<!--            <use xlink:href="img/sprite.svg#icon-user"></use>-->
-<!--          </svg>-->
+          <svg class="user-menu__user-icon" width="16" height="16">
+            <use xlink:href="img/sprite.svg#icon-user"></use>
+          </svg>
 
-<!--          <span class="user-menu__user-name">Анастасия</span>-->
+          <span class="user-menu__user-name">Анастасия</span>
 
-<!--          <svg class="user-menu__dropdown-icon" width="13" height="13">-->
-<!--            <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>-->
-<!--          </svg>-->
-<!--        </button>-->
+          <svg class="user-menu__dropdown-icon" width="13" height="13">
+            <use xlink:href="img/sprite.svg#icon-triangle-arrow"></use>
+          </svg>
+        </button>
 
-<!--        <ul class="user-menu__list js-user-menu__list">-->
-<!--          <li class="user-menu__item">-->
-<!--            <a class="user-menu__link link link&#45;&#45;black" href="#">Избранное</a>-->
-<!--          </li>-->
+        <ul class="user-menu__list js-user-menu__list">
+          <li class="user-menu__item">
+            <a class="user-menu__link link link--black" href="#">Избранное</a>
+          </li>
 
-<!--          <li class="user-menu__item">-->
-<!--            <a class="user-menu__link link link&#45;&#45;black" href="#">Моя активность</a>-->
-<!--          </li>-->
+          <li class="user-menu__item">
+            <a class="user-menu__link link link--black" href="#">Моя активность</a>
+          </li>
 
-<!--          <li class="user-menu__item">-->
-<!--            <a class="user-menu__link link link&#45;&#45;black" href="#">Выход</a>-->
-<!--          </li>-->
-<!--        </ul>-->
-<!--      </nav>-->
-<!--    </div>-->
-<!--  </div>-->
+          <li class="user-menu__item">
+            <a class="user-menu__link link link--black" href="#">Выход</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </header>
 
 

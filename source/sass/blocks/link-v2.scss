@@ -6,7 +6,7 @@
 
 .link {
   &--blue {
-    color: var(--color-interactive-default, $blue-default);
+    color: var(--color-text, $blue-default);
 
     &:focus {
       color: var(--color-interactive-accent, $blue-hover);

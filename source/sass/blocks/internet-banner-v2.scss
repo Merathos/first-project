@@ -13,14 +13,14 @@
   //}
 }
 
-.internet-banner-v2__image-wrapper {
-  align-self: flex-start;
-
-  @include mobile {
-    align-self: unset;
-    //margin: 0 -16px;
-  }
-}
+//.internet-banner-v2__image-wrapper {
+//  align-self: flex-start;
+//
+//  @include mobile {
+//    align-self: unset;
+//    //margin: 0 -16px;
+//  }
+//}
 
 .internet-banner-v2__container {
   max-width: 600px;
@@ -40,7 +40,7 @@
   align-items: center;
   justify-content: space-between;
   max-width: 1200px;
-  padding: 30px 68px 30px 48px;
+  padding: 30px 42px 30px 39px;
   margin: 0 auto;
 
   @include tablet {

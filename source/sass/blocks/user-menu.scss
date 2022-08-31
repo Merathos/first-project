@@ -71,7 +71,7 @@
   box-shadow: 0 2px 10px rgba(46, 67, 102, 0.1);
 }
 
-.page-header--js .user-menu__list {
+.user-menu__list {
   display: none;
   position: absolute;
   top: calc(100% + 9px);
@@ -127,7 +127,7 @@
     box-shadow: none;
   }
 
-  .page-header--js .user-menu__list {
+  .user-menu__list {
     display: block;
     height: 0;
     overflow: hidden;

@@ -34,7 +34,7 @@
     display: block;
     box-sizing: border-box;
     width: 100%;
-    padding-left: 32px;
+    padding-left: 28px;
     margin-top: 3px;
     font-size: rem(13px);
     line-height: rem(15px);
@@ -70,7 +70,7 @@
 }
 
 .form-radio input[type="radio"]:disabled ~ label {
-  color: $light-grey;
+  color: var(--color-text, $light-grey);
   cursor: text;
 
   &::before {

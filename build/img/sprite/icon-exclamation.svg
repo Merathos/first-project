@@ -1,1 +1,5 @@
-<svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M.2 12C.2 5.494 5.492.2 12 .2 18.505.2 23.8 5.494 23.8 12c0 6.506-5.294 11.8-11.8 11.8C5.492 23.8.2 18.506.2 12zm2.152 0c0 5.32 4.328 9.647 9.647 9.647 5.32 0 9.647-4.327 9.647-9.647S17.318 2.354 12 2.354 2.352 6.68 2.352 12z" fill="currentColor"/><rect x="10.75" y="6" width="2.5" height="8" rx="1" fill="currentColor"/><rect x="10.75" y="15" width="2.5" height="3" rx="1" fill="currentColor"/></svg>
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.199219 12.0002C0.199219 5.49386 5.49288 0.200195 11.9992 0.200195C18.5056 0.200195 23.7992 5.49386 23.7992 12.0002C23.7992 18.5065 18.5056 23.8002 11.9992 23.8002C5.49288 23.8002 0.199219 18.5065 0.199219 12.0002ZM2.35237 12.0002C2.35237 17.3197 6.67996 21.6468 11.9992 21.6468C17.3185 21.6468 21.6461 17.3197 21.6461 12.0002C21.6461 6.68067 17.3185 2.35359 11.9992 2.35359C6.67996 2.35359 2.35237 6.68067 2.35237 12.0002Z" fill="currentColor"/>
+<rect x="10.75" y="6.00024" width="2.5" height="8" rx="1" fill="currentColor"/>
+<rect x="10.75" y="15.0002" width="2.5" height="3" rx="1" fill="currentColor"/>
+</svg>

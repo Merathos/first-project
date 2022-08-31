@@ -94,6 +94,13 @@
   width: 32px;
   color: $blue-default;
 
+  .mod-theme-inverse &,
+  .mod-theme-blue &,
+  .mod-theme-comfort &,
+  .mod-theme-brown & {
+    display: none;
+  }
+
   @media (max-width: $tablet-width - 1) {
     position: absolute;
     top: 27px;

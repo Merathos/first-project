@@ -5053,59 +5053,61 @@ document.querySelectorAll('.js-poll-range').forEach(function (item) {
 
 
 (function () {
-  var menu = document.querySelector('.js-user-menu');
+  var menus = document.querySelectorAll('.js-user-menu');
 
 
-  if (!menu) {
+  if (!menus.length) {
     return;
   }
 
+  menus.forEach(function (menu) {
+    var menuBtn = menu.querySelector('.js-user-menu__dropdown-btn');
+    var menuBtnText = menuBtn.querySelector('.user-menu__dropdown-btn-text');
 
-  var menuBtn = menu.querySelector('.js-user-menu__dropdown-btn');
-  var menuBtnText = menuBtn.querySelector('.user-menu__dropdown-btn-text');
-
-  var overlay = menu.querySelector('.js-user-menu__overlay');
-  var list = menu.querySelector('.js-user-menu__list');
-
-
-  var openDropdown = function () {
-    menu.classList.add('user-menu--open');
-    overlay.classList.add('user-menu__overlay--shown');
-
-    menuBtnText.textContent = 'Закрыть меню пользователя';
-  };
-
-  var closeDropdown = function () {
-    menu.classList.remove('user-menu--open');
-    overlay.classList.remove('user-menu__overlay--shown');
-
-    menuBtnText.textContent = 'Открыть меню пользователя';
-  };
+    var overlay = menu.querySelector('.js-user-menu__overlay');
+    var list = menu.querySelector('.js-user-menu__list');
 
 
-  var onMenuBtnClick = function () {
-    if (menu.classList.contains('user-menu--open')) {
-      closeDropdown();
+    var openDropdown = function () {
+      menu.classList.add('user-menu--open');
+      overlay.classList.add('user-menu__overlay--shown');
 
-      list.style.height = '';
-    } else {
-      openDropdown();
+      menuBtnText.textContent = 'Закрыть меню пользователя';
+    };
 
-      list.style.height = list.scrollHeight + 'px';
-    }
-  };
+    var closeDropdown = function () {
+      menu.classList.remove('user-menu--open');
+      overlay.classList.remove('user-menu__overlay--shown');
+
+      menuBtnText.textContent = 'Открыть меню пользователя';
+    };
 
 
-  menuBtn.addEventListener('click', onMenuBtnClick);
-  overlay.addEventListener('click', closeDropdown);
+    var onMenuBtnClick = function () {
+      if (menu.classList.contains('user-menu--open')) {
+        closeDropdown();
 
-  document.addEventListener('keydown', function (evt) {
-    if (evt.keyCode === window.var.keyCode.ESC && overlay.classList.contains('user-menu__overlay--shown')) {
-      evt.preventDefault();
+        list.style.height = '';
+      } else {
+        openDropdown();
 
-      closeDropdown();
-    }
-  });
+        list.style.height = list.scrollHeight + 'px';
+      }
+    };
+
+
+    menuBtn.addEventListener('click', onMenuBtnClick);
+    overlay.addEventListener('click', closeDropdown);
+
+    document.addEventListener('keydown', function (evt) {
+      if (evt.keyCode === window.var.keyCode.ESC && overlay.classList.contains('user-menu__overlay--shown')) {
+        evt.preventDefault();
+
+        closeDropdown();
+      }
+    });
+  })
+
 })();
 
 'use strict';
