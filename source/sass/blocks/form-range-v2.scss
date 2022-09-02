@@ -1,9 +1,15 @@
 .form-range {
   width: 320px;
+  height: auto;
 
   & .noUi-horizontal .noUi-handle {
     &:hover {
-      border-color: var(--color-interactive-accent, $blue-accent);
+      border-color: var(--color-interactive-accent, $blue-hover);
     }
+  }
+
+  @media (max-width: $tablet-min-width) {
+    width: 100%;
+    padding: 0;
   }
 }

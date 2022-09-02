@@ -24,3 +24,9 @@ textarea.description-block__textarea {
     display: block;
   }
 }
+
+@include mobile {
+  .description-block__proposition-name {
+    height: 78px;
+  }
+}

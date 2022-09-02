@@ -1,6 +1,27 @@
 .notification-block {
+  grid-area: b;
+  padding: 16px;
+
   &__icon {
     min-width: 24px;
     color: var(--color-text, $blue-default);
+  }
+
+  .button.button--blue {
+    padding: 16px 32px;
+    font-weight: 700;
+    font-size: rem(13px);
+    line-height: 135%;
+  }
+
+  &__text {
+    @include mobile {
+      margin-right: 0;
+      margin-bottom: 24px;
+    }
+  }
+
+  @include mobile {
+    margin-top: 13px;
   }
 }

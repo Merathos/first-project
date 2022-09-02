@@ -1,0 +1,27 @@
+.additional__text {
+ @include mobile {
+   font-size: rem(14px);
+   line-height: 150%;
+ }
+}
+
+.additional__datetime {
+  @include mobile {
+    font-size: rem(14px);
+    line-height: 150%;
+  }
+}
+
+.additional__link {
+  color: var(--color-text, $dark-text);
+  @include mobile {
+    font-size: rem(14px);
+    line-height: 150%;
+  }
+}
+
+.additional {
+  @include mobile {
+    margin-bottom: 13px;
+  }
+}

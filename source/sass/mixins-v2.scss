@@ -43,7 +43,7 @@
 
 @mixin font-h5 {
   font-size: rem(16px);
-  line-height: rem(22px);
+  line-height: 150%;
   font-weight: 400;
 }
 
@@ -58,6 +58,10 @@
   line-height: 130%;
   font-weight: 400;
   color: var(--color-text, $text-color);
+
+  @include mobile {
+    font-size: rem(13px);
+  }
 }
 
 @mixin desktop-only {

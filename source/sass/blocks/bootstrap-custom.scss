@@ -18,6 +18,7 @@
     height: 16px;
     background-image: none;
     padding: 0;
+    z-index: 2;
 
     &:after {
       content: '';
@@ -29,6 +30,7 @@
       bottom: 50%;
       left: 50%;
       transform: translate(-50%, -50%) rotate(45deg);
+      transition: background-color 0.2s;
     }
 
     &:before {
@@ -41,6 +43,14 @@
       bottom: 50%;
       left: 50%;
       transform: translate(-50%, -50%) rotate(-45deg);
+      transition: background-color 0.2s;
+    }
+
+    &:hover {
+      &:before,
+      &:after {
+        background-color: var(--color-interactive-default, $blue-hover);
+      }
     }
   }
 

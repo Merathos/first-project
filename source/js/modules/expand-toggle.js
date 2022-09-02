@@ -1,21 +1,33 @@
 'use strict';
 
 (function () {
-  var toggle = document.querySelector('.js-expand-toggle');
-  var parent = document.querySelector('.js-expand-parent');
+  var parents = document.querySelectorAll('.js-expand-parent');
 
-  if (!toggle || !parent) {
+  if (parents.length === 0) {
     return;
   }
 
-  var toggleText = toggle.querySelector('span');
+  parents.forEach(function (parent) {
+    var totalHeight = 0;
+    var toggle = parent.querySelector('.js-expand-toggle');
+    var content = parent.querySelector('.js-expand-content');
+    // var contentPadding = parseInt(window.getComputedStyle(content).getPropertyValue("padding-top")) + parseInt(window.getComputedStyle(content).getPropertyValue("padding-bottom"));
+    var contentChildren = content.children;
+    var toggleText = toggle.querySelector('span');
 
-  var onToggleClick = function () {
-    toggleText.textContent = '';
-    parent.classList.toggle('is-open');
+    contentChildren.forEach(function (child) {
+      totalHeight = totalHeight + child.clientHeight + parseInt(window.getComputedStyle(child).getPropertyValue("margin-top")) + parseInt(window.getComputedStyle(child).getPropertyValue("margin-bottom"));
+    });
 
-    toggleText.textContent = parent.classList.contains('is-open') ? 'Свернуть' : 'Развернуть';
-  };
+    var onToggleClick = function () {
+      toggleText.textContent = '';
+      parent.classList.toggle('is-open');
+      parent.classList.contains('is-open') ? content.style.maxHeight = totalHeight + 'px' : content.style.maxHeight = 0;
 
-  toggle.addEventListener('click', onToggleClick);
+      toggleText.textContent = parent.classList.contains('is-open') ? 'Свернуть' : 'Развернуть';
+    };
+
+    toggle.addEventListener('click', onToggleClick);
+  })
+
 })();

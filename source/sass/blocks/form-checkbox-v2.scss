@@ -3,6 +3,11 @@
   font-size: rem(16px);
   line-height: 150%;
 
+  @include mobile {
+    font-size: rem(14px);
+    line-height: 130%;
+  }
+
   &::before {
     margin-top: 3px;
     border: 1px solid var(--color-stroke, $light-grey);

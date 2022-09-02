@@ -1,0 +1,50 @@
+.expand {
+  &__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+  }
+
+  &__content {
+    overflow: hidden;
+    max-height: 0;
+    border-bottom: 1px solid #DFE3EA;
+    transition: max-height $style-change-duration;
+  }
+
+  &__toggle {
+    padding: 0;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    display: block;
+    transition: opacity .3s ease-out;
+    z-index: 1;
+    white-space: nowrap;
+
+    span {
+      font-size: rem(16px);
+      line-height: 150%;
+      color: var(--color-text, $blue-default);
+
+      @include mobile {
+        font-size: rem(14px);
+        line-height: 130%;
+      }
+    }
+
+    svg {
+      color: var(--color-text, $blue-default);
+      margin-left: 9px;
+      transform: rotate(0);
+      transition: transform 0.3s;
+
+      .is-open & {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

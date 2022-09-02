@@ -9,7 +9,7 @@
     color: var(--color-text, $blue-default);
 
     &:focus {
-      color: var(--color-interactive-accent, $blue-hover);
+      color: var(--color-interactive-default, $blue-hover);
     }
 
     &:focus:not(.focus-visible) {
@@ -17,7 +17,7 @@
     }
 
     &:active:not(.focus-visible) {
-      color: var(--color-interactive-accent, $blue-hover);
+      color: var(--color-interactive-default, $blue-hover);
     }
   }
 }
@@ -26,7 +26,7 @@
   .link {
     &--blue {
       &:hover:not(.focus-visible) {
-        color: var(--color-interactive-accent, $blue-hover);
+        color: var(--color-interactive-default, $blue-hover);
       }
     }
   }

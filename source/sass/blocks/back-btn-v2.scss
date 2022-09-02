@@ -18,6 +18,8 @@
 
 @include tablet {
   .back-btn {
+    font-size: rem(14px);
+
     &:hover:not(.focus-visible) {
       color: var(--color-text, $grey);
     }

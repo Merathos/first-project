@@ -2,6 +2,8 @@
   padding: 15px 23px;
   font-size: rem(14px);
   line-height: 130%;
+  width: 100%;
+  max-width: 676px;
 
   svg {
     color: var(--color-text, $blue-sail);
@@ -9,5 +11,9 @@
 
   &--grey {
     background-color: $color-bg;
+  }
+
+  @include mobile {
+    padding: 11px 12px 11px 9px;
   }
 }
