@@ -6752,6 +6752,9 @@ html:not([dir="rtl"]) .noUi-horizontal .noUi-handle {
       left: 16px;
       width: calc(100% - 32px); } }
 
+.special-popup__btn-close:hover {
+  color: var(--color-interactive-default, #116ca6); }
+
 .status-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -18034,6 +18037,10 @@ span.poll__hide {
 .user-menu__dropdown-icon {
   color: var(--color-text, #354052); }
 
+.user-menu__dropdown-btn:hover .user-menu__user-icon,
+.user-menu__dropdown-btn:hover .user-menu__dropdown-icon {
+  color: var(--color-interactive-default, #2E6BEF); }
+
 .project-item {
   position: relative;
   width: 360px;
@@ -21052,6 +21059,19 @@ span.poll-page__hide {
   @media (max-width: 400px) {
     .poll-page--final .poll-page__form {
       margin-top: 36px; } }
+
+.poll-page__dates .button-star {
+  margin-bottom: 10px;
+  display: block;
+  opacity: 1; }
+  .poll-page__dates .button-star:hover {
+    color: var(--color-interactive-accent, #0E4CD3); }
+  .poll-page__dates .button-star svg {
+    width: 24px;
+    height: 24px; }
+  @media (max-width: 767px) {
+    .poll-page__dates .button-star {
+      margin-bottom: 0; } }
 
 .news-item__title {
   max-width: 100%;
@@ -24565,7 +24585,8 @@ span.poll-page__hide {
   height: 16px;
   background-image: none;
   padding: 0;
-  z-index: 2; }
+  z-index: 2;
+  opacity: 1; }
   .modal .btn-close:after {
     content: '';
     display: block;

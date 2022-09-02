@@ -1,0 +1,18 @@
+.poll-page__dates .button-star {
+  margin-bottom: 10px;
+  display: block;
+  opacity: 1;
+
+  &:hover {
+    color: var(--color-interactive-accent, $blue-default);
+  }
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  @include mobile {
+    margin-bottom: 0;
+  }
+}

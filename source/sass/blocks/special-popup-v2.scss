@@ -1,0 +1,5 @@
+.special-popup__btn-close {
+  &:hover {
+    color: var(--color-interactive-default, $blue-accent);
+  }
+}

@@ -5,3 +5,10 @@
 .user-menu__dropdown-icon {
   color: var(--color-text, $dark-text);
 }
+
+.user-menu__dropdown-btn:hover {
+  .user-menu__user-icon,
+  .user-menu__dropdown-icon {
+    color: var(--color-interactive-default, $blue-hover);
+  }
+}
